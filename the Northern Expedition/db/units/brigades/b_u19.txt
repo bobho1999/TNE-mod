@@ -1,0 +1,71 @@
+land_unit_type = 1
+# 0 - 一戰型輕機枪加强团 
+model = {
+	cost 				= 2
+	buildtime	 		= 70
+	manpower 			= 3
+	morale					= 1
+	defensiveness 		= 1
+	toughness 			= 1
+	suppression			= 2
+	softattack			= 1
+	supplyconsumption 	= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}
+# 1 - 24型輕機枪加强团
+model = {
+	cost 				= 2
+	buildtime	 		= 70
+	manpower 			= 3
+	morale					= 1
+	defensiveness 		= 1
+	toughness 			= 1
+	suppression			= 3
+	softattack			= 1
+	supplyconsumption 	= 1
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}
+# 2 - 27型輕機枪加强团
+model = {
+	cost 				= 2.5
+	buildtime	 		= 70
+	manpower 			= 3
+	morale					= 1
+	defensiveness 		= 1
+	toughness 			= 1
+	suppression			= 3
+	softattack			= 1.5
+	supplyconsumption 	= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}
+# 3 - 30型輕機枪加强团
+model = {
+	cost 				= 2.5
+	buildtime	 		= 75
+	manpower 			= 3
+	morale					= 2
+	defensiveness 		= 1
+	toughness 			= 1
+	suppression			= 3
+	softattack			= 1.5
+	supplyconsumption 	= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}
+# 4 - 34型輕機枪加强团
+model = {
+	cost 				= 3
+	buildtime	 		= 75
+	manpower 			= 3
+	morale					= 2
+	defensiveness 		= 1
+	toughness 			= 1
+	suppression			= 4
+	softattack			= 2
+	supplyconsumption 	= 1.5
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 1
+}

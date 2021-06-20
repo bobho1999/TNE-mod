@@ -1,0 +1,49 @@
+#########################################
+#secret_weapon
+#########################################
+event = {
+	id = 999000
+	random = no
+	invention = yes
+
+	trigger = {
+                technology = 1010
+		            minister = 16059
+		            NOT = { technology = = 1020 }
+                NOT = { technology = = 1100 }
+	}
+
+	name = "军队编制技术的突破 "
+	desc = "随着 "
+	picture = "scientist"
+	style = 0
+
+
+	action_a = {
+		name = "ACTIONNAME3201A" # OK
+		command = { type = activate which = 1020 }
+}
+}
+event = {
+	id = 999001
+	random = no
+	invention = yes
+
+	trigger = {
+		minister = 16039
+                technology = = 1010
+		NOT = { technology = = 1020 }
+                NOT = { technology = = 1100 }
+	}
+
+	name = "EVT_8000_NAME"
+	desc = "EVT_8000_DESC"
+	picture = "scientist"
+	style = 0
+
+
+	action_a = {
+		name = "ACTIONNAME3201A" # OK
+		command = { type = activate which = 1100 }
+}
+}

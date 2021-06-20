@@ -1,0 +1,9 @@
+land_unit_type = 1
+allowed_brigades = artillery
+allowed_brigades = anti_tank
+allowed_brigades = anti_air
+
+# 0 - 
+model = {
+	cost 					= 0
+}

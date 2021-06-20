@@ -1,0 +1,2231 @@
+#event = {
+  
+#id = 201100
+  
+#random = no
+ 
+# country = u11  
+ 
+  
+ 
+ 
+# name = "直魯軍的瘋狂擴軍 "
+ 
+# desc = "張宗昌為了爭奪地盤，到處收編軍隊，拼命擴張武裝， 不到兩年的時間就將軍隊擴編到了三十四個軍"
+ 
+# style = 0
+ 
+# picture = "wushenglianjun"
+  
+  
+# date = { day = 1 month = january year = 1926 }
+ 
+ #offset = 5
+ 
+# deathdate = { day = 30 month = november year = 1926 }
+#action_a = {
+    name = "搶錢、搶糧、搶女人!! "
+    
+# command = { type = dissent value = -5}
+    
+# command = { type = add_corps which = "直魯第一軍 " value = land  where = 1216}
+#    command = { type = activate_division which = 6 value = 5 where = 1216 when = 1 }
+#    command = { type = activate_division which = 6 value = 6 where = 1216 when = 1 }
+#    command = { type = activate_division which = 6 value = 7 where = 1216 when = 1 }
+#    command = { type = activate_division which = 6 value = 8 where = 1216 when = 1 }
+#    command = { type = activate_division which = 6 value = 9 where = 1216 when = 1 }
+ #   command = { type = activate_division which = 6 value = 10 where = 1216 when = 1 }
+#    command = { type = activate_division which = 6 value = 11 where = 1216 when = 1 }  
+ #command = { type = add_corps which = "直魯第三軍 " value = land  where = 2855 }
+ #   command = { type = activate_division which = 6 value = 12 where = 2855 when = 1 }
+ #   command = { type = activate_division which = 6 value = 13 where = 2855 when = 1 }
+ #   command = { type = activate_division which = 6 value = 14 where = 2855 when = 1 }
+		command = { type = trigger which = 201101 value = 30 }
+ # }
+    }
+
+
+
+#event = {
+  
+#id = 201101
+  
+#random = no
+ 
+ #country = u11  
+ 
+  
+ 
+ 
+ #name = "直魯軍的瘋狂擴軍(二) "
+ 
+# desc = "張宗昌為了爭奪地盤，到處收編軍隊，拼命擴張武裝， 不到兩年的時間就將軍隊擴編到了三十四個軍"
+ 
+ #style = 0
+ 
+ #picture = "wushenglianjun"
+  
+  
+
+#action_a = {
+    name = "搶錢、搶糧、搶女人!! "
+    
+# command = { type = dissent value = 5}
+    
+# command = { type = add_corps which = "直魯第五軍 " value = land  where = 2858}
+#    command = { type = activate_division which = 6 value = 15 where = 2858 when = 1 }
+#    command = { type = activate_division which = 6 value = 16 where = 2858 when = 1 }  
+ #command = { type = add_corps which = "直魯第七軍 " value = land  where = 2853 }
+ #   command = { type = activate_division which = 6 value = 17 where = 2853 when = 1 }
+ #   command = { type = activate_division which = 6 value = 18 where = 2853 when = 1 }
+ #   command = { type = activate_division which = 6 value = 19 where = 2853 when = 1 }
+  #  command = { type = activate_division which = 6 value = 23 where = 2853 when = 1 }
+ #   command = { type = activate_division which = 6 value = 24 where = 2853 when = 1 }
+ #		command = { type = trigger which = 201102 value = 30 } }
+    }
+
+
+#event = {
+  
+#id = 201102  
+#random = no
+ 
+# country = u11  
+ 
+  
+ 
+ 
+# name = "直魯軍的瘋狂擴軍(三) "
+ 
+ #desc = "張宗昌為了爭奪地盤，到處收編軍隊，拼命擴張武裝， 不到兩年的時間就將軍隊擴編到了三十四個軍"
+ 
+ #style = 0
+ 
+# picture = "wushenglianjun"
+  
+  
+
+#action_a = {
+    name = "搶錢、搶糧、搶女人!! "
+    
+# command = { type = dissent value = 5}
+    
+# command = { type = add_corps which = "直魯第八軍 " value = land  where = 2851}
+ #   command = { type = activate_division which = 6 value = 20 where = 2851 when = 1 }
+ #   command = { type = activate_division which = 6 value = 21 where = 2851 when = 1 }
+ #   command = { type = activate_division which = 6 value = 22 where = 2851 when = 1 }   
+ #command = { type = add_corps which = "直魯第十一軍 " value = land  where = 2857 }
+ #   command = { type = activate_division which = 6 value = 25 where = 2857 when = 1 }
+ #   command = { type = activate_division which = 6 value = 26 where = 2857 when = 1 }
+ #   command = { type = activate_division which = 6 value = 27 where = 2857 when = 1 }
+# command = { type = add_corps which = "直魯第十三軍 " value = land  where = 2853 }
+   # command = { type = activate_division which = 6 value = 28 where = 2853 when = 1 }
+   # command = { type = activate_division which = 6 value = 29 where = 2853 when = 1 }
+ 	# }
+    }
+
+
+event = {
+	id = 200005
+	random = no
+	country = CHI
+
+
+	name = "北伐战争 "
+	desc = "北伐战争，是１９２６年至１９２８年国民革命军北进讨伐北 洋政府的战争。北伐正式起始于１９２６年７月９日以蒋介石为 总司令宣布北伐，完成于１９２６年１２月２９日张学良东北易 帜，使得中国名义上统一在由中国国民党领导之国民政府旗下。 1926年5月10日唐生智代表向广州国民政府求救，11日 广州国民政府军事委员会议决提前出师北伐。 "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+	  ai_chance = 98
+		name = "打倒吴佩孚，联络孙传芳，不理张作霖 "
+		command = { type = dissent value = -5 }
+		command = { type = max_organization which = land value = 5 }
+		command = { type = morale which = land value = 10 }
+		command = { type = domestic which = professional_army value = 1 }
+
+    command = { type = chiefofarmy which = 25 } #蒋中正
+    command = { type = alliance which = u10 }
+    command = { type = make_puppet which = u10 }
+    command = { type = trigger which = 200900 }
+    command = { type = extra_tc value = 20 }
+    command = { type = add_corps which = "北伐軍指揮部 " value = land where = 1313 }
+    command = { type = activate_division which = 22000 value = 100076 where = 1313 }
+    command = { type = add_corps which = "潮梅警備區 " value = land  where = 1248 }
+    command = { type = activate_division which = 22000 value = 100087 where = 1248 when = 1 }
+    command = { type = add_corps which = "韶屬警備區 " value = land  where = 1312 }
+    command = { type = activate_division which = 22000 value = 100088 where = 1312 when = 1 }
+    command = { type = add_corps which = "欽廉警備區 " value = land  where = 2716 }
+    command = { type = activate_division which = 22000 value = 100089 where = 2716 when = 1 }
+    command = { type = add_corps which = "肇屬警備區 " value = land  where = 2711 }
+    command = { type = activate_division which = 22000 value = 100090 where = 2711 when = 1 }
+    command = { type = add_corps which = "惠屬警備區  " value = land where = 2709 }
+    command = { type = activate_division which = 22000 value = 100091  where = 2709 when = 1 }
+    command = { type = add_corps which = "廣屬警備區  " value = land  where = 1313 }
+    command = { type = activate_division which = 22000 value = 100092 where = 1313 when = 1 }
+    command = { type = add_corps which = "瓊崖警備區 " value = land  where = 1321 }
+    command = { type = activate_division which = 22000 value = 100093 where = 1321 when = 1 }
+		}
+		action_b = {
+	  ai_chance = 1
+		name = "一鼓作气统一全中国 "
+		command = { type = dissent value = -10 }
+		command = { type = max_organization which = land value = 5 }
+		command = { type = morale which = land value = 10 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = war which = U05 }
+		command = { type = war which = U06 }
+		command = { type = war which = U02 }
+    command = { type = chiefofarmy which = 25 } #蒋中正
+    command = { type = alliance which = u10 }
+    command = { type = make_puppet which = u10 }
+    command = { type = extra_tc value = 20 }
+    command = { type = add_corps which = "北伐軍指揮部 " value = land where = 1313 }
+    command = { type = activate_division which = 22000 value = 100076 where = 1313 }
+    command = { type = trigger which = 200900 }
+    command = { type = add_corps which = "潮梅警備區 " value = land  where = 1248 }
+    command = { type = activate_division which = 22000 value = 100087 where = 1248 when = 1 }
+    command = { type = add_corps which = "韶屬警備區 " value = land  where = 1312 }
+    command = { type = activate_division which = 22000 value = 100088 where = 1312 when = 1 }
+    command = { type = add_corps which = "欽廉警備區 " value = land  where = 2716 }
+    command = { type = activate_division which = 22000 value = 100089 where = 2716 when = 1 }
+    command = { type = add_corps which = "肇屬警備區 " value = land  where = 2711 }
+    command = { type = activate_division which = 22000 value = 100090 where = 2711 when = 1 }
+    command = { type = add_corps which = "惠屬警備區  " value = land where = 2709 }
+    command = { type = activate_division which = 22000 value = 100091  where = 2709 when = 1 }
+    command = { type = add_corps which = "廣屬警備區  " value = land  where = 1313 }
+    command = { type = activate_division which = 22000 value = 100092 where = 1313 when = 1 }
+    command = { type = add_corps which = "瓊崖警備區 " value = land  where = 1321 }
+    command = { type = activate_division which = 22000 value = 100093 where = 1321 when = 1 }
+		}
+  action_c = {
+    ai_chance = 1
+    name = "我们还没有准备好 "
+    command = { }
+    }
+}
+
+event = {
+	id = 1005
+	random = no
+	country = U08
+
+trigger = {   event = 9999912
+              OR = { 
+                     war = { country = chi country = u02 }
+                     war = { country = chi country = u11 }  }
+ }
+	name = "徐州戰鬥 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+
+
+	date = { day = 27 month = july year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "攻擊 "
+                  command = { type = trigger which = 1006 }
+                  command = { type = trigger which = 1007 }
+                  command = { type = trigger which = 1008 value = 10 }
+                  command = { type = assault value = 5 }
+                  command = { type = breakthrough value = 5 }
+                  command = { type = sleepevent which = 1021 }
+                  command = { type = sleepevent which = 1022 }
+                  command = { type = sleepevent which = 1023 }
+                  command = { type = sleepevent which = 1024 }
+                  command = { type = sleepevent which = 1025 }
+                  command = { type = sleepevent which = 1026 }
+		}
+}
+
+event = {
+	id =1006
+	random = no
+	country = u09
+
+	name = "徐州戰鬥 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+
+
+
+	action_a = {
+		name = "攻擊 "
+                  command = { type = assault value = 5 }
+                  command = { type = breakthrough value = 5 }
+
+		}
+}
+
+event = {
+	id = 1007
+	random = no
+	country = u11
+
+	name = "徐州戰鬥 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+
+
+	action_a = {
+		name = "防守 "
+                command = { type = delay value = 3 } 
+                command = { type = counterattack value =  3 } 
+                command = { type = construct which = land_fort where = 1218 value = 5 }
+		}
+}
+event = {
+	id = 1008
+	random = no
+	country = U08
+
+	name = "徐州戰鬥失敗 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍新加入的西北軍四個師亦未增援，且攻擊均未奏效，後立即終止。指揮王天培被蔣介石下令依軍法槍斃。 "
+	style = 0
+
+
+	action_a = {
+		name = "暫緩攻擊 "
+		command = { type = dissent value = 5 }
+                  command = { type = assault value = -5 }
+                  command = { type = breakthrough value = -5 }
+                  command = { type = trigger which = 9999913 value = 1 }
+                  command = { type = trigger which = 1025  }
+    command = { type =  remove_division which = 15004 value = 10 }
+                command = { type = construct which = land_fort where = 1218 value = -5 }	}
+}
+
+
+event = {
+	id = 1009
+	random = no
+	country = u09
+
+	name = "徐州戰鬥失敗 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍新加入的西北軍四個師亦未增援，且攻擊均未奏效，後立即終止。指揮王天培被蔣介石下令依軍法槍斃。 "
+	style = 0
+
+
+	action_a = {
+		name = "暫緩攻擊 "
+		command = { type = dissent value = 5 }
+                  command = { type = assault value = -5 }
+                  command = { type = breakthrough value = -5 }
+                   command = { type = sleepleader which = 80001 }                
+		}
+}
+
+event = {
+	id = 1010
+	random = no
+	country = U08
+
+trigger = {  control = { province = 1218 data = U08 }  }
+ 
+	name = "徐州戰鬥成功 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍加入的西北軍四個師增援，終於攻下徐州。 "
+	style = 0
+	
+
+	action_a = {
+		name = "萬歲!! "
+		command = { type = dissent value = -5 }
+                  command = { type = assault value = -5 }
+                  command = { type = breakthrough value = -5 }
+                  command = { type = sleepevent which = 1008 }
+                command = { type = construct which = land_fort where = 1218 value = -5 }		}
+}
+
+event = {
+	id = 1021
+	random = no
+	country = CHI
+
+trigger = {  event 9999921
+              OR = { 
+                     war = { country = chi country = u02 }
+                     war = { country = chi country = u11 }  }
+ }
+	name = "徐州戰鬥 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+
+
+	date = { day = 27 month = july year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "攻擊 "
+                  command = { type = trigger which = 1022 }
+                  command = { type = trigger which = 1023 }
+                  command = { type = trigger which = 1024 value = 10 }
+                  command = { type = assault value = 5 }
+                  command = { type = breakthrough value = 5 }
+                  command = { type = sleepevent which = 1010 }
+                  command = { type = sleepevent which = 1009 }
+                  command = { type = sleepevent which = 1008 }
+                  command = { type = sleepevent which = 1007 }
+                  command = { type = sleepevent which = 1006 }
+                  command = { type = sleepevent which = 1005 }
+		}
+}
+
+event = {
+	id =1022
+	random = no
+	country = u09
+
+	name = "徐州戰鬥 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+
+
+
+	action_a = {
+		name = "攻擊 "
+                  command = { type = assault value = 5 }
+                  command = { type = breakthrough value = 5 }
+
+		}
+}
+
+event = {
+	id = 1023
+	random = no
+	country = u11
+
+	name = "徐州戰鬥 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+
+
+	action_a = {
+		name = "防守 "
+                command = { type = delay value = 3 } 
+                command = { type = counterattack value =  3 } 
+                command = { type = construct which = land_fort where = 1218 value = 5 }
+		}
+}
+
+event = {
+	id = 1024
+	random = no
+	country = CHI
+
+	name = "徐州戰鬥失敗 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍新加入的西北軍四個師亦未增援，且攻擊均未奏效，後立即終止。指揮王天培被蔣介石下令依軍法槍斃。 "
+	style = 0
+
+
+	action_a = {
+		name = "暫緩攻擊 "
+		command = { type = dissent value = 5 }
+                  command = { type = assault value = -5 }
+                  command = { type = breakthrough value = -5 }
+                  command = { type = trigger which = 9999922 value = 1 }
+                  command = { type = trigger which = 1025  }
+    command = { type =  remove_division which = 15004 value = 10 }
+                command = { type = construct which = land_fort where = 1218 value = -5 }	}
+}
+
+
+
+event = {
+	id = 1026
+	random = no
+	country = CHI
+
+trigger = { event = 9999921
+            control = { province = 1218 data = CHI }  }
+ 
+	name = "徐州戰鬥成功 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍加入的西北軍四個師增援，終於攻下徐州。 "
+	style = 0
+	
+
+	action_a = {
+		name = "萬歲!! "
+		command = { type = dissent value = -5 }
+                  command = { type = assault value = -5 }
+                  command = { type = breakthrough value = -5 }
+                  command = { type = sleepevent which = 1024 }
+                command = { type = construct which = land_fort where = 1218 value = -5 }		}
+}
+
+event = {
+  	id = 1922001
+  	random = no
+  	country = JAP
+
+  	name = "山梨軍縮"
+	desc = "一戰結束後，全球經濟又馬上進入到經濟危機，日本也不例外。由於認識到擴充軍備 會造成政府財政負擔，同時也為了減輕經濟危機對政府財政的影響，以1921年 （大正十年）為例，當時的日本陸海軍費用合計占國家年支出的48%，而且有繼續增長的趨勢。 故在加藤友三郎內閣內，由時任陸軍大臣山梨半造前後進行過二次裁軍， 共裁撤59000名軍人和13000頭軍馬，史稱「山梨軍縮」 "
+  	style = 0
+
+
+  date = { day = 1 month = january year = 1925 }
+  offset = 1
+  deathdate = { day = 29 month = december year = 1931 }
+
+  action_a = {  
+  name = "裁軍"
+#    	command = { type =  remove_division which = 13016 value = 100082 }
+  command = { type = deactivate_unit_type which = hq }
+#  command = { type = deactivate_unit_type which = armor }
+  command = { type = deactivate_unit_type which = cavalry }
+  command = { type = deactivate_unit_type which = infantry }
+  command = { type = deactivate_unit_type which = militia }
+#  command = { type = deactivate_unit_type which = motorized }
+#  command = { type = deactivate_unit_type which = cas }
+#  command = { type = deactivate_unit_type which = multi_role } 
+#  command = { type = deactivate_unit_type which = interceptor }
+#  command = { type = deactivate_unit_type which = strategic_bomber }
+#  command = { type = deactivate_unit_type which = tactical_bomber }
+#  command = { type = deactivate_unit_type which = submarine }
+#  command = { type = deactivate_unit_type which = carrier }
+#  command = { type = deactivate_unit_type which = battleship }
+#  command = { type = deactivate_unit_type which = battlecruiser }
+#  command = { type = deactivate_unit_type which = heavy_cruiser }
+  }
+}
+
+event = {
+	id = 1929022
+	random = no
+	country = CHI
+	
+	trigger = {
+	event = 1929017  
+ }
+	
+	name = "接回唐生智 "
+	desc = "駐紮河北之新桂系部隊由白崇禧指揮，但其部原多為唐生智舊部。蔣中正 將唐生智從日本接回，並派唐生智赴河北唐山收買其被白崇禧收編之舊部兩個師。 唐生智對舊部之影響，使白崇禧對軍隊失去控制，部隊被唐生智舊部李品仙收編。 蔣桂戰爭尚未正式爆發，河北桂軍已經土崩瓦解。"
+	style = 0
+	date = { day = 20 month = march year = 1929 }
+	offset = 3
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "重金接回 " 
+	        command = { type = trigger which = 1929023 }
+	        command = { type = money value = -500 }
+	        command = { type = supplies value = -500 }
+                command = { type = wakeleader which = 82001 }
+		command = { type = giveleader which = 82001 where = CHI }
+		}
+}
+
+event = {
+	id = 1929023
+	random = no
+	country = CGX
+	
+
+	name = "唐生智回國 "
+	desc = "駐紮河北之新桂系部隊由白崇禧指揮，但其部原多為唐生智舊部。蔣中正 將唐生智從日本接回，並派唐生智赴河北唐山收買其被白崇禧收編之舊部兩個師。 唐生智對舊部之影響，使白崇禧對軍隊失去控制，部隊被唐生智舊部李品仙收編。 蔣桂戰爭尚未正式爆發，河北桂軍已經土崩瓦解。"
+	style = 0
+
+	action_a = {
+		name = "投蔣 " 
+                  command = { type = damage_division which = -1 where = 50 }
+                  command = { type = damage_division which = -1 where = 50 }
+		command = { type = morale which = land value = -5 }
+        	command = { type = max_organization which = land value = -3 } }
+		}
+}
+
+event = {
+	id = 1929024
+	random = no
+	country = CHI
+	
+	trigger = {
+	event = 1929017  
+ }
+	
+	name = "蔣桂戰爭 "
+	desc = "3月28日，蔣令朱培德指揮5個師由九江、南昌進佔武昌至長沙鐵路沿線， 切斷桂軍退路；劉峙指揮5個師另1個旅由皖鄂邊境進攻武漢；韓復榘 指揮5個師從豫南向武漢進攻。3月31日，蔣下達總攻擊令。"
+	style = 0
+	date = { day = 25 month = march year = 1929 }
+	offset = 3
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "討伐桂系 " 
+	        command = { type = trigger which = 1929025 }
+                  command = { type = war which = CGX }
+		}
+}
+
+event = {
+	id = 1929025
+	random = no
+	country = U10
+	
+	name = "湘系倒戈 "
+	desc = "蔣桂戰爭爆發後，湖南之何鍵亦倒向蔣中正。"
+	style = 0
+
+	action_a = {
+		name = "投蔣 " 
+	        command = { type = trigger which = 1929026 }
+                  command = { type = end_puppet }
+                  command = { type = leave_alliance }
+                  command = { type = war which = CGX }
+		}
+}
+
+event = {
+	id = 1929026
+	random = no
+	country = CHI
+	
+	name = "湘系倒戈 "
+	desc = "蔣桂戰爭爆發後，湖南之何鍵亦倒向蔣中正。"
+	style = 0
+
+	action_a = {
+		name = "歡迎 " 
+                  command = { type = make_puppet which = U10 }
+                  command = { type = alliance which = U10 }
+		command = { type = secedeprovince which = U10 value = 1255 } 
+		command = { type = secedeprovince which = U10 value = 1256 }
+		command = { type = secedeprovince which = U10 value = 1257 }
+		command = { type = secedeprovince which = U10 value = 1259 }
+		command = { type = secedeprovince which = U10 value = 1260 }
+		command = { type = secedeprovince which = U10 value = 1261 }
+		command = { type = secedeprovince which = U10 value = 2670 }
+		command = { type = secedeprovince which = U10 value = 2671 }
+		command = { type = secedeprovince which = U10 value = 2672 }
+		command = { type = secedeprovince which = U10 value = 2674 }
+		command = { type = secedeprovince which = U10 value = 2676 }
+		command = { type = secedeprovince which = U10 value = 2677 }
+		command = { type = secedeprovince which = U10 value = 2678 }
+		command = { type = secedeprovince which = U10 value = 2679 }
+		command = { type = secedeprovince which = U10 value = 2680 }
+		command = { type = secedeprovince which = U10 value = 2681 }
+		command = { type = secedeprovince which = U10 value = 2682 }
+		command = { type = secedeprovince which = U10 value = 2683 }
+		command = { type = secedeprovince which = U10 value = 2684 }
+		command = { type = secedeprovince which = U10 value = 2685 }
+		}
+} 
+
+#event = {
+	
+#id = 100105	
+#country = U03
+	
+#random = no
+	
+	
+
+
+	
+name = "就任西北边防督办 "
+	
+desc = "1925年1月，段祺瑞准冯玉祥辞去陆军检阅使一职，专任西北边防督办 "
+	
+style = 0
+
+	
+date = { day = 1 month = march year = 1925 }
+	
+offset = 1
+	
+deathdate = { day = 23 month = march year = 1926 }		
+
+	
+action_a = {
+		
+ name = " 就任"
+		              
+         command = { type = dissent value = -5 }
+    command = { type = add_corps which = "西北邊防督辦 " value = land when = 56000 where = 1206 }
+    command = { type = activate_division which = 22330 value = 2 where = 1206 }
+    command = { type = trigger which = 100106 } 
+    command = { type = trigger which = 100107 }
+  }
+}
+
+
+
+
+
+
+event = {
+	
+id = 100106	
+country = U18
+	
+random = no
+	
+	
+
+
+	
+name = "馮玉祥就任 "
+	
+desc = "1925年3月，冯玉祥就任西北边防督办， 马福祥父子迫于冯军势力，对冯玉祥表示顺从。 冯玉祥为安慰马氏父子，委任马鸿逵 为国民军新编第七师师长，驻防宁夏的金积、灵武。"
+	
+style = 0
+
+	
+	
+
+	
+action_a = {
+		
+ name = "服從 "
+		              
+         command = { type = dissent value = 5 }
+          command = { type = secedeprovince which = U03 value = 2811 }
+    command = { type = add_corps which = "國民軍新編第七師 " value = land where = 2803 }
+    command = { type = activate_division which = 7 value = 5 where = 2803 }
+} }
+
+event = {
+	
+id = 100107	
+country = CXB
+	
+random = no
+	
+	
+
+
+	
+name = "馮玉祥就任 "
+	
+desc = "1925年3月，冯玉祥就任西北边防督办， 马麒父子不得不依附冯玉祥，以保住西宁镇守使的职位。"
+	
+style = 0
+
+	
+	
+
+	
+action_a = {
+		
+ name = "服從 "
+		              
+         command = { type = dissent value = 5 }
+} }
+ 
+#####################################################################
+
+event = {
+      id = 500
+      random = no
+      persistent = yes
+      trigger = { 
+			technology = 3430
+local_flag = SREV 
+                  and = { not = { ideology = leninist }
+                          not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "保守主義 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#                 command = { type = change_idea which = policy_political_conservatism value = -1 }
+command = { type = set_domestic	which = democratic value = 5 }
+command = { type = set_domestic	which = political_left value = 4 }
+               }
+               }
+
+event = {
+      id = 501
+      random = no
+      persistent = yes
+      trigger = { 
+			technology = 3460
+local_flag = SREV 
+                  and = { not = { ideology = leninist }
+                          not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "地方自治 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#                    command = { type = change_idea which = policy_political_republicanism value = -1 }
+               }
+               }
+
+event = {
+      id = 502
+      random = no
+      persistent = yes
+      trigger = { 
+			technology = 3420
+local_flag = SREV 
+                  and = { not = { ideology = leninist }
+                          not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "法西斯主義 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#                   command = { type = change_idea which = policy_political_fascist }
+command = { type = set_domestic	which = democratic value = 3 }
+command = { type = set_domestic	which = political_left value = 3 }
+
+               }
+               }
+
+event = {
+      id = 506
+      random = no
+      persistent = yes
+      trigger = { 
+		technology = 3410
+		local_flag = SREV 
+               	and = { not = { ideology = leninist }
+                       	not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "社會主義 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#                      command = { type = change_idea which = policy_social_self-movement value = -1 }
+command = { type = set_domestic	which = democratic value = 3 }
+command = { type = set_domestic	which = political_left value = 3 }
+               }
+               }
+
+event = {
+      id = 507
+      random = no
+      persistent = yes
+      trigger = { 
+		technology = 3400
+		local_flag = SREV 
+                not = { domestic = { type = political_left value = 4 } }
+                          
+                 }
+      name = "自由主義 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#                      command = { type = change_idea which = policy_social_self-movement value = -1 }
+command = { type = set_domestic	which = democratic value = 3 }
+command = { type = set_domestic	which = political_left value = 3 }
+               }
+               }
+
+event = {
+      id = 503
+      random = no
+      persistent = yes
+      trigger = { local_flag = SREV 
+                  and = { not = { ideology = leninist }
+                          not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "地方自治 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#                    command = { type = change_idea which = policy_political_republicanism value = -1 }
+               }
+               }
+
+event = {
+      id = 504
+      random = no
+      persistent = yes
+      trigger = { 
+			technology = 3440
+local_flag = SREV 
+                  and = { not = { ideology = leninist }
+                          not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "民族主義 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+#   		command = { type = change_idea which = policy_political_nationalism value = -1 }
+               }
+               }
+event = {
+      id = 505
+      random = no
+      persistent = yes
+      trigger = { 
+		technology = 3450
+		local_flag = SREV 
+               	and = { not = { ideology = leninist }
+                       	not = { domestic = { type = political_left value = 1 } }
+                          }
+                 }
+      name = "分離主義 "
+      desc = "无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。 "
+      style = 0
+      date = { day = 1 month = january year = 1910 }
+      offset = 1
+      deathdate = { day = 1 month = december year = 1999 }
+      action_a = {
+               name = "！ "
+ #                     command = { type = change_idea which = policy_social_self-movement value = -1 }
+               }
+               }
+
+
+event = {
+	id = 111115
+	random = no
+
+	trigger = { ai = no }
+	
+	name = "中國IC調整 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "ok "
+    		command = { type = construct which = IC where = 2622 value = -1 }
+		command = { type = construct which = IC where = 2630 value = -1 }
+		command = { type = construct which = IC where = 1258 value = -1 }
+		command = { type = construct which = IC where = 1310 value = -1 }
+		command = { type = construct which = IC where = 1364 value = -1 }
+		command = { type = construct which = IC where = 1293 value = -1 }
+		command = { type = construct which = IC where = 2776 value = -1 }
+		command = { type = construct which = IC where = 1271 value = -1 }
+		command = { type = construct which = IC where = 2791 value = -1 }
+		command = { type = construct which = IC where = 2792 value = -1 }
+		command = { type = construct which = IC where = 2794 value = -1 }
+		command = { type = construct which = IC where = 1234 value = -1 }
+		command = { type = construct which = IC where = 1209 value = -1 }
+		command = { type = construct which = IC where = 1238 value = -1 }
+		command = { type = construct which = IC where = 1239 value = -1 }
+		command = { type = construct which = IC where = 1244 value = -1 }
+		command = { type = construct which = IC where = 1247 value = -1 }
+#		command = { type = construct which = IC where = 1253 value = -1 }
+		command = { type = construct which = IC where = 2660 value = 1 }
+#		command = { type = construct which = IC where = 1255 value = -1 }
+		command = { type = construct which = IC where = 1257 value = -1 }
+		command = { type = construct which = IC where = 1442 value = -1 }
+		command = { type = construct which = IC where = 1435 value = -1 }
+		command = { type = construct which = IC where = 2980 value = -1 }
+		command = { type = construct which = IC where = 1433 value = -1 }
+#		command = { type = construct which = IC where = 1269 value = -1 }
+    		command = { type = construct which = infrastructure where = 1269 value = -10 }
+		command = { type = construct which = IC where = 1273 value = -1 }
+		command = { type = construct which = IC where = 1235 value = -2 }
+		command = { type = construct which = IC where = 1236 value = 1 }
+		command = { type = construct which = IC where = 1395 value = -1 }
+		command = { type = construct which = IC where = 1379 value = -1 }
+		command = { type = construct which = IC where = 1374 value = -1 }
+		command = { type = construct which = IC where = 1380 value = -1 }
+		command = { type = construct which = IC where = 1237 value = -2 }
+		}
+}
+
+#####################################################
+event = {
+	id = 40625
+	random = no
+	country = fra
+
+	name = "国家海军 "
+	desc = "国家海军是一个强大的存在，新战列巡洋舰将使用最新的技术， 但是以牺牲防护为代价提高速度。舰队将以地中海控制为作战目 的，航程较短。巨大而且战斗能力低下的潜艇将只在伏击和搜捕 行动中使用。 "
+	style = 0
+	picture = "naval_reinforcements"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "防备意大利 "
+		ai_chance = 100
+		command = { type = build_time which = naval where = relative value = 10 } # Slow shipyards
+	 	command = { type = build_cost which = naval where = relative value = -10 }
+		command = { type = range which = battleship value = -500 } # Poor range
+	 	command = { type = naval_attack which = battleship value = -2 } # Poor FC/throw weigth
+	 	command = { type = shore_attack which = battleship value = -1 } # Poor throw weight
+	 	command = { type = speed which = battleship value = 1 } # Fast	 	
+		command = { type = fuel_consumption which = battleship value = 0.4 } # poor fuel economy
+		command = { type = range which = battlecruiser value = -300 }
+	 	command = { type = shore_attack which = battlecruiser value = -1 } # Poor throw weight
+	 	command = { type = naval_attack which = battlecruiser value = -2 } # Poor throw weigth
+		command = { type = fuel_consumption which = battlecruiser value = 0.4 } # Poor fuel economy
+	 	command = { type = speed which = battlecruiser value = 1 } # Fast	 		
+	 	command = { type = speed which = heavy_cruiser value = 1 } # Fast
+		command = { type = fuel_consumption which = heavy_cruiser value = 0.2 } # poor fuel economy
+	 	command = { type = max_positioning which = heavy_cruiser value = 0.01 }
+	 	command = { type = min_positioning which = heavy_cruiser value = 0.01 }
+		command = { type = range which = light_cruiser value = -600 }
+	 	command = { type = build_cost which = light_cruiser where = relative value = -5 }
+		command = { type = range which = destroyer value = -500 }
+	 	command = { type = speed which = destroyer value = 2 } # Fast
+	 	command = { type = max_positioning which = destroyer value = 0.02 }
+	 	command = { type = min_positioning which = destroyer value = 0.02 }
+		command = { type = fuel_consumption which = destroyer value = 0.2 } # Poor fuel economy
+		command = { type = build_time which = destroyer where = relative value = 10 } # big
+	 	command = { type = build_cost which = destroyer where = relative value = 10 }
+		command = { type = supply_consumption which = destroyer value = 0.2 }
+	}
+}
+event = {
+	id = 40567
+	random = no
+	country = eng
+
+	name = "皇家海军 "
+	desc = "皇家海军仍然是世界上最强大的海军。华盛顿限制海军军备条约 赋予它最高的吨位限制（英５、美５、日３、法１．７５、意１ ．７５）。然而，许多船只渐显老态，而当前的经济形势不允许 全面的更新。 "
+	style = 0
+	picture = "british_naval_reinforcments"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "好极了 "
+		ai_chance = 100
+		command = { type = range which = battleship value = -100 } # Poor range
+		command = { type = fuel_consumption which = battleship value = -0.4 } # Good fuel economy
+		command = { type = range which = battlecruiser value = 350 }
+		command = { type = naval_attack which = battlecruiser value = 2 } # Good throw weight
+		command = { type = shore_attack which = battlecruiser value = 1 } # Good throw weight
+		command = { type = supply_consumption which = battlecruiser value = 0.2 }
+		command = { type = range which = carrier value = -200 }
+		command = { type = speed which = carrier value = -1 } # Slow
+		command = { type = naval_defense which = carrier value = 1 } # Armored flight deck
+	 	command = { type = build_time which = carrier where = relative value = 10 } # Slow to produce design
+		command = { type = naval_attack which = heavy_cruiser value = -1 } # Really weak main battery
+		command = { type = range which = heavy_cruiser value = 500 }
+		command = { type = speed which = heavy_cruiser value = -1 } # Slow
+		command = { type = max_positioning which = heavy_cruiser value = -0.02 }
+		command = { type = min_positioning which = heavy_cruiser value = -0.02 }
+		command = { type = fuel_consumption which = heavy_cruiser value = -0.2 }
+		command = { type = naval_defense which = heavy_cruiser value = -1 } # Really light armor
+	}
+}
+event = {
+	id = 40947
+	random = no
+	country = usa
+
+	name = "美国海军 "
+	desc = "美国海军是一支强大的力量。华盛顿限制海军军备条约赋予它最 高的吨位限制（英５，美５，日３，法１．７５，意１．７５） 美国海军拥有一些最好的航母和强大的一战时期的战列舰。 "
+	style = 0
+	picture = "american_ships_in_dock"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "我们是杰出的！ "
+		command = { type = build_time which = naval where = relative value = -10 } # Fast shipyards
+	 	command = { type = build_cost which = naval where = relative value = 10 }
+		command = { type = air_attack which = naval value = 1 } # Excellent AA defense
+		command = { type = range which = battleship value = 500 } # Good range for all ships
+	 	command = { type = speed which = battleship value = -1 } # Slow
+	 	command = { type = max_positioning which = battleship value = -0.01 }
+	 	command = { type = min_positioning which = battleship value = -0.01 }
+	 	command = { type = naval_attack which = battleship value = 2 } # Fire control + ammo
+		command = { type = naval_defense which = battleship value = 1 } # Well armored
+		command = { type = fuel_consumption which = battleship value = -0.5 } # Really good fuel economy
+		command = { type = air_attack which = battleship value = 1 } # Excellent AA defense
+		command = { type = range which = battlecruiser value = 300 }
+		command = { type = fuel_consumption which = battlecruiser value = -0.4 }
+	 	command = { type = naval_attack which = battlecruiser value = 1 } # Fire control + ammo
+		command = { type = naval_defense which = battlecruiser value = 1 } # Well armored
+		command = { type = range which = carrier value = 700 }
+		command = { type = fuel_consumption which = carrier value = -0.3 } # Really good fuel economy
+		command = { type = naval_defense which = heavy_cruiser value = 1 }
+		command = { type = range which = heavy_cruiser value = 500 }
+	 	command = { type = naval_attack which = heavy_cruiser value = -1 } # no torpedoes
+		command = { type = fuel_consumption which = heavy_cruiser value = -0.2 } # Really good fuel economy
+		command = { type = range which = light_cruiser value = 600 }
+	 	command = { type = naval_attack which = light_cruiser value = 2 } # Massive main battery, no torpedoes generally
+	 	command = { type = shore_attack which = light_cruiser value = 2 } # Massive main battery
+		command = { type = naval_defense which = light_cruiser value = 1 } # Well armored
+	 	command = { type = build_cost which = light_cruiser where = relative value = 10 }
+		command = { type = supply_consumption which = light_cruiser value = 0.2} # Really big plus lots of armarment
+		command = { type = fuel_consumption which = light_cruiser value = 0.15 }
+		command = { type = range which = destroyer value = 500 }
+		command = { type = speed which = submarine value = 1 } # Fast
+		command = { type = range which = submarine value = 200 } # Long range
+		command = { type = visibility which = submarine value = 1 } # big
+	}
+}
+
+event = {
+	id = 40745
+	random = no
+	country = jap
+
+	name = "日本海军 "
+	desc = "日本海军在航母方面处于领先地位，拥有一些世界上最好的重巡 洋舰和装备有长矛鱼雷（９３式鱼雷）的巡洋舰和驱逐舰，善于 夜战。但是，也受到损管和大部分舰船防空武器不足等问题的困 扰。日本潜艇趋于大吨位和远航程，但攻击力低下。加之，其潜 艇学说非常刻板并且抵制奇袭。 "
+	style = 0
+	picture = "japanese_navy"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "杰出的 "
+		ai_chance = 100
+		command = { type = task_efficiency which = convoy_raiding value = -0.2 }
+		command = { type = air_attack which = naval value = -1 } # Inadequate AA defense
+		command = { type = sub_detection which = naval value = -1 }
+		command = { type = morale which = naval value = -5 } # Poor damage control equipment
+		command = { type = build_time which = naval where = relative value = 10} # Slow shipyards
+	 	command = { type = build_cost which = naval where = relative value = -10 }
+	 	command = { type = naval_attack which = battleship value = 2 } # Good throw weight
+	 	command = { type = shore_attack which = battleship value = 1 } # Good throw weight
+		command = { type = range which = battlecruiser value = 600 }
+	 	command = { type = naval_attack which = battlecruiser value = 1 } # 14" gun/Good throw weight
+		command = { type = speed which = carrier value = 1 }
+		command = { type = naval_defense which = heavy_cruiser value = 1 }
+	 	command = { type = naval_attack which = heavy_cruiser value = 3 } # Long Lance plus strong main battery
+	 	command = { type = shore_attack which = heavy_cruiser value = 1 } # Strong main battery
+		command = { type = night_attack which = heavy_cruiser value = 5 } # Really great night tactics
+		command = { type = night_defense which = heavy_cruiser value = 5 }
+		command = { type = max_organization which = heavy_cruiser value = 5 } # Excellent tactics
+		command = { type = naval_defense which = light_cruiser value = -1 } # Poorly armored
+	 	command = { type = shore_attack which = light_cruiser value = -1 } # Weak main battery
+	 	command = { type = speed which = light_cruiser value = 1 } # Fast
+	 	command = { type = max_positioning which = light_cruiser value = 0.01 }
+	 	command = { type = min_positioning which = light_cruiser value = 0.01 }
+		command = { type = range which = light_cruiser value = 200 }
+		command = { type = night_attack which = light_cruiser value = 5 }
+		command = { type = night_defense which = light_cruiser value = 5 }
+		command = { type = max_organization which = light_cruiser value = 5 }
+	 	command = { type = build_cost which = light_cruiser where = relative value = -10 }
+		command = { type = supply_consumption which = light_cruiser value = -0.1 } # Really small
+		command = { type = fuel_consumption which = light_cruiser value = -0.15 }
+	 	command = { type = naval_attack which = destroyer value = 1 } # Long Lance
+		command = { type = night_attack which = destroyer value = 5 }
+		command = { type = night_defense which = destroyer value = 5 }
+		command = { type = max_organization which = destroyer value = 5 }
+	 	command = { type = speed which = destroyer value = 1 } # Fast
+	 	command = { type = max_positioning which = destroyer value = 0.01 }
+	 	command = { type = min_positioning which = destroyer value = 0.01 }
+	 	command = { type = naval_attack which = submarine value = 2 } # World class torpedo
+		command = { type = naval_defense which = submarine value = -1 } # Large boats, weak hulls, slow diving
+		command = { type = air_attack which = submarine value = 1 } # Comps for global -1 AA
+		command = { type = air_defense which = submarine value = -1 } # Slow diving, big
+		command = { type = range which = submarine value = 700 } # Long range
+		command = { type = visibility which = submarine value = 2 } # Really big
+	}
+}
+event = {
+	id = 40359
+	random = no
+	country = sov
+
+	trigger = { }
+
+	name = "红色舰队 "
+	desc = "红军的舰队只是第二流的武装力量。大部分水面舰只都是帝俄时 代遗留下来的，航程小得可怜，因为其行动主要集中在波罗的海 和黑海地区。潜艇部队数量庞大，但大部分都过时了。 "
+	style = 0
+	picture = "american_naval_reinforcments2"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "我们还未做好准备 "
+		ai_chance = 100
+		command = { type = build_time which = naval where = relative value = 10} # Slow shipyards
+	 	command = { type = build_cost which = naval where = relative value = -10 }
+		command = { type = morale which = naval value = -10 } # Really Poor reliability
+		command = { type = range which = battleship value = -800 } # Poor range
+	 	command = { type = naval_attack which = battleship value = -2 } # Poor fire control
+		command = { type = naval_defense which = battleship value = -1 } # Poor naval architecture tradition
+		command = { type = fuel_consumption which = battleship value = 0.6 } # Really poor fuel economy
+		command = { type = range which = battlecruiser value = -750 }
+		command = { type = naval_defense which = battlecruiser value = -1 } # Poor naval architecture tradition
+	 	command = { type = shore_attack which = battlecruiser value = 1 } # High throw weight
+		command = { type = range which = carrier value = -800 }
+		command = { type = naval_defense which = carrier value = -2 } # No carrier naval architecture tradition
+		command = { type = fuel_consumption which = carrier value = 0.3 } # Really poor fuel economy
+		command = { type = range which = heavy_cruiser value = -800 }
+		command = { type = naval_defense which = heavy_cruiser value = -1 } # Poor naval architecture tradition
+		command = { type = supply_consumption which = heavy_cruiser value = -0.1} # Small
+	 	command = { type = speed which = heavy_cruiser value = 1 } # Fast
+	 	command = { type = max_positioning which = heavy_cruiser value = 0.01 }
+	 	command = { type = min_positioning which = heavy_cruiser value = 0.01 }
+		command = { type = fuel_consumption which = heavy_cruiser value = 0.3 } # Really poor fuel economy
+	 	command = { type = shore_attack which = heavy_cruiser value = 2 } # High throw weight
+		command = { type = range which = light_cruiser value = 350 }
+		command = { type = naval_defense which = light_cruiser value = -1 } # Poor naval architecture tradition
+	 	command = { type = shore_attack which = light_cruiser value = 1 } # High throw weight
+		command = { type = sub_detection which = light_cruiser value = -1 }
+		command = { type = range which = destroyer value = -800 }
+	 	command = { type = naval_attack which = destroyer value = -2 } # Poor fire control and armarment
+		command = { type = naval_defense which = destroyer value = -1 } # Poor hull design
+		command = { type = sub_detection which = destroyer value = -1 }
+	 	command = { type = speed which = destroyer value = 1 } # Fast
+	 	command = { type = max_positioning which = destroyer value = 0.01 }
+	 	command = { type = min_positioning which = destroyer value = 0.01 }
+		command = { type = fuel_consumption which = destroyer value = 0.4 } # Terrible fuel economy
+	 	command = { type = shore_attack which = destroyer value = -1 } # throw weight
+	 	command = { type = morale which = submarine value = 5 } # Compensates for fleet wide reduction
+		command = { type = naval_defense which = submarine value = -1 } # Weak hulls, slow diving
+		command = { type = air_defense which = submarine value = -1 } # Slow diving
+	}
+}
+###################################################
+event = {
+  	id = 19220001
+  	random = no
+  	country = eng
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  		}
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = USA value = -50 }
+	  command = { type = relation which = FRA value = -50 }	
+	  command = { type = relation which = ITA value = -50 }
+	  command = { type = relation which = JAP value = -50 }	
+  		}
+	}
+event = {
+  	id = 19220002
+  	random = no
+  	country = usa
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  	}
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = JAP value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+event = {
+  	id = 19220003
+  	random = no
+  	country = JAP
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  	}
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = USA value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+event = {
+  	id = 19220004
+  	random = no
+  	country = FRA 
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  }
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = ITA value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+event = {
+  	id = 19220005
+  	random = no  
+  	country = ita 
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  }
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+	  command = { type = relation which = FRA value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+  
+event = {
+  	id = 19220021
+  	random = no
+  	country = eng
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+}   
+event = {
+  	id = 19220022
+  	random = no
+  	country = usa
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+}  
+event = {
+  	id = 1922023
+  	random = no
+  	country = JAP
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  	command = { type = sleepevent which = 19340123 }
+  }
+}  
+event = {
+  	id = 19220024
+  	random = no
+  	country = FRA
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+}  
+event = {
+  	id = 19220025
+  	random = no  
+  	country = ita 
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+} 
+
+event = {
+  	id = 1920012
+  	random = no
+  	country = FRA
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  }
+}
+
+event = {
+  	id = 1920013
+  	random = no
+  	country = JAP
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  }
+}
+
+event = {
+  	id = 1920014
+  	random = no
+  	country = ENG
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  }
+}
+
+event = {
+  	id = 1920015
+  	random = no
+  	country = USA
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  }
+}
+
+event = {
+  	id = 1920016
+  	random = no
+  	country = SOV
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 30 month = december year = 1924 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  }
+}
+
+
+	    command = { type = secedeprovince which = CXB value = 2801 }
+    	command = { type = secedeprovince which = CXB value = 2800 }
+    	command = { type = secedeprovince which = CXB value = 2799 }
+    	command = { type = secedeprovince which = CXB value = 2798 }
+    	command = { type = secedeprovince which = CXB value = 2797 }
+    	command = { type = secedeprovince which = CXB value = 2796 }
+		command = { type = secedeprovince which = CXB value = 1274 }
+    	command = { type = secedeprovince which = CXB value = 1275 }
+    	command = { type = secedeprovince which = CXB value = 1276 }
+    	command = { type = secedeprovince which = CXB value = 1277 }
+		
+		command = { type = secedeprovince which = U05 value =	1267	}#陝西
+		command = { type = secedeprovince which = U05 value =	1268	}
+		command = { type = secedeprovince which = U05 value =	1269	}
+		command = { type = secedeprovince which = U05 value =	1270	}
+#		command = { type = secedeprovince which = U05 value =	1271	}
+#		command = { type = secedeprovince which = U05 value =	1272	}
+		command = { type = secedeprovince which = U05 value =	1278	}
+		command = { type = secedeprovince which = U05 value =	1887	}
+		command = { type = secedeprovince which = U05 value =	2781	}
+		command = { type = secedeprovince which = U05 value =	2782	}
+		command = { type = secedeprovince which = U05 value =	2783	}
+		command = { type = secedeprovince which = U02 value =	2784	}
+		command = { type = secedeprovince which = U05 value =	2786	}
+		command = { type = secedeprovince which = U05 value =	2787	}
+		command = { type = secedeprovince which = U05 value =	2788	}
+#		command = { type = secedeprovince which = U05 value =	2789	}
+		command = { type = secedeprovince which = U05 value =	2790	}
+#		command = { type = secedeprovince which = U05 value =	2791	}
+#		command = { type = secedeprovince which = U05 value =	2792	}
+#		command = { type = secedeprovince which = U05 value =	2794	}
+
+		
+		command = { type = secedeprovince which = U05 value =	1223	}#河南
+		command = { type = secedeprovince which = U05 value =	1224	}
+		command = { type = secedeprovince which = U05 value =	1227	}
+		command = { type = secedeprovince which = U05 value =	1228	}
+		command = { type = secedeprovince which = U05 value =	1229	}
+		command = { type = secedeprovince which = U05 value =	1230	}
+		command = { type = secedeprovince which = U05 value =	1876	}
+		command = { type = secedeprovince which = U05 value =	2838	}
+		command = { type = secedeprovince which = U05 value =	2839	}
+		command = { type = secedeprovince which = U05 value =	2840	}
+		command = { type = secedeprovince which = U05 value =	2841	}
+		command = { type = secedeprovince which = U02 value =	2842	}
+		command = { type = secedeprovince which = U05 value =	2843	}
+		command = { type = secedeprovince which = U05 value =	2844	}
+		command = { type = secedeprovince which = U05 value =	2845	}
+		command = { type = secedeprovince which = U05 value =	2846	}
+		command = { type = secedeprovince which = U05 value =	2847	}
+		command = { type = secedeprovince which = U05 value =	2848	}
+		command = { type = secedeprovince which = U05 value =	2849	}
+
+		command = { type = secedeprovince which = U05 value =	1203	}#河北
+		command = { type = secedeprovince which = U05 value =	1204	}
+		command = { type = secedeprovince which = U05 value =	1205	}
+		command = { type = secedeprovince which = U05 value =	1210	}
+		command = { type = secedeprovince which = U05 value =	1211	}
+		command = { type = secedeprovince which = U05 value =	1212	}
+		command = { type = secedeprovince which = U05 value =	1810	}
+		command = { type = secedeprovince which = U05 value =	1811	}
+		command = { type = secedeprovince which = U05 value =	2673	}
+		command = { type = secedeprovince which = U05 value =	2748	}
+		command = { type = secedeprovince which = U05 value =	2793	}
+		command = { type = secedeprovince which = U02 value =	2865	}
+		command = { type = secedeprovince which = U05 value =	2866	}
+		command = { type = secedeprovince which = U05 value =	2867	}
+		command = { type = secedeprovince which = U05 value =	2868	}
+		command = { type = secedeprovince which = U05 value =	2869	}
+		command = { type = secedeprovince which = U05 value =	2870	}
+		command = { type = secedeprovince which = U05 value =	2871	}
+		command = { type = secedeprovince which = U05 value =	2872	}
+		command = { type = secedeprovince which = U05 value =	2873	}
+		command = { type = secedeprovince which = U05 value =	2874	}
+		command = { type = secedeprovince which = U05 value =	2875	}
+		command = { type = secedeprovince which = U05 value =	2876	}
+		command = { type = secedeprovince which = U05 value =	2992	}
+		command = { type = secedeprovince which = U05 value =	2993	}
+		command = { type = secedeprovince which = U05 value =	2994	}
+		
+		command = { type = secedeprovince which = U05 value = 1170 } #山東
+		command = { type = secedeprovince which = U05 value = 1213 }
+		command = { type = secedeprovince which = U05 value = 1214 }
+		command = { type = secedeprovince which = U05 value = 1215 }
+		command = { type = secedeprovince which = U05 value = 1216 }
+		command = { type = secedeprovince which = U05 value = 1894 }
+		command = { type = secedeprovince which = U05 value = 2850 }
+		command = { type = secedeprovince which = U05 value = 2851 }
+		command = { type = secedeprovince which = U05 value = 2852 }
+		command = { type = secedeprovince which = U05 value = 2853 }
+		command = { type = secedeprovince which = U05 value = 2854 }
+		command = { type = secedeprovince which = U05 value = 2855 }
+		command = { type = secedeprovince which = U05 value = 2856 }
+		command = { type = secedeprovince which = U05 value = 2857 }
+		command = { type = secedeprovince which = U05 value = 2858 }
+		command = { type = secedeprovince which = U05 value = 2859 }
+		command = { type = secedeprovince which = U05 value = 2860 }
+		command = { type = secedeprovince which = U05 value = 2861 }
+		command = { type = secedeprovince which = U05 value = 2862 }
+		command = { type = secedeprovince which = U05 value = 2863 }
+		command = { type = secedeprovince which = U05 value = 2864 }
+		
+		
+		event = {
+	id = 1000
+	random = no
+	country = CHI
+	persistent = yes
+	trigger = { 
+		ai = no
+		control = { province = 1312 data = CHI }
+		not = { control = { province = 1255 data = CHI } }
+		event = 200005
+	}
+
+	name = "湖南作戰"
+	desc = "7月上旬，國民革命軍第四軍第十師、第十二師和葉挺獨立團及第七軍、第八軍分別在安仁、永豐（今湖南雙峰）地區集中後，分路並進。第四軍克醴陵，第八軍三個師佔湘潭，另兩個師和第七軍一個旅攻寧鄉。 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 1 month = july year = 1926 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "1個月佔領長沙、衡陽、常德 "
+		command = { type = trigger which = 1011 value = 30 }
+		command = { type = trigger which = 1016  }
+		command = { type = sleepevent which = 1000  }
+		}
+	action_b = {
+		name = "等等 "
+   command = { }		}
+}
+
+
+event = {
+	id = 1011
+	random = no
+	country = chi
+
+	name = "進攻湖南失敗 "
+	desc = "7月上旬，國民革命軍第四軍第十師、第十二師和葉挺獨立團及第七軍、第八軍分別在安仁、永豐（今湖南雙峰）地區集中後，分路並進。第四軍克醴陵，第八軍三個師佔湘潭，另兩個師和第七軍一個旅攻寧鄉。 "
+	style = 0
+
+
+	action_a = {
+		name = "娘西匹!! "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -3 }
+                  command = { type = trigger which = 1  }
+		}
+}
+
+event = {
+	id = 1016
+	random = no
+	country = u05
+
+	
+
+	name = "防禦湖南"
+	desc = "7月上旬，國民革命軍第四軍第十師、第十二師和葉挺獨立團及第七軍、第八軍分別在安仁、永豐（今湖南雙峰）地區集中後，分路並進。第四軍克醴陵，第八軍三個師佔湘潭，另兩個師和第七軍一個旅攻寧鄉"
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+		name = "防禦 "
+                command = { type = construct which = land_fort where = 1255 value = 5 }
+#	        command = { type = add_corps which = "長沙城防 " value = land where = 1255 } 
+#                command = { type = add_division which = "長沙城防 " value = garrison when = 1  }
+}
+}
+
+event = {
+	id = 1001
+	random = no
+	country = CHI
+	persistent = yes
+	trigger = {
+		ai = no
+		not = { control = { province = 1232 data = CHI } }
+		control = { province = 1255 data = CHI }
+		event = 200006
+		or = { and = {	garrison = { country = CHI province = 1226 type = land size = 5 area = no }
+				garrison = { country = CHI province = 2685 type = land size = 5 area = no }  }
+                       areacontrol = { province = 1232 data = -2 }             }
+                                     
+	}
+
+	name = "湖北作戰"
+	desc = "國民革命軍於9月1日包圍武昌城。2日，前敵指揮部 決定以第4軍並配屬第1軍第2師和第7軍第7、第8旅主攻武昌城； 第8軍繼續準備進攻漢陽、漢口；第7軍第1、 第2旅在鄂城（今鄂州）、樊口遮斷吳軍長江交通， 掩護攻城部隊側背安全；第1軍第1師為 總預備隊，在崇陽待命 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 15 month = may year = 1926 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "50天佔領武漢三鎮、襄陽 "
+		command = { type = trigger which = 1012 value = 50 }
+		command = { type = trigger which = 1017 }
+		command = { type = sleepevent which = 1001  }
+		}
+	action_b = {
+		name = "等等 "
+
+   command = { }		}
+}
+
+event = {
+	id = 1012
+	random = no
+	country = chi
+
+	name = "進攻武漢失敗 "
+	desc = "9月上旬，國民革命軍分三路進軍江西。 在贛南，由李濟深指揮第2軍第5師、第5軍第16師第46團和第14軍（由獨立第1師改編，賴世璜任軍長）先於其他方向行動，攻占贛州後沿贛江北上，向吉安方向發展進攻。 "
+	style = 0
+
+
+	action_a = {
+		name = "娘西匹!! "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -3 }
+                  command = { type = trigger which = 1  }
+		}
+}
+
+event = {
+	id = 1017
+	random = no
+	country = u05
+
+	
+
+	name = "防禦湖北"
+	desc = "9月上旬，國民革命軍分三路進軍江西。 在贛南，由李濟深指揮第2軍第5師、第5軍第16師第46團和第14軍（由獨立第1師改編，賴世璜任軍長）先於其他方向行動，攻占贛州後沿贛江北上，向吉安方向發展進攻。 "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+		name = "防禦 "
+                command = { type = construct which = land_fort where = 1232 value = 5 }
+                command = { type = construct which = land_fort where = 1253 value = 7 }
+ 	}
+}
+###################
+#孫傳芳參戰
+###################
+##########################
+#1926年       1000~
+##########################
+event = {
+	id = 1002
+	random = no
+	country = CHI
+	persistent = yes
+	trigger = {
+		ai = no
+		not = { control = { province = 1251 data = CHI } }
+		control = { province = 1232 data = CHI }
+                event = 200600
+         	garrison = { country = CHI province = 1232 type = land size = 9 area = yes }
+	or = {  garrison = { country = CHI province = 1313 type = land size = 5 area = yes } 
+                garrison = { country = CHI province = 1255 type = land size = 5 area = yes }  }
+               
+	}
+
+	name = "江西作戰"
+	desc = "9月上旬，國民革命軍分三路進軍江西。 在贛南，由李濟深指揮第2軍第5師、第5軍第16師第46團和第14軍（由獨立第1師改編，賴世璜任軍長）先於其他方向行動，攻占贛州後沿贛江北上，向吉安方向發展進攻。 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 15 month = may year = 1926 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "2個月佔領南潯線、贛州 "
+		command = { type = trigger which = 1013 value = 60 }
+		command = { type = trigger which = 1018  }
+		command = { type = sleepevent which = 1002  }
+		}
+	action_b = {
+		name = "等等 "
+
+   command = { }		}
+}
+
+event = {
+	id = 1013
+	random = no
+	country = chi
+
+	name = "進攻江西失敗 "
+	desc = "9月上旬，國民革命軍分三路進軍江西。 在贛南，由李濟深指揮第2軍第5師、第5軍第16師第46團和第14軍（由獨立第1師改編，賴世璜任軍長）先於其他方向行動，攻占贛州後沿贛江北上，向吉安方向發展進攻。 "
+	style = 0
+
+
+	action_a = {
+		name = "娘西匹!! "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -3 }
+                  command = { type = trigger which = 1  }
+		}
+}
+
+event = {
+	id = 1018
+	random = no
+	country = u06
+
+	
+
+	name = "防禦江西"
+	desc = "9月上旬，國民革命軍分三路進軍江西。 在贛南，由李濟深指揮第2軍第5師、第5軍第16師第46團和第14軍（由獨立第1師改編，賴世璜任軍長）先於其他方向行動，攻占贛州後沿贛江北上，向吉安方向發展進攻。 "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+		name = "防禦 "
+                command = { type = construct which = land_fort where = 1251 value = 5 }
+                command = { type = construct which = land_fort where = 1252 value = 5 }	
+	        command = { type = add_corps which = "南昌城防 " value = land where = 1251 } 
+    command = { type = activate_division which = 30036 value = 13 where = 1251 when = 1  }
+    command = { type = disorg_division which = 30036 value = 13 where = -100  }
+	}
+}
+event = {
+	id = 1003
+	random = no
+	country = CHI
+	persistent = yes
+	trigger = { 
+		ai = no
+		not = { control = { province = 1244 data = CHI } }
+		control = { province = 1251 data = CHI }
+		control = { province = 1232 data = CHI }
+		event = 200600
+		or = { and = {	garrison = { country = CHI province = 1251 type = land size = 9 area = yes }
+				garrison = { country = CHI province = 1313 type = land size = 6 area = yes }  }
+        }         
+	}
+
+	name = "福建作戰"
+	desc = "10月中旬，國民革命軍第一軍軍長何應欽乘湘 、鄂、贛戰場節節取勝之機，轉守為攻，進軍福建。 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 15 month = may year = 1926 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "2個月佔領福州、廈門 "
+		command = { type = trigger which = 1014 value = 60 }
+		command = { type = trigger which = 1019  }
+		command = { type = sleepevent which = 1003  }
+		}
+	action_b = {
+		name = "等等 "
+   command = { }		}
+}
+
+event = {
+	id = 1014
+	random = no
+	country = chi
+
+	name = "進攻福建失敗 "
+	desc = "10月中旬，國民革命軍第一軍軍長何應欽乘湘 、鄂、贛戰場節節取勝之機，轉守為攻，進軍福建。 "
+	style = 0
+
+
+	action_a = {
+		name = "娘西匹!! "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -3 }
+                  command = { type = trigger which = 1  }
+		}
+}
+ event = {
+	id = 1019
+	random = no
+	country = u06
+
+	
+
+	name = "防禦福建"
+	desc = "10月中旬，國民革命軍第一軍軍長何應欽乘湘 、鄂、贛戰場節節取勝之機，轉守為攻，進軍福建。 "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+		name = "防禦 "
+                command = { type = construct which = land_fort where = 1244 value = 5 }
+	        command = { type = add_corps which = "福州城防 " value = land where = 1244 } 
+    command = { type = activate_division which = 30036 value = 14 where = 1244 when = 1  }
+    command = { type = disorg_division which = 30036 value = 14 where = -100  }
+	}
+}
+event = {
+	id = 1004
+	random = no
+	country = CHI
+	persistent = yes
+	trigger = {
+		ai = no
+		not = { control = { province = 1235data = CHI }
+			control = { province = 1237 data = CHI }
+			control = { province = 1238 data = CHI } }
+		event = 200600
+#		event = 200608
+#                event = 1002
+#                event = 1003
+		garrison = { country = CHI province = 1232 type = land size = 12 area = yes } 
+		garrison = { country = CHI province = 1244 type = land size = 9 area = yes } 
+		garrison = { country = CHI province = 1251 type = land size = 12 area = yes } 
+	}
+
+	name = "長江下游作戰"
+	desc = "為肅清長江下游之敵，國民革命軍總司令部於1927年1月上旬決定進軍杭州、 上海，會攻南京。蔣中正兼中央軍總指揮，率江右軍 （由第6、第2軍和獨立第2師組成，程潛任總指揮）和江左軍 （由第7、第10、第15軍組成，李宗仁任總指揮）分由贛、 鄂沿長江兩岸向皖、蘇推進，主攻南京。何應欽為東路軍總指揮， 率第1、第14、第17、第19軍（由孫軍第1師起義改編，陳儀任軍長） 和第26軍（由孫軍第3師起義改編，周鳳岐任軍長）自贛、閩分路入浙， 奪取杭州、上海，助攻南京。唐生智為西路軍總指揮，率第8、 第4、第9、第11軍由鄂入豫，牽制北面之敵。 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 1 month = september year = 1926 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "85天佔領長江南岸及所有鐵路線 "
+		command = { type = trigger which = 1015 value = 85 }
+		command = { type = trigger which = 1020  }
+		command = { type = sleepevent which = 1004  }
+		command = { type = war which = U02 }
+		}
+	action_b = {
+		name = "等等 "
+   	command = { }		}
+}
+
+event = {
+	id = 1015
+	random = no
+	country = chi
+
+	name = "進攻長江下游失敗 "
+	desc = "為肅清長江下游之敵，國民革命軍總司令部於1927年1月上旬決定進軍杭州、 上海，會攻南京。蔣中正兼中央軍總指揮，率江右軍 （由第6、第2軍和獨立第2師組成，程潛任總指揮）和江左軍 （由第7、第10、第15軍組成，李宗仁任總指揮）分由贛、 鄂沿長江兩岸向皖、蘇推進，主攻南京。何應欽為東路軍總指揮， 率第1、第14、第17、第19軍（由孫軍第1師起義改編，陳儀任軍長） 和第26軍（由孫軍第3師起義改編，周鳳岐任軍長）自贛、閩分路入浙， 奪取杭州、上海，助攻南京。唐生智為西路軍總指揮，率第8、 第4、第9、第11軍由鄂入豫，牽制北面之敵。 "
+	style = 0
+
+
+	action_a = {
+		name = "娘西匹!! "
+		command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -5 }
+                command = { type = trigger which = 1  }
+		}
+}
+ event = {
+	id = 1020
+	random = no
+	country = u02
+
+	
+
+	name = "防禦長江下游"
+	desc = "為肅清長江下游之敵，國民革命軍總司令部於1927年1月上旬決定進軍杭州、 上海，會攻南京。蔣中正兼中央軍總指揮，率江右軍 （由第6、第2軍和獨立第2師組成，程潛任總指揮）和江左軍 （由第7、第10、第15軍組成，李宗仁任總指揮）分由贛、 鄂沿長江兩岸向皖、蘇推進，主攻南京。何應欽為東路軍總指揮， 率第1、第14、第17、第19軍（由孫軍第1師起義改編，陳儀任軍長） 和第26軍（由孫軍第3師起義改編，周鳳岐任軍長）自贛、閩分路入浙， 奪取杭州、上海，助攻南京。唐生智為西路軍總指揮，率第8、 第4、第9、第11軍由鄂入豫，牽制北面之敵。 "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+		name = "防禦 "
+                command = { type = construct which = land_fort where = 1218 value = 5 }
+                command = { type = construct which = land_fort where = 1235 value = 5 }
+                command = { type = construct which = land_fort where = 1237 value = 5 }
+                command = { type = construct which = land_fort where = 1238 value = 5 }
+	        command = { type = add_corps which = "南京城防 " value = land where = 1235 } 
+    		command = { type = activate_division which = 22320 value = 80 where = 1235 when = 1  }
+    		command = { type = disorg_division which = 22320 value = 80 where = -100  }
+		command = { type = add_corps which = "上海城防 " value = land where = 1237 } 
+    		command = { type = activate_division which = 22320 value = 81 where = 1237 when = 1  }
+    		command = { type = disorg_division which = 22320 value = 81 where = -100  }
+		command = { type = add_corps which = "杭州城防 " value = land where = 1238 } 
+   		command = { type = activate_division which = 22320 value = 82 where = 1238 when = 1  }
+    		command = { type = disorg_division which = 22320 value = 82 where = -100  }
+
+	}
+}

@@ -1,0 +1,33 @@
+CHC;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+1000;Head of State;维经斯基 ;24;LE;Die-hard Reformer;Medium;weijingsiji;x
+1001;Head of Government;陈独秀 ;24;LE;Naive Optimist;Medium;chenduxiu;x
+1044;Head of State;陈独秀 ;25;LE;Popular Figurehead;Medium;chenduxiu;x
+1002;Foreign Minister;瞿秋白 ;24;LE;Ideological Crusader;Medium;quqiubai;x
+1043;Head of Government;瞿秋白 ;25;LE;Naive Optimist;Medium;quqiubai;x
+1003;Minister of Armament;张国焘 ;24;LE;Military Entrepreneur;Medium;zhangguotao;x
+1004;Minister of Security;李大钊 ;24;LE;Man of the People;Medium;lidazhao;x
+1005;Head of Military Intelligence;周恩来 ;24;LE;Technical Specialist;Medium;zhouenlai;x
+1006;Chief of Staff;周恩来 ;24;LE;School of Mass Combat;Medium;zhouenlai;x
+1007;Chief of Army;鲍罗廷 ;24;LE;Guns and Butter Doctrine;Medium;baoluoting;x
+1010;Head of State;米夫 ;20;LE;Pig-headed Isolationist;Medium;mifu;x
+1011;Head of Government;向忠发 ;20;LE;Happy Amateur;Medium;xiangzhongfa;x
+1013;Minister of Armament;周恩来 ;28;LE;Administrative Genius;Medium;zhouenlai;x
+1014;Minister of Security;蔡和森 ;20;LE;Man of the People;Medium;caihesen;x
+1015;Head of Military Intelligence;周恩来 ;20;LE;Technical Specialist;Medium;zhouenlai;x
+1016;Chief of Staff;项英 ;28;LE;School of Defence;Medium;xiangying;x
+1017;Chief of Army;周恩来 ;28;LE;Guns and Butter Doctrine;Medium;zhouenlai;x
+1020;Chief of Army;毛泽东 ;28;LE;Guns and Butter Doctrine;Medium;maozedong;x
+1021;Minister of Security;张国焘 ;20;LE;Prince of Terror;Medium;zhangguotao;x
+1022;Foreign Minister;周恩来 ;24;LE;Great Compromiser;Medium;zhouenlai;x
+1023;Head of State;毛泽东 ;29;LE;Stern Imperialist;Medium;maozedong;x
+1024;Head of Government;毛泽东 ;29;LE;Backroom Backstabber;Medium;maozedong;x
+1025;Minister of Security;李立三 ;20;LE;Man of the People;Medium;lilisan;x
+1026;Foreign Minister;李大钊 ;20;LE;Ideological Crusader;Medium;lidazhao;x
+1027;Head of Government;博古 ;28;LE;Naive Optimist;Medium;bogu;x
+1028;Chief of Army;朱德 ;28;LE;Guns and Butter Doctrine;Medium;zhude;x
+1031;Chief of Navy;國民黨;36;PA;Undistinguished Suit;Very High;kmt;x
+1033;Chief of Navy;南方军閥;36;PA;Undistinguished Suit;Very High;nanfang;x
+1034;Chief of Air Force;蘇联;36;ST;Undistinguished Suit;Very High;sov;x
+1035;Chief of Navy;共產黨;36;ST;Undistinguished Suit;Very High;tg;x
+1042;Chief of Air Force;本土勢力;36;PA;Undistinguished Suit;Very High;bentu;x

@@ -1,0 +1,23 @@
+###########歷史##########
+event      = "db\events\Years\TNE_events_1925.txt"
+event      = "db\events\Years\TNE_events_1926.txt"
+event      = "db\events\Years\TNE_events_1927.txt"
+event      = "db\events\Years\TNE_events_1928.txt"
+event      = "db\events\Years\TNE_events_1929.txt"
+event      = "db\events\Years\TNE_events_1930.txt"
+event      = "db\events\TNE_events_Ninghan Split.txt"
+event      = "db\events\TNE_events_chc uprise.txt"
+event      = "db\events\TNE_events_first chinese CW.txt"
+
+###########架空##########
+event      = "db\events\Alternatives\TNE_events_U05.txt"
+event      = "db\events\Alternatives\TNE_events_CYN.txt"
+
+###########其他############
+event      = "db\events\TNE_tech.txt"
+event      = "db\events\TNE_switch.txt"
+event      = "db\events\TNE_battle.txt"
+#event      = "db\events\politics.txt"
+event      = "db\events\TNE_finance.txt"
+#event      = "db\events\TNE_nuts_city.txt"
+

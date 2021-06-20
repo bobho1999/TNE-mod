@@ -1,0 +1,345 @@
+##############################################
+## 1927年事件   有构想但未制作的...我承认有点多
+##############################################
+康有为去世（除了普及历史也就没什么用了）
+唐继尧去世（我手头上这版小黑人泛滥。。。老唐ID多少啊。。。）
+龙云“二六政变”（老龙ID。。。）
+宋庆龄宣布脱离武汉国民政府（国母是minister么）
+李大钊就义
+托洛茨基被开除出苏共（苏联终于有了个事件啊）
+蒋介石与宋美龄成婚（普及历史。。。）
+
+宁汉合流和宁汉战争——武汉国民政府和南京国民政府，这咋整啊，再分一个势力出来？
+马日事变是宁汉分裂的一部分，本来想做的，但是不知道如何表现
+还有冯玉祥先后与汪精卫和蒋介石会面的事件
+还有校长下野。。。
+
+南京事件过程复杂，又有争议，所以写得很简略
+
+
+我发现27年的事件难搞多了，主要是政治斗争不好在游戏里表现出来
+
+这年CHC终于戏份多了。。。
+
+##############################################
+## 1927年事件   1927001~
+##############################################
+event = {
+	id = 1927008
+	random = no
+	country = CHI
+
+	trigger = { control = { province = 1235 data = CHI } }
+
+	name = "南京事件 "
+	desc = "１９２７年３月２４日，北伐军攻下南京，与当地外侨发生冲突 。英美军舰以此为理由炮击南京，遂形成国际冲突，是为“南京事 件”。 "
+	style = 0
+	picture = "war"
+
+	date = { day = 1 month = march year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 2 }
+		command = { type = relation which = ENG value = -30 }
+		command = { type = relation which = FRA value = -30 }
+		command = { type = relation which = USA value = -30 }
+		command = { type = relation which = JAP value = -30 }
+		}
+}
+
+event = {
+	id = 1927009
+	random = no
+	country = chi
+
+	trigger = { control = { province = 1235 data = CHI }
+                    control = { province = 1253 data = CHI } 
+                    control = { province = 1237 data = CHI } }
+	name = "四·一二事件 "
+	desc = "四·一二事件，国民党方面称“清党”；中共方面称“四·一二 ”反革命政变，是指１９２７年４月１２日中国国民党的部分势 力在蒋介石的率领之下于上海对中国共产党的清洗事件。当日凌 晨，受蒋介石指挥的中华共进会和上海工界联合会的帮派分子从 上海租界冲出，向上海总工会纠察队的驻地闸北、南市、浦东、 吴淞等处，发起攻击。之后蒋介石下令淞沪戒严司令部所属国民 革命军第２６军借口“工人内讧”对工人纠察队强行缴械，造成 三百余人伤亡。 "
+	style = 0
+	picture = "siyier"
+
+	date = { day = 11 month = april year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "清党 "
+		command = { type = dissent value = -1 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = trigger which = 1927010 }
+		}
+}
+
+event = {
+	id = 1927010
+	random = no
+	country = CHC
+
+	name = "四·一二事件 "
+	desc = "四·一二事件，国民党方面称“清党”；中共方面称“四·一二 ”反革命政变，是指１９２７年４月１２日中国国民党的部分势 力在蒋介石的率领之下于上海对中国共产党的清洗事件。四·一二 事件之后，共产党内坚持和国民党妥协的早期领导人陈独秀等人　被认为右倾投降主义被撤职。陈独秀被认为一味退让，甚至要求 工人纠察队向国民党上缴武器，造成共产党对蒋介石的武力清党 毫无准备。中国共产党从此走向武装革命夺取中国政权的道路。 "
+	style = 0
+	picture = "siyier"
+
+	action_a = {
+		name = "国共关系破裂！ "
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CHI value = -100 }
+		command = { type = leave_alliance }
+		}
+}
+
+event = {
+	id = 9999909
+	random = no
+	country = chi
+        
+          
+       trigger = { exists = chi
+                   event = 100014 #国民政府成立
+                   event = 200007 #北伐军攻占武汉
+                   event = 200005 #北伐战争
+                   event = 200502 #吴佩孚丢失湖北
+                   event = 200009
+                   event = 1927008
+                   event = 1927009
+                   ai = yes
+                    control = { province = 1235 data = CHI }
+                control = { province = 1237 data = CHI }
+       control = { province = 2630 data = CHI }
+                  }
+  name = "準備成立武漢國民政府 "
+	desc = "1926年10月国民革命军占领武汉三镇。11月8日，国民 党中央政治会议决定迁中央党部和国民政府到武汉。12月 5日，国民党中央正式宣布中央党部和政府停止在广州办公，各机关 工作人员分批前往武汉，1927年2月21日武汉国民政府正 式办公。 "
+	style = 0
+
+	date = { day = 20 month = february year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1927 }
+	
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+              command = { type = sleepteam which = 1000 }
+                  command = { type = sleepteam which = 1001 }
+                  command = { type = sleepteam which = 1002 }                  
+                  command = { type = sleepteam which = 1004 }
+                  command = { type = sleepteam which = 1005 }
+                  command = { type = sleepteam which = 1006 }
+                  command = { type = sleepteam which = 1007 }
+                  command = { type = sleepteam which = 1008 }
+                  command = { type = sleepteam which = 1009 }
+                  command = { type = sleepteam which = 1010 }
+                  command = { type = sleepteam which = 1011 }
+                  command = { type = sleepteam which = 1012 }
+                  command = { type = sleepteam which = 1013 }
+                  command = { type = sleepteam which = 1014 }
+                  command = { type = sleepteam which = 1015 }
+                  command = { type = sleepteam which = 1016 }
+                  command = { type = sleepteam which = 1017 }
+                  command = { type = sleepteam which = 1018 }
+                  command = { type = sleepteam which = 1019 }
+                  command = { type = sleepteam which = 1020 }
+                  command = { type = sleepteam which = 1021 }
+                  command = { type = sleepteam which = 1022 }
+                  command = { type = sleepteam which = 1023 }
+                  command = { type = sleepteam which = 1024 }
+                  command = { type = sleepteam which = 1025 }
+                  command = { type = sleepteam which = 1026 }
+                  command = { type = sleepteam which = 1027 }
+                  command = { type = sleepteam which = 1028 }
+                  command = { type = sleepteam which = 1029 }
+                  command = { type = sleepteam which = 1030 }
+                  command = { type = sleepteam which = 1031 }
+command = { type = giveleader which = 12000 where = U04 }
+command = { type = giveleader which = 12001 where = U04 }
+command = { type = giveleader which = 12002 where = U04 }
+command = { type = giveleader which = 12003 where = U04 }
+command = { type = giveleader which = 12004 where = U04 }
+command = { type = giveleader which = 12005 where = U04 }
+command = { type = giveleader which = 12006 where = U04 }
+command = { type = giveleader which = 12008 where = U04 }
+command = { type = giveleader which = 12009 where = U04 }
+command = { type = giveleader which = 12010 where = U04 }
+command = { type = giveleader which = 12014 where = U04 }
+command = { type = giveleader which = 12015 where = U04 }
+command = { type = giveleader which = 12016 where = U04 }
+command = { type = giveleader which = 12018 where = U04 }
+command = { type = giveleader which = 12020 where = U04 }
+command = { type = giveleader which = 12021 where = U04 }
+command = { type = giveleader which = 12022 where = U04 }
+command = { type = giveleader which = 12024 where = U04 }
+command = { type = giveleader which = 12025 where = U04 }
+command = { type = giveleader which = 12028 where = U04 }
+command = { type = giveleader which = 12029 where = U04 }
+command = { type = giveleader which = 12030 where = U04 }
+command = { type = giveleader which = 12031 where = U04 }
+command = { type = giveleader which = 12033 where = U04 }
+command = { type = giveleader which = 12034 where = U04 }
+command = { type = giveleader which = 12035 where = U04 }
+command = { type = giveleader which = 12036 where = U04 }
+command = { type = giveleader which = 12037 where = U04 }
+command = { type = giveleader which = 12042 where = U04 }
+command = { type = giveleader which = 12043 where = U04 }
+command = { type = giveleader which = 12044 where = U04 }
+command = { type = giveleader which = 12045 where = U04 }
+command = { type = giveleader which = 12046 where = U04 }
+command = { type = giveleader which = 12047 where = U04 }
+command = { type = giveleader which = 12048 where = U04 }
+command = { type = giveleader which = 12049 where = U04 }
+command = { type = giveleader which = 12050 where = U04 }
+command = { type = giveleader which = 12051 where = U04 }
+command = { type = giveleader which = 12057 where = U04 }
+command = { type = giveleader which = 12059 where = U04 }
+command = { type = giveleader which = 12060 where = U04 }
+command = { type = giveleader which = 12061 where = U04 }
+command = { type = giveleader which = 12062 where = U04 }
+command = { type = giveleader which = 12063 where = U04 }
+command = { type = giveleader which = 12064 where = U04 }
+command = { type = giveleader which = 12065 where = U04 }
+command = { type = giveleader which = 12066 where = U04 }
+command = { type = giveleader which = 12067 where = U04 }
+command = { type = giveleader which = 12068 where = U04 }
+command = { type = giveleader which = 12069 where = U04 }
+command = { type = giveleader which = 12070 where = U04 }
+command = { type = giveleader which = 12071 where = U04 }
+command = { type = giveleader which = 12072 where = U04 }
+command = { type = giveleader which = 12073 where = U04 }
+command = { type = giveleader which = 12074 where = U04 }
+command = { type = giveleader which = 12075 where = U04 }
+command = { type = giveleader which = 12077 where = U04 }
+command = { type = giveleader which = 12078 where = U04 }
+command = { type = giveleader which = 12080 where = U04 }
+command = { type = giveleader which = 12081 where = U04 }
+command = { type = giveleader which = 12082 where = U04 }
+command = { type = giveleader which = 12083 where = U04 }
+command = { type = giveleader which = 12084 where = U04 }
+command = { type = giveleader which = 12085 where = U04 }
+command = { type = giveleader which = 12086 where = U04 }
+command = { type = giveleader which = 12087 where = U04 }
+command = { type = giveleader which = 12088 where = U04 }
+command = { type = giveleader which = 12089 where = U04 }
+command = { type = giveleader which = 12090 where = U04 }
+command = { type = giveleader which = 12091 where = U04 }
+command = { type = giveleader which = 12092 where = U04 }
+command = { type = giveleader which = 12093 where = U04 }
+command = { type = giveleader which = 12094 where = U04 }
+command = { type = giveleader which = 12095 where = U04 }
+command = { type = trigger which = 9999910 value = 2 }
+                 
+}
+}
+event = {
+	id = 9999910
+	random = no
+	country = chi
+        
+          
+       
+  name = "成立武漢國民政府 "
+	desc = "1926年10月国民革命军占领武汉三镇。11月8日，国民 党中央政治会议决定迁中央党部和国民政府到武汉。12月 5日，国民党中央正式宣布中央党部和政府停止在广州办公，各机关 工作人员分批前往武汉，1927年2月21日武汉国民政府正 式办公。 "
+	style = 0
+	
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+       command = { type = independence which = U04 }   
+       command = { type = trigger which = 9999913 value = 2 }           }
+}
+event = {
+	id = 9999913
+	random = no
+	country = u04
+         
+  name = "成立武漢國民政府 "
+	desc = "1926年10月国民革命军占领武汉三镇。11月8日，国民 党中央政治会议决定迁中央党部和国民政府到武汉。12月 5日，国民党中央正式宣布中央党部和政府停止在广州办公，各机关 工作人员分批前往武汉，1927年2月21日武汉国民政府正 式办公。 "
+	style = 0
+	
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+       command = { type = inherit which = chi }  
+       command = { type = capital which = 1232 } 
+                }
+}
+event = {
+	id = 9999911
+	random = no
+	country = u04
+        
+       trigger = { not = { exists = u06 }
+                  
+                   event = 1927008
+                   event = 1927009                  
+                  
+                   
+                  }
+
+  name = "南京國民政府成立 "
+	desc = "1926年，國民革命軍攻克了兩湖、贛、閩的主要城市， 於是國民政府聯席會議在11月決議將 國民政府北遷武漢。然此時的國民政府受到蘇聯以及 中國共產黨的影響，引發中國國民黨內右派 對於左派親共的不滿。1927年3月，北伐軍攻克了上海 與南京，4月蔣中正決定實行「清黨」， 4月18日在南京另立「國民政府」， 與武漢既有的國民政府並立。 "
+	style = 0
+
+	date = { day = 17 month = april year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+       command = { type = independence which = u08 value = 0   }   
+command = { type = relation which = CHC value = 200 }    
+
+command = { type = trigger which = 9999912 }
+      }
+}
+
+event = {
+	id = 9999914
+	random = no
+	country = chi
+        
+          
+       trigger = { exists = chi
+                   event = 100014 #国民政府成立
+                   event = 200007 #北伐军攻占武汉
+                   event = 200005 #北伐战争
+                   event = 200502 #吴佩孚丢失湖北
+                   event = 200009
+                   event = 1927008
+                   event = 1927009
+                   ai = no
+                    control = { province = 1235 data = CHI }
+                control = { province = 1237 data = CHI }
+       control = { province = 2630 data = CHI }
+                  }
+  name = "準備成立武漢國民政府 "
+	desc = "請將所有研究暫停，以免跳出 "
+	style = 0
+
+	date = { day = 20 month = february year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1927 }
+	
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+             command = { type = trigger which = 9999915 value = 1 }
+}
+action_b = {
+		name = "尚未準備好 " 
+             command = { type = trigger which = 9999914 value = 3 }}
+}
+
+event = {
+	id = 9999915
+	random = no
+	country = chi
+         
+  name = "成立武漢國民政府 "
+	desc = "1926年10月国民革命军占领武汉三镇。11月8日，国民 党中央政治会议决定迁中央党部和国民政府到武汉。12月 5日，国民党中央正式宣布中央党部和政府停止在广州办公，各机关 工作人员分批前往武汉，1927年2月21日武汉国民政府正 式办公。 "
+	style = 0
+	
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+       command = { type = country which = u04 }   
+                }
+
+}

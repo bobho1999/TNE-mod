@@ -1,0 +1,1169 @@
+古典主義--      command = { trigger = { not = { ic = 40 } } type = free_ic value = 1 }
+      command = { trigger = { ic = 40 not = { ic = 100 } } type = free_ic value = 2 }
+      command = { trigger = { ic = 100 not = { ic = 200 } } type = free_ic value = 3 }
+      command = { trigger = { ic = 200  } type = free_ic value = 4 }
+釐金--加金錢 加不滿 減工(商)業效率
+
+event = {
+	id = 60515
+	random = no
+	persistent = yes
+
+	trigger = {
+		NOT = { country = SOV }
+		NOT = { country = USA }
+		NOT = { country = ENG }
+		NOT = { country = FRA }
+		NOT = { country = JAP }
+		NOT = { country = MON }
+		NOT = { country = SIA }
+		NOT = { country = POR }
+		NOT = { country = TAN }
+		day = 1
+		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 99
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+###########################################
+event = {
+	id = 60506
+	random = no
+#	persistent = yes
+
+	trigger = {
+#		NOT = { flag = endlijin }
+#		flag = lijin
+		incabinet = 16120 
+#		technology = 4400
+	}
+
+	name = "中國海關現況 "
+	desc = "EVT_60506_DESC"
+	style = 0
+#	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "協定關稅 "
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = free_money value = -5 }
+		command = { type = local_setflag which = AgreementTariff }
+#		command = { type = trigger which = 60501 }
+	}
+}
+#############################################
+event = {
+	id = 710005
+	random = no
+	country = UCH
+
+       	trigger = { 
+		atwar = yes
+		NOT = { OR = { 	war = { country = -1 country = JAP }
+ 				war = { country = -1 country = JAP }
+ 				war = { country = -1 country = JAP }
+ 				war = { country = -1 country = JAP }
+ 				war = { country = -1 country = JAP }
+				}
+			}
+		 }
+
+  	name = "戰亂影響經濟 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = " " 
+
+		
+                     }
+} 
+#####################################
+event = {
+	id = 710005
+	random = no
+	country = UCH
+
+       	trigger = { 
+		event = 710002
+		 }
+
+  	name = "廢督裁軍 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "收歸兵權，裁撤各省督軍 " 
+      		command = { type = trigger which = 710006 value = 1 } #孫傳芳
+       		command = { type = trigger which = 710007 value = 1 } #西北軍
+      		command = { type = trigger which = 710008 value = 1 } #楊森
+      		command = { type = trigger which = 710009 value = 1 } #滇軍		
+                     }
+}
+
+# 各軍閥反應
+# 
+###########################################
+
+############################################
+event = {
+	id = 60500
+	random = no
+	country = CGX
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 70
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 30
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = CSX
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = CYN
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U01
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U02
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U03
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U05
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U06
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U07
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U09
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U10
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U11
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U12
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U13
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U14
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U15
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+
+event = {
+	id = 60500
+	random = no
+	country = U16
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+#		technology = 
+#		day = 1
+#		NOT = { day = 3 }
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = money value = 500 }
+		command = { type = industrial_modifier which = total value = -1 }
+		command = { type = industrial_modifier which = supplies value = -1 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+##################################
+
+
+event = {
+	id = 48206
+	random = no
+
+	trigger = { ai = no
+	            major = no random = 40
+                    relation = { which = ger value = 150 }
+                    not = { local_flag = BUYGER }
+                    not = { local_flag = BUYUSA }
+                    not = { local_flag = BUYSOV }
+	}
+
+	name = "德国的军事合作"
+	desc = "随着我们和德国间的关系加深，我们开始逐步和德国展开深度 的军事合作，也许我们可以尝试采购一些装备或是编练德式军 队。"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 20 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "让总参谋部开始军事合作"
+		command = { type = local_setflag which = BUYGER }
+	}
+}
+
+event = {
+	id = 48207
+	random = no
+
+	trigger = { ai = no
+                    not = { relation = { which = ger value = 120 }   }
+                    local_flag = BUYGER
+	}
+
+	name = "德国的军事合作终止"
+	desc = "随着我们和德国间的关系恶化，德军顾问开始逐步撤出我军， 军事合作终止了。"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "军事合作终止"
+		command = { type = local_clrflag which = BUYGER }
+		command = { type = sleepevent which = 48236 }
+	}
+}
+
+event = {
+	id = 48214
+	random = no
+
+	trigger = { ai = no
+	            major = no random = 30
+                    relation = { which = sov value = 150 }
+                    not = { local_flag = BUYGER }
+                    not = { local_flag = BUYUSA }
+                    not = { local_flag = BUYSOV }
+	}
+
+	name = "苏联的军事合作"
+	desc = "随着我们和苏联间的关系加深，我们开始逐步和苏联展开深度 的军事合作，也许我们可以尝试采购一些装备或是编练苏式军 队。"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 10 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "让总参谋部开始军事合作"
+		command = { type = local_setflag which = BUYSOV }
+	}
+}
+
+event = {
+	id = 48215
+	random = no
+
+	trigger = { ai = no
+                    not = { relation = { which = sov value = 120 } }
+                    local_flag = BUYSOV
+	}
+
+	name = "苏联的军事合作终止"
+	desc = "随着我们和苏联间的关系恶化，苏军顾问开始逐步撤出我军 ，军事合作终止了。"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "军事合作终止"
+		command = { type = local_clrflag which = BUYSOV }
+		command = { type = sleepevent which = 48239 }
+	}
+}
+
+event = {
+	id = 48216
+	random = no
+
+	trigger = { ai = no
+                    major = no	 random = 35
+                    relation = { which = usa value = 150 }
+                    not = { local_flag = BUYGER }
+                    not = { local_flag = BUYUSA }
+                    not = { local_flag = BUYSOV }
+	}
+
+	name = "美国的军事合作"
+	desc = "随着我们和美国间的关系加深，我们开始逐步和美国展开深度 的军事合作，也许我们可以尝试采购一些装备或是编练美式军 队。"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1939 }
+
+	action_a = {
+		name = "让总参谋部开始军事合作"
+		command = { type = local_setflag which = BUYUSA }
+	}
+}
+
+event = {
+	id = 48217
+	random = no
+
+	trigger = { ai = no
+                    not = { relation = { which = usa value = 120 }   }
+                    local_flag = BUYUSA
+	}
+
+	name = "美国的军事合作终止"
+	desc = "随着我们和美国间的关系恶化，美军顾问开始逐步撤出我军 ，军事合作终止了。"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "军事合作终止"
+		command = { type = local_clrflag which = BUYUSA }
+		command = { type = sleepevent which = 48240 }
+	}
+}
+
+event = {
+	id = 48236
+	random = no
+	persistent = yes
+
+	trigger = {
+                    major = no
+                    local_flag = BUYGER
+                    not = { local_flag = train }
+                    relation = { which = ger value = 160 }
+                    or = {
+                           ai = yes
+                           and = {
+                                   ai = no
+                                   money = 5000
+                           }
+	            }
+        }
+
+	name = "与德国的军事合作-编练德式新军"
+	desc = "和德国的军事合作已经进入了新的阶段，我们将获得一个每年 编练德式新军的机会！"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "编练德式山地师"
+		ai_chance = 0
+		command = { type = local_setflag which = train }           	
+		command = { type = trigger which = 48237 value = 300 }
+		command = { type = money value = -5850 }	
+		command = { type = add_division value = bergsjaeger when = 8 where = engineer }
+		command = { type = manpowerpool value = -15 }	
+	}
+	action_b = {
+		name = "编练德式标准师"
+		ai_chance = 0
+		command = { type = local_setflag which = train }
+		command = { type = trigger which = 48237 value = 220 }
+		command = { type = money value = -4400 }	       	
+		command = { type = add_division value = infantry when = 10 where = artillery }
+		command = { type = add_division value = infantry when = 10 where = artillery }
+		command = { type = manpowerpool value = -24 }
+	}	
+#	action_c = {
+#		name = "编练德式装甲师"
+#		ai_chance = 0
+#		command = { type = local_setflag which = train }	
+#		command = { type = trigger which = 48237 value = 300 }
+#		command = { type = money value = -6750 }	      	
+#		command = { type = add_division value = armor when = 9 where = light_armor_brigade }
+#		command = { type = manpowerpool value = -15 }	
+#	}	
+	action_d = {
+		name = "我们不需要德式军队"
+		ai_chance = 100
+		command = { type = local_setflag which = train }
+	}		
+}
+
+event = {
+	id = 48237
+	random = no
+	persistent = yes
+
+	name = "新军编成"
+	desc = "我们的新军编练完成，祖国又有了新的钢铁长城！"
+	style = 0
+	picture = "15th_army"
+
+	action_a = {
+		name = "祖国万岁！"
+		command = { type = local_clrflag which = train }
+	}		
+}
+
+event = {
+	id = 48239
+	random = no
+	persistent = yes
+
+	trigger = {
+                    major = no
+                    local_flag = BUYSOV
+                    not = { local_flag = train }
+                    relation = { which = sov value = 160 }
+                    or = {
+                          ai = yes
+                          and = {
+                                 ai = no
+                                 money = 5000
+                          }
+	            }
+        }
+
+	name = "与苏联的军事合作-编练苏式新军"
+	desc = "和苏联的军事合作已经进入了新的阶段，我们将获得一个每年 编练苏式新军的机会！"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "编练苏式标准师"
+		ai_chance = 0
+		command = { type = local_setflag which = train }
+		command = { type = trigger which = 48237 value = 220 }
+		command = { type = money value = -3080 }	       	
+		command = { type = add_division value = infantry when = 19 where = artillery }
+		command = { type = add_division value = infantry when = 19 where = artillery }
+		command = { type = manpowerpool value = -20 }
+	}	
+	action_b = {
+		name = "编练苏式骑兵师"
+		ai_chance = 0
+		command = { type = local_setflag which = train }	
+		command = { type = trigger which = 48237 value = 280 }
+		command = { type = money value = -3220 }	      	
+		command = { type = add_division value = cavalry when = 25 where = armored_car }
+		command = { type = manpowerpool value = -10 }
+	}	
+#	action_c = {
+#		name = "编练苏式坦克师"
+#		ai_chance = 0
+#		command = { type = local_setflag which = train }	
+#		command = { type = trigger which = 48237 value = 300 }
+#		command = { type = money value = -4500 }	      	
+#		command = { type = add_division value = armor when = 18 where = light_armor_brigade }
+#		command = { type = manpowerpool value = -12 }
+#	}
+	action_d = {
+		name = "我们不需要苏式军队"
+		ai_chance = 100
+		command = { type = local_setflag which = train }
+	}		
+}
+
+event = {
+	id = 48240
+	random = no
+	persistent = yes
+
+	trigger = {
+                    major = no
+                    local_flag = BUYUSA
+                    not = { local_flag = train }
+                    relation = { which = usa value = 160 }
+                    or = {
+                          ai = yes
+                          and = {
+                                 ai = no
+                                 money = 5000
+                          }
+	            }
+        }
+
+	name = "与美国的军事合作-编练美式新军"
+	desc = "和美国的军事合作已经进入了新的阶段，我们将获得一个每年 编练美式新军的机会！"
+	style = 0
+	picture = "15th_army"
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 60
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "编练美式陆战师"
+		ai_chance = 0
+		command = { type = local_setflag which = train }         	    	
+		command = { type = trigger which = 48237 value = 320 }
+		command = { type = money value = -3600 }	
+		command = { type = add_division value = marine when = 9 where = anti_tank }
+		command = { type = manpowerpool value = -15 }
+	}
+	action_b = {
+		name = "编练美式标准师"
+		ai_chance = 0
+		command = { type = local_setflag which = train }	
+		command = { type = trigger which = 48237 value = 220 }
+		command = { type = money value = -3080 }	       	
+		command = { type = add_division value = infantry when = 27 where = artillery }
+		command = { type = add_division value = infantry when = 27 where = artillery }
+		command = { type = manpowerpool value = -12 }
+	}	
+#	action_c = {
+#		name = "编练美式装甲师"
+#		ai_chance = 0
+#		command = { type = local_setflag which = train }	
+#		command = { type = trigger which = 48237 value = 300 }
+#		command = { type = money value = -4500 }	      	
+#		command = { type = add_division value = armor when = 27 where = light_armor_brigade }
+#		command = { type = manpowerpool value = -15 }
+#	}	
+	action_d = {
+		name = "我们不需要美式军队"
+		ai_chance = 100
+		command = { type = local_setflag which = train }
+	}		
+}

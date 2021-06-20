@@ -1,0 +1,38 @@
+land_unit_type = 1
+# 0 - 60毫米迫擊砲
+model = {
+	cost 				= 3
+	buildtime	 		= 45
+	manpower 			= 1
+	morale					= 1
+	toughness 			= 0.5
+	softattack			= 2
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 1.5
+}
+# 1 - 82毫米迫擊砲
+model = {
+	cost 				= 3
+	buildtime	 		= 45
+	manpower 			= 1
+	morale					= 1
+	toughness 			= 0.5
+	softattack			= 3
+	supplyconsumption 	= 0.5
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+}
+# 2 - 105毫米重型迫擊砲
+model = {
+	cost 				= 3
+	buildtime	 		= 60
+	manpower 			= 1
+	maxspeed 			= -0.5
+	morale					= 3
+	toughness 			= 0.5
+	softattack			= 6
+	supplyconsumption 	= 1
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+}

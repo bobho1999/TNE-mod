@@ -1,0 +1,1621 @@
+###################
+#国民政府事件
+###################
+##########################
+#1925年       100000~
+##########################
+event = {
+	id = 100000
+	random = no
+	country = CHI
+
+	trigger = { exists = chi }
+  name = "《北上宣言》 "
+	desc = "1924年第二次直奉战争期间，冯玉祥发动北京政变，囚禁总 统曹锟，电邀孙中山北上共商国是。11月10日，孙中山发表 《北上宣言》，扶病北上。宣言重申“北伐之目的，不仅在推翻 军阀，尤在推翻军阀所赖以生存之帝国主义”，力求在中国实现 三民主义。1924年的最后一天,孙中山抱病来到北京,连日 来不断加重的肝病,让他都已无力宣读那300字的“入京宣言 ”。此后,有人建议他到东郊民巷的德国医院去,他说:“东郊 民巷是租界,我不去。”并最终选择了协和医院。 "
+	style = 0
+	picture = "sunyatsen"
+
+	date = { day = 3 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "伟大的民主革命先行者 " 
+		command = { type = local_setflag which = F6 }
+	           }
+}
+
+event = {
+	id = 100018
+	random = no
+	country = chi
+       trigger = { exists = chi
+                   event = 100000#北上宣言
+                  }
+
+  name = "国父孙文逝世 "
+	desc = "余致力国民革命，凡四十年，其目的在求中国之自由平等。积四 十年之经验，深知欲达到此目的，必须唤起民众，及联合世界上 以平等待我之民族，共同奋斗。现在革命尚未成功。凡我同志， 务须依照余所著《建国方略》、《建国大纲》、《三民主义》及 《第一次全国代表大会宣言》，继续努力，以求贯彻。最近主张 召开国民会议及废除不平等条约，尤须于最短期间，促其实现。 是所至嘱！ "
+	style = 0
+	
+	date = { day = 12 month = march year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "和平、奋斗、救中国！ " 
+      command = { type = headofstate which = 11 } #胡汉民
+      command = { type = headofgovernment which = 2 } #汪兆铭
+                     }
+}
+
+event = {
+	id = 100001
+	random = no
+	country = CHI
+
+	trigger = { control = { province = 1313 data = chi } }
+  name = "广东兵工厂的停工 "
+	desc = "1925年5月23日，广东兵工厂工人要求加薪，工厂管理委 员会夏生下令通缉工人，致使全厂停工，夏出走。6月14日任 邓仕章为厂长。 "
+	style = 0
+	picture = "gongrenbaodong"
+
+	date = { day = 23 month = may year = 1925 }
+	offset = 3
+	deathdate = { day = 14 month = june year = 1925 }
+
+	action_a = {
+	ai_chance = 90
+		name = "与工人妥协 " 
+		command = { type = money value = -100 }
+		}
+	action_b = {
+	ai_chance = 10
+		name = "镇压工人 " 
+		command = { type = dissent value = 10 }
+	           }
+}
+
+event = {
+	id = 100003
+	random = no
+	country = chi
+
+  name = "善后会议 "
+	desc = "孙中山到京后，召开国民会议已为刻不容缓之事，段祺瑞为敷衍 计，宣布先召开由各省代表组成的善后会议，再产生国民会议。 孙要求善后会议兼纳人民代表，段只允限于各军首领、各省区长 官，及有功劳和特殊资望地位的人。国民党、中共激烈反对，结 果善后会议一无所成，国民会议亦未能召开。 "
+	style = 0
+	picture = "huiyi"
+
+	action_a = {
+		name = "心无天下的军阀 " 
+		command = { type = relation which = u13 value = -20 }
+	           }
+}
+event = {
+	id = 100004
+	random = no
+	country = chi
+
+	trigger = { 
+	event = 140001
+	 }
+  name = "沙基惨案 "
+	desc = "6月21日，为声援上海的罢工工人，香港、广州工人也进行罢 工。23日，10多万工人、商人、学生在东较场举行集会，并 游行到沙面租界对岸的沙基。下午3时，当游行队伍行经沙基西 桥口时，双方发生冲突，英军士兵从沙面向游行群众开机枪扫射 ，驻扎在白鹅潭的英国军舰同时向北岸开炮，游行队伍当场死亡 50多人，170多人重伤，轻伤者不计其数。 "
+	style = 0
+	picture = "wusacanan"
+
+	date = { day = 23 month = june year = 1925 }
+	offset = 3
+	deathdate = { day = 14 month = july year = 1925 }
+
+	action_a = {
+	  ai_chance = 90
+		name = "严重抗议 " 
+		command = { type = dissent value = -5 }
+		command = { type = relation which = eng value = -10 }
+		command = { type = relation which = fra value = -10 }
+		command = { type = trigger which = 120003 }
+		command = { type = sleepevent which = 100004 }
+		}
+	action_b = {
+	  ai_chance = 10
+	  name = "不闻不问 "	
+	  command = { type = dissent = 10 }
+}
+}
+event = {
+	id = 100005
+	random = no
+	country = chi
+
+  name = "五卅惨案 "
+	desc = "不过数月，罢工的风潮席卷鲁皖一带。25日，国民党电责日人 无理伤害华人。28日，中共决定举行示威。30日，先后有万 人学生群众聚集在公共租界，遭到英巡捕暴力干涉，当场打死十 一人，重伤二十余人，是为五卅惨案。 "
+	style = 0
+	picture = "wusacanan"
+
+	action_a = {
+		name = "有识之士强烈抗议 " 
+		command = { type = relation which = u02 value = -10 }
+		command = { type = relation which = jap value = -10 }
+		command = { type = manpowerpool value = 10 }
+		command = { type = morale which = land value = 1 }
+		}
+}
+
+event = {
+	id = 100015
+	random = no
+	country = chi
+
+  name = "省港工人大罢工 "
+	desc = "1925年6月19日，为了支援上海人民五卅反帝爱国运动， 广州和香港爆发了规模宏大的省港大罢工，此次罢工历时1年零 4个月，是世界工运史上时间最长的一次大罢工，这次大罢工 有效的打击了英帝国主义在香港经济的统治，并且让广州的金融 得到了保障。 "
+	style = 0
+
+	action_a = {
+		name = "支援罢工同胞！ " 
+		command = { type = relation which = eng value = -10 }
+                command = { type = supplies value = -200 }
+                command = { type = money value = -50 }
+                command = { type = dissent value = -1 }
+		}
+}
+
+event = {
+	id = 100006
+	country = chi
+	random = no
+	
+	trigger = { event = 100000 }
+
+	name = "第一次东征 "
+	desc = "趁着孙中山北上，被赶出广州的陈炯明开始蠢蠢欲动。1924 年12月，陈炯明自称救粤军总司令，积极准备着西攻广州。 1925年1月，代理大元帅胡汉民与廖仲恺等决定以三路东征 ，除为保卫广州外，也欲加强孙中山在北方的地位。1925年 2月1日，广州国民政府正式出兵东征，史称第一次东征。 "
+	style = 0
+
+	date = { day = 1 month = february year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = april year = 1926}	
+
+	action_a = {
+		name = "东征！ "	
+    command = { type = war which = u12 }
+    command = { type = dissent value = -10 }
+    command = { type = trigger which = 101200 }
+	}
+}
+event = {
+	id = 100007
+	country = chi
+	random = no
+
+	trigger = {
+		war = { country = CHI  country = U12 }
+			control = { province = 1248 data = -1 }
+	}
+
+	name = "第一次东征结束 "
+	desc = "1923年1月，打着拥护国民革命旗号的滇系军阀杨希闵、桂 系军阀刘震寰，在参与驱逐军阀陈炯明的军事行动后进驻广州。 1925年5月初，杨、刘乘革命军东征陈炯明之际，在厂州发 动叛乱。在此情况下，广州革命政府东征的粤军和黄埔学生军 调回，对杨、刘叛军发起总攻，至15日彻底打垮叛军。杨、 刘二人出逃。此役遂告结束。 "
+	style = 0
+
+	date = { day = 1 month = february year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = april year = 1926}
+
+	action_a = {
+		name = "回师平叛 "	
+		command = { type = peace which = u12 }
+		command = { type = sleepleader which = 12080 }
+		command = { type = sleepleader which = 12081 }
+		command = { type = independence which = U19 value = 1 }
+		command = { type = trigger which = 101900 }
+		command = { type = trigger which = 101201 }
+	}
+}
+
+
+
+event = {
+	id = 100019
+	random = no
+	country = chi
+       trigger = { exists = chi
+       event = 100014 #国民政府成立
+                  }
+
+  name = "廖仲恺遇刺 "
+	desc = "廖仲恺，中国国民革命元勋之一，被视为国民党左派领袖。19 25年8月20日，廖仲恺在国民党中央党部被暴徒刺杀，经调 查后认为是国民党右派所为，当中胡汉民有重大嫌疑。 "
+	style = 0
+	
+	date = { day = 20 month = August year = 1925 }
+	offset = 1
+	deathdate = { day = 20 month = August year = 1926 }
+
+	action_a = {
+		name = "谁干的好事！ " 
+      command = { type = sleepminister which = 4 } #廖仲恺
+      command = { type = headofgovernment which = 2 } #汪兆铭
+      command = { type = foreignminister which = 3 } #伍朝枢
+      command = { type = dissent value = 10 }
+      command = { type = domestic which = political_left value = -1 }
+      command = { type = trigger which = 100020}
+                     }
+}
+
+event = {
+	id = 100020
+	random = no
+	country = chi
+
+  name = "驱逐许崇智 "
+	desc = "廖案之后，蒋介石派人送亲笔信给许崇智，信中说：“粤军已有 变动，请总司令去上海暂避一下，由我代为安排整顿。6个月 后，再请回来共同主持北伐。”许无可奈何，悄然离粤赴沪。这 一走，标志着许崇智和广东时局永远的脱离开来，也标志着他的军 事生涯从此画上了一个无奈的省略号。 "
+	style = 0
+
+	action_a = {
+		name = "蒋中正将是国民政府未来的统治者 " 
+      command = { type = sleepminister which = 37 } #许崇智
+      command = { type = sleepminister which = 15 } #许崇智  
+      command = { type = chiefofstaff which = 19 } #谭延闿
+      command = { type = chiefofarmy which = 25 } #蒋中正
+      command = { type = ministerofintelligence which = 38 } #蒋中正
+      command = { type = dissent value = 2 }
+      command = { type = sleepleader which = 10248 } #许崇智
+                     }
+}
+
+event = {
+	id = 100014
+	random = no
+	country = chi
+  trigger = { exists = chi
+              event = 100018#孙大炮逝世
+              event = 100003#善后会议
+                  }
+
+        name = "国民政府成立 "
+	desc = " "
+	style = 0
+	
+	date = { day = 1 month = july year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1926 }
+
+	action_a = {
+		name = "打倒列强！除军阀！ " 
+      command = { type = headofstate which = 13 } #汪兆铭
+      command = { type = headofgovernment which = 36 } #胡汉民
+      command = { type = foreignminister which = 17 } #胡汉民
+      command = { type = ministerofsecurity which =22 } #徐谦
+      command = { type = chiefofstaff which = 15 } #许崇智
+      command = { type = chiefofarmy which = 16 } #汪兆铭
+      command = { type = money value = -100 }
+      command = { type = supplies value = -500 }
+      command = { type = dissent value = -5 }
+                     }
+}
+
+event = {
+	id = 100013
+	country = chi
+	random = no
+	
+	trigger = { event = 100007 }
+
+	name = "第二次东征 "
+	desc = "1925年9月，原已被打败的广东军阀陈炯明残部，乘东征军主 力回师广州，平叛杨希闵、刘震寰叛乱之机，再次叛乱，重占潮州、 汕头；盘踞广东东南部的军阀邓本殷也与其配合，企图向广州进 攻。广州国民政府为彻底消灭广东省的军阀势力，统一广东革 命根据地，遂决定进行第二次东征。东征军辖第1、第2、 第3纵队，由总指挥蒋介石率领，向东江 地区陈炯明残部发动 进攻。 "
+	style = 0
+
+	date = { day = 10 month = october year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = april year = 1926 }	
+
+	action_a = {
+		name = "消灭陈炯明！ "	
+    command = { type = war which = u12 }
+    command = { type = dissent value = -10 }
+	}
+}
+
+event = {
+  id = 100017
+  random = no
+  country = chi
+  trigger = { event = 100013
+             not = { exists = u13 }
+             }
+  name = "第二次东征——胜利 "
+  desc = "1925年11月4日，东征军收复潮州汕头，28日后，又攻占 五华、兴宁、梅县、大埔，乘胜追击残部，直至闽边永定一 带。至此，陈炯明残部流窜于闽赣边，再也无力袭扰东江。与 此同时，国民革命军另一部又先后消灭了邓本殷在高州、雷州及 海南岛的部队，使广东革命根据地基本趋于统一，为国民革命 军举行反对北洋军阀的北伐，奠定了较为可靠的后方基地。 "
+  style = 0
+  
+  date = { day = 10 month = october year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = july year = 1926 }	
+	
+	action_a = {
+	  name = "胜利！ "
+	  command = { type = morale which = land value = 2 }
+	  }
+}
+
+event = {
+  id = 100016
+  random = no
+  country = chi
+  trigger = { event = 120007 }
+  
+  name = "孙文主义学会成立 "
+  desc = "孙文主义学会是以反对共产党，反对国共合作，反对三大政策为 宗旨的新右派的群众性组织。1925年，黄埔有部分学生认为青 年军人联合会是发展共产党组织的基地，就决定采取以组织对付组织的行 动，组织了孙文主义学会。该会以军校学生为发展对象，主要头目，第 一期有潘佑强、贺衷寒、肖赞育、邓文仪；第二期有杨引之等人。 11月16日，黄埔军校在潮州设立分校，孙文主义学会也在潮州设立分 会，并有筹设孙文主义学校及创办孙文主义青年团的拟议，遭到中 共的反对，导致了严重纠纷。 "
+  style = 0
+  picture = "qingnianjunren"
+  
+  date = { day = 1 month = april year = 1925 }
+  offset = 5
+  deathdate = { day = 29 month = may year = 1925 }
+  
+  action_a = {
+    name = "对抗中共 "
+    command = { type = dissent value = -3 }
+    command = { type = relation which = chc value = -10 }
+    }
+}
+event = {
+	id = 100021
+	country = chi
+	random = no
+
+
+	name = "沈李之争 "
+	desc = "1925年1月，沈采取先发制人战略，分三路进攻李、黄联军。 沈鸿英以沈荣光师长为左路指挥官，指挥建国军新编第—师长沈 健飞、第一游击司令沈鸿飞、第二游击司令沈恩甫、游击统领沈 秀廷、警卫团长沈国治等部分别从信都、公会、昭平进攻梧州。 "
+	style = 0
+
+	action_a = {
+		name = "援助新桂系 "	
+		command = { type = add_corps which = "建国粤军 " value = land when = 12084 where = 1311 }
+		command = { type = activate_division which = 22000 value = 100011 where = 1311 }
+		command = { type = activate_division which = 22000 value = 100012 where = 1311 }
+	}
+}
+event = {
+  id = 100022
+  random = no
+  country = chi
+  trigger = { not = { exists = u19 }  }
+  date = { day = 1 month = january year = 1925 }
+  offset = 1
+  deathdate = { day = 30 month = december year = 1926 }
+  name = "统一广西 "
+  desc = "消灭沈鸿英后，新桂系已成为广西无可争议的领袖。 "
+  action_a = {
+    name = "革命尚未成功 "
+    command = { type = secedeprovince which = cgx value = 1258 }
+    command = { type = secedeprovince which = cgx value = 2729 }
+    command = { type = secedeprovince which = cgx value = 2730 }
+    command = { type = secedeprovince which = cgx value = 1310 }
+    command = { type = secedeprovince which = cgx value = 2728 }
+    command = { type = secedeprovince which = cgx value = 2727 }
+    command = { type = secedeprovince which = cgx value = 2731 }
+    command = { type = secedeprovince which = cgx value = 2732 }
+    command = { type = secedeprovince which = cgx value = 2733 }
+    command = { type = trigger which = 110000 }
+    }
+   }
+
+
+###################
+#桂系事件
+###################
+##########################
+#1925年       110000~
+##########################
+event = {
+  id = 110000
+  random = no
+  country = cgx
+  trigger = { not = { exists = u19 }  }
+  style = 0
+  name = "统一广西 "
+  desc = "消灭沈鸿英后，新桂系已成为广西无可争议的领袖。 "
+  action_a = {
+    name = "革命尚未成功 "
+    command = { type = capital which = 1258 }
+    }
+   }
+  
+###################
+#中共事件
+###################
+##########################
+#1925年       120000~
+##########################
+event = {
+	id = 120000
+	random = no
+	country = chc
+  name = "善后会议 "
+	desc = "孙中山到京后，召开国民会议已为刻不容缓之事，段祺瑞为敷衍 计，宣布先召开由各省代表组成的善后会议，再产生国民会议。 孙要求善后会议兼纳人民代表，段只允限于各军首领、各省区长 官，及有功劳和特殊资望地位的人。国民党、中共激烈反对，结 果善后会议一无所成，国民会议亦未能召开。 "
+	style = 0
+	picture = "huiyi"
+  action_a = {
+		name = "心无天下的军阀 " 
+		command = { type = relation which = u13 value = -20 }
+	           }
+         }
+event = {
+	id = 120001
+	random = no
+	country = chc
+
+  name = "五卅惨案 "
+	desc = "不过数月，罢工的风潮席卷鲁皖一带。25日，国民党电责日人 无理伤害华人。28日，中共决定举行示威。30日，先后有万 人学生群众聚集在公共租界，遭到英巡捕暴力干涉，当场打死十 一人，重伤二十余人，是为五卅惨案。 "
+	style = 0
+	picture = "wusacanan"
+
+	action_a = {
+		name = "与帝国主义斗争到底 " 
+		command = { type = relation which = u02 value = -10 }
+		command = { type = relation which = jap value = -10 }
+		command = { type = manpowerpool value = 10 }
+		}
+}
+event = {
+	id = 120002
+	random = no
+	country = chc
+
+  name = "中共参与反日罢工 "
+	desc = "在华的外资纱厂以日本为多，工人待遇最苛，每人每日工作12 小时，工资仅一角五分，且动辄遭受毒打或开除。1925年2 月，上海日本内外棉纱厂工人罢工，4月蔓延至青岛等地。 "
+	style = 0
+	picture = "gongrenbaodong"
+
+	action_a = {
+		name = "领导工人阶级 " 
+		command = { type = dissent value = -5 }
+		command = { type = relation which = u02 value = -10 }
+		command = { type = manpowerpool value = 10}
+	           }
+}
+event = {
+	id = 120003
+	random = no
+	country = chc
+
+  name = "沙基惨案 "
+	desc = "6月21日，为声援上海的罢工工人，香港、广州工人也进行罢 工。23日，10多万工人、商人、学生在东较场举行集会，并 游行到沙面租界对岸的沙基。下午3时，当游行队伍行经沙基西 桥口时，双方发生冲突，英军士兵从沙面向游行群众开机枪扫射 ，驻扎在白鹅潭的英国军舰同时向北岸开炮，游行队伍当场死亡 50多人，170多人重伤，轻伤者不计其数。 "
+	style = 0
+	picture = "wusacanan"
+
+	action_a = {
+		name = "强烈谴责帝国主义的暴行 " 
+		command = { type = relation which = eng value = -30 }
+		command = { type = relation which = fra value = -30 }
+		command = { type = manpowerpool value = 10}
+	           }
+}
+event = {
+	id = 120004
+	random = no
+	country = chc
+
+  name = "汉口惨案 "
+	desc = "5月罢工扩展到湖北一带，11日，汉口工人游行，被英水兵、 商团枪杀八人，伤四十余人，是为汉口惨案。 "
+	style = 0
+	picture = "wusacanan"
+
+	action_a = {
+		name = "不屈不挠 " 
+		command = { type = relation which = u05 value = -20 }
+		command = { type = manpowerpool value = 10}
+		}
+}
+event = {
+	id = 120005
+	random = no
+	country = chc
+
+  name = "顾正红的殉道 "
+	desc = "1925年5月30日，震惊中外的“五卅”反帝爱国运动像火 山一样燃遍整个上海，席卷全中国。而共产党员顾正红的牺牲， 正是“五卅运动”的导火线。 "
+	style = 0
+	picture = "guzhenghong"
+
+	action_a = {
+		name = "继承革命烈士的事业 " 
+		command = { type = relation which = u02 value = -10 }
+		command = { type = manpowerpool value = 20 }
+		}
+}
+
+event = {
+	id = 120006
+	random = no
+	country = chc
+
+  name = "省港工人大罢工 "
+	desc = "1925年6月19日为了支援上海人民五卅反帝爱国运动，广 州和香港爆发了规模宏大的省港大罢工，此次罢工历时1年零 4个月，是世界工运史上时间最长的一次大罢工，这次大罢工有 效的打击了英帝国主义在香港经济的统治，并且让广州的金融得 到了保障。 "
+	style = 0
+
+	action_a = {
+		name = "不屈不挠 " 
+		command = { type = relation which = eng value = -10 }
+		command = { type = manpowerpool value = 10}
+		}
+}
+
+event = {
+  id = 120007
+  random = no
+  country = chc
+  trigger = { alliance = { country = chc country = chi } }
+  
+  name = "中国青年军人联合会成立 "
+  desc = "中国青年军人联合会，是第一次国内革命战争时期，以黄埔军校 教职员和学生中的共产党员为核心，遍及全国各地军队中的革 命团体。青年军人联合会尽管在成立初期权力归属不很明确， 但随着时间的流逝，青年军人联合会逐渐为共产党员所掌 握。开始具备鲜明的左倾色彩。 "
+  style = 0
+  picture = "qingnianjunren"
+  
+  date = { day = 1 month = february year = 1925 }
+  offset = 5
+  deathdate = { day = 29 month = march year = 1925 }
+  
+  action_a = {
+    name = "发展我们的势力 "
+    command = { type = dissent value = -3 }
+    }
+}
+
+###################
+#日本事件
+###################
+##########################
+#1925年       130000~
+##########################
+event = {
+	id = 130000
+	random = no
+	country = jap
+
+  name = "奉军协助镇压反日罢工 "
+	desc = "在华的外资纱厂以日本为多，工人待遇最苛，每人每日工作12 小时，工资仅一角五分，且动辄遭受毒打或开除。1925年2 月，上海日本内外棉纱厂工人罢工，4月蔓延至青岛等地。 "
+	style = 0
+	picture = "gongrenbaodong"
+
+	action_a = {
+		name = "张作霖是个不错的代理人 " 
+		command = { type = relation which = u02 value = 10 }
+	           }
+}
+event = {
+	id = 130001
+	country = jap
+	random = no
+	
+	trigger = {
+	event = 100204
+	relation = { which = u02 value = 80 }
+	}
+
+	name = "日本的态度——郭松龄倒奉 "
+	desc = "奉军第三军团副团长郭松龄，为奉军五虎将之一，为人机敏狡诈 而城府颇深。在两次直奉战争中屡立战功，但功高赏薄，心怀怨 恨，暗结冯玉祥。十一月二十四日，举兵6万余众东出山海关要 求张作霖下野。 "
+	style = 0
+
+	date = { day = 5 month = december year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = january year = 1926 }	
+
+	action_a = {
+	ai_chance = 99
+		name = "挽救我们的代理人 "
+    command = { type = dissent value = 5 }
+    command = { type = supplies value = -5000 }	
+    command = { type = relation which = u03 value = -100 }
+    command = { type = relation which = u14 value = -200 }
+    command = { type = trigger which = 100205 }
+	  }
+	action_b = {
+	ai_chance = 1
+	  name = "张作霖的死活与我们无关 "
+	  command = { }
+	  }
+}
+event = {
+	id = 130002
+	country = jap
+	random = no
+	
+	trigger = {
+	event = 101403
+	}
+
+	name = "日本的直接干涉 "
+	desc = "援助似乎无法帮助张作霖彻底打倒倒奉派，经过深思熟虑，日本 决定对东北进行直接干涉，十二月二十三日，郭松龄遭黑龙江骑 兵袭击，日本炮兵猛轰倒奉军。 "
+	style = 0
+
+	date = { day = 23 month = december year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = january year = 1926 }	
+
+	action_a = {
+	ai_chance = 80
+		name = "直接干涉 "
+    command = { type = war which = u14 }
+	  }
+	action_b = {
+	ai_chance = 20
+	  name ="没必要为张作霖付出至此 "
+	  command = { }
+	  }
+	  }
+###################
+#英国事件
+###################
+##########################
+#1925年       140000~
+##########################
+event = {
+	id = 140000
+	random = no
+	country = eng
+
+  name = "五卅惨案 "
+	desc = "不过数月，罢工的风潮席卷鲁皖一带。25日，国民党电责日人 无理伤害华人。28日，中共决定举行示威。30日，先后有万 人学生群众聚集在公共租界，遭到英巡捕暴力干涉，当场打死十 一人，重伤二十余人，是为。 "
+	style = 0
+	picture = "wusacanan"
+
+	action_a = {
+		name = "张作霖很有利用价值 " 
+		command = { type = dissent value = 5 }
+		command = { type = relation which = u02 value = 10 }
+		}
+}
+
+event = {
+	id = 140003
+	random = no
+	country = eng
+
+  name = "省港工人大罢工 "
+	desc = "1925年6月19日，为了支援上海人民五卅反帝爱国运动， 广州和香港爆发了规模宏大的省港大罢工，此次罢工历时1年零 4个月，是世界工运史上时间最长的一次大罢工，这次大罢工 有效的打击了英帝国主义在香港经济的统治，并且让广州的金融 得到了保障。 "
+	style = 0
+
+	action_a = {
+		name = "糟糕 " 
+		command = { type = relation which = chi value = -20 }
+    command = { type = relation which = chc value = -20 }
+		command = { type = construct which = infrastructure where = 1315 value = -60 } 
+    command = { type = construct which = ic where = 1315 value = -1 } 
+		command = { type = free_money value = -2 }
+		}
+}
+
+
+
+event = {
+	id = 140001
+	random = no
+	country = eng
+
+  name = "汉口惨案 "
+	desc = "5月罢工扩展到湖北一带，11日，汉口工人游行，被英水兵、 商团枪杀八人，伤四十余人，是为汉口惨案。 "
+	style = 0
+	picture = "wusacanan"
+
+	action_a = {
+		name = "吴佩孚还是可以利用的 " 
+		command = { type = dissent value = 5 }
+		command = { type = relation which = u05 value = 10 }
+		}
+}
+event = {
+	id = 140002
+	random = no
+	country = eng
+
+	trigger = { 
+	event = 140001
+	 }
+  name = "沙基惨案 "
+	desc = "6月21日，为声援上海的罢工工人，香港、广州工人也进行罢 工。23日，10多万工人、商人、学生在东较场举行集会，并 游行到沙面租界对岸的沙基。下午3时，当游行队伍行经沙基西 桥口时，双方发生冲突，英军士兵从沙面向游行群众开机枪扫射 ，驻扎在白鹅潭的英国军舰同时向北岸开炮，游行队伍当场死亡 50多人，170多人重伤，轻伤者不计其数。 "
+	style = 0
+	picture = "wusacanan"
+
+	date = { day = 23 month = june year = 1925 }
+	offset = 3
+	deathdate = { day = 14 month = july year = 1925 }
+
+	action_a = {
+		name = "对野蛮人不需要怜悯 " 
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 100004 }
+		}
+}
+###################
+#西北三马事件
+###################
+##########################
+#1925年       150000~
+##########################
+
+###################
+#晋系事件
+###################
+##########################
+#1925年       160000~
+##########################
+
+###################
+#川康军事件
+###################
+##########################
+#1925年       100100~
+##########################
+
+###################
+#奉系事件
+###################
+##########################
+#1925年       100200~
+##########################
+event = {	
+  id = 100200
+	random = no
+	country = u02
+  
+  trigger =  { 
+  exists = u02 
+  ai = no
+  }   
+
+	name = "奉军五虎将 "
+	desc = "在张作霖帐下，李景林、韩麟春、张宗昌、郭松龄、姜登选并称 五虎将。这五虎将品行不一，性情各异：韩麟春有智谋，而不拘 小节；李景林多才艺而好大话；张宗昌粗鲁放纵无规矩准则；郭 松龄机敏狡诈而城府颇深。姜登选豪爽轻财，和蔼可亲，能与士卒 共甘苦，重义而轻利。郭松龄与姜登选一向不睦，而李景林、张宗 昌各有打算，姜登选和韩麟春关系最为亲密。奉军有此五将，战 斗力颇为强大。 "
+	style = 0
+	picture = "wuhujiang"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "大帅威武 " 
+    command = { type = soft_attack which = infantry value = 2 }     
+    command = { type = hard_attack which = infantry value = -1 }
+		command = { type = max_organization which = land value = 3 }
+    command = { type = morale which = land value = 1 }
+		command = { type = build_cost which = infantry when = now where = relative value = -1 }
+    command = { type = supply_consumption which = infantry when = now where = relative value = -0.2 }
+           }
+}
+event = {
+  id = 100201
+  random = no
+  country = u02
+  
+  name = "危机的前兆——孙传芳反奉 "
+  desc = "民国14年，在二次直奉战争中获胜的张作霖势力长驱南下，席 卷至长江流域一带。奉系的势力达到极盛。然而，奉军如日中天 的扩张引起了其它军阀的不安及不满。特别是面临直接威胁的冯 玉祥与孙传芳。孙传芳率先出击，迅速的驱逐了苏皖的奉军，并 俘虏并处死了张宗昌麾下大将施从滨."
+  style = 0
+  picture = "wushenglianjun"
+  
+  action_a = {
+    name = "孙传芳这小子不知好歹 "
+    command = { type = dissent value = 5}
+    command = { type = relation which = u06 value = -100 }
+    command = { type = secedeprovince which = U06 value = 1235 }
+    command = { type = secedeprovince which = U06 value = 2628 }
+    command = { type = secedeprovince which = U06 value = 2629 }
+    command = { type = secedeprovince which = U06 value = 2627 }
+    command = { type = secedeprovince which = U06 value = 2626 }
+    command = { type = secedeprovince which = U06 value = 2625 }
+    command = { type = secedeprovince which = U06 value = 1236 }
+    command = { type = secedeprovince which = U06 value = 1237 }
+    command = { type = secedeprovince which = U06 value = 2622 }
+    command = { type = secedeprovince which = U06 value = 2623 }
+    command = { type = secedeprovince which = U06 value = 2630 }
+    command = { type = secedeprovince which = U06 value = 2617 }
+    command = { type = secedeprovince which = U06 value = 1220 }
+    command = { type = secedeprovince which = U06 value = 1218 }
+    command = { type = secedeprovince which = U06 value = 2612 }
+    command = { type = secedeprovince which = U06 value = 2613 }
+    command = { type = secedeprovince which = U06 value = 1217 }
+    command = { type = secedeprovince which = U06 value = 2610 }
+    command = { type = secedeprovince which = U06 value = 2611 }
+    command = { type = secedeprovince which = U06 value = 2618 }
+    command = { type = secedeprovince which = U06 value = 2619 }
+    command = { type = secedeprovince which = U06 value = 2620 }
+    command = { type = secedeprovince which = U06 value = 2621 }
+    command = { type = secedeprovince which = U06 value = 1219 }
+    }
+    }
+event = {
+  id = 10020100
+  random = no
+  country = u02
+  
+  trigger = { not = { ai = u06 }
+              control = { province = 1220 data = u06 }
+              control = { province = 1221 data = u06 }
+              control = { province = 1235 data = u06 }
+              control = { province = 1237 data = u06 }
+   }
+  
+  name = "危机的前兆——孙传芳反奉 "
+  desc = "民国14年，在二次直奉战争中获胜的张作霖势力长驱南下，席 卷至长江流域一带。奉系的势力达到极盛。然而，奉军如日中天 的扩张引起了其它军阀的不安及不满。特别是面临直接威胁的冯 玉祥与孙传芳。孙传芳率先出击，迅速的驱逐了苏皖的奉军，并 俘虏并处死了张宗昌麾下大将施从滨."
+  style = 0
+  picture = "wushenglianjun"
+  
+  date = { day = 1 month = october year = 1925 }
+  offset = 2
+  deathdate = { day = 1 month = january year = 1927 }
+  
+  action_a = {
+    name = "孙传芳这小子不知好歹 "
+    command = { type = dissent value = 5}
+    command = { type = relation which = u06 value = -100 }
+    command = { type = secedeprovince which = U06 value = 1235 }
+    command = { type = secedeprovince which = U06 value = 2628 }
+    command = { type = secedeprovince which = U06 value = 2629 }
+    command = { type = secedeprovince which = U06 value = 2627 }
+    command = { type = secedeprovince which = U06 value = 2626 }
+    command = { type = secedeprovince which = U06 value = 2625 }
+    command = { type = secedeprovince which = U06 value = 1236 }
+    command = { type = secedeprovince which = U06 value = 1237 }
+    command = { type = secedeprovince which = U06 value = 2622 }
+    command = { type = secedeprovince which = U06 value = 2623 }
+    command = { type = secedeprovince which = U06 value = 2630 }
+    command = { type = secedeprovince which = U06 value = 2617 }
+    command = { type = secedeprovince which = U06 value = 1220 }
+    command = { type = secedeprovince which = U06 value = 1218 }
+    command = { type = secedeprovince which = U06 value = 2612 }
+    command = { type = secedeprovince which = U06 value = 2613 }
+    command = { type = secedeprovince which = U06 value = 1217 }
+    command = { type = secedeprovince which = U06 value = 2610 }
+    command = { type = secedeprovince which = U06 value = 2611 }
+    command = { type = secedeprovince which = U06 value = 2618 }
+    command = { type = secedeprovince which = U06 value = 2619 }
+    command = { type = secedeprovince which = U06 value = 2620 }
+    command = { type = secedeprovince which = U06 value = 2621 }
+    command = { type = secedeprovince which = U06 value = 1219 }
+    command = { type = peace which = u06 }
+    command = { type = trigger which = 101100 }
+    }
+    }
+event = {
+	id = 100202
+	random = no
+	country = u02
+
+	trigger = { 
+	control = { province = 1237 data = u02 }
+	control = { province = 1215 data = u11 }
+	 }
+  name = "纱厂工人反日大罢工 "
+	desc = "在华的外资纱厂以日本为多，工人待遇最苛，每人每日工作12 小时，工资仅一角五分，且动辄遭受毒打或开除。1925年2 月，上海日本内外棉纱厂工人罢工，4月蔓延至青岛等地。 "
+	style = 0
+	picture = "gongrenbaodong"
+
+	date = { day = 13 month = february year = 1925 }
+	offset = 3
+	deathdate = { day = 14 month = june year = 1925 }
+
+	action_a = {
+	  ai_chance = 1
+		name = "与工人妥协 " 
+		command = { type = money value = -100 }
+		command = { type = relation which = jap value = -50 }
+		}
+	action_b = {
+	  ai_chance = 99
+		name = "镇压工人 " 
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 130000 }
+		command = { type = trigger which = 120002 }
+	           }
+}
+event = {
+	id = 100203
+	random = no
+	country = u02
+
+	trigger = { 
+	event = 130000
+	event = 120005
+	 }
+  name = "五卅惨案 "
+	desc = "不过数月，罢工的风潮席卷鲁皖一带。25日，国民党电责日人 无理伤害华人。28日，中共决定举行示威。30日，先后有万 人学生群众聚集在公共租界，遭到英巡捕暴力干涉，当场打死十 一人，重伤二十余人，是为五卅惨案。 "
+	style = 0
+	picture = "wusacanan"
+
+	date = { day = 25 month = february year = 1925 }
+	offset = 3
+	deathdate = { day = 14 month = june year = 1925 }
+
+	action_a = {
+		name = "这些没脑子的乱民 " 
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 140000 }
+		command = { type = trigger which = 120001 }
+		command = { type = trigger which = 120001 }
+		command = { type = trigger which = 120006 }
+    command = { type = trigger which = 100015 }
+    command = { type = trigger which = 140003 }
+		}
+}
+
+event = {
+	id = 100204
+	country = u02
+	random = no
+	
+	trigger = {
+	       exists = u02
+	       or = { 
+	               event = 100600 
+	               event = 10060000 
+	}
+
+	}
+
+	name = "矛盾的总爆发——郭松龄倒奉 "
+	desc = "奉军第三军团副团长郭松龄，为奉军五虎将之一，为人机敏狡诈 而城府颇深。在两次直奉战争中屡立战功，但功高赏薄，心怀怨 恨，暗结冯玉祥。十一月二十四日，举兵6万余众东出山海关要 求张作霖下野，并杀害了不愿与之合作的奉军大将姜登选。 "
+	style = 0
+
+	date = { day = 24 month = november year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = january year = 1926 }	
+
+	action_a = {
+		name = "这下子完蛋了！ "	
+		command = { type = remove_division which = 22320 value = 12 }
+		command = { type = remove_division which = 22320 value = 2 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = independence which = U14 value = 1 }
+    command = { type = dissent value = 30 }
+    command = { type = sleepleader which = 16003 }
+    command = { type = sleepleader which = 16009 }
+    command = { type = sleepminister which = 1506 }
+		command = { type = max_organization which = land value = -10 }
+    command = { type = trigger which = 100302 }	
+    command = { type = trigger which = 101401 }	
+    command = { type = trigger which = 100206 }
+	}
+}
+event = {
+	id = 100205
+	country = u02
+	random = no
+
+	name = "日本对奉军的援助 "
+	desc = "张作霖遭郭松龄叛变后一度惊慌失措，准备出走。然而不久，奉 军得到了日本的帮助，张作霖决计抵抗。日军随机也警告双方， 不得侵入南满铁路附属地带与日军警备区域，其干涉之心昭然若 揭。 "
+	style = 0
+
+	action_a = {
+		name = "死守奉天 "	
+    command = { type = supplies value = -1000 }
+    command = { type = add_corps which = "东北陆军第三十二军 " value = land where = 1389 }
+    command = { type = add_division value = infantry when = 1 where = police }
+    command = { type = add_division value = infantry when = 1 where = police }
+    command = { type = add_division value = cavalry when = 1  }
+	}
+}
+event = {
+  id = 100206
+  country = u02
+  random = no
+  
+  name = "军士教导队的紧急动员 "
+  desc = "教导队第四期学兵毕业，正值郭松龄“倒戈反奉”，当时奉天省 城极为空虚，没有军队。张作霖坐镇沈阳，在万分危急中令王瑞 华以教导队官兵为基干，克日编组补充旅。王瑞华升为少将旅长， 王以哲由第三营少校营长超升为第三团上校团长。王受命后即以 兵工厂的武器，装备新军开赴兴隆店、巨流河一带构筑阵地，阻 击郭军东进。 "
+  style = 0
+  
+  action_a = {
+    name = "动员 "
+    command = { type = construct which = land_fort where = 1389 value = 5 }
+    command = { type = add_corps which = "东北陆军第二十七军 " value = land when = 16015 where = 1389 } #王以哲 
+    command = { type = activate_division which = 22320 value = 56 where = 1389 }
+    command = { type = activate_division which = 22320 value = 57 where = 1389 }
+  }
+}
+event = {
+  id = 100207
+  country = u02
+  random = no
+  trigger = {
+              event = 100204
+              not = { exists = u14 }
+              }
+  
+  name = "郭松龄兵败身死 "
+  desc = "教导队第四期学兵毕业，正值郭松龄“倒戈反奉”，当时奉天省 城极为空虚，没有军队。张作霖坐镇沈阳，在万分危急中令王瑞 华以教导队官兵为基干，克日编组补充旅。王瑞华升为少将旅长， 王以哲由第三营少校营长超升为第三团上校团长。王受命后即以 兵工厂的武器，装备新军开赴兴隆店、巨流河一带构筑阵地，阻 击郭军东进。 "
+  style = 0
+  date = { day = 24 month = november year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1926 }
+  
+  action_a = {
+    name = "叛贼的下场！ "
+    command = { type = construct which = land_fort where = 1389 value = -5 }
+    command = { type = dissent value = -10 }
+    command = { type = max_organization which = land value = 10 }
+  }
+}
+###################
+#国民军事件
+###################
+##########################
+#1925年       100300~
+##########################
+event = {	
+  id = 100300
+	random = no
+	country = u03
+  
+  trigger =  { 
+  exists = u03 
+  ai = no
+  }   
+
+	name = "国民军的实力 "
+	desc = "冯玉祥在北方军阀中是一有心者，生活朴实，所部纪律严明， 被加拉罕誉为“中国解放运动的柱石”。其人自1923年底起 即转慕社会主义，接受苏联援助，并有苏联军事顾问加入冯军工 作。因此国民军战斗力极强，在日后的反奉战争及中原大战中均 有上佳表现。 "
+	style = 0
+	picture = "guominjun"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "将军威武 " 
+    command = { type = soft_attack which = infantry value = 3 }     
+    command = { type = hard_attack which = infantry value = -2 }
+		command = { type = max_organization which = land value = 2 }
+    command = { type = morale which = land value = 4 }
+		command = { type = build_cost which = infantry when = now where = relative value = -1 }
+    command = { type = supply_consumption which = infantry when = now where = relative value = -0.4 }
+           }
+}
+event = {
+	id = 100302
+	country = u03
+	random = no
+	
+	trigger = { event = 101402 }
+
+	name = "国民军加入反奉战争——郭松龄倒奉 "
+	desc = "奉军第三军团副团长郭松龄，为奉军五虎将之一，为人机敏狡诈 而城府颇深。在两次直奉战争中屡立战功，但功高赏薄，心怀怨 恨，暗结冯玉祥。十一月二十四日，举兵6万余众东出山海关要 求张作霖下野。 "
+	style = 0
+
+	date = { day = 24 month = november year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = january year = 1926 }	
+
+	action_a = {
+		name = "消灭奉军 "	
+		ai_chance = 5
+    command = { type = war which = u02 }	
+	}
+	action_b = {
+	  ai_chance = 95
+	  name = "谋求我们最大的利益 "
+	  command = { type = war which = u14 }
+	  command = { type = add_corps which = "国民军东进第一纵队 " value = land where = 2871 }
+	  command = { type = add_division which = "国民军第十七师 " value = infantry when = 0 }
+	  command = { type = add_corps which = "国民军东进第二纵队 " value = land where = 1210 }
+	  command = { type = add_division which = "国民军第十五师 " value = infantry when = 0 }
+	  command = { type = add_corps which = "国民军东进第三纵队 " value = land where = 1204 }
+	  command = { type = add_division which = "国民军第十四师 " value = infantry when = 1 where = artillery }
+	  command = { type = add_division which = "国民军第十八师 " value = infantry when = 1 }
+	  command = { type = add_division which = "国民军第十一师 " value = infantry when = 1 }
+	  command = { type = add_corps which = "国民五军 " value = land when = 56051 where = 1204 } #方振武
+	  command = { type = activate_division which = 22330 value = 30 where = 1204 }
+	  
+}
+}
+
+event = {
+	id = 100303
+	country = u03
+	random = 80
+	
+
+	name = "故宫博物院正式成立 "
+	desc = "1924年10月，冯玉祥发动“北京政变”，11月5日取消 清帝溥仪帝号并将其逐出紫禁城。李石曾先生当即建议设立清室 古物保管委员会，及清宫善后委员会，并于1925年10月1 0日正式成立国立故宫博物院。 "
+	style = 0
+
+	date = { day = 10 month = october year = 1925 }
+	offset = 7
+	deathdate = { day = 10 month = october year = 1926}	
+
+	action_a = {
+		name = "妥善保护国宝文物 "	
+    command = { type = dissent value = -1 }	
+    command = { type = relation which = chi value = 10 }
+    command = { type = relation which = chc value = 10 }
+    command = { type = relation which = cyn value = 10 }
+    command = { type = relation which = csx value = 10 }
+    command = { type = relation which = cgx value = 10 }
+    command = { type = relation which = cxb value = 10 }
+    command = { type = relation which = u01 value = 10 }
+    command = { type = relation which = u02 value = 10 }
+    command = { type = relation which = u05 value = 10 }
+    command = { type = relation which = u06 value = 10 }
+    command = { type = relation which = u07 value = 10 }
+    command = { type = relation which = u09 value = 10 }
+    command = { type = relation which = u10 value = 10 }
+    command = { type = relation which = u11 value = 10 }
+    command = { type = relation which = u12 value = 10 }
+    command = { type = relation which = u13 value = 10 }
+	}
+}
+
+###################
+#直系事件
+###################
+##########################
+#1925年       100500~
+##########################
+event = {	
+  id = 100500
+	random = no
+	country = u05
+  
+  trigger =  { 
+  exists = u05 
+  ai = no
+  }   
+
+	name = "没落的直系 "
+	desc = "自第二次直奉战争以来，吴佩孚已是日薄西山，多亏孙传芳等人 的支持才避免了灭亡的命运，然而靠着声望和人缘撑起的政权， 其维系能够持续多久，便成了一个未知数。 "
+	style = 0
+	picture = "wupeifu"
+
+	date = { day = 2 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "永远拥戴大帅 " 
+    command = { type = soft_attack which = infantry value = 1 }     
+    command = { type = hard_attack which = infantry value = -2 }
+		command = { type = max_organization which = land value = 2 }
+    command = { type = morale which = land value = -1 }
+           }
+}
+event = {
+	id = 100501
+	random = no
+	country = u05
+
+	trigger = { 
+	event = 140000
+	 }
+  name = "汉口惨案 "
+	desc = "5月罢工扩展到湖北一带，11日，汉口工人游行，被英水兵、 商团枪杀八人，伤四十余人，是为汉口惨案。 "
+	style = 0
+	picture = "wusacanan"
+
+	date = { day = 11 month = may year = 1925 }
+	offset = 3
+	deathdate = { day = 14 month = july year = 1925 }
+
+	action_a = {
+		name = "维持政局稳定 " 
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 140001 }
+		command = { type = trigger which = 120004 }
+		}
+}
+###################
+#五省联军事件
+###################
+##########################
+#1925年       100600~
+##########################
+event = {
+  id = 100600
+  random = no
+  country = u06
+  
+  trigger = { ai = yes }
+  
+  name = "夺取宁沪钱粮之地——孙传芳反奉 "
+  desc = "民国14年，在二次直奉战争中获胜的张作霖势力长驱南下，席 卷至长江流域一带。奉系的势力达到极盛。然而，奉军如日中天 的扩张引起了其它军阀的不安及不满。特别是面临直接威胁的冯 玉祥与孙传芳。孙传芳率先出击，迅速的驱逐了苏皖的奉军，并 俘虏并处死了张宗昌麾下大将施从滨."
+  style = 0
+  picture = "wushenglianjun"
+  
+  date = { day = 1 month = october year = 1925 }
+  offset = 10
+  deathdate = { day = 1 month = november year = 1925 }
+  
+  action_a = {
+    name = "进攻！ "
+    command = { type = dissent value = 5}
+    command = { type = trigger which = 100201 }
+    command = { type = trigger which = 101100 }
+    }
+    }
+event = {
+  id = 10060000
+  random = no
+  country = u06
+  
+  trigger = { ai = no }
+  
+  name = "夺取宁沪钱粮之地——孙传芳反奉 "
+  desc = "民国14年，在二次直奉战争中获胜的张作霖势力长驱南下，席 卷至长江流域一带。奉系的势力达到极盛。然而，奉军如日中天 的扩张引起了其它军阀的不安及不满。特别是面临直接威胁的冯 玉祥与孙传芳。孙传芳率先出击，迅速的驱逐了苏皖的奉军，并 俘虏并处死了张宗昌麾下大将施从滨."
+  style = 0
+  picture = "wushenglianjun"
+  
+  date = { day = 1 month = october year = 1925 }
+  offset = 10
+  deathdate = { day = 1 month = november year = 1925 }
+  
+  action_a = {
+    name = "进攻！ "
+    command = { type = war which = u02 }
+    command = { type = dissent value = -10 }
+    }
+}
+###################
+#川军事件
+###################
+##########################
+#1925年       100700~
+##########################
+
+###################
+#黔系事件
+###################
+##########################
+#1925年       100900~
+##########################
+
+###################
+#湘系事件
+###################
+##########################
+#1925年       101000~
+##########################
+
+###################
+#直鲁联军事件
+###################
+##########################
+#1925年       101100~
+##########################
+event = {
+  id = 101100
+  random = no
+  country = u11
+  
+  name = "我们失去了黄金地区——孙传芳反奉 "
+  desc = "民国14年，在二次直奉战争中获胜的张作霖势力长驱南下，席 卷至长江流域一带。奉系的势力达到极盛。然而，奉军如日中天 的扩张引起了其它军阀的不安及不满。特别是面临直接威胁的冯 玉祥与孙传芳。孙传芳率先出击，迅速的驱逐了苏皖的奉军，并 俘虏并处死了张宗昌麾下大将施从滨。"
+  style = 0
+  picture = "wushenglianjun"
+  
+  action_a = {
+    name = "他娘个孙传芳 "
+    command = { type = dissent value = 10}
+    command = { type = relation which = u06 value = -50 }
+    command = { type = sleepleader which = 72000 }    # 施从滨
+    command = { type = remove_division which = 30032 value = 111011 }
+    command = { type = remove_division which = 30032 value = 111012 }
+    }
+    }
+###################
+#粤系事件
+###################
+##########################
+#1925年       101200~
+##########################
+event = {
+	id = 101200
+	country = u12
+	random = no
+
+	name = "第一次东征 "
+	desc = "趁着孙中山北上，被赶出广州的陈炯明开始蠢蠢欲动。1924 年12月，陈炯明自称救粤军总司令，积极准备着西攻广州。 1925年1月，代理大元帅胡汉民与廖仲恺等决定以三路东征 ，除为保卫广州外，也欲加强孙中山在北方的地位。1925年 2月1日，广州国民政府正式出兵东征，史称第一次东征。 "
+	style = 0
+
+	date = { day = 1 month = february year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = april year = 1926 }	
+
+	action_a = {
+		name = "依托坚城，层层阻击 "
+    command = { type = construct which = land_fort where = 2709 value = 5 }
+	}
+}
+event = {
+	id = 101201
+	country = u12
+	random = no
+
+	name = "第一次东征结束 "
+	desc = "1923年1月，打着拥护国民革命旗号的滇系军阀杨希闵、桂 系军阀刘震寰，在参与驱逐军阀陈炯明的军事行动后进驻广州。 1925年5月初，杨、刘乘革命军东征陈炯明之际，在厂州发 动叛乱。在此情况下，广州革命政府东征的粤军和黄埔学生军 调回，对杨、刘叛军发起总攻，至15日彻底打垮叛军。杨、 刘二人出逃。此役遂告结束。 "
+	style = 0
+
+	action_a = {
+		name = "危机过去 "
+    command = { type = construct which = land_fort where = 2709 value = -5 }
+	}
+}
+
+###################
+#皖系事件  
+###################
+##########################
+# 北京政府历届内阁  101301~
+##########################
+
+event = {
+	id = 101301
+	random = no
+	country = u13
+       trigger = { exists = u13 }
+
+  name = "中华民国第二十八任内阁 "
+	desc = "1924年11月24日段祺瑞公布《中华民国临时政府制》。 临时执政总揽军民政务，统率陆海军。不设内阁总理，实行集权 制度 。1925年12月26日段祺瑞修改《中华民国临时政府 制》，设立国务院，以许世英为国务总理。 "
+	style = 0
+	
+
+	date = { day = 26 month = December year = 1925 }
+	offset = 1
+	deathdate = { day = 4 month = march year = 1926 }
+
+	action_a = {
+		name = "江河日下的北洋政府 " 
+      command = { type = headofgovernment which = 9010 } #许世英
+      command = { type = foreignminister which = 9011 } #王正廷
+      command = { type = armamentminister which = 9012 } #陈锦涛
+      command = { type = ministerofsecurity which = 9013 } #马君武
+      command = { type = ministerofintelligence which = 9014 } #贾德耀
+      command = { type = chiefofstaff which = 9015 } #贾德耀
+      command = { type = chiefofarmy which = 9016 } #贾德耀
+      command = { type = chiefofnavy which = 9017 } #杜锡珪
+      command = { type = chiefofair which = 9018 } #贾德耀
+              }
+}
+
+##########################
+#1925年       101300~
+##########################
+event = {
+	id = 101300
+	random = no
+	country = u13
+
+	trigger = { event = 100000 }
+  name = "善后会议 "
+	desc = "孙中山到京后，召开国民会议已为刻不容缓之事，段祺瑞为敷衍 计，宣布先召开由各省代表组成的善后会议，再产生国民会议。 孙要求善后会议兼纳人民代表，段只允限于各军首领、各省区长 官，及有功劳和特殊资望地位的人。国民党、中共激烈反对，结 果善后会议一无所成，国民会议亦未能召开。 "
+	style = 0
+	picture = "huiyi"
+
+	date = { day = 10 month = february year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = march year = 1925 }
+
+	action_a = {
+		name = "敷衍了事 " 
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 100003 }
+		command = { type = trigger which = 120000 }
+	           }
+}
+###################
+#反奉军事件
+###################
+##########################
+#1925年       101400~
+##########################
+event = {
+	id = 101400
+	country = u14
+	random = no
+	
+	trigger = {
+	event = 130002
+	exists = u14
+	}
+
+	name = "日本的直接干涉 "
+	desc = "援助似乎无法帮助张作霖彻底打倒倒奉派，经过深思熟虑，日本 决定对东北进行直接干涉，十二月二十三日，郭松龄遭黑龙江骑 兵袭击，日本炮兵猛轰倒奉军。 "
+	style = 0
+
+	date = { day = 23 month = december year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = january year = 1926 }	
+
+	action_a = {
+		name = "糟糕 "
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+		command = { type = remove_division which = -1 }
+	  }
+}
+event = {
+	id = 101401
+	country = u14
+	random = no
+	
+	name = "奇袭山海关 "
+	desc = "郭松龄于十一月二十四日举兵反奉后，即刻东出山海关，向奉天进军。 "
+	style = 0
+
+	action_a = {
+		name = "东出山海关 "	
+		command = { type = war which = u02 }
+		command = { type = add_corps which = "东北国民军第六军 " value = land where = 1204 }
+		command = { type = add_division which = "东北国民军总司令部 " value = hq when = 0 }
+		command = { type = add_division which = "东北国民军第八师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "东北国民军第十一师 " value = infantry when = 0 }
+		command = { type = add_division which = "东北国民军第十师 " value = infantry when = 0 }
+		command = { type = add_corps which = "东北国民军第一军 " value = land where = 2875 }
+		command = { type = add_division which = "东北国民军第一师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "东北国民军第二师 " value = infantry when = 0 }
+		command = { type = add_division which = "东北国民军第三师 " value = infantry when = 0 }
+		command = { type = add_corps which = "东北国民军第一军 " value = land where = 2871 }
+		command = { type = add_division which = "东北国民军第一师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "东北国民军第二师 " value = infantry when = 0 }
+		command = { type = add_corps which = "东北国民军第十一军 " value = land where = 1203 }
+		command = { type = add_division which = "东北国民军第一旅 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "东北国民军第二旅 " value = infantry when = 0 }
+		command = { type = trigger which = 101402 value = 10 }
+	}
+}
+event = {
+	id = 101402
+	country = u14
+	random = no
+
+
+	name = "夺取锦州 "
+	desc = "攻占山海关后，郭军又以迅雷不及掩耳之势夺取了锦州。 "
+	style = 0
+
+	action_a = {
+		name = "势如破竹 "	
+		command = { type = add_corps which = "东北国民军第二军 " value = land where = 2877 }
+		command = { type = add_division which = "东北国民军第四师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "东北国民军第八师 " value = infantry when = 0 }
+		command = { type = add_corps which = "东北国民军第三军 " value = land where = 1396 }
+		command = { type = add_division which = "东北国民军第五师 " value = infantry when = 1 where = artillery }
+		command = { type = add_division which = "东北国民军第六师 " value = infantry when = 1 }
+		command = { type = add_division which = "东北国民军第七师 " value = infantry when = 0 }
+		command = { type = add_division which = "东北国民军第八师 " value = infantry when = 0 }
+		command = { type = trigger which = 101403 value = 15 }
+	}
+}
+event = {
+	id = 101403
+	country = u14
+	random = no
+
+
+	name = "新民决战 "
+	desc = "郭松龄攻占锦州后，奉军全部退却到辽河东岸据守。双方在新民县巨流河准备决战。 "
+	style = 0
+
+	action_a = {
+		name = "决战 "	
+		command = { type = morale which = land value = 2 }
+	}
+}
+event = {
+	id = 101404
+	country = u14
+	random = no
+  trigger= { control = { province = 1389 data = u14 } }
+
+	name = "攻占奉天 "
+	desc = "反奉军攻克了奉天，张作霖的统治一去不复返了。 "
+	style = 0
+	
+	date = { day = 1 month = december year = 1925 }
+	offset = 1
+	deathdate = { day = 29 month = march year = 1926 }
+
+	action_a = {
+		name = "胜利 "	
+		command = { type = inherit which = u02 }
+	}
+}
+
+###################
+#滇桂联军事件
+###################
+##########################
+#1925年       101900~
+##########################
+event = {
+	id = 101900
+	country = u19
+	random = no
+
+
+	name = "围攻广州 "
+	desc = "1923年1月，打着拥护国民革命旗号的滇系军阀杨希闵、桂 系军阀刘震寰，在参与驱逐军阀陈炯明的军事行动后进驻广州。 1925年5月初，杨、刘乘革命军东征陈炯明之际，在厂州发 动叛乱。在此情况下，广州革命政府东征的粤军和黄埔学生军 调回，对杨、刘叛军发起总攻，至15日彻底打垮叛军。杨、 刘二人出逃。此役遂告结束。 "
+	style = 0
+
+	action_a = {
+		name = "夺取广州 "	
+		command = { type = war which = chi }
+		command = { type = add_corps which = "杨军 " value = land where = 2707 }
+    command = { type = add_division which = "滇军叛乱部队 " value = militia when = 1 }
+    command = { type = add_corps which = "刘军 " value = land where = 2711 }
+    command = { type = add_division which = "桂军叛乱部队 " value = militia when = 1 }
+	}
+}
+event = {
+	id = 101901
+	country = u19
+	random = no
+
+
+	name = "沈李之争 "
+	date = { day = 5 month = january year = 1925 }
+	offset = 1
+	deathdate = { day = 30 month = january year = 1925 }
+	desc = "1925年1月，沈采取先发制人战略，分三路进攻李、黄联军。 沈鸿英以沈荣光师长为左路指挥官，指挥建国军新编第—师长沈 健飞、第一游击司令沈鸿飞、第二游击司令沈恩甫、游击统领沈 秀廷、警卫团长沈国治等部分别从信都、公会、昭平进攻梧州。 "
+	style = 0
+
+	action_a = {
+	  ai_chance = 99
+		name = "消灭新桂系 "	
+		command = { type = war which = cgx }
+		command = { type = trigger which = 100021 }
+	}
+	action_b = {
+	  ai_chance = 1
+	  name = "还是算了吧 "
+	  command = { }
+	}
+}
+
+
+###################
+#杂项事件
+###################
+##########################
+#1925年       1949100100~
+##########################        
+event = {
+	id = 1949100100
+	country = CYN
+	random = no
+	
+	trigger = { exists = cyn }
+
+	name = "云南大理发生7.1级地震 "
+	desc = "1925年3月16日，云南大理发生7.1级大地震，历时40 至50分钟，死伤万余人。 "
+	style = 0
+
+	date = { day = 23 month = march year = 1925 }
+	offset = 1
+	deathdate = { day = 23 month = march year = 1926 }	
+
+	action_a = {
+		name = "糟糕 "
+		command = { type = construct which = infrastructure where = 1294 value = -10 } 
+    command = { type = dissent value = 1 }
+	  }
+}
+
+

@@ -1,0 +1,20 @@
+U09;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+11500;Head of State;袁祖铭 ;24;PA;Die-hard Reformer;Medium;yuanzuming;x
+11501;Head of Government;周西成 ;24;PA;Ambitious Union Boss;Medium;zhouxicheng;x
+11502;Foreign Minister;袁祖铭 ;24;PA;Great Compromiser;Medium;yuanzuming;x
+11503;Minister of Armament;周西成 ;24;PA;Military Entrepreneur;Medium;zhouxicheng;x
+11504;Minister of Security;彭汉章 ;24;PA;Prince of Terror;Medium;dazhong;x
+11505;Head of Military Intelligence;彭汉章 ;24;PA;Industrial Specialist;Medium;dazhong;x
+11506;Chief of Staff;周西成 ;24;PA;Static Defence Doctrine;Medium;zhouxicheng;x
+11507;Chief of Army;袁祖铭 ;24;PA;Decisive Battle Doctrine;Medium;yuanzuming;x
+11510;Head of State;周西城 ;20;PA;Weary Stiffneck;Medium;zhouxicheng;x
+11511;Head of Government;李燊 ;20;PA;Flamboyant Tough Guy;Medium;dazhong;x
+11512;Head of Government;毛光翔 ;20;PA;Political Protege;Medium;毛光翔;x
+11515;Chief of Army;毛光翔 ;20;PA;Decisive Battle Doctrine;Medium;毛光翔;x
+11516;Chief of Staff;李燊 ;20;PA;School of Mass Combat;Medium;dazhong;x
+11517;Chief of Staff;王家烈 ;20;PA;School of Defence;Medium;wangjialie;x
+11518;Head of Military Intelligence;王家烈 ;20;PA;Dismal Enigma;Medium;wangjialie;x
+11519;Minister of Security;毛光翔 ;20;PA;Efficient Sociopath;Medium;毛光翔;x
+;;;;;;;;
+11536;Foreign Minister;王家烈;27;PA;Great Compromiser;Medium;wangjialie;x

@@ -1,0 +1,30 @@
+USA;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+3500;Head of State;卡尔文·柯立芝 ;24;SL;Benevolent Gentleman;High;kelizhi;x
+3501;Head of Government;查尔斯·G·道斯 ;24;SL;Naive Optimist;High;chaersi;x
+3502;Foreign Minister;弗兰克·比林斯·凯洛格 ;24;SL;Iron Fisted Brute;High;fulanke;x
+3503;Minister of Armament;安德鲁·梅隆 ;24;SL;Laissez Faires Capitalist;High;3665;x
+3504;Minister of Security;约翰·G·萨金特 ;24;SL;Crime Fighter;High;sajinte;x
+3505;Head of Military Intelligence;约翰·埃德加·胡佛 ;24;SL;Technical Specialist;High;hufo;x
+3506;Chief of Staff;德怀特·F·戴维斯 ;24;SL;School of Mass Combat;High;daiweisi;x
+3507;Chief of Army;德怀特·F·戴维斯 ;24;SL;Decisive Battle Doctrine;High;daiweisi;x
+3508;Head of State;艾爾弗雷德·E·史密斯;24;SC;Benevolent Gentleman;High;3044;x
+3509;Head of Government;約瑟夫·T·魯濱遜;28;SL;Naive Optimist;High;3952;x
+3510;Foreign Minister;奧斯卡·W·安德伍德;15;SL;Great Compromiser;High;3625;x
+3511;Minister of Armament;卡特·格拉斯;18;SL;Resource Industrialist;High;3664;x
+3512;Minister of Security;約翰·埃德加·胡佛;24;ML;Crime Fighter;High;hufo;x
+3513;Head of Military Intelligence;雷夫·范·德曼;14;ML;Political Specialist;High;3651;x
+3514;Head of State;赫伯特·胡佛;28;SC;Benevolent Gentleman;High;3087;x
+3515;Head of Government;查爾斯·柯蒂斯;28;SC;Naive Optimist;High;3048;x
+3516;Foreign Minister;亨利·L·史汀生;28;SL;Apologetic Clerk;High;M6061;x
+3517;Foreign Minister;科德爾·赫爾;28;SL;Great Compromiser;High;7374;x
+3518;Head of Military Intelligence;威廉姆·F·弗里德曼;17;SL;Dismal Enigma;High;M6006;x
+3519;Chief of Staff;約翰·L·海因斯;24;ML;School of Manoeuvre;High;3612;x
+3520;Chief of Army;約翰·L·海因斯;24;ML;Static Defence Doctrine;High;3612;x
+3521;Chief of Staff;查爾斯·薩默羅爾;26;ML;School of Mass Combat;High;;x
+3522;Chief of Army;查爾斯·薩默羅爾;26;ML;Guns and Butter Doctrine;High;;x
+3523;Chief of Staff;道格拉斯·麥克阿瑟;30;ML;School of Psychology;High;L60250;x
+3524;Chief of Army;道格拉斯·麥克阿瑟;30;ML;Elastic Defence Doctrine;High;L60250;x
+3525;Chief of Navy;愛德華·W·艾伯爾;23;ML;Base Control Doctrine;High;3616;x
+3526;Chief of Navy;查爾斯·F·休斯;27;ML;Base Control Doctrine;High;;x
+3527;Chief of Navy;威廉·V·普瑞特;30;ML;Base Control Doctrine;High;;x

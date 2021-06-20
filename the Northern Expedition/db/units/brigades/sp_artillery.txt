@@ -1,0 +1,69 @@
+land_unit_type = 1
+# 0 - 早期重型炮兵团 
+model =
+{ cost                  = 12
+  buildtime             = 100
+  manpower              = 4
+  defensiveness         = 8
+  toughness             = 10
+  softattack            = 6
+  hardattack            = 0
+  artillery_bombardment = 3
+  supplyconsumption     = 4.0
+  upgrade_time_factor   = 1.5
+  upgrade_cost_factor   = 3.0
+  maxspeed              = -2
+  defaultorganisation   = 8
+  morale                = 12
+}
+# 1 - 基本重型炮兵团  
+model =
+{ cost                  = 12
+  buildtime             = 100
+  manpower              = 4
+  defensiveness         = 15
+  toughness             = 10
+  softattack            = 10
+  hardattack            = 0
+  artillery_bombardment = 4
+  supplyconsumption     = 4.0
+  upgrade_time_factor   = 1.5
+  upgrade_cost_factor   = 3.0
+  maxspeed              = -2
+  defaultorganisation   = 8
+  morale                = 12
+}
+# 2 - 改良重型炮兵团   
+model =
+{ cost                  = 12
+  buildtime             = 100
+  manpower              = 4
+  defensiveness         = 16
+  toughness             = 20
+  softattack            = 14
+  hardattack            = 0
+  artillery_bombardment = 5
+  supplyconsumption     = 4.0
+  upgrade_time_factor   = 1.5
+  upgrade_cost_factor   = 3.0
+  maxspeed              = -2
+  defaultorganisation   = 8
+  morale                = 12
+}
+# 3 - 先进重型炮兵团   
+model =
+{ cost                  = 12
+  buildtime             = 100
+  manpower              = 4
+  defensiveness         = 20
+  toughness             = 25
+  softattack            = 18
+  hardattack            = 0
+  artillery_bombardment = 6
+  supplyconsumption     = 4.0
+  upgrade_time_factor   = 1.5
+  upgrade_cost_factor   = 3.0
+  maxspeed              = -2
+  defaultorganisation   = 8
+  morale                = 12
+}

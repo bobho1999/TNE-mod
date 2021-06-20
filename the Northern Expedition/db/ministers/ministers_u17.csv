@@ -1,0 +1,28 @@
+U17;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+14500;Head of State;刘镇华 ;24;PA;Die-hard Reformer;Medium;liuzhenhua;x
+14501;Head of Government;刘镇华 ;24;PA;Political Protege;Medium;liuzhenhua;x
+14502;Foreign Minister;刘镇华 ;24;PA;Iron Fisted Brute;Medium;liuzhenhua;x
+14503;Minister of Armament;张治公 ;24;PA;Corrupt Kleptocrat;Medium;dazhong;x
+14504;Minister of Security;憨玉琨 ;24;PA;Crooked Kleptocrat;Medium;dazhong;x
+14533;Head of State;憨玉琨 ;24;PA;Ruthless Powermonger;Medium;dazhong;x
+14505;Head of Military Intelligence;刘茂恩 ;24;PA;Logistics Specialist;Medium;liumaoen;x
+14506;Chief of Staff;万选才 ;24;PA;School of Mass Combat;Medium;wanxuancai;x
+14507;Chief of Army;刘镇华 ;24;PA;Elastic Defence Doctrine;Medium;liuzhenhua;x
+14514;Minister of Security;刘茂恩 ;24;PA;Prince of Terror;Medium;liumaoen;x
+14516;Foreign Minister;刘茂恩 ;24;PA;Iron Fisted Brute;Medium;liumaoen;x
+14518;Chief of Army;刘茂恩 ;24;PA;Decisive Battle Doctrine;Medium;liumaoen;x
+14519;Chief of Navy;北洋军閥;36;PA;Undistinguished Suit;Medium;beifang;x
+14520;Chief of Air Force;本土勢力;36;PA;Undistinguished Suit;Medium;bentu;x
+14521;Chief of Air Force;英國;36;ML;Undistinguished Suit;Very High;eng;x
+14522;Chief of Navy;國民黨;36;PA;Undistinguished Suit;Medium;kmt;x
+14523;Chief of Air Force;美國;36;SL;Undistinguished Suit;Medium;usa;x
+14524;Chief of Navy;南方军閥;36;PA;Undistinguished Suit;Medium;nanfang;x
+14525;Chief of Air Force;法國;36;SD;Undistinguished Suit;Medium;fra;x
+14526;Chief of Navy;共產黨;36;ST;Undistinguished Suit;Medium;tg;x
+14527;Chief of Air Force;日本;36;PA;Undistinguished Suit;Medium;jap;x
+14528;Chief of Navy;大清;36;PA;Undistinguished Suit;Very High;daqing;x
+14529;Chief of Air Force;蘇联;36;ST;Undistinguished Suit;Medium;sov;x
+14530;Chief of Navy;少數民族;36;PA;Undistinguished Suit;Medium;shaoshu;x
+14531;Chief of Air Force;德國;36;NS;Undistinguished Suit;Very High;ger;x
+14532;Chief of Navy;列强;36;ML;Undistinguished Suit;Medium;lieqiang;x

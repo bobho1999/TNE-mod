@@ -1,0 +1,54 @@
+U13;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+9000;Head of State;段祺瑞 ;24;PA;Resigned Generalissimo;Medium;duanqirui;x
+9001;Head of Government;段祺瑞 ;24;PA;Old General;Medium;duanqirui;x
+9002;Foreign Minister;沈瑞麟 ;24;PA;Apologetic Clerk;Medium;shenruilin;x
+9003;Minister of Armament;李思浩 ;24;PA;Laissez Faires Capitalist;Medium;lisihao;x
+9004;Minister of Security;章士钊 ;24;PA;Man of the People;Medium;zhangshizhao;x
+9005;Head of Military Intelligence;徐树铮 ;24;PA;Technical Specialist;Medium;xushuzheng;x
+9006;Chief of Staff;曲同丰 ;24;PA;School of Defence;Medium;曲同丰;x
+9093;Chief of Staff;何豐林;27;PA;School of Defence;Medium;hefenglin;x
+9007;Chief of Army;吴光新 ;24;PA;Decisive Battle Doctrine;Medium;wuguangxin;x
+9010;Head of Government;许世英 ;20;PA;Flamboyant Tough Guy;Medium;xushiying;x
+9011;Foreign Minister;王正廷 ;20;PA;Great Compromiser;Medium;wangzhengting;x
+9012;Minister of Armament;陈锦涛 ;20;PA;Military Entrepreneur;Medium;陳錦濤;x
+9091;Minister of Armament;閻澤溥;27;PA;Military Entrepreneur;Medium;dazhong;x
+9013;Minister of Security;马君武 ;20;PA;Crime Fighter;Medium;majunwu;x
+9092;Minister of Security;沈瑞麟;27;PA;Crime Fighter;Medium;dazhong;x
+9014;Chief of Army;贾德耀 ;20;PA;Static Defence Doctrine;Medium;贾德耀;x
+9015;Chief of Staff;贾德耀 ;20;PA;School of Defence;Medium;贾德耀;x
+9016;Head of Military Intelligence;贾德耀 ;20;PA;Logistics Specialist;Medium;贾德耀;x
+9019;Head of Government;贾德耀 ;20;PA;Old General;Medium;贾德耀;x
+9020;Foreign Minister;胡惟德 ;20;PA;Apologetic Clerk;Medium;huweide;x
+9021;Minister of Armament;贺德霖 ;20;PA;Laissez Faires Capitalist;Medium;dazhong;x
+9022;Minister of Security;屈映光 ;20;PA;Compassionate Gentleman;Medium;quyingguang;x
+9023;Head of Government;胡惟德 ;20;PA;Happy Amateur;Medium;huweide;x
+9024;Head of Government;颜惠庆 ;20;PA;Silent Workhorse;Medium;yanhuiqing;x
+9094;Head of Government;潘復;27;PA;Happy Amateur;Medium;dazhong;x
+9025;Foreign Minister;施肇基 ;20;PA;Great Compromiser;Medium;shizhaoji;x
+9090;Foreign Minister;王蔭泰;27;PA;Great Compromiser;Medium;dazhong;x
+9026;Minister of Armament;顾维钧 ;20;PA;Administrative Genius;Medium;guweijun;x
+9027;Minister of Security;张国淦 ;20;PA;Silent Lawyer;Medium;zhangguogan;x
+9028;Chief of Staff;张景惠 ;20;PA;School of Fire Support;Medium;zhangjinghui;x
+9029;Chief of Army;张景惠 ;20;PA;Guns and Butter Doctrine;Medium;zhangjinghui;x
+9030;Head of Military Intelligence;张景惠 ;20;PA;Technical Specialist;Medium;zhangjinghui;x
+9032;Head of Government;杜锡珪 ;20;PA;Old Admiral;Medium;duxigui;x
+9033;Foreign Minister;蔡廷干 ;20;PA;Apologetic Clerk;Medium;蔡廷干;x
+9034;Head of Government;顾维钧 ;20;PA;Silent Workhorse;Medium;guweijun;x
+9035;Foreign Minister;顾维钧 ;20;PA;Ideological Crusader;Medium;guweijun;x
+9036;Minister of Armament;汤尔和 ;20;PA;Laissez Faires Capitalist;Medium;tangerhe;x
+9037;Minister of Security;胡惟德 ;20;PA;Silent Lawyer;Medium;huweide;x
+9054;Head of State;國務院;24;SL;Resigned Generalissimo;Medium;beifang;x
+9100;Chief of Navy;杜锡珪 ;20;PA;Old Admiral;Medium;duxigui;x
+9101;Chief of Navy;萨镇冰 ;16;PA;Indirect Approach Doctrine;Medium;M72009;x
+9102;Chief of Navy;林建章 ;16;PA;Indirect Approach Doctrine;Medium;林建章;x
+9103;Chief of Navy;溫樹德 ;27;PA;Indirect Approach Doctrine;Medium;;x
+
+9105;Minister of Security;龔心湛 ;20;PA;Compassionate Gentleman;Medium;龔心湛;x
+9106;Minister of Armament;李思浩 ;20;PA;Laissez Faires Capitalist;Medium;李思浩;x
+9107;Chief of Army;吳光新 ;20;PA;Guns and Butter Doctrine;Medium;wuguangxin;x
+9108;Minister of Security;盧信 ;20;PA;Compassionate Gentleman;Medium;;x
+9109;Minister of Security;羅文榦 ;20;PA;Crime Fighter;Medium;羅文榦;x
+9110;Minister of Security;姚震 ;20;PA;Compassionate Gentleman;Medium;;x
+9111;Chief of Army;楊毓珣 ;20;PA;Guns and Butter Doctrine;Medium;;x
+9112;Chief of Staff;劉汝賢 ;20;PA;School of Psychology;Medium;;x

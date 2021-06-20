@@ -1,0 +1,505 @@
+#event = {
+#id = 400712
+#random = no
+#country = chi 
+#trigger = { ai = yes
+#           war = { country = chi country = u19 } }
+#
+#	name = "AI_EVENT"
+#style = 0
+#date = { day = 4 month = january year = 1925 }
+
+#offset = 1
+	
+#deathdate = { day = 30 month = january year = 1925 }
+	
+#action_a = {
+#name = "OK"
+#command = { type = ai which ="switch\Chi_U19.ai" } }
+#} 
+
+event = {
+id = 400713
+random = no
+country = cgx 
+trigger = { ai = yes
+           war = { country = cgx country = u19 } }
+
+	name = "AI_EVENT"
+style = 0
+date = { day = 4 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1925 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\Cgx_U19.ai" } }
+} 
+###±±·¥AI#####
+event = {
+id = 400714
+random = no
+country = chi 
+trigger = { ai = yes
+           event = 20000400
+           event = 200600 }
+
+style = 0
+	
+action_a = {
+name = ""
+command = { type = ai which ="switch\chi_TNE1.ai" } }
+} 
+
+
+event = {
+id = 400715
+random = no
+country = U03 
+trigger = { event = 200302
+             ai = yes }
+
+	name = "AI_EVENT"
+style = 0
+date = { day = 4 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1929 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U03_U17.ai" } }
+} 
+
+event = {
+id = 400716
+random = no
+country = U03 
+trigger = { ai = yes
+           not = { exists = u17 } }
+
+	name = "AI_EVENT"
+style = 0
+date = { day = 4 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1929 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U03_U02.ai" } }
+} 
+
+event = {
+id = 400717
+random = no
+country = U02 
+trigger = { ai = yes
+event 200017 }
+
+	name = "AI_EVENT"
+style = 0
+date = { day = 4 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1929 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U02_CSX.ai" } }
+} 
+
+event = {
+id = 400718
+random = no
+country = U04 
+trigger = { ai = yes
+           event 9999921 }
+
+	name = "AI_EVENT"
+style = 0
+date = { day = 4 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1928 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U04_U02.ai" } }
+} 
+
+event = {
+id = 400719
+random = no
+country = U02 
+trigger = { ai = yes
+           event 9999911 }
+
+	name = "AI_EVENT"
+style = 0
+date = { day = 4 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1928 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U02_nhs.ai" } }
+} 
+event = {
+id = 400720
+random = no
+country = U15
+trigger = { ai = yes
+           event = 100110 }
+
+name = "AI_EVENT"
+style = 0
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1928 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U15_unify.ai" } }
+} 
+
+event = {
+id = 400721
+random = no
+country = U07
+trigger = { ai = yes
+           event = 100114 }
+
+name = "AI_EVENT"
+style = 0
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1928 }
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U07_dy.ai" } }
+} 
+
+event = {
+id = 400722
+random = no
+country = U11
+
+name = "AI_EVENT"
+style = 0
+
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="U11_1925.ai" } }
+} 
+
+event = {
+id = 400724
+random = no
+country = CXB
+
+name = "AI_EVENT"
+style = 0
+
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="CXB_1925.ai" } }
+} 
+
+event = {
+id = 400723
+random = no
+country = U02
+trigger = { ai = yes
+           event = 200204 }
+name = "AI_EVENT"
+style = 0
+
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1928 }	
+action_a = {
+name = "OK"
+command = { type = ai which ="switch\U02_CHI.ai" } }
+} 
+
+event = {
+id = 400725
+random = no
+country = SIK
+
+name = "AI_EVENT"
+style = 0
+
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="SIK_1925.ai" } }
+} 
+
+event = {
+id = 400726
+random = no
+country = CYN
+
+name = "AI_EVENT"
+style = 0
+
+	
+action_a = {
+name = "OK"
+command = { type = ai which ="CYN_1925.ai" } }
+} 
+
+event = {
+id = 400727
+random = no
+country = USA
+trigger = { 	ai = yes
+		war = { country = -1 country = CHI }	}
+
+name = "AI_EVENT"
+style = 0
+
+
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1935 }
+
+action_a = {
+name = "OK"
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+ }
+} 
+
+event = {
+id = 400728
+random = no
+country = JAP
+trigger = { 
+		OR = { war = { country = -1 country = CHI }
+				war = { country = -1 country = U02 }
+			}
+	}
+
+name = "AI_EVENT"
+style = 0
+
+
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1935 }
+
+action_a = {
+name = "OK"
+        command = { type = add_corps value = land where = 1199 }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = unlock_division which = 13016 value = 100001 }
+	command = { type = unlock_division which = 13016 value = 100002 }
+	command = { type = unlock_division which = 13016 value = 100041 }
+	command = { type = unlock_division which = 13016 value = 100042 }
+	command = { type = unlock_division which = 13016 value = 100051 }
+	command = { type = unlock_division which = 13016 value = 100052 }
+	command = { type = unlock_division which = 13016 value = 100011 }
+	command = { type = unlock_division which = 13016 value = 100012 }
+	command = { type = unlock_division which = 13016 value = 100061 }
+	command = { type = unlock_division which = 13016 value = 100062 }
+	command = { type = unlock_division which = 13016 value = 100021 }
+	command = { type = unlock_division which = 13016 value = 100022 }
+	command = { type = unlock_division which = 13016 value = 100101 }
+	command = { type = unlock_division which = 13016 value = 100102 }
+	command = { type = unlock_division which = 13016 value = 100111 }
+	command = { type = unlock_division which = 13016 value = 100112 }
+	command = { type = unlock_division which = 13016 value = 100121 }
+	command = { type = unlock_division which = 13016 value = 100122 }
+	command = { type = unlock_division which = 13016 value = 100131 }
+	command = { type = unlock_division which = 13016 value = 100132 }
+	command = { type = unlock_division which = 13016 value = 100141 }
+	command = { type = unlock_division which = 13016 value = 100142 }
+	command = { type = unlock_division which = 13016 value = 100071 }
+	command = { type = unlock_division which = 13016 value = 100072 }
+	command = { type = unlock_division which = 13016 value = 100151 }
+	command = { type = unlock_division which = 13016 value = 100152 }
+	command = { type = unlock_division which = 13016 value = 100161 }
+	command = { type = unlock_division which = 13016 value = 100162 }
+	command = { type = unlock_division which = 13016 value = 100081 }
+	command = { type = unlock_division which = 13016 value = 100082 }
+	command = { type = unlock_division which = 13016 value = 100091 }
+	command = { type = unlock_division which = 13016 value = 100092 }
+ }
+} 
+
+event = {
+id = 400729
+random = no
+country = ENG
+
+trigger = { 	ai = yes
+		war = { country = -1 country = CHI }	}
+
+name = "AI_EVENT"
+style = 0
+
+
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1935 }
+
+action_a = {
+name = "OK"
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+ }
+} 
+event = {
+id = 400730
+random = no
+country = FRA
+
+trigger = { 	ai = yes
+		war = { country = -1 country = CHI }	}
+
+name = "AI_EVENT"
+style = 0
+
+
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1935 }
+
+action_a = {
+name = "OK"
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+ }
+} 
+event = {
+id = 400731
+random = no
+country = SOV
+
+trigger = { 	ai = yes
+		war = { country = -1 country = CHI }	}
+
+name = "AI_EVENT"
+style = 0
+
+
+date = { day = 1 month = january year = 1925 }
+
+offset = 1
+	
+deathdate = { day = 30 month = january year = 1935 }
+
+action_a = {
+name = "OK"
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+	command = { type = add_division value = infantry when = 8 where = artillery }
+ }
+} 

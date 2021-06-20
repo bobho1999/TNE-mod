@@ -1,0 +1,14 @@
+U16;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+14000;Head of State;邓锡侯 ;21;PA;Die-hard Reformer;Medium;dengxihou;x
+14001;Head of Government;陈国栋 ;24;PA;Flamboyant Tough Guy;Medium;dazhong;x
+14002;Foreign Minister;赖心辉 ;24;PA;Iron Fisted Brute;Medium;laixinhui;x
+14003;Minister of Armament;向传义 ;24;PA;Military Entrepreneur;Medium;dazhong;x
+14004;Minister of Security;向传义 ;24;PA;Silent Lawyer;Medium;dazhong;x
+14005;Head of Military Intelligence;赖心辉 ;24;PA;Political Specialist;Medium;laixinhui;x
+14006;Chief of Staff;陈国栋 ;24;PA;School of Mass Combat;Medium;dazhong;x
+14007;Chief of Army;邓锡侯 ;24;PA;Decisive Battle Doctrine;Medium;dengxihou;x
+14010;Head of Government;田颂尧 ;20;PA;Political Protege;Medium;tiansongyao;x
+14011;Head of State;刘存厚 ;20;PA;Popular Figurehead;Medium;liucunhou;x
+14012;Chief of Navy;南方军閥;36;PA;Undistinguished Suit;Medium;nanfang;x
+14013;Chief of Air Force;本土勢力;36;PA;Undistinguished Suit;Medium;bentu;x

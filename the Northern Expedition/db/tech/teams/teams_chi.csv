@@ -1,0 +1,32 @@
+CHI;Name;Pic Name;Skill;Start Year;End Year;Speciality1;Speciality2;Speciality3;Speciality4;Speciality5;Speciality6;Speciality7;Speciality8;Speciality9;Speciality10;Speciality11;Speciality12;Speciality13;Speciality14;Speciality15;Speciality16;Speciality17;Speciality18;Speciality19;Speciality20;Speciality21;Speciality22;Speciality23;Speciality24;Speciality25;Speciality26;Speciality27;Speciality28;Speciality29;Speciality30;Speciality31;Speciality32;x
+1000;中央飞机制造厂 ;T1000;2;1930;1970;aeronautics;electronics;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1001;大定航空发动机厂 ;T1001;3;1930;1970;aeronautics;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1002;汉阳兵工厂 ;T1002;2;1930;1970;mechanics;artillery;general_equipment;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1004;中兴煤业 ;T1004;2;1930;1970;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1005;亚历山大 冯 法尔肯豪森 ;T1005;4;1930;1948;large_unit_tactics;infantry_focus;centralized_execution;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+#1006;蒋介石 ;T1006;2;1930;1970;large_unit_tactics;infantry_focus;individual_courage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1007;陈纳德 ;T1007;4;1970;1970;fighter_tactics;bomber_tactics;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1008;中华民国空军 ;T1008;2;1930;1970;fighter_tactics;aircraft_testing;piloting;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1009;中华民国海军 ;T1009;2;1930;1970;small_taskforce_tactics;naval_training;seamanship;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1010;江南造船厂 ;T1010;2;1930;1970;naval_artillery;naval_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1011;陈省身 ;T1011;5;1930;1970;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1012;中央研究院 ;T1012;2;1928;1970;mechanics;chemistry;management;mathematics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1013;國立中央大學;國立中央大學;3;1928;1970;mathematics;electronics;mechanics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1014;中国国航公司 ;T1014;2;1930;1970;aeronautics;electronics;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1015;长安公司 ;T1015;3;1930;1970;artillery;mechanics;general_equipment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1016;永利化学公司 ;T1016;4;1930;1970;industrial_engineering;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1017;国立机械制造总局 ;T8500;3;1930;1970;industrial_engineering;mechanics;general_equipment;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1018;国泰金融 ;T1018;2;1930;1970;industrial_engineering;management;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1019;清华大学 ;T1019;3;1950;1970;mathematics;nuclear_physics;nuclear_engineering;chemistry;mechanics;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1020;国防部中山科学研究院 ;T1426;5;1950;1970;rocketry;aeronautics;electronics;chemistry;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1021;蒋介石;蒋介石;4;1920;1950;training;large_unit_tactics;centralized_execution;infantry_focus;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1022;周恩来;周恩来 (2);6;1920;1950;management;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1023;黄埔陆军军官学校;黄埔军校;5;1920;1970;combined_arms_focus;small_unit_tactics;decentralized_execution;training;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1024;国立中山大学;中山大学;3;1920;1970;electronics;mechanics;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1025;广东兵工厂;广东兵工厂;4;1920;1970;artillery;mechanics;general_equipment;electronics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1026;广州造船厂;广州造船厂;3;1920;1970;naval_engineering;naval_artillery;general_equipment;technical_efficiency;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1027;广东军事飞机学校;广东军事飞机学校;4;1920;1970;aircraft_testing;fighter_tactics;piloting;bomber_tactics;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1028;广东飞机修理厂;广东飞机修理厂;3;1930;1970;general_equipment;aeronautics;artillery;aircraft_testing;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1029;陈策;陈策 (2);3;1920;1970;small_taskforce_tactics;submarine_tactics;naval_training;naval_artillery;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1030;广州革命政府;广州革命政府;4;1920;1970;management;training;industrial_engineering;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+1031;布柳赫尔;布柳赫尔;5;1920;1970;combined_arms_focus;large_unit_tactics;training;centralized_execution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x

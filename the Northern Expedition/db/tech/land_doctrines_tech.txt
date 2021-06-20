@@ -1,0 +1,1174 @@
+technology =
+{ id          = 8
+  category    = land_doctrines
+  name        = TECH_LD_NAME # Localized name
+  desc        = TECH_LD_DESC # Localized description
+  # 近代陆军建设 
+  application =
+  { id        = 8000
+    name      = TECH_APP_LD_36_NAME
+    desc      = TECH_APP_LD_36_DESC
+    position  = { x = 20 y = 20 }
+    year      = 1900
+    # 约米尼信条
+    component = { id = 8001 name = TECH_CMP_LD_36_1_NAME type = training difficulty = 4 }
+    # 克劳塞维茨理论 
+    component = { id = 8002 name = TECH_CMP_LD_36_2_NAME type = training difficulty = 4 }
+    # 军事计划与军事演习 
+    component = { id = 8003 name = TECH_CMP_LD_36_3_NAME type = management difficulty = 4 }
+    # 陆军后勤保障 
+    component = { id = 8004 name = TECH_CMP_LD_36_4_NAME type = management difficulty = 4 }
+    # 近代陆军指挥法则
+    component = { id = 8005 name = TECH_CMP_LD_36_5_NAME type = training difficulty = 4 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = max_organization which = land value = 1 }
+      command = { type = morale which = land value = 3 }
+    }
+  }
+  # 近代士官培养 
+  application =
+  { id        = 8010
+    name      = TECH_APP_LD_37_NAME
+    desc      = TECH_APP_LD_37_DESC
+    position  = { x = 320 y = 40 }
+    year      = 1910
+    # 单兵技能加强
+    component = { id = 8011 name = TECH_CMP_LD_37_1_NAME type = training difficulty = 7 }
+    # 早期战术训练
+    component = { id = 8012 name = TECH_CMP_LD_37_2_NAME type = training difficulty = 7 }
+    # 早期火力组织原则
+    component = { id = 8013 name = TECH_CMP_LD_37_3_NAME type = training difficulty = 7 }
+    # 早期近战指挥原则
+    component = { id = 8014 name = TECH_CMP_LD_37_4_NAME type = training difficulty = 7 }
+    # 战术素养加强 
+    component = { id = 8015 name = TECH_CMP_LD_37_5_NAME type = management difficulty = 8 }
+    required  = { 8000 8070 }
+    effects =
+    { command = { type = max_organization which = land value = 1 }
+    }
+  }
+  # 重视白刃战 
+  application =
+  { id        = 8090
+    name      = TECH_APP_LD_9_NAME
+    desc      = TECH_APP_LD_9_DESC
+    position  = { x = 440 y = 340 }
+    year      = 1936
+    # 突刺训练  
+    component = { id = 8091 name = TECH_CMP_LD_9_1_NAME type = training difficulty = 7 }
+    # 进攻决心 
+    component = { id = 8092 name = TECH_CMP_LD_9_2_NAME type = individual_courage difficulty = 7 }
+    # 防御决心 
+    component = { id = 8093 name = TECH_CMP_LD_9_3_NAME type = infantry_focus difficulty = 7 }
+    # 白刃战队形 
+    component = { id = 8094 name = TECH_CMP_LD_9_4_NAME type = training difficulty = 7 }
+    # 白刃战训练 
+    component = { id = 8095 name = TECH_CMP_LD_9_5_NAME type = training difficulty = 7 }
+    required  = { 8000 }
+    effects =
+    { command = { type = assault which = land value = 10 }
+      command = { type = counterattack which = land value = 10 }
+      command = { type = deactivate which = 8730 }
+      command = { type = deactivate which = 8740 }
+      command = { type = deactivate which = 8750 }
+    }
+  }
+  # 弹幕徐进
+  application =
+  { id        = 8340
+    name      = TECH_APP_LD_63_NAME
+    desc      = TECH_APP_LD_63_DESC
+    position  = { x = 150 y = 280 }
+    year      = 1914
+    # 总攻时间表
+    component = { id = 8341 name = TECH_CMP_LD_63_1_NAME type = training difficulty = 10 }
+    # 单层徐进弹幕射击
+    component = { id = 8342 name = TECH_CMP_LD_63_2_NAME type = centralized_execution difficulty = 10 }
+    # 双层徐进弹幕射击
+    component = { id = 8343 name = TECH_CMP_LD_63_3_NAME type = centralized_execution difficulty = 12 }
+    # 炮火延伸
+    component = { id = 8344 name = TECH_CMP_LD_63_4_NAME type = infantry_focus difficulty = 10 }
+    # 基本通讯手段
+    component = { id = 8345 name = TECH_CMP_LD_63_5_NAME type = training difficulty = 10 }
+    required  = { 8300 }
+    effects =
+    { command = { type = max_organization which = artillery value = 5 }
+      command = { type = morale which = artillery value = 5 }
+      command = { type = breakthrough value = 2 }
+      command = { type = assault value = 2 }
+    }
+  }
+  # 强调训练程度 
+  application =
+  { id        = 8700
+    name      = TECH_APP_LD_38_NAME
+    desc      = TECH_APP_LD_38_DESC
+    position  = { x = 320 y = 360 }
+    year      = 1925
+    # 日常训练加强 
+    component = { id = 8701 name = TECH_CMP_LD_38_1_NAME type = training difficulty = 10 }
+    # 军士素质加强 
+    component = { id = 8702 name = TECH_CMP_LD_38_2_NAME type = training difficulty = 10 }
+    # 军官素质加强
+    component = { id = 8703 name = TECH_CMP_LD_38_3_NAME type = training difficulty = 10 }
+    # 科学训练方法
+    component = { id = 8704 name = TECH_CMP_LD_38_4_NAME type = training difficulty = 10 double_time = yes }
+    # 科学训练制度
+    component = { id = 8705 name = TECH_CMP_LD_38_5_NAME type = management difficulty = 10 }
+    required  = { 8030 8060 }
+    effects =
+    { command = { type = deactivate which = 8710 }
+      command = { type = deactivate which = 8720 }
+      command = { type = max_organization which = land value = 10 }
+    }
+  }
+  # 强调思想教育 
+  application =
+  { id        = 8710
+    name      = TECH_APP_LD_39_NAME
+    desc      = TECH_APP_LD_39_DESC
+    position  = { x = 320 y = 380 }
+    year      = 1925
+    # 士兵识字率提高 
+    component = { id = 8711 name = TECH_CMP_LD_39_1_NAME type = training difficulty = 10 }
+    # 士官识字率提高 
+    component = { id = 8712 name = TECH_CMP_LD_39_2_NAME type = training difficulty = 10 }
+    # 军官文化程度提高
+    component = { id = 8713 name = TECH_CMP_LD_39_3_NAME type = training difficulty = 10 }
+    # 政治军官设立
+    component = { id = 8714 name = TECH_CMP_LD_39_4_NAME type = individual_courage difficulty = 15 }
+    # 主义武装  
+    component = { id = 8715 name = TECH_CMP_LD_39_5_NAME type = individual_courage difficulty = 10 double_time = yes }
+    required  = { 8060 8070 }
+    effects =
+    { command = { type = deactivate which = 8700 }
+      command = { type = deactivate which = 8720 }
+      command = { type = morale which = land value = 10 }
+    }
+  }
+  # 强调个人忠诚 
+  application =
+  { id        = 8720
+    name      = TECH_APP_LD_40_NAME
+    desc      = TECH_APP_LD_40_DESC
+    position  = { x = 320 y = 400 }
+    year      = 1925
+    # 裙带关系
+    component = { id = 8721 name = TECH_CMP_LD_40_1_NAME type = individual_courage difficulty = 6 }
+    # 思想觉悟抑制
+    component = { id = 8722 name = TECH_CMP_LD_40_2_NAME type = training difficulty = 6 }
+    # 严格等级制度
+    component = { id = 8723 name = TECH_CMP_LD_40_3_NAME type = management difficulty = 6 }
+    # 恩义关系控制
+    component = { id = 8724 name = TECH_CMP_LD_40_4_NAME type = individual_courage difficulty = 6 }
+    # 传统观念
+    component = { id = 8725 name = TECH_CMP_LD_40_5_NAME type = management difficulty = 6 }
+    required  = { 8020 8050 }
+    effects =
+    { command = { type = morale which = land value = 5 }
+      command = { type = deactivate which = 8700 }
+      command = { type = deactivate which = 8710 }
+    }
+  }
+  # 近代军事参谋机构 
+  application =
+  { id        = 8030
+    name      = TECH_APP_LD_41_NAME
+    desc      = TECH_APP_LD_41_DESC
+    position  = { x = 320 y = 100 }
+    year      = 1918
+    # 陆军风险分析原则 
+    component = { id = 8031 name = TECH_CMP_LD_41_1_NAME type = management difficulty = 8 }
+    # 战斗损耗评估纲要 
+    component = { id = 8032 name = TECH_CMP_LD_41_2_NAME type = management difficulty = 8 }
+    # 动员计划与战役计划
+    component = { id = 8033 name = TECH_CMP_LD_41_3_NAME type = management difficulty = 8 }
+    # 协调部队作战
+    component = { id = 8034 name = TECH_CMP_LD_41_4_NAME type = management difficulty = 8 }
+    # 总参谋部系统 
+    component = { id = 8035 name = TECH_CMP_LD_41_5_NAME type = management difficulty = 8 double_time = yes }
+    required  = { 8020 }
+    effects =
+    { command = { type = activate_unit_type which = hq }
+      command = { type = new_model which = hq value = 0 }
+    }
+  }
+  # 近代军官培养 
+  application =
+  { id        = 8020
+    name      = TECH_APP_LD_42_NAME
+    desc      = TECH_APP_LD_42_DESC
+    position  = { x = 320 y = 60 }
+    year      = 1914
+    # 新式学制章程
+    component = { id = 8021 name = TECH_CMP_LD_42_1_NAME type = management difficulty = 8 }
+    # 小分队战术训练 
+    component = { id = 8022 name = TECH_CMP_LD_42_2_NAME type = training difficulty = 8 }
+    # 大编队战术训练
+    component = { id = 8023 name = TECH_CMP_LD_42_3_NAME type = training difficulty = 8 }
+    # 新式专业科目训练
+    component = { id = 8024 name = TECH_CMP_LD_42_4_NAME type = training difficulty = 8 }
+    # 战术指挥原则
+    component = { id = 8025 name = TECH_CMP_LD_42_5_NAME type = training difficulty = 9 }
+    required  = { 8010 }
+    effects =
+    { command = { type = max_organization which = land value = 1 }
+    }
+  }
+  # 早期军事训练
+  application =
+  { id        = 8040
+    name      = TECH_APP_LD_43_NAME
+    desc      = TECH_APP_LD_43_DESC
+    position  = { x = 430 y = 40 }
+    year      = 1910
+    # 早期射击训练
+    component = { id = 8041 name = TECH_CMP_LD_43_1_NAME type = training difficulty = 6 }
+    # 早期近战训练
+    component = { id = 8042 name = TECH_CMP_LD_43_2_NAME type = training difficulty = 6 }
+    # 早期队列训练
+    component = { id = 8043 name = TECH_CMP_LD_43_3_NAME type = training difficulty = 6 }
+    # 早期行军训练
+    component = { id = 8044 name = TECH_CMP_LD_43_4_NAME type = training difficulty = 6 }
+    # 步兵操典
+    component = { id = 8045 name = TECH_CMP_LD_43_5_NAME type = training difficulty = 8 double_time = yes }
+    required  = { 8080 }
+    effects =
+    { command = { type = morale which = land value = 1 }
+    }
+  }
+  # 近代军事学院 
+  application =
+  { id        = 8070
+    name      = TECH_APP_LD_44_NAME
+    desc      = TECH_APP_LD_44_DESC
+    position  = { x = 320 y = 20 }
+    year      = 1905
+    # 桑赫斯特军校训练模式 
+    component = { id = 8071 name = TECH_CMP_LD_44_1_NAME type = general_equipment difficulty = 5 }
+    # 圣西尔军校训练模式 
+    component = { id = 8072 name = TECH_CMP_LD_44_2_NAME type = general_equipment difficulty = 5 }
+    # 西点军校训练模式 
+    component = { id = 8073 name = TECH_CMP_LD_44_3_NAME type = general_equipment difficulty = 5 }
+    # 伏龙芝军校训练模式 
+    component = { id = 8074 name = TECH_CMP_LD_44_4_NAME type = general_equipment difficulty = 5 }
+    # 军事教育系统 
+    component = { id = 8075 name = TECH_CMP_LD_44_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = max_organization which = land value = 1 }
+    }
+  }
+  # 军法与军纪  
+  application =
+  { id        = 8050
+    name      = TECH_APP_LD_45_NAME
+    desc      = TECH_APP_LD_45_DESC
+    position  = { x = 430 y = 60 }
+    year      = 1914
+    # 严明纪律
+    component = { id = 8051 name = TECH_CMP_LD_45_1_NAME type = management difficulty = 7 }
+    # 军法约束
+    component = { id = 8052 name = TECH_CMP_LD_45_2_NAME type = management difficulty = 7 }
+    # 军法处
+    component = { id = 8053 name = TECH_CMP_LD_45_3_NAME type = management difficulty = 7 }
+    # 军事法庭
+    component = { id = 8054 name = TECH_CMP_LD_45_4_NAME type = management difficulty = 7 }
+    # 军法军令体系
+    component = { id = 8055 name = TECH_CMP_LD_45_5_NAME type = management difficulty = 7 double_time = yes }
+    required  = { 8020 8040 }
+    effects =
+    { command = { type = morale which = land value = 1 }
+    }
+  }
+  # 军队正规化 
+  application =
+  { id        = 8080
+    name      = TECH_APP_LD_46_NAME
+    desc      = TECH_APP_LD_46_DESC
+    position  = { x = 430 y = 21 }
+    year      = 1905
+    # 正规进攻战训练
+    component = { id = 8081 name = TECH_CMP_LD_46_1_NAME type = training difficulty = 10 }
+    # 正规防御战训练
+    component = { id = 8082 name = TECH_CMP_LD_46_2_NAME type = training difficulty = 10 }
+    # 部队思想教育
+    component = { id = 8083 name = TECH_CMP_LD_46_3_NAME type = training difficulty = 10 }
+    # 正规军管理方法
+    component = { id = 8084 name = TECH_CMP_LD_46_4_NAME type = management difficulty = 10 }
+    # 正规军组织方法
+    component = { id = 8085 name = TECH_CMP_LD_46_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { type = morale which = land value = 1 }
+    }
+  }
+  # 军队职业化 
+  application =
+  { id        = 8060
+    name      = TECH_APP_LD_47_NAME
+    desc      = TECH_APP_LD_47_DESC
+    position  = { x = 430 y = 100 }
+    year      = 1918
+    # 军人荣誉
+    component = { id = 8061 name = TECH_CMP_LD_47_1_NAME type = management difficulty = 7 }
+    # 基本思想教育
+    component = { id = 8062 name = TECH_CMP_LD_47_2_NAME type = management difficulty = 7 }
+    # 社会地位与军属优待
+    component = { id = 8063 name = TECH_CMP_LD_47_3_NAME type = management difficulty = 7 }
+    # 完善兵役制度
+    component = { id = 8064 name = TECH_CMP_LD_47_4_NAME type = management difficulty = 8 double_time = yes }
+    # 改良军事训练
+    component = { id = 8065 name = TECH_CMP_LD_47_5_NAME type = training difficulty = 7 }
+    required  = { 8030 8050 }
+    effects =
+    { command = { type = max_organization which = land value = 2 }
+      command = { type = morale which = land value = 2 }
+    }
+  }
+  # 近代骑兵训练  
+  application =
+  { id        = 8100
+    name      = TECH_APP_LD_48_NAME
+    desc      = TECH_APP_LD_48_DESC
+    position  = { x = 30 y = 100 }
+    year      = 1905
+    # 近代骑术训练
+    component = { id = 8101 name = TECH_CMP_LD_48_1_NAME type = training difficulty = 6 }
+    # 骑兵进攻战术
+    component = { id = 8102 name = TECH_CMP_LD_48_2_NAME type = small_unit_tactics difficulty = 6 }
+    # 骑兵防御战术
+    component = { id = 8103 name = TECH_CMP_LD_48_3_NAME type = small_unit_tactics difficulty = 6 }
+    # 骑兵指挥法则
+    component = { id = 8104 name = TECH_CMP_LD_48_4_NAME type = management difficulty = 6 }
+    # 骑兵训练手册
+    component = { id = 8105 name = TECH_CMP_LD_48_5_NAME type = training difficulty = 6 double_time = yes }
+    required  = { 8000 }
+    effects =
+    { command = { type = max_organization which = cavalry value = 2 }
+    }
+  }
+  # 骑兵迂回奔袭 
+  application =
+  { id        = 8110
+    name      = TECH_APP_LD_49_NAME
+    desc      = TECH_APP_LD_49_DESC
+    position  = { x = 150 y = 80 }
+    year      = 1910
+    # 出其不意原则
+    component = { id = 8111 name = TECH_CMP_LD_49_1_NAME type = individual_courage difficulty = 8 }
+    # 骑兵破袭战
+    component = { id = 8112 name = TECH_CMP_LD_49_2_NAME type = small_unit_tactics difficulty = 8 }
+    # 远距离后勤保障
+    component = { id = 8113 name = TECH_CMP_LD_49_3_NAME type = training difficulty = 8 }
+    # 纵深穿插、分割
+    component = { id = 8114 name = TECH_CMP_LD_49_4_NAME type = decentralized_execution difficulty = 8 }
+    # 合围态势
+    component = { id = 8115 name = TECH_CMP_LD_49_5_NAME type = centralized_execution difficulty = 8 }
+    required  = { 8100 }
+    effects =
+    { command = { type = morale which = cavalry value = 3 }
+      command = { type = max_organization which = cavalry value = 5 }
+      command = { type = ambush value = 1 }
+      command = { type = encirclement value = 3 }
+      command = { type = breakthrough value = 1 }
+      command = { type = surprise which = land value = 5 }
+    }
+  }
+  # 骑兵火力侦察
+  application =
+  { id        = 8120
+    name      = TECH_APP_LD_50_NAME
+    desc      = TECH_APP_LD_50_DESC
+    position  = { x = 150 y = 100 }
+    year      = 1910
+    # 主动诱敌
+    component = { id = 8121 name = TECH_CMP_LD_50_1_NAME type = individual_courage difficulty = 7 }
+    # 火力袭击
+    component = { id = 8122 name = TECH_CMP_LD_50_2_NAME type = infantry_focus difficulty = 7 }
+    # 火力部署图绘制
+    component = { id = 8123 name = TECH_CMP_LD_50_3_NAME type = management difficulty = 7 }
+    # 火力配置判断
+    component = { id = 8124 name = TECH_CMP_LD_50_4_NAME type = training difficulty = 7 }
+    # 试探性进攻
+    component = { id = 8125 name = TECH_CMP_LD_50_5_NAME type = small_unit_tactics difficulty = 7 }
+    required  = { 8100 }
+    effects =
+    { command = { type = surprise which = land value = 1 }
+      command = { type = army_detection which = us value = 10 }
+      command = { type = intelligence which = us value = 10 }
+      command = { type = max_organization which = cavalry value = 3 }
+    }
+  }
+  # 骑兵队列冲锋
+  application =
+  { id        = 8130
+    name      = TECH_APP_LD_51_NAME
+    desc      = TECH_APP_LD_51_DESC
+    position  = { x = 150 y = 120 }
+    year      = 1910
+    # 严明纪律
+    component = { id = 8131 name = TECH_CMP_LD_51_1_NAME type = individual_courage difficulty = 8 }
+    # 骑兵队列训练
+    component = { id = 8132 name = TECH_CMP_LD_51_2_NAME type = training difficulty = 7 }
+    # 骑兵冲锋队形
+    component = { id = 8133 name = TECH_CMP_LD_51_3_NAME type = training difficulty = 8 }
+    # 协同动作
+    component = { id = 8134 name = TECH_CMP_LD_51_4_NAME type = centralized_execution difficulty = 7 }
+    # 大纵深集群冲击
+    component = { id = 8135 name = TECH_CMP_LD_51_5_NAME type = large_unit_tactics difficulty = 7 double_time = yes }
+    required  = { 8100 }
+    effects =
+    { command = { type = morale which = cavalry value = 10 }
+      command = { type = max_organization which = infantry value = 5 }
+      command = { type = assault value = 3 }
+      command = { type = breakthrough value = 1 }
+    }
+  }
+  # 近代步兵训练  
+  application =
+  { id        = 8200
+    name      = TECH_APP_LD_52_NAME
+    desc      = TECH_APP_LD_52_DESC
+    position  = { x = 30 y = 170 }
+    year      = 1905
+    # 近代单兵技能
+    component = { id = 8201 name = TECH_CMP_LD_52_1_NAME type = training difficulty = 6 }
+    # 步兵进攻战术
+    component = { id = 8202 name = TECH_CMP_LD_52_2_NAME type = infantry_focus difficulty = 6 }
+    # 步兵防御战术
+    component = { id = 8203 name = TECH_CMP_LD_52_3_NAME type = infantry_focus difficulty = 6 }
+    # 步兵指挥法则
+    component = { id = 8204 name = TECH_CMP_LD_52_4_NAME type = management difficulty = 6 }
+    # 步兵训练手册
+    component = { id = 8205 name = TECH_CMP_LD_52_5_NAME type = training difficulty = 6 double_time = yes }
+    required  = { 8000 }
+    effects =
+    { command = { type = max_organization which = infantry value = 2 }
+    }
+  }
+  # 波次冲锋  
+  application =
+  { id        = 8210
+    name      = TECH_APP_LD_53_NAME
+    desc      = TECH_APP_LD_53_DESC
+    position  = { x = 150 y = 150 }
+    year      = 1910
+    # 散兵线
+    component = { id = 8211 name = TECH_CMP_LD_53_1_NAME type = small_unit_tactics difficulty = 7 }
+    # 军士主动性
+    component = { id = 8212 name = TECH_CMP_LD_53_2_NAME type = individual_courage difficulty = 8 }
+    # 依托地利
+    component = { id = 8213 name = TECH_CMP_LD_53_3_NAME type = infantry_focus difficulty = 8 }
+    # 进攻队形
+    component = { id = 8214 name = TECH_CMP_LD_53_4_NAME type = infantry_focus difficulty = 8 }
+    # 下级军官指挥
+    component = { id = 8215 name = TECH_CMP_LD_53_5_NAME type = training difficulty = 9 }
+    required  = { 8200 }
+    effects =
+    { command = { type = max_organization which = infantry value = 3 }
+      command = { type = morale which = infantry value = 1 }
+      command = { type = assault value = 1 }
+    }
+  }
+  # 集团冲锋 
+  application =
+  { id        = 8220
+    name      = TECH_APP_LD_54_NAME
+    desc      = TECH_APP_LD_54_DESC
+    position  = { x = 150 y = 170 }
+    year      = 1910
+    # 步兵方阵
+    component = { id = 8221 name = TECH_CMP_LD_54_1_NAME type = infantry_focus difficulty = 7 }
+    # 军官强硬决心
+    component = { id = 8222 name = TECH_CMP_LD_54_2_NAME type = individual_courage difficulty = 8 }
+    # 压倒性优势原则
+    component = { id = 8223 name = TECH_CMP_LD_54_3_NAME type = centralized_execution difficulty = 7 }
+    # 白刃战决心
+    component = { id = 8224 name = TECH_CMP_LD_54_4_NAME type = individual_courage difficulty = 8 }
+    # 集中突击计划
+    component = { id = 8225 name = TECH_CMP_LD_54_5_NAME type = training difficulty = 9 }
+    required  = { 8200 }
+    effects =
+    { command = { type = morale which = infantry value = 5 }
+      command = { type = max_organization which = infantry value = 2 }
+      command = { type = assault value = 2 }
+      command = { type = breakthrough value = 2 }
+    }
+  }
+  # 进攻火力组织 
+  application =
+  { id        = 8230
+    name      = TECH_APP_LD_55_NAME
+    desc      = TECH_APP_LD_55_DESC
+    position  = { x = 150 y = 190 }
+    year      = 1918
+    # 进攻队形
+    component = { id = 8231 name = TECH_CMP_LD_55_1_NAME type = infantry_focus difficulty = 8 }
+    # 军士指挥
+    component = { id = 8232 name = TECH_CMP_LD_55_2_NAME type = individual_courage difficulty = 9 }
+    # 机枪火力配置
+    component = { id = 8233 name = TECH_CMP_LD_55_3_NAME type = infantry_focus difficulty = 7 }
+    # 火力灵活调配
+    component = { id = 8234 name = TECH_CMP_LD_55_4_NAME type = individual_courage difficulty = 8 }
+    # 火力配置原则
+    component = { id = 8235 name = TECH_CMP_LD_55_5_NAME type = training difficulty = 8 }
+    required  = { 8200 }
+    effects =
+    { command = { type = max_organization which = infantry value = 5 }
+      command = { type = morale which = infantry value = 5 }
+      command = { type = breakthrough value = 2 }
+      command = { type = assault value = 2 }
+    }
+  }
+  # 近代炮兵训练 
+  application =
+  { id        = 8300
+    name      = TECH_APP_LD_56_NAME
+    desc      = TECH_APP_LD_56_DESC
+    position  = { x = 30 y = 250 }
+    year      = 1905
+    # 基本火炮操作
+    component = { id = 8301 name = TECH_CMP_LD_56_1_NAME type = artillery difficulty = 7 }
+    # 射击诸元计算
+    component = { id = 8302 name = TECH_CMP_LD_56_2_NAME type = mathematics difficulty = 15 }
+    # 抵近射击训练
+    component = { id = 8303 name = TECH_CMP_LD_56_3_NAME type = artillery difficulty = 6 }
+    # 炮兵指挥法则
+    component = { id = 8304 name = TECH_CMP_LD_56_4_NAME type = management difficulty = 9 }
+    # 炮兵训练手册
+    component = { id = 8305 name = TECH_CMP_LD_56_5_NAME type = training difficulty = 9 }
+    required  = { 8000 }
+    effects =
+    { command = { type = max_organization which = artillery value = 2 }
+    }
+  }
+  # 干扰射击 
+  application =
+  { id        = 8330
+    name      = TECH_APP_LD_57_NAME
+    desc      = TECH_APP_LD_57_DESC
+    position  = { x = 150 y = 260 }
+    year      = 1916
+    # 快速转移
+    component = { id = 8331 name = TECH_CMP_LD_57_1_NAME type = training difficulty = 5 }
+    # 压制射击
+    component = { id = 8332 name = TECH_CMP_LD_57_2_NAME type = centralized_execution difficulty = 5 }
+    # 多重炮火准备
+    component = { id = 8333 name = TECH_CMP_LD_57_3_NAME type = decentralized_execution difficulty = 5 }
+    # 炮兵阵地隐蔽
+    component = { id = 8334 name = TECH_CMP_LD_57_4_NAME type = training difficulty = 5 }
+    # 下级军官指挥
+    component = { id = 8335 name = TECH_CMP_LD_57_5_NAME type = individual_courage difficulty = 5 }
+    required  = { 8300 }
+    effects =
+    { command = { type = morale which = artillery value = 2 }
+      command = { type = max_organization which = artillery value = 2 }
+    }
+  }
+  # 炮火准备   
+  application =
+  { id        = 8310
+    name      = TECH_APP_LD_58_NAME
+    desc      = TECH_APP_LD_58_DESC
+    position  = { x = 150 y = 220 }
+    year      = 1910
+    # 预定目标诸元
+    component = { id = 8311 name = TECH_CMP_LD_58_1_NAME type = training difficulty = 12 }
+    # 多方位炮击
+    component = { id = 8312 name = TECH_CMP_LD_58_2_NAME type = centralized_execution difficulty = 7 }
+    # 炮火集中配置
+    component = { id = 8313 name = TECH_CMP_LD_58_3_NAME type = centralized_execution difficulty = 7 }
+    # 固定炮兵阵地
+    component = { id = 8314 name = TECH_CMP_LD_58_4_NAME type = training difficulty = 6 }
+    # 预备反压制炮火
+    component = { id = 8315 name = TECH_CMP_LD_58_5_NAME type = large_unit_tactics difficulty = 8 }
+    required  = { 8300 }
+    effects =
+    { command = { type = max_organization which = artillery value = 3 }
+      command = { type = morale which = artillery value = 5 }
+      command = { type = assault value = 2 }
+    }
+  }
+  # 炮火遮断 
+  application =
+  { id        = 8320
+    name      = TECH_APP_LD_59_NAME
+    desc      = TECH_APP_LD_59_DESC
+    position  = { x = 150 y = 240 }
+    year      = 1914
+    # 直属炮兵
+    component = { id = 8321 name = TECH_CMP_LD_59_1_NAME type = centralized_execution difficulty = 7 }
+    # 炮兵分工组织
+    component = { id = 8322 name = TECH_CMP_LD_59_2_NAME type = decentralized_execution difficulty = 7 }
+    # 重点火力压制
+    component = { id = 8323 name = TECH_CMP_LD_59_3_NAME type = centralized_execution difficulty = 7 }
+    # 预定目标诸元
+    component = { id = 8324 name = TECH_CMP_LD_59_4_NAME type = training difficulty = 12 }
+    # 军官灵活指挥
+    component = { id = 8325 name = TECH_CMP_LD_59_5_NAME type = individual_courage difficulty = 8 }
+    required  = { 8300 }
+    effects =
+    { command = { type = delay value = 5 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = morale which = land value = 5 }
+      command = { type = tactical_withdrawal value = 1 }
+    }
+  }
+  # 多兵种协同 
+  application =
+  { id        = 8500
+    name      = TECH_APP_LD_60_NAME
+    desc      = TECH_APP_LD_60_DESC
+    position  = { x = 360 y = 140 }
+    year      = 1916
+    # 骑马通讯兵
+    component = { id = 8501 name = TECH_CMP_LD_60_1_NAME type = infantry_focus difficulty = 8 }
+    # 无线电报通讯
+    component = { id = 8502 name = TECH_CMP_LD_60_2_NAME type = infantry_focus difficulty = 10 }
+    # 通讯协调
+    component = { id = 8503 name = TECH_CMP_LD_60_3_NAME type = infantry_focus difficulty = 8 }
+    # 参谋官协商
+    component = { id = 8504 name = TECH_CMP_LD_60_4_NAME type = individual_courage difficulty = 8 }
+    # 军官指挥
+    component = { id = 8505 name = TECH_CMP_LD_60_5_NAME type = individual_courage difficulty = 10 }
+    required  = { 8070 }
+    effects =
+    { command = { type = max_organization which = land value = 3 }
+    }
+  }
+  # 步炮协同
+  application =
+  { id        = 8510
+    name      = TECH_APP_LD_61_NAME
+    desc      = TECH_APP_LD_61_DESC
+    position  = { x = 430 y = 160 }
+    year      = 1916
+    # 炮兵指挥部
+    component = { id = 8511 name = TECH_CMP_LD_61_1_NAME type = centralized_execution difficulty = 10 }
+    # 时刻表机动
+    component = { id = 8512 name = TECH_CMP_LD_61_2_NAME type = training difficulty = 10 }
+    # 炮兵观测器材
+    component = { id = 8513 name = TECH_CMP_LD_61_3_NAME type = general_equipment difficulty = 9 }
+    # 早期通讯手段
+    component = { id = 8514 name = TECH_CMP_LD_61_4_NAME type = electronics difficulty = 9 }
+    # 军官协调
+    component = { id = 8515 name = TECH_CMP_LD_61_5_NAME type = individual_courage difficulty = 10 }
+    required  = { 8300 8500 }
+    or_required = { 8310 8320 8330 8340 }
+    effects =
+    { command = { }
+    }
+  }
+  # 步骑协同  
+  application =
+  { id        = 8520
+    name      = TECH_APP_LD_62_NAME
+    desc      = TECH_APP_LD_62_DESC
+    position  = { x = 300 y = 160 }
+    year      = 1916
+    # 基本通讯工具 
+    component = { id = 8521 name = TECH_CMP_LD_62_1_NAME type = general_equipment difficulty = 10 }
+    # 步兵跟进 
+    component = { id = 8522 name = TECH_CMP_LD_62_2_NAME type = infantry_focus difficulty = 8 }
+    # 协同动作 
+    component = { id = 8523 name = TECH_CMP_LD_62_3_NAME type = centralized_execution difficulty = 9 }
+    # 战斗队形 
+    component = { id = 8524 name = TECH_CMP_LD_62_4_NAME type = infantry_focus difficulty = 9 }
+    # 步骑协同作战原则
+    component = { id = 8525 name = TECH_CMP_LD_62_5_NAME type = training difficulty = 10 }
+    required  = { 8100 8500 }
+    or_required = { 8110 8120 8130 }
+    effects =
+    { command = { }
+    }
+  }
+  # 野战工事修筑
+  application =
+  { id        = 8410
+    name      = TECH_APP_LD_64_NAME
+    desc      = TECH_APP_LD_64_DESC
+    position  = { x = 150 y = 310 }
+    year      = 1910
+    # 简易机枪阵地修筑
+    component = { id = 8411 name = TECH_CMP_LD_64_1_NAME type = training difficulty = 8 }
+    # 简易炮兵阵地修筑
+    component = { id = 8412 name = TECH_CMP_LD_64_2_NAME type = training difficulty = 8 }
+    # 早期碉堡修筑
+    component = { id = 8413 name = TECH_CMP_LD_64_3_NAME type = general_equipment difficulty = 10 }
+    # 钢筋混凝土工事
+    component = { id = 8414 name = TECH_CMP_LD_64_4_NAME type = general_equipment difficulty = 10 }
+    # 无人区
+    component = { id = 8415 name = TECH_CMP_LD_64_5_NAME type = infantry_focus difficulty = 9 }
+    required  = { 8400 }
+    effects =
+    { command = { type = allow_building which = land_fort }
+      command = { type = allow_dig_in }
+    }
+  }
+  # 近代堑壕战  
+  application =
+  { id        = 8400
+    name      = TECH_APP_LD_65_NAME
+    desc      = TECH_APP_LD_65_DESC
+    position  = { x = 30 y = 340 }
+    year      = 1905
+    # 早期战壕挖掘
+    component = { id = 8401 name = TECH_CMP_LD_65_1_NAME type = infantry_focus difficulty = 6 }
+    # 严格等级制度
+    component = { id = 8402 name = TECH_CMP_LD_65_2_NAME type = infantry_focus difficulty = 6 }
+    # 焦土防御理论
+    component = { id = 8403 name = TECH_CMP_LD_65_3_NAME type = infantry_focus difficulty = 7 }
+    # 反斜面防御
+    component = { id = 8404 name = TECH_CMP_LD_65_4_NAME type = training difficulty = 8 }
+    # 下级军官指挥
+    component = { id = 8405 name = TECH_CMP_LD_65_5_NAME type = individual_courage difficulty = 7 }
+    required  = { 8000 }
+    effects =
+    { command = { type = max_organization which = land value = 2 }
+      command = { type = morale which = land value = 2 }
+    }
+  }
+  # 早期直线战壕
+  application =
+  { id        = 8420
+    name      = TECH_APP_LD_66_NAME
+    desc      = TECH_APP_LD_66_DESC
+    position  = { x = 150 y = 330 }
+    year      = 1914
+    # 快速战壕挖掘
+    component = { id = 8421 name = TECH_CMP_LD_66_1_NAME type = training difficulty = 6 }
+    # 固定机枪
+    component = { id = 8422 name = TECH_CMP_LD_66_2_NAME type = infantry_focus difficulty = 6 }
+    # 固定火力点
+    component = { id = 8423 name = TECH_CMP_LD_66_3_NAME type = infantry_focus difficulty = 6 }
+    # 决一死战心态
+    component = { id = 8424 name = TECH_CMP_LD_66_4_NAME type = individual_courage difficulty = 8 }
+    # 主力部署
+    component = { id = 8425 name = TECH_CMP_LD_66_5_NAME type = large_unit_tactics difficulty = 6 }
+    required  = { 8400 }
+    effects =
+    { command = { type = max_organization which = land value = 1 }
+      command = { type = morale which = land value = 1 }
+      command = { type = delay value = 2 }
+    }
+  }
+  # 先进战壕系统 
+  application =
+  { id        = 8430
+    name      = TECH_APP_LD_67_NAME
+    desc      = TECH_APP_LD_67_DESC
+    position  = { x = 150 y = 350 }
+    year      = 1918
+    # 锯齿形战壕
+    component = { id = 8431 name = TECH_CMP_LD_67_1_NAME type = general_equipment difficulty = 8 }
+    # V型战壕 
+    component = { id = 8432 name = TECH_CMP_LD_67_2_NAME type = general_equipment difficulty = 7 }
+    # 通讯壕与交通壕
+    component = { id = 8433 name = TECH_CMP_LD_67_3_NAME type = general_equipment difficulty = 9 }
+    # 支援战壕与临时战壕
+    component = { id = 8434 name = TECH_CMP_LD_67_4_NAME type = decentralized_execution difficulty = 8 }
+    # 先进战壕挖掘 
+    component = { id = 8435 name = TECH_CMP_LD_67_5_NAME type = training difficulty = 7 }
+    required  = { 8400 }
+    effects =
+    { command = { type = max_organization which = infantry value = 3 }
+      command = { type = morale which = infantry value = 5 }
+      command = { type = delay value = 2 }
+      command = { type = tactical_withdrawal value = 2 }
+    }
+  }
+  # 纵深防御体系
+  application =
+  { id        = 8630
+    name      = TECH_APP_LD_68_NAME
+    desc      = TECH_APP_LD_68_DESC
+    position  = { x = 300 y = 310 }
+    year      = 1927
+    # 纵深地区部署
+    component = { id = 8631 name = TECH_CMP_LD_68_1_NAME type = large_unit_tactics difficulty = 15 }
+    # 时刻表机动 
+    component = { id = 8632 name = TECH_CMP_LD_68_2_NAME type = infantry_focus difficulty = 15 }
+    # 大兵团隐蔽
+    component = { id = 8633 name = TECH_CMP_LD_68_3_NAME type = infantry_focus difficulty = 15 }
+    # 多重战壕系统
+    component = { id = 8634 name = TECH_CMP_LD_68_4_NAME type = large_unit_tactics difficulty = 15 }
+    # 局部反攻计划
+    component = { id = 8635 name = TECH_CMP_LD_68_5_NAME type = training difficulty = 15 double_time = yes }
+    required  = { 8610 }
+    effects =
+    { command = { type = delay value = 4 }
+      command = { type = tactical_withdrawal value = 4 }
+      command = { type = surprise which = land value = 5 }
+      command = { type = hq_supply_eff value = 5 }
+    }
+  }
+  # 渗透战术 
+  application =
+  { id        = 8550
+    name      = TECH_APP_LD_69_NAME
+    desc      = TECH_APP_LD_69_DESC
+    position  = { x = 430 y = 220 }
+    year      = 1918
+    # 间接靠拢
+    component = { id = 8551 name = TECH_CMP_LD_69_1_NAME type = infantry_focus difficulty = 15 }
+    # 支点孤立
+    component = { id = 8552 name = TECH_CMP_LD_69_2_NAME type = decentralized_execution difficulty = 15 }
+    # 单位自主渗透
+    component = { id = 8553 name = TECH_CMP_LD_69_3_NAME type = small_unit_tactics difficulty = 10 double_time = yes }
+    # 决一死战心态
+    component = { id = 8554 name = TECH_CMP_LD_69_4_NAME type = individual_courage difficulty = 15 }
+    # 突击部队训练
+    component = { id = 8555 name = TECH_CMP_LD_69_5_NAME type = training difficulty = 10 double_time = yes }
+    required  = { 8530 }
+    effects =
+    { command = { type = encirclement value = 4 }
+      command = { type = assault value = 4 }
+      command = { type = breakthrough value = 2 }
+      command = { type = surprise which = land value = 10 }
+    }
+  }
+  # 防御火力组织
+  application =
+  { id        = 8440
+    name      = TECH_APP_LD_71_NAME
+    desc      = TECH_APP_LD_71_DESC
+    position  = { x = 150 y = 370 }
+    year      = 1918
+    # 高效火力配置
+    component = { id = 8441 name = TECH_CMP_LD_71_1_NAME type = training difficulty = 9 }
+    # 机枪火力配置
+    component = { id = 8442 name = TECH_CMP_LD_71_2_NAME type = infantry_focus difficulty = 7 }
+    # 优势火力压制
+    component = { id = 8443 name = TECH_CMP_LD_71_3_NAME type = centralized_execution difficulty = 7 }
+    # 冲锋枪与步枪火力配置 
+    component = { id = 8444 name = TECH_CMP_LD_71_4_NAME type = infantry_focus difficulty = 7 }
+    # 军士指挥
+    component = { id = 8445 name = TECH_CMP_LD_71_5_NAME type = individual_courage difficulty = 8 }
+    required  = { 8400 }
+    effects =
+    { command = { type = max_organization which = infantry value = 5 }
+      command = { type = morale which = infantry value = 5 }
+      command = { type = counterattack value = 2 }
+      command = { type = delay value = 2 }
+    }
+  }
+  # 主攻点
+  application =
+  { id        = 8530
+    name      = TECH_APP_LD_72_NAME
+    desc      = TECH_APP_LD_72_DESC
+    position  = { x = 360 y = 200 }
+    year      = 1916
+    # 相对优势原则
+    component = { id = 8531 name = TECH_CMP_LD_72_1_NAME type = centralized_execution difficulty = 10 }
+    # 大规模预备队部署
+    component = { id = 8532 name = TECH_CMP_LD_72_2_NAME type = large_unit_tactics difficulty = 15 }
+    # 多重突击目标
+    component = { id = 8533 name = TECH_CMP_LD_72_3_NAME type = infantry_focus difficulty = 15 }
+    # 连续性攻势
+    component = { id = 8534 name = TECH_CMP_LD_72_4_NAME type = individual_courage difficulty = 15 }
+    # 复杂进攻计划
+    component = { id = 8535 name = TECH_CMP_LD_72_5_NAME type = training difficulty = 15 }
+    required  = { 8070 }
+    effects =
+    { command = { }
+    }
+  }
+  # 人海战术
+  application =
+  { id        = 8540
+    name      = TECH_APP_LD_73_NAME
+    desc      = TECH_APP_LD_73_DESC
+    position  = { x = 300 y = 220 }
+    year      = 1918
+    # 进攻优先理论
+    component = { id = 8541 name = TECH_CMP_LD_73_1_NAME type = individual_courage difficulty = 15 }
+    # 宽大战线理论
+    component = { id = 8542 name = TECH_CMP_LD_73_2_NAME type = centralized_execution difficulty = 15 }
+    # 机动与速度
+    component = { id = 8543 name = TECH_CMP_LD_73_3_NAME type = infantry_focus difficulty = 10 }
+    # 大兵团进攻
+    component = { id = 8544 name = TECH_CMP_LD_73_4_NAME type = large_unit_tactics difficulty = 12 double_time = yes }
+    # 绝对优势原则
+    component = { id = 8545 name = TECH_CMP_LD_73_5_NAME type = training difficulty = 10 }
+    required  = { 8530 }
+    effects =
+    { command = { type = ambush value = 2 }
+      command = { type = tactical_withdrawal value = 4 }
+      command = { type = delay value = 4 }
+      command = { type = build_time which = militia when = now where = relative value = -10 }
+    }
+  }
+  # 一线决战
+  application =
+  { id        = 8610
+    name      = TECH_APP_LD_74_NAME
+    desc      = TECH_APP_LD_74_DESC
+    position  = { x = 300 y = 290 }
+    year      = 1918
+    # 坚守心态
+    component = { id = 8611 name = TECH_CMP_LD_74_1_NAME type = individual_courage difficulty = 12 }
+    # 复杂坑道
+    component = { id = 8612 name = TECH_CMP_LD_74_2_NAME type = training difficulty = 15 }
+    # 重点防御
+    component = { id = 8613 name = TECH_CMP_LD_74_3_NAME type = centralized_execution difficulty = 15 }
+    # 阻击拖延
+    component = { id = 8614 name = TECH_CMP_LD_74_4_NAME type = infantry_focus difficulty = 15 }
+    # 大规模反击
+    component = { id = 8615 name = TECH_CMP_LD_74_5_NAME type = large_unit_tactics difficulty = 10 double_time = yes }
+    required  = { 8600 }
+    effects =
+    { command = { type = delay value = 2 }
+      command = { type = tactical_withdrawal value = 2 }
+    }
+  }
+  # 防御支撑点
+  application =
+  { id        = 8600
+    name      = TECH_APP_LD_75_NAME
+    desc      = TECH_APP_LD_75_DESC
+    position  = { x = 360 y = 270 }
+    year      = 1916
+    # 据点主义  
+    component = { id = 8601 name = TECH_CMP_LD_75_1_NAME type = centralized_execution difficulty = 10 }
+    # 局部储备
+    component = { id = 8602 name = TECH_CMP_LD_75_2_NAME type = centralized_execution difficulty = 10 }
+    # 接敌打击 
+    component = { id = 8603 name = TECH_CMP_LD_75_3_NAME type = infantry_focus difficulty = 9 }
+    # 分区布雷 
+    component = { id = 8604 name = TECH_CMP_LD_75_4_NAME type = training difficulty = 9 }
+    # 焦土防御理论
+    component = { id = 8605 name = TECH_CMP_LD_75_5_NAME type = individual_courage difficulty = 10 double_time = yes }
+    required  = { 8070 }
+    effects =
+    { command = { }
+    }
+  }
+  # 灵活反击学说 
+  application =
+  { id        = 8620
+    name      = TECH_APP_LD_76_NAME
+    desc      = TECH_APP_LD_76_DESC
+    position  = { x = 430 y = 290 }
+    year      = 1918
+    # 防守反击 
+    component = { id = 8621 name = TECH_CMP_LD_76_1_NAME type = infantry_focus difficulty = 10 }
+    # 预备队部署
+    component = { id = 8622 name = TECH_CMP_LD_76_2_NAME type = large_unit_tactics difficulty = 12 }
+    # 大规模反攻
+    component = { id = 8623 name = TECH_CMP_LD_76_3_NAME type = large_unit_tactics difficulty = 12 }
+    # 局部反击
+    component = { id = 8624 name = TECH_CMP_LD_76_4_NAME type = decentralized_execution difficulty = 15 }
+    # 防御优先理论
+    component = { id = 8625 name = TECH_CMP_LD_76_5_NAME type = training difficulty = 10 double_time = yes }
+    required  = { 8600 }
+    effects =
+    { command = { type = counterattack value = 2 }
+      command = { type = tactical_withdrawal value = 2 }
+    }
+  }
+  # 火力集中学说 
+  application =
+  { id        = 8560
+    name      = TECH_APP_LD_77_NAME
+    desc      = TECH_APP_LD_77_DESC
+    position  = { x = 300 y = 240 }
+    year      = 1927
+    # 营级战术单位 
+    component = { id = 8561 name = TECH_CMP_LD_77_1_NAME type = infantry_focus difficulty = 15 }
+    # 大编队指挥 
+    component = { id = 8562 name = TECH_CMP_LD_77_2_NAME type = individual_courage difficulty = 15 }
+    # 重点突破
+    component = { id = 8563 name = TECH_CMP_LD_77_3_NAME type = centralized_execution difficulty = 15 }
+    # 演练和纪律思想 
+    component = { id = 8564 name = TECH_CMP_LD_77_4_NAME type = large_unit_tactics difficulty = 10 double_time = yes }
+    # 团级火力支援 
+    component = { id = 8565 name = TECH_CMP_LD_77_5_NAME type = training difficulty = 10 double_time = yes }
+    required  = { 8540 }
+    effects =
+    { command = { type = swamp_attack which = infantry value = 10 }
+      command = { type = river_attack which = infantry value = 10 }
+      command = { type = urban_attack which = infantry value = 10 }
+      command = { type = delay value = 4 }
+      command = { type = breakthrough value = 10 }
+    }
+  }
+  # 机动灵活学说  
+  application =
+  { id        = 8570
+    name      = TECH_APP_LD_78_NAME
+    desc      = TECH_APP_LD_78_DESC
+    position  = { x = 430 y = 240 }
+    year      = 1927
+    # 摩托化侦察
+    component = { id = 8571 name = TECH_CMP_LD_78_1_NAME type = combined_arms_focus difficulty = 12 }
+    # 编队机动性与协调性 
+    component = { id = 8572 name = TECH_CMP_LD_78_2_NAME type = decentralized_execution difficulty = 12 double_time = yes }
+    # 机动训练
+    component = { id = 8573 name = TECH_CMP_LD_78_3_NAME type = training difficulty = 15 }
+    # 突击群思想
+    component = { id = 8574 name = TECH_CMP_LD_78_4_NAME type = technical_efficiency difficulty = 15 }
+    # 军官自主指挥
+    component = { id = 8575 name = TECH_CMP_LD_78_5_NAME type = individual_courage difficulty = 15 }
+    required  = { 8550 }
+    effects =
+    { command = { type = forest_move which = land value = 10 }
+      command = { type = forest_attack which = land value = 10 }
+      command = { type = hill_move which = land value = 10 }
+      command = { type = hill_attack which = land value = 10 }
+      command = { type = ambush value = 4 }
+      command = { type = encirclement value = 10 }
+    }
+  }
+  # 重视堑壕防御
+  application =
+  { id        = 8730
+    name      = TECH_APP_LD_79_NAME
+    desc      = TECH_APP_LD_79_DESC
+    position  = { x = 440 y = 360 }
+    year      = 1927
+    # 工程兵部队
+    component = { id = 8731 name = TECH_CMP_LD_79_1_NAME type = training difficulty = 10 }
+    # 近代建筑学
+    component = { id = 8732 name = TECH_CMP_LD_79_2_NAME type = management difficulty = 10 }
+    # 战略防御态势
+    component = { id = 8733 name = TECH_CMP_LD_79_3_NAME type = large_unit_tactics difficulty = 8 }
+    # 防御训练加强
+    component = { id = 8734 name = TECH_CMP_LD_79_4_NAME type = training difficulty = 10 }
+    # 静态防御理论
+    component = { id = 8735 name = TECH_CMP_LD_79_5_NAME type = training difficulty = 10 }
+    required  = { 8000 }
+    effects =
+    { command = { type = delay which = land value = 10 }
+      command = { type = max_organization which = land value = 5 }
+      command = { type = deactivate which = 8090 }
+      command = { type = deactivate which = 8740 }
+      command = { type = deactivate which = 8750 }
+    }
+  }
+  # 重视运动战应用 
+  application =
+  { id        = 8750
+    name      = TECH_APP_LD_80_NAME
+    desc      = TECH_APP_LD_80_DESC
+    position  = { x = 440 y = 400 }
+    year      = 1927
+    # 意志力训练加强
+    component = { id = 8751 name = TECH_CMP_LD_80_1_NAME type = individual_courage difficulty = 10 }
+    # 体质训练加强
+    component = { id = 8752 name = TECH_CMP_LD_80_2_NAME type = training difficulty = 10 }
+    # 大编队伪装
+    component = { id = 8753 name = TECH_CMP_LD_80_3_NAME type = large_unit_tactics difficulty = 15 double_time = yes }
+    # 避敌主力与各个击破
+    component = { id = 8754 name = TECH_CMP_LD_80_4_NAME type = decentralized_execution difficulty = 10 }
+    # 战场空间利用
+    component = { id = 8755 name = TECH_CMP_LD_80_5_NAME type = training difficulty = 12 double_time = yes }
+    required  = { 8000 }
+    effects =
+    { command = { type = surprise which = land value = 10 }
+      command = { type = encirclement which = land value = 10 }
+      command = { type = deactivate which = 8090 }
+      command = { type = deactivate which = 8730 }
+      command = { type = deactivate which = 8740 }
+    }
+  }
+  # 重视火力组织
+  application =
+  { id        = 8740
+    name      = TECH_APP_LD_81_NAME
+    desc      = TECH_APP_LD_81_DESC
+    position  = { x = 440 y = 380 }
+    year      = 1927
+    # 机枪火力高效配置
+    component = { id = 8741 name = TECH_CMP_LD_81_1_NAME type = training difficulty = 10 }
+    # 步枪火力高效配置
+    component = { id = 8742 name = TECH_CMP_LD_81_2_NAME type = training difficulty = 10 }
+    # 炮兵火力高效配置
+    component = { id = 8743 name = TECH_CMP_LD_81_3_NAME type = training difficulty = 10 }
+    # 火力支援法则
+    component = { id = 8744 name = TECH_CMP_LD_81_4_NAME type = training difficulty = 10 double_time = yes }
+    # 火力配置法则
+    component = { id = 8745 name = TECH_CMP_LD_81_5_NAME type = training difficulty = 10 double_time = yes }
+    required  = { 8000 }
+    effects =
+    { command = { type = breakthrough which = land value = 10 }
+      command = { type = assault which = land value = 10 }
+      command = { type = deactivate which = 8090 }
+      command = { type = deactivate which = 8730 }
+      command = { type = deactivate which = 8750 }
+    }
+  }
+  # 机动防御学说
+  application =
+  { id        = 8640
+    name      = TECH_APP_LD_82_NAME
+    desc      = TECH_APP_LD_82_DESC
+    position  = { x = 430 y = 310 }
+    year      = 1927
+    # 分散野战炮
+    component = { id = 8641 name = TECH_CMP_LD_82_1_NAME type = small_unit_tactics difficulty = 15 }
+    # 弹性防御理论
+    component = { id = 8642 name = TECH_CMP_LD_82_2_NAME type = technical_efficiency difficulty = 15 }
+    # 深堑壕系统
+    component = { id = 8643 name = TECH_CMP_LD_82_3_NAME type = infantry_focus difficulty = 15 }
+    # 关键地区控制 
+    component = { id = 8644 name = TECH_CMP_LD_82_4_NAME type = decentralized_execution difficulty = 15 }
+    # 复杂防御计划
+    component = { id = 8645 name = TECH_CMP_LD_82_5_NAME type = training difficulty = 15 double_time = yes }
+    required  = { 8620 }
+    effects =
+    { command = { type = surprise which = land value = 10 }
+      command = { type = counterattack value = 4 }
+      command = { type = tactical_withdrawal value = 4 }
+      command = { type = hq_supply_eff value = 5 }
+    }
+  }
+  # 早期战地救护
+  application =
+  { id        = 8760
+    name      = TECH_APP_LD_83_NAME
+    desc      = TECH_APP_LD_83_DESC
+    position  = { x = 20 y = 400 }
+    year      = 1936
+    # 早期止血措施
+    component = { id = 8761 name = TECH_CMP_LD_83_1_NAME type = training difficulty = 8 }
+    # 绷带生产
+    component = { id = 8762 name = TECH_CMP_LD_83_2_NAME type = general_equipment difficulty = 8 }
+    # 土制药物
+    component = { id = 8763 name = TECH_CMP_LD_83_3_NAME type = general_equipment difficulty = 8 }
+    # 临时伤口处理方法  
+    component = { id = 8764 name = TECH_CMP_LD_83_4_NAME type = training difficulty = 8 }
+    # 单兵急救包
+    component = { id = 8765 name = TECH_CMP_LD_83_5_NAME type = general_equipment difficulty = 9 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = attrition_mod value = 5 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+  # 早期战地医院 
+  application =
+  { id        = 8780
+    name      = TECH_APP_LD_84_NAME
+    desc      = TECH_APP_LD_84_DESC
+    position  = { x = 140 y = 400 }
+    year      = 1936
+    # 专业药剂 
+    component = { id = 8781 name = TECH_CMP_LD_84_1_NAME type = chemistry difficulty = 9 }
+    # 杀菌方法 
+    component = { id = 8782 name = TECH_CMP_LD_84_2_NAME type = training difficulty = 9 }
+    # 女性医护 
+    component = { id = 8783 name = TECH_CMP_LD_84_3_NAME type = individual_courage difficulty = 9 }
+    # 灭菌方法 
+    component = { id = 8784 name = TECH_CMP_LD_84_4_NAME type = chemistry difficulty = 9 }
+    # 早期军医征召
+    component = { id = 8785 name = TECH_CMP_LD_84_5_NAME type = management difficulty = 10 double_time = yes }
+    required  = { 8760 }
+    effects =
+    { command = { type = attrition_mod value = 5 }
+      command = { type = trickleback_mod value = 5 }
+    }
+  }
+}

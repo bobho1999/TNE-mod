@@ -1,0 +1,251 @@
+##############################################
+## 1928年事件   
+##############################################
+
+###################
+#国民政府事件
+###################
+##########################
+#1928年       400000~
+##########################
+
+event = {
+	id =400000
+	random = no
+	country = CHI
+
+	
+	name = "五三慘案 "
+	desc = "五三慘案，又稱濟南慘案，指1928年 5月3日國民革命軍在北伐途中經過山東濟南城時，日 本方面借口革命軍對城內的日本僑民進行搶劫、強姦、 屠殺，而出動軍隊展開報復，蓄意屠殺中國軍人與民眾 六千餘人的事件。其中，國民黨戰地政務委員會派 遣濟南的外交處處長兼國民政府外交部特派山東 交涉員蔡公時及署內職員17人被日軍虐殺。"
+	style = 0
+
+
+	action_a = {
+		name = "繞道北伐 " 
+		command = { type = dissent value = 10 } 
+                 command = { type = set_relation which = JAP value = -150 }          
+		}
+}
+
+event = {
+	id =400001
+	random = no
+	country = CHI
+
+	trigger = {  control = { province = 1205 data = CHI } }
+
+	name = "北伐軍佔領北京 "
+	desc = "1928年6月8日，國民革命軍佔領北京，北京改稱北平。 "
+	style = 0
+
+  date = { day = 7 month = may year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "萬歲! " 
+		command = { type = dissent value = -5 }           
+		command = { type = morale which = land value = 3 }
+		}
+}
+
+event = {
+  id = 400002
+  random = no
+  country = CHI
+ 
+  
+  name = "東北易幟 "
+  desc = "1928年12月29日，奉系張學良改五色旗為青天白日滿地紅旗 ，東四省易幟，通電服從南京國民政府領導。全國統 一宣告完成。兩日後，依照先前談判條件，國民政府命張學 良為東北軍政領袖。 "
+  style = 0
+ 
+ action_a = {
+     name = "北伐勝利!! "
+     command = { type = dissent value = -10 }
+     command = { type = trigger which = 400003 value = 1 }
+     }
+}
+
+event = {
+  id = 400003
+  random = no
+  country = CHI
+ 
+  
+  name = "北伐完成，統一中國 "
+  desc = "東北易幟後，標誌著北伐的結束、國民政府完成統一中國、 以及北洋政府時期的正式結束。由於當時外蒙古仍 為蘇聯所佔據，加上原北洋政府僅於西藏設立代表 處而並未進駐軍隊，故只是實現了當時中國在名義或形式上的南北統一。 "
+  style = 0
+ 
+ action_a = {
+     name = "完成統一 "
+     command = { type = dissent value = -10 }
+     }
+}
+
+###################
+#奉系事件
+###################
+##########################
+#1928年       400200~
+##########################
+event = {
+	id =400200
+	random = no
+	country = U02
+
+	trigger = { not = ( control = { province = 1210 data = u02 } }}
+
+	name = "張作霖撤離北京 "
+	desc = "1928年6月3日，張作霖撤離北京，乘火車退往瀋陽。 安國軍政府瓦解。6月4日凌晨，張作霖在皇姑屯事件中被炸死。 "
+	style = 0
+
+  date = { day = 2 month = may year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "安國軍政府瓦解 " 
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 400400 value = 1 }
+                  command = { type = end_mastery which = U13 }
+		command = { type = morale which = land value = -3 }
+                 command = { type = max_organization which = land value = -3 } 
+		}
+}
+event = {
+	id =400201
+	random = no
+	country = U02
+
+	
+
+	name = "皇姑屯事件 "
+	desc = "1928年6月4日5點30分，張作霖乘坐的專列經過京奉、南滿鐵路交叉處的皇姑屯車站三孔橋時，火車被預埋的炸藥炸毀，張作霖被炸成重傷，送回瀋陽後，於當日死去。案發皇姑屯站以東，史稱皇姑屯事件。"
+	style = 0
+
+
+	action_a = {
+		name = "可惡的日本人 " 
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 400202 value = 1 }
+                  command = { type = sleepminister which = 1500 }
+                  command = { type = sleepminister which = 1502 }
+                  command = { type = sleepminister which = 1507 }
+                  command = { type = sleepleader which = 16000 }
+                  command = { type = set_relation which = JAP value = -150 }
+		}
+}
+
+event = {
+	id =400202
+	random = no
+	country = U02
+
+	
+	name = "張學良繼位 "
+	desc = "1928年6月，張作霖在皇姑屯事件被暗殺後，其子張學良 立返瀋陽，受到張作相等宿將擁護，繼任東三省保安司令 兼奉天保安司令，成為東北政治、軍事和社會集團 主帥，主掌東北兵權。"
+	style = 0
+
+
+	action_a = {
+		name = "少帥萬歲! " 
+		command = { type = dissent value = -8 }
+                  command = { type = headofstate which = 1510 }
+                  command = { type = chiefofarmy which = 1514 }
+                  command = { type = chiefofarmy which = 1517 }                
+		}
+}
+
+event = {
+  id = 400203
+  random = no
+  country = u02
+  trigger = { event = 400001           
+               }
+  
+  name = "湯玉麟宣布易幟。 "
+  desc = "1928年7月19日，熱河都統湯玉麟宣布易幟。 "
+  style = 0
+  date = { day = 1 month = january year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = july year = 1929 }
+  action_a = {
+     name = "易幟 "
+     command = { type = dissent value = -2 }
+     }
+}
+
+event = {
+  id = 400204
+  random = no
+  country = u02
+  trigger = { event = 400001
+              event = 400202
+              event = 400203
+               }
+  
+  name = "東北易幟 "
+  desc = "1928年12月29日，奉系張學良改五色旗為青天白日滿地紅旗 ，東四省易幟，通電服從南京國民政府領導。全國統 一宣告完成。兩日後，依照先前談判條件，國民政府命張學 良為東北軍政領袖。 "
+  style = 0
+  date = { day = 1 month = january year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = july year = 1929 }
+  action_a = {
+     name = "易幟 "
+     command = { type = dissent value = -2 }
+		command = { type = trigger which = 400002  }
+     }
+}
+
+###################
+#日本事件
+###################
+##########################
+#1928年       400400~
+##########################
+event = {
+	id =400400
+	random = no
+	country = JAP
+
+	
+
+	name = "皇姑屯事件 "
+	desc = "1928年6月4日5點30分，張作霖乘坐的專列經過京奉、南滿鐵路交叉處的皇姑屯車站三孔橋時，火車被預埋的炸藥炸毀，張作霖被炸成重傷，送回瀋陽後，於當日死去。案發皇姑屯站以東，史稱皇姑屯事件。"
+	style = 0
+
+
+	action_a = {
+		name = "炸唄！ " 
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 400201 }
+		}
+}
+
+event = {
+	id =400401
+	random = no
+	country = JAP
+
+	trigger = {  control = { province = 1216 data = CHI } }
+
+	name = "五三慘案 "
+	desc = "五三慘案，又稱濟南慘案，指1928年 5月3日國民革命軍在北伐途中經過山東濟南城時，日 本方面借口革命軍對城內的日本僑民進行搶劫、強姦、 屠殺，而出動軍隊展開報復，蓄意屠殺中國軍人與民眾 六千餘人的事件。其中，國民黨戰地政務委員會派 遣濟南的外交處處長兼國民政府外交部特派山東 交涉員蔡公時及署內職員17人被日軍虐殺。 "
+	style = 0
+
+  date = { day = 2 month = may year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "執行! " 
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 400000 }
+		}
+}
+###################
+#滇系事件
+###################
+##########################
+#1928年       401200~
+##########################

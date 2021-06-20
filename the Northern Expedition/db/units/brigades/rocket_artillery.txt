@@ -1,0 +1,137 @@
+land_unit_type = 1
+# 0 - 1900型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 2
+  hardattack            = 0
+  artillery_bombardment = 5
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 3
+  morale                = 8
+  toughness             = 3
+}
+# 1 - 1910型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 3
+  hardattack            = 0
+  artillery_bombardment = 7
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 4
+}
+# 2 - 1914型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 3
+  hardattack            = 0
+  artillery_bombardment = 9
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 4
+}
+# 3 - 1918型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 3
+  hardattack            = 0
+  artillery_bombardment = 9
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 4
+}
+# 4 - 1925型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 4
+  hardattack            = 0
+  artillery_bombardment = 9
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 5
+}
+# 5 - 1927型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 4
+  hardattack            = 0
+  artillery_bombardment = 9
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 5
+}
+# 6 - 1930型骑兵团 
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 5
+  hardattack            = 0
+  artillery_bombardment = 9
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 6
+}
+# 7 - 1935型骑兵团
+model =
+{ cost                  = 3
+  buildtime             = 120
+  manpower              = 3
+  defensiveness         = 0
+  maxspeed              = 1
+  softattack            = 5
+  hardattack            = 0
+  artillery_bombardment = 9
+  supplyconsumption     = 0.6
+  upgrade_time_factor   = 1.0
+  upgrade_cost_factor   = 2.0
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 6
+}

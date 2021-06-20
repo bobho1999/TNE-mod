@@ -1,0 +1,27 @@
+ENG;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+4000;Head of State;乔治五世 ;24;ML;Popular Figurehead;High;qiaozhiwushi;x
+4001;Head of Government;斯坦利·鲍德温 ;24;ML;Naive Optimist;Medium;baodewen;x
+4002;Foreign Minister;奥斯汀·张伯伦 ;24;ML;Apologetic Clerk;Medium;2675;x
+4003;Minister of Armament;溫斯頓·邱吉爾;24;ML;Military Entrepreneur;Medium;2430;x
+4004;Minister of Security;威廉·乔因森-希克斯爵士 ;24;ML;Silent Lawyer;Medium;xikesi;x
+4005;Head of Military Intelligence;曼斯菲尔德·史密斯·卡明爵士 ;24;ML;Dismal Enigma;Medium;kaming;x
+4006;Chief of Staff;拉明·沃辛顿-埃文斯爵士 ;24;ML;School of Mass Combat;Medium;aiwensi;x
+4007;Chief of Army;拉明·沃辛顿-埃文斯爵士 ;24;ML;Guns and Butter Doctrine;Medium;aiwensi;x
+4008;Head of Military Intelligence;休伊·辛克萊爵士 ;21;SC;Naval Intelligence Specialist;Medium;3810;x
+4009;Head of Government;拉姆齊·麥克唐納;6;SL;Corporate Suit;Medium;9385;x
+4010;Foreign Minister;亞瑟·亨德森;27;SD;The Cloak N Dagger Schemer;Medium;9333;x
+4011;Minister of Armament;菲利浦·斯諾登;21;SL;Resource Industrialist;Medium;9384;x
+4012;Minister of Security;約翰·羅伯特·克萊因斯;25;SL;Compassionate Gentleman;Medium;9374;x
+4013;Foreign Minister;塞繆爾·霍爾;31;SC;Apologetic Clerk;High;3823;x
+4014;Minister of Security;約翰·吉爾摩爵士 ;25;SL;Compassionate Gentleman;High;8140;x
+4015;Minister of Armament;內維爾·張伯倫;21;SC;Military Entrepreneur;Medium;9382;x
+4016;Foreign Minister;約翰·西蒙爵士;33;SC;The Cloak N Dagger Schemer;High;3809;x
+4017;Minister of Security;赫伯特·塞繆爾爵士;14;ML;Silent Lawyer;Medium;9365;x
+4018;Chief of Staff;弗雷德里克·魯道夫·蘭巴特;20;SC;School of Mass Combat;Medium;9354;x
+4019;Chief of Army;弗雷德里克·魯道夫·蘭巴特;14;ML;Guns and Butter Doctrine;Medium;9354;x
+4020;Chief of Staff;喬治·米爾恩;25;ML;School of Defence;Medium;9358;x
+4021;Chief of Army;喬治·米爾恩;25;ML;Static Defence Doctrine;Medium;9358;x
+4022;Chief of Navy;戴維·貝蒂;17;SC;Decisive Naval Battle Doctrine;Medium;9340;x
+4023;Chief of Navy;查爾斯·馬登;25;ML;Decisive Naval Battle Doctrine;High;9338;x
+4024;Chief of Navy;弗雷德里克·菲爾德;28;ML;Decisive Naval Battle Doctrine;Medium;9353;x

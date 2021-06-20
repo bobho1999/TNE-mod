@@ -1,0 +1,9 @@
+land_unit_type = 1
+# 0 - 早期简编师轻武器加强 
+model          = { cost = 2 buildtime = 60 defensiveness = 2 hardattack = 0 softattack = 2 supplyconsumption = 0.2 upgrade_time_factor = 0.2 upgrade_cost_factor = 0.5 manpower = 1 toughness = 1 }
+# 1 - 基本简编师轻武器加强 
+model          = { cost = 2 buildtime = 60 manpower = 1 defensiveness = 3 hardattack = 0 softattack = 3 supplyconsumption = 0.2 upgrade_time_factor = 0.2 upgrade_cost_factor = 0.5 toughness = 1 }
+# 2 - 改良简编师轻武器加强 
+model          = { cost = 2 buildtime = 60 manpower = 1 defensiveness = 4 hardattack = 0 softattack = 4 supplyconsumption = 0.3 upgrade_time_factor = 0.2 upgrade_cost_factor = 0.5 toughness = 2 }
+# 3 - 先进简编师轻武器加强 
+model          = { cost = 2 buildtime = 60 manpower = 1 defensiveness = 5 hardattack = 0 softattack = 5 supplyconsumption = 0.3 upgrade_time_factor = 0.2 upgrade_cost_factor = 0.5 toughness = 2 }

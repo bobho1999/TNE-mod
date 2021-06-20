@@ -1,0 +1,26 @@
+CXB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+8500;Head of State;马麒 ;24;PA;Resigned Generalissimo;Medium;maqi;x
+8501;Head of Government;马福祥 ;24;PA;Old General;Medium;mafuxiang;x
+8502;Foreign Minister;马麟 ;24;PA;Ideological Crusader;Medium;maqi;x
+8503;Minister of Armament;马鸿逵 ;24;PA;Military Entrepreneur;Medium;mahongkui;x
+8504;Minister of Security;马鸿逵 ;24;PA;Prince of Terror;Medium;mahongkui;x
+8505;Head of Military Intelligence;马鸿逵 ;24;PA;Logistics Specialist;Medium;mahongkui;x
+8506;Chief of Staff;马麒 ;24;PA;School of Mass Combat;Medium;maqi;x
+8507;Chief of Army;马福祥 ;24;PA;Static Defence Doctrine;Medium;mafuxiang;x
+8510;Head of Government;马麟 ;20;PA;Naive Optimist;Medium;unknown;x
+8511;Chief of Army;马麟 ;20;PA;Decisive Battle Doctrine;Medium;unknown;x
+8512;Chief of Navy;北洋军閥;36;PA;Undistinguished Suit;Medium;beifang;x
+8513;Chief of Air Force;英國;36;ML;Undistinguished Suit;Medium;eng;x
+8514;Chief of Navy;南方军閥;36;PA;Undistinguished Suit;Medium;nanfang;x
+8515;Chief of Air Force;美國;36;SL;Undistinguished Suit;Medium;usa;x
+8516;Chief of Navy;國民黨;36;PA;Undistinguished Suit;Medium;kmt;x
+8517;Chief of Air Force;法國;36;SD;Undistinguished Suit;Medium;fra;x
+8518;Chief of Navy;共產黨;36;ST;Undistinguished Suit;Medium;tg;x
+8519;Chief of Air Force;蘇联;36;ST;Undistinguished Suit;Medium;sov;x
+8520;Chief of Navy;大清;36;PA;Undistinguished Suit;Medium;daqing;x
+8521;Chief of Air Force;日本;36;PA;Undistinguished Suit;Medium;jap;x
+8522;Chief of Navy;少數民族;36;PA;Undistinguished Suit;Medium;shaoshu;x
+8523;Chief of Air Force;德國;36;NS;Undistinguished Suit;Medium;ger;x
+8524;Chief of Navy;列强;36;ML;Undistinguished Suit;Medium;lieqiang;x
+8525;Chief of Air Force;本土勢力;36;PA;Undistinguished Suit;Medium;bentu;x

@@ -1,0 +1,480 @@
+#第一次反進剿 1928/2/4
+#第二次反進剿 1928/4/
+#第三次反進剿 1928/5
+#第一次反會剿 1928/7/4
+#第二次反會剿 1928/8/30
+#第三次反會剿 1929/1/14
+
+#############################################
+###### 第一次國共內戰
+#############################################
+event = {
+         id = 123485
+         random = no
+         country = CHI
+         trigger = {
+                                    NOT = { 
+                   
+                   control = { province = 2698 data = CHI }
+                   control = { province = 2692 data = CHI }
+                 }
+         }
+
+ 
+         name = "第一次圍剿失敗"
+         desc = "第一次圍剿經東固、龍崗和東韶三次戰役， 國軍在半個月的時間裡被紅軍殲滅一個師部三個旅， 斃俘1.5萬餘人，迫使蔣介石撤退。"
+         style = 0
+ 
+         date = { day = 3 month = january year = 1931 }
+         offset = 1
+         deathdate = { day = 10 month = january year = 1931 }
+ 
+
+           action_a = {
+                  name = "繼續追擊殘匪!"
+                  ai_chance = 1
+                  command = {type = dissent value = 15  }
+                  }
+           action_b = {
+                  name = "修整部隊"
+                  ai_chance = 99
+                  command = { type = peace which = CHC value = 0 }
+                  command = { type = morale which = land value = -2 }
+                  command = { type = dissent value = 10  }
+           }
+}
+
+event = {
+         id = 123486
+         random = no
+         country = CHC
+
+         trigger = {    
+           event =123485
+         }
+
+ 
+         name = "第一次反圍剿成功"
+         desc = "第一次圍剿紅軍在半個月的時間裡， 經東固、龍崗和東韶三次戰役，殲滅國軍一個師部三個旅， 斃俘1.5萬餘人，繳獲各種槍枝1.2萬多件， 取得了第一次中央蘇區戰役的勝利。"
+         style = 0
+ 
+         date = { day = 5 month = january year = 1931 }
+         offset = 1
+         deathdate = { day = 10 month = january year = 1931 }
+ 
+
+      	action_a = {
+                name = "苏维埃万岁!"
+            	command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -10 }
+                  }
+ }         
+
+event = {
+	id = 123490
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123485 } 
+  
+	name = "第二次剿匪的準備 "
+	desc = "準備剿匪"
+	style = 0
+	
+	date = { day = 25 month = march year = 1931 }
+	offset = 1
+	deathdate = { day = 30 month = may year = 1931 }
+
+	action_a = {
+		name = "準備 "
+		   command = { type = ai_prepare_war which = CHC }
+		}
+          }
+event = {
+	id = 123487
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123485 } 
+  
+	name = "中央军发动对中央苏区第二次围剿 "
+	desc = "第一次江西剿共戰爭時，蔣中正本以為以10餘萬大軍， 剿滅江西數萬紅軍必操勝算，所以他從南昌返回南京後， 公佈《國民會議選舉法》及《政治犯大赦條例》等， 發表《告國民書》，為召開國民會議及選舉總統一事作準備。 未料1931年新年第一天即傳來江西剿共失利的噩秏： 第18師師長張輝瓚兵敗被俘，公秉藩軍長第28師折損大半。 蔣中正一面安撫譚道源、魯滌平等下屬；一面重新調集兵力， 決定另派大員何應欽以湘鄂贛閩四省剿匪司令名義代理總司令職權， 同時兼漢口、南昌兩行營主任，前往江西指揮四省圍剿部隊， 全權負責指揮對中央蘇區的第二次圍剿。 "
+	style = 0
+	
+	date = { day = 0 month = april year = 1931 }
+	offset = 1
+	deathdate = { day = 30 month = may year = 1931 }
+
+	action_a = {
+		name = "剿匪！ "
+		command = { type = war which = CHC }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -15 }
+		command = { type = supplies value = 2000 }
+		}
+          }
+
+event = {
+         id = 123488
+         random = no
+         country = CHI
+         trigger = {
+                      control = { province = 2701 data = CHC } 
+                      control = { province = 1246 data = CHC }
+                      control = { province = 1249 data = CHC }            
+                  NOT = {                    
+                   control = { province = 2698 data = CHI }
+                   control = { province = 2692 data = CHI }
+                 }
+         }
+
+ 
+         name = "第二次圍剿失敗"
+         desc = "國民政府在國軍損失3萬餘人 卻始終沒有達到作戰目的後， 放棄了對紅軍的第二次圍剿。"
+         style = 0
+ 
+         date = { day = 30 month = may year = 1931 }
+         offset = 1
+         deathdate = { day = 10 month = june year = 1931 }
+ 
+
+           action_a = {
+                  name = "繼續追擊殘匪!"
+                  ai_chance = 1
+                  command = {type = dissent value = 15  }
+                  }
+           action_b = {
+                  name = "修整部隊"
+                  ai_chance = 99
+                  command = { type = peace which = CHC value = 0 }
+                  command = { type = dissent value = 10  }
+                  command = { type = morale which = land value = -5 }
+                  command = { type = secedeprovince which = CHC value = 2701 }
+                  command = { type = secedeprovince which = CHC value = 1246 }
+                  command = { type = secedeprovince which = CHC value = 1249 }           }
+}
+
+event = {
+         id = 123489
+         random = no
+         country = CHC
+         trigger = {
+             
+           event =123488
+         }
+
+ 
+         name = "第二次反圍剿成功"
+         desc = "第二次圍剿紅軍僅靠3萬多人便成功抵抗了 20多萬國軍的進攻。此次戰爭的勝利， 使得中國共產黨進一步擴大了中央蘇區的範圍， 其勢力從江西南部伸展入福建西部。。"
+         style = 0
+ 
+         date = { day = 1 month = june year = 1931 }
+         offset = 1
+         deathdate = { day = 10 month = june year = 1931 }
+ 
+
+         action_a = {
+                name = "苏维埃万岁!"
+                command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -10 }
+                  }
+ }         
+
+event = {
+	id = 123491
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123488 } 
+  
+	name = "第三次剿匪的準備 "
+	desc = "準備剿匪"
+	style = 0
+	
+	date = { day = 23 month = june year = 1931 }
+	offset = 1
+	deathdate = { day = 28 month = june year = 1931 }
+
+	action_a = {
+		name = "準備 "
+		   command = { type = ai_prepare_war which = CHC }
+		}
+          }
+
+event = {
+	id = 123492
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123488 } 
+  
+	name = "中央军发动对中央苏区第三次围剿 "
+	desc = "在對中央蘇區進行的第二次圍剿失敗之後， 中華民國國民政府主席蔣中正自任為南昌行營主任， 主持對共產黨中央紅軍的圍剿，並調集大批黃埔軍校畢業， 對蔣忠誠的嫡系部隊，組成兩個集團軍，23個師和3個旅30萬人， 對中央蘇區進行「長驅直入」的圍剿。 "
+	style = 0
+	
+	date = { day = 0 month = july year = 1931 }
+	offset = 1
+	deathdate = { day = 10 month = september year = 1931 }
+
+	action_a = {
+		name = "剿匪！ "
+		command = { type = war which = CHC }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -15 }
+		command = { type = supplies value = 2000 }
+		}
+          }
+
+event = {
+         id = 123493
+         random = no
+         country = CHI
+         trigger = { 
+                  event = 123456            
+                  NOT = {                    
+                   control = { province = 2698 data = CHI }
+                   control = { province = 2692 data = CHI }
+                   control = { province = 2686 data = CHI }
+                   control = { province = 2687 data = CHI }
+                 }
+         }
+
+ 
+         name = "第三次圍剿失敗"
+         desc = "9月18日，九一八事變爆發，蔣介石不得不返回南京，至此，第三次戰役以紅軍的勝利告終。"
+         style = 0
+ 
+         date = { day = 19 month = september year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+
+           action_a = {
+                  name = "繼續追擊殘匪!"
+                  ai_chance = 1
+                  command = {type = dissent value = 15  }
+                  }
+           action_b = {
+                  name = "修整部隊"
+                  ai_chance = 99
+                  command = { type = peace which = CHC value = 0 }
+                  command = {type = dissent value = 10  }
+                  command = { type = morale which = land value = -5 }
+          }
+}
+
+event = {
+         id = 123494
+         random = no
+         country = CHC
+         trigger = {
+                 
+           event =123493
+         }
+
+ 
+         name = "第三次反圍剿成功"
+         desc = "9月18日，九一八事變爆發，蔣介石不得不返回南京，至此，第三次戰役以紅軍的勝利告終。"
+         style = 0
+ 
+         date = { day = 20 month = september year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+
+           action_a = {
+                  name = "苏维埃万岁!"
+                  command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -10 }
+                  }
+ }         
+
+event = {
+	id = 123495
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123493 } 
+  
+	name = "第四次剿匪的準備 "
+	desc = "準備剿匪"
+	style = 0
+	
+	date = { day = 29 month = january year = 1933 }
+	offset = 1
+	deathdate = { day = 1 month = february year = 1933 }
+
+	action_a = {
+		name = "準備 "
+		   command = { type = ai_prepare_war which = CHC }
+		}
+          }
+
+event = {
+	id = 123496
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123495 } 
+  
+	name = "中央军发动对中央苏区第四次围剿 "
+	desc = "九一八事變和一二八事變相繼發生後，國民政府軍事 重點北移應對日本的軍事行動，在江西對紅軍轉入守勢。 1932年5月《淞滬停戰協定》簽約後，國民政府北方軍事壓力減弱， 遂重新開始籌備對紅軍的圍剿。國民革命軍首先 將重點放在對外圍較弱的鄂豫皖蘇區和湘鄂邊蘇區的進剿上， 在成功地將兩地紅軍擊敗後，於1933年2月集中兵力對中央蘇區發動進攻。 "
+	style = 0
+	
+	date = { day = 2 month = february year = 1933 }
+	offset = 1
+	deathdate = { day = 10 month = march year = 1933 }
+
+	action_a = {
+		name = "剿匪！ "
+		command = { type = war which = CHC }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -15 }
+		command = { type = supplies value = 2000 }
+		}
+          }
+
+event = {
+         id = 123497
+         random = no
+         country = CHI
+         trigger = { 
+                  event = 123496            
+                  NOT = {                    
+                   control = { province = 2698 data = CHI }
+                   control = { province = 2692 data = CHI }
+                   control = { province = 2686 data = CHI }
+                   control = { province = 2687 data = CHI }
+                 }
+         }
+
+ 
+         name = "第四次圍剿失敗"
+         desc = "此次戰鬥蔣中正的直屬部隊遭到了慘重損失， 近三個師被全殲，使其痛心異常。但是這次戰爭的 失敗並沒有動搖蔣中正進剿中央蘇區的決心。 不久，他親自指揮了一輪新的攻勢，以持久戰和堡壘主義最終將紅軍主力逐出中央蘇區。"
+         style = 0
+ 
+         date = { day = 29 month = march year = 1933 }
+	offset = 1
+	deathdate = { day = 10 month = april year = 1933 }
+ 
+
+           action_a = {
+                  name = "繼續追擊殘匪!"
+                  ai_chance = 1
+                  command = {type = dissent value = 15  }
+                  }
+           action_b = {
+                  name = "修整部隊"
+                  ai_chance = 99
+                  command = { type = peace which = CHC value = 0 }
+                  command = {type = dissent value = 10  }
+                  command = { type = morale which = land value = -5 }
+          }
+}
+
+event = {
+         id = 123498
+         random = no
+         country = CHC
+         trigger = {
+                 
+           event =123497
+         }
+
+ 
+         name = "第四次反圍剿成功"
+         desc = "9月18日，九一八事變爆發，蔣介石不得不返回南京，至此，第三次戰役以紅軍的勝利告終。"
+         style = 0
+ 
+        date = { day = 30 month = march year = 1933 }
+	offset = 1
+	deathdate = { day = 10 month = april year = 1933 }
+ 
+
+           action_a = {
+                  name = "苏维埃万岁!"
+                  command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -10 }
+                  }
+ }
+
+event = {
+	id = 123499
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123497 } 
+  
+	name = "第五次剿匪的準備 "
+	desc = "第四次圍剿於1933年春失敗後，經過短暫休整，蔣中正調集50萬大軍開始準備第五次圍剿。"
+	style = 0
+	
+	date = { day = 18 month = december year = 1933 }
+	offset = 1
+	deathdate = { day = 22 month = december year = 1933 }
+
+	action_a = {
+		name = "準備 "
+		   command = { type = ai_prepare_war which = CHC }
+		}
+          }
+
+event = {
+	id = 123500
+	random = no
+	country = CHI
+	
+  trigger = { exists = CHC
+              event = 123499 } 
+  
+	name = "中央军发动对中央苏区第五次围剿 "
+	desc = "1933年5月，蔣中正在南昌設立全權處理贛、粵、閩、 湘、鄂五省軍政事宜的軍事委員會委員長南昌行營， 親自組織和指揮對各蘇區進行更大規模的第五次圍剿併兼任剿匪軍總司令。 在調集各路地方軍隊以後，蔣介石採用了軍事顧問 漢斯·馮·塞克特上將和亞歷山大·馮·法肯豪森上將的建議， 決定採取持久戰和堡壘主義的新戰略， 同時對蘇區實行經濟、交通封鎖，企圖逐步壓縮並摧毀蘇區。 "
+	style = 0
+	
+	date = { day = 24 month = december year = 1933 }
+	offset = 1
+	deathdate = { day = 10 month = january year = 1934 }
+
+	action_a = {
+		name = "剿匪！ "
+		command = { type = war which = CHC }
+		command = { type = morale which = land value = 5 }
+		command = { type = dissent value = -15 }
+		command = { type = supplies value = 2000 }
+		}
+          }
+   
+
+event = {
+	id = 123599
+	random = no
+	country = CHI
+	persistent = yes
+  
+	name = "中央军发动对中央苏区第五次围剿 "
+	desc = "1933年5月，蔣中正在南昌設立全權處理贛、粵、閩、 湘、鄂五省軍政事宜的軍事委員會委員長南昌行營， 親自組織和指揮對各蘇區進行更大規模的第五次圍剿併兼任剿匪軍總司令。 在調集各路地方軍隊以後，蔣介石採用了軍事顧問 漢斯·馮·塞克特上將和亞歷山大·馮·法肯豪森上將的建議， 決定採取持久戰和堡壘主義的新戰略， 同時對蘇區實行經濟、交通封鎖，企圖逐步壓縮並摧毀蘇區。 "
+	style = 0
+	
+
+	action_a = {
+		name = "剿匪！ "
+		command = { type = secedeprovince which = chc value = 1246 }
+		command = { type = secedeprovince which = chc value = 2686 }
+		command = { type = secedeprovince which = chc value = 2692 }
+		command = { type = secedeprovince which = chc value = 2698 }
+		command = { type = secedeprovince which = chc value = 2699 }
+		command = { type = secedeprovince which = chc value = 2700 }
+		command = { type = secedeprovince which = chc value = 2701 }
+		}
+          }   

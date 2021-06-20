@@ -1,0 +1,143 @@
+land_unit_type = 1
+# 0 - 1900型轻型炮兵团 
+model =
+{ cost                  = 3
+  buildtime             = 50
+  manpower              = 2
+  defensiveness         = 2
+  maxspeed              = -1
+  softattack            = 2
+  hardattack            = 0
+  artillery_bombardment = 3
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  surfacedefence        = 3
+  toughness             = 4
+}
+# 1 - 1910型轻型炮兵团  
+model =
+{ cost                  = 4
+  buildtime             = 60
+  manpower              = 2
+  defensiveness         = 2
+  maxspeed              = -1
+  softattack            = 4
+  hardattack            = 0
+  artillery_bombardment = 4
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10 
+  surfacedefence        = 5
+  toughness             = 8
+}
+# 2 - 1914型轻型炮兵团  
+model =
+{ cost                  = 4
+  buildtime             = 60
+  manpower              = 2
+  defensiveness         = 2
+  maxspeed              = -1
+  softattack            = 6
+  hardattack            = 0
+  artillery_bombardment = 7
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  surfacedefence        = 3
+  toughness             = 8
+}
+# 3 - 1918型轻型炮兵团 
+model =
+{ cost                  = 4
+  buildtime             = 60
+  manpower              = 2
+  defensiveness         = 3
+  maxspeed              = -1
+  softattack            = 8
+  hardattack            = 0
+  artillery_bombardment = 4
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  surfacedefence        = 8
+  toughness             = 10
+}
+# 4 - 1925型轻型炮兵团 
+model =
+{ cost                  = 4.2
+  buildtime             = 70
+  manpower              = 2
+  defensiveness         = 4
+  maxspeed              = -1
+  softattack            = 10
+  hardattack            = 1
+  artillery_bombardment = 6
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  surfacedefence        = 6
+  toughness             = 16
+}
+# 5 - 1927型轻型炮兵团  
+model =
+{ cost                  = 4.2
+  buildtime             = 70
+  manpower              = 2
+  defensiveness         = 4
+  maxspeed              = -1
+  softattack            = 12
+  hardattack            = 1
+  artillery_bombardment = 7
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 18
+}
+# 6 - 1930型轻型炮兵团  
+model =
+{ cost                  = 4.5
+  buildtime             = 80
+  manpower              = 2
+  defensiveness         = 5
+  maxspeed              = -1
+  softattack            = 14
+  hardattack            = 2
+  artillery_bombardment = 8
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 20
+  surfacedefence        = 3
+}
+# 7 - 1935型轻型炮兵团  
+model =
+{ cost                  = 4.5
+  buildtime             = 80
+  manpower              = 2
+  defensiveness         = 5
+  maxspeed              = -1
+  softattack            = 16
+  hardattack            = 2
+  artillery_bombardment = 10
+  supplyconsumption     = 0.8
+  upgrade_time_factor   = 0.8
+  upgrade_cost_factor   = 1.5
+  defaultorganisation   = 5
+  morale                = 10
+  toughness             = 25
+}

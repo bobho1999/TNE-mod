@@ -1,0 +1,918 @@
+##############################################
+## 1927年事件   有构想但未制作的...我承认有点多
+##############################################
+#康有为去世（除了普及历史也就没什么用了）
+#唐继尧去世（我手头上这版小黑人泛滥。。。老唐ID多少啊。。。）
+#宋庆龄宣布脱离武汉国民政府（国母是minister么）
+#李大钊就义
+
+#南京事件过程复杂，又有争议，所以写得很简略
+
+#我发现27年的事件难搞多了，主要是政治斗争不好在游戏里表现出来
+
+#这年CHC终于戏份多了。。。
+###################
+#国民政府事件
+###################
+##########################
+#1927年       300000~
+##########################
+event = {
+	id = 1927001
+	random = no
+	country = u13
+
+	name = "中国收回上海公共租界会审公廨 "
+	desc = "１９２６年７月，北京掀起了全国性的要求关税自主的反帝爱国 运动。８月，双方正式签定有效期三年的《收回上海会审公廨暂 行章程》，规定设立上海临时法庭来代替会审公廨，租界内领事 管辖权之外的一切民刑案件均由该临时法庭审讯，期满后双方再 交涉提出最终解决办法。１９２７年１月１日，中国正式收回上 海公共租界会审公廨，设立临时法院。 "
+	style = 0
+	picture = "zujie"
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 2
+	deathdate = { day = 1 month = january year = 1930}
+
+	action_a =  {
+		name = "斗争的胜利！ "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		}
+}
+
+event = {
+	id = 1927002
+	random = no
+	country = CHI
+
+	trigger = { control = { province = 1232 data = chi } 
+	            control = { province = 1252 data = chi } }
+
+	name = "中国收回汉口英租界、九江英租界 "
+	desc = "１月３日，汉口游行群众与英国水兵发生冲突，拥入英租界，随 后国民政府接管该租界。１月６日，九江发生中外冲突，九江英 租界被国民政府接管。 "
+	style = 0
+	picture = "zujie"
+
+	date = { day = 3 month = january year = 1927 }
+        offset = 2
+	deathdate = { day = 1 month = january year = 1930 }
+	action_a = {
+		name = "斗争的胜利！ "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		}
+}
+
+event = {
+	id = 1927003
+	random = no
+	country = CHC
+
+	trigger = {
+	#	event = 1926019
+		or = { war = { country = CHC country = U06 }
+		       war = { country = CHC country = U02 } }
+		or = { control = { province = 1237 data = U06 }
+                       control = { province = 1237 data = U02 } }
+	}
+
+	name = "上海工人第二次起义 "
+	desc = "第二次起义发动于１９２７年２月２２日。１８日，北伐军占领 杭州，先头部队到达嘉兴。１９日，上海总工会发布总同盟罢工 令，至２２日，罢工人数达３６万多人。上海防守司令李宝章勾 结公共租界工部局帝国主义势力，对罢工工人进行残酷镇压。至 ２２日下午６时，总同盟罢工发展为第二次武装起义。由于计划 被泄，各区工人纠察队失去统一指挥，加上北伐军在上海郊区停 止前进，钮永建的便衣队按兵不动，致使工人陷于孤立，起义再次 失败。 "
+	style = 0
+	picture = "gongrenqiyi"
+
+	date = { day = 1 month = february year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "发动起义 "
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 1927004 }
+		}
+	action_b = {
+		name = "我们还没准备好 "
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 1927004 }
+		}
+}
+
+event = {
+	id = 1927004
+	random = no
+	country = U02
+
+	name = "上海工人第二次起义 "
+	desc = "第二次起义发动于１９２７年２月２２日。１８日，北伐军占领 杭州，先头部队到达嘉兴。１９日，上海总工会发布总同盟罢工 令，至２２日，罢工人数达３６万多人。上海防守司令李宝章勾 结公共租界工部局帝国主义势力，对罢工工人进行残酷镇压。至 ２２日下午６时，总同盟罢工发展为第二次武装起义。由于计划 被泄，各区工人纠察队失去统一指挥，加上北伐军在上海郊区停 止前进，钮永建的便衣队按兵不动，致使工人陷于孤立，起义再次 失败。 "
+	style = 0
+	picture = "gongrenqiyi"
+
+	action_a = {
+		name = "镇压 "
+		command = { type = dissent value = 2 }
+		command = { type = province_revoltrisk which = 1237 value = 100 }
+		}
+}
+
+event = {
+	id = 1927005
+	random = no
+	country = CHI
+
+	trigger = { event = 1926001 }
+
+	name = "中国国民党二届三中全会 "
+	desc = "１９２７年３月１０日至１７日在汉口南洋大楼召开。会议通过了 一系列决议案，重申了孙中山的三大革命政策和坚持国共合作的革 命原则。会议缺席选举汪精卫为中国国民党中央常务委员会主席、中央 党部组织部长，并决议不设中央军事委员会主席，改为７人集体 领导。 "
+	style = 0
+	picture = "dahui"
+
+	date = { day = 1 month = march year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = march year = 1927 }
+
+	action_a = {
+		name = "好的 "
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = relation which = CHC value = 10 }
+		}
+}
+
+event = {
+	id = 1927006
+	random = no
+	country = CHC
+
+	trigger = {
+		event = 1927004
+		war = { country = CHC country = U02 }
+		OR = {
+			control = { province = 2625 data = -3 }
+			control = { province = 1236 data = -3 }
+			control = { province = 2631 data = -3 }
+		}
+	}
+
+	name = "上海工人第三次起义 "
+	desc = "3月中旬，北伐军向苏州、常州和松江进军,对上海形成包围圈。 21日，北伐军薛岳第一师进入上海近郊龙华，严重率第二十一师占领苏州， 上海守军军心动摇，工人和民众革命情绪高涨，中共上海区委决定发动 第三次上海工人武装起义。由中央军委书记兼特别军委书记周恩来担任总指挥 "
+	style = 0
+	picture = "gongrenqiyi"
+
+	date = { day = 1 month = march year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "起义成功 "
+		command = { type = dissent value = -2 }
+		command = { type = province_revoltrisk which = 1237 value = -100 }
+		command = { type = trigger which = 1927020 }		}
+}
+
+event = {
+	id = 1927020
+	random = no
+	country = U02       
+
+  name = "上海工人第三次起义 "
+	desc = "3月21日中午12时，上海总工会发布总同盟罢工令，全市80万工人实现了总罢工并立即转入武装起义， 租界里的中国工人也集合到华界参加起义。随即工人纠察队分别从南市、虹口、浦东、吴淞、 沪西、沪东、闸北等七个区向反动军警据点发动猛攻，市民群众也主动帮助纠察队筑街垒、 运弹药、送食品。工人武装经过30个小时的浴血奋战，于22日6时许攻克了敌人的全部据点， 占领了上海，取得第三次工人武装起义的胜利。"
+	style = 0
+	
+	action_a = {
+		name = "撤退 " 
+		command = { type = dissent value = 2 }
+		command = { type = secedeprovince which = chc value = 1237 }
+    		command = { type =  remove_division which = 22320 value = 81 } 
+		command = { type = trigger which = 1927021 }
+ }
+ }
+
+event = {
+	id = 1927021
+	random = no
+	country = CHC
+
+	name = "工人武裝 "
+	desc = "起义胜利后，上海各界代表举行市民代表会议，成立上海市民政府。 在19名委员中有共产党员汪寿华、罗亦农等9人。 上海工人三次武装起义的胜利，打击了帝国主义和军阀的反动统治， 显示了中国工人阶级的顽强战斗精神和强大的组织力量。"
+	style = 0
+	picture = "gongrenqiyi"
+
+	action_a = {
+		name = "我们自己的武装！ "
+                command = { type = add_corps which = "工人纠察队 " value = land where = 1237 }
+		command = { type = add_division which = "工人纠察队" value = militia when = 1  where = police } }
+
+}
+
+event = {
+	id = 1927007
+	random = no
+	country = CHC
+
+	trigger = {  }
+
+	name = "湖南农民运动考察报告 "
+	desc = "随着北伐战争的胜利进军，由广东开始的农民运动迅速发展到全 国。１９２７年１月４日至２月５日，毛泽东考察了湖南湘潭、 湘乡、衡山、醴陵、长沙等五个县的农民运动，写成了《湖南农 民运动考察报告》，提出了解决中国民主革命的中心问题——农 民问题的理论和政策。 "
+	style = 0
+	picture = "hunan"
+
+	date = { day = 5 month = march year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = september year = 1927 }
+
+
+	action_a = {
+		name = "农民问题是中国的根本问题 "
+		command = { type = dissent value = -1 }
+		}
+}
+
+##############################################
+#1927025~ 廣州張黃事變
+##############################################
+event = {
+	id = 1927025
+	random = no
+	country = U20
+
+	trigger = { 
+		event = 500000
+		OR = {
+			event = 9999911
+			event = 9999967
+		}
+  	}
+        
+  	name = "廣州張黃事變"
+	desc = "1927年11月17日凌晨，國民政府和中國國民黨內部派系之一的張發奎、黃琪翔等人在廣州發動政變，改組國民黨廣東省黨部，廣東省政府 "
+	style = 0
+	
+	date = { day = 16 month = november year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+	
+	action_a = {
+		name = "發動 " 
+	command = { type = dissent value = 5 }
+ 	command = { type = headofstate which = 145015 } #
+ 	command = { type = headofgovernment which = 145014 } #     
+ 	command = { type = foreignminister which = 16094 } #      
+ 	command = { type = ministerofsecurity which = 16104 } #   
+ 	command = { type = chiefofstaff which = 145020 } #
+ 	command = { type = chiefofarmy which = 145021 } #
+ 	command = { type = ministerofintelligence which = 16108 }
+       	command = { type = armamentminister which = 145017 }
+       	command = { type = add_corps which = "國民革命軍第4軍 " value = land where = 1313 }
+	command = { type = add_division which = "第12師" value = infantry when = 15 }
+       	command = { type = add_corps which = "國民革命軍第11軍 " value = land where = 1313 }
+	command = { type = add_division which = "第26師" value = infantry when = 15 }
+		command = { type = trigger which = 1927026 }
+      }
+}
+
+event = {
+	id = 1927026
+	random = no
+	country = CHI
+        
+  name = "廣州張黃事變"
+	desc = "1927年11月17日凌晨，國民政府和中國國民黨內部派系之一的張發奎、黃琪翔等人在廣州發動政變，改組國民黨廣東省黨部，廣東省政府 "
+	style = 0
+	
+	action_a = {
+		name = "發動 " 
+	command = { type = dissent value = 5 }
+    command = { type = giveleader which = 12085 where = U20 }
+    command = { type = giveleader which = 12089 where = U20 }
+     	command = { type = remove_division which = "第12師" value = CHI } 
+     	command = { type = remove_division which = "第26師" value = CHI }
+      }
+}
+
+event = {
+	id = 1927027
+	random = no
+	country = CGX
+
+	trigger = { event = 9999951
+		event = 1927025
+		event = 500028 }
+
+	name = "調動部隊 "
+	desc = "12月中旬新桂系調動部隊，連同李濟深之粵軍，圍攻張發奎。 桂軍從廣西大舉東進，粵軍則自潮汕地區西進，新桂系另有一部自上海海運汕頭助攻。 張黃軍下屬之第四軍繆培南，薛岳師，黃鎮球師首先東進進攻東江地區的陳銘樞，陳濟棠粵軍， 將二陳的部隊擊退。隨後主力回師進攻東進的黃旭初桂軍。 "
+	style = 0
+
+	date = { day = 15 month = december year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "平定事變 "
+		command = { type = trigger which = 1927028 }    
+         	command = { type = leave_alliance }              
+		}
+}
+event = {
+	id = 1927028
+	random = no
+	country = CGX
+
+
+	name = "反攻廣東 "
+	desc = "12月中旬新桂系調動部隊，連同李濟深之粵軍，圍攻張發奎。 桂軍從廣西大舉東進，粵軍則自潮汕地區西進，新桂系另有一部自上海海運汕頭助攻。 張黃軍下屬之第四軍繆培南，薛岳師，黃鎮球師首先東進進攻東江地區的陳銘樞，陳濟棠粵軍， 將二陳的部隊擊退。隨後主力回師進攻東進的黃旭初桂軍。 "
+	style = 0
+
+	action_a = {
+		name = "平定事變 "
+
+		command = { type = trigger which = 1927029 }
+                command = { type = war which = u20 }    
+         	command = { type = leave_alliance }              
+		}
+}
+
+event = {
+	id = 1927029
+	random = no
+	country = U20
+
+
+	name = "反攻廣東 "
+	desc = "12月中旬新桂系調動部隊，連同李濟深之粵軍，圍攻張發奎。 桂軍從廣西大舉東進，粵軍則自潮汕地區西進，新桂系另有一部自上海海運汕頭助攻。 張黃軍下屬之第四軍繆培南，薛岳師，黃鎮球師首先東進進攻東江地區的陳銘樞，陳濟棠粵軍， 將二陳的部隊擊退。隨後主力回師進攻東進的黃旭初桂軍。 "
+	style = 0
+
+	action_a = {
+		name = "抵禦 "   
+                command = { type = control which = CGX value = 1248 } 
+                command = { type = control which = CGX value = 1249 } 
+                command = { type = control which = CGX value = 2709 } 
+                command = { type = control which = CGX value = 2710 }          
+		}
+}
+
+event = {
+	id = 1927030
+	random = no
+	country = U20      
+    trigger = { event = 1927029  
+             or = { 
+                control = { province = 1313 data = -2 } 
+                lost_national = { country = U20 value = 40 } }
+ }    
+
+  	name = "張發奎下野 "
+	desc = "雙方激戰數日，張黃部隊軍心不穩，又無後援。李福林部和 廣東海軍又倒戈，已經無力再戰。繆培南率部退往粵北，後被蔣介石收編。 張發奎通電下野。"
+	style = 0
+	date = { day = 15 month = december year = 1927 }
+	offset = 2
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "通電 "
+	 	command = { type = peace which = CGX value = 0 } 
+	 	command = { type = access which = CGX }    
+		command = { type = trigger which = 1927031 } 
+		command = { type = sleepleader which = 12085 }
+		command = { type = sleepleader which = 12089 }
+     	command = { type = remove_division which = -1 }
+     	command = { type = remove_division which = -1 }
+     	command = { type = remove_division which = -1 }
+ }
+ }
+
+event = {
+	id = 1927031
+	random = no
+	country = CGX      
+
+  	name = "張發奎下野 "
+	desc = "雙方激戰數日，張黃部隊軍心不穩，又無後援。李福林部和 廣東海軍又倒戈，已經無力再戰。繆培南率部退往粵北，後被蔣介石收編。 張發奎通電下野。 "
+	style = 0
+	
+	action_a = {
+		name = "通電 "
+	 	command = { type = make_puppet which = U20 } 
+		command = { type = trigger which = 1927032 value = 1 }   
+ 
+ }
+ }
+event = {
+	id = 1927032
+	random = no
+	country = CGX          
+
+  	name = "李濟深返粵"
+	desc = "張發奎下野之後，新桂系之政治盟友李濟深重回廣州。 "
+	style = 0
+	
+	
+	action_a = {
+		name = "重回廣州 " 
+#     	command = { type = independence which = u20 value = 1 }
+#  	command = { type = make_puppet which = u20 }
+        command = { type = alliance which = CHI }
+	command = { type = trigger which = 1927033 }
+      }
+}
+event = {
+	id = 1927033
+	random = no
+	country = U20
+        
+  	name = "李濟深返粵"
+	desc = "張發奎下野之後，新桂系之政治盟友李濟深重回廣州。 "
+	style = 0
+	
+	action_a = {
+		name = "重回廣州 " 
+        command = { type = capital which = 1313 }
+        command = { type = alliance which = CGX }
+		command = { type = headofstate which = 145013 } #
+     
+		command = { type = headofgovernment which = 145002} #     
+		command = { type = foreignminister which = 145012 } #      
+		command = { type = ministerofsecurity which =145005} #   
+		command = { type = chiefofstaff which = 145007 } #
+		command = { type = chiefofarmy which = 145008 } #
+        command = { type = chiefofnavy which = 16028 }
+        command = { type = chiefofair which = 16069 }
+		command = { type = ministerofintelligence which = 145006 }
+        command = { type = armamentminister which = 145004 } 
+		command = { type = change_idea which = policy_political_dignitary value = U20 }
+		command = { type = change_idea which = policy_social_confucianism value = U20 }
+		command = { type = change_idea which = policy_economy_natural-Capitalism value = U20 }
+      }
+}
+
+#################################
+event = {
+	id = 1927034
+	random = no
+	country = CHI
+        
+  	name = "蔣宋大婚"
+	desc = "。 "
+	style = 0
+	date = { day = 30 month = november year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1935 }
+	action_a = {
+		name = "OK " 
+        	command = { type = money which = 500 }
+        	command = { type = dissent which = -1 }
+      }
+}
+
+##############################################
+#1927035~ 搜查蘇俄大使館
+##############################################
+event = {
+	id = 1927035
+	random = no
+	country = U02
+
+	trigger = {
+		war = { country = CHC country = U02 }
+    		}
+    
+  	name = "搜查蘇俄大使館 "		
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = april year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "尋求西方國家支持 "
+		ai_chance = 100
+    		command = { type = trigger which = 1927036 }
+    		command = { type = trigger which = 1927037 }
+    		command = { type = trigger which = 1927038 }
+		}
+	action_b = {
+		name = " "
+		ai_chance = 0
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 1927036
+	random = no
+	country = ENG
+
+	name = "查封蘇俄大使館? "
+	desc = " "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "授權 " 
+		ai_chance = 99
+		command = { type = relation which = U02 value = 10 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = westerndisagree }
+		}
+}
+
+event = {
+	id = 1927037
+	random = no
+	country = FRA
+
+	name = "查封蘇俄大使館? "
+	desc = " "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "授權 " 
+		ai_chance = 99
+		command = { type = relation which = U02 value = 10 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = westerndisagree }
+		}
+}
+
+event = {
+	id = 1927038
+	random = no
+	country = USA
+
+	name = "查封蘇俄大使館? "
+	desc = " "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "授權 " 
+		ai_chance = 99
+		command = { type = relation which = U02 value = 10 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = westerndisagree }
+		}
+}
+
+event = {
+	id = 1927039
+	random = no
+	country = U02
+
+	trigger = {
+		event = 1927035 
+		NOT = { flag = westerndisagree }
+#		atwar = no
+    		}
+    
+  	name = "查封蘇俄大使館 "		
+	desc = "張作霖在北京搜查蘇聯使館，逮捕藏 身其中的李大釗等數十名國共兩黨人士， 並獲取大量蘇聯計劃顛覆中國國民政府的資料。 "
+	style = 0
+
+	date = { day = 5 month = april year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "行動!! "
+		ai_chance = 100
+		command = { type = relation which = SOV value = -100 }
+    		command = { type = trigger which = 1927040 }
+    		command = { type = trigger which = 1927041 }	 
+		}
+}
+
+event = {
+	id = 1927040
+	random = no
+	country = CHC
+
+    
+  	name = "李大釗就義 "		
+	desc = " "
+	style = 0
+	
+	action_a = {
+		name = "轉入地下 "
+		ai_chance = 100
+#  		command = { type = trigger which = 700097 }
+		command = { type = sleepminister which = 1004 } #
+	 
+		}
+}
+
+event = {
+	id = 1927041
+	random = no
+	country = SOV
+    
+  	name = "駐華大使館遭查封 "		
+	desc = "張作霖在北京搜查蘇聯使館，逮捕藏 身其中的李大釗等數十名國共兩黨人士， 並獲取大量蘇聯計劃顛覆中國國民政府的資料。 "
+	style = 0
+
+	
+	action_a = {
+		name = "終止兩國外交關係 "
+		ai_chance = 100
+		command = { type = relation which = U02 value = -100 }
+#    	command = { type = trigger which = 700097 }	 
+		}
+}
+###################
+#奉系事件
+###################
+##########################
+#1927年       301200~
+##########################
+event = {
+	id = 300100
+	random = no
+	country = U02       
+    	trigger = { ai = yes
+#		NOT = { ai = chi }
+		or = {	control = { province = 2846 data = -2 } 
+			control = { province = 1876 data = -2 }			 
+			control = { province = 1227 data = -2 }	
+			control = { province = 1223 data = -2 }
+			control = { province = 1228 data = -2 }		 
+			control = { province = 2842 data = -2 } 
+		}
+ 
+	}    
+
+	name = "退回黃河以北 "
+	desc = " "
+	style = 0
+	date = { day = 1 month = january year = 1927 }
+	offset = 2
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "撤退 " 
+#		command = { type = morale which = land value = -3 }
+#		command = { type = max_organization which = land value = -1 }
+		command = { type = sleepevent which = 300101 }
+		command = { type = construct which = land_fort where = 2838 value = 10 }
+		command = { type = construct which = land_fort where = 2839 value = 10 }
+		command = { type = construct which = land_fort where = 1211 value = 10 }
+		command = { type = construct which = land_fort where = 1210 value = 10 }
+		
+        	command = { type = add_corps value = land where = 2838 }
+        	command = { type = activate_division which = 22320 value = 83 when = 1 where = 2838 }
+		command = { type = add_division value = infantry when = 7  }
+		command = { type = disorg_division which = 22320 value = 83 where = -1000 }
+		
+		command = { type = add_corps value = land where = 2839 }
+       	 	command = { type = activate_division which = 22320 value = 87 when = 1 where = 2839 }
+		command = { type = add_division value = infantry when = 7  }
+		command = { type = disorg_division which = 22320 value = 87 where = -1000 }
+		
+        	command = { type = add_corps value = land where = 1211 }
+        	command = { type = activate_division which = 22320 value = 84 when = 1 where = 1211 }
+		command = { type = disorg_division which = 22320 value = 84 where = -1000 }
+ }
+ }
+
+
+event = {
+	id = 300102
+	random = no
+	country = U02       
+    	trigger = { 
+#		NOT = { ai = chi }
+		ai = yes
+		event = 300100
+	}    
+
+	name = "AI_EVENT"
+
+	style = 0
+	date = { day = 20 month = april year = 1926 }
+	offset = 3
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "OK " 
+
+            	command = { type = add_corps value = land where = 1210 }
+            	command = { type = activate_division which = 22320 value = 85 when = 1 where = 1210 }
+		command = { type = disorg_division which = 22320 value = 85 where = -100 }
+				
+            	command = { type = add_corps value = land where = 1211 }
+            	command = { type = activate_division which = 22320 value = 84 when = 1 where = 1211 }
+		command = { type = disorg_division which = 22320 value = 84 where = -100 }
+				
+            	command = { type = add_corps value = land where = 1216 }
+            	command = { type = activate_division which = 22320 value = 86 when = 1 where = 1216 }
+		command = { type = disorg_division which = 22320 value = 86 where = -100 }
+ 	}
+ }
+ 
+ event = {
+	id = 300103
+	random = no
+	country = U02       
+    trigger = { NOT = { ai = chi }
+			ai = yes
+			event = 260004
+		}    
+
+	name = "AI_EVENT"
+
+	style = 0
+	date = { day = 20 month = april year = 1926 }
+	offset = 2
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "OK " 
+		command = { type = construct which = land_fort where = 2838 value = -2 }
+              	command = { type = add_corps value = land where = 1398 }
+                command = { type = activate_division which = 22320 value = 88 when = 1 where = 1398 }
+		command = { type = disorg_division which = 22320 value = 88 where = -1000 }
+		command = { type = construct which = land_fort where = 1398 value = 6 }
+				
+              	command = { type = add_corps value = land where = 2941 }
+                command = { type = activate_division which = 22320 value = 89 when = 1 where = 2941 }
+		command = { type = disorg_division which = 22320 value = 89 where = -1000 }
+		command = { type = construct which = land_fort where = 2941 value = 6 }
+				
+              	command = { type = add_corps value = land where = 2943 }
+                command = { type = activate_division which = 22320 value = 90 when = 1 where = 2943 }
+		command = { type = disorg_division which = 22320 value = 90 where = -1000 }
+		command = { type = construct which = land_fort where = 2943 value = 8 }
+				
+		command = { type = add_corps value = land where = 2871 }
+		command = { type = add_division value = infantry when = 6  }
+		command = { type = add_division value = infantry when = 6  }
+		command = { type = add_division value = infantry when = 6  }
+				}
+ }
+ 
+###################
+#滇系事件
+###################
+##########################
+#1927年       301200~
+##########################
+event = {
+  id = 301200
+  random = no
+  country = cyn
+  trigger = {  headofstate = 5000 }
+  
+  name = "二六政變 "
+  desc = "1927年2月6日，其部下龍雲、胡若愚、張汝驥、李選廷四鎮守使發動兵諫，唐被迫交出雲南政權。同年5月23日病逝於於昆明（有說唐被處死），終年四十五歲。史稱"二六政變" "
+  style = o
+  date = { day = 5 month = february year = 1927 }
+  offset = 1
+  deathdate = { day = 2 month = april year =1928 }
+  
+  action_a = {
+    name = " 一路好走"
+       command = { type = headofstate which = 5010 }
+        command = { type = sleepminister which = 5000 }
+        command = { type = sleepminister which = 5002 }
+        command = { type = sleepminister which = 5007 }
+        command = { type = sleepleader which = 92001 }}
+  }
+event = {
+	id = 301201
+	random = no
+	country = CYN
+trigger = { 	control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+				event = 200012 }
+ 
+	name = "雲南易幟 "
+	desc = "1927年7月1日，雲南宣布擁護國民政府。"
+	style = 0
+
+	date = { day = 1 month = july year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "通電擁護北伐軍 "
+         command = { type = non_aggression which = chi where = U01 }
+         command = { type = relation which = chi value = 10 }
+		command = { type = add_corps which = "國民革命軍第38軍 " value = land when = 92000 where = 1307 }
+		command = { type = activate_division which = 15053 value = 10 when = 1 where = 1307 }
+		command = { type = activate_division which = 15053 value = 11 when = 1 where = 1307 }
+		command = { type = activate_division which = 15053 value = 12 when = 1 where = 1307 }
+		command = { type = add_corps which = "國民革命軍第39軍 " value = land when = 92003 where = 1307 }
+		command = { type = activate_division which = 15053 value = 13 when = 1 where = 1307 }
+		command = { type = activate_division which = 15053 value = 14 when = 1 where = 1307 }
+		command = { type = add_corps which = "國民革命軍獨立第8師 " value = land when = 92011 where = 1307 }
+		command = { type = activate_division which = 15053 value = 15 when = 1 where = 1307 }
+		command = { type =  remove_division which = 15053 value = 1 }
+		command = { type =  remove_division which = 15053 value = 2 } 
+		command = { type =  remove_division which = 15053 value = 3 }
+		command = { type =  remove_division which = 15053 value = 4 }
+		command = { type =  remove_division which = 15053 value = 5 }
+		command = { type =  remove_division which = 15053 value = 6 }
+		command = { type =  remove_division which = 15053 value = 7 }
+		command = { type =  remove_division which = 15053 value = 8 }
+		command = { type =  remove_division which = 15053 value = 9 }
+
+ 
+}
+}    
+###################
+#日本事件
+###################
+##########################
+#1927年       330000~
+##########################
+
+event = {	
+	id = 330000	
+	random = no	
+	country = JAP       
+
+#	trigger = { incabinet = 3001 }
+ 
+	name = "EVT_102_NAME"	
+	desc = "EVT_102_DESC"	
+	style = 0
+	
+	date = { day = 19 month = april year = 1927 }	
+	offset = 1	
+	deathdate = { day = 4 month = march year = 1926 }
+	
+	action_a = {		
+		name = "內閣改組 "      
+      		command = { type = headofgovernment which = 3012 } #田中義一
+      		command = { type = foreignminister which = 3015 } #田中義一
+      		command = { type = armamentminister which = 3023 } #高橋是清
+      		command = { type = ministerofsecurity which = 3016 } #田中義一
+            	command = { type = chiefofarmy which = 3017 } #白川義則 
+      		command = { type = chiefofnavy which = 3020 } #岡田啟介
+		}
+	
+}
+event = {	
+	id = 330001	
+	random = no	
+	country = JAP       
+
+#	trigger = { incabinet = 3001 }
+  
+	name = "EVT_120_NAME"	
+	desc = "EVT_120_DESC"	
+	style = 0
+	
+	date = { day = 1 month = june year = 1927 }	
+	offset = 1	
+	deathdate = { day = 4 month = june year = 1927 }
+	
+	action_a = {		
+		name = "ok "      
+      	command = { type = armamentminister which = 3024 } #三土忠造  
+		}
+	
+}
+###################
+#蘇聯事件
+###################
+##########################
+#1927年       340000~
+##########################
+event = {	
+	id = 340000	
+	random = no	
+	country = SOV       
+
+	trigger = {  }
+  
+	name = "革除托洛茨基"	
+	desc = " "	
+	style = 0
+	
+	date = { day = 11 month = november year = 1927 }	
+	offset = 1	
+	deathdate = { day = 4 month = december year = 1930 }
+	
+	action_a = {		
+		name = "ok "      
+      	command = {  } #  
+		}
+	
+}

@@ -1,0 +1,899 @@
+#########################################
+#secret_weapon
+#########################################
+event = {
+	id = 8000
+	random = no
+	invention = yes
+
+	trigger = { technology = 1010
+		            incabinet = 16059
+	       NOT = {
+		     is_tech_active = 1020
+                     is_tech_active = 1100
+		}
+	}
+
+	name = "军队编制技术的突破 "
+	desc = "随着 "
+	picture = "scientist"
+	style = 0
+        date = { day = 1 month = january year = 1925 }
+	offset = 2
+	deathdate = { day = 1 month = january year = 1934}
+
+	action_a = {
+		name = "ACTIONNAME3201A" # OK
+		command = { type = activate which = 1020 }
+}
+}
+event = {
+	id = 8001
+	random = no
+	invention = yes
+
+	trigger = { technology = 1010
+		   incabinet = 16039
+NOT = {
+        is_tech_active = 1100
+	is_tech_active = 1020 }
+	}
+
+	name = "军队编制技术的突破"
+	desc = "EVT_8000_DESC"
+	picture = "scientist"
+	style = 0
+        date = { day = 1 month = january year = 1925 }
+	offset = 2
+	deathdate = { day = 1 month = january year = 1934}
+
+
+	action_a = {
+		name = "ACTIONNAME3201A" # OK
+		command = { type = activate which = 1100 }
+}
+}
+
+event = {
+	id = 8002
+	random = no
+	invention = yes
+
+	trigger = { technology = 5230
+                    technology = 5070
+		NOT = { is_tech_active = 2530 }
+		AND = { vp = 10 ic = 35 }
+		 }
+
+	name = "裝甲列車"
+	desc = "隨著我們工業的發展及技術的突破，現在可以生產裝甲列車了。"
+	style = 0
+        date = { day = 1 month = january year = 1925 }
+	offset = 2
+	deathdate = { day = 1 month = january year = 1934 }
+
+
+	action_a = {
+		name = "生產裝備" # OK
+		command = { type = activate which = 7530 }
+}
+}
+
+
+
+event = {
+  id = 19900928
+  random = no
+  name = "五毛集体穿越 "
+  desc = "大量的五毛穿越并带来了新的理念。 "
+  style = 0
+  action_a = {
+    name = "穿越者的胜利 "
+    command = { type = research_mod value = 100000 }
+    }
+    }
+
+#####################################################
+event = {
+	id = 40625
+	random = no
+	country = fra
+
+	name = "国家海军 "
+	desc = "国家海军是一个强大的存在，新战列巡洋舰将使用最新的技术， 但是以牺牲防护为代价提高速度。舰队将以地中海控制为作战目 的，航程较短。巨大而且战斗能力低下的潜艇将只在伏击和搜捕 行动中使用。 "
+	style = 0
+	picture = "naval_reinforcements"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "防备意大利 "
+		ai_chance = 100
+		command = { type = build_time which = naval where = relative value = 10 } # Slow shipyards
+	 	command = { type = build_cost which = naval where = relative value = -10 }
+		command = { type = range which = battleship value = -500 } # Poor range
+	 	command = { type = naval_attack which = battleship value = -2 } # Poor FC/throw weigth
+	 	command = { type = shore_attack which = battleship value = -1 } # Poor throw weight
+	 	command = { type = speed which = battleship value = 1 } # Fast	 	
+		command = { type = fuel_consumption which = battleship value = 0.4 } # poor fuel economy
+		command = { type = range which = battlecruiser value = -300 }
+	 	command = { type = shore_attack which = battlecruiser value = -1 } # Poor throw weight
+	 	command = { type = naval_attack which = battlecruiser value = -2 } # Poor throw weigth
+		command = { type = fuel_consumption which = battlecruiser value = 0.4 } # Poor fuel economy
+	 	command = { type = speed which = battlecruiser value = 1 } # Fast	 		
+	 	command = { type = speed which = heavy_cruiser value = 1 } # Fast
+		command = { type = fuel_consumption which = heavy_cruiser value = 0.2 } # poor fuel economy
+	 	command = { type = max_positioning which = heavy_cruiser value = 0.01 }
+	 	command = { type = min_positioning which = heavy_cruiser value = 0.01 }
+		command = { type = range which = light_cruiser value = -600 }
+	 	command = { type = build_cost which = light_cruiser where = relative value = -5 }
+		command = { type = range which = destroyer value = -500 }
+	 	command = { type = speed which = destroyer value = 2 } # Fast
+	 	command = { type = max_positioning which = destroyer value = 0.02 }
+	 	command = { type = min_positioning which = destroyer value = 0.02 }
+		command = { type = fuel_consumption which = destroyer value = 0.2 } # Poor fuel economy
+		command = { type = build_time which = destroyer where = relative value = 10 } # big
+	 	command = { type = build_cost which = destroyer where = relative value = 10 }
+		command = { type = supply_consumption which = destroyer value = 0.2 }
+	}
+}
+event = {
+	id = 40567
+	random = no
+	country = eng
+
+	name = "皇家海军 "
+	desc = "皇家海军仍然是世界上最强大的海军。华盛顿限制海军军备条约 赋予它最高的吨位限制（英５、美５、日３、法１．７５、意１ ．７５）。然而，许多船只渐显老态，而当前的经济形势不允许 全面的更新。 "
+	style = 0
+	picture = "british_naval_reinforcments"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "好极了 "
+		ai_chance = 100
+		command = { type = range which = battleship value = -100 } # Poor range
+		command = { type = fuel_consumption which = battleship value = -0.4 } # Good fuel economy
+		command = { type = range which = battlecruiser value = 350 }
+		command = { type = naval_attack which = battlecruiser value = 2 } # Good throw weight
+		command = { type = shore_attack which = battlecruiser value = 1 } # Good throw weight
+		command = { type = supply_consumption which = battlecruiser value = 0.2 }
+		command = { type = range which = carrier value = -200 }
+		command = { type = speed which = carrier value = -1 } # Slow
+		command = { type = naval_defense which = carrier value = 1 } # Armored flight deck
+	 	command = { type = build_time which = carrier where = relative value = 10 } # Slow to produce design
+		command = { type = naval_attack which = heavy_cruiser value = -1 } # Really weak main battery
+		command = { type = range which = heavy_cruiser value = 500 }
+		command = { type = speed which = heavy_cruiser value = -1 } # Slow
+		command = { type = max_positioning which = heavy_cruiser value = -0.02 }
+		command = { type = min_positioning which = heavy_cruiser value = -0.02 }
+		command = { type = fuel_consumption which = heavy_cruiser value = -0.2 }
+		command = { type = naval_defense which = heavy_cruiser value = -1 } # Really light armor
+	}
+}
+event = {
+	id = 40947
+	random = no
+	country = usa
+
+	name = "美国海军 "
+	desc = "美国海军是一支强大的力量。华盛顿限制海军军备条约赋予它最 高的吨位限制（英５，美５，日３，法１．７５，意１．７５） 美国海军拥有一些最好的航母和强大的一战时期的战列舰。 "
+	style = 0
+	picture = "american_ships_in_dock"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "我们是杰出的！ "
+		command = { type = build_time which = naval where = relative value = -10 } # Fast shipyards
+	 	command = { type = build_cost which = naval where = relative value = 10 }
+		command = { type = air_attack which = naval value = 1 } # Excellent AA defense
+		command = { type = range which = battleship value = 500 } # Good range for all ships
+	 	command = { type = speed which = battleship value = -1 } # Slow
+	 	command = { type = max_positioning which = battleship value = -0.01 }
+	 	command = { type = min_positioning which = battleship value = -0.01 }
+	 	command = { type = naval_attack which = battleship value = 2 } # Fire control + ammo
+		command = { type = naval_defense which = battleship value = 1 } # Well armored
+		command = { type = fuel_consumption which = battleship value = -0.5 } # Really good fuel economy
+		command = { type = air_attack which = battleship value = 1 } # Excellent AA defense
+		command = { type = range which = battlecruiser value = 300 }
+		command = { type = fuel_consumption which = battlecruiser value = -0.4 }
+	 	command = { type = naval_attack which = battlecruiser value = 1 } # Fire control + ammo
+		command = { type = naval_defense which = battlecruiser value = 1 } # Well armored
+		command = { type = range which = carrier value = 700 }
+		command = { type = fuel_consumption which = carrier value = -0.3 } # Really good fuel economy
+		command = { type = naval_defense which = heavy_cruiser value = 1 }
+		command = { type = range which = heavy_cruiser value = 500 }
+	 	command = { type = naval_attack which = heavy_cruiser value = -1 } # no torpedoes
+		command = { type = fuel_consumption which = heavy_cruiser value = -0.2 } # Really good fuel economy
+		command = { type = range which = light_cruiser value = 600 }
+	 	command = { type = naval_attack which = light_cruiser value = 2 } # Massive main battery, no torpedoes generally
+	 	command = { type = shore_attack which = light_cruiser value = 2 } # Massive main battery
+		command = { type = naval_defense which = light_cruiser value = 1 } # Well armored
+	 	command = { type = build_cost which = light_cruiser where = relative value = 10 }
+		command = { type = supply_consumption which = light_cruiser value = 0.2} # Really big plus lots of armarment
+		command = { type = fuel_consumption which = light_cruiser value = 0.15 }
+		command = { type = range which = destroyer value = 500 }
+		command = { type = speed which = submarine value = 1 } # Fast
+		command = { type = range which = submarine value = 200 } # Long range
+		command = { type = visibility which = submarine value = 1 } # big
+	}
+}
+
+event = {
+	id = 40745
+	random = no
+	country = jap
+
+	name = "日本海军 "
+	desc = "日本海军在航母方面处于领先地位，拥有一些世界上最好的重巡 洋舰和装备有长矛鱼雷（９３式鱼雷）的巡洋舰和驱逐舰，善于 夜战。但是，也受到损管和大部分舰船防空武器不足等问题的困 扰。日本潜艇趋于大吨位和远航程，但攻击力低下。加之，其潜 艇学说非常刻板并且抵制奇袭。 "
+	style = 0
+	picture = "japanese_navy"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "杰出的 "
+		ai_chance = 100
+		command = { type = task_efficiency which = convoy_raiding value = -0.2 }
+		command = { type = air_attack which = naval value = -1 } # Inadequate AA defense
+		command = { type = sub_detection which = naval value = -1 }
+		command = { type = morale which = naval value = -5 } # Poor damage control equipment
+		command = { type = build_time which = naval where = relative value = 10} # Slow shipyards
+	 	command = { type = build_cost which = naval where = relative value = -10 }
+	 	command = { type = naval_attack which = battleship value = 2 } # Good throw weight
+	 	command = { type = shore_attack which = battleship value = 1 } # Good throw weight
+		command = { type = range which = battlecruiser value = 600 }
+	 	command = { type = naval_attack which = battlecruiser value = 1 } # 14" gun/Good throw weight
+		command = { type = speed which = carrier value = 1 }
+		command = { type = naval_defense which = heavy_cruiser value = 1 }
+	 	command = { type = naval_attack which = heavy_cruiser value = 3 } # Long Lance plus strong main battery
+	 	command = { type = shore_attack which = heavy_cruiser value = 1 } # Strong main battery
+		command = { type = night_attack which = heavy_cruiser value = 5 } # Really great night tactics
+		command = { type = night_defense which = heavy_cruiser value = 5 }
+		command = { type = max_organization which = heavy_cruiser value = 5 } # Excellent tactics
+		command = { type = naval_defense which = light_cruiser value = -1 } # Poorly armored
+	 	command = { type = shore_attack which = light_cruiser value = -1 } # Weak main battery
+	 	command = { type = speed which = light_cruiser value = 1 } # Fast
+	 	command = { type = max_positioning which = light_cruiser value = 0.01 }
+	 	command = { type = min_positioning which = light_cruiser value = 0.01 }
+		command = { type = range which = light_cruiser value = 200 }
+		command = { type = night_attack which = light_cruiser value = 5 }
+		command = { type = night_defense which = light_cruiser value = 5 }
+		command = { type = max_organization which = light_cruiser value = 5 }
+	 	command = { type = build_cost which = light_cruiser where = relative value = -10 }
+		command = { type = supply_consumption which = light_cruiser value = -0.1 } # Really small
+		command = { type = fuel_consumption which = light_cruiser value = -0.15 }
+	 	command = { type = naval_attack which = destroyer value = 1 } # Long Lance
+		command = { type = night_attack which = destroyer value = 5 }
+		command = { type = night_defense which = destroyer value = 5 }
+		command = { type = max_organization which = destroyer value = 5 }
+	 	command = { type = speed which = destroyer value = 1 } # Fast
+	 	command = { type = max_positioning which = destroyer value = 0.01 }
+	 	command = { type = min_positioning which = destroyer value = 0.01 }
+	 	command = { type = naval_attack which = submarine value = 2 } # World class torpedo
+		command = { type = naval_defense which = submarine value = -1 } # Large boats, weak hulls, slow diving
+		command = { type = air_attack which = submarine value = 1 } # Comps for global -1 AA
+		command = { type = air_defense which = submarine value = -1 } # Slow diving, big
+		command = { type = range which = submarine value = 700 } # Long range
+		command = { type = visibility which = submarine value = 2 } # Really big
+	}
+}
+event = {
+	id = 40359
+	random = no
+	country = sov
+
+	trigger = { }
+
+	name = "红色舰队 "
+	desc = "红军的舰队只是第二流的武装力量。大部分水面舰只都是帝俄时 代遗留下来的，航程小得可怜，因为其行动主要集中在波罗的海 和黑海地区。潜艇部队数量庞大，但大部分都过时了。 "
+	style = 0
+	picture = "american_naval_reinforcments2"
+
+  	date = { day = 0 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+	action_a = {
+		name = "我们还未做好准备 "
+		ai_chance = 100
+		command = { type = build_time which = naval where = relative value = 10} # Slow shipyards
+	 	command = { type = build_cost which = naval where = relative value = -10 }
+		command = { type = morale which = naval value = -10 } # Really Poor reliability
+		command = { type = range which = battleship value = -800 } # Poor range
+	 	command = { type = naval_attack which = battleship value = -2 } # Poor fire control
+		command = { type = naval_defense which = battleship value = -1 } # Poor naval architecture tradition
+		command = { type = fuel_consumption which = battleship value = 0.6 } # Really poor fuel economy
+		command = { type = range which = battlecruiser value = -750 }
+		command = { type = naval_defense which = battlecruiser value = -1 } # Poor naval architecture tradition
+	 	command = { type = shore_attack which = battlecruiser value = 1 } # High throw weight
+		command = { type = range which = carrier value = -800 }
+		command = { type = naval_defense which = carrier value = -2 } # No carrier naval architecture tradition
+		command = { type = fuel_consumption which = carrier value = 0.3 } # Really poor fuel economy
+		command = { type = range which = heavy_cruiser value = -800 }
+		command = { type = naval_defense which = heavy_cruiser value = -1 } # Poor naval architecture tradition
+		command = { type = supply_consumption which = heavy_cruiser value = -0.1} # Small
+	 	command = { type = speed which = heavy_cruiser value = 1 } # Fast
+	 	command = { type = max_positioning which = heavy_cruiser value = 0.01 }
+	 	command = { type = min_positioning which = heavy_cruiser value = 0.01 }
+		command = { type = fuel_consumption which = heavy_cruiser value = 0.3 } # Really poor fuel economy
+	 	command = { type = shore_attack which = heavy_cruiser value = 2 } # High throw weight
+		command = { type = range which = light_cruiser value = 350 }
+		command = { type = naval_defense which = light_cruiser value = -1 } # Poor naval architecture tradition
+	 	command = { type = shore_attack which = light_cruiser value = 1 } # High throw weight
+		command = { type = sub_detection which = light_cruiser value = -1 }
+		command = { type = range which = destroyer value = -800 }
+	 	command = { type = naval_attack which = destroyer value = -2 } # Poor fire control and armarment
+		command = { type = naval_defense which = destroyer value = -1 } # Poor hull design
+		command = { type = sub_detection which = destroyer value = -1 }
+	 	command = { type = speed which = destroyer value = 1 } # Fast
+	 	command = { type = max_positioning which = destroyer value = 0.01 }
+	 	command = { type = min_positioning which = destroyer value = 0.01 }
+		command = { type = fuel_consumption which = destroyer value = 0.4 } # Terrible fuel economy
+	 	command = { type = shore_attack which = destroyer value = -1 } # throw weight
+	 	command = { type = morale which = submarine value = 5 } # Compensates for fleet wide reduction
+		command = { type = naval_defense which = submarine value = -1 } # Weak hulls, slow diving
+		command = { type = air_defense which = submarine value = -1 } # Slow diving
+	}
+}
+###################################################
+event = {
+  	id = 19220001
+  	random = no
+  	country = eng
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  		}
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = USA value = -50 }
+	  command = { type = relation which = FRA value = -50 }	
+	  command = { type = relation which = ITA value = -50 }
+	  command = { type = relation which = JAP value = -50 }	
+  		}
+	}
+event = {
+  	id = 19220002
+  	random = no
+  	country = usa
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  	}
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = JAP value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+event = {
+  	id = 19220003
+  	random = no
+  	country = JAP
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  	}
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = USA value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+event = {
+  	id = 19220004
+  	random = no
+  	country = FRA 
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  }
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220025 value = 5 }
+	  command = { type = relation which = ITA value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+event = {
+  	id = 19220005
+  	random = no  
+  	country = ita 
+
+  	name = "海军假日 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 10 month = january year = 1922 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1934 }
+
+  	action_a = {  
+  	name = "我们需要休养生息 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = -5 }
+	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+  	command = { type = deactivate_unit_type which = submarine }
+  }
+  	action_b = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 0
+  	command = { type = trigger which = 19220021 value = 5 }
+  	command = { type = trigger which = 19220022 value = 5 }
+  	command = { type = trigger which = 1922023 value = 5 }
+  	command = { type = trigger which = 19220024 value = 5 }
+	  command = { type = relation which = FRA value = -50 }
+	  command = { type = relation which = ENG value = -50 }	
+  }
+}
+  
+event = {
+  	id = 19220021
+  	random = no
+  	country = eng
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+}   
+event = {
+  	id = 19220022
+  	random = no
+  	country = usa
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+}  
+event = {
+  	id = 1922023
+  	random = no
+  	country = JAP
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  	command = { type = sleepevent which = 19340123 }
+  }
+}  
+event = {
+  	id = 19220024
+  	random = no
+  	country = FRA
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+}  
+event = {
+  	id = 19220025
+  	random = no  
+  	country = ita 
+
+  	name = "海军假日结束 "
+	desc = "EVT_19220001_DESC"
+	style = 0
+	picture = "ger_45042_zplan"
+
+  	date = { day = 1 month = december year = 1936 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1936 }
+
+  	action_a = {  
+  	name = "我们需要主力舰 "
+  	ai_chance = 100
+	command = { type = morale which = naval value = 5 }
+	command = { type = activate_unit_type which = carrier }
+  	command = { type = activate_unit_type which = battleship }
+  	command = { type = activate_unit_type which = battlecruiser }
+  	command = { type = activate_unit_type which = heavy_cruiser }
+  	command = { type = activate_unit_type which = submarine }
+  }
+} 
+
+event = {
+  	id = 1920012
+  	random = no
+  	country = FRA
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+	command = { type = build_cost which = land value = 1000 }
+	command = { type = build_cost which = air value = 1000 }
+	command = { type = build_cost which = naval value = 1000 }
+	command = { type = build_time which = land value = 9999 }
+	command = { type = build_time which = air value = 9999 }
+	command = { type = build_time which = naval value = 9999 }
+  }
+}
+
+event = {
+  	id = 1920013
+  	random = no
+  	country = JAP
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+	command = { type = build_cost which = land value = 1000 }
+	command = { type = build_cost which = air value = 1000 }
+	command = { type = build_cost which = naval value = 1000 }
+	command = { type = build_time which = land value = 9999 }
+	command = { type = build_time which = air value = 9999 }
+	command = { type = build_time which = naval value = 9999 }
+  }
+}
+
+event = {
+  	id = 1920014
+  	random = no
+  	country = ENG
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+	command = { type = build_cost which = land value = 1000 }
+	command = { type = build_cost which = air value = 1000 }
+	command = { type = build_cost which = naval value = 1000 }
+	command = { type = build_time which = land value = 9999 }
+	command = { type = build_time which = air value = 9999 }
+	command = { type = build_time which = naval value = 9999 }
+  }
+}
+
+event = {
+  	id = 1920015
+  	random = no
+  	country = USA
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 1 month = january year = 1925 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+	command = { type = build_cost which = land value = 1000 }
+	command = { type = build_cost which = air value = 1000 }
+	command = { type = build_cost which = naval value = 1000 }
+	command = { type = build_time which = land value = 9999 }
+	command = { type = build_time which = air value = 9999 }
+	command = { type = build_time which = naval value = 9999 }
+  }
+}
+
+event = {
+  	id = 1920016
+  	random = no
+  	country = SOV
+	persistent = yes
+
+	trigger = { 
+		incabinet = 16087
+		NOT = { local_flag = peacetime }
+		}
+
+  	name = "和平年代 "
+  	desc = "第一次世界大戰已經結束，世界已進入和平時期。"
+  	style = 0
+
+
+  	date = { day = 30 month = december year = 1924 }
+  	offset = 1
+  	deathdate = { day = 29 month = december year = 1925 }
+
+  	action_a = {  
+  	name = "牛油勝過槍枝"
+  	ai_chance = 100
+	command = { type = local_setflag which = peacetime }
+  	command = { type = deactivate_unit_type which = hq }
+  	command = { type = deactivate_unit_type which = armor }
+  	command = { type = deactivate_unit_type which = cavalry }
+  	command = { type = deactivate_unit_type which = infantry }
+  	command = { type = deactivate_unit_type which = militia }
+  	command = { type = deactivate_unit_type which = motorized }
+  	command = { type = deactivate_unit_type which = cas }
+  	command = { type = deactivate_unit_type which = multi_role } 
+  	command = { type = deactivate_unit_type which = interceptor }
+  	command = { type = deactivate_unit_type which = strategic_bomber }
+  	command = { type = deactivate_unit_type which = tactical_bomber }
+  	command = { type = deactivate_unit_type which = submarine }
+  	command = { type = deactivate_unit_type which = carrier }
+  	command = { type = deactivate_unit_type which = battleship }
+  	command = { type = deactivate_unit_type which = battlecruiser }
+  	command = { type = deactivate_unit_type which = heavy_cruiser }
+	
+	command = { type = build_cost which = land value = 1000 }
+	command = { type = build_cost which = air value = 1000 }
+	command = { type = build_cost which = naval value = 1000 }
+	command = { type = build_time which = land value = 9999 }
+	command = { type = build_time which = air value = 9999 }
+	command = { type = build_time which = naval value = 9999 }
+  }
+}
+

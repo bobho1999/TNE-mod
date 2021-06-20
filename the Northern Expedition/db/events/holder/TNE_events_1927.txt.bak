@@ -1,0 +1,407 @@
+##############################################
+## 1927年事件   有构想但未制作的...我承认有点多
+##############################################
+康有为去世（除了普及历史也就没什么用了）
+唐继尧去世（我手头上这版小黑人泛滥。。。老唐ID多少啊。。。）
+龙云“二六政变”（老龙ID。。。）
+宋庆龄宣布脱离武汉国民政府（国母是minister么）
+李大钊就义
+托洛茨基被开除出苏共（苏联终于有了个事件啊）
+蒋介石与宋美龄成婚（普及历史。。。）
+
+宁汉合流和宁汉战争——武汉国民政府和南京国民政府，这咋整啊，再分一个势力出来？
+马日事变是宁汉分裂的一部分，本来想做的，但是不知道如何表现
+还有冯玉祥先后与汪精卫和蒋介石会面的事件
+还有校长下野。。。
+
+南京事件过程复杂，又有争议，所以写得很简略
+
+
+我发现27年的事件难搞多了，主要是政治斗争不好在游戏里表现出来
+
+这年CHC终于戏份多了。。。
+
+##############################################
+## 1927年事件   1927001~
+##############################################
+event = {
+	id = 1927001
+	random = no
+	country = CHI
+
+	name = "中国收回上海公共租界会审公廨 "
+	desc = "１９２６年７月，北京掀起了全国性的要求关税自主的反帝爱国 运动。８月，双方正式签定有效期三年的《收回上海会审公廨暂 行章程》，规定设立上海临时法庭来代替会审公廨，租界内领事 管辖权之外的一切民刑案件均由该临时法庭审讯，期满后双方再 交涉提出最终解决办法。１９２７年１月１日，中国正式收回上 海公共租界会审公廨，设立临时法院。 "
+	style = 0
+	picture = "zujie"
+
+	date = { day = 1 month = january year = 1926 }
+
+	action_a = {
+		name = "斗争的胜利！ "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		}
+}
+
+event = {
+	id = 1927002
+	random = no
+	country = CHI
+
+	trigger = {control = { province = 1232 data = chi }
+control = { province = 1252 data = chi }  }
+
+	name = "中国收回汉口英租界、九江英租界 "
+	desc = "１月３日，汉口游行群众与英国水兵发生冲突，拥入英租界，随 后国民政府接管该租界。１月６日，九江发生中外冲突，九江英 租界被国民政府接管。 "
+	style = 0
+	picture = "zujie"
+
+	date = { day = 1 month = january year = 1926 }
+
+	action_a = {
+		name = "斗争的胜利！ "
+		command = { type = dissent value = -1 }
+		command = { type = domestic which = interventionism value = 1 }
+		}
+}
+
+event = {
+	id = 1927003
+	random = no
+	country = CHC
+
+	trigger = {
+		event = 1926019
+		war = { country = CHC country = U06 }
+		control = { province = 1237 data = U06 }
+	}
+
+	name = "上海工人第二次起义 "
+	desc = "第二次起义发动于１９２７年２月２２日。１８日，北伐军占领 杭州，先头部队到达嘉兴。１９日，上海总工会发布总同盟罢工 令，至２２日，罢工人数达３６万多人。上海防守司令李宝章勾 结公共租界工部局帝国主义势力，对罢工工人进行残酷镇压。至 ２２日下午６时，总同盟罢工发展为第二次武装起义。由于计划 被泄，各区工人纠察队失去统一指挥，加上北伐军在上海郊区停 止前进，钮永建的便衣队按兵不动，致使工人陷于孤立，起义再次 失败。 "
+	style = 0
+	picture = "gongrenqiyi"
+
+	date = { day = 1 month = february year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "发动起义 "
+		ai_chance = 99
+		command = { type = dissent value = -2 }
+		command = { type = trigger which = 1927004 }
+		}
+	action_b = {
+		name = "我们还没准备好 "
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		command = { type = sleepevent which = 1927004 }
+		}
+}
+
+event = {
+	id = 1927004
+	random = no
+	country = U06
+
+	name = "上海工人第二次起义 "
+	desc = "第二次起义发动于１９２７年２月２２日。１８日，北伐军占领 杭州，先头部队到达嘉兴。１９日，上海总工会发布总同盟罢工 令，至２２日，罢工人数达３６万多人。上海防守司令李宝章勾 结公共租界工部局帝国主义势力，对罢工工人进行残酷镇压。至 ２２日下午６时，总同盟罢工发展为第二次武装起义。由于计划 被泄，各区工人纠察队失去统一指挥，加上北伐军在上海郊区停 止前进，钮永建的便衣队按兵不动，致使工人陷于孤立，起义再次 失败。 "
+	style = 0
+	picture = "gongrenqiyi"
+
+	action_a = {
+		name = "镇压 "
+		command = { type = dissent value = 2 }
+		command = { type = province_revoltrisk which = 1237 value = 25 }
+		}
+}
+
+event = {
+	id = 1927005
+	random = no
+	country = CHI
+
+	trigger = { event = 1926001 }
+
+	name = "中国国民党二届三中全会 "
+	desc = "１９２７年３月１０日至１７日在汉口南洋大楼召开。会议通过了 一系列决议案，重申了孙中山的三大革命政策和坚持国共合作的革 命原则。会议缺席选举汪精卫为中国国民党中央常务委员会主席、中央 党部组织部长，并决议不设中央军事委员会主席，改为７人集体 领导。 "
+	style = 0
+	picture = "dahui"
+
+	date = { day = 1 month = march year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = march year = 1927 }
+
+	action_a = {
+		name = "好的 "
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = relation which = CHC value = -10 }
+		}
+}
+
+event = {
+	id = 1927006
+	random = no
+	country = CHC
+
+	trigger = {
+		event = 1926019
+		war = { country = CHC country = U06 }
+		OR = {
+			control = { province = 1237 data = CHI }
+			control = { province = 1237 data = CHC }
+		}
+	}
+
+	name = "上海工人第三次起义 "
+	desc = "第三次起义发动于１９２７年３月２１日。３月中旬，北伐军向 苏州、常州和松江进军，对上海形成包围圈。上海守军军心动摇， 工人和民众革命情绪高涨，中共上海区委决定发动第三次上海工 人武装起义。３月２１日，上海总工会发布总同盟罢工令，全市 ８０万工人实现了总罢工并立即转入武装起义，租界里的中国工 人也集合到华界参加起义，经过３０个小时的浴血奋战，于２２ 日６时许攻克了敌人的全部据点，占领了上海，取得了第三次工 人武装起义的胜利。３月２６日蒋介石到达上海，４月１２日北　伐军接管政府。 "
+	style = 0
+	picture = "gongrenqiyi"
+
+	date = { day = 1 month = march year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "起义成功 "
+		command = { type = dissent value = -2 }
+		command = { type = province_revoltrisk which = 1237 value = -100 }
+		}
+}
+
+event = {
+	id = 1927007
+	random = no
+	country = CHC
+
+	trigger = {  }
+
+	name = "湖南农民运动考察报告 "
+	desc = "随着北伐战争的胜利进军，由广东开始的农民运动迅速发展到全 国。１９２７年１月４日至２月５日，毛泽东考察了湖南湘潭、 湘乡、衡山、醴陵、长沙等五个县的农民运动，写成了《湖南农 民运动考察报告》，提出了解决中国民主革命的中心问题——农 民问题的理论和政策。 "
+	style = 0
+	picture = "hunan"
+
+	date = { day = 5 month = march year = 1927 }
+
+	action_a = {
+		name = "农民问题是中国的根本问题 "
+		command = { type = dissent value = -1 }
+		}
+}
+
+event = {
+	id = 1927008
+	random = no
+	country = CHI
+
+	trigger = { control = { province = 1235 data = CHI } }
+
+	name = "南京事件 "
+	desc = "１９２７年３月２４日，北伐军攻下南京，与当地外侨发生冲突 。英美军舰以此为理由炮击南京，遂形成国际冲突，是为“南京事 件”。 "
+	style = 0
+	picture = "war"
+
+	date = { day = 1 month = march year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "OK"
+		command = { type = dissent value = 2 }
+		command = { type = relation which = ENG value = -30 }
+		command = { type = relation which = FRA value = -30 }
+		command = { type = relation which = USA value = -30 }
+		command = { type = relation which = JAP value = -30 }
+		}
+}
+
+event = {
+	id = 1927009
+	random = no
+	country = CHI
+
+	trigger = {  }
+
+	name = "四·一二事件 "
+	desc = "四·一二事件，国民党方面称“清党”；中共方面称“四·一二 ”反革命政变，是指１９２７年４月１２日中国国民党的部分势 力在蒋介石的率领之下于上海对中国共产党的清洗事件。当日凌 晨，受蒋介石指挥的中华共进会和上海工界联合会的帮派分子从 上海租界冲出，向上海总工会纠察队的驻地闸北、南市、浦东、 吴淞等处，发起攻击。之后蒋介石下令淞沪戒严司令部所属国民 革命军第２６军借口“工人内讧”对工人纠察队强行缴械，造成 三百余人伤亡。 "
+	style = 0
+	picture = "siyier"
+
+	date = { day = 1 month = april year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "清党 "
+		command = { type = dissent value = -1 }
+		command = { type = relation which = CHC value = -100 }
+		command = { type = trigger which = 1927010 }
+		}
+}
+
+event = {
+	id = 1927010
+	random = no
+	country = CHC
+
+	name = "四·一二事件 "
+	desc = "四·一二事件，国民党方面称“清党”；中共方面称“四·一二 ”反革命政变，是指１９２７年４月１２日中国国民党的部分势 力在蒋介石的率领之下于上海对中国共产党的清洗事件。四·一二 事件之后，共产党内坚持和国民党妥协的早期领导人陈独秀等人　被认为右倾投降主义被撤职。陈独秀被认为一味退让，甚至要求 工人纠察队向国民党上缴武器，造成共产党对蒋介石的武力清党 毫无准备。中国共产党从此走向武装革命夺取中国政权的道路。 "
+	style = 0
+	picture = "siyier"
+
+	action_a = {
+		name = "国共关系破裂！ "
+		command = { type = dissent value = 5 }
+		command = { type = relation which = CHI value = -100 }
+		command = { type = leave_alliance }
+		}
+}
+
+event = {
+	id = 1927011
+	random = no
+	country = CHC
+
+	trigger = {  }
+
+	name = "鲍罗廷回到苏联 "
+	desc = "鲍罗廷，俄罗斯人，原名米哈伊尔·马尔科维奇·格鲁申贝格， １９２３年至１９２７年期间的共产国际驻中国代表及苏联驻中 国广州政府代表，是协助孙中山进行联俄容共的主要人物。四一 二事变后，遭到国民党南京政府的通缉。６月１７日，陈友仁正 式通知鲍罗廷，武汉国民党中央已解除他的职务。同年７月鲍罗 廷离开武汉，１０月经蒙古回苏联。之后曾任苏维埃劳动人民委 员、英文《莫斯科新闻》主编。１９４９年受美国记者安娜·路 易丝·斯特朗间谍案牵连入狱，被指为苏维埃政权的敌人，流放 到西伯利亚，１９５１年５月２９日死于伊尔库茨克的一个劳动 营中。 "
+	style = 0
+	picture = "baoluoting"
+
+	date = { day = 21 month = july year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "OK"
+		command = { type = sleepminister which = [鲍罗廷的ID] } #话说CHC有这个部长么？
+		command = { type = relation which = SOV value = 30 }
+		}
+}
+
+event = {
+	id = 1927012
+	random = no
+	country = CHC
+
+	trigger = { control = { province = 1251 data = CHI } }
+
+	name = "南昌起义 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	date = { day = 1 month = august year = 1927 }
+
+	action_a = {
+		name = "起义！ "
+		command = { type = trigger which = 1927013 }
+		}
+}
+
+event = {
+	id = 1927013
+	random = no
+	country = CHI
+
+	name = "南昌起义 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "中共夺取了南昌！ "
+		command = { type = secedeprovince which = CHC value = 1251 }
+		command = { type = trigger which = 1927014 }
+		}
+}
+
+event = {
+	id = 1927014
+	random = no
+	country = CHC
+
+	name = "南昌起义 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "我们自己的武装！ "
+		command = { type = add_division which = [name] value = [div type] when = model where = [brigade type] } #具体是什么部队？
+		command = { type = morale which = land value = 2 }
+		}
+}
+
+event = {
+	id = 1927015
+	random = no
+	country = CHC
+
+	trigger = {  }
+
+	name = "八七会议 "
+	desc = "八七会议是对中国共产党于１９２７年８月７日在汉口举行的中 央紧急会议的称呼。会议确定了今后的总方针：土地革命和武装 反抗国民党。毛泽东在会上提出了“枪杆子里面出政权”的著名 论断。这次会议是中国共产党历史的一个转折点。 "
+	style = 0
+	picture = "baqihuiyi"
+
+	date = { day = 7 month = august year = 1927 }
+
+	action_a = {
+		name = "枪杆子里出政权！ "
+		command = { type = max_organization which = land value = 2 }
+		command = { type = morale which = land value = 1 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		}
+}
+
+event = {
+	id = 1927016
+	random = no
+	country = CHC
+
+	trigger = { event = 1927015 }
+
+	name = "秋收起义 "
+	desc = "秋收起义，是１９２７年９月在中国湖南、江西边界由中国共产 党彭公达、毛泽东、卢德铭等领导的武装农民起义。八七会议后 湖南省委书记彭公达和中央特派员毛泽东前往湖南组织秋收暴动 。彭公达任总指挥，毛泽东任“前委”书记。起事队伍原计划先 攻克平江、浏阳，然后从包抄长沙，但在平江、浏阳先后失利。 ９月１９日，队伍在浏阳的文家市会师，毛泽东说服大家前往江西　萍乡。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 1 month = september year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = september year = 1927 }
+
+	action_a = {
+		name = "农村包围城市！ "
+		command = { type = max_organization which = land value = 2 }
+		command = { type = morale which = land value = 1 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		}
+}
+
+event = {
+	id = 1927017
+	random = no
+	country = CHC
+
+	trigger = { event = 1927016 }
+
+	name = "井冈山根据地建立 "
+	desc = "１９２７年１０月，毛泽东率领经“三湾改编”后的秋收起义部 队到达井冈山，先后在宁冈、永新、茶陵、遂川等县恢复和建立 了党组织，发展武装力量，开展游击战争，领导农民打土豪分田地，建 立红色政权，实行工农武装割据，创立了党领导下的第一个农村 革命根据地。 "
+	style = 0
+	picture = "jinggangshan"
+
+	date = { day = 1 month = october year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "星星之火可以燎原 "
+		command = { type = morale which = land value = 1 }
+		command = {  } #这根据地要怎么表现啊。。。把赣州划给CHC？老实说没有细化的地图和火星粮，根本就体现不出CHC的历史。。。
+		}
+}
+

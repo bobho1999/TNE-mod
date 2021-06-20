@@ -1,0 +1,232 @@
+air_unit_type = 1
+
+# 0 - Unarmed Reconplane (1910)
+model = { 
+	cost 						= 5
+	buildtime	 				= 72
+	defaultorganisation 		= 20
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 150
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	surfacedefence				= 10
+	airdefence					= 3
+	airattack					= 0
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 125
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 0.5
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+
+}
+
+# 1 - 1st gen. Air supp Fighter (1914)
+model = { 
+	cost 						= 5
+	buildtime	 				= 72
+	defaultorganisation 		= 20
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 150
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	surfacedefence				= 10
+	airdefence					= 3
+	airattack					= 1
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 150
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 0.7
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+
+}
+
+# 2 - 2nd gen. Air supp Fighter (1915)
+model = { 
+	cost 						= 5
+	buildtime	 				= 72
+	defaultorganisation 		= 20
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 175
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 2
+	surfacedefence				= 10
+	airdefence					= 2
+	airattack					= 1
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 175
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 0.7
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+
+}
+
+# 3 - 3rd gen. Air supp Fighter (1916)
+model = { 
+	cost 						= 5
+	buildtime	 				= 72
+	defaultorganisation 		= 20
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 200
+	surfacedetectioncapability	= 1
+	airdetectioncapability		= 3
+	surfacedefence				= 8
+	airdefence					= 3
+	airattack					= 2
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 200
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 0.7
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+
+}
+
+# 4 - 4th gen. Air supp Fighter (1917)
+model = { 
+	cost 						= 5
+	buildtime	 				= 72
+	defaultorganisation 		= 20
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 200
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 3
+	surfacedefence				= 8
+	airdefence					= 2
+	airattack					= 2
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 200
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 0.7
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+}
+
+# 5 - 5th gen. Air supp Fighter (1918)
+model = { 
+	cost 						= 5
+	buildtime	 				= 72
+	defaultorganisation 		= 25
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 250
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 4
+	surfacedefence				= 8
+	airdefence					= 1
+	airattack					= 2
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 225
+	supplyconsumption 			= 1.5
+	fuelconsumption				= 0.7
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+}
+
+# 6 - Interwar Fighter (1924)
+model = { 
+	cost 						= 16
+	buildtime	 				= 200
+	defaultorganisation 		= 30
+	morale						= 35
+	manpower					= 0.1
+	maxspeed					= 300
+	surfacedetectioncapability	= 2
+	airdetectioncapability		= 5
+	surfacedefence				= 7
+	airdefence					= 12
+	airattack					= 3
+	strategicattack				= 0
+	softattack					= 0
+	hardattack					= 0
+	navalattack					= 0
+	range						= 275
+	supplyconsumption 			= 0.7
+	fuelconsumption				= 1.5
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+
+}
+
+# 7 - Early Fighter (1930)
+model = { 
+	cost 						= 17
+	buildtime	 				= 210
+	defaultorganisation 		= 30
+	morale						= 35
+	manpower					= 0.75
+	maxspeed					= 350
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 6
+	surfacedefence				= 6
+	airdefence					= 12
+	airattack					= 4
+	strategicattack				= 0
+	softattack					= 1
+	hardattack					= 0
+	navalattack					= 0
+	range						= 350
+	supplyconsumption 			= 0.8
+	fuelconsumption				= 1.6
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+}
+
+# 8 - Basic Interceptor (1937)
+model = { 
+	cost 						= 18
+	buildtime	 				= 210
+	defaultorganisation 		= 30
+	morale						= 35
+	manpower					= 0.75
+	maxspeed					= 500
+	surfacedetectioncapability	= 3
+	airdetectioncapability		= 7
+	surfacedefence				= 6
+	airdefence					= 9
+	airattack					= 6
+	strategicattack				= 0
+	softattack					= 1
+	hardattack					= 0
+	navalattack					= 0
+	range						= 400
+	supplyconsumption 			= 0.9
+	fuelconsumption				= 1.7
+	upgrade_time_factor 		= 0.60 
+	upgrade_cost_factor 		= 0.50
+
+
+}

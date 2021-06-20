@@ -1,0 +1,28 @@
+JAP;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+3000;Head of State;大正天皇 ;24;PA;Popular Figurehead;Medium;taisho;x
+3001;Head of Government;加藤高明 ;24;PA;Naive Optimist;Medium;jiatenggaoming;x
+3002;Foreign Minister;币原喜重郎 ;24;SD;Ideological Crusader;Medium;biyuanxichonglang;x
+3003;Minister of Armament;滨口雄幸 ;24;PA;Laissez Faires Capitalist;Medium;binkouxiongxing;x
+3004;Minister of Security;若槻礼次郎 ;24;SD;Crime Fighter;Medium;ruoguilicilang;x
+3011;Head of Government;若槻礼次郎 ;26;SD;Crime Fighter;Medium;ruoguilicilang;x
+3005;Head of Military Intelligence;土肥原贤二 ;24;PA;Dismal Enigma;Medium;tufeiyuanxianer;x
+3006;Chief of Staff;铃木庄六 ;26;PA;Static Defence Doctrine;Medium;lingmuzhuangliu;x
+3007;Chief of Army;宇垣一成 ;24;PA;Guns and Butter Doctrine;Medium;yuyuanyicheng;x
+3010;Head of State;裕仁天皇;26;PA;Popular Figurehead;High;M5001;x
+3012;Head of Government;田中義一;27;PA;Ambitious Union Boss;High;TanakaGiichi;x
+3013;Head of Government;若槻礼次郎 ;26;SD;Crime Fighter;Medium;ruoguilicilang;x
+3014;Head of Government;滨口雄幸 ;29;PA;Laissez Faires Capitalist;Medium;binkouxiongxing;x
+3015;Foreign Minister;田中義一;27;PA;Ambitious Union Boss;High;TanakaGiichi;x
+3016;Minister of Security;田中義一;27;PA;Ambitious Union Boss;High;TanakaGiichi;x
+3017;Chief of Army;白川義則 ;27;PA;Guns and Butter Doctrine;Medium;白川義則;x
+3018;Chief of Staff;河合操 ;24;PA;Static Defence Doctrine;Medium;;x
+3019;Chief of Navy;財部彪 ;24;PA;Static Defence Doctrine;Medium;財部彪;x
+3020;Chief of Navy;岡田啟介 ;27;PA;Static Defence Doctrine;Medium;岡田啟介;x
+3021;Minister of Armament;早速整爾 ;25;PA;Laissez Faires Capitalist;Medium;;x
+3022;Minister of Armament;片岡直溫 ;25;PA;Laissez Faires Capitalist;Medium;;x
+3023;Minister of Armament;高橋是清 ;27;PA;Laissez Faires Capitalist;Medium;高橋是清;x
+3024;Minister of Armament;三土忠造 ;27;PA;Laissez Faires Capitalist;Medium;;x
+3025;Minister of Security;滨口雄幸 ;26;PA;Crime Fighter;Medium;binkouxiongxing;x
+;;;;;;;;
+;;;;;;;;

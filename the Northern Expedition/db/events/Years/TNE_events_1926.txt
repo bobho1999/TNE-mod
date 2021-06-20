@@ -1,0 +1,4034 @@
+###################
+#国民政府事件
+###################
+##########################
+#1926年       200000~
+##########################
+event = {
+	id = 200000
+	random = no
+	country = CHI
+
+	trigger = {
+		NOT = { war = { country = CHI country = CHC } }
+	}
+
+	name = "中国国民党第二次全国代表大会 "
+	desc = "中国国民党第二次全国代表大会，１９２６年１月４日至１９日 在广州举行。汪精卫、蒋介石、李大钊、毛泽东、张国焘、周恩 来均出席了这次会议。陈独秀留在上海没有参加。苏联顾问鲍罗 廷对该会影响重大。到会代表２６５人，国民党左派和共产党员 占优势。大会议决接受“总理遗嘱”和“一大”所定的政纲，重申 了反帝反军阀的政治主张。 "
+	style = 0
+	picture = "dahui"
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = january year = 1926 }
+
+	action_a = {
+		name = "联俄，容共，扶助农工 "
+		command = { type = relation which = CHC value = 20 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 220000 }
+		}
+}
+event = {
+	id = 200001
+	random = no
+	country = CHI
+
+	trigger = { event = 200300 }
+
+	name = "大沽口事件 "
+	desc = "大沽口事件发生后，国共两党召开联席会议，针对最后通牒，一致 通过：即日驳复通牒、不许日舰带奉舰入港、驱逐８国公使离京等 决议。同时，会议决定请国民军改变作战目的，为废除不平等条 约而战。 "
+	style = 0
+	picture = "dagukou"
+
+	date = { day = 15 month = march year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = june year = 1926 }
+	action_a = {
+		name = "不能任人宰割！ " 
+		ai_chance = 99
+		command = { type = dissent value = -3 }
+		command = { type = relation which = U13 value = -30 }
+		command = { type = relation which = JAP value = -40 }
+		command = { type = relation which = USA value = -40 }
+		command = { type = relation which = ENG value = -40 }
+		command = { type = relation which = FRA value = -40 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = trigger which = 220001 }
+		}
+	action_b = {
+		name = "我们无力对抗列强 " 
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = sleepevent which = 220001 }
+		}
+}
+event = {
+	id = 200002
+	random = no
+	country = CHI
+
+	trigger = {
+		NOT = { war = { country = CHI country = CHC } }
+	}
+
+	name = "中山舰事件 "
+	desc = "１９２６年３月２０日，开始执行反共政策的蒋介石，设计将中 山舰调出广州，随后又以该舰未接命令擅自移动为名诬其阴谋暴动，随 即下令逮捕舰长李之龙（中共党员），并展开一系列的清共行动。 史称“中山舰事件”。 "
+	style = 0
+	picture = "zhongshanjian"
+
+	date = { day = 20 month = march year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = april year = 1926 }
+
+	action_a = {
+		name = "执行 "
+		ai_chance = 99
+		command = { type = dissent value = -3 }
+		command = { type = relation which = CHC value = -40 }
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 220002 }
+#   		 command = { type = trigger which = 2011012 }
+		}
+	action_b = {
+		name = "不要破坏两党合作 "
+		ai_chance = 1
+		command = { type = dissent value = 40 }
+		command = { type = relation which = CHC value = 20 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = sleepevent which = 220002 }
+#    		command = { type = sleepevent which = 2011012 }
+		}
+}
+event = {
+	id = 200003
+	random = no
+	country = CHI
+
+	trigger = { event = 200000 }
+
+	name = "中国国民党二届二中全会 "
+	desc = "中山舰事件发生后，国共关系陷入危机。陈独秀、鲍罗廷不得不 对国民党右派妥协。５月１５日至２２日，国民党二届二中全会 在广州召开，张静江、吴稚晖、孙科等提出《整理党务案》，规 定国民党各级领导机构内中共党员不得超过三分之一。５月２１日在 会上还通过了北伐决议。 "
+	style = 0
+	picture = "dahui"
+
+	date = { day = 15 month = may year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = june year = 1926 }
+
+	action_a = {
+		name = "整理党务 "
+		command = { type = domestic which = political_left value = -1 }
+		command = { type = relation which = CHC value = -10 }
+		}
+}
+
+event = {
+	id = 200008
+	random = no
+	country = chi
+	
+	trigger = { event = 200003 }
+
+	name = "汪精卫辞职 "
+	desc = "中山舰事件发生后，由于汪精卫的优柔寡断，事态没有得到及时的控 制，汪的声望收到极大的损害。同时汪精卫负气出走，由谭延闿代理国民 政府主席。 "
+	style = 0
+
+	date = { day = 15 month = may year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = june year = 1926 }
+	
+	action_a = {
+		name = "国共两党的裂痕 " 
+		command = { type = headofgovernment which = 12 } #蒋中正
+		command = { type = headofstate which = 14 } #谭延闿
+		command = { type = dissent value = 5 }
+                     }
+}
+
+event = {
+	id = 200004
+	random = no
+	country = CHI
+
+	trigger = {
+		ai = no
+		NOT = { 
+			event = 700005
+			ispuppet = CHI
+		}
+	}
+
+	name = "北伐宣言 "
+	desc = "１９２６年７月４日，国民党中央临时全体会议通过《国民革命军北伐宣言》：“……帝国主义侵略之程度日益加深，军阀之暴虐日益加重，则中 国全国人民之困苦，自然日益加重……统一政府不成立，则外祸益 烈，内乱益甚，中国人民之困苦，亦将如水益深，如火益热…… 忍无可忍，乃不能不出于出师之一途矣……统一政府建设万岁！ 国民革命成功万岁！中国人民自由解放万岁！中国国民革命军万岁 ！” "
+	style = 0
+	picture = "beifashishi"
+
+	date = { day = 3 month = july year = 1926 }
+
+	action_a = {
+		name = "国民革命成功万岁！ "
+		command = { type = max_organization which = land value = 2 }
+		command = { type = morale which = land value = 5 }
+        command = { type = repair_mod value = 5 }
+        command = { type = tc_occupied_mod value = 5 }
+        command = { type = attrition_mod value = 2 }
+        command = { type = supply_dist_mod value = 2 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+#		command = { type = trigger which = 200005 }
+	}
+}
+event = {
+	id = 20000400
+	random = no
+	country = CHI
+
+	trigger = {
+		ai = yes
+		NOT = { 
+			event = 700005
+			ispuppet = CHI
+		}
+	}
+
+	name = "北伐宣言 "
+	desc = "１９２６年７月４日，国民党中央临时全体会议通过《国民革命军北伐宣言》：“……帝国主义侵略之程度日益加深，军阀之暴虐日益加重，则中 国全国人民之困苦，自然日益加重……统一政府不成立，则外祸益 烈，内乱益甚，中国人民之困苦，亦将如水益深，如火益热…… 忍无可忍，乃不能不出于出师之一途矣……统一政府建设万岁！ 国民革命成功万岁！中国人民自由解放万岁！中国国民革命军万岁 ！” "
+	style = 0
+	picture = "beifashishi"
+
+	date = { day = 3 month = july year = 1926 }
+
+	action_a = {
+		name = "国民革命成功万岁！ "
+		command = { type = max_organization which = land value = 10 }
+		command = { type = morale which = land value = 10 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = free_ic value = 5 }
+		command = { type = supplies value = 5000 }
+#		command = { type = trigger which = 200005 }
+		}
+}
+event = {
+	id = 200005
+	random = no
+	country = CHI
+	trigger = { 
+		OR = { 
+			event = 20000400
+			event = 200004
+		}
+		NOT = { 
+			event = 700005
+			ispuppet = CHI
+		}
+	}
+
+	name = "北伐战争 "
+	desc = "北伐战争，是１９２６年至１９２８年国民革命军北进讨伐北 洋政府的战争。北伐正式起始于１９２６年７月９日以蒋介石为 总司令宣布北伐，完成于１９２8年１２月２９日张学良东北易 帜，使得中国名义上统一在由中国国民党领导之国民政府旗下。 1926年5月10日唐生智代表向广州国民政府求救，11日 广州国民政府军事委员会议决提前出师北伐。 "
+	style = 0
+	picture = "beifa"
+	
+	date = { day = 1 month = july year = 1926 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1929 }
+	
+	action_a = {
+	  ai_chance = 98
+		name = "打倒吴佩孚，联络孙传芳，不理张作霖 "
+		command = { type = war which = U05 }
+		command = { type = dissent value = -5 }
+		command = { type = morale which = land value = 10 }
+		command = { type = domestic which = professional_army value = 1 }
+        command = { type = manpowerpool value = 200 }
+        command = { type = repair_mod value = 25 }
+        command = { type = tc_occupied_mod value = 25 }
+        command = { type = attrition_mod value = 15 }
+        command = { type = supply_dist_mod value = 20 }
+   	 	command = { type = chiefofarmy which = 25 } #蒋中正
+    	command = { type = alliance which = u10 }
+        command = { type = alliance which = chc }
+        command = { type = alliance which = cgx }
+        command = { type = access which = CGX }
+        command = { type = access which = U10 }
+#   	command = { type = make_puppet which = u10 }
+    	command = { type = trigger which = 200900 }
+		command = { type = sleepevent which = 1028 }
+		command = { type = sleepevent which = 1029 }
+    	command = { type = extra_tc value = 30 }
+    	command = { type = add_corps which = "北伐軍指揮部 " value = land where = 1313 }
+    	command = { type = activate_division which = 22000 value = 100076 where = 1313 }
+		}
+		action_b = {
+	  ai_chance = 1
+		name = "一鼓作气统一全中国 "
+		command = { type = dissent value = -10 }
+		command = { type = morale which = land value = 10 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = war which = U05 }
+		command = { type = war which = U06 }
+		command = { type = war which = U02 }
+        command = { type = repair_mod value = 20 }
+        command = { type = tc_occupied_mod value = 20 }
+        command = { type = attrition_mod value = 10 }
+        command = { type = supply_dist_mod value = 15 }
+		command = { type = chiefofarmy which = 25 } #蒋中正
+		command = { type = alliance which = u10 }
+        command = { type = alliance which = chc }
+        command = { type = alliance which = cgx }
+        command = { type = access which = CGX }
+        command = { type = access which = U10 }
+    	command = { type = make_puppet which = u10 }
+    	command = { type = extra_tc value = 20 }
+    	command = { type = add_corps which = "北伐軍指揮部 " value = land when = 12012 where = 1313 }
+    	command = { type = activate_division which = 22000 value = 100076 where = 1313 }
+    	command = { type = trigger which = 200900 }
+	    command = { type = manpowerpool value = 200 }
+	}
+  action_c = {
+    ai_chance = 1
+    name = "我们还没有准备好 "
+    command = { }
+    }
+}
+event = {
+	id = 200006
+	random = no
+	country = CHI
+
+	trigger = { control = { province = 1255 data = CHI } }
+
+	name = "北伐军攻占长沙 "
+	desc = "北伐军首先以主力向湖南进军，７月初，担任主攻任务的第四、七军 先后抵达攸县地区，与第八军汇合，分三路进攻长沙，并于１１日 进入长沙。"
+	style = 0
+	picture = "beifa"
+
+	date = { day = 2 month = april year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "战绩辉煌 "
+      		command = { type = dissent value = -3 }
+		command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 1 }
+		command = { type = attrition_mod value = 1 }
+		command = { type = supply_dist_mod value = 1 }
+		command = { type = repair_mod value = 1 }
+		command = { type = trigger which = 63908 }
+#		command = { type = trigger which = 200501 value = 10 }
+		command = { type = add_corps which = "國民革命軍第四十軍 " value = land where = 1255 }
+                command = { type = activate_division which = 22000 value = 100094 when = 1 where = 1255 }
+                command = { type = activate_division which = 22000 value = 100095 when = 1 where = 1255 }
+                command = { type = activate_division which = 22000 value = 100096 when = 1 where = 1255 }
+                command = { type = add_corps which = "國民革命軍第四十四軍 " value = land where = 1255 }
+                command = { type = activate_division which = 22000 value = 100097 when = 1 where = 1255 }
+                command = { type = activate_division which = 22000 value = 100098 when = 1 where = 1255 }
+               	command = { type = damage_division which = 22000 value = 100078 where = -75 }  
+                command = { type = damage_division which = 22000 value = 100079 where = -75 } 
+                command = { type = damage_division which = 22000 value = 100080 where = -75 } 
+                command = { type = damage_division which = 22000 value = 100081 where = -75 }   
+                command = { type = damage_division which = 15054 value = 9 where = -75 }  
+                   command = { type = damage_division which = 15054 value = 10 where = -75 } 
+                   command = { type = damage_division which = 15054 value = 11 where = -75 } 
+                   command = { type = damage_division which = 15054 value = 12 where = -75 } 
+                   command = { type = damage_division which = 15054 value = 13 where = -75 }  
+                   command = { type = damage_division which = 15054 value = 14 where = -75 } 
+                   command = { type = damage_division which = 22400 value = 101041 where = -75 }
+                   command = { type = damage_division which = 22400 value = 101042 where = -75 }
+                   command = { type = damage_division which = 22400 value = 101043 where = -75 }
+                   command = { type = damage_division which = 22400 value = 101044 where = -75 }
+                   command = { type = damage_division which = 22400 value = 101045 where = -75 }                        
+ command = { type = sleepevent which = 1011 }
+}
+}
+event = {
+	id = 200007
+	random = no
+	country = CHI
+
+	trigger = { event = 200006
+#		event = 1017
+	}
+
+	name = "汀泗橋戰鬥 "
+	desc = "一九二六年八月，国民革命军在北伐征战的征途中曾在咸宁的汀泗桥、 咸宁县城、贺胜桥与直系军阀吴佩孚的军队进行过激烈战斗。  "
+	style = 0
+	picture = "tingsiqiao"
+
+	date = { day = 2 month = april year = 1926 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "激戰 "
+		command = { type = morale which = land value = 1 }
+		command = { type = trigger which = 200506 }
+		}
+}
+
+event = {
+	id = 200010
+	random = no
+	country = chi
+
+	name = "省港大罢工结束 "
+	desc = "省港大罢工是第一次国共合作下国共两党共同领导的一次成功的反 帝斗争运动。省港大罢工持续16个月，是世界工人运动史上时 间最长的一次罢工。为了支援北伐战争，1926年10月初，罢工工人代 表大会决定停止罢工。10日，罢工委员会召集群众大会，宣告罢工胜 利结束，并宣布停止对香港的封锁。 "
+	style = 0
+
+	action_a = {
+		name = "正义战胜了帝国主义 " 
+		command = { type = relation which = eng value = -10 }
+		command = { type = relation which = chc value = 10 }
+		command = { type = dissent value = -3 }
+		}
+}
+
+event = {
+	id = 200009
+	random = no
+	country = chi
+        
+       trigger = { exists = chi
+                   event = 100014 #国民政府成立
+                   event = 200012 #北伐军攻占武汉
+                   event = 200005 #北伐战争
+                   event = 200502 #吴佩孚丢失湖北
+                   supplies = 1000
+                  }
+
+        name = "迁都武汉 "
+	desc = "1926年10月国民革命军占领武汉三镇。11月8日，国民 党中央政治会议决定迁中央党部和国民政府到武汉。12月 5日，国民党中央正式宣布中央党部和政府停止在广州办公，各机关 工作人员分批前往武汉，1927年2月21日武汉国民政府正 式办公。 "
+	style = 0
+
+	date = { day = 5 month = november year = 1926 }
+	offset = 10
+	deathdate = { day = 21 month = february year = 1928 }
+
+	action_a = {
+		name = "北伐胜利的曙光！ " 
+      command = { type = foreignminister which = 20 } #陈友仁
+      command = { type = armamentminister which = 21 } #宋子文
+      command = { type = chiefofstaff which = 19 } #谭延闿
+      command = { type = ministerofsecurity which =22 } #徐谦
+      command = { type = dissent value = -3 }
+      command = { type = capital which = 1232 } #汉口
+      command = { type =  remove_division which = 22000 value = 100001 } 
+	  command = { type = waketeam which = 1002 } 
+	  command = { type = sleepteam which = 1030 }  
+                     }
+}
+
+
+event = {
+	id = 200011
+	random = no
+	country = chi
+
+
+
+	name = "冯玉祥五原誓师 "
+	desc = "１９２６年４月９日冯玉祥发动政变，逼走段祺瑞，但军事上失 利，不得不撤出北京，后赴苏联考察，同年回国。国民军在南口 坚守四个月后，于８月退回西北，９月１７日冯在绥远五原誓师 ，任国民革命军联军（后改国民革命军第二集团军）司令，宣布所部加 入国民党。在击溃刘镇华的镇嵩军之后，出潼关参加北伐。 "
+	style = 0
+	picture = "wuyuanshishi"
+
+
+	action_a = {
+		name = "这将大大增强我们的力量 "
+		command = { type = alliance which = U03 }
+        command = { type = access which = U03 }
+		command = { type = dissent value = -3 }
+		command = { type = setflag which = U03joinTNE }
+		}
+	action_b = {
+		name = " "
+		command = {  }
+		}
+}
+event = {
+	id = 200012
+	random = no
+	country = CHI
+
+	trigger = {
+		control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+                event = 200506 
+		}
+
+	name = "北伐军攻占汉口、武昌 "
+	desc = "１９２６年８月２６日，北伐军对湖北汀泗桥发起猛烈攻击，吴 佩孚亲临督战，双方互有胜负，汀泗桥几度易手，２７日张发奎亲 督三十五团和叶挺独立团占领汀泗桥。之后双方又在贺胜桥展开 激烈的白刃战，８月２９日北伐军第４军和第７军取得贺胜桥大捷 ，８月３１日，大军集结武昌城下。９月初北伐军向武汉三镇发动 攻势，６日、７日分别占领汉阳、汉口。１０日北伐军占领武昌， 吴佩孚率残部逃往河南信阳。 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 2 month = april year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "战绩辉煌 "
+      		command = { type = dissent value = -5 }
+		command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 2 }
+		command = { type = attrition_mod value = 1 }
+		command = { type = supply_dist_mod value = 1 }
+		command = { type = repair_mod value = 1 }
+		command = { type = trigger which = 63904 }
+#		command = { type = trigger which = 200502 value = 1 }
+		command = { type = trigger which = 200600 }
+		command = { type = trigger which = 200022 }
+		command = { type = construct which = land_fort where = 2659 value = -5 }
+        command = { type = construct which = land_fort where = 1232 value = -3 }
+        command = { type = construct which = land_fort where = 1253 value = -3 }
+        command = { type = sleepevent which = 1012 }
+        command = { type = add_corps which = "國民革命軍第十五軍 " value = land where = 1253 }
+        command = { type = activate_division which = 22000 value = 100099 when = 1 where = 1253 }
+        command = { type = activate_division which = 22000 value = 100100 when = 1 where = 1253 }
+        command = { type = activate_division which = 22000 value = 100101 when = 1 where = 1253 }
+        command = { type = damage_division which = 22000 value = -1 where = -75 } 
+        command = { type = damage_division which = 22000 value = -1 where = -75 } 
+ }
+}
+event = {
+	id = 200013
+	random = no
+	country = CHI
+
+	trigger = {
+		war = ( country = CHI country = U06 }
+		control = { province = 1251 data = CHI }
+#		land_combat = 1251
+	}
+
+	name = "激烈的南昌争夺战 "
+	desc = "1926年9月19日，北伐军在南昌城内的工人、学生及江西 省警备队的配合下，一举攻占了南昌。孙传芳闻南昌失守，大为 震惊。9月21日，孙由南京赶到九江亲自督战。并迅即调遣精 锐部队第一、第二、第十三个方面军从南北反攻，并明令邓如琢 于48小时内收复南昌。 "
+	style = 0
+	picture = "nanchangzhiyi"
+
+	date = { day = 9 month = may year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "打倒孙传芳 "
+		command = { type = morale which = land value = 1 }
+		command = { type = trigger which = 200601 }
+		}
+}
+event = {
+	id = 200014
+	random = no
+	country = CHI
+
+	trigger = {
+		control = { province = 1251 data = CHI }
+		control = { province = 1252 data = CHI }
+		event = 200013
+		not = { land_combat = 1251 }
+	}
+
+	name = "北伐军控制九江、南昌 "
+	desc = "经过反复争夺，北伐军彻底控制了九江、南昌，并摧毁了孙传芳部的主力。 "
+	style = 0
+	picture = "nanchangzhiyi"
+
+	date = { day = 9 month = may year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "战绩辉煌 "
+      		command = { type = dissent value = -5 }
+		command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 2 }
+		command = { type = attrition_mod value = 1 }
+		command = { type = supply_dist_mod value = 1 }
+		command = { type = repair_mod value = 1 }
+		command = { type = trigger which = 63904 }
+#		command = { type = trigger which = 200602 }
+        command = { type = sleepevent which = 1013 }
+        command = { type = add_corps which = "國民革命軍第十四軍 " value = land where = 1251 }
+        command = { type = activate_division which = 22000 value = 100103 when = 1 where = 1251 }
+        command = { type = activate_division which = 22000 value = 100104 when = 1 where = 1251 }
+        command = { type = damage_division which = 22000 value = 100064 where = -75 } 
+        command = { type = damage_division which = 22000 value = 100065 where = -75 }
+		command = { type = damage_division which = 22000 value = 100066 where = -75 }
+		command = { type = damage_division which = 22000 value = 100067 where = -75 }
+		command = { type = damage_division which = 22000 value = 100068 where = -75 }
+		command = { type = damage_division which = 22000 value = 100069 where = -75 } 
+		command = { type = damage_division which = 22000 value = 100071 where = -75 } 
+		command = { type = damage_division which = 22000 value = 100072 where = -75 } 
+		command = { type = damage_division which = 22000 value = 100073 where = -75 }
+		command = { type = damage_division which = 22000 value = 100074 where = -75 }
+		command = { type = damage_division which = 22000 value = 100075 where = -75 } }
+}
+event = {
+	id = 200015
+	random = no
+	country = CHI
+
+	trigger = {
+		control = { province = 1244 data = CHI }
+		event = 200600
+	}
+
+	name = "北伐军攻占福州 "
+	desc = "北伐军攻占福州，福建已经在我们的掌控下了 "
+	style = 0
+	picture = "beifa"
+
+	date = { day = 9 month = may year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "战绩辉煌 "
+      		command = { type = dissent value = -3 }
+		command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 1 }
+		command = { type = attrition_mod value = 1}
+		command = { type = supply_dist_mod value = 1 }
+		command = { type = repair_mod value = 1 }
+		command = { type = trigger which = 63908 }
+#		command = { type = trigger which = 200603 }
+        command = { type = sleepevent which = 1014 }
+        command = { type = add_corps which = "國民革命軍第十七軍 " value = land where = 1244 }
+        command = { type = activate_division which = 22000 value = 100105 when = 1 where = 1244 }
+        command = { type = activate_division which = 22000 value = 100106 when = 1 where = 1244 }
+        command = { type = activate_division which = 22000 value = 100107 when = 1 where = 1244 }		
+        command = { type = damage_division which = 22000 value = 100061 where = -75 } 
+        command = { type = damage_division which = 22000 value = 100062 where = -75 } 
+		command = { type = damage_division which = 22000 value = 100063 where = -75 } 
+        command = { type = damage_division which = 22000 value = 100126 where = -75 } 
+        command = { type = damage_division which = 22000 value = 100127 where = -75 } }
+}
+event = {
+	id = 200016
+	random = no
+	country = chi
+
+	name = "鎮嵩軍投降 "
+	desc = "１９２６年４月９日冯玉祥发动政变，逼走段祺瑞，但军事上失 利，不得不撤出北京，后赴苏联考察，同年回国。国民军在南口 坚守四个月后，于８月退回西北，９月１７日冯在绥远五原誓师 ，任国民革命军联军（后改国民革命军第二集团军）司令，宣布所部加 入国民党。在击溃刘镇华的镇嵩军之后，出潼关参加北伐。 "
+	style = 0
+	picture = "wuyuanshishi"
+
+
+	action_a = {
+		name = "这将大大增强我们的力量 "
+		command = { type = secedeprovince which = U03 value = 1887 }
+		command = { type = secedeprovince which = U03 value = 1270 }
+		command = { type = secedeprovince which = U03 value = 1267 }
+		command = { type = secedeprovince which = U03 value = 1228 }
+		command = { type = secedeprovince which = U03 value = 2781 }
+		command = { type = secedeprovince which = U03 value = 2782 }
+		command = { type = secedeprovince which = U03 value = 2786 }
+		command = { type = secedeprovince which = U03 value = 2787 }
+}
+}
+
+event = {
+	id = 200017
+	random = no
+	country = chi
+
+	name = "太原誓師 "
+	desc = "1926年北伐戰爭起，12月，閻錫山請求加入國 民革命軍。1927年1月，蔣介石提請任命閻錫山 為國民革命軍北路總司令。6月，閻錫山通電 擁護三民主義，除五色旗，改懸青天白日紅旗， 被任命為國民革命軍第三集團軍司令，對張作 霖作戰。"
+	style = 0
+	action_a = {
+		name = "这将大大增强我们的力量 "
+		ai_chance = 100 
+		command = { type = alliance which = CSX }
+        command = { type = access which = CSX }	
+		command = { type = setflag which = CSXjoinTNE }		
+    }
+	action_b = {
+		name = "不需要 "
+		ai_chance = 0 
+		command = { }
+    }
+}
+
+event = {
+	id = 200018
+	random = no
+	country = CHI
+
+	name = "北伐军佔領杭州 "
+	desc = "北伐军佔領杭州，浙江已经在我们的掌控下了 "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+		name = "战绩辉煌 "
+      		command = { type = dissent value = -3 }
+		command = { type = supplies value = 1000 }
+		command = { type = morale which = land value = 2 }
+		command = { type = attrition_mod value = 1 }
+		command = { type = supply_dist_mod value = 1 }
+		command = { type = repair_mod value = 1 }
+		command = { type = trigger which = 63908 }
+        command = { type = add_corps which = "國民革命軍第十九軍 " value = land where = 1238 }
+        command = { type = activate_division which = 22000 value = 100108 when = 1 where = 1238 }
+        command = { type = activate_division which = 22000 value = 100109 when = 1 where = 1238 }
+        command = { type = add_corps which = "國民革命軍第二十六軍 " value = land where = 1238 }
+        command = { type = activate_division which = 22000 value = 100110 when = 1 where = 1238 }
+        command = { type = activate_division which = 22000 value = 100111 when = 1 where = 1238 }
+        command = { type = activate_division which = 22000 value = 100112 when = 1 where = 1238 }
+#		command = { type = trigger which = 200609 }              
+	}
+}
+
+
+event = {
+	id = 200019
+	random = no
+	country = CHI
+
+
+	name = "北伐军佔領長江下游 "
+	desc = "北伐军佔領長江下游，南京，上海已经在我们的掌控下了 "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+		name = "战绩辉煌 "
+      	command = { type = dissent value = -5 }
+		command = { type = supplies value = 2000 }
+		command = { type = morale which = land value = 3 }
+		command = { type = attrition_mod value = 2 }
+		command = { type = supply_dist_mod value = 2 }
+		command = { type = repair_mod value = 2 }
+        command = { type = sleepevent which = 1015 }
+		command = { type = trigger which = 63904 }
+#		command = { type = trigger which = 200610 }             
+        command = { type = add_corps which = "國民革命軍第二十七軍 " value = land where = 1235 }
+        command = { type = activate_division which = 22000 value = 100113 when = 1 where = 1235 }
+        command = { type = activate_division which = 22000 value = 100114 when = 1 where = 1235 }
+                command = { type = activate_division which = 22000 value = 100115 when = 1 where = 1235 }
+              	command = { type = add_corps which = "國民革命軍第三十七軍 " value = land where = 1235 }
+                command = { type = activate_division which = 22000 value = 100116 when = 1 where = 1235 }
+                command = { type = activate_division which = 22000 value = 100117 when = 1 where = 1235 }
+                command = { type = activate_division which = 22000 value = 100118 when = 1 where = 1235 }
+#              	command = { type = add_corps which = "國民革命軍新編第三軍 " value = land where = 1235 }
+#               command = { type = activate_division which = 22000 value = 100119 when = 1 where = 1235 }
+#               command = { type = activate_division which = 22000 value = 100120 when = 1 where = 1235 }
+              	command = { type = add_corps which = "國民革命軍暫編第十一軍 " value = land where = 1235 }
+                command = { type = activate_division which = 22000 value = 100121 when = 1 where = 1235 }
+                command = { type = activate_division which = 22000 value = 100122 when = 1 where = 1235 }
+                command = { type = activate_division which = 22000 value = 100123 when = 1 where = 1235 }
+#              	command = { type = activate_division which = 22000 value = 100124 when = 1 where = 1235 }
+#              	command = { type = activate_division which = 22000 value = 100125 when = 1 where = 1235 }
+                command = { type = construct which = land_fort where = 1233 value = -5 }
+                command = { type = construct which = land_fort where = 1235 value = -5 }
+                command = { type = construct which = land_fort where = 1237 value = -5 }
+                command = { type = construct which = land_fort where = 1238 value = -5 }		}
+}
+
+event = {
+	id = 200020
+	random = no
+	country = chi
+	trigger = { event = 200007 
+            	control = { province = 1232 data = CHI }     }
+
+ 
+	name = "國民革命軍第十一軍成立 "
+	desc = "北伐期間第四軍屬有戰功，被稱爲“鐵軍”。攻克武漢後第十師擴編爲第十一軍。陳銘樞任軍長。 "
+	style = 0
+
+	date = { day = 1 month = march year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "國民革命軍萬歲 "
+	command = { type = add_corps which = "國民革命軍第十一軍 " value = land when = 12086 where = 1232 }
+    	command = { type = activate_division which = 22000 value = 100082 where = 1232 when = 1 }
+    	command = { type = activate_division which = 22000 value = 100083 where = 1232 when = 1 }
+
+}
+}    
+
+event = {
+	id = 200021
+	random = no
+	country = chi
+ 
+	name = "土地改革 "
+	desc = "1926年7月北伐軍攻克湖南長沙之後， 共產黨和國民黨左派在湖南實行所謂土地改革， 進行所謂階級鬥爭，消滅有產者；「隨即展開階級鬥爭和屠殺政策， 如長沙工商界鉅子金裕華、軍界聞人李佑文、 以及素有文名久與章太炎齊名的葉德輝， 都被開會公審加以罪名，予以就地槍決。 "
+	style = 0
+
+	action_a = {
+		name = "靜觀其變 "
+        command = { type = dissent value = 5 }
+		command = { type = morale which = land value = -3 }
+		command = { type = domestic which = political_left value = 1 }
+	    command = { type = free_money value = -1 }
+}
+}    
+
+event = {
+  	id = 200022
+  	random = no
+  	country = CHI
+  
+  	name = "孙传芳参战 "
+  	desc = "貼心提醒:不用過早攻入安徽或浙江，否則會引來奉系參戰。 可先在邊境修整後再進攻。"
+  	style = 0
+
+  	action_a = {
+     		name = " "
+		command = {  }
+     }
+}
+
+###################
+#桂系事件
+###################
+##########################
+#1926年       210000~
+##########################
+event = {
+	id = 210000
+	random = no
+	country = cgx
+	trigger = { 
+			event = 100023 
+			alliance = { country = -1 country = CHI }
+     }
+ 
+	name = "改編國民革命軍 "
+	desc = "1926年3月，受廣州國民政府改編為 國民革命軍第七軍，李宗仁任軍長， 黃紹竑任黨代表，白崇禧任參謀長，全軍4萬餘人。 中國共產黨黨員黃日葵一度出任第七軍政治部主任。"
+	style = 0
+
+	date = { day = 1 month = march year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "改編 "
+   		command = { type = change_idea which = policy_political_Three-Principles value = cgx }
+		command = { type = relation which = CHI value = 10 }
+		command = { type = morale which = land value = 5 }
+		command = { type = add_corps which = "國民革命軍第七軍 " value = land when = 14001 where = 1258 }
+		command = { type = activate_division which = 15054 value = 5 when = 1 }
+    	command = { type = activate_division which = 15054 value = 6 when = 1 }
+    	command = { type = activate_division which = 15054 value = 7 when = 1 }
+    	command = { type = activate_division which = 15054 value = 8 when = 1 }
+    	command = { type = activate_division which = 15054 value = 9 when = 0 }
+    	command = { type = activate_division which = 15054 value = 10 when = 0 }
+    	command = { type = activate_division which = 15054 value = 11 when = 0 ]
+    	command = { type = activate_division which = 15054 value = 12 when = 0 }
+    	command = { type = activate_division which = 15054 value = 13 when = 0 }
+    	command = { type = activate_division which = 15054 value = 14 when = 0 }
+    	command = { type =  remove_division which = 15054 value = 1 } 
+    	command = { type =  remove_division which = 15054 value = 2 }
+    	command = { type =  remove_division which = 15054 value = 3 }
+    	command = { type =  remove_division which = 15054 value = 4 }
+		command = { type = setflag which = CGXjoinTNE }
+}
+}    
+event = {
+	id = 210001
+	random = no
+	country = CGX      
+    trigger = { event = 200012 }
+    name = "擴軍 "
+	desc = " "
+	style = 0
+
+	date = { day = 5 month = january year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "國民革命軍萬歲 "  
+	    command = { type = add_corps which = "國民革命軍第18軍" value = land where = 1232 }
+        command = { type = add_division which = "第56師 " value = infantry when = 15 }
+        command = { type = add_division which = "第57師 " value = infantry when = 15 }
+        command = { type = add_division which = "第58師 " value = infantry when = 15 }  
+        command = { type = add_corps which = "桂系第17軍" value = land where = 1232 }
+        command = { type = add_division which = "第17軍第一師 " value = infantry when = 15 }
+        command = { type = add_division which = "第17軍第二師 " value = infantry when = 15 }
+        command = { type = add_division which = "第17軍第三師 " value = infantry when = 15 }
+        command = { type = add_corps which = "桂系第15軍" value = land where = 1258 }
+        command = { type = add_division which = "第15軍第一師 " value = infantry when = 15  }
+        command = { type = add_division which = "第15軍第二師 " value = infantry when = 15  }
+        command = { type = add_division which = "第15軍第三師 " value = infantry when = 15  }                            
+		command = { type =  remove_division which = 15054 value = 9 } 
+		command = { type =  remove_division which = 15054 value = 10 }
+		command = { type =  remove_division which = 15054 value = 11 }
+		command = { type =  remove_division which = 15054 value = 12 }
+		command = { type =  remove_division which = 15054 value = 13 } 
+        command = { type = damage_division which = 15054 value = 5 where = -60 }
+        command = { type = damage_division which = 15054 value = 6 where = -60 }
+        command = { type = damage_division which = 15054 value = 7 where = -60 }
+        command = { type = damage_division which = 15054 value = 8 where = -60 } } }
+
+
+###################
+#中共事件
+###################
+##########################
+#1926年       220000~
+##########################
+event = {
+	id = 220000
+	random = no
+	country = CHC
+
+	name = "中国国民党第二次全国代表大会 "
+	desc = "中国国民党第二次全国代表大会，１９２６年１月４日至１９日 在广州举行。汪精卫、蒋介石、李大钊、毛泽东、张国焘、周恩 来均出席了这次会议。陈独秀留在上海没有参加。苏联顾问鲍罗 廷对该会影响重大。到会代表２６５人，国民党左派和共产党员 占优势。大会议决接受“总理遗嘱”和“一大”所定的政纲，重申 了反帝反军阀的政治主张。 "
+	style = 0
+	picture = "dahui"
+
+	action_a = {
+		name = "打倒列强除军阀！ "
+		command = { type = relation which = CHI value = 20 }
+		command = { type = domestic which = political_left value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		}
+}
+event = {
+	id = 220001
+	random = no
+	country = CHC
+
+	name = "大沽口事件 "
+	desc = "大沽口事件发生后，国共两党召开联席会议，针对最后通牒，一致 通过：即日驳复通牒、不许日舰带奉舰入港、驱逐８国公使离京等 决议。同时，会议决定请国民军改变作战目的，为废除不平等条 约而战。 "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "不能任人宰割！ " 
+		command = { type = dissent value = -3 }
+		command = { type = relation which = U13 value = -30 }
+		command = { type = relation which = JAP value = -40 }
+		command = { type = relation which = USA value = -40 }
+		command = { type = relation which = ENG value = -40 }
+		command = { type = relation which = FRA value = -40 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		}
+}
+event = {
+	id = 220002
+	random = no
+	country = CHC
+
+	name = "中山舰事件 "
+	desc = "１９２６年３月２０日，开始执行反共政策的蒋介石，设计将中 山舰调出广州，随后又以该舰未接命令擅自移动为名诬其阴谋暴动，随 即下令逮捕舰长李之龙（中共党员），并展开一系列的清共行动。 史称“中山舰事件”。 "
+	style = 0
+	picture = "zhongshanjian"
+
+	action_a = {
+		name = "难以置信！ "
+		command = { type = relation which = CHI value = -40 }
+		command = { type = end_puppet }
+		}
+}
+
+event = {
+	id = 220003
+	random = no
+	country = chc
+
+	name = "省港大罢工结束 "
+	desc = "省港大罢工是第一次国共合作下国共两党共同领导的一次成功的反 帝斗争运动。省港大罢工持续16个月，是世界工人运动史上时 间最长的一次罢工。为了支援北伐战争，1926年10月初，罢工工人代 表大会决定停止罢工。10日，罢工委员会召集群众大会，宣告罢工胜 利结束，并宣布停止对香港的封锁。 "
+	style = 0
+
+	action_a = {
+		name = "正义战胜了帝国主义 " 
+		command = { type = relation which = eng value = -10 }
+		command = { type = relation which = chi value = 10 }
+		command = { type = dissent value = -3 }
+		command = { type = manpower value = 10 }
+		}
+}
+
+event = {
+	id = 220004
+	random = no
+	country = chc
+	trigger = {  
+			control = { province = 1255 data = chi }
+			event = 200006 }                  
+	
+    name = "土地改革 "
+	desc = "1926年7月北伐軍攻克湖南長沙之後， 共產黨和國民黨左派在湖南實行所謂土地改革， 進行所謂階級鬥爭，消滅有產者；「隨即展開階級鬥爭和屠殺政策， 如長沙工商界鉅子金裕華、軍界聞人李佑文、 以及素有文名久與章太炎齊名的葉德輝， 都被開會公審加以罪名，予以就地槍決。 "
+	style = 0
+	date = { day = 3 month = july year = 1926 }
+    offset = 10
+	deathdate = { day = 1 month = january year = 1930 }
+	
+	action_a = {
+		name = "打倒地主!! "
+        command = { type = dissent value = 5 }
+        command = { type = trigger which = 200021 }
+}
+}    
+
+event = {
+	id = 220005
+	random = no
+	country = chc
+
+	name = "鎮嵩軍投降 "
+	desc = "１９２６年４月９日冯玉祥发动政变，逼走段祺瑞，但军事上失 利，不得不撤出北京，后赴苏联考察，同年回国。国民军在南口 坚守四个月后，于８月退回西北，９月１７日冯在绥远五原誓师 ，任国民革命军联军（后改国民革命军第二集团军）司令，宣布所部加 入国民党。在击溃刘镇华的镇嵩军之后，出潼关参加北伐。 "
+	style = 0
+	picture = "wuyuanshishi"
+
+
+	action_a = {
+		name = "这将大大增强我们的力量 "
+    command = { type = secedeprovince which = U03 value = 1887 }
+    command = { type = secedeprovince which = U03 value = 1270 }
+    command = { type = secedeprovince which = U03 value = 1228 }
+    command = { type = secedeprovince which = U03 value = 2781 }
+    command = { type = secedeprovince which = U03 value = 2782 }
+    command = { type = secedeprovince which = U03 value = 2786 }
+    command = { type = secedeprovince which = U03 value = 2787 }
+}
+}
+###################
+#日本事件
+###################
+##########################
+#1926年       230000~
+##########################
+event = {
+	id = 230000
+	random = no
+	country = JAP
+
+	name = "大沽口事件 "
+	desc = "事件发生后，国民军向日本公使提出抗议，但日方反以破坏《辛 丑条约》为借口，公然向中国提出所谓「抗议」，并纠集《辛丑 条约》八个签字国的公使于３月１６日发出最后通牒，提出拆除 大沽口国防工事等无理要求，并限北京政府在４８小时以内答复。 １７日，八国军舰云集大沽口，对中国进行威胁。 "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "最后通牒 " 
+		ai_chance = 99
+		command = { type = relation which = U13 value = -50 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		}
+}
+
+event = {
+	id = 230001
+	random = no
+	country = JAP
+
+	trigger = { headofstate = 3000 } #大正
+
+	name = "昭和天皇登基 "
+	desc = "大正挂了，昭和上台 "
+	style = 0
+	picture = "yuren"
+
+	date = { day = 25 month = december year = 1926 }
+	offset = 1
+	deathdate = { day = 25 month = december year = 1927 }
+
+	action_a = {
+		name = "天皇陛下板载"
+		command = { type = sleepminister which = 3000 }
+		command = { type = headofstate which = 3010 } #裕仁
+	}
+}
+
+event = {	
+	id = 230002	
+	random = no	
+	country = JAP       
+	trigger = { incabinet = 3001 }
+ 
+	name = "EVT_102_NAME"	
+	desc = "EVT_102_DESC"	
+	style = 0
+	
+	date = { day = 27 month = january year = 1926 }	
+	offset = 1	
+	deathdate = { day = 4 month = march year = 1926 }
+	
+	action_a = {
+		name = "內閣改組 " 
+      		command = { type = sleepminister which = 3001 } #      
+      		command = { type = headofgovernment which = 3013 } #若槻禮次郎   
+      		command = { type = ministerofsecurity which = 3025 } #滨口雄幸
+		}
+}
+
+event = {
+	
+	id = 230003	
+	random = no
+	country = JAP       
+#	trigger = { incabinet = 3001 }
+
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	style = 0
+	
+	date = { day = 1 month = march year = 1926 }
+	offset = 1
+	deathdate = { day = 4 month = march year = 1926 }
+
+	action_a = {	
+		name = "內閣改組 " 
+      	command = { type = chiefofstaff which = 3006 } #铃木庄六    
+		}	
+}
+
+###################
+#英国事件
+###################
+##########################
+#1926年       240000~
+##########################
+event = {
+	id = 240000
+	random = no
+	country = ENG
+
+	name = "大沽口事件 "
+	desc = "事件发生后，国民军向日本公使提出抗议，但日方反以破坏《辛 丑条约》为借口，公然向中国提出所谓「抗议」，并纠集《辛丑 条约》八个签字国的公使于３月１６日发出最后通牒，提出拆除 大沽口国防工事等无理要求，并限北京政府在４８小时以内答复。 １７日，八国军舰云集大沽口，对中国进行威胁。 "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "最后通牒 " 
+		ai_chance = 99
+		command = { type = relation which = U13 value = -50 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		}
+}
+
+event = {
+	id = 240001
+	random = no
+	country = ENG
+        
+	trigger = { event = 100015 } 
+
+	name = "省港大罢工结束 "
+	desc = "省港大罢工是第一次国共合作下国共两党共同领导的一次成功的反 帝斗争运动。省港大罢工持续16个月，是世界工人运动史上时 间最长的一次罢工。为了支援北伐战争，1926年10月初，罢工工人代 表大会决定停止罢工。10日，罢工委员会召集群众大会，宣告罢工胜 利结束，并宣布停止对香港的封锁。 "
+	style = 0
+        
+	date = { day = 10 month = october year = 1926 }
+	offset = 1
+	deathdate = { day = 10 month = october year = 1927 }
+
+	action_a = {
+		name = "噩梦结束 " 
+		command = { type = relation which = chi value = -10 }
+		command = { type = relation which = chc value = -10 }
+                command = { type = construct which = infrastructure where = 1315 value = 60 } 
+                command = { type = construct which = ic where = 1315 value = 1 } 
+		command = { type = free_money value = 2 }
+                command = { type = trigger which = 220003 }
+                command = { type = trigger which = 200010 }
+		}
+}
+
+event = {
+	id = 240002
+	random = no
+	country = eng
+        
+	trigger = { exists = eng } 
+
+	name = "万县惨案 "
+	desc = "9月5日下午5時許，「嘉禾」輪上20餘名英水兵跳上 「萬縣」輪砍纜，並先開槍擊斃守船士兵2人，遭守船楊森部川軍還擊， 上船英兵退回。6時許，英兵登上「萬通」輪，遭川軍猛烈還擊， 英遠東艦隊司令達爾禮被當場擊斃。7時許，英艦「嘉禾」號、 「威警」號和「柯克捷夫」號隨即進迫萬縣江岸，並開炮轟擊萬縣市區近3個小時， 發射炮彈和燃燒彈300餘發，萬縣中國軍民死傷以千計， 民房商店被毀千餘家，造成了「萬縣慘案」。 "
+	style = 0
+ 
+	date = { day = 4 month = september year = 1926 }
+	offset = 1
+	deathdate = { day = 29 month = august year = 1927 }
+
+	action_a = {
+		name = "他们不配与我们谈条件 "
+		command = { type = dissent value = -1 }
+    		command = { type = relation which = u07 value = -100 }
+    		command = { type = trigger which = 200100 }
+    		command = { type = trigger which = 200700 }
+		}
+}
+
+###################
+#西北三马事件
+###################
+##########################
+#1926年       250000~
+##########################
+
+###################
+#晋系事件
+###################
+##########################
+#1926年       260000~
+##########################
+event = {
+  	id = 260000
+  	random = no
+  	country = csx
+  
+  	name = "联合反冯密约 "
+  	desc = "冯玉祥国民军趁着郭松龄内乱之际，夺取了京兆之地，张作霖将 之视为心腹大患，暗暗联络各地，准备联合反冯。 "
+  	style = 0
+
+  	action_a = {
+     		ai_chance = 99
+     		name = "缔结密约 "
+     		command = { type = relation which = u02 value = 30 }
+     		}
+  	action_b = {
+     		ai_chance = 1
+     		name = "张作霖小子不安好心 "
+     		command = { type = sleepevent which = 260001 }
+     		}
+}
+event = {
+  	id = 260001
+  	random = no
+  	country = csx
+  
+  	name = "联合反冯 "
+  	desc = "密约达成，联军开始进攻国民军。 "
+  	style = 0
+  	action_a = {
+     		name = "进攻 "
+     		command = { type = war which = u03 }
+     		command = { type = dissent value = -10 }
+     		}
+}
+
+event = {
+	id = 260002
+	random = no
+	country = csx
+        
+	trigger = {	
+		war = { country = chi country = u02 } 
+        event = 200204
+        control = { province = 1235 data = CHI }
+        control = { province = 1237 data = CHI } } 
+
+	name = "局勢改變 "
+	desc = "在直奉同盟之際，閻錫山也加入了對國民軍的圍攻。 但北伐開始後，閻錫山感到勢逐漸變化為對北 伐軍有利。於是藉由從前與同盟會的關係，從奉軍 一方搖身一變為國民革命軍第三集團軍司令，轉而 與馮玉祥並肩對奉軍作戰。 "
+	style = 0
+        
+	date = { day = 1 month = october year = 1926 }
+	offset = 1
+	deathdate = { day = 10 month = october year = 1930 }
+
+	action_a = {
+		name = "接觸北伐軍 " 	
+        command = { type = leave_alliance }
+        command = { type = add_division value = infantry when = 15 }
+        command = { type = add_division value = infantry when = 15 }
+        command = { type = add_division value = infantry when = 15 }
+        command = { type = local_setflag which = CSXobserve }
+		}
+}
+
+event = {
+	id = 260003
+	random = no
+	country = csx
+
+	name = "奪取綏遠 "
+	desc = "经过三个多月的激战，冯军被击败，退守西北地区。 阎锡山乘势将国民军韩复榘、石友三、陈希圣等部收编，编为自己的三个师， 还派商震率部一路追杀，攻至绥远城。这样，阎锡山的地盘由山西扩大至绥远。 随即，他着手进行山西第二次扩军，把部队扩充为十七个师又八个炮兵团， 军队亦改名为晋绥军。 "
+	style = 0
+
+	action_a = {
+		name = "趁機擴軍 " 
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 3 }
+     		command = { type = add_corps which = "晉綏軍第十一军 " value = land where = 1207 }
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_corps which = "晉綏軍第十二军 " value = land where = 1208 }
+     		command = { type = add_division value = infantry when = 7 }
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = infantry when = 7  }
+    		command = { type = secedeprovince which = U02 value = 1206 }
+    		command = { type = secedeprovince which = U02 value = 1595 }
+    		command = { type = secedeprovince which = U02 value = 2947 }
+    		command = { type = secedeprovince which = U02 value = 2944 }
+    		command = { type = secedeprovince which = U02 value = 2942 }
+    		command = { type = secedeprovince which = U02 value = 2943 }
+    		command = { type = secedeprovince which = U02 value = 1386 }
+    		command = { type = secedeprovince which = U02 value = 2941 }
+    		command = { type = secedeprovince which = U02 value = 2939 }
+    		command = { type = secedeprovince which = U02 value = 2940 }
+    		command = { type = secedeprovince which = U02 value = 1398 }
+    		command = { type = secedeprovince which = U02 value = 1397 }
+    		command = { type = secedeprovince which = U02 value = 2882 }
+    		command = { type = secedeprovince which = U02 value = 2886 }
+    		command = { type = secedeprovince which = U02 value = 2946 }
+    		command = { type = secedeprovince which = U02 value = 2945 }
+    		command = { type = secedeprovince which = U02 value = 2879 }
+    		command = { type = secedeprovince which = U02 value = 2878 }
+    		command = { type = secedeprovince which = U02 value = 1388 }
+    		command = { type = secedeprovince which = U02 value = 2881 }
+    		command = { type = secedeprovince which = U02 value = 2880 }
+    		command = { type = secedeprovince which = U02 value = 2883 }
+    		command = { type = secedeprovince which = U02 value = 2884 }
+    		command = { type = secedeprovince which = U02 value = 2885 }
+    		command = { type = secedeprovince which = U02 value = 1205 }
+    		command = { type = secedeprovince which = U02 value = 1204 }
+    		command = { type = secedeprovince which = U02 value = 2875 }
+    		command = { type = secedeprovince which = U02 value = 2876 }
+    		command = { type = secedeprovince which = U02 value = 2874 }
+    		command = { type = secedeprovince which = U02 value = 1203 }
+    		command = { type = secedeprovince which = U02 value = 2873 }
+			command = { type = secedeprovince which = U02 value = 2872 }
+    		command = { type = secedeprovince which = U02 value = 2871 }
+    		command = { type = secedeprovince which = U02 value = 1810 }
+    		command = { type = secedeprovince which = U02 value = 2866 }
+    		command = { type = secedeprovince which = U02 value = 2865 }
+    		command = { type = secedeprovince which = U02 value = 1210 }
+    		command = { type = secedeprovince which = U02 value = 2870 }
+    		command = { type = secedeprovince which = U02 value = 2869 }
+    		command = { type = secedeprovince which = U02 value = 2867 }
+    		command = { type = secedeprovince which = U02 value = 1211 }
+    		command = { type = secedeprovince which = U02 value = 2868 }
+    		command = { type = secedeprovince which = U02 value = 2992 }
+    		command = { type = secedeprovince which = U02 value = 2993 }
+    		command = { type = secedeprovince which = U02 value = 1212 }
+    		command = { type = secedeprovince which = U02 value = 2994 }
+    		command = { type = secedeprovince which = U02 value = 1811 }
+    		command = { type = secedeprovince which = U02 value = 1206 }
+    		command = { type = secedeprovince which = U02 value = 2673 }
+			command = { type = secedeprovince which = U02 value = 2748 }
+    		command = { type = secedeprovince which = csx value = 1207 }
+    		command = { type = secedeprovince which = csx value = 1208 }
+    		command = { type = secedeprovince which = U11 value = 2851 }
+    		command = { type = secedeprovince which = csx value = 2815 }
+    		command = { type = secedeprovince which = U11 value = 2850 }
+    		command = { type = secedeprovince which = csx value = 2816 }
+
+    		command = { type = secedeprovince which = csx value = 2817 }
+
+    		command = { type = secedeprovince which = csx value = 2785 }
+    		command = { type = secedeprovince which = csx value = 2813 }
+
+
+         	command = { type = secedeprovince which = U05 value = 1230 } 
+         	command = { type = secedeprovince which = U05 value = 2848 }
+         	command = { type = secedeprovince which = U05 value = 2847 }
+         	command = { type = secedeprovince which = U05 value = 1876 }
+         	command = { type = secedeprovince which = U05 value = 2849 }
+         	command = { type = secedeprovince which = U05 value = 1223 }
+         	command = { type = secedeprovince which = U05 value = 1224 } 
+         	command = { type = secedeprovince which = U05 value = 2838 } 
+         	command = { type = secedeprovince which = U05 value = 2839 } 
+         	command = { type = secedeprovince which = U05 value = 1227 } 
+         	command = { type = secedeprovince which = U05 value = 1228 } #以下原U17
+         	command = { type = secedeprovince which = U05 value = 1229 }
+         	command = { type = secedeprovince which = U05 value = 2844 }
+         	command = { type = secedeprovince which = U05 value = 2845 }
+         	command = { type = secedeprovince which = U05 value = 2846 } 
+         	command = { type = secedeprovince which = U05 value = 2840 }
+         	command = { type = secedeprovince which = U05 value = 2841 }
+         	command = { type = secedeprovince which = U05 value = 2842 }
+         	command = { type = secedeprovince which = U05 value = 2843 }
+     		command = { type = independence which = u18 value = 1 }
+         	command = { type = leave_alliance }	}
+}
+
+event = {
+	id = 260004
+	random = no
+	country = csx
+        
+	trigger = { 
+			local_flag = CSXobserve 
+			or = { 	event = 9999934
+					event = 9999930 }
+            not = { control = { province = 1228 data = U02 } }
+            not = { control = { province = 1218 data = U02 } }#徐州
+} 
+
+	name = "太原誓師 "
+	desc = "在直奉同盟之際，閻錫山也加入了對國民軍的圍攻。 但北伐開始後，閻錫山感到勢逐漸變化為對北 伐軍有利。於是藉由從前與同盟會的關係，從奉軍 一方搖身一變為國民革命軍第三集團軍司令，轉而 與馮玉祥並肩對奉軍作戰。 "
+	style = 0
+        
+	date = { day = 1 month = october year = 1926 }
+	offset = 1
+	deathdate = { day = 10 month = october year = 1930 }
+
+	action_a = {
+		name = "加入北伐 " 
+        command = { type = trigger which = 200017 }	
+        command = { type = chiefofair which = 16028 }
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 3 }
+        command = { type = access which = CHI }
+		command = { type = domestic which = interventionism value = 1 }
+		}
+	action_a = {
+		name = "保持中立 " 
+		command = { type = domestic which = interventionism value = -1 }
+		}
+}
+###################
+#美国事件
+###################
+##########################
+#1926年       270000~
+##########################
+event = {
+	id = 270000
+	random = no
+	country = USA
+
+	name = "大沽口事件 "
+	desc = "事件发生后，国民军向日本公使提出抗议，但日方反以破坏《辛 丑条约》为借口，公然向中国提出所谓「抗议」，并纠集《辛丑 条约》八个签字国的公使于３月１６日发出最后通牒，提出拆除 大沽口国防工事等无理要求，并限北京政府在４８小时以内答复。 １７日，八国军舰云集大沽口，对中国进行威胁。 "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "最后通牒 " 
+		ai_chance = 99
+		command = { type = relation which = U13 value = -50 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		}
+}
+###################
+#法国事件
+###################
+##########################
+#1926年       280000~
+##########################
+event = {
+	id = 280000
+	random = no
+	country = FRA
+
+	name = "大沽口事件 "
+	desc = "事件发生后，国民军向日本公使提出抗议，但日方反以破坏《辛 丑条约》为借口，公然向中国提出所谓「抗议」，并纠集《辛丑 条约》八个签字国的公使于３月１６日发出最后通牒，提出拆除 大沽口国防工事等无理要求，并限北京政府在４８小时以内答复。 １７日，八国军舰云集大沽口，对中国进行威胁。 "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "最后通牒 " 
+		ai_chance = 99
+		command = { type = relation which = U13 value = -50 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		}
+}
+###################
+#川康军事件
+###################
+##########################
+#1926年       200100~
+##########################
+event = {
+	id = 200100
+	random = no
+	country = U01
+	trigger = { 	
+		control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+
+	name = "刘文辉部易幟 "
+	desc = "1925年8月18日，國民政府軍事委員會 將轄下各地方軍隊名目取消，統一名 為 「國民革命軍」。由黃埔軍校訓練的 軍官組成的黃埔軍校校軍為國民革命 軍第一軍。「建國湘軍」為國民革命 軍第二軍，「建國滇軍」改為國民革 命軍第三軍，「建國粵軍」為國民革 命軍第四軍，福軍為國民革命軍第五 軍。1926年1月，改編湖南「攻鄂軍」及 「警衛軍」，和廣東「潮梅軍」等為國民革 命軍第六軍。"
+	style = 0
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+	name = "通電擁護北伐軍 "
+        command = { type = non_aggression which = chi where = U01 }
+        command = { type = relation which = chi value = 10 }
+	command = { type = add_corps which = "國民革命軍第24軍 " value = land when = 84001 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 16 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 17 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 18 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 19 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 20 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 21 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 22 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 23 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 24 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 25 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 26 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 27 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 28 when = 1 where = 2776 }
+    	command = { type = activate_division which = 20020 value = 29 when = 1 where = 2776 }
+    	command = { type =  remove_division which = 20020 value = 2 } 
+    	command = { type =  remove_division which = 20020 value = 3 }
+    	command = { type =  remove_division which = 20020 value = 4 }
+    	command = { type =  remove_division which = 20020 value = 5 }
+    	command = { type =  remove_division which = 20020 value = 6 }
+    	command = { type =  remove_division which = 20020 value = 7 }
+    	command = { type =  remove_division which = 20020 value = 8 }
+    	command = { type =  remove_division which = 20020 value = 9 }
+    	command = { type =  remove_division which = 20020 value = 10 }
+    	command = { type =  remove_division which = 20020 value = 11 }
+ 
+}
+}    
+
+event = {
+	id = 200101
+	random = no
+	country = U01
+
+	trigger = { 	
+		control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+
+	name = "刘成勋部易幟 "
+	desc = "1925年8月18日，國民政府軍事委員會 將轄下各地方軍隊名目取消，統一名 為 「國民革命軍」。由黃埔軍校訓練的 軍官組成的黃埔軍校校軍為國民革命 軍第一軍。「建國湘軍」為國民革命 軍第二軍，「建國滇軍」改為國民革 命軍第三軍，「建國粵軍」為國民革 命軍第四軍，福軍為國民革命軍第五 軍。1926年1月，改編湖南「攻鄂軍」及 「警衛軍」，和廣東「潮梅軍」等為國民革 命軍第六軍。"
+	style = 0
+
+	date = { day = 1 month = october year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "通電擁護北伐軍 "
+         	command = { type = non_aggression which = chi where = U01 }
+         	command = { type = relation which = chi value = 10 }
+		command = { type = add_corps which = "國民革命軍第23軍 " value = land when = 84011 where = 1282 }
+    		command = { type = activate_division which = 20020 value = 33 when = 1 where = 1282 }
+    		command = { type = activate_division which = 20020 value = 34 when = 1 where = 1282 }
+    		command = { type = activate_division which = 20020 value = 35 when = 1 where = 1282 }
+    		command = { type = activate_division which = 20020 value = 36 when = 1 where = 1282 }
+    		command = { type = activate_division which = 20020 value = 37 when = 1 where = 1282 }
+    		command = { type =  remove_division which = 20020 value = 13 }
+    		command = { type =  remove_division which = 20020 value = 14 }
+    		command = { type =  remove_division which = 20020 value = 15 }
+ 
+}
+}    
+###################
+#奉系事件
+###################
+##########################
+#1926年       200200~
+##########################
+event = {
+	id = 200200
+	random = no
+	country = U02
+
+	trigger = { exists = U13 }
+
+	name = "张作霖宣布东三省独立 "
+	desc = "１９２６年１月１１日，张作霖为了恢复郭松龄反戈造成的残局 和防止国民军入侵，通电全国，宣布东三省与北京政府断绝一切 行政关系，以镇威上将军名义主持东三省军政事务。２３日，东 三省法团联席会议通电，实行三省联治，推张作霖维持东北秩序 ，宣布从即日起，北京政府一切命令和约束，概不承认。２５日 ，张作霖召集重要文武官员开会，正式宣布东三省独立。 "
+	style = 0
+	picture = "zhangzuolin"
+
+	date = { day = 11 month = january year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = january year = 1926 }
+
+	action_a = {
+		name = "宣布独立 " 
+		ai_chance = 99
+		command = { type = relation which = U13 value = -100 }
+		command = { type = belligerence which = U02 value = 5 }
+		command = { type = dissent value = -3 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		}
+	action_b = {
+		name = "时机尚未成熟 " 
+		ai_chance = 1
+		command = { type = dissent value = 5 }
+		command = { type = relation which = U13 value = 20 }
+		command = { type = belligerence which = U02 value = -5 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		}
+}
+event = {
+	id = 200201
+	random = no
+	country = U02
+
+	name = "吴佩孚下野 "
+  desc = "汀泗桥、贺胜桥、武昌血战后，吴佩孚兵败两湖。为躲避蒋介石、 冯玉祥的追杀，吴佩孚打电报给曾受过其重恩的四川军阀杨森说： “我已无路可走，不论你允许与否，我都只有入川一途了。”从此， 吴佩孚流亡入川，受到杨森的庇护。 "
+   
+	style = 0
+	action_a = {
+		name = "接管河南 " 
+		command = { type = inherit which = u05 }
+                command = { type = add_corps value = land where = 1223 }
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = infantry when = 6  }	
+     		command = { type = add_division value = infantry when = 6  }	
+}
+}
+event = {
+  id = 200202
+  random = no
+  country = u02
+  trigger = { event = 100207 }
+  name = "联合反冯密约 "
+  desc = "冯玉祥国民军趁着郭松龄内乱之际，夺取了京兆之地，张作霖将 之视为心腹大患，暗暗联络各地，准备联合反冯。 "
+  style = 0
+  
+  date = { day = 30 month = february year = 1926 }
+  offset = 5
+  deathdate = { day = 1 month = may year = 1926 }
+  action_a = {
+     ai_chance = 98
+     name = "联络阎锡山和吴佩孚 "
+     command = { type = trigger which = 260000 value = 1 }
+     command = { type = trigger which = 200504 value = 1 }
+     }
+	 
+  action_b = {
+     ai_chance = 1
+     name = "我们将独自战胜冯玉祥 "
+     command = { type = war which = u03 }
+     }
+	 
+  action_c = {
+     ai_chance = 1
+     name = "还是算了吧 "
+     command = { }
+     }
+}
+event = {
+  id = 200203
+  random = no
+  country = u02
+  trigger = { event = 260000
+              event = 200504 }
+  
+  name = "联合反冯 "
+  desc = "冯玉祥国民军趁着郭松龄内乱之际，夺取了京兆之地，张作霖将 之视为心腹大患，暗暗联络各地，准备联合反冯。 "
+  style = 0
+  date = { day = 1 month = march year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = july year = 1926 }
+  action_a = {
+     name = "进攻 "
+     command = { type = war which = u03 }
+     command = { type = dissent value = -10 }
+     command = { type = add_corps which = "东北陆军第十八军 " value = land where = 2942 }
+     command = { type = add_division value = infantry when = 7 where = police }
+     command = { type = add_corps which = "东北陆军第十九军 " value = land where = 2945 }
+     command = { type = add_division value = infantry when = 7 where = police }
+     command = { type = trigger which = 260001 }
+     command = { type = trigger which = 200505 }
+
+     }
+}
+
+event = {
+  id = 200204
+  random = no
+  country = u02
+  
+  name = "出兵接防 "
+  desc = "1926年4月，直奉軍閥聯合進攻國民軍，馮玉祥被迫率國民軍退往綏遠。 張作霖再次控制了北京政府。1926年11月29日，經張宗昌、 孫傳芳二人帶頭「勸進」，由直、魯、豫、蘇、皖、贛、浙、閩、 陝、晉、察、熱、綏、吉、黑十五省區推戴的形式，推舉張 作霖為安國軍總司令。 "
+  style = 0
+  action_a = {
+     name = "出發 "
+     		command = { type = dissent value = -5 }
+#     		command = { type = inherit which = U06 }
+#     		command = { type = morale which = land value = 3 }
+            command = { type = access which = U06 }
+     		command = { type = add_corps value = land  where = 1235 } 
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = militia when = 3  }
+#     		command = { type = add_division value = militia when = 3  }
+     		command = { type = add_corps value = land  where = 1238 } 
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = militia when = 3  }
+#     		command = { type = add_division value = militia when = 3  }
+     		command = { type = add_corps value = land  where = 1237 } 
+     		command = { type = add_division value = infantry when = 7  }
+     		command = { type = add_division value = militia when = 3  }
+#     		command = { type = add_division value = militia when = 3  }
+#     		command = { type = trigger which = 200205 value = 5 }
+ 		}
+}
+
+event = {
+  id = 200205
+  random = no
+  country = u02
+   trigger = {  event = 200204  
+#		event = 200609 
+#               areacontrol = { province = 1238 data = chi }
+               	areacontrol = { province = 1244 data = chi }
+               	areacontrol = { province = 1251 data = chi }
+           	or = {  control = { province = 1885 data = chi }
+ 			control = { province = 2647 data = chi }
+  			control = { province = 2645 data = chi }
+  			control = { province = 2644 data = chi }
+  			control = { province = 2643 data = chi }
+  			control = { province = 2641 data = chi }
+  			control = { province = 1241 data = chi }
+  			control = { province = 1240 data = chi }
+	           	garrison = { country = CHI province = 1221 type = land size = 1 area = no }
+	           	garrison = { country = CHI province = 2649 type = land size = 1 area = no }
+	           	garrison = { country = CHI province = 2616 type = land size = 1 area = no } } 
+}
+
+  	name = "成立安國軍 "
+  	desc = "1926年4月，直奉軍閥聯合進攻國民軍，馮玉祥被迫率國民軍退往綏遠。 張作霖再次控制了北京政府。1926年11月29日，經張宗昌、 孫傳芳二人帶頭「勸進」，由直、魯、豫、蘇、皖、贛、浙、閩、 陝、晉、察、熱、綏、吉、黑十五省區推戴的形式，推舉張 作霖為安國軍總司令。 "
+  	style = 0
+
+  	date = { day = 1 month = september year = 1926 }
+  	offset = 5
+  	deathdate = { day = 1 month = december year = 1930 }  
+
+   	action_a = {
+     		name = "进攻 "
+     		command = { type = inherit which = U06 }
+     		command = { type = max_organization which = land value = 3 }
+     		command = { type = morale which = land value = 5 }
+     		command = { type = make_puppet which = u13 }
+     		command = { type = war which = CHI }
+     		command = { type = dissent value = -10 }
+
+            	command = { type = construct which = land_fort where = 1218 value = 5 }
+            	command = { type = construct which = land_fort where = 1235 value = 5 }
+            	command = { type = construct which = land_fort where = 1237 value = 5 }
+            	command = { type = construct which = land_fort where = 1238 value = 5 }
+
+     		command = { type = add_corps which = "安國軍指揮部 " value = land where = 1205 }
+     		command = { type = activate_division which = 22320 value = 67 where = 1205 }
+
+     		command = { type = add_corps which = "安國軍第一方面軍 " value = land  where = 1238 }
+     		command = { type = activate_division which = 22320 value = 58 where = 1238 when = 1 }
+     		command = { type = activate_division which = 22320 value = 59 where = 1238 when = 1 }
+     		command = { type = activate_division which = 22320 value = 60 where = 1238 when = 1 }
+		command = { type = disorg_division which = 22320 value = 58 where = -100 }
+		command = { type = disorg_division which = 22320 value = 59 where = -100 }
+		command = { type = disorg_division which = 22320 value = 60 where = -100 }
+
+     		command = { type = add_corps which = "安國軍第二方面軍 " value = land  where = 1235 }
+     		command = { type = activate_division which = 22320 value = 61 where = 1235 when = 1 }
+     		command = { type = activate_division which = 22320 value = 62 where = 1235 when = 1 }
+     		command = { type = activate_division which = 22320 value = 63 where = 1235 when = 1 }
+		command = { type = disorg_division which = 22320 value = 61 where = -100 }
+		command = { type = disorg_division which = 22320 value = 62 where = -100 }
+		command = { type = disorg_division which = 22320 value = 63 where = -100 }
+
+     		command = { type = add_corps which = "安國軍第三方面軍 " value = land  where = 1237 }
+     		command = { type = activate_division which = 22320 value = 64 where = 1237 when = 1 }
+     		command = { type = activate_division which = 22320 value = 65 where = 1237 when = 1 }
+     		command = { type = activate_division which = 22320 value = 66 where = 1237 when = 1 }
+		command = { type = disorg_division which = 22320 value = 64 where = -100 }
+		command = { type = disorg_division which = 22320 value = 65 where = -100 }
+		command = { type = disorg_division which = 22320 value = 66 where = -100 }
+
+		command = { type = secedeprovince which = chi value = 1244 }
+		command = { type = secedeprovince which = chi value = 2704 }
+		command = { type = secedeprovince which = chi value = 2703 }
+		command = { type = secedeprovince which = chi value = 2701 }
+		command = { type = secedeprovince which = chi value = 1243 }
+		command = { type = secedeprovince which = chi value = 2702 }
+		command = { type = secedeprovince which = chi value = 1246 }
+		command = { type = secedeprovince which = chi value = 1245 }
+		command = { type = secedeprovince which = chi value = 2705 }
+		command = { type = secedeprovince which = chi value = 1247 }
+		command = { type = secedeprovince which = chi value = 2706 }
+		command = { type = secedeprovince which = chi value = 2606 } 
+		command = { type = secedeprovince which = chi value = 1251 }
+		command = { type = secedeprovince which = chi value = 2693 }
+		command = { type = secedeprovince which = chi value = 2694 }
+		command = { type = secedeprovince which = chi value = 2695 }
+		command = { type = secedeprovince which = chi value = 1242 }
+		command = { type = secedeprovince which = chi value = 2696 }
+		command = { type = secedeprovince which = chi value = 2691 }
+		command = { type = secedeprovince which = chi value = 2697 }
+		command = { type = secedeprovince which = chi value = 2692 }
+		command = { type = secedeprovince which = chi value = 2698 }
+		command = { type = secedeprovince which = chi value = 2699 }
+		command = { type = secedeprovince which = chi value = 1252 }
+		command = { type = secedeprovince which = chi value = 2688 }
+		command = { type = secedeprovince which = chi value = 2690 }
+		command = { type = secedeprovince which = chi value = 2689 }
+		command = { type = secedeprovince which = chi value = 1254 }
+		command = { type = secedeprovince which = chi value = 2686 }
+		command = { type = secedeprovince which = chi value = 2687 }
+		command = { type = secedeprovince which = chi value = 1250 }
+		command = { type = secedeprovince which = chi value = 2700 }
+		}
+}
+
+###################
+#国民军事件
+###################
+##########################
+#1926年       200300~
+##########################
+event = {
+	id = 200300
+	random = no
+	country = U03
+
+	trigger = { or = { control = { province = 1204 data = u03 }
+                           control = { province = 1204 data = u02 } } }
+
+	name = "大沽口事件 "
+	desc = "１９２６年３月７日，驻守天津大沽口的国民军发现奉系军舰在 大沽炮台附近活动，立即开炮将其击退，并于９日敷设水雷，封 锁港口。１０日，英、法、日、美、意等国驻华使馆开会，认为 国民军封锁大沽口违反《辛丑条约》，要求北京政府撤除一切入 京障碍。国民军被迫于３月１２日宣布开放大沽口岸。当日下午，日 本驱逐舰驶入，因未按事先约定的信号和时间联络，并跟随有另一驱 逐舰，故国民军鸣枪示警令其停止，但日本军舰却炮轰大沽口，酿成 “大沽口事件”。 "
+	style = 0
+	picture = "dagukou"
+
+	 date = { day = 6 month = march year = 1926 }
+         offset = 1
+         deathdate = { day = 1 month = december year = 1926 }
+
+	action_a = {
+		name = "可恶！ " 
+		command = { type = dissent value = 3 }
+		command = { type = relation which = JAP value = -40 }
+		command = { type = manpowerpool value = -5 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 201300 }
+		}
+}
+event = {
+  id = 200301
+  random = no
+  country = U03
+  
+  name = "冯玉祥下野 "
+  desc = "郭松龄败后，冯玉祥失一强援，而其本身又没有什么强大的靠山 ，因此在奉军的反击下接连受挫，其势渐弱。1926年1月在 奉、直军联合进攻下被迫通电下野，旋赴苏联考察。8月中旬回 国，迅即被广州国民政府任命为国民政府委员、军事委员会委员 。 "
+  style = 0
+  picture = "news_paper"
+  
+
+  action_a = {
+    name = "时不我与 "
+    command = { type = capital which = 1276 }
+    command = { type = secedeprovince which = U02 value = 1206 }
+    command = { type = secedeprovince which = U02 value = 1595 }
+    command = { type = secedeprovince which = U02 value = 2947 }
+    command = { type = secedeprovince which = U02 value = 2944 }
+    command = { type = secedeprovince which = U02 value = 2942 }
+    command = { type = secedeprovince which = U02 value = 2943 }
+    command = { type = secedeprovince which = U02 value = 1386 }
+    command = { type = secedeprovince which = U02 value = 2941 }
+    command = { type = secedeprovince which = U02 value = 2939 }
+    command = { type = secedeprovince which = U02 value = 2940 }
+    command = { type = secedeprovince which = U02 value = 1398 }
+    command = { type = secedeprovince which = U02 value = 1397 }
+    command = { type = secedeprovince which = U02 value = 2882 }
+    command = { type = secedeprovince which = U02 value = 2886 }
+    command = { type = secedeprovince which = U02 value = 2946 }
+    command = { type = secedeprovince which = U02 value = 2945 }
+    command = { type = secedeprovince which = U02 value = 2879 }
+    command = { type = secedeprovince which = U02 value = 2878 }
+    command = { type = secedeprovince which = U02 value = 1388 }
+    command = { type = secedeprovince which = U02 value = 2881 }
+    command = { type = secedeprovince which = U02 value = 2880 }
+    command = { type = secedeprovince which = U02 value = 2883 }
+    command = { type = secedeprovince which = U02 value = 2884 }
+    command = { type = secedeprovince which = U02 value = 2885 }
+    command = { type = secedeprovince which = U02 value = 1205 }
+    command = { type = secedeprovince which = U02 value = 1204 }
+    command = { type = secedeprovince which = U02 value = 2875 }
+    command = { type = secedeprovince which = U02 value = 2876 }
+    command = { type = secedeprovince which = U02 value = 2874 }
+    command = { type = secedeprovince which = U02 value = 1203 }
+    command = { type = secedeprovince which = U02 value = 2873 }
+    command = { type = secedeprovince which = U02 value = 2872 }
+    command = { type = secedeprovince which = U02 value = 2871 }
+    command = { type = secedeprovince which = U02 value = 1810 }
+    command = { type = secedeprovince which = U02 value = 2866 }
+    command = { type = secedeprovince which = U02 value = 2865 }
+    command = { type = secedeprovince which = U02 value = 1210 }
+    command = { type = secedeprovince which = U02 value = 2870 }
+    command = { type = secedeprovince which = U02 value = 2869 }
+    command = { type = secedeprovince which = U02 value = 2867 }
+    command = { type = secedeprovince which = U02 value = 1211 }
+    command = { type = secedeprovince which = U02 value = 2868 }
+    command = { type = secedeprovince which = U02 value = 2992 }
+    command = { type = secedeprovince which = U02 value = 2993 }
+    command = { type = secedeprovince which = U02 value = 1212 }
+    command = { type = secedeprovince which = U02 value = 2994 }
+    command = { type = secedeprovince which = U02 value = 1811 }
+    command = { type = secedeprovince which = U02 value = 1206 }
+    command = { type = secedeprovince which = U02 value = 2673 }
+    command = { type = secedeprovince which = csx value = 1207 }
+    command = { type = secedeprovince which = csx value = 1208 }
+
+		command = { type = secedeprovince which = csx value = 2815 }
+		command = { type = secedeprovince which = csx value = 2816 }
+		command = { type = secedeprovince which = csx value = 2817 }
+		command = { type = secedeprovince which = csx value = 2785 }
+		command = { type = secedeprovince which = csx value = 2813 }
+	
+		command = { type = secedeprovince which = U05 value = 1230 } 
+		command = { type = secedeprovince which = U05 value = 2848 }
+		command = { type = secedeprovince which = U05 value = 2847 }
+		command = { type = secedeprovince which = U05 value = 1876 }
+		command = { type = secedeprovince which = U05 value = 2849 }
+		command = { type = secedeprovince which = U05 value = 1223 }
+		command = { type = secedeprovince which = U05 value = 1224 } 
+		command = { type = secedeprovince which = U05 value = 2838 } 
+		command = { type = secedeprovince which = U05 value = 2839 } 
+		command = { type = secedeprovince which = U05 value = 1227 } 
+		command = { type = secedeprovince which = U05 value = 1228 } 
+		command = { type = secedeprovince which = U05 value = 1229 }
+		command = { type = secedeprovince which = U05 value = 2844 }
+		command = { type = secedeprovince which = U05 value = 2845 }
+		command = { type = secedeprovince which = U05 value = 2846 } 
+		command = { type = secedeprovince which = U05 value = 2840 }
+		command = { type = secedeprovince which = U05 value = 2841 }
+		command = { type = secedeprovince which = U05 value = 2842 }
+		command = { type = secedeprovince which = U05 value = 2843 }
+		command = { type = free_supplies value = 15 }
+		command = { type = supplies value = 10000 }		
+		command = { type = trigger which = 260003 }
+    }
+    }
+event = {
+	id = 200302
+	random = no
+	country = U03
+
+	trigger = { event = 200005 
+	            event = 200301 }
+
+	name = "冯玉祥五原誓师 "
+	desc = "１９２６年４月９日冯玉祥发动政变，逼走段祺瑞，但军事上失 利，不得不撤出北京，后赴苏联考察，同年回国。国民军在南口 坚守四个月后，于８月退回西北，９月１７日冯在绥远五原誓师 ，任国民革命军联军（后改国民革命军第二集团军）司令，宣布所部加 入国民党。在击溃刘镇华的镇嵩军之后，出潼关参加北伐。 "
+	style = 0
+	picture = "wuyuanshishi"
+
+	date = { day = 17 month = september year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1926 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "参加北伐 "
+		command = { type = trigger which = 200011 }
+        command = { type = access which = CHI }
+    	command = { type = war which = u17 }
+		command = { type = dissent value = -20 }
+		command = { type = max_organization which = land value = 35 }
+		command = { type = morale which = land value = 25 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = unlock_division which = 22330 value = 4 }
+		command = { type = unlock_division which = 22330 value = 16 }
+		command = { type = unlock_division which = 22330 value = 19 }
+		command = { type = unlock_division which = 22330 value = 22 }
+		command = { type = unlock_division which = 22330 value = 25 }
+		command = { type = unlock_division which = 22330 value = 28 }
+		command = { type = unlock_division which = 22330 value = 30 }
+        command = { type = add_division value = infantry when = 15 where = artillery }
+#       command = { type = add_division value = infantry when = 15 where = artillery }
+#       command = { type = add_division value = infantry when = 15 where = artillery }
+        command = { type = add_division value = infantry when = 15 where = police }
+#       command = { type = add_division value = infantry when = 15 where = police }
+#       command = { type = add_division value = infantry when = 15 where = police }
+        command = { type = add_division value = infantry when = 15 where = engineer }
+#       command = { type = add_division value = infantry when = 15 where = engineer }
+#       command = { type = add_division value = infantry when = 15 where = engineer }
+        command = { type = add_division value = infantry when = 15 }
+        command = { type = add_division value = infantry when = 15 }
+		command = { type = add_division value = infantry when = 15 }
+
+		command = { type = headofstate which = 2000 }
+        command = { type = chiefofstaff which = 2006 }
+        command = { type = chiefofair which = 16028 }	
+	    command = { type = supplies value = 7500 }
+	    command = { type = free_supplies value = -10 }
+	    command = { type = free_ic value = 2 }	
+		command = { type = ai which ="switch\U03_U17.ai" }
+		command = { type = construct which = land_fort where = 1887 value = -3 }
+     	command = { type = construct which = land_fort where = 2787 value = -3 }
+     	command = { type = construct which = land_fort where = 1270 value = -3 }
+     	command = { type = construct which = land_fort where = 2786 value = -3 }
+     	command = { type = construct which = land_fort where = 2782 value = -3 } 
+		command = { type = giveleader which = 56055 where = CSX } #	徐永昌
+
+		}
+  action_b = {
+    ai_chance = 1
+    name = "我们无力再实施行动 "
+    command = { type = domestic which = interventionism value = -9 }
+		}
+}
+event = {
+	id = 200303
+	random = no
+	country = u03
+	trigger = { 
+		war = { country = U03 country = U02 }
+		war = { country = U03 country = CSX }
+		war = { country = U03 country = U05 } 
+	}
+  
+	name = "我们遭到严重失败 "
+	desc = "我们遭到奉系、晋系、直系的联合进攻，军队毫无准备。 "
+	style = 0
+	date = { day = 1 month = january year = 1926 }
+	offset = 7
+	deathdate = { day = 1 month = july year = 1926 }
+	action_a = {
+		name = "进攻 "
+		command = { type = dissent value = 5 }
+		command = { type = max_organization which = land value = -40 }
+		command = { type = morale which = land value = -20 }
+     }
+}
+event = {
+   id = 200304
+   country = u03
+   random = no
+   name = "二虎守长安 "
+   desc = "1926年春，镇嵩军首领刘振华在吴佩孚，张作霖的支持下， 纠集10万人进攻西安，刘振华围城8个月之久，国民军将领杨 虎城，李虎臣率全城军民坚守，后冯玉祥将军率军入陕，西安之 围被解，时称“二虎守长安”。"
+   style = 0
+   action_a = {
+     name = "把西安变成地狱 "
+     command = { type = add_corps which = "陕军西安部 " value = land when = 56012 where = 1269 } 
+     command = { type = activate_division which = 22330 value = 31 where = 1269 }
+     command = { type = construct which = land_fort where = 1269 value = 7 }
+#		command = { type = secedeprovince which = U17 value = 1887 }
+#		command = { type = secedeprovince which = U17 value = 2787 }
+#		command = { type = secedeprovince which = U17 value = 1270 }
+#		command = { type = secedeprovince which = U17 value = 2786 }
+#		command = { type = secedeprovince which = U17 value = 2782 }
+#		command = { type = secedeprovince which = U17 value = 2781 }
+#		command = { type = secedeprovince which = U17 value = 1267 }
+		     }
+}
+
+event = {
+   id = 200305
+   country = u03
+   random = no
+  trigger = { control = { province = 1887 data = -3 }             
+              control = { province = 1269 data = -3 }
+               event = 200304
+               event = 200302 }
+   name = "长安解圍 "
+   desc = "1926年春，镇嵩军首领刘振华在吴佩孚，张作霖的支持下， 纠集10万人进攻西安，刘振华围城8个月之久，国民军将领杨 虎城，李虎臣率全城军民坚守，后冯玉祥将军率军入陕，西安之 围被解，时称“二虎守长安”。"
+   style = 0
+ date = { day = 17 month = september year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = june year = 1927 }
+   action_a = {
+     name = "成功解圍 "
+        command = { type = trigger which = 201701 }
+        command = { type = sleepevent which = 200306 }
+        command = { type = inherit which = U17 }
+		command = { type = morale which = land value = 3 }
+     	command = { type = capital which = 1269 }
+		command = { type = construct which = land_fort where = 1269 value = -5 }
+		command = { type = ai which ="switch\U03_U02.ai" }
+     		command = { type = construct which = land_fort where = 1887 value = -5 }
+     		command = { type = construct which = land_fort where = 2787 value = -5 }
+     		command = { type = construct which = land_fort where = 1270 value = -5 }
+     		command = { type = construct which = land_fort where = 2786 value = -5 }
+     		command = { type = construct which = land_fort where = 2782 value = -5 }		}
+     }
+
+event = {
+   id = 200306
+   country = u03
+   random = no
+  trigger = {  event = 200304 }
+   name = "堅守長安 "
+   desc = "1926年春，镇嵩军首领刘振华在吴佩孚，张作霖的支持下， 纠集10万人进攻西安，刘振华围城8个月之久，国民军将领杨 虎城，李虎臣率全城军民坚守，后冯玉祥将军率军入陕，西安之 围被解，时称“二虎守长安”。"
+   style = 0
+   
+ date = { day = 15 month = february year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = june year = 1927 }
+   action_a = {
+     name = "堅守 "
+     command = { type = supplies value = 2000 where = 1269 } }
+}
+
+
+event = {
+   id = 200308
+   country = u03
+   random = no
+   trigger = { event = 200309
+           not = { exists = u17  }  }
+ 
+   name = "改編鎮嵩軍 "
+   desc = "投降馮玉祥後，劉鎮華的軍隊被改編為國民革命軍第8方面軍。"
+   style = 0
+  date = { day = 15 month = february year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = june year = 1928 }   
+    action_a = {
+     name = "改編 "
+                  command = { type = add_corps which = "國民軍第八方面軍 " value = land where = 1887 }
+                  command = { type = add_division which = "鎮嵩軍第一師 " value = militia when = 3  }
+                  command = { type = add_division which = "鎮嵩軍第二師 " value = militia when = 3  }
+                  command = { type = add_division which = "鎮嵩軍第三師 " value = militia when = 3  }
+         command = { type = trigger which = 200016 }  
+         command = { type = trigger which = 220005 }
+                    }
+}
+
+event = {
+	id = 200309
+	random = no
+	country = U03
+
+	name = "反馮密約 "
+	desc = "１９２６年３月７日，驻守天津大沽口的国民军发现奉系军舰在 大沽炮台附近活动，立即开炮将其击退，并于９日敷设水雷，封 锁港口。１０日，英、法、日、美、意等国驻华使馆开会，认为 国民军封锁大沽口违反《辛丑条约》，要求北京政府撤除一切入 京障碍。国民军被迫于３月１２日宣布开放大沽口岸。当日下午，日 本驱逐舰驶入，因未按事先约定的信号和时间联络，并跟随有另一驱 逐舰，故国民军鸣枪示警令其停止，但日本军舰却炮轰大沽口，酿成 “大沽口事件”。 "
+	style = 0
+	picture = "dagukou"
+
+
+	action_a = {
+		name = "可恶！ " 
+		command = { type = dissent value = 3 }
+                command = { type = trigger which = 201700 value = 1 }
+                command = { type = independence which = u17 value = 1 }
+ 
+		}
+} 
+
+event = {
+   id = 200310
+   country = u03
+   random = no
+   trigger = { event = 200309
+                 }
+ 
+   name = "隴東、隴南叛變 "
+   desc = "1926年初，陇东镇守使张兆钾联合陇南镇守使孔繁锦， 乘直、奉军阀攻打国民军之际，起兵攻打刘郁芬"
+   style = 0
+  date = { day = 1 month = august year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = june year = 1928 }   
+    action_a = {
+     name = "鎮壓 "
+       command = { type = revolt which = 1274  }
+       command = { type = revolt which = 1277  }         
+  
+                    }
+}
+   
+event = {
+  id = 200311
+  random = no
+  country = U03
+  
+  trigger = { event = 200203
+              war = { country = U02  country = U03 }     
+              or = { control = { province = 1273 data = -2 }
+                     lost_national = { country = U03 value = 50 }
+                     and = { not = { control = { province = 1206 data = U03 } }
+                                     lost_national = { country = U03 value = 40 } }
+                                     lost_national = { country = U03 value = 50 } }
+              } 
+  
+  name = "冯玉祥下野 "
+  desc = "郭松龄败后，冯玉祥失一强援，而其本身又没有什么强大的靠山 ，因此在奉军的反击下接连受挫，其势渐弱。1926年1月在 奉、直军联合进攻下被迫通电下野，旋赴苏联考察。8月中旬回 国，迅即被广州国民政府任命为国民政府委员、军事委员会委员 。 "
+  style = 0
+  picture = "news_paper"
+  
+  date = { day = 1 month = january year = 1926 }
+  offset = 3
+  deathdate = { day = 1 month = january year = 1927 }
+  
+  action_a = {
+    name = "时不我与 "
+    command = { type = headofstate which = 2013 }
+    command = { type = chiefofstaff which = 2014 }
+    command = { type = chiefofarmy which = 2015 }		
+    command = { type = peace which = U02 value = 1 }
+    command = { type = peace which = CSX value = 1 }
+    command = { type = peace which = U05 value = 1 }
+    command = { type = trigger which = 203000 }
+    command = { type = trigger which = 200301 value = 1 }
+
+    }
+    }              
+###################
+#直系事件
+###################
+##########################
+#1926年       200500~
+##########################
+event = {
+  id = 200500
+  random = no
+  country = u05
+  
+  name = "唐生智驱逐赵恒锡——直系反应 "
+  desc = "1926年1月，中共湖南区委派王基永去衡阳，向唐生智提出 反吴驱赵、与国民政府合作等七项要求，唐大体赞同。3月6日 ，唐军第十五团开始向长沙进逼，8日继续向长沙进军，声势极 盛，限湖南省长赵恒锡于二十四小时之内离开长沙，赵恒惕自知 不敌，12日宣布唐生智为内务司长，兼军务司长，自己“因健 康欠佳，赴沪医治，依照省宪规定，所遗省长职务，着由内务司 长唐生智代理”，13日赵恒惕离长沙北去。唐生智正式接管湖 南。 "
+  style = 0
+  
+  action_a = {
+    ai_chance = 99
+    name = "孟潇不懂事啊 "
+#    command = { type = leave_alliance }
+    command = { type = war which = u10 }
+    command = { type = dissent which = -5 }
+	command = { type = breakthrough value = 5 }
+		command = { type = morale which = land value = 3 }
+    command = { type = wakeleader which = 62031 }#叶开鑫
+    command = { type = add_corps which = "叶开鑫湘军部 " value = land when = 62031 where = 2685 }
+    command = { type = activate_division which = 30035 value = 105071 where = 2685 }
+    command = { type = activate_division which = 30035 value = 105072 where = 2685 }
+    command = { type = activate_division which = 30035 value = 105073 where = 2685 }
+    command = { type = activate_division which = 30035 value = 105077 where = 2685 }
+    command = { type = activate_division which = 30035 value = 105078 where = 2685 }
+    command = { type = add_corps which = "援湘军 " value = land where = 1256 }
+    command = { type = activate_division which = 30035 value = 105074 where = 1256 }
+    command = { type = activate_division which = 30035 value = 105075 where = 1256 }
+    command = { type = activate_division which = 30035 value = 105076 where = 1256 }
+    }
+  action_b = {
+    ai_chance = 1
+    name = "天要下雨娘要嫁人 "
+    command = { }
+    }
+ }
+event  = {
+	id = 200501
+	random = no
+	country = u05
+	trigger = { 
+		event = 200005
+		control = { province = 1255 data = -2 }
+        control = { province = 1257 data = -2 }
+		control = { province = 1260 data = -2 }
+#		event = 1016
+	}    
+	name = "我们失去了对湖南的控制 "
+	desc = "北伐军势不可挡 "
+	style = 0
+	date = { day = 15 month = may year = 1926 }
+	offset = 5
+	deathdate = { day = 1 month = june year = 1928 } 
+	action_a = {
+		name = "惨败 "
+		command = { type = secedeprovince which = chi value = 1255 }
+		command = { type = secedeprovince which = chi value = 1256 }
+		command = { type = secedeprovince which = chi value = 2685 }
+		command = { type = secedeprovince which = chi value = 2683 }
+		command = { type = secedeprovince which = chi value = 2684 }
+		command = { type = secedeprovince which = chi value = 2680 }
+		command = { type = secedeprovince which = chi value = 2682 }
+		command = { type = secedeprovince which = chi value = 2681 }
+		command = { type = secedeprovince which = chi value = 1260 }
+		command = { type = secedeprovince which = chi value = 2670 }
+		command = { type = secedeprovince which = chi value = 2671 }
+		command = { type = secedeprovince which = chi value = 2672 }
+		command = { type = secedeprovince which = chi value = 2673 }
+		command = { type = secedeprovince which = chi value = 1257 }
+		command = { type = secedeprovince which = chi value = 2679 }
+		command = { type = secedeprovince which = chi value = 2678 }
+		command = { type = secedeprovince which = chi value = 2676 }
+		command = { type = secedeprovince which = chi value = 1259 }
+		command = { type = secedeprovince which = chi value = 1261 }
+		command = { type = secedeprovince which = chi value = 2677 }
+		command = { type = secedeprovince which = chi value = 2674 }
+		}
+   }
+event  = {
+   id = 200502
+   random = no
+   country = u05
+	trigger = { 
+		event = 200005
+		control = { province = 1231 data = -2 }
+        control = { province = 1232 data = -2 }
+		control = { province = 1253 data = -2 }
+		control = { province = 2660 data = -2 } 
+#		OR = { event = 1017
+#			ai = chi }
+ }  
+   name = "我们失去了对湖北的控制 "
+   desc = "北伐军势不可挡 "
+   style = 0
+  date = { day = 15 month = may year = 1926 }
+  offset = 5
+  deathdate = { day = 1 month = june year = 1928 } 
+   action_a = {
+   name = "惨败 "
+   command = { type = secedeprovince which = chi value = 1253 }
+   command = { type = secedeprovince which = chi value = 1232 }
+   command = { type = secedeprovince which = chi value = 2660 }
+   command = { type = secedeprovince which = chi value = 2659 }
+   command = { type = secedeprovince which = chi value = 2658 }
+   command = { type = secedeprovince which = chi value = 2661 }
+   command = { type = secedeprovince which = chi value = 1886 }
+   command = { type = secedeprovince which = chi value = 1266 }
+   command = { type = secedeprovince which = chi value = 1231 }
+   command = { type = secedeprovince which = chi value = 2667 }
+   command = { type = secedeprovince which = chi value = 2666 }
+   command = { type = secedeprovince which = chi value = 2668 }
+   command = { type = secedeprovince which = chi value = 2669 }
+   command = { type = secedeprovince which = chi value = 1264 }
+   command = { type = secedeprovince which = chi value = 2665 }
+   command = { type = secedeprovince which = chi value = 2664 }
+   command = { type = secedeprovince which = chi value = 2663 }
+   command = { type = secedeprovince which = chi value = 2662 }
+   command = { type = secedeprovince which = chi value = 2656 }
+   command = { type = secedeprovince which = chi value = 2657 }
+   command = { type = secedeprovince which = chi value = 2653 }
+   command = { type = secedeprovince which = chi value = 2654 }
+   command = { type = secedeprovince which = chi value = 2655 }
+   command = { type = trigger which = 200503 value = 2 }
+   }
+   }
+event = {
+   id = 200503
+   random = no
+   country = u05
+   name = "吴佩孚下野 "
+   desc = "汀泗桥、贺胜桥、武昌血战后，吴佩孚兵败两湖。为躲避蒋介石、 冯玉祥的追杀，吴佩孚打电报给曾受过其重恩的四川军阀杨森说： “我已无路可走，不论你允许与否，我都只有入川一途了。”从此， 吴佩孚流亡入川，受到杨森的庇护。 "
+   style = 0
+   action_a = {
+   ai_chance = 99
+   name = "时不我与 "
+   command = { type = trigger which = 200201 }
+   command = { type = trigger which = 201702 }
+   }
+   action_b = {
+   ai_chance = 1
+   name ="军人马革裹尸，幸哉 "
+   command = { }
+   }
+   }
+event = {
+  id = 200504
+  random = no
+  country = u05
+  
+  name = "联合反冯密约 "
+  desc = "冯玉祥国民军趁着郭松龄内乱之际，夺取了京兆之地，张作霖将 之视为心腹大患，暗暗联络各地，准备联合反冯。 "
+  style = 0
+  action_a = {
+     ai_chance = 100
+     name = "缔结密约 "
+     command = { type = relation which = u02 value = 30 }
+     }
+  action_b = {
+     ai_chance = 0
+     name = "张作霖小子不安好心 "
+     command = { type = sleepevent which = 200505 }
+     }
+}
+event = {
+  id = 200505
+  random = no
+  country = u05
+  
+  name = "联合反冯 "
+  desc = "密约达成，联军开始进攻国民军。 "
+  style = 0
+  action_a = {
+     name = "进攻 "
+     command = { type = war which = u03 }
+     command = { type = dissent value = -15 }
+     command = { type = trigger which = 200309 }
+     command = { type = access which = U17 }
+     }
+}
+
+event = {
+	id = 200506
+	random = no
+	country = U05
+
+	name = "汀泗橋戰鬥 "
+	desc = "一九二六年八月，国民革命军在北伐征战的征途中曾在咸宁的汀泗桥、 咸宁县城、贺胜桥与直系军阀吴佩孚的军队进行过激烈战斗。  "
+	style = 0
+	picture = "tingsiqiao"
+
+	action_a = {
+		name = "激戰 "
+		command = { type = morale which = land value = 5 }
+                command = { type = construct which = land_fort where = 2659 value = 5 }
+                command = { type = construct which = land_fort where = 2661 value = 5 }
+                command = { type = construct which = land_fort where = 1253 value = 5 }
+	        command = { type = add_corps which = "鐵衛隊 " value = land where = 2659 }
+                command = { type = add_division value = infantry when = 7 where = engineer }
+                command = { type = add_division value = infantry when = 7 where = engineer }
+                command = { type = add_division value = infantry when = 7 where = engineer } }
+}
+###################
+#五省联军事件
+###################
+##########################
+#1926年       200600~
+##########################
+event = {
+  	id = 200600
+  	random = no
+  	country = u06
+  
+  	name = "孙传芳参战 "
+  	desc = "因北伐军在两湖战场上取得胜利，孙传芳无法保持中立，遂火速 调集主力14万人，集中江西，准备从侧翼向已被北伐军占领之 两湖进攻。北伐战争的重心遂由两湖转移到江西。"
+  	style = 0
+
+  	action_a = {
+     		name = " "
+		command = { type = morale which = land value = 3 }
+     		command = { type = alliance which = U05 } 
+     		command = { type = war which = chi }
+                command = { type = construct which = land_fort where = 1251 value = 5 }
+                command = { type = construct which = land_fort where = 1252 value = 5 }	
+	        command = { type = add_corps which = "南昌城防 " value = land where = 1251 } 
+    		command = { type = activate_division which = 30036 value = 13 where = 1251 when = 1  }
+    		command = { type = disorg_division which = 30036 value = 13 where = -100  }
+                command = { type = construct which = land_fort where = 1244 value = 5 }
+	        command = { type = add_corps which = "福州城防 " value = land where = 1244 } 
+    		command = { type = activate_division which = 30036 value = 14 where = 1244 when = 1  }
+    		command = { type = disorg_division which = 30036 value = 14 where = -100  }
+     }
+}
+event = {
+  id = 200601
+  random = no
+  country = u06
+  
+  name = "激烈的南昌争夺战 "
+	desc = "1926年9月19日，北伐军在南昌城内的工人、学生及江西 省警备队的配合下，一举攻占了南昌。孙传芳闻南昌失守，大为 震惊。9月21日，孙由南京赶到九江亲自督战。并迅即调遣精 锐部队第一、第二、第十三个方面军从南北反攻，并明令邓如 琢于48小时内收复南昌。 "
+	style = 0
+	picture = "nanchangzhiyi"
+
+	action_a = {
+		name = "打倒北伐軍 "
+		command = { type = morale which = land value = 3 }
+		command = { type = add_corps which = "五省联军第一方面军 " value = land where = 1251 }
+        command = { type = add_division value = infantry when = 7  }
+        command = { type = add_division value = infantry when = 6  }
+		command = { type = add_corps which = "五省联军第二方面军 " value = land where = 1251 }
+        command = { type = add_division value = infantry when = 7  }
+        command = { type = add_division value = infantry when = 6  }
+		command = { type = add_corps which = "五省联军第十三方面军 " value = land where = 1252 }
+        command = { type = add_division value = infantry when = 7  }
+        command = { type = add_division value = infantry when = 6  }
+        command = { type = add_division value = infantry when = 6  }
+	   	}
+}
+event = {
+	id = 200602
+	random = no
+	country = u06
+	trigger = {	
+		event = 200005
+		control = { province = 1250 data = -2 }
+		control = { province = 1251 data = -2 }
+		control = { province = 1252 data = -2 }
+#		event = 1018
+ }
+	name = "我们失去了对江西的控制 "
+	desc = "经过反复争夺，北伐军彻底控制了九江、南昌，并摧毁了孙传芳部的主力。 "
+	style = 0
+	picture = "nanchangzhiyi"
+  date = { day = 15 month = may year = 1926 }
+  offset = 5
+  deathdate = { day = 1 month = june year = 1928 }
+
+	action_a = {
+		name = "惨败 "
+		command = { type = morale which = land value = -3 }
+		command = { type = control which = chi value = 1251 }
+		command = { type = control which = chi value = 2693 }
+		command = { type = control which = chi value = 2694 }
+		command = { type = control which = chi value = 2695 }
+		command = { type = control which = chi value = 1242 }
+		command = { type = control which = chi value = 2696 }
+		command = { type = control which = chi value = 2691 }
+		command = { type = control which = chi value = 2697 }
+		command = { type = control which = chi value = 2692 }
+		command = { type = control which = chi value = 2698 }
+		command = { type = control which = chi value = 2699 }
+		command = { type = control which = chi value = 1252 }
+		command = { type = control which = chi value = 2688 }
+		command = { type = control which = chi value = 2690 }
+		command = { type = control which = chi value = 2689 }
+		command = { type = control which = chi value = 1254 }
+		command = { type = control which = chi value = 2686 }
+		command = { type = control which = chi value = 2687 }
+		command = { type = control which = chi value = 1250 }
+		command = { type = control which = chi value = 2700 }
+		command = { type = max_organization which = land value = -2 }
+        command = { type =  remove_division which = 30036 value = 106041 }
+        command = { type =  remove_division which = 30036 value = 106061 }}
+}
+event = {
+	id = 200603
+	random = no
+	country = u06
+	trigger = {    
+		event = 200005
+		control = { province = 1244 data = -2 }
+        control = { province = 1247 data = -2 }
+#		event = 1019
+ }
+
+	name = "我们失去了对福建的控制 "
+	desc = "北伐军攻占福州，福建已经不在我们掌控之下了。 "
+	style = 0
+	picture = "beifa"
+  date = { day = 15 month = may year = 1926 }
+  offset = 5
+  deathdate = { day = 1 month = june year = 1928 }
+
+	action_a = {
+		name = "惨败 "
+		command = { type = morale which = land value = -2 }
+		command = { type = control which = chi value = 1244 }
+		command = { type = control which = chi value = 2704 }
+		command = { type = control which = chi value = 2703 }
+		command = { type = control which = chi value = 2701 }
+		command = { type = control which = chi value = 1243 }
+		command = { type = control which = chi value = 2702 }
+		command = { type = control which = chi value = 1246 }
+		command = { type = control which = chi value = 1245 }
+		command = { type = control which = chi value = 2705 }
+		command = { type = control which = chi value = 1247 }
+		command = { type = control which = chi value = 2706 }
+		command = { type = control which = chi value = 2606 }
+		command = { type = max_organization which = land value = -1 }
+                command = { type =  remove_division which = 30036 value = 106032 }
+                command = { type =  remove_division which = 30036 value = 106031 } }
+}
+
+
+event = {
+	id = 200605
+	random = no
+	country = u06
+	trigger = { minister = 7016 }
+ 
+	name = "夏超暗通北伐軍"
+	desc = ""
+	style = 0
+ 
+	date = { day = 1 month = october year = 1926 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1934 }
+	action_a = {
+		name = "起義"
+		command = { type = sleepminister which = 7016 }
+		command = { type = sleepleader which = 50010 }
+	}
+}
+
+event = {
+	id = 200606
+	random = no
+	country = u06
+	trigger = { event = 200605
+                                       }
+	name = "陳儀起義"
+	desc = ""
+	style = 0
+ 
+	date = { day = 21 month = october year = 1926 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1934 }
+ 
+	action_a = {
+		name = "起義"
+		command = { type = giveleader which = 50006 where = chi }
+		command = { type = sleepminister which = 7005 }                
+	}
+}
+
+
+
+event = {
+    id = 200608
+    random = no
+    country = u06
+	trigger = {  
+		or = {	
+			and = {	event = 200602
+					event = 200603  }
+            control = { province = 1885 data = -2 }
+			control = { province = 2648 data = -2 }
+			control = { province = 2647 data = -2 }
+			control = { province = 2645 data = -2 }
+			control = { province = 2644 data = -2 }
+			control = { province = 2643 data = -2 }
+			control = { province = 2641 data = -2 }
+			control = { province = 1241 data = -2 }
+			control = { province = 1240 data = -2 }
+	        garrison = { country = CHI province = 1221 type = land size = 1 area = no }
+	        garrison = { country = CHI province = 2649 type = land size = 1 area = no }
+	        garrison = { country = CHI province = 2616 type = land size = 1 area = no } }   
+  }
+                      
+        name = "向張作霖求援"
+        desc = "反奉戰爭中，孫傳芳曾率直軍痛擊入侵長江流域的奉軍， 予以大破之，使奉軍損失慘重。然而在孫傳芳遭到北伐軍 大敗而走投無路之際，竟轉而向年前剛被自己狠搧 一記大耳光的張作霖乞援。孫既能屈能伸，張作霖竟 也大度能容，不僅保留孫傳芳五省聯軍總司令的頭銜， 又成立安國軍，自任總司令並任孫為副 司令。"
+        style = 0
+		date = { day = 1 month = april year = 1926 }
+	offset = 2
+	deathdate = { day = 1 month = december year = 1927 }
+    action_a = {
+        name = "求援"
+        command = { type = trigger which = 200204 }
+        command = { type = access which = U02 } 
+        command = { type = capital which = 1218 }
+		command = { type = secedeprovince which = U02 value = 1222 }
+		command = { type = secedeprovince which = U02 value = 2649 }
+		command = { type = secedeprovince which = U02 value = 1221 }
+		command = { type = secedeprovince which = U02 value = 2646 }
+		command = { type = secedeprovince which = U02 value = 1234 }
+		command = { type = secedeprovince which = U02 value = 2629 }
+		command = { type = secedeprovince which = U02 value = 1236 }
+		command = { type = secedeprovince which = U02 value = 2623 }
+		command = { type = secedeprovince which = U02 value = 1875 } 
+		command = { type = secedeprovince which = U02 value = 1884 }
+		command = { type = secedeprovince which = U02 value = 2616 }
+		command = { type = secedeprovince which = U02 value = 2617 }
+		command = { type = secedeprovince which = U02 value = 1235 }
+		command = { type = secedeprovince which = U02 value = 2650 }
+		command = { type = secedeprovince which = U02 value = 2652 }
+		command = { type = secedeprovince which = U02 value = 2628 }
+		command = { type = secedeprovince which = U02 value = 2627 }
+		command = { type = secedeprovince which = U02 value = 2795 }
+		command = { type = secedeprovince which = U02 value = 2622 }
+		command = { type = secedeprovince which = U02 value = 1237 }
+		command = { type = secedeprovince which = U02 value = 2630 }
+        command = { type = peace which = U02 value = 0 }  
+}
+}
+
+event = {
+	id = 200609
+	random = no
+	country = u02
+	trigger = { 
+		event = 200005
+		control = { province = 1238 data = -2 }
+		control = { province = 2631 data = -2 }
+		control = { province = 2636 data = -2 }
+		control = { province = 1239 data = -2 }
+		control = { province = 1241 data = -2 }
+		control = { province = 1242 data = -2 } 
+#		event = 1020
+ }
+
+
+	name = "我们失去了对浙江的控制 "
+	desc = "北伐军攻占杭州，浙江已经不在我们掌控之下了。 "
+	style = 0
+	picture = "beifa"
+	
+	date = { day = 1 month = april year = 1926 }
+	offset = 2
+	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+		name = "惨败 "
+		command = { type = morale which = land value = -1 }
+		command = { type = secedeprovince which = chi value = 1238 }
+		command = { type = secedeprovince which = chi value = 1239 }
+		command = { type = secedeprovince which = chi value = 1240 }
+		command = { type = secedeprovince which = chi value = 1241 }
+		command = { type = secedeprovince which = chi value = 1243 }
+		command = { type = secedeprovince which = chi value = 2631 }
+		command = { type = secedeprovince which = chi value = 2632 }
+		command = { type = secedeprovince which = chi value = 2635 }
+		command = { type = secedeprovince which = chi value = 2636 }
+		command = { type = secedeprovince which = chi value = 2637 }
+		command = { type = secedeprovince which = chi value = 2638 }
+		command = { type = secedeprovince which = chi value = 2639 }
+		command = { type = secedeprovince which = chi value = 2640 }
+		command = { type = secedeprovince which = chi value = 2641 }
+		command = { type = secedeprovince which = chi value = 2642 }
+		command = { type = secedeprovince which = chi value = 2643 }
+		command = { type = secedeprovince which = chi value = 2996 }
+#		command = { type = max_organization which = land value = -2 }
+        command = { type =  remove_division which = 30036 value = 106053 }
+		command = { type = trigger which = 200018 } }
+}
+event = {
+	id = 200610
+	random = no
+	country = u02
+trigger = {     
+		event = 200005
+		control = { province = 1235 data = -2 }
+		control = { province = 2627 data = -2 }
+		control = { province = 1236 data = -2 }
+		control = { province = 1237 data = -2 }
+		control = { province = 1234 data = -2 }
+		war = { country = CHI country = U02 }
+#event = 1020
+ }
+
+	name = "北伐军攻占長江下游 "
+	desc = "北伐军攻占南京，上海等地，長江下游已经不在我们掌控之下了。 "
+	style = 0
+	picture = "beifa"
+  date = { day = 1 month = april year = 1926 }
+  offset = 2
+  deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+		name = "惨败 "
+		command = { type = morale which = land value = -3 }
+#		command = { type = secedeprovince which = chi value = 2648 }
+#		command = { type = secedeprovince which = chi value = 1885 }
+#		command = { type = secedeprovince which = chi value = 1233 }
+#		command = { type = secedeprovince which = chi value = 2647 }
+#		command = { type = secedeprovince which = chi value = 1221 }
+#		command = { type = secedeprovince which = chi value = 2616 }
+#		command = { type = secedeprovince which = chi value = 2646 }
+		command = { type = secedeprovince which = chi value = 2633 }
+		command = { type = secedeprovince which = chi value = 2634 }
+		command = { type = secedeprovince which = chi value = 2644 }
+		command = { type = secedeprovince which = chi value = 2645 }
+		command = { type = secedeprovince which = chi value = 1234 }
+#		command = { type = secedeprovince which = chi value = 2617 }
+		command = { type = secedeprovince which = chi value = 2628 }
+		command = { type = secedeprovince which = chi value = 2629 }
+		command = { type = secedeprovince which = chi value = 1235 }
+#		command = { type = secedeprovince which = chi value = 2620 }
+#		command = { type = secedeprovince which = chi value = 2621 }
+#		command = { type = secedeprovince which = chi value = 1220 }
+		command = { type = secedeprovince which = chi value = 2622 }
+		command = { type = secedeprovince which = chi value = 2623 }
+		command = { type = secedeprovince which = chi value = 2625 }
+		command = { type = secedeprovince which = chi value = 2626 }
+		command = { type = secedeprovince which = chi value = 2627 }
+		command = { type = secedeprovince which = chi value = 1236 }
+		command = { type = secedeprovince which = chi value = 1237 }
+		command = { type = secedeprovince which = chi value = 2795 }
+		command = { type = secedeprovince which = chi value = 2630 }
+#		command = { type = secedeprovince which = chi value = 1219 }
+		command = { type = secedeprovince which = chi value = 2630 }
+		command = { type = secedeprovince which = chi value = 2608 }
+		command = { type = secedeprovince which = chi value = 1244 }
+		command = { type = secedeprovince which = chi value = 2704 }
+		command = { type = secedeprovince which = chi value = 2703 }
+		command = { type = secedeprovince which = chi value = 2701 }
+		command = { type = secedeprovince which = chi value = 1243 }
+		command = { type = secedeprovince which = chi value = 2702 }
+		command = { type = secedeprovince which = chi value = 1246 }
+		command = { type = secedeprovince which = chi value = 1245 }
+		command = { type = secedeprovince which = chi value = 2705 }
+		command = { type = secedeprovince which = chi value = 1247 }
+		command = { type = secedeprovince which = chi value = 2706 }
+		command = { type = secedeprovince which = chi value = 2606 }
+		command = { type = max_organization which = land value = -1 }
+        command = { type =  remove_division which = 30036 value = 1 }
+        command = { type =  remove_division which = 30036 value = 2 }
+		command = { type = trigger which = 200019 }  }
+}
+###################
+#川军事件
+###################
+##########################
+#1926年       200700~
+##########################
+
+event = {
+	id = 200700
+	random = no
+	country = U07
+
+	name = "万县惨案 "
+	desc =  "9月5日下午5時許，「嘉禾」輪上20餘名英水兵跳上 「萬縣」輪砍纜，並先開槍擊斃守船士兵2人，遭守船楊森部川軍還擊， 上船英兵退回。6時許，英兵登上「萬通」輪，遭川軍猛烈還擊， 英遠東艦隊司令達爾禮被當場擊斃。7時許，英艦「嘉禾」號、 「威警」號和「柯克捷夫」號隨即進迫萬縣江岸，並開炮轟擊萬縣市區近3個小時， 發射炮彈和燃燒彈300餘發，萬縣中國軍民死傷以千計， 民房商店被毀千餘家，造成了「萬縣慘案」。 "
+	style = 0
+
+	action_a = {
+		name = "欺人太甚！ "
+		command = { type = dissent value = 1 }
+		command = { type = relation which = ENG value = -100 }
+		}
+}
+
+event = {
+	id = 200701
+	random = no
+	country = U07
+trigger = { 	control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+	name = "刘湘部易幟 "
+	desc = "1925年8月18日，國民政府軍事委員會 將轄下各地方軍隊名目取消，統一名 為 「國民革命軍」。由黃埔軍校訓練的 軍官組成的黃埔軍校校軍為國民革命 軍第一軍。「建國湘軍」為國民革命 軍第二軍，「建國滇軍」改為國民革 命軍第三軍，「建國粵軍」為國民革 命軍第四軍，福軍為國民革命軍第五 軍。1926年1月，改編湖南「攻鄂軍」及 「警衛軍」，和廣東「潮梅軍」等為國民革 命軍第六軍。"
+	style = 0
+
+	date = { day = 1 month = october year = 1926 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+			name = "通電擁護北伐軍 "
+			command = { type = non_aggression which = chi where = U07 }
+			command = { type = relation which = chi value = 20 }
+			
+			command = { type = add_corps which = "國民革命軍第21軍 " value = land when = 86004 where = 1280 }
+			command = { type = activate_division which = 20030 value = 10 when = 1 where = 1280 }
+			command = { type = activate_division which = 20030 value = 11 when = 1 where = 1280 }
+			command = { type = activate_division which = 20030 value = 12 when = 1 where = 1280 }
+			command = { type = activate_division which = 20030 value = 13 when = 1 where = 1280 }
+			command = { type = activate_division which = 20030 value = 14 when = 1 where = 1280 }
+			command = { type = activate_division which = 20030 value = 15 when = 1 where = 1280 }
+			command = { type = activate_division which = 20030 value = 16 when = 1 where = 1280 }
+			
+			command = { type =  remove_division which = 20030 value = 2 } 
+			command = { type =  remove_division which = 20030 value = 3 }
+			command = { type =  remove_division which = 20030 value = 4 }
+			command = { type =  remove_division which = 20030 value = 5 }
+			command = { type =  remove_division which = 20030 value = 6 }
+			command = { type =  remove_division which = 20030 value = 7 }
+			command = { type =  remove_division which = 20030 value = 8 }
+			command = { type =  remove_division which = 20030 value = 9 }
+ 
+}
+}   
+
+###################
+#黔系事件
+###################
+##########################
+#1926年       200900~
+##########################
+ event = {
+	id = 200900
+	random = no
+	country = U09
+
+	name = "響應北伐 "
+	desc =  " 袁祖銘率部投靠廣州國民政府。同年10月，袁祖銘任國民革命軍第12軍軍長兼左翼軍前敵總指揮，參加北伐。"
+	style = 0
+ 
+	action_a = {
+		name = "加入北伐 "
+		command = { type = dissent value = -1 }
+		command = { type = alliance which = chi }
+        command = { type = chiefofair which = 11522 }
+        command = { type = morale which = land value = 3 }
+        command = { type = trigger which = 200903 value = 10}
+		command = { type = add_corps which = "國民革命軍第25軍 " value = land when = 80004 where = 1364 }
+		command = { type = activate_division which = 15004 value = 11 when = 0 }
+		command = { type = activate_division which = 15004 value = 12 when = 0 }
+		command = { type = activate_division which = 15004 value = 13 when = 0 }
+		command = { type = add_corps which = "國民革命軍第12軍 " value = land when = 80004 where = 1260 }
+		command = { type = activate_division which = 15004 value = 14 when = 0 where = 1260 }
+		command = { type = activate_division which = 15004 value = 15 when = 0 where = 1260 }
+		command = { type = activate_division which = 15004 value = 16 when = 0 where = 1260 }
+		command = { type =  remove_division which = 15004 value = 3 }}
+}
+
+
+
+event = {
+	id = 200901
+	random = no
+	country = U09
+	name = "袁祖銘被刺殺 "
+	desc =  " 1927年1月31日，袁祖銘獲唐生智手下 的師長周斕在常德假意設宴款待，席 間被突然殺害。這是唐生智獲得蔣介石 認可後下令殺害的。袁祖銘享年39歲。"
+	style = 0
+ action_a = {
+	name = "可惡 "
+		
+		command = { type = sleepminister which = 11500 }
+		command = { type = sleepminister which = 11502 }
+        command = { type = sleepminister which = 11507 }
+        command = { type = sleepleader which = 80000 }
+        command = { type = headofstate which = 11510 }
+        command = { type = leave_alliance }
+		command = { type = peace which = U02 value = 0 }
+        command = { type = chiefofarmy which = 11515 }
+        command = { type = foreignminister which = 11536 }
+        command = { type = chiefofair which = 11520 }
+		
+		command = { type = secedeprovince which = chi value = 1260 }
+		command = { type = secedeprovince which = chi value = 2670 }
+		command = { type = secedeprovince which = chi value = 2671 }
+		command = { type = secedeprovince which = chi value = 1261 }
+		command = { type = secedeprovince which = chi value = 1253 }
+		command = { type = secedeprovince which = chi value = 1232 }
+		command = { type = secedeprovince which = chi value = 2660 }
+		command = { type = secedeprovince which = chi value = 2659 }
+		command = { type = secedeprovince which = chi value = 2658 }
+		command = { type = secedeprovince which = chi value = 2661 }
+		command = { type = secedeprovince which = chi value = 1886 }
+		command = { type = secedeprovince which = chi value = 1266 }
+		command = { type = secedeprovince which = chi value = 1231 }
+		command = { type = secedeprovince which = chi value = 2667 }
+		command = { type = secedeprovince which = chi value = 2666 }
+		command = { type = secedeprovince which = chi value = 2668 }
+		command = { type = secedeprovince which = chi value = 2669 }
+		command = { type = secedeprovince which = chi value = 1264 }
+		command = { type = secedeprovince which = chi value = 2665 }
+		command = { type = secedeprovince which = chi value = 2664 }
+		command = { type = secedeprovince which = chi value = 2663 }
+		command = { type = secedeprovince which = chi value = 2662 }
+		command = { type = secedeprovince which = chi value = 2656 }
+		command = { type = secedeprovince which = chi value = 2657 }
+		command = { type = secedeprovince which = chi value = 2653 }
+		command = { type = secedeprovince which = chi value = 2654 }
+		command = { type = secedeprovince which = chi value = 2655 }
+		command = { type =  remove_division which = 15004 value = 14 }
+		command = { type =  remove_division which = 15004 value = 15 }
+		command = { type =  remove_division which = 15004 value = 16 } }
+}
+
+event = {
+	id = 200902
+	random = no
+	country = U09
+
+	trigger = { event = 200901
+		exists = CHI }
+
+	name = "投靠國民政府 "
+	desc =  " 1927年（民國16年）4月，周西成正式轉投國民政府， 任貴州省政務委員會主席。同時兼任國民 革命軍第25軍軍長。同年7月，任貴州省政府主席。"
+	style = 0
+
+  	date = { day = 1 month = april year = 1927 }
+  	offset = 2
+  	deathdate = { day = 1 month = december year = 1927 }
+
+	action_a = {
+		name = "投靠 "
+		command = { type = dissent value = -1 }
+		command = { type = non_aggression which = chi where = U09 }
+		command = { type = relation which = chi value = 20 }
+#		command = { type = alliance which = chi }
+#       command = { type = chiefofair which = 11522 }
+  		}
+	}
+
+event = {
+	id = 200903
+	random = no
+	country = CHI
+
+	name = "國民革命軍第九軍成立 "
+	desc = "1926年8月，湖南常德黔軍第一師被國 民政府軍事委員會改編為國民革命軍第 九軍，彭漢章任軍長，呂超任黨代表，下轄第一師， 師長賀龍；第二師，師長楊其昌；第三師，師長毛鴻翔。"
+	style = 0
+
+	action_a = {
+		name = "成立 "
+		command = { type = add_corps which = "國民革命軍第九軍 " value = land when = 80002 where = 1260 }
+    	command = { type = activate_division which = 15004 value = 5 when = 0 where = 1260 }
+    	command = { type = activate_division which = 15004 value = 6 when = 0 where = 1260 }
+    	command = { type = activate_division which = 15004 value = 7 when = 0 where = 1260 }
+    	command = { type =  remove_division which = 15004 value = 1 } 
+		command = { type = trigger which = 200904 value = 5 }
+		}
+}    
+
+event = {
+	id = 200904
+	random = no
+	country = CHI
+
+	name = "國民革命軍第十軍成立 "
+	desc = "1926年8月初，湖南湘西洪江黔軍第二 師被國民政府軍事委員會改編為國民 革命軍第十軍，王天培任軍長，金漢鼎 任副軍長，高冠吾任參謀長，周仲良任黨代表。 下轄第二十八師，師長王天鍚；第二十九師， 師長楊勝治；第三十師，師長王天生"
+	style = 0
+
+	action_a = {
+		name = "成立 "
+		command = { type = add_corps which = "國民革命軍第十軍 " value = land when = 80001 where = 1260 }
+    	command = { type = activate_division which = 15004 value = 8 when = 0 where = 1260 }
+    	command = { type = activate_division which = 15004 value = 9 when = 0 where = 1260 }
+    	command = { type = activate_division which = 15004 value = 10 when = 0 where = 1260 }
+    	command = { type =  remove_division which = 15004 value = 2 } 
+		}
+}    
+###################
+#湘系事件
+###################
+##########################
+#1926年       201000~
+##########################
+event = {
+  id = 201000
+  random = no
+  country = u10
+  
+  name = "唐生智驱逐赵恒锡 "
+  desc = "1926年1月，中共湖南区委派王基永去衡阳，向唐生智提出 反吴驱赵、与国民政府合作等七项要求，唐大体赞同。3月6日 ，唐军第十五团开始向长沙进逼，8日继续向长沙进军，声势极 盛，限湖南省长赵恒锡于二十四小时之内离开长沙，赵恒惕自知 不敌，12日宣布唐生智为内务司长，兼军务司长，自己“因健 康欠佳，赴沪医治，依照省宪规定，所遗省长职务，着由内务司 长唐生智代理”，13日赵恒惕离长沙北去。唐生智正式接管湖 南。 "
+  style = 0
+  picture = "news_paper"
+  
+  date = { day = 1 month = march year = 1926 }
+  offset = 7
+  deathdate = { day = 1 month = april year = 1926 }
+  
+  action_a = {
+		name = "长江后浪推前浪 "
+#    	command = { type = sleepminister which = 10500 }#赵恒锡
+#    	command = { type = sleepminister which = 10502 }#
+#    	command = { type = sleepminister which = 10503 }#
+#    	command = { type = sleepminister which = 10507 }#
+		command = { type = headofstate which = 10510 } #唐生智
+		command = { type = foreignminister which = 10511 } #唐生智
+      	command = { type = armamentminister which = 10514 } #唐生智  
+        command = { type = chiefofarmy which = 10513 } #唐生智
+		command = { type = secedeprovince which = u09 value = 1260 }
+		command = { type = secedeprovince which = u09 value = 2670 }
+		command = { type = secedeprovince which = u09 value = 2671 }
+		command = { type = secedeprovince which = u09 value = 1261 }  
+		command = { type = remove_division which = 30039 value = 101021 }
+		command = { type = remove_division which = 30039 value = 101022 }
+		command = { type = trigger which = 200500 value = 15 }
+		command = { type = construct which = land_fort where = 1257 value = 7 }
+		command = { type = supplies value = 2000 } }
+}
+
+#歷史向國民政府求援
+#架空轉TNE_CYN 向滇系求援 event 720074
+event = {
+	id = 201001
+	random = no
+	country = u10
+	trigger = { 
+		event = 200500
+		event = 201003
+		control = { province = 1255 data = -2 }
+		NOT = { ispuppet = CHI }
+	}
+  
+	name = "混乱的湖南 "
+	desc = "1926年4月2日唐生智军何键旅因吴佩孚压迫，自岳州退回 长沙，但断然拒绝吴佩孚恢复赵恒惕统治的要求。4月19日吴 佩孚委叶开鑫为讨贼联军湘军总司令，彭寿莘为湘鄂边防督办， 由湘鄂边境向岳州进攻，21日叶开鑫通电就任“讨贼联军”湘军 总司令，23日占岳州，唐生智被迫后退。5月1日唐生智军自长沙 退往衡山，2日叶开鑫军占领长沙，10日唐生智代表向广州国 民政府求救。几乎与此同时，黔军袁祖铭也进驻了常德。 "
+	style = o
+  
+	date = { day = 9 month = may year = 1926 }
+	offset = 1
+	deathdate = { day = 2 month = april year =1927 }
+  
+	action_a = {
+		ai_chance = 99
+		name = "向国民政府求援 "
+		command = { type = trigger which = 1027 }
+		command = { type = remove_division which = -1 }
+		command = { type =  remove_division which = 30039 value = 101001 }
+		command = { type =  remove_division which = 30039 value = 101002 }
+		command = { type =  remove_division which = 30039 value = 101011 }
+		command = { type =  remove_division which = 30039 value = 101012 }
+		command = { type =  remove_division which = 30039 value = 101031 }
+		command = { type =  remove_division which = 30039 value = 101032 }
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 3 }
+		command = { type = access which = CHI }
+		command = { type = access which = CGX }
+	
+		command = { type = add_corps which = "国民革命军第八军 " value = land where = 1257 }
+		command = { type = activate_division which = 22400 value = 101041 where = 1257 }
+		command = { type = activate_division which = 22400 value = 101042 where = 1257 }
+		command = { type = activate_division which = 22400 value = 101043 where = 1257 }
+		command = { type = activate_division which = 22400 value = 101044 where = 1257 }
+		command = { type = activate_division which = 22400 value = 101045 where = 1257 }
+	}
+	action_b = {
+		ai_chance = 1
+		name = "我们会处理好我们的事情 "
+		command = { type = secedeprovince which = u05 value = 1255 }
+		command = { type = secedeprovince which = u05 value = 1256 }
+    }
+}
+
+
+event = {
+  id = 201002
+  random = no
+  country = u10
+  trigger = { event = 200900               
+                }
+  
+  name = "刺殺袁祖銘 "
+  desc = "1926年10月，袁祖銘任國民革命軍第12軍軍長兼左翼 軍前敵總指揮，參加北伐。這一任命遭到時 任國民革命軍第8軍軍長的湘軍指揮官唐生智的排 斥和猜忌。唐生智害怕袁祖銘奪去湖南 省的統治權。此外，袁祖銘的部下王天培、彭漢章 也參加了國民革命軍，但是袁、彭與中國 國民黨的關係尤其薄弱，受到蔣介石的猜疑。1927年1月31日， 袁祖銘獲唐生智手下的師長周斕在常德 假意設宴款待，席間被突然殺害。這是  唐生智獲得蔣介石認可後下令殺害的。袁祖銘享年39歲。 "
+  style = o
+  
+  date = { day = 30 month = january year = 1927 }
+  offset = 1
+  deathdate = { day = 2 month = april year =1927 }
+  
+  action_a = {
+    ai_chance = 99
+    name = " 解決他"
+     command = { type = trigger which = 200901 }
+    }
+  action_b = {
+    ai_chance = 1
+    name = "算了吧 "
+    
+    }
+  }
+
+event  = {
+	id = 201003
+	random = no
+	country = u10
+	trigger = {     
+		control = { province = 1255 data = -2 }
+		event = 201000
+	}  
+	name = "退守湘南 "
+	desc = "5月1日唐生智军自长沙 退往衡山，2日叶开鑫军占领长沙，10日唐生智代表向广州国 民政府求救。 "
+	style = 0
+	date = { day = 15 month = march year = 1926 }
+	offset = 3
+	deathdate = { day = 1 month = june year = 1928 } 
+   
+	action_a = {
+		name = " "
+		command = { type = secedeprovince which = u05 value = 1255 }
+		command = { type = secedeprovince which = u05 value = 1256 }
+		command = { type = secedeprovince which = u05 value = 1259 }
+		command = { type = secedeprovince which = u05 value = 2672 }
+		command = { type = secedeprovince which = u05 value = 2676 }
+		command = { type = secedeprovince which = u05 value = 2678 }
+		command = { type = secedeprovince which = u05 value = 2679 }
+		command = { type = secedeprovince which = u05 value = 2685 }
+		command = { type = secedeprovince which = u05 value = 2683 }
+		command = { type = capital which = 1257 }
+   }
+}
+###################
+#直鲁联军事件
+###################
+##########################
+#1926年       201100~
+##########################
+
+
+###################
+#滇系事件
+###################
+##########################
+#1926年       201200~
+##########################
+
+
+###################
+#皖系事件
+###################
+##########################
+#1926年       201300~
+##########################
+event = {
+	id = 201300
+	random = no
+	country = U13
+
+	name = "大沽口事件 "
+	desc = "１９２６年３月７日，驻守天津大沽口的国民军发现奉系军舰在 大沽炮台附近活动，立即开炮将其击退，并于９日敷设水雷，封 锁港口。１０日，英、法、日、美、意等国驻华使馆开会，认为 国民军封锁大沽口违反《辛丑条约》，要求北京政府撤除一切入 京障碍。国民军被迫于３月１２日宣布开放大沽口岸。当日下午，日 本驱逐舰驶入，因未按事先约定的信号和时间联络，并跟随有另一驱 逐舰，故国民军鸣枪示警令其停止，但日本军舰却炮轰大沽口，酿成 “大沽口事件”。 "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "可恶！ " 
+		command = { type = dissent value = 3 }
+		command = { type = relation which = JAP value = -40 }
+		command = { type = trigger which = 230000 value = 3 }
+		command = { type = trigger which = 270000 value = 3 }
+		command = { type = trigger which = 240000 value = 3 }
+		command = { type = trigger which = 280000 value = 3 }
+		}
+}
+event = {
+	id = 201301
+	random = no
+	country = U13
+
+	trigger = { event = 201300
+                    event = 200001 }
+
+	name = "三·一八惨案 "
+	desc = "３月１８日，五千多人在天安门举行“反对八国最后通牒的国民 大会”，即“３１８”抗议大会。会后，游行队伍由李大钊率领　，前往段祺瑞执政府门前广场请愿。示威群众公推代表去向卫士　长交涉，要求放队伍进去，并请段祺瑞和贾德耀出来见面。执政　府内人员担心局势失控，命令预伏军警以武力驱散游行队伍，结果　造成当场死亡４７人，伤２００多人的惨剧。死者中为人们所熟知　的有北京女子师范大学学生刘和珍。 "
+	style = 0
+	picture = "sanyiba"
+
+	date = { day = 17 month = march year = 1926 }
+
+	action_a = {
+		name = "惊人惨案！ " 
+		command = { type = dissent value = 10 }
+		command = { type = relation which = CHI value = -40 }
+		command = { type = relation which = CHC value = -40 }
+		command = { type = relation which = USA value = -40 }
+		command = { type = relation which = ENG value = -40 }
+		command = { type = relation which = FRA value = -40 }
+		command = { type = domestic which = democratic value = -1 }
+		}
+}
+
+###############################
+# 北京政府历届内阁  201302~
+###############################
+
+event = {
+	id = 201302
+	random = no
+	country = u13
+       trigger = { exists = u13 }
+
+  name = "中华民国第二十九任内阁 "
+	desc = "原国务总理许世英因不满段祺瑞所为而于2月15日辞职。段祺瑞 令贾德耀代理。3月4日段准许许世英辞职，以贾署国务总理兼 陆军总长。 "
+	style = 0
+	
+
+	date = { day = 4 month = march year = 1926 }
+	offset = 1
+	deathdate = { day = 20 month = April year = 1926 }
+
+	action_a = {
+		name = "江河日下的北洋政府 " 
+		command = { type = headofgovernment which = 9019 } #贾德耀
+		command = { type = foreignminister which = 9020 } #胡惟德
+		command = { type = armamentminister which = 9021 } #贺德霖
+		command = { type = ministerofsecurity which = 9022 } #屈映光
+                     }
+}
+
+
+event = {
+	id = 201303
+	random = no
+	country = u13
+       trigger = { exists = u13 
+                   event = 201301
+                 }
+
+  name = "段祺瑞下野 "
+	desc = "“三一八惨案”发生后，举国沸腾，段祺瑞亦被抗议声所淹没。后被冯玉祥驱逐下台，退居天津日租界当寓公。曾经叱咤风云的段祺瑞，也正式退出了历史舞台。"
+	style = 0
+	
+
+	date = { day = 20 month = April year = 1926 }
+	offset = 1
+	deathdate = { day = 13 month = May year = 1926 }
+
+	action_a = {
+		name = "芝泉公，走好 " 
+		command = { type = sleepminister which = 9000 }
+		command = { type = headofstate which = 9054 } #国务院
+		command = { type = trigger which = 201304 }
+                     }
+}
+
+event = {
+	id = 201304
+	random = no
+	country = u13
+
+  name = "中华民国胡惟德临时内阁 "
+	desc = "原国务总理贾耀德于4月17日请辞。4月20日段祺瑞在下野 前发布命令，照准国务总理兼陆军总长贾德耀辞职，特任胡维德 署国务总理，自即日起着由国务院摄行临时执政权。 "
+	style = 0
+	
+	action_a = {
+		name = "江河日下的北洋政府 " 
+		command = { type = headofgovernment which = 9023 } #胡惟德
+                     }
+}
+
+
+event = {
+	id = 201305
+	random = no
+	country = u13
+       trigger = { exists = u13 }
+
+  name = "中华民国第三十任内阁 "
+	desc = "1926年5月13日颜惠庆内阁复职，宣布大总统曹锟于5月 1日辞职，依法由国务院摄行大总统职权。 "
+	style = 0
+	
+
+	date = { day = 13 month = may year = 1926 }
+	offset = 1
+	deathdate = { day = 22 month = june year = 1926 }
+
+	action_a = {
+		name = "江河日下的北洋政府 " 
+		command = { type = headofgovernment which = 9024 } #颜惠庆
+		command = { type = foreignminister which = 9025 } #施肇基
+		command = { type = armamentminister which = 9026 } #顾维钧
+		command = { type = ministerofsecurity which = 9027 } #张国淦
+		command = { type = ministerofintelligence which = 9030 } #张景惠
+		command = { type = chiefofstaff which = 9112 } #劉汝賢
+		command = { type = chiefofarmy which = 9029 } #张景惠
+		command = { type = chiefofnavy which = 9100 } #杜锡珪
+                     }
+}
+
+event = {
+	id = 201306
+	random = no
+	country = u13
+       trigger = { exists = u13 }
+
+  name = "中华民国杜锡珪临时内阁 "
+	desc = "原国务总理颜惠庆于6月22日辞职，以杜锡圭兼代。6月 23日颜内阁通电辞职。 "
+	style = 0
+	
+
+	date = { day = 22 month = june year = 1926 }
+	offset = 1
+	deathdate = { day = 1 month = october year = 1926 }
+
+	action_a = {
+		name = "江河日下的北洋政府 " 
+		command = { type = headofgovernment which = 9032 } #杜锡珪
+		command = { type = foreignminister which = 9033 } #蔡廷干
+                     }
+}
+
+event = {
+	id = 201307
+	random = no
+	country = u13
+       trigger = { exists = u13 }
+
+  name = "中华民国第二次顾维钧临时内阁 "
+	desc = "10月1日顾维钧继杜锡圭兼代国务总理。 "
+	style = 0
+	
+
+	date = { day = 1 month = october year = 1926 }
+	offset = 1
+	deathdate = { day = 11 month = january year = 1927 }
+
+	action_a = {
+		name = "江河日下的北洋政府 " 
+		command = { type = headofgovernment which = 9034 } #顾维钧
+                     }
+}
+
+event = {
+	id = 201308
+	random = no
+	country = u13
+       trigger = { exists = u13 }
+
+  name = "中华民国第三十一任内阁 "
+	desc = "顾维钧于1月11日正式组阁 "
+	style = 0
+	
+
+	date = { day = 11 month = january year = 1927 }
+	offset = 1
+	deathdate = { day = 16 month = june year = 1927 }
+
+	action_a = {
+		name = "江河日下的北洋政府 " 
+		command = { type = foreignminister which = 9035 } #顾维钧
+		command = { type = armamentminister which = 9036 } #汤尔和
+		command = { type = ministerofsecurity which = 9037 } #胡惟德
+                     }
+}
+
+event = {
+	id = 201309
+	random = no
+	country = u13
+       trigger = { exists = u13 event = 200205 }
+
+  	name = "中华民国第三十二任内阁 "
+	desc = "1927年6月16日，國務總理顧維鈞辭職後，6月18日張作霖成立軍政府， 於6月20日任命交通總長潘復為國務總理，也是北洋政府最後一任國務總理。 "
+	style = 0
+	
+
+	date = { day = 19 month = june year = 1927 }
+	offset = 1
+	deathdate = { day = 16 month = june year = 1928 }
+
+	action_a = {
+			name = "江河日下的北洋政府 " 
+      		command = { type = headofgovernment which = 9094 } #潘復
+      		command = { type = foreignminister which = 9090 } #王蔭泰
+      		command = { type = armamentminister which = 9091 } #閻澤溥
+      		command = { type = ministerofsecurity which = 9092 } #沈瑞麟
+            command = { type = chiefofarmy which = 9111 } #楊毓珣 
+            command = { type = chiefofstaff which = 9093 } #何豐林
+      		command = { type = chiefofnavy which = 9103 } #溫樹德
+                     }
+}
+
+###################
+#川蜀军事件
+###################
+##########################
+#1926年       201500~
+##########################
+event = {
+	id = 201501
+	random = no
+	country = U15
+trigger = { 	control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+	name = "易幟 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = december year = 1926 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+	name = "通電擁護北伐軍 "
+    command = { type = non_aggression which = chi where = U15 }
+    command = { type = relation which = chi value = 20 }
+	command = { type = add_corps which = "國民革命軍第20軍 " value = land when = 2000 where = 1265 }
+    command = { type = activate_division which = 20010 value = 3 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 34 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 35 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 36 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 37 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 38 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 39 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 40 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 41 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 42 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 43 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 44 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 45 when = 1 where = 1265 }
+    command = { type = activate_division which = 20010 value = 46 when = 1 where = 1265 }
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+    command = { type =  remove_division which = -1  } 
+ 
+}
+}  
+###################
+#川陝军事件
+###################
+##########################
+#1926年       201600~
+##########################
+
+event = {
+	id = 201600
+	random = no
+	country = U16
+trigger = { 	control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+	name = "邓锡侯部易幟 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "通電擁護北伐軍 "
+        command = { type = non_aggression which = chi where = U16 }
+        command = { type = relation which = chi value = 10 }
+		command = { type = add_corps which = "國民革命軍第28軍 " value = land when = 4000 where = 2772 }
+		command = { type = activate_division which = 20000 value = 14 when = 1 where = 2772 }
+		command = { type = activate_division which = 20000 value = 15 when = 1 where = 2772 }
+		command = { type = activate_division which = 20000 value = 16 when = 1 where = 2772 }
+		command = { type = activate_division which = 20000 value = 17 when = 1 where = 2772 }
+		command = { type = activate_division which = 20000 value = 18 when = 1 where = 2772 }
+		command = { type =  remove_division which = 20000 value = 5 } 
+		command = { type =  remove_division which = 20000 value = 6 }
+		command = { type =  remove_division which = 20000 value = 7 }
+ 
+}
+}  
+
+event = {
+	id = 201601
+	random = no
+	country = U16
+trigger = { 	control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+	name = "田颂尧部易幟 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = december year = 1926 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "通電擁護北伐軍 "
+        command = { type = non_aggression which = chi where = U16 }
+        command = { type = relation which = chi value = 10 }
+		command = { type = add_corps which = "國民革命軍第29軍 " value = land when = 4001 where = 1888 }
+		command = { type = activate_division which = 20000 value = 19 when = 1 where = 1888 }
+		command = { type = activate_division which = 20000 value = 20 when = 1 where = 1888 }
+		command = { type = activate_division which = 20000 value = 21 when = 1 where = 1888 }
+		command = { type =  remove_division which = 20000 value = 12 } 
+		command = { type =  remove_division which = 20000 value = 13 }
+ 
+}
+}  
+
+event = {
+	id = 201602
+	random = no
+	country = U16
+trigger = { 	control = { province = 1232 data = CHI }
+                control = { province = 1253 data = CHI }
+		event = 200012 }
+ 
+	name = "赖心辉部易幟 "
+	desc = " "
+	style = 0
+
+	date = { day = 24 month = november year = 1926 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "通電擁護北伐軍 "
+        command = { type = non_aggression which = chi where = U16 }
+        command = { type = relation which = chi value = 10 }
+		command = { type = add_corps which = "國民革命軍第22軍 " value = land when = 4007 where = 2651 }
+    	command = { type = activate_division which = 20000 value = 22 when = 1 where = 2651 }
+    	command = { type = activate_division which = 20000 value = 23 when = 1 where = 2651 }
+    	command = { type = activate_division which = 20000 value = 24 when = 1 where = 2651 }
+    	command = { type =  remove_division which = 20000 value = 9 } 
+    	command = { type =  remove_division which = 20000 value = 10 }
+ 
+}
+}  
+
+event = {
+	id = 201603
+	random = no
+	country = U16
+	trigger = { 	control = { province = 1232 data = CHI }
+                	control = { province = 1253 data = CHI }
+			event = 200012 }
+ 
+
+	name = "劉存厚部易幟 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1928 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "通電擁護北伐軍 "
+        command = { type = non_aggression which = chi where = U16 }
+        command = { type = relation which = chi value = 10 }
+		command = { type = add_corps which = "國民革命軍第23軍 " value = land when = 4006 where = 2768 }
+		command = { type = activate_division which = 20000 value = 28 when = 1 where = 2768 }
+		command = { type = activate_division which = 20000 value = 29 when = 1 where = 2768 }
+		command = { type =  remove_division which = 20000 value = 2 } 
+		command = { type =  remove_division which = 20000 value = 3 }
+		command = { type =  remove_division which = 20000 value = 27 }
+}
+}  
+###################
+#镇嵩军事件
+###################
+##########################
+#1926年       201700~
+##########################
+event = {
+   id = 201700
+   country = u17
+   random = no
+   name = "西安围城 "
+   desc = "1926年春，镇嵩军首领刘振华在吴佩孚，张作霖的支持下， 纠集10万人进攻西安，刘振华围城8个月之久，国民军将领杨 虎城，李虎臣率全城军民坚守，后冯玉祥将军率军入陕，西安之 围被解，时称“二虎守长安”。"
+   style = 0
+   action_a = {
+     name = "把西安变成地狱 "
+
+     		command = { type = add_corps which = "鎮嵩军第一军 " value = land where = 1887 } 
+     		command = { type = activate_division which = 22470 value = 117002 when = 1 where = 1887 }
+			command = { type = disorg_division which = 22470 value = 117002 when = 1 where = -1000 }
+
+     		command = { type = add_corps which = "鎮嵩军第二军 " value = land where = 2787 } 
+     		command = { type = activate_division which = 22470 value = 117003 when = 1 where = 2787 }
+			command = { type = disorg_division which = 22470 value = 117003 when = 1 where = -100 }
+
+     		command = { type = add_corps which = "鎮嵩军第三军 " value = land where = 1270 } 
+     		command = { type = activate_division which = 22470 value = 117004 when = 1 where = 1270 }
+			command = { type = disorg_division which = 22470 value = 117004 when = 1 where = -100 }
+
+     		command = { type = add_corps which = "鎮嵩军第四军 " value = land where = 2786 } 
+     		command = { type = activate_division which = 22470 value = 117005 when = 1 where = 2786 }
+			command = { type = disorg_division which = 22470 value = 117005 when = 1 where = -1000 }
+
+     		command = { type = add_corps which = "鎮嵩军第五军 " value = land where = 2782 } 
+     		command = { type = activate_division which = 22470 value = 117006 when = 1 where = 2782 }
+			command = { type = disorg_division which = 22470 value = 117006 when = 1 where = -1000 }
+
+     		command = { type = add_corps which = "鎮嵩军第六军 " value = land where = 2781 } 
+     		command = { type = activate_division which = 22470 value = 117007 when = 1 where = 2781 }
+			command = { type = disorg_division which = 22470 value = 117007 when = 1 where = -1000 }
+     		command = { type = trigger which = 200304 }
+     		command = { type = max_organization which = land value = 20 }
+     		command = { type = morale which = land value = 20 }
+     		command = { type = construct which = land_fort where = 1887 value = 8 }
+     		command = { type = construct which = land_fort where = 2787 value = 8 }
+     		command = { type = construct which = land_fort where = 1270 value = 8 }
+     		command = { type = construct which = land_fort where = 2786 value = 8 }
+     		command = { type = construct which = land_fort where = 2782 value = 8 }
+     		command = { type = end_puppet } 
+    		command = { type = extra_tc value = 40 }
+     		command = { type = war which = U03 }
+     		command = { type = delay value = 10 }
+			command = { type = attrition_mod value = 30 }
+			command = { type = supply_dist_mod value = 30 }
+     		command = { type = access which = U05 }
+            command = { type = free_supplies value = 12 }
+			command = { type = free_money value = 0.5 }
+            command = { type = supplies value = 5000 }
+            command = { type = money value = 500 }
+     }
+}
+
+event = {
+   id = 201701
+   country = u17
+   random = no
+  
+   name = "长安解圍 "
+   desc = "1926年春，镇嵩军首领刘振华在吴佩孚，张作霖的支持下， 纠集10万人进攻西安，刘振华围城8个月之久，国民军将领杨 虎城，李虎臣率全城军民坚守，后冯玉祥将军率军入陕，西安之 围被解，时称“二虎守长安”。"
+   style = 0
+   action_a = {
+     name = "成功解圍 "
+		command = { type = morale which = land value = -15 }
+		command = { type = giveleader which = 8000 where = U03 }
+		command = { type = giveleader which = 8001 where = U03 }
+		command = { type = giveleader which = 8002 where = U03 }
+		command = { type = giveleader which = 8003 where = U03 }
+		command = { type = giveleader which = 8004 where = U03 }
+		command = { type = giveleader which = 8005 where = U03 }
+		command = { type = giveleader which = 8006 where = U03 }
+		command = { type = giveleader which = 8007 where = U03 }
+		command = { type = giveleader which = 8008 where = U03 }
+		command = { type = giveleader which = 8009 where = U03 }
+     }
+}
+
+event = {
+	id = 201702
+	random = no
+	country = U17
+
+	name = "吴佩孚下野 "
+  desc = "汀泗桥、贺胜桥、武昌血战后，吴佩孚兵败两湖。为躲避蒋介石、 冯玉祥的追杀，吴佩孚打电报给曾受过其重恩的四川军阀杨森说： “我已无路可走，不论你允许与否，我都只有入川一途了。”从此， 吴佩孚流亡入川，受到杨森的庇护。 "
+   
+	style = 0
+	action_a = {
+		name = "可惡 " 
+		command = { type = secedeprovince which = U02 value = 2841 }
+		command = { type = secedeprovince which = U02 value = 2842 }
+		command = { type = secedeprovince which = U02 value = 2844 }
+		command = { type = secedeprovince which = U02 value = 2845 }
+		command = { type = secedeprovince which = U02 value = 2846 }
+		command = { type = secedeprovince which = U02 value = 2849 }
+		command = { type = secedeprovince which = U02 value = 2843 }
+		command = { type = secedeprovince which = U02 value = 2840 }
+		command = { type = secedeprovince which = U02 value = 1229 }
+		command = { type = secedeprovince which = U02 value = 1228 }
+		command = { type = secedeprovince which = U02 value = 1227 }
+		command = { type = secedeprovince which = U02 value = 1223 }
+#       command = { type = peace which = CHI value = 1 }
+        command = { type = capital which = 1887 }
+        command = { type = delay value = -10 }	}
+}
+
+###################
+#新疆事件
+###################
+##########################
+#1928年       202000~
+##########################
+
+event = {
+  id = 202000
+  random = no
+  country = sik
+  trigger = {  headofstate = 9500 }
+  
+  name = "三七政變 "
+  desc = " "
+  style = o
+  date = { day = 6 month = july year = 1928 }
+  offset = 1
+  deathdate = { day = 30 month = december year =1930 }
+  
+  action_a = {
+    name = " 一路好走"
+       command = { type = headofstate which = 9510 }
+        command = { type = sleepminister which = 9500 }
+        command = { type = sleepminister which = 9502 }
+        command = { type = sleepminister which = 9507 }
+        command = { type = sleepminister which = 9533 }
+        command = { type = sleepleader which = 94001 }}
+  }
+
+###################
+#寧馬事件
+###################
+##########################
+#1926年       203000~
+##########################
+
+event = {
+  id = 203000
+  random = no
+  country = U18
+  
+  name = "冯玉祥下野 "
+  desc = "郭松龄败后，冯玉祥失一强援，而其本身又没有什么强大的靠山 ，因此在奉军的反击下接连受挫，其势渐弱。1926年1月在 奉、直军联合进攻下被迫通电下野，旋赴苏联考察。8月中旬回 国，迅即被广州国民政府任命为国民政府委员、军事委员会委员 。 "
+  style = 0
+  picture = "news_paper"
+  
+  
+  action_a = {
+    name = "时不我与 "	
+    command = { type = alliance which = U03 }	
+    command = { type = peace which = U02 }
+	command = { type = peace which = U05 }
+    command = { type = peace which = CSX }
+	command = { type = peace which = U17 value = 1 }
+    }
+    }
+###########################################
+
+event = {
+	id = 600000
+	random = no
+	country = U09
+
+	name = "江巴事變 "
+	desc = "1926年1月24日袁祖铭返抵重庆，立即下令增调黔军四个团入城， 在浮图关、两路口、磁器口等要地配置重兵，战争一触即发。 1月29日，刘湘部队正移驻时，袁祖铭突然策动鲜英师何金鳌部哗变投袁， 鲜英仅率残部一营突围与兰文彬会合。 1月30日，袁祖铭又派兵攻击刘湘部守城卫队，占领驻渝机关， 收缴川军守卫部队枪械，追击已撤退至白市驿等地的兰文彬、 鲜英师，将刘湘的主力部队全部逐出了重庆。 "
+	style = 0
+
+	action_a = {
+		name = "ok！ " 
+        command = { type = leave_alliance }
+        command = { type = unlock_division which = 15004 value = 1 }
+		command = { type = dissent value = -2 }	 
+		}
+}  
+
+event = {
+	id = 600001
+	random = no
+	country = U07
+	trigger = {  event = 100119 }
+	
+	name = "江巴事變 "
+	desc = "1926年1月24日袁祖铭返抵重庆，立即下令增调黔军四个团入城， 在浮图关、两路口、磁器口等要地配置重兵，战争一触即发。 1月29日，刘湘部队正移驻时，袁祖铭突然策动鲜英师何金鳌部哗变投袁， 鲜英仅率残部一营突围与兰文彬会合。 1月30日，袁祖铭又派兵攻击刘湘部守城卫队，占领驻渝机关， 收缴川军守卫部队枪械，追击已撤退至白市驿等地的兰文彬、 鲜英师，将刘湘的主力部队全部逐出了重庆。 "
+	style = 0
+
+	date = { day = 24 month = january year = 1926 }
+	offset = 1
+	deathdate = { day = 30 month = december year =1930 }
+	action_a = {
+		name = "可恶！ " 
+		command = { type = trigger which = 600000 }
+        command = { type = leave_alliance }
+        command = { type = end_access which = U09 }
+		command = { type = dissent value = 3 }
+        command = { type = secedeprovince which = U09 value = 1280 }
+        command = { type = secedeprovince which = U09 value = 1263 }
+		command = { type = province_keypoints which = 2771 value = 1 }
+		command = { type = construct which = land_fort where = 2771 value = 10 }
+        command = { type = capital which = 2771 } 
+		}
+}  
+
+event = {
+	id = 600002
+	random = no
+	country = U07
+	trigger = {
+		event = 600001
+		not = { exists = U15 }
+		}
+	
+	name = "丙寅公约 "
+	desc = "劉湘主力被袁祖銘逐出重慶以後，劉湘決定驅逐袁祖銘出川。
+			但是，當時劉湘的部隊被分別隔於上、下川東，無法集結，
+			被迫又向在統一之戰中戰敗赴漢投靠吳佩孚的楊森謀求合作。
+			楊森亦想乘機再起，加上川軍將領鄧錫侯、田頌堯等因與劉
+			湘分贓失和，亦歡迎他回川。於是，劉、楊在武漢簽訂了
+			“ 丙寅公約 ”。公約規定：歸還原來楊森所屬的兵權，與劉
+			湘合作收復重慶後，下川東則為他統治範圍。"
+	style = 0
+
+	date = { day = 1 month = february year = 1926 }
+	offset = 1
+	deathdate = { day = 30 month = december year =1930 }
+	
+	action_a = {
+		name = "楊森回川 " 
+        command = { type = leave_alliance }
+		command = { type = dissent value = 3 }
+        command = { type = independence which = u15 value = 1 }
+		command = { type = trigger which = 600003  }
+		command = { type = trigger which = 600004  }
+		command = { type =  remove_division which = 20010 value = 2 }
+		command = { type =  remove_division which = 20010 value = 3 }
+		command = { type =  remove_division which = 20010 value = 4 }
+		command = { type =  remove_division which = 20010 value = 5 }
+		command = { type =  remove_division which = 20010 value = 6 }
+		command = { type =  remove_division which = 20010 value = 7 }
+		command = { type =  remove_division which = 20010 value = 8 }
+		command = { type =  remove_division which = 20010 value = 9 }
+		command = { type =  remove_division which = 20010 value = 10 }
+		command = { type =  remove_division which = 20010 value = 11 }
+		command = { type =  remove_division which = 20010 value = 12 }
+		command = { type =  remove_division which = 20010 value = 13 }
+		command = { type =  remove_division which = 20010 value = 14 }
+		command = { type =  remove_division which = 20010 value = 15 }
+		command = { type =  remove_division which = 20010 value = 16 }
+		command = { type =  remove_division which = 20010 value = 17 }
+		command = { type =  remove_division which = 20010 value = 18 }
+		command = { type =  remove_division which = 20010 value = 19 }
+		command = { type =  remove_division which = 20010 value = 20 }
+		}
+}  
+event = {
+	id = 600003
+	random = no
+	country = U15
+
+	name = "丙寅公约 "
+	desc = "劉湘主力被袁祖銘逐出重慶以後，劉湘決定驅逐袁祖銘出川。
+			但是，當時劉湘的部隊被分別隔於上、下川東，無法集結，
+			被迫又向在統一之戰中戰敗赴漢投靠吳佩孚的楊森謀求合作。
+			楊森亦想乘機再起，加上川軍將領鄧錫侯、田頌堯等因與劉
+			湘分贓失和，亦歡迎他回川。於是，劉、楊在武漢簽訂了
+			“ 丙寅公約 ”。公約規定：歸還原來楊森所屬的兵權，與劉
+			湘合作收復重慶後，下川東則為他統治範圍。"
+	style = 0
+
+
+	action_a = {
+		name = "東山再起 " 
+		command = { type = dissent value = -3 }
+		command = { type = add_corps which = "川軍(楊森部) " value = land where = 1265 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }
+		command = { type = add_division value = infantry when = 13 }		
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }
+		command = { type = add_division value = militia when = 1 }		}
+}  
+
+event = {
+	id = 600004
+	random = no
+	country = U07
+
+	name = "反袁密約 "
+	desc = "劉湘主力被袁祖銘逐出重慶以後，劉湘決定驅逐袁祖銘出川。
+			但是，當時劉湘的部隊被分別隔於上、下川東，無法集結，
+			被迫又向在統一之戰中戰敗赴漢投靠吳佩孚的楊森謀求合作。
+			楊森亦想乘機再起，加上川軍將領鄧錫侯、田頌堯等因與劉
+			湘分贓失和，亦歡迎他回川。於是，劉、楊在武漢簽訂了
+			“ 丙寅公約 ”。公約規定：歸還原來楊森所屬的兵權，與劉
+			湘合作收復重慶後，下川東則為他統治範圍。"
+	style = 0
+
+	action_a = {
+		name = "結盟 " 
+           command = { type = alliance which = U16 }
+           command = { type = alliance which = U15 }
+		}
+}  
+
+event = {
+	id = 600005
+	random = no
+	country = U07
+	trigger = { event = 600001
+				event = 600004 }
+	name = "驅袁之戰 "
+	desc = "3月1日，楊森返回川東萬縣，召舊屬六部來歸，很快得八萬
+			餘眾。4月20日，由劉湘部師長蘭文彬發出討袁通電，接著，
+			劉湘、楊森、賴心輝部師、旅長聯名通電響應。5月5日，川
+			軍兵分上川東、下川東兩路，由劉湘、楊森分別統領、夾擊
+			重慶，劉文輝亦在川南發起進攻。"
+	style = 0
+
+	date = { day = 21 month = february year = 1926 }
+	offset = 3
+	deathdate = { day = 30 month = december year =1930 }
+	
+	action_a = {
+		name = " " 
+		command = { type = dissent value = -3 }
+        command = { type = war which = U09 }
+		}
+}  
+
+event = {
+	id = 600006
+	random = no
+	country = U09
+	trigger = { 
+		or = { 
+			and = {	control = { province = 1280 data = -2 }
+					control = { province = 1263 data = -2 } 
+					}
+			control = { province = 1262 data = -2 }
+
+            control = { province = 1365 data = -2 }
+			}
+		}
+	name = "遭遇失敗 "
+	desc = "1926年5月18日，劉、楊聯軍兵臨重慶。5月21日，
+			川軍進占重慶。袁祖銘於5月下旬和6月上旬率黔
+			軍全部離川返黔。"
+	style = 0
+
+  date = { day = 21 month = february year = 1926 }
+  offset = 3
+  deathdate = { day = 30 month = december year =1930 }
+	
+	action_a = {
+		name = " " 
+		command = { type = dissent value = 5 }
+        command = { type = peace which = U07 value = 0 }
+        command = { type = secedeprovince which = U07 value = 1280 }
+        command = { type = secedeprovince which = U07 value = 1263 }
+		command = { type = trigger which = 600007 value = 1  }
+		}
+}  	
+
+event = {
+	id = 600007
+	random = no
+	country = U09
+
+	name = "率軍回黔 "
+	desc = "1926年5月18日，劉、楊聯軍兵臨重慶。5月21日，
+			川軍進占重慶。袁祖銘於5月下旬和6月上旬率黔
+			軍全部離川返黔。"
+	style = 0
+	
+	action_a = {
+		name = " " 
+        command = { type = peace which = U07 value = 0 }
+        command = { type = secedeprovince which = U07 value = 1280 }
+        command = { type = secedeprovince which = U07 value = 1263 }
+		command = { type = trigger which = 600008 value = 1  }
+		command = { type = trigger which = 600009 value = 1  }	
+		command = { type = trigger which = 600010 value = 1  }			}
+}  	
+
+event = {
+	id = 600008
+	random = no
+	country = U07
+
+	name = "驅袁成功 "
+	desc = "1926年5月18日，劉、楊聯軍兵臨重慶。5月21日，
+			川軍進占重慶。袁祖銘於5月下旬和6月上旬率黔
+			軍全部離川返黔。"
+	style = 0
+	
+	action_a = {
+		name = "返回重慶 " 
+		command = { type = dissent value = -3 }
+        command = { type = leave_alliance }
+        command = { type = capital which = 1280 }
+		command = { type = province_keypoints which = 2771 value = -1 }
+		command = { type = construct which = land_fort where = 2771 value = -10 }
+		}
+}  	
+event = {
+	id = 600009
+	random = no
+	country = U15
+
+	name = "驅袁成功 "
+	desc = "1926年5月18日，劉、楊聯軍兵臨重慶。5月21日，
+			川軍進占重慶。袁祖銘於5月下旬和6月上旬率黔
+			軍全部離川返黔。"
+	style = 0
+	
+	action_a = {
+		name = " " 
+		command = { type = dissent value = -2 }
+        command = { type = leave_alliance }
+		}
+}  	
+event = {
+	id = 600010
+	random = no
+	country = U16
+
+	name = "驅袁成功 "
+	desc = "1926年5月18日，劉、楊聯軍兵臨重慶。5月21日，
+			川軍進占重慶。袁祖銘於5月下旬和6月上旬率黔
+			軍全部離川返黔。"
+	style = 0
+	
+	action_a = {
+		name = " " 
+		command = { type = dissent value = -2 }
+        command = { type = leave_alliance }
+		}
+}  	
+###########################################
+
+
+####################################################
+

@@ -1,0 +1,122 @@
+land_unit_type = 1
+allowed_brigades = artillery
+allowed_brigades = anti_air
+allowed_brigades = b_u8
+allowed_brigades = b_u9
+allowed_brigades = b_u4
+
+# 0 - 土木筑垒要塞师 
+model = {
+	cost 					= 10
+	buildtime	 			= 720
+	manpower 				= 10
+	maxspeed 				= 0
+	defaultorganisation 	= 75
+	morale					= 75
+	defensiveness 			= 58
+	toughness				= 60
+	softness				= 80
+	suppression				= 10
+	airdefence				= 15
+	softattack				= 15
+	hardattack				= 15
+	airattack				= 15
+	transportweight			= 100
+	supplyconsumption 		= 5
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	max_supply_stock = 500
+}
+# 1 - 石木筑垒要塞师 
+model = {
+	cost 					= 10
+	buildtime	 			= 900
+	manpower 				= 10
+	maxspeed 				= 0
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 58
+	toughness				= 60
+	softness				= 60
+	suppression				= 15
+	airdefence				= 20
+	softattack				= 20
+	hardattack				= 20
+	airattack				= 20
+	transportweight			= 150
+	supplyconsumption 		= 7
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	max_supply_stock = 700
+}
+# 2 - 混合筑垒群要塞师 
+model = {
+	cost 					= 10
+	buildtime	 			= 1080
+	manpower 				= 10
+	maxspeed 				= 0
+	defaultorganisation 	= 125
+	morale					= 125
+	defensiveness 			= 58
+	toughness				= 60
+	softness				= 40
+	suppression				= 20
+	airdefence				= 30
+	softattack				= 30
+	hardattack				= 30
+	airattack				= 30
+	transportweight			= 200
+	supplyconsumption 		= 10.5
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	max_supply_stock = 1050
+}
+# 3 - 混凝土要塞群守备师 
+model = {
+	cost 					= 10
+	buildtime	 			= 1440
+	manpower 				= 15
+	maxspeed 				= 0
+	defaultorganisation 	= 150
+	morale					= 150
+	defensiveness 			= 58
+	toughness				= 60
+	softness				= 20
+	suppression				= 30
+	airdefence				= 40
+	softattack				= 40
+	hardattack				= 40
+	airattack				= 40
+	transportweight			= 250
+	supplyconsumption 		= 12
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	max_supply_stock = 2400
+}
+# 4 - 现代混凝土复合要塞群守备师 
+model = {
+	cost 					= 10
+	buildtime	 			= 1440
+	manpower 				= 20
+	maxspeed 				= 0
+	defaultorganisation 	= 250
+	morale					= 250
+	defensiveness 			= 58
+	toughness				= 60
+	softness				= 0
+	suppression				= 40
+	airdefence				= 60
+	softattack				= 60
+	hardattack				= 60
+	airattack				= 60
+	transportweight			= 300
+	supplyconsumption 		= 12
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.5
+	upgrade_cost_factor = 0.5
+	max_supply_stock = 2400
+}

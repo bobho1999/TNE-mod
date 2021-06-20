@@ -1,0 +1,3 @@
+land_unit_type = 1
+# 0 - 裝甲列车加强团 
+model          = { cost = 7 buildtime = 70 manpower = 2 defensiveness = 1 toughness = 1 softness = -10 hardattack = 2 supplyconsumption = 0.2 fuelconsumption = 0.4 upgrade_time_factor = 0.5 upgrade_cost_factor = 1.0 }

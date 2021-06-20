@@ -1,0 +1,12 @@
+TIB;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+10000;Head of State;达赖十三世·土登嘉措 ;24;PA;Autocratic Charmer;Medium;土登嘉措;x
+10001;Head of Government;九世班禅·曲吉尼玛 ;24;PA;Happy Amateur;Medium;qujinima;x
+10002;Foreign Minister;达赖十三世·土登嘉措 ;24;PA;Apologetic Clerk;Medium;土登嘉措;x
+10003;Minister of Armament;夏格巴·旺秋德典 ;24;PA;Laissez Faires Capitalist;Medium;xiageba;x
+10004;Minister of Security;夏格巴·旺秋德典 ;24;PA;Silent Lawyer;Medium;xiageba;x
+10005;Head of Military Intelligence;丹巴绛央 ;24;PA;Dismal Enigma;Medium;danbajiangyang;x
+10006;Chief of Staff;丹巴绛央 ;24;PA;Static Defence Doctrine;Medium;danbajiangyang;x
+10007;Chief of Army;丹巴绛央 ;24;PA;Elastic Defence Doctrine;Medium;danbajiangyang;x
+10008;Chief of Navy;少數民族;36;PA;Undistinguished Suit;Medium;bentu;x
+10009;Chief of Air Force;英國;36;ML;Undistinguished Suit;Medium;eng;x

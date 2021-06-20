@@ -1,0 +1,1380 @@
+#############################################
+###### 第一次國共內戰
+#############################################
+
+         
+#############################################
+###### 閩變 
+#############################################
+event = {
+         id = 123501
+         random = no
+         country = CHI
+        
+ 
+         name = "閩變 "
+         desc = "1933年11月，位在福建發動反 對蔣中正政府的起事，其後 成立了「中華共和國人民革命政府」。 起事者為蔡廷鍇、蔣光鼐、陳銘樞和李濟深等人， 及其帶領下原本在福建參與剿滅中國共產黨 紅軍的廣東系國民革命軍十九路軍。"
+         style = 0
+ 
+  date = { day = 19 month = november year = 1933 }
+  offset = 1
+  deathdate = { day = 18 month = february year = 1936 }
+ 
+
+               action_a = {
+                  name = "娘西匹"
+                command = { type = independence which = U14 value = 1 when = 0 }
+                command = { type = trigger which = 123509 }      
+                command = {type = dissent value = 5  }
+           }
+         
+}
+
+event = {
+         id = 123509
+         random = no
+         country = U14
+        
+ 
+         name = "閩變 "
+         desc = "11月20日，閩變正式爆發，在福州的 「生產人民黨」及「中國第三黨」舉行 「中國全國人民臨時代表大會」，決議 成立中華共和國人民革命政府，更改 國旗為上紅下藍，中嵌黃色五角星，  同時廢國民黨，並推李濟深、陳銘樞、陳友仁、 蔣光鼐、蔡廷鍇及黃琪翔等為政府委員。之後即 與江西中央蘇區之「中華蘇維埃共和國臨時中央政府」 簽署協定，停止軍事對抗和開始經濟合作。22日， 「中華共和國人民革命政府」宣佈成立， 以李濟深為政府主席，陳友仁為外交部長，改年號為 「中華共和國」元年。"
+         style = 0
+ 
+               action_a = {
+                  name = "對抗南京國民政府"              
+                command = {type = dissent value = -3  }
+           }
+         
+}
+#############################################
+###### 九一八事變 
+#############################################
+event = {
+         id = 123456
+         random = no
+         country = JAP
+         trigger = {
+                     control = { province = 1199 data = jap }
+                   control = { province = 1391 data = jap }
+                   control = { province = 3670 data = jap }
+                   control = { province = 1391 data = jap }
+                   control = { province = 1376 data = jap }
+                   control = { province = 3677 data = jap }
+                   control = { province = 1389 data = U02 }
+                   control = { province = 1390 data = U02 }
+                   control = { province = 1379 data = U02 }
+                   control = { province = 1380 data = U02 }
+
+         }
+ 
+         name = "九一八事變"
+         desc = "1931年9月18日夜22時20分左右， 日本關東軍虎石台獨立守備隊第2營 第3連柳條湖分遣隊隊長河本末守中 尉為首一個小分隊在奉天（現稱瀋陽 ）北面約7.5公里處的柳條湖南滿鐵路 段上引爆小型炸藥，炸毀了小段鐵路 。並將3具身穿東北軍士兵服裝的中 國人屍體放在現場，作為東北軍破壞 鐵路的證據。 爆炸後，河本末守立刻向北大營的方 向射擊，並向日軍獨立守備隊報告 「北大營的中國軍隊，炸毀鐵路， 攻擊守備隊」。獨立守備隊又立刻報 告了關東軍司令部。板垣征四郎下令 向中國軍隊開火，當時，北大營駐守 的東北軍第七旅毫無防備，被打得措手不及。"
+         style = 0
+         
+ 
+         date = { day = 17 month = september year = 1931 }
+         offset = 1
+         deathdate = { day = 18 month = february year = 1932 }
+ 
+
+           action_a = {
+                  name = "懲罰他們"
+                  ai_chance = 99
+                  command = { type = war which = U02 }
+                  command = { type = trigger which = 123457 }
+                  command = { type = unlock_division which = 13016 value = 538 }
+                  command = { type = unlock_division which = 13016 value = 536 }
+                  command = { type = unlock_division which = 13016 value = 540 }
+                  command = { type = unlock_division which = 13016 value = 542 }
+                  command = { type = unlock_division which = 13016 value = 544 }
+                  command = { type = unlock_division which = 13016 value = 546 }
+                  command = { type = unlock_division which = 13016 value = 532 }
+                  command = { type = unlock_division which = 13016 value = 521 }
+                  command = { type = unlock_division which = 13016 value = 522 }
+                  command = { type = unlock_division which = 13016 value = 523 }
+                  command = { type = unlock_division which = 13016 value = 524 }
+                  command = { type = unlock_division which = 13016 value = 525 }
+                  command = { type = unlock_division which = 13016 value = 514 }
+                  command = { type = unlock_division which = 13016 value = 515 }
+                  command = { type = unlock_division which = 13016 value = 519 }
+                  command = { type = unlock_division which = 13016 value = 510 }
+                  command = { type = unlock_division which = 13016 value = 511 }
+                  command = { type = unlock_division which = 13016 value = 504 }
+                  command = { type = unlock_division which = 13016 value = 505 }
+                  command = { type = unlock_division which = 13016 value = 506 }
+                  command = { type = unlock_division which = 13016 value = 507 }
+                  command = { type = unlock_division which = 13016 value = 508 }
+                  command = { type = unlock_division which = 13016 value = 509 }
+                  
+           }
+           action_b = {
+                  name = "放過他"
+                  ai_chance = 1
+                  command = { type = dissent value = 10 }
+           }
+
+}
+
+
+event = {
+         id = 123457
+         random = no
+         country = U02
+        
+ 
+         name = "九一八事變 "
+         desc = "面對日本突如其來的攻擊，張學良究竟該怎麼做呢?"
+         style = 0
+ 
+ 
+
+               action_a = {
+                  name = "實施不抵抗政策"
+                  ai_chance = 99
+                  command = { type = end_access which = JAP }
+                  command = { type = sleepevent which = 123459 }
+                  command = { type = sleepevent which = 123460 }
+                  command = { type = peace which = JAP value = 0 }
+                  command = { type = secedeprovince which = JAP value = 2921 }
+                  command = { type = secedeprovince which = JAP value = 2922 }
+                  command = { type = secedeprovince which = JAP value = 2923 }
+                  command = { type = secedeprovince which = JAP value = 2924 }
+                  command = { type = secedeprovince which = JAP value = 2925 }
+                  command = { type = secedeprovince which = JAP value = 2926 }
+                  command = { type = secedeprovince which = JAP value = 2927 }
+                  command = { type = secedeprovince which = JAP value = 1623 }
+                  command = { type = secedeprovince which = JAP value = 1380 }
+                  command = { type = secedeprovince which = JAP value = 2929 }
+                  command = { type = secedeprovince which = JAP value = 1530 }
+                  command = { type = secedeprovince which = JAP value = 1381 }
+                  command = { type = secedeprovince which = JAP value = 2931 }
+                  command = { type = secedeprovince which = JAP value = 2932 }
+                  command = { type = secedeprovince which = JAP value = 1832 }
+                  command = { type = secedeprovince which = JAP value = 2936 }
+                  command = { type = secedeprovince which = JAP value = 2935 }
+                  command = { type = secedeprovince which = JAP value = 1779 }
+                  command = { type = secedeprovince which = JAP value = 2934 }
+                  command = { type = secedeprovince which = JAP value = 2937 }
+                  command = { type = secedeprovince which = JAP value = 2938 }
+                  command = { type = secedeprovince which = JAP value = 2928 }
+                  command = { type = secedeprovince which = JAP value = 2901 }
+                  command = { type = secedeprovince which = JAP value = 2902 }
+                  command = { type = secedeprovince which = JAP value = 2903 }
+                  command = { type = secedeprovince which = JAP value = 1379 }
+                  command = { type = secedeprovince which = JAP value = 1390 }
+                  command = { type = secedeprovince which = JAP value = 2624 }
+                  command = { type = secedeprovince which = JAP value = 2904 }
+                  command = { type = secedeprovince which = JAP value = 1920 }
+                  command = { type = secedeprovince which = JAP value = 1378 }
+                  command = { type = secedeprovince which = JAP value = 2918 }
+                  command = { type = secedeprovince which = JAP value = 1375 }
+                  command = { type = secedeprovince which = JAP value = 2909 }
+                  command = { type = secedeprovince which = JAP value = 2908 }
+                  command = { type = secedeprovince which = JAP value = 2906 }
+                  command = { type = secedeprovince which = JAP value = 2919 }
+                  command = { type = secedeprovince which = JAP value = 2910 }
+                  command = { type = secedeprovince which = JAP value = 2911 }
+                  command = { type = secedeprovince which = JAP value = 2917 }
+                  command = { type = secedeprovince which = JAP value = 1374 }
+                  command = { type = secedeprovince which = JAP value = 2914 }
+                  command = { type = secedeprovince which = JAP value = 2912 }
+                  command = { type = secedeprovince which = JAP value = 2913 }
+                  command = { type = secedeprovince which = JAP value = 2915 }
+                  command = { type = secedeprovince which = JAP value = 2877 }
+                  command = { type = secedeprovince which = JAP value = 1396 }
+                  command = { type = secedeprovince which = JAP value = 2914 }
+                  command = { type = secedeprovince which = JAP value = 2888 }
+                  command = { type = secedeprovince which = JAP value = 2887 }
+                  command = { type = secedeprovince which = JAP value = 1389 }
+                  command = { type = secedeprovince which = JAP value = 2933 }
+                  command = { type = secedeprovince which = JAP value = 1395 }
+                  command = { type = secedeprovince which = JAP value = 2889 }
+                  command = { type = secedeprovince which = JAP value = 2890 }
+                  command = { type = secedeprovince which = JAP value = 1394 }
+                  command = { type = secedeprovince which = JAP value = 1401 }
+                  command = { type = secedeprovince which = JAP value = 2891 }
+                  command = { type = secedeprovince which = JAP value = 1377 }
+                  command = { type = secedeprovince which = JAP value = 2892 }
+                  command = { type = secedeprovince which = JAP value = 2895 }
+                  command = { type = secedeprovince which = JAP value = 2896 }
+                  command = { type = secedeprovince which = JAP value = 2907 }
+                  command = { type = secedeprovince which = JAP value = 2893 }
+                  command = { type = secedeprovince which = JAP value = 2899 }
+                  command = { type = secedeprovince which = JAP value = 2894 }
+                  command = { type = secedeprovince which = JAP value = 1403 }
+                  command = { type = secedeprovince which = JAP value = 1402 }
+                  command = { type = secedeprovince which = JAP value = 2897 }
+                  command = { type = secedeprovince which = JAP value = 2898 }
+                  command = { type = secedeprovince which = JAP value = 2900 }
+                  command = { type = secedeprovince which = JAP value = 1387 }
+                  command = { type = secedeprovince which = JAP value = 1382 }
+                  command = { type = secedeprovince which = JAP value = 2920 }
+                  command = { type = secedeprovince which = JAP value = 2905 }
+                  command = { type = secedeprovince which = JAP value = 2916 }
+                  command = {type = dissent value = 5  }
+           }
+           action_b = {
+                  name = "堅決抵抗"
+                   ai_chance = 1
+                  command = { type = war which = JAP }
+                  command = { type = end_access which = JAP }
+                  command = { type = add_corps which = "遼寧防衛軍 " value = land where = 1389 } 
+                  command = { type = add_division which = 奉天防衛師 value = garrison when = 0 where = sp_artillery }
+                  command = { type = add_corps which = "吉林防衛軍 " value = land where = 1390 } 
+                  command = { type = add_division which = 長春防衛師 value = garrison when = 0 where = sp_artillery }
+                  command = { type = add_corps which = "黑龍江防衛軍 " value = land where = 1380 } 
+                  command = { type = add_division which = 哈爾濱防衛師 value = garrison when = 0 where = sp_artillery }
+           }
+}
+
+
+
+event = {
+         id = 123459
+         random = no
+         country = U02
+         trigger = {
+         event =123460
+         atwar = JAP
+         }
+ 
+         name = "我們已經失敗了"
+         desc = "隨著各個重要城市的淪陷，張學良定與日本議和"
+         style = 0
+ 
+         date = { day = 18 month = september year = 1931 }
+         offset = 1
+         deathdate = { day = 18 month = february year = 1932 }
+ 
+
+           action_a = {
+                  ai_chance = 99
+                  name = "與日軍議和"
+                  command = {type = dissent value = 5  }
+                  command = { type = secedeprovince which = JAP value = 2921 }
+                  command = { type = secedeprovince which = JAP value = 2922 }
+                  command = { type = secedeprovince which = JAP value = 2923 }
+                  command = { type = secedeprovince which = JAP value = 2924 }
+                  command = { type = secedeprovince which = JAP value = 2925 }
+                  command = { type = secedeprovince which = JAP value = 2926 }
+                  command = { type = secedeprovince which = JAP value = 2927 }
+                  command = { type = secedeprovince which = JAP value = 1623 }
+                  command = { type = secedeprovince which = JAP value = 1380 }
+                  command = { type = secedeprovince which = JAP value = 2929 }
+                  command = { type = secedeprovince which = JAP value = 1530 }
+                  command = { type = secedeprovince which = JAP value = 1381 }
+                  command = { type = secedeprovince which = JAP value = 2931 }
+                  command = { type = secedeprovince which = JAP value = 2932 }
+                  command = { type = secedeprovince which = JAP value = 1832 }
+                  command = { type = secedeprovince which = JAP value = 2936 }
+                  command = { type = secedeprovince which = JAP value = 2935 }
+                  command = { type = secedeprovince which = JAP value = 1779 }
+                  command = { type = secedeprovince which = JAP value = 2934 }
+                  command = { type = secedeprovince which = JAP value = 2937 }
+                  command = { type = secedeprovince which = JAP value = 2938 }
+                  command = { type = secedeprovince which = JAP value = 2928 }
+                  command = { type = secedeprovince which = JAP value = 2901 }
+                  command = { type = secedeprovince which = JAP value = 2902 }
+                  command = { type = secedeprovince which = JAP value = 2903 }
+                  command = { type = secedeprovince which = JAP value = 1379 }
+                  command = { type = secedeprovince which = JAP value = 1390 }
+                  command = { type = secedeprovince which = JAP value = 2624 }
+                  command = { type = secedeprovince which = JAP value = 2904 }
+                  command = { type = secedeprovince which = JAP value = 1920 }
+                  command = { type = secedeprovince which = JAP value = 1378 }
+                  command = { type = secedeprovince which = JAP value = 2918 }
+                  command = { type = secedeprovince which = JAP value = 1375 }
+                  command = { type = secedeprovince which = JAP value = 2909 }
+                  command = { type = secedeprovince which = JAP value = 2908 }
+                  command = { type = secedeprovince which = JAP value = 2906 }
+                  command = { type = secedeprovince which = JAP value = 2919 }
+                  command = { type = secedeprovince which = JAP value = 2910 }
+                  command = { type = secedeprovince which = JAP value = 2911 }
+                  command = { type = secedeprovince which = JAP value = 2917 }
+                  command = { type = secedeprovince which = JAP value = 1374 }
+                  command = { type = secedeprovince which = JAP value = 2912 }
+                  command = { type = secedeprovince which = JAP value = 2913 }
+                  command = { type = secedeprovince which = JAP value = 2915 }
+                  command = { type = secedeprovince which = JAP value = 2877 }
+                  command = { type = secedeprovince which = JAP value = 1396 }
+                  command = { type = secedeprovince which = JAP value = 2914 }
+                  command = { type = secedeprovince which = JAP value = 2888 }
+                  command = { type = secedeprovince which = JAP value = 2887 }
+                  command = { type = secedeprovince which = JAP value = 1389 }
+                  command = { type = secedeprovince which = JAP value = 2933 }
+                  command = { type = secedeprovince which = JAP value = 1395 }
+                  command = { type = secedeprovince which = JAP value = 2889 }
+                  command = { type = secedeprovince which = JAP value = 2890 }
+                  command = { type = secedeprovince which = JAP value = 1394 }
+                  command = { type = secedeprovince which = JAP value = 1401 }
+                  command = { type = secedeprovince which = JAP value = 2891 }
+                  command = { type = secedeprovince which = JAP value = 1377 }
+                  command = { type = secedeprovince which = JAP value = 2892 }
+                  command = { type = secedeprovince which = JAP value = 2895 }
+                  command = { type = secedeprovince which = JAP value = 2896 }
+                  command = { type = secedeprovince which = JAP value = 2907 }
+                  command = { type = secedeprovince which = JAP value = 2893 }
+                  command = { type = secedeprovince which = JAP value = 2899 }
+                  command = { type = secedeprovince which = JAP value = 2894 }
+                  command = { type = secedeprovince which = JAP value = 1403 }
+                  command = { type = secedeprovince which = JAP value = 1402 }
+                  command = { type = secedeprovince which = JAP value = 2897 }
+                  command = { type = secedeprovince which = JAP value = 2898 }
+                  command = { type = secedeprovince which = JAP value = 2900 }
+                  command = { type = secedeprovince which = JAP value = 1387 }
+                  command = { type = secedeprovince which = JAP value = 1382 }
+                  command = { type = secedeprovince which = JAP value = 2920 }
+                  command = { type = secedeprovince which = JAP value = 2905 }
+                  command = { type = secedeprovince which = JAP value = 2916 }  
+                  command = { type = peace which = JAP value = 0 }                }
+           action_b = {
+                  ai_chance = 1
+                  name = "不妥協"
+                  command = {type = dissent value = 25  }           }
+             }
+     
+
+event = {
+         id = 123460
+         random = no
+         country = JAP
+         trigger = {
+         atwar = U02
+         control = { province = 1390 data = JAP }
+                   control = { province = 1389 data = JAP }
+                   control = { province = 1379 data = JAP }
+                   control = { province = 1380 data = JAP }
+                   control = { province = 1374 data = JAP }
+                   control = { province = 1382 data = JAP }
+                   control = { province = 1396 data = JAP }
+                  
+                                    NOT = { 
+                   
+                   control = { province = 1389 data = U02 }
+                   control = { province = 1389 data = U02 }
+                   control = { province = 1379 data = U02}
+                   control = { province = 1380 data = U02}
+                   control = { province = 1374 data = U02}
+                   control = { province = 1382 data = U02 }
+                   control = { province = 1396 data = U02 }
+                 }
+         }
+
+ 
+         name = "與東北軍議和"
+         desc = "我們的目的已達成了，是時候來談和了"
+         style = 0
+ 
+         date = { day = 18 month = september year = 1931 }
+         offset = 2
+         deathdate = { day = 18 month = february year = 1932 }
+ 
+
+           action_a = {
+                  name = "議和"
+                  ai_chance = 99
+                  command = {type = dissent value = -5  }
+                  command = {type = trigger which = 123459 }
+                  }
+           action_b = {
+                  name = "拒絕"
+                  ai_chance = 1
+                  command = {type = dissent value = 20  }           }
+}
+
+#############################################
+###### 成立滿洲國 
+#############################################
+event = {
+         id = 123458
+         random = no
+         country = JAP
+         trigger = {
+     
+                   control = { province = 1390 data = JAP }
+                   control = { province = 1389 data = JAP }
+                   control = { province = 1379 data = JAP }
+                   control = { province = 1380 data = JAP }
+                   control = { province = 1374 data = JAP }
+                   control = { province = 1382 data = JAP }
+                   control = { province = 1396 data = JAP }
+                   NOT = {  war = { country = U11 country = JAP }
+                   }
+                
+         }
+ 
+         name = "成立滿洲國"
+         desc = "由於受到了國際輿論的普遍譴責， 關東軍不敢悍然吞併滿洲全境， 因此考慮建立傀儡政權。 當時擔任特務機關負責人的土肥原賢二大佐 遊說了已經退位的清朝末代皇帝溥儀， 謊稱表示滿洲本為滿族的故土， 以復興滿清為條件，說服溥儀回到東北1932年3月1日， 日本扶植的滿洲國正式成立。 溥儀擔任國家元首，首都定在新京（今長春），年號定為「大同」"
+         style = 0
+ 
+         date = { day = 2 month = march year = 1932 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1937 }
+ 
+           action_a = {
+                  name = "成立"
+                  command = { type = secedeprovince which = MAN value = 2921 }
+                  command = { type = secedeprovince which = MAN value = 2922 }
+                  command = { type = secedeprovince which = MAN value = 2923 }
+                  command = { type = secedeprovince which = MAN value = 2924 }
+                  command = { type = secedeprovince which = MAN value = 2925 }
+                  command = { type = secedeprovince which = MAN value = 2926 }
+                  command = { type = secedeprovince which = MAN value = 2927 }
+                  command = { type = secedeprovince which = MAN value = 1623 }
+                  command = { type = secedeprovince which = MAN value = 1380 }
+                  command = { type = secedeprovince which = MAN value = 2929 }
+                  command = { type = secedeprovince which = MAN value = 1530 }
+                  command = { type = secedeprovince which = MAN value = 1381 }
+                  command = { type = secedeprovince which = MAN value = 2931 }
+                  command = { type = secedeprovince which = MAN value = 2932 }
+                  command = { type = secedeprovince which = MAN value = 1832 }
+                  command = { type = secedeprovince which = MAN value = 2936 }
+                  command = { type = secedeprovince which = MAN value = 2935 }
+                  command = { type = secedeprovince which = MAN value = 1779 }
+                  command = { type = secedeprovince which = MAN value = 2934 }
+                  command = { type = secedeprovince which = MAN value = 2937 }
+                  command = { type = secedeprovince which = MAN value = 2938 }
+                  command = { type = secedeprovince which = MAN value = 2928 }
+                  command = { type = secedeprovince which = MAN value = 2901 }
+                  command = { type = secedeprovince which = MAN value = 2902 }
+                  command = { type = secedeprovince which = MAN value = 2903 }
+                  command = { type = secedeprovince which = MAN value = 1379 }
+                  command = { type = secedeprovince which = MAN value = 1390 }
+                  command = { type = secedeprovince which = MAN value = 2624 }
+                  command = { type = secedeprovince which = MAN value = 2904 }
+                  command = { type = secedeprovince which = MAN value = 1920 }
+                  command = { type = secedeprovince which = MAN value = 1378 }
+                  command = { type = secedeprovince which = MAN value = 2918 }
+                  command = { type = secedeprovince which = MAN value = 1375 }
+                  command = { type = secedeprovince which = MAN value = 2909 }
+                  command = { type = secedeprovince which = MAN value = 2908 }
+                  command = { type = secedeprovince which = MAN value = 2906 }
+                  command = { type = secedeprovince which = MAN value = 2919 }
+                  command = { type = secedeprovince which = MAN value = 2910 }
+                  command = { type = secedeprovince which = MAN value = 2911 }
+                  command = { type = secedeprovince which = MAN value = 2917 }
+                  command = { type = secedeprovince which = MAN value = 1374 }
+                  command = { type = secedeprovince which = MAN value = 2914 }
+                  command = { type = secedeprovince which = MAN value = 2912 }
+                  command = { type = secedeprovince which = MAN value = 2913 }
+                  command = { type = secedeprovince which = MAN value = 2915 }
+                  command = { type = secedeprovince which = MAN value = 2877 }
+                  command = { type = secedeprovince which = MAN value = 1396 }
+                  command = { type = secedeprovince which = MAN value = 2914 }
+                  command = { type = secedeprovince which = MAN value = 2888 }
+                  command = { type = secedeprovince which = MAN value = 2887 }
+                  command = { type = secedeprovince which = MAN value = 1389 }
+                  command = { type = secedeprovince which = MAN value = 2933 }
+                  command = { type = secedeprovince which = MAN value = 1395 }
+                  command = { type = secedeprovince which = MAN value = 2889 }
+                  command = { type = secedeprovince which = MAN value = 2890 }
+                  command = { type = secedeprovince which = MAN value = 1394 }
+                  command = { type = secedeprovince which = MAN value = 1401 }
+                  command = { type = secedeprovince which = MAN value = 2891 }
+                  command = { type = secedeprovince which = MAN value = 1377 }
+                  command = { type = secedeprovince which = MAN value = 2892 }
+                  command = { type = secedeprovince which = MAN value = 2895 }
+                  command = { type = secedeprovince which = MAN value = 2896 }
+                  command = { type = secedeprovince which = MAN value = 2907 }
+                  command = { type = secedeprovince which = MAN value = 2893 }
+                  command = { type = secedeprovince which = MAN value = 2899 }
+                  command = { type = secedeprovince which = MAN value = 2894 }
+                  command = { type = secedeprovince which = MAN value = 1403 }
+                  command = { type = secedeprovince which = MAN value = 1402 }
+                  command = { type = secedeprovince which = MAN value = 2897 }
+                  command = { type = secedeprovince which = MAN value = 2898 }
+                  command = { type = secedeprovince which = MAN value = 2900 }
+                  command = { type = secedeprovince which = MAN value = 1387 }
+                  command = { type = secedeprovince which = MAN value = 1382 }
+                  command = { type = secedeprovince which = MAN value = 2920 }
+                  command = { type = secedeprovince which = MAN value = 2905 }
+                  command = { type = secedeprovince which = MAN value = 2916 }           
+                  command = { type = independence which = MAN value = 1 when = 0 }        }
+
+}
+
+event = {
+         id = 123461
+         random = no
+         country = JAP
+         trigger = {
+     
+                   exists = MAN
+
+         }
+ 
+         name = "滿州國傀儡"
+         desc = "滿州國已經成立了， 我們必須將其牢牢抓緊"
+         style = 0
+ 
+         date = { day = 4 month = march year = 1932 }
+         offset = 2
+         deathdate = { day = 30 month = december year = 1937 }
+ 
+           action_a = {
+                name = "板栽"
+                command = { type = set_relation which = MAN value = 200 }
+                command = { type = make_puppet which = MAN }  }
+         }
+
+event = {
+         id = 123469
+         random = no
+         country = MAN
+         trigger = {
+     
+                   exists = MAN
+
+         }
+ 
+         name = "滿州國傀儡"
+         desc = "在日軍的協助下，我們成功在中國東北建立國家"
+         style = 0
+ 
+         date = { day = 4 month = march year = 1932 }
+         offset = 2
+         deathdate = { day = 30 month = december year = 1937 }
+ 
+           action_a = {
+                name = "服從日本"
+                command = { type = alliance which = JAP }
+command = { type = secedeprovince which = JAP value = 2930 } 
+command = { type = secedeprovince which = JAP value = 1202 }
+                 }
+         }
+ 
+#############################################
+###### 熱河戰役  
+#############################################
+
+
+event = {
+         id = 123462
+         random = no
+         country = JAP
+         trigger = {
+                   event = 123458
+                   garrison = { country = JAP province = 2877 type = land size = 1 area = no }
+                   
+
+         }
+ 
+         name = "山海關戰鬥"
+         desc = "1933年1月1日晚上11時左右， 日軍守備隊長落合正次郎經過策劃， 在榆關憲兵分遣隊和守備隊派出所前，製造手榴彈爆炸事件。事發後， 落合正次郎向駐守山海關國軍東北軍第九旅旅長何柱國提出四項要求， 要求國軍撤出山海關南門，由日軍進佔， 遭到何國柱拒絕。1月2日上午9時，落合正次郎指揮日軍攻擊山海關， 被國軍擊退。1月3日晨，日軍在飛機、軍艦和坦克掩護下， 向東南城角和南門附近重點進攻。 國軍東北軍第九旅何柱國部奮起抵抗， 打退敵人多次進攻。至下午2時，日軍發起總攻， 火力更猛烈，城內多處起火，破壞城上各防禦工事。"
+         style = 0
+ 
+         date = { day = 1 month = january year = 1933 }
+         offset = 1
+         deathdate = { day = 21 month = february year = 1933 }
+ 
+           action_a = {
+                  name = "開戰"
+           command = { type = war which = U02 }
+                  command = { type = unlock_division which = 13016 value = 548 }
+                  command = { type = unlock_division which = 13016 value = 551 }
+                  command = { type = unlock_division which = 13016 value = 552 }
+           }
+
+}
+
+event = {
+         id = 123463
+         random = no
+         country = JAP
+         trigger = {
+                   
+                   control = { province = 2875 data = JAP }
+
+         }
+ 
+         name = "攻陷山海關"
+         desc = "1月3日，國軍東北軍主力營長安德馨及第二連連長劉竇宸、 第三連連長關景泉、第四連連長王宏元、第五連連長謝鎮藩等， 冒死迎戰，英勇犧牲，其餘官兵也傷亡殆盡。 團長石世安曾多次組織反擊，均未奏效， 乃於下午3時率餘部由西水門向石河西岸之線撤退。 日軍佔領山海關，陣亡400餘人。"
+         style = 0
+ 
+         date = { day = 3 month = january year = 1933 }
+         offset = 1
+         deathdate = { day = 21 month = february year = 1933 }
+ 
+           action_a = {
+                  name = "阪栽"
+            command = { type = trigger which = 123465 }
+            command = { type = secedeprovince which = JAP value = 2875 }
+            command = { type = peace which = U02 value = 0 }
+           }
+
+}
+
+
+event = {
+         id = 123465
+         random = no
+         country = U11
+         trigger = {
+                   
+                  event = 123463
+
+         }
+ 
+         name = "山海關失守"
+         desc = "榆關之戰，國軍東北軍第九旅1個團不足2,000人， 與日本陸海空之強敵3,000餘人激戰三日，官兵傷亡過半， 民眾傷亡近4,000人，500棟以上房屋毀於炮火。 儘管中國官兵損失嚴重，守土抗戰卻表現中華民族精神， 打擊日軍不可一世之侵略氣焰。"
+         style = 0
+ 
+         date = { day = 3 month = january year = 1933 }
+         offset = 1
+         deathdate = { day = 21 month = february year = 1933 }
+ 
+           action_a = {
+                  name = "守土抗戰的精神"
+           command = { type = dissent value = -2 }
+           }
+
+}
+
+event = {
+         id = 123464
+         random = no
+         country = JAP
+         trigger = {
+                              event = 123462
+                   exists = MAN
+                   
+
+         }
+ 
+         name = "熱河戰役"
+         desc = "熱河戰役，又叫熱河事變。發生於時為中華民國所控制的熱河省， 時間為1933年2月至3月。熱河戰役首先於1933年1月爆發的是位於榆關 的大型戰鬥。張學良以保存實力為由， 退居山海關之內，積極謀求抵抗。 日本軍隊駐守長城外，佔領熱河直取北平態勢相當明顯， 不過就整體而言，日本是想藉由攻擊北平行動， 換取中國國民政府對滿洲國的承認。 因為中國國內輿論普遍不願意承認滿洲國， 2月11日，國民政府行政院長宋子文至北平， 與包括張學良等27名將領一起發表「保衛」熱河通電。 2月21日，熱河戰役爆發。"
+         style = 0
+ 
+         date = { day = 21 month = february year = 1933 }
+         offset = 1
+         deathdate = { day = 10 month = march year = 1933 }
+ 
+               action_a = {
+                  name = "奪取熱河!"
+                  command = { type = war which = U02 }
+                  command = { type = dissent value = -1 }
+           }
+
+}
+
+event = {
+         id = 123466
+         random = no
+         country = JAP
+         trigger = {
+                            atwar = U02
+                  event = 123464
+                   exists = MAN
+                   
+                   control = { province = 2875 data = JAP }
+                   control = { province = 1397 data = JAP }
+                   control = { province = 1388 data = JAP }
+                   control = { province = 2882 data = JAP }
+                   control = { province = 2878 data = JAP }
+                   control = { province = 2880 data = JAP }
+         }
+ 
+         name = "熱河戰役-成功"
+         desc = "在日軍強烈的攻擊之下，中國軍隊節節敗退。到了3月4日，日軍以128名騎兵即陷承德。承德的淪陷也象徵著熱河戰役的結束"
+         style = 0
+ 
+         date = { day = 21 month = february year = 1933 }
+         offset = 1
+         deathdate = { day = 30 month = March year = 1933 }
+ 
+                   action_a = {
+                  name = "版栽"
+                  command = { type = dissent value = -3 }
+                  command = { type = trigger which = 123467 }
+            }
+        }
+
+event = {
+         id = 123467
+         random = no
+         country = U02
+         trigger = {
+                            atwar = JAP 
+                  event = 123466
+                   exists = MAN
+                   control = { province = 2875 data = JAP }
+                   control = { province = 1397 data = JAP }
+                   control = { province = 1388 data = JAP }
+                   control = { province = 2882 data = JAP }
+                   control = { province = 2878 data = JAP }
+                   control = { province = 2880 data = JAP }
+         }
+ 
+         name = "熱河戰役-潰敗"
+         desc = "日軍第8師團進攻熱河，湯玉麟徵集二百多輛汽車，裝上金銀財寶和鴉片等，運往天津租界，他的手下的幾個將領尚未交鋒就投降或逃跑，湯玉麟於是一槍不發，全面敗退，率部逃到河北承德地區的灤平，日軍僅128名騎兵佔領承德。"
+         style = 0
+ 
+         date = { day = 21 month = february year = 1933 }
+         offset = 1
+         deathdate = { day = 30 month = march year = 1933 }
+ 
+                   action_a = {
+                  name = "民族的恥辱"
+               command = { type = secedeprovince which = JAP value = 2879 }
+               command = { type = secedeprovince which = JAP value = 1397 }
+               command = { type = secedeprovince which = JAP value = 2878 }
+               command = { type = secedeprovince which = JAP value = 2882 }
+               command = { type = secedeprovince which = JAP value = 1388 }
+               command = { type = secedeprovince which = JAP value = 2880 }
+               command = { type = secedeprovince which = JAP value = 2883 }
+               command = { type = secedeprovince which = JAP value = 2884 }
+               command = { type = secedeprovince which = JAP value = 2885 }
+               command = { type = secedeprovince which = JAP value = 2886 }
+               command = { type = secedeprovince which = JAP value = 2876 }
+                  command = { type = dissent value = 3 }
+
+  }
+    }
+
+event = {
+         id = 123504
+         random = no
+         country = JAP
+         trigger = {
+                            
+                  event = 123466
+                   exists = MAN
+                   control = { province = 2875 data = JAP }
+                   control = { province = 1397 data = JAP }
+                   control = { province = 1388 data = JAP }
+                   control = { province = 2882 data = JAP }
+                   control = { province = 2878 data = JAP }
+                   control = { province = 2880 data = JAP }
+         }
+ 
+         name = "交付熱河於滿州國"
+         desc = "根據滿州國的建國宣言，熱河為滿州國神聖且不得分割的領土"
+         style = 0
+ 
+         date = { day = 25 month = february year = 1933 }
+         offset = 1
+         deathdate = { day = 30 month = july year = 1933 }
+ 
+                   action_a = {
+                  name = "併入滿洲國"
+               command = { type = secedeprovince which = MAN value = 2879 }
+               command = { type = secedeprovince which = MAN value = 1397 }
+               command = { type = secedeprovince which = MAN value = 2878 }
+               command = { type = secedeprovince which = MAN value = 2882 }
+               command = { type = secedeprovince which = MAN value = 1388 }
+               command = { type = secedeprovince which = MAN value = 2880 }
+               command = { type = secedeprovince which = MAN value = 2883 }
+               command = { type = secedeprovince which = MAN value = 2884 }
+               command = { type = secedeprovince which = MAN value = 2885 }
+               command = { type = secedeprovince which = MAN value = 2886 }
+
+  }
+    }
+
+#############################################
+###### 長城戰役  
+#############################################
+
+event = {
+         id = 123468
+         random = no
+         country = JAP
+         trigger = {
+                              event = 123466
+                   exists = MAN
+                   
+
+         }
+ 
+         name = "長城戰役"
+         desc = "1933年，日本以熱河省地方官員表示歸附偽滿洲國為由， 與偽滿洲國軍隊進軍熱河，省長湯玉麟不戰而逃； 之後日軍進攻山海關、長城各隘口與熱河，國民政府派遣宋哲元、 馮治安、張自忠、劉汝明、關麟徵、黃傑與劉戡與日軍在 義院口、冷口、喜峰口、古北口、羅文峪、界嶺口憑險固守"
+         style = 0
+ 
+         date = { day = 3 month = march year = 1933 }
+         offset = 1
+         deathdate = { day = 31 month = may year = 1933 }
+ 
+               action_a = {
+                  name = "進攻!"                 
+                  command = { type = dissent value = -2 }
+           }
+}
+
+event = {
+         id = 123470
+         random = no
+         country = JAP
+         trigger = {
+                              event = 123468
+control = { province = 2939 data = JAP }
+control = { province = 1386 data = JAP }
+control = { province = 2941 data = JAP }
+control = { province = 1398 data = JAP }
+                                  
+         }
+ 
+         name = "塘沽停戰協定"
+         desc = "日軍佔領熱河後，開始進攻長城各關口，宋哲元指揮國民革命軍29軍在 長城各口奮力抵抗國軍在喜峰口 一帶曾獲得局部勝利，日軍一度難以攻破，最後不得已繞道采包圍戰術， 於是冷口、界嶺口、古北口等地先後為日軍攻破，進而引發冀東察東作戰。此時，日軍已迫近北平，情況危急； 另一方面，日本退出國聯後，造成日本國內政治情勢變化， 也為了鞏固東北，便主動提出休戰之接洽。"
+         style = 0
+ 
+         date = { day = 15 month = may year = 1933 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1933 }
+ 
+               action_a = {
+                  name = "談談看"                 
+                  command = { type = dissent value = -2 }
+                  command = { type = trigger which = 123471 value = 2 }
+           }
+}
+
+event = {
+         id = 123471
+         random = no
+         country = CHI
+         
+ 
+         name = "塘沽停戰協定"
+         desc = "國民政府權衡輕重利害後，委任參謀部總務廳長熊斌中將與日方進行停戰談判， 日軍方面則由關東軍副參謀長岡村寧次少將，代表日方簽署了這個協定"
+         style = 0
+ 
+       
+ 
+               action_a = {
+                  name = "簽署"                 
+                  command = { type = dissent value = 2 }
+command = { type = secedeprovince which = JAP value = 2939 }
+command = { type = secedeprovince which = JAP value = 1386 }
+command = { type = secedeprovince which = JAP value = 2941 }
+command = { type = secedeprovince which = JAP value = 1398 }
+command = { type = peace which = JAP value = 0 } 
+           }
+}
+#############################################
+###### 一二八事變
+#############################################
+
+#############################################
+###### 中村事件
+#############################################
+
+#############################################
+###### 萬寶山事件
+#############################################
+
+event = {
+         id = 123481
+         random = no
+         country = CHI
+
+ 
+         name = "萬寶山事件"
+         desc = "1931年，中國人郝永德，成立長農稻田公司 未經政府批准騙取萬寶村附近12戶農民的土地， 並違法轉租給李升薰等188名朝鮮人耕種水稻。 這些朝鮮人開掘由馬家哨口至姜家窩堡止長達20里的水渠，截流築壩。 這一工程損害了當地53戶農民熟地40餘垧，侵害了當地農戶的利益。 5月20日馬家哨口200餘農民上告。吉林省政府第1273號《指令》批示： 「朝僑未經我當局允許，擅入農村，有背公約，令縣公署派員同公安警察，往勸止，令朝僑出境。」"
+ 
+         date = { day = 1 month = july year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+               action_a = {
+                  name = "把韓僑趕出去"                 
+                  command = { type = trigger which = 123482 }
+                  
+           }
+}
+
+event = {
+         id = 123482
+         random = no
+         country = JAP
+
+ 
+         name = "萬寶山事件"
+         desc = "日本通過《朝鮮日報》記者金利三捏造新聞， 稱200多朝鮮人在萬寶山被殺，後又說被殺的朝鮮人數增加到800多， 從而掀起朝鮮半島大規模的排華活動。當地華僑被殺142人， 打傷546人，失蹤91人，財產損失無數。7月14日， 金利三在《吉長日報》上發表「謝罪聲明書」， 且承認自己捏造了假新聞，並指出是受日本領事館愚弄。 日本陰謀敗露，派出日本警察署朝鮮族巡捕吉林朴昌廈暗殺金利三滅口。 中日政府為此事進行了12次交涉談判， 但當地農民權益並未得到補償，後九一八事變發生。"
+ 
+         date = { day = 1 month = july year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+               action_a = {
+                  name = "為奪取東三省做準備"                 
+                     command = { type = relation which = CHI value = -10 }
+                  
+           }
+}
+
+event = {
+         id = 123483
+         random = no
+         country = JAP
+ trigger = {
+                              event = 123482
+                                  
+         }
+ 
+         name = "朝鲜各地发生排华事件"
+         desc = "萬寶山事件發生後，朝鮮各地發生排華事件。"
+ 
+         date = { day = 2 month = july year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+               action_a = {
+                  name = "偉大的成就"                 
+                     command = { type = dissent value = 2 }
+                  
+           }
+}
+
+event = {
+         id = 123484
+         random = no
+         country = CHI
+trigger = {
+                              event = 123482
+                                  
+         }
+ 
+         name = "朝鲜各地发生排华事件"
+         desc = "萬寶山事件發生後，朝鮮各地發生排華事件。"
+ 
+         date = { day = 2 month = july year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+               action_a = {
+                  name = "可惡的韓國人"                 
+                    command = { type = dissent value = 2 }
+                  
+           }
+}
+
+
+
+#############################################
+###### 纽约帝国大厦落成 
+#############################################
+
+event = {
+         id = 123472
+         random = no
+         country = USA
+
+ 
+         name = "纽约帝国大厦落成"
+         desc = "帝國大廈（Empire State Building），名稱源於紐約州的暱稱──帝國州，故其英文名稱原意為紐約州大廈或者帝國州大廈。帝國大廈為紐約市以至美國最著名的地標和旅遊景點之一，為美國及美洲第3高，世界上第15高的摩天大樓，樓高381米、102層，於1951年增添的天線高62米，提高其總高度至443米，由Shreeve, Lamb, and Harmon建築公司設計，為裝飾藝術風格建築，大樓於1930年動工，於1931年落成，建造過程僅410日，是世界上罕見的建造速度紀錄。"
+ 
+         date = { day = 8 month = april year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = september year = 1931 }
+ 
+               action_a = {
+                  name = "偉大的成就"                 
+                  command = { type = dissent value = -5 }
+                  
+           }
+}
+#############################################
+###### 湯瑪斯·爱迪生去世 
+#############################################
+event = {
+         id = 123473
+         random = no
+         country = USA
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+
+event = {
+         id = 123474
+         random = no
+         country = ENG
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+event = {
+         id = 123475
+         random = no
+         country = FRA
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+event = {
+         id = 123476
+         random = no
+         country = GER
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+event = {
+         id = 123477
+         random = no
+         country = SOV
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+
+event = {
+         id = 123478
+         random = no
+         country =JAP 
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+event = {
+         id = 123479
+         random = no
+         country = CHI
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+event = {
+         id = 123480
+         random = no
+         country = ITA
+
+ 
+         name = "托马斯·爱迪生去世"
+         desc = "湯瑪斯·阿爾瓦·愛迪生（英语：Thomas Alva Edison， 1847年2月11日－1931年10月18日），美國發明家、商人，拥有眾多重要的發明專利， 被傳媒授予「門洛帕克的奇才」稱號的他，是世界上第一個 利用大量生產原則和其工業研究實驗室來進行發明創造的人。"
+
+         date = { day = 17 month = october year = 1931 }
+         offset = 1
+         deathdate = { day = 30 month = december year = 1931 }
+ 
+               action_a = {
+                  name = "全人類的損失"                 
+                  command = { type = dissent value = -3 }
+                  
+           }
+}
+
+
+event = {
+         id = 123502
+         random = no
+         country = CHI
+trigger = {
+                   
+                  event = 123470
+                 event = 123471
+
+         }
+
+ 
+         name = "東北軍換防"
+         desc = ""
+
+         date = { day = 1 month = june year = 1933 }
+         offset = 1
+         deathdate = { day = 30 month = july year = 1933 }
+ 
+               action_a = {
+                  name = "把牠們調到陝西去剿共"                 
+command = { type = secedeprovince which = U11 value = 2791 }
+command = { type = secedeprovince which = U11 value = 2790 }
+command = { type = secedeprovince which = U11 value = 2788 }
+command = { type = secedeprovince which = U11 value = 2787 }
+command = { type = secedeprovince which = U11 value = 2786 }
+command = { type = secedeprovince which = U11 value = 2784 }
+command = { type = secedeprovince which = U11 value = 2783 }
+command = { type = secedeprovince which = U11 value = 2782 }
+command = { type = secedeprovince which = U11 value = 2781 }
+command = { type = secedeprovince which = U11 value = 1270 }
+command = { type = secedeprovince which = U11 value = 1278 }
+command = { type = secedeprovince which = U11 value = 1267 }
+command = { type = secedeprovince which = U11 value = 1268 }
+command = { type = secedeprovince which = U11 value = 1269 }
+command = { type = secedeprovince which = U11 value = 1887 }
+command = { type = secedeprovince which = U11 value = 2796 }
+command = { type = secedeprovince which = U11 value = 1274 }
+command = { type = secedeprovince which = U11 value = 1275 }
+command = { type = secedeprovince which = U11 value = 2797 }
+command = { type = secedeprovince which = U11 value = 1277 }
+command = { type = secedeprovince which = U11 value = 2798 }
+command = {type = trigger which = 123503 value = 2 }
+command = {type = trigger which = 123506  }
+           }
+}
+
+event = {
+         id = 123506
+         random = no
+         country = CXB
+
+ 
+         name = "東北軍換防"
+         desc = ""
+
+         date = { day = 1 month = june year = 1933 }
+         offset = 1
+         deathdate = { day = 30 month = july year = 1933 }
+ 
+               action_a = {
+                  name = "配合中央命令"                 
+command = { type = secedeprovince which = U11 value = 2796 }
+command = { type = secedeprovince which = U11 value = 1274 }
+command = { type = secedeprovince which = U11 value = 1275 }
+command = { type = secedeprovince which = U11 value = 2797 }
+command = { type = secedeprovince which = U11 value = 1277 }
+command = { type = secedeprovince which = U11 value = 2798 }
+}
+}
+
+event = {
+         id = 123503
+         random = no
+         country = U11
+
+ 
+         name = "東北軍換防"
+         desc = ""
+ 
+               action_a = {
+                  name = "服從中央的命令"                 
+                  command = { type = secedeprovince which = CHI value = 1203 }
+command = { type = secedeprovince which = CHI value = 1204 }
+command = { type = secedeprovince which = CHI value = 2866 }
+command = { type = secedeprovince which = CHI value = 2793 }
+command = { type = secedeprovince which = CHI value = 2943 }
+command = { type = secedeprovince which = CHI value = 2945 }
+command = { type = secedeprovince which = CHI value = 2942 }
+command = { type = secedeprovince which = CHI value = 1595 }
+command = { type = secedeprovince which = CHI value = 2944 }
+command = { type = secedeprovince which = CHI value = 2673 }
+command = { type = secedeprovince which = CHI value = 2874 }
+command = { type = secedeprovince which = CHI value = 2873 }
+command = { type = secedeprovince which = CHI value = 2947 }
+command = { type = secedeprovince which = CHI value = 2946 }
+command = { type = secedeprovince which = CHI value = 2872 }
+command = { type = secedeprovince which = CHI value = 2871 }
+command = { type = secedeprovince which = CHI value = 2887 }
+command = { type = secedeprovince which = CHI value = 1206 }
+command = { type = secedeprovince which = CHI value = 1205 }
+command = { type = secedeprovince which = CHI value = 2865 }
+command = { type = secedeprovince which = CHI value = 2867 }
+command = { type = secedeprovince which = CHI value = 1210 }
+command = { type = secedeprovince which = CHI value = 2869 }
+command = { type = secedeprovince which = CHI value = 2870 }
+command = { type = secedeprovince which = CHI value = 1810 }
+command = { type = secedeprovince which = CHI value = 2871 }
+command = { type = secedeprovince which = CHI value = 2748 }
+command = { type = secedeprovince which = CHI value = 2868 }
+command = { type = secedeprovince which = CHI value = 2881 }
+command = { type = addcore which = 2791 }
+command = { type = addcore which = 2790 }
+command = { type = addcore which = 2788 }
+command = { type = addcore which = 2787 }
+command = { type = addcore which = 2786 }
+command = { type = addcore which = 2784 }
+command = { type = addcore which = 2783 }
+command = { type = addcore which = 2782 }
+command = { type = addcore which = 2781 }
+command = { type = addcore which = 1270 }
+command = { type = addcore which = 1278 }
+command = { type = addcore which = 1267 }
+command = { type = addcore which = 1268 }
+command = { type = addcore which = 1269 }
+command = { type = addcore which = 1887 }
+command = { type = addcore which = 2801 }
+command = { type = addcore which = 2800 }
+command = { type = addcore which = 2799 }
+command = { type = addcore which = 1276 }
+command = { type = addcore which = 2796 }
+command = { type = addcore which = 1274 }
+command = { type = addcore which = 2797 }
+command = { type = addcore which = 1277 }
+command = { type = addcore which = 2798 }
+command = { type = addcore which = 2784 }
+command = { type = addcore which = 1275 } 
+command = { type = remove_division which = 22011 value = 106 }
+command = { type = remove_division which = 22011 value = 105 }
+command = { type = remove_division which = 22011 value = 111 }
+command = { type = remove_division which = 22011 value = 113 }
+command = { type = remove_division which = 22011 value = 114 }
+command = { type = remove_division which = 22011 value = 118 }   
+command = { type = remove_division which = 22011 value = 112 } 
+command = { type = remove_division which = 22011 value = 116 }
+command = { type = remove_division which = 22011 value = 107 }
+command = { type = remove_division which = 22011 value = 119 }
+command = { type = remove_division which = 22011 value = 129 }
+command = { type = remove_division which = 22011 value = 130 }
+command = { type = remove_division which = 22011 value = 108 }
+command = { type = remove_division which = 22011 value = 109 }
+command = { type = remove_division which = 22011 value = 115 }
+command = { type = remove_division which = 22011 value = 120 }
+command = { type = remove_division which = 22011 value = 91 }
+command = { type = remove_division which = 22011 value = 6301 }
+command = { type = remove_division which = 22011 value = 103 }
+command = { type = remove_division which = 22011 value = 110 }
+command = { type = remove_division which = 22011 value = 117 }
+command = { type = remove_division which = 22011 value = 1308 }
+command = { type = remove_division which = 22011 value = 1304 }
+command = { type = remove_division which = 22011 value = 1306 } 
+command = { type = remove_division which = 22011 value = 1331 } 
+command = { type = remove_division which = 22011 value = 1332 } 
+command = { type = remove_division which = 22011 value = 1333 } 
+command = { type = remove_division which = 22011 value = 1334 } 
+command = { type = remove_division which = 22011 value = 1335 } 
+command = {type = trigger which = 123507 value = 10 }
+command = {type = trigger which = 123508 value = 1 }
+}
+}
+event = {
+         id = 123507
+         random = no
+         country = U11
+
+ 
+         name = "抵達陝西"
+         desc = ""
+ 
+               action_a = {
+                  name = "開始部署"                
+command = { type = add_corps which = "國民革命軍第49軍" value = land where = 1887 }
+ command = { type = add_division which = 國民革命軍第49軍 value = infantry when = 0 where = police }
+command = { type = add_corps which = "东北軍熱河駐軍 " value = land where = 1887 }
+ command = { type = add_division which = 陸軍第105師（第49軍-東北軍） value = infantry when = 0 where = police }
+command = { type = add_corps which = "國民革命軍第51軍" value = land where = 1269 }
+ command = { type = add_division which = 陸軍第111師（第51軍-東北軍） value = infantry when = 0 where = police }
+ command = { type = add_division which = 陸軍第113師（第51軍-東北軍） value = infantry when = 0 where = police }
+ command = { type = add_division which = 陸軍第114師（第51軍-東北軍） value = infantry when = 0 where = engineer }
+ command = { type = add_division which = 陸軍第118師（第51軍-東北軍） value = infantry when = 0 where = police }
+command = { type = add_corps which = "國民革命軍第53軍" value = land where = 1269 }   
+ command = { type = add_division which = 陸軍第112師（第53軍-東北軍） value = infantry when = 0 where = artillery }
+ command = { type = add_division which = 陸軍第116師（第53軍-東北軍） value = infantry when = 0 where = engineer }
+ command = { type = add_division which = 陸軍第106師（第53軍-東北軍） value = infantry when = 0 where = artillery }
+ command = { type = add_division which = 陸軍第119師（第53軍-東北軍） value = infantry when = 0 where = engineer }
+ command = { type = add_division which = 陸軍第129師（第53軍-東北軍） value = infantry when = 0 where = engineer }
+ command = { type = add_division which = 陸軍第130師（第53軍-東北軍） value = infantry when = 0 where = police }
+command = { type = add_corps which = "國民革命軍第57軍" value = land where = 1269 }
+ command = { type = add_division which = 陸軍第108師（第57軍-東北軍） value = infantry when = 0 where = police }
+ command = { type = add_division which = 陸軍第109師（第57軍-東北軍） value = infantry when = 0 where = artillery }
+ command = { type = add_division which = 陸軍第115師（第57軍-東北軍） value = infantry when = 0 where = police }
+ command = { type = add_division which = 陸軍第120師（第57軍-東北軍） value = infantry when = 0 where = artillery }
+command = { type = add_corps which = "國民革命軍第63軍" value = land where = 1269 }
+ command = { type = add_division which = 陸軍第91師（东北軍） value = infantry when = 0  }
+ command = { type = add_division which = 第63軍騎兵旅（东北軍） value = cavalry when = 0  }
+command = { type = add_corps which = "國民革命軍第67軍" value = land where = 1270 }
+ command = { type = add_division which = 陸軍第107師（第67軍-東北軍） value = infantry when = 0 where = artillery }
+ command = { type = add_division which = 陸軍第110師（第67軍-東北軍） value = infantry when = 0 where = artillery }
+ command = { type = add_division which = 陸軍第117師（第67軍-東北軍） value = infantry when = 0 }
+command = { type = add_corps which = "東北挺進軍" value = land where = 1270 }
+ command = { type = add_division which = 騎兵暫1師（騎2軍-東北軍） value = cavalry when = 0 where = engineer }
+ command = { type = add_division which = 騎兵暫4師（騎2軍-東北軍） value = cavalry when = 0 where = police }
+ command = { type = add_division which = 騎兵暫6師（騎2軍-東北軍） value = cavalry when = 0 where = engineer }
+  
+           
+           }
+}
+
+event = {
+         id = 123508
+         random = no
+         country = CHI
+
+ 
+         name = "接管東北海軍"
+         desc = ""
+ 
+               action_a = {
+                  name = "接管"                
+ command = { type = add_division which = 海圻號 value = heavy_cruiser when = 0  }
+
+command = { type = add_division which = 海琛號 value = heavy_cruiser when = 0  }
+
+command = { type = add_division which = 同安號 value = destroyer when = 0  }
+
+command = { type = add_division which = 永翔號 value = destroyer when = 0  }
+      
+           }
+}

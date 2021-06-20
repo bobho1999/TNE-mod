@@ -1,0 +1,614 @@
+technology =
+{ id          = 3
+  category    = naval
+  name        = TECH_NAVAL_NAME # Localized name
+  desc        = TECH_NAVAL_DESC # Localized description
+  #           个人独裁 
+  application =
+  { id        = 3340
+    name      = TECH_APP_NAVAL_1_NAME
+    desc      = TECH_APP_NAVAL_1_DESC
+    position  = { x = 150 y = 230 }
+    year      = 1936
+    # 寡头统治
+    component = { id = 3011 name = TECH_CMP_NAVAL_1_1_NAME type = management difficulty = 10 }
+    # 军阀首领专制
+    component = { id = 3012 name = TECH_CMP_NAVAL_1_2_NAME type = management difficulty = 10 }
+    # 威权主义
+    component = { id = 3013 name = TECH_CMP_NAVAL_1_3_NAME type = management difficulty = 10 }
+    # 绝对权力
+    component = { id = 3014 name = TECH_CMP_NAVAL_1_4_NAME type = management difficulty = 10 }
+    # 个人中心 
+    component = { id = 3015 name = TECH_CMP_NAVAL_1_5_NAME type = management difficulty = 10 }
+    required  = { 3310 }
+    effects =
+    { command = { type = deactivate which = 3350 }
+    }
+  }
+  #           政党政治 
+  application =
+  { id        = 3330
+    name      = TECH_APP_NAVAL_2_NAME
+    desc      = TECH_APP_NAVAL_2_DESC
+    position  = { x = 30 y = 290 }
+    year      = 1936
+    # 执政目标   
+    component = { id = 3021 name = TECH_CMP_NAVAL_2_1_NAME type = management difficulty = 10 }
+    # 社会地位  
+    component = { id = 3022 name = TECH_CMP_NAVAL_2_2_NAME type = management difficulty = 10 }
+    # 选举制度  
+    component = { id = 3023 name = TECH_CMP_NAVAL_2_3_NAME type = management difficulty = 10 }
+    # 资本主义代议制 
+    component = { id = 3024 name = TECH_CMP_NAVAL_2_4_NAME type = management difficulty = 10 }
+    # 民主集中制
+    component = { id = 3025 name = TECH_CMP_NAVAL_2_5_NAME type = management difficulty = 10 }
+    required  = { 3320 }
+    effects =
+    { command = { }
+    }
+  }
+  #           一党制 
+  application =
+  { id        = 3360
+    name      = TECH_APP_NAVAL_3_NAME
+    desc      = TECH_APP_NAVAL_3_DESC
+    position  = { x = 150 y = 280 }
+    year      = 1936
+    # 一党领导制  
+    component = { id = 3031 name = TECH_CMP_NAVAL_3_1_NAME type = management difficulty = 12 }
+    # 一党多元制 
+    component = { id = 3032 name = TECH_CMP_NAVAL_3_2_NAME type = management difficulty = 12 }
+    # 法西斯一党制 
+    component = { id = 3033 name = TECH_CMP_NAVAL_3_3_NAME type = management difficulty = 12 }
+    # 民族主义一党制 
+    component = { id = 3034 name = TECH_CMP_NAVAL_3_4_NAME type = management difficulty = 12 }
+    # 强势政党 
+    component = { id = 3035 name = TECH_CMP_NAVAL_3_5_NAME type = management difficulty = 12 }
+    required  = { 3330 }
+    effects =
+    { command = { type = deactivate which = 3370 }
+    }
+  }
+  #           多党制 
+  application =
+  { id        = 3370
+    name      = TECH_APP_NAVAL_4_NAME
+    desc      = TECH_APP_NAVAL_4_DESC
+    position  = { x = 150 y = 300 }
+    year      = 1936
+    # 议会制度  
+    component = { id = 3041 name = TECH_CMP_NAVAL_4_1_NAME type = management difficulty = 12 }
+    # 轮流执政 
+    component = { id = 3042 name = TECH_CMP_NAVAL_4_2_NAME type = management difficulty = 12 }
+    # 联合执政 
+    component = { id = 3043 name = TECH_CMP_NAVAL_4_3_NAME type = management difficulty = 12 }
+    # 责任内阁制 
+    component = { id = 3044 name = TECH_CMP_NAVAL_4_4_NAME type = management difficulty = 12 }
+    # 反对党与在野党 
+    component = { id = 3045 name = TECH_CMP_NAVAL_4_5_NAME type = management difficulty = 12 }
+    required  = { 3330 }
+    effects =
+    { command = { type = deactivate which = 3360 }
+    }
+  }
+  #           军阀联盟 
+  application =
+  { id        = 3350
+    name      = TECH_APP_NAVAL_5_NAME
+    desc      = TECH_APP_NAVAL_5_DESC
+    position  = { x = 150 y = 250 }
+    year      = 1936
+    # 权力多头垄断 
+    component = { id = 3051 name = TECH_CMP_NAVAL_5_1_NAME type = management difficulty = 10 }
+    # 军队首领协商 
+    component = { id = 3052 name = TECH_CMP_NAVAL_5_2_NAME type = management difficulty = 10 }
+    # 共同利益\渊源 
+    component = { id = 3053 name = TECH_CMP_NAVAL_5_3_NAME type = management difficulty = 10 }
+    # 分散权力 
+    component = { id = 3054 name = TECH_CMP_NAVAL_5_4_NAME type = management difficulty = 10 }
+    # 团体中心 
+    component = { id = 3055 name = TECH_CMP_NAVAL_5_5_NAME type = management difficulty = 10 }
+    required  = { 3310 }
+    effects =
+    { command = { type = deactivate which = 3340 }
+    }
+  }
+  #           分离主义  
+  application =
+  { id        = 3450
+    name      = TECH_APP_NAVAL_6_NAME
+    desc      = TECH_APP_NAVAL_6_DESC
+    position  = { x = 300 y = 240 }
+    year      = 1936
+    # 种族分离主义
+    component = { id = 3061 name = TECH_CMP_NAVAL_6_1_NAME type = management difficulty = 10 }
+    # 宗教分离主义
+    component = { id = 3062 name = TECH_CMP_NAVAL_6_2_NAME type = management difficulty = 10 }
+    # 政治分离主义 
+    component = { id = 3063 name = TECH_CMP_NAVAL_6_3_NAME type = management difficulty = 10 }
+    # 民族主义煽动 
+    component = { id = 3064 name = TECH_CMP_NAVAL_6_4_NAME type = management difficulty = 10 }
+    # 民族自治主张
+    component = { id = 3065 name = TECH_CMP_NAVAL_6_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           民族主义  
+  application =
+  { id        = 3440
+    name      = TECH_APP_NAVAL_7_NAME
+    desc      = TECH_APP_NAVAL_7_DESC
+    position  = { x = 300 y = 220 }
+    year      = 1936
+    # 公民民族主义
+    component = { id = 3071 name = TECH_CMP_NAVAL_7_1_NAME type = management difficulty = 10 }
+    # 种族民族主义
+    component = { id = 3072 name = TECH_CMP_NAVAL_7_2_NAME type = management difficulty = 10 }
+    # 国族主义  
+    component = { id = 3073 name = TECH_CMP_NAVAL_7_3_NAME type = management difficulty = 10 }
+    # 文化民族主义 
+    component = { id = 3074 name = TECH_CMP_NAVAL_7_4_NAME type = management difficulty = 10 }
+    # 宗教民族主义 
+    component = { id = 3075 name = TECH_CMP_NAVAL_7_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           高等教育制度  
+  application =
+  { id        = 3030
+    name      = TECH_APP_NAVAL_14_NAME
+    desc      = TECH_APP_NAVAL_14_DESC
+    position  = { x = 430 y = 110 }
+    year      = 1936
+    # 综合性大学 
+    component = { id = 3141 name = TECH_CMP_NAVAL_14_1_NAME type = management difficulty = 20 }
+    # 专业学院 
+    component = { id = 3142 name = TECH_CMP_NAVAL_14_2_NAME type = management difficulty = 20 }
+    # 大学自治 
+    component = { id = 3143 name = TECH_CMP_NAVAL_14_3_NAME type = management difficulty = 20 }
+    # 教职等级 
+    component = { id = 3144 name = TECH_CMP_NAVAL_14_4_NAME type = management difficulty = 20 }
+    # 中央教育行政 
+    component = { id = 3145 name = TECH_CMP_NAVAL_14_5_NAME type = management difficulty = 20 }
+    required  = { 3020 }
+    effects =
+    { command = { type = research_mod value = 5 }
+    }
+  }
+  #           国民义务教育
+  application =
+  { id        = 3020
+    name      = TECH_APP_NAVAL_15_NAME
+    desc      = TECH_APP_NAVAL_15_DESC
+    position  = { x = 430 y = 90 }
+    year      = 1936
+    # 义务教育法案 
+    component = { id = 3151 name = TECH_CMP_NAVAL_15_1_NAME type = management difficulty = 20 }
+    # 九年义务教育 
+    component = { id = 3152 name = TECH_CMP_NAVAL_15_2_NAME type = management difficulty = 20 }
+    # 教育师资充实 
+    component = { id = 3153 name = TECH_CMP_NAVAL_15_3_NAME type = management difficulty = 20 }
+    # 教育预算 
+    component = { id = 3154 name = TECH_CMP_NAVAL_15_4_NAME type = management difficulty = 20 }
+    # 教育投资 
+    component = { id = 3155 name = TECH_CMP_NAVAL_15_5_NAME type = management difficulty = 20 }
+    required  = { 3010 }
+    effects =
+    { command = { type = research_mod value = 3 }
+    }
+  }
+  #           传统强制兵役制度 
+  application =
+  { id        = 3200
+    name      = TECH_APP_NAVAL_16_NAME
+    desc      = TECH_APP_NAVAL_16_DESC
+    position  = { x = 130 y = 140 }
+    year      = 1936
+    # 民夫强制服役 
+    component = { id = 3161 name = TECH_CMP_NAVAL_16_1_NAME type = general_equipment difficulty = 5 }
+    # 壮丁强制服役 
+    component = { id = 3162 name = TECH_CMP_NAVAL_16_2_NAME type = general_equipment difficulty = 5 }
+    # 配额抽丁 
+    component = { id = 3163 name = TECH_CMP_NAVAL_16_3_NAME type = management difficulty = 5 }
+    # 壮丁管理机构
+    component = { id = 3164 name = TECH_CMP_NAVAL_16_4_NAME type = management difficulty = 5 }
+    # 壮丁生活待遇 
+    component = { id = 3165 name = TECH_CMP_NAVAL_16_5_NAME type = management difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           传统募兵制度 
+  application =
+  { id        = 3210
+    name      = TECH_APP_NAVAL_17_NAME
+    desc      = TECH_APP_NAVAL_17_DESC
+    position  = { x = 130 y = 170 }
+    year      = 1936
+    # 民夫招募
+    component = { id = 3171 name = TECH_CMP_NAVAL_17_1_NAME type = management difficulty = 6 }
+    # 竖旗招兵 
+    component = { id = 3172 name = TECH_CMP_NAVAL_17_2_NAME type = management difficulty = 6 }
+    # 自愿从军
+    component = { id = 3173 name = TECH_CMP_NAVAL_17_3_NAME type = management difficulty = 6 }
+    # 兵丁管理机构 
+    component = { id = 3174 name = TECH_CMP_NAVAL_17_4_NAME type = management difficulty = 6 }
+    # 兵丁招募标准
+    component = { id = 3175 name = TECH_CMP_NAVAL_17_5_NAME type = management difficulty = 6 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           近代兵役制度 
+  application =
+  { id        = 3220
+    name      = TECH_APP_NAVAL_18_NAME
+    desc      = TECH_APP_NAVAL_18_DESC
+    position  = { x = 244 y = 151 }
+    year      = 1936
+    # 近代兵役法 
+    component = { id = 3181 name = TECH_CMP_NAVAL_18_1_NAME type = management difficulty = 10 }
+    # 近代募兵制 
+    component = { id = 3182 name = TECH_CMP_NAVAL_18_2_NAME type = management difficulty = 10 }
+    # 近代征兵制 
+    component = { id = 3183 name = TECH_CMP_NAVAL_18_3_NAME type = management difficulty = 10 }
+    # 兵役管理机构 
+    component = { id = 3184 name = TECH_CMP_NAVAL_18_4_NAME type = management difficulty = 10 }
+    # 服役标准 
+    component = { id = 3185 name = TECH_CMP_NAVAL_18_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           传统教育体系  
+  application =
+  { id        = 3000
+    name      = TECH_APP_NAVAL_19_NAME
+    desc      = TECH_APP_NAVAL_19_DESC
+    position  = { x = 420 y = 40 }
+    year      = 1936
+    # 传统私塾教育 
+    component = { id = 3191 name = TECH_CMP_NAVAL_19_1_NAME type = management difficulty = 6 }
+    # 三纲五常  
+    component = { id = 3192 name = TECH_CMP_NAVAL_19_2_NAME type = management difficulty = 6 }
+    # 传统启蒙教材
+    component = { id = 3193 name = TECH_CMP_NAVAL_19_3_NAME type = management difficulty = 6 }
+    # 儒家价值观
+    component = { id = 3194 name = TECH_CMP_NAVAL_19_4_NAME type = management difficulty = 6 }
+    # 传统价值观 
+    component = { id = 3195 name = TECH_CMP_NAVAL_19_5_NAME type = management difficulty = 6 }
+    required  = { }
+    effects =
+    { command = { type = info_may_cause which = 3010 }
+    }
+  }
+  #           舆论自由 
+  application =
+  { id        = 3120
+    name      = TECH_APP_NAVAL_21_NAME
+    desc      = TECH_APP_NAVAL_21_DESC
+    position  = { x = 150 y = 60 }
+    year      = 1936
+    # 新闻自由 
+    component = { id = 3211 name = TECH_CMP_NAVAL_21_1_NAME type = management difficulty = 10 }
+    # 出版自由
+    component = { id = 3212 name = TECH_CMP_NAVAL_21_2_NAME type = management difficulty = 10 }
+    # 言论自由 
+    component = { id = 3213 name = TECH_CMP_NAVAL_21_3_NAME type = management difficulty = 10 }
+    # 官方媒体引导 
+    component = { id = 3214 name = TECH_CMP_NAVAL_21_4_NAME type = management difficulty = 10 }
+    # 舆论政策引导 
+    component = { id = 3215 name = TECH_CMP_NAVAL_21_5_NAME type = management difficulty = 10 }
+    required  = { 3100 }
+    effects =
+    { command = { type = deactivate which = 3110 }
+      command = { type = research_mod value = 10 }
+      command = { type = domestic which = freedom value = 5 }
+      command = { type = domestic which = democratic value = 1 }
+      command = { type = dissent value = -5 }
+      command = { type = max_organization which = land value = -2 }
+      command = { type = morale which = land value = 5 }
+    }
+  }
+  #           舆论管制 
+  application =
+  { id        = 3110
+    name      = TECH_APP_NAVAL_22_NAME
+    desc      = TECH_APP_NAVAL_22_DESC
+    position  = { x = 280 y = 60 }
+    year      = 1936
+    # 暴力管制  
+    component = { id = 3221 name = TECH_CMP_NAVAL_22_1_NAME type = management difficulty = 10 }
+    # 温和管制   
+    component = { id = 3222 name = TECH_CMP_NAVAL_22_2_NAME type = management difficulty = 10 }
+    # 新闻审查制度 
+    component = { id = 3223 name = TECH_CMP_NAVAL_22_3_NAME type = management difficulty = 10 }
+    # 出版审查制度 
+    component = { id = 3224 name = TECH_CMP_NAVAL_22_4_NAME type = management difficulty = 10 }
+    # 舆论法规制定 
+    component = { id = 3225 name = TECH_CMP_NAVAL_22_5_NAME type = management difficulty = 10 }
+    required  = { 3100 }
+    effects =
+    { command = { type = deactivate which = 3120 }
+      command = { type = industrial_modifier which = total value = 10 }
+      command = { type = domestic which = freedom value = -5 }
+      command = { type = domestic which = democratic value = -2 }
+      command = { type = research_mod value = -10 }
+      command = { type = dissent value = 5 }
+      command = { type = max_organization which = land value = 2 }
+      command = { type = morale which = land value = -5 }
+    }
+  }
+  #           官方宣传机构 
+  application =
+  { id        = 3100
+    name      = TECH_APP_NAVAL_26_NAME
+    desc      = TECH_APP_NAVAL_26_DESC
+    position  = { x = 220 y = 40 }
+    year      = 1936
+    # 官方报社  
+    component = { id = 3261 name = TECH_CMP_NAVAL_26_1_NAME type = management difficulty = 7 }
+    # 官方电台
+    component = { id = 3262 name = TECH_CMP_NAVAL_26_2_NAME type = management difficulty = 7 }
+    # 御用文人  
+    component = { id = 3263 name = TECH_CMP_NAVAL_26_3_NAME type = management difficulty = 7 }
+    # 宣传部门  
+    component = { id = 3264 name = TECH_CMP_NAVAL_26_4_NAME type = management difficulty = 7 }
+    # 宣传机构组织 
+    component = { id = 3265 name = TECH_CMP_NAVAL_26_5_NAME type = management difficulty = 7 }
+    required  = { }
+    effects =
+    { command = { type = domestic which = freedom value = -1 }
+      command = { type = dissent value = 1 }
+    }
+  }
+  #           近代政治团体 
+  application =
+  { id        = 3300
+    name      = TECH_APP_NAVAL_27_NAME
+    desc      = TECH_APP_NAVAL_27_DESC
+    position  = { x = 10 y = 200 }
+    year      = 1936
+    # 阶级联盟  
+    component = { id = 3271 name = TECH_CMP_NAVAL_27_1_NAME type = management difficulty = 7 }
+    # 会党势力 
+    component = { id = 3272 name = TECH_CMP_NAVAL_27_2_NAME type = management difficulty = 7 }
+    # 乡绅势力 
+    component = { id = 3273 name = TECH_CMP_NAVAL_27_3_NAME type = management difficulty = 7 }
+    # 地方实力派 
+    component = { id = 3274 name = TECH_CMP_NAVAL_27_4_NAME type = management difficulty = 7 }
+    # 单一群体利益 
+    component = { id = 3275 name = TECH_CMP_NAVAL_27_5_NAME type = management difficulty = 7 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           军人集团 
+  application =
+  { id        = 3310
+    name      = TECH_APP_NAVAL_28_NAME
+    desc      = TECH_APP_NAVAL_28_DESC
+    position  = { x = 30 y = 240 }
+    year      = 1936
+    # 自成派系  
+    component = { id = 3281 name = TECH_CMP_NAVAL_28_1_NAME type = management difficulty = 8 }
+    # 割据势力  
+    component = { id = 3282 name = TECH_CMP_NAVAL_28_2_NAME type = management difficulty = 8 }
+    # 武力后盾
+    component = { id = 3283 name = TECH_CMP_NAVAL_28_3_NAME type = management difficulty = 8 }
+    # 地方权力垄断 
+    component = { id = 3284 name = TECH_CMP_NAVAL_28_4_NAME type = management difficulty = 8 }
+    # 民初军阀
+    component = { id = 3285 name = TECH_CMP_NAVAL_28_5_NAME type = management difficulty = 8 }
+    required  = { 3300 }
+    effects =
+    { command = { type = deactivate which = 3320 }
+    }
+  }
+  #           近代政党 
+  application =
+  { id        = 3320
+    name      = TECH_APP_NAVAL_29_NAME
+    desc      = TECH_APP_NAVAL_29_DESC
+    position  = { x = 30 y = 265 }
+    year      = 1936
+    # 资本主义政党 
+    component = { id = 3291 name = TECH_CMP_NAVAL_29_1_NAME type = management difficulty = 8 }
+    # 民主社会主义政党  
+    component = { id = 3292 name = TECH_CMP_NAVAL_29_2_NAME type = management difficulty = 8 }
+    # 共产主义政党 
+    component = { id = 3293 name = TECH_CMP_NAVAL_29_3_NAME type = management difficulty = 8 }
+    # 民族主义政党 
+    component = { id = 3294 name = TECH_CMP_NAVAL_29_4_NAME type = management difficulty = 8 }
+    # 阶级联盟
+    component = { id = 3295 name = TECH_CMP_NAVAL_29_5_NAME type = management difficulty = 10 }
+    required  = { 3300 }
+    effects =
+    { command = { type = deactivate which = 3310 }
+    }
+  }
+  #           近代启蒙教育 
+  application =
+  { id        = 3010
+    name      = TECH_APP_NAVAL_30_NAME
+    desc      = TECH_APP_NAVAL_30_DESC
+    position  = { x = 430 y = 70 }
+    year      = 1936
+    # 多层次教育 
+    component = { id = 3301 name = TECH_CMP_NAVAL_30_1_NAME type = management difficulty = 12 }
+    # 近代科学普及 
+    component = { id = 3302 name = TECH_CMP_NAVAL_30_2_NAME type = management difficulty = 12 }
+    # 近代文化普及 
+    component = { id = 3303 name = TECH_CMP_NAVAL_30_3_NAME type = management difficulty = 12 }
+    # 近代学校 
+    component = { id = 3304 name = TECH_CMP_NAVAL_30_4_NAME type = management difficulty = 12 }
+    # 近代教育行政 
+    component = { id = 3305 name = TECH_CMP_NAVAL_30_5_NAME type = management difficulty = 12 }
+    required  = { 3000 }
+    effects =
+    { command = { type = research_mod value = 1 }
+    }
+  }
+  #           民族救星 
+  application =
+  { id        = 3500
+    name      = TECH_APP_NAVAL_31_NAME
+    desc      = TECH_APP_NAVAL_31_DESC
+    position  = { x = 420 y = 330 }
+    year      = 1936
+    # 革命先锋  
+    component = { id = 3311 name = TECH_CMP_NAVAL_31_1_NAME type = management difficulty = 10 }
+    # 改良先锋
+    component = { id = 3312 name = TECH_CMP_NAVAL_31_2_NAME type = management difficulty = 10 }
+    # 自主工业体系 
+    component = { id = 3313 name = TECH_CMP_NAVAL_31_3_NAME type = management difficulty = 10 }
+    # 平等互惠原则 
+    component = { id = 3314 name = TECH_CMP_NAVAL_31_4_NAME type = management difficulty = 10 }
+    # 收回列强利益
+    component = { id = 3315 name = TECH_CMP_NAVAL_31_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { type = deactivate which = 3510 }
+    }
+  }
+  #           列强代理人 
+  application =
+  { id        = 3510
+    name      = TECH_APP_NAVAL_32_NAME
+    desc      = TECH_APP_NAVAL_32_DESC
+    position  = { x = 420 y = 350 }
+    year      = 1936
+    # 门户开放原则 
+    component = { id = 3321 name = TECH_CMP_NAVAL_32_1_NAME type = management difficulty = 10 }
+    # 外援依赖
+    component = { id = 3322 name = TECH_CMP_NAVAL_32_2_NAME type = management difficulty = 10 }
+    # 外资依赖
+    component = { id = 3323 name = TECH_CMP_NAVAL_32_3_NAME type = management difficulty = 10 }
+    # 出卖利权 
+    component = { id = 3324 name = TECH_CMP_NAVAL_32_4_NAME type = management difficulty = 10 }
+    # 维护列强利益 
+    component = { id = 3325 name = TECH_CMP_NAVAL_32_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { type = deactivate which = 3500 }
+    }
+  }
+  #           自由主义  
+  application =
+  { id        = 3400
+    name      = TECH_APP_NAVAL_33_NAME
+    desc      = TECH_APP_NAVAL_33_DESC
+    position  = { x = 420 y = 200 }
+    year      = 1936
+    # 政治自由主义
+    component = { id = 3331 name = TECH_CMP_NAVAL_33_1_NAME type = general_equipment difficulty = 5 }
+    # 文化自由主义
+    component = { id = 3332 name = TECH_CMP_NAVAL_33_2_NAME type = general_equipment difficulty = 5 }
+    # 经济自由主义
+    component = { id = 3333 name = TECH_CMP_NAVAL_33_3_NAME type = general_equipment difficulty = 5 }
+    # 社会自由主义
+    component = { id = 3334 name = TECH_CMP_NAVAL_33_4_NAME type = general_equipment difficulty = 5 }
+    # 自由主义思潮 
+    component = { id = 3335 name = TECH_CMP_NAVAL_33_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           社会主义 
+  application =
+  { id        = 3410
+    name      = TECH_APP_NAVAL_34_NAME
+    desc      = TECH_APP_NAVAL_34_DESC
+    position  = { x = 420 y = 220 }
+    year      = 1936
+    # 空想社会主义
+    component = { id = 3341 name = TECH_CMP_NAVAL_34_1_NAME type = general_equipment difficulty = 5 }
+    # 马克思主义哲学 
+    component = { id = 3342 name = TECH_CMP_NAVAL_34_2_NAME type = general_equipment difficulty = 5 }
+    # 辩证唯物主义
+    component = { id = 3343 name = TECH_CMP_NAVAL_34_3_NAME type = general_equipment difficulty = 5 }
+    # 历史唯物主义 
+    component = { id = 3344 name = TECH_CMP_NAVAL_34_4_NAME type = general_equipment difficulty = 5 }
+    # 剩余价值规律
+    component = { id = 3345 name = TECH_CMP_NAVAL_34_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           法西斯主义 
+  application =
+  { id        = 3420
+    name      = TECH_APP_NAVAL_35_NAME
+    desc      = TECH_APP_NAVAL_35_DESC
+    position  = { x = 420 y = 240 }
+    year      = 1936
+    # 极端集体主义
+    component = { id = 3351 name = TECH_CMP_NAVAL_35_1_NAME type = general_equipment difficulty = 5 }
+    # 极端民族主义 
+    component = { id = 3352 name = TECH_CMP_NAVAL_35_2_NAME type = general_equipment difficulty = 5 }
+    # 军国主义 
+    component = { id = 3353 name = TECH_CMP_NAVAL_35_3_NAME type = general_equipment difficulty = 5 }
+    # 反自由主义 
+    component = { id = 3354 name = TECH_CMP_NAVAL_35_4_NAME type = general_equipment difficulty = 5 }
+    # 独裁主义 
+    component = { id = 3355 name = TECH_CMP_NAVAL_35_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           保守主义  
+  application =
+  { id        = 3430
+    name      = TECH_APP_NAVAL_36_NAME
+    desc      = TECH_APP_NAVAL_36_DESC
+    position  = { x = 420 y = 260 }
+    year      = 1936
+    # 文化保守主义 
+    component = { id = 3361 name = TECH_CMP_NAVAL_36_1_NAME type = management difficulty = 10 }
+    # 宗教保守主义 
+    component = { id = 3362 name = TECH_CMP_NAVAL_36_2_NAME type = management difficulty = 10 }
+    # 财政保守主义 
+    component = { id = 3363 name = TECH_CMP_NAVAL_36_3_NAME type = management difficulty = 10 }
+    # 经济保守主义 
+    component = { id = 3364 name = TECH_CMP_NAVAL_36_4_NAME type = management difficulty = 10 }
+    # 保守主义价值观 
+    component = { id = 3365 name = TECH_CMP_NAVAL_36_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  #           地方自治 
+  application =
+  { id        = 3460
+    name      = TECH_APP_NAVAL_40_NAME
+    desc      = TECH_APP_NAVAL_40_DESC
+    position  = { x = 300 y = 260 }
+    year      = 1936
+    # 联省会议 
+    component = { id = 3401 name = TECH_CMP_NAVAL_40_1_NAME type = management difficulty = 10 }
+    # 省区议会
+    component = { id = 3402 name = TECH_CMP_NAVAL_40_2_NAME type = management difficulty = 10 }
+    # 省区宪法 
+    component = { id = 3403 name = TECH_CMP_NAVAL_40_3_NAME type = management difficulty = 10 }
+    # 联邦共和制  
+    component = { id = 3404 name = TECH_CMP_NAVAL_40_4_NAME type = management difficulty = 10 }
+    # 联省自治主张 
+    component = { id = 3405 name = TECH_CMP_NAVAL_40_5_NAME type = management difficulty = 10 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+}

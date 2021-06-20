@@ -1,0 +1,69 @@
+UCH;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+22000;Head of State;¶Îì÷Èğ ;24;PA;Resigned Generalissimo;Medium;duanqirui;x
+22001;Head of Government;¶Îì÷Èğ ;24;PA;Old General;Medium;duanqirui;x
+22002;Foreign Minister;ÉòÈğ÷ë ;24;PA;Apologetic Clerk;Medium;shenruilin;x
+22003;Minister of Armament;ÀîË¼ºÆ ;24;PA;Laissez Faires Capitalist;Medium;lisihao;x
+22004;Minister of Security;ÕÂÊ¿îÈ ;24;PA;Man of the People;Medium;zhangshizhao;x
+22006;Chief of Staff;ÇúÍ¬·á ;24;PA;School of Defence;Medium;ÇúÍ¬·á;x
+22093;Chief of Staff;ºÎØSÁÖ;27;PA;School of Defence;Medium;dazhong;x
+22007;Chief of Army;Îâ¹âĞÂ ;24;PA;Decisive Battle Doctrine;Medium;wuguangxin;x
+22010;Head of Government;ĞíÊÀÓ¢ ;20;PA;Flamboyant Tough Guy;Medium;xushiying;x
+22011;Foreign Minister;ÍõÕıÍ¢ ;20;PA;Great Compromiser;Medium;wangzhengting;x
+22012;Minister of Armament;³Â½õÌÎ ;20;PA;Military Entrepreneur;Medium;êå\ı;x
+22091;Minister of Armament;éÉäß;27;PA;Military Entrepreneur;Medium;dazhong;x
+22013;Minister of Security;Âí¾ıÎä ;20;PA;Crime Fighter;Medium;majunwu;x
+22092;Minister of Security;ÉòÈğ÷ë;27;PA;Crime Fighter;Medium;dazhong;x
+22014;Chief of Army;¼ÖµÂÒ« ;20;PA;Static Defence Doctrine;Medium;¼ÖµÂÒ«;x
+22015;Chief of Staff;¼ÖµÂÒ« ;20;PA;School of Defence;Medium;¼ÖµÂÒ«;x
+22016;Head of Military Intelligence;¼ÖµÂÒ« ;20;PA;Logistics Specialist;Medium;¼ÖµÂÒ«;x
+22019;Head of Government;¼ÖµÂÒ« ;20;PA;Old General;Medium;¼ÖµÂÒ«;x
+22020;Foreign Minister;ºúÎ©µÂ ;20;PA;Apologetic Clerk;Medium;huweide;x
+22021;Minister of Armament;ºØµÂÁØ ;20;PA;Laissez Faires Capitalist;Medium;dazhong;x
+22022;Minister of Security;ÇüÓ³¹â ;20;PA;Compassionate Gentleman;Medium;quyingguang;x
+22023;Head of Government;ºúÎ©µÂ ;20;PA;Happy Amateur;Medium;huweide;x
+22024;Head of Government;ÑÕ»İÇì ;20;PA;Silent Workhorse;Medium;yanhuiqing;x
+22094;Head of Government;ÅËÍ;27;PA;Happy Amateur;Medium;dazhong;x
+22025;Foreign Minister;Ê©ÕØ»ù ;20;PA;Great Compromiser;Medium;shizhaoji;x
+22120;Foreign Minister;ÍõÊaÌ©;27;PA;Great Compromiser;Medium;dazhong;x
+22026;Minister of Armament;¹ËÎ¬¾û ;20;PA;Administrative Genius;Medium;guweijun;x
+22027;Minister of Security;ÕÅ¹úäÆ ;20;PA;Silent Lawyer;Medium;zhangguogan;x
+22028;Chief of Staff;ÕÅ¾°»İ ;20;PA;School of Fire Support;Medium;zhangjinghui;x
+22029;Chief of Army;ÕÅ¾°»İ ;20;PA;Guns and Butter Doctrine;Medium;zhangjinghui;x
+22030;Head of Military Intelligence;ÕÅ¾°»İ ;20;PA;Technical Specialist;Medium;zhangjinghui;x
+22032;Head of Government;¶ÅÎı«• ;20;PA;Old Admiral;Medium;duxigui;x
+22033;Foreign Minister;²ÌÍ¢¸É ;20;PA;Apologetic Clerk;Medium;²ÌÍ¢¸É;x
+22034;Head of Government;¹ËÎ¬¾û ;20;PA;Silent Workhorse;Medium;guweijun;x
+22035;Foreign Minister;¹ËÎ¬¾û ;20;PA;Ideological Crusader;Medium;guweijun;x
+22036;Minister of Armament;ÌÀ¶ûºÍ ;20;PA;Laissez Faires Capitalist;Medium;tangerhe;x
+22037;Minister of Security;ºúÎ©µÂ ;20;PA;Silent Lawyer;Medium;huweide;x
+22054;Head of State;‡ø„ÕÔº;24;SL;NA;Medium;beifang;x
+22100;Chief of Navy;¶ÅÎı«• ;20;PA;Old Admiral;Medium;duxigui;x
+22101;Chief of Navy;ÈøÕò±ù ;16;PA;Indirect Approach Doctrine;Medium;M72009;x
+22102;Chief of Navy;ÁÖ½¨ÕÂ ;16;PA;Indirect Approach Doctrine;Medium;ÁÖ½¨ÕÂ;x
+22104;Head of State;²ÜåK ;26;PA;Resigned Generalissimo;Medium;duanqirui;x
+22103;Head of State;ÎâÅåæÚ ;24;PA;Stern Imperialist;Medium;wupeifu;x
+22105;Head of Government;ÆëÛÆÔª ;24;PA;Flamboyant Tough Guy;Medium;qixieyuan;x
+22106;Foreign Minister;ÎâÅåæÚ ;24;PA;General Staffer;Medium;wupeifu;x
+22107;Minister of Armament;ÆëÛÆÔª ;20;PA;Infantry Proponent;Medium;qixieyuan;x
+22108;Minister of Security;ÑÕ»İÇì ;20;PA;Silent Workhorse;Medium;yanhuiqing;x
+22109;Head of Military Intelligence;ÁõÓñ´º ;24;PA;Dismal Enigma;Medium;liuyuchun;x
+22110;Chief of Staff;ÆëÛÆÔª ;24;PA;School of Mass Combat;Medium;qixieyuan;x
+22111;Chief of Army;ÎâÅåæÚ ;24;PA;Decisive Battle Doctrine;Medium;wupeifu;x
+22112;Head of Government;½ùÔÆ¶õ ;20;PA;Political Protege;Medium;jinyune;x
+22113;Chief of Army;½ùÔÆ¶õ ;20;PA;Decisive Battle Doctrine;Medium;jinyune;x
+22114;Foreign Minister;ÑÕ»İÇì ;20;PA;Silent Workhorse;Medium;yanhuiqing;x
+22115;Chief of Staff;ÆëÛÆÔª ;20;PA;School of Defence;Medium;qixieyuan;x
+22116;Foreign Minister;½ùÔÆ¶õ ;20;PA;Iron Fisted Brute;Medium;jinyune;x
+22117;Head of State;ÏôÒ«ÄÏ ;20;PA;Weary Stiffneck;Medium;xiaoyaonan;x
+22118;Minister of Armament;½ùÔÆ¶õ ;24;PA;Military Entrepreneur;Medium;jinyune;x
+22119;Minister of Security;ÆëÛÆÔª ;24;PA;Crooked Kleptocrat;Medium;qixieyuan;x
+22120;Foreign Minister;Íõ³è»İ ;20;PA;Ideological Crusader;Medium;M52026;x
+22121;Head of Government;Íõ³è»İ ;22;PA;Flamboyant Tough Guy;Medium;M52026;x
+22122;Head of Government;ŒOŒšçù ;22;PA;Flamboyant Tough Guy;Medium;ŒOŒšçù;x
+22123;Minister of Armament;ˆÓ¢ÈA ;22;PA;Laissez Faires Capitalist;Medium;ˆÓ¢ÈA;x
+22124;Minister of Armament;¸ß¶÷ºé ;22;PA;Laissez Faires Capitalist;Medium;¸ß¶÷ºé;x
+22125;Head of Military Intelligence;ŒOµ¤ÁÖ ;24;PA;Dismal Enigma;Medium;ŒOµ¤ÁÖ;x
+22126;Minister of Security;ŒOµ¤ÁÖ ;24;PA;Crooked Kleptocrat;Medium;ŒOµ¤ÁÖ;x
+22157;Minister of Security;Á_ÎÄ˜o ;20;PA;Compassionate Gentleman;Medium;Á_ÎÄ˜o;x
+22158;Minister of Armament;Á_ÎÄ˜o ;20;PA;Laissez Faires Capitalist;Medium;Á_ÎÄ˜o;x

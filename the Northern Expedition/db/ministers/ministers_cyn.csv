@@ -1,0 +1,23 @@
+CYN;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+5000;Head of State;ÌÆ¼ÌÒ¢ ;24;PA;Die-hard Reformer;Medium;tangjiyao;x
+5001;Head of Government;ÁúÔÆ ;24;PA;Political Protege;Medium;longyun;x
+5002;Foreign Minister;ÌÆ¼ÌÒ¢ ;24;PA;General Staffer;Medium;tangjiyao;x
+5003;Minister of Armament;ÁúÔÆ ;24;PA;Military Entrepreneur;Medium;longyun;x
+5004;Minister of Security;ºúÈôÓŞ ;24;PA;Crime Fighter;Medium;huruoyu;x
+5005;Head of Military Intelligence;ºúÈôÓŞ;24;PA;Dismal Enigma;Medium;huruoyu;x
+5006;Chief of Staff;ÁúÔÆ ;24;PA;Static Defence Doctrine;Medium;longyun;x
+5007;Chief of Army;ÌÆ¼ÌÒ¢ ;20;PA;Static Defence Doctrine;Medium;tangjiyao;x
+5010;Head of State;ÁúÔÆ ;20;PA;Pig-headed Isolationist;Medium;longyun;x
+5011;Head of Government;Â¬ºº;20;PA;Political Protege;Medium;luhan;x
+5012;Foreign Minister;ÁúÔÆ ;20;PA;Iron Fisted Brute;Medium;longyun;x
+5013;Chief of Army;ÁúÔÆ ;20;PA;Decisive Battle Doctrine;Medium;longyun;x
+5014;Chief of Staff;Â¬ºº ;20;PA;School of Defence;Medium;luhan;x
+5015;Head of Government;ºúÈôÓŞ ;27;PA;Political Protege;Medium;huruoyu;x
+5016;Head of State;ºúÈôÓŞ;26;PA;Powerhungry Demagogue;Medium;huruoyu;x
+5018;Foreign Minister;ºúÈôÓŞ;26;PA;General Staffer;Medium;huruoyu;x
+5019;Minister of Armament;ÀîßxÍ¢;26;PA;Resource Industrialist;Medium;unknown;x
+5020;Minister of Security;ÀîßxÍ¢;26;PA;Crooked Plutocrat;Medium;unknown;x
+5021;Head of Military Intelligence;ˆÈêóK;26;PA;Political Specialist;Medium;unknown;x
+5016;Chief of Army;ºúÈôÓŞ;26;PA;Powerhungry Demagogue;Medium;huruoyu;x
+5019;Chief of Staff;ÀîßxÍ¢;26;PA;Resource Industrialist;Medium;unknown;x

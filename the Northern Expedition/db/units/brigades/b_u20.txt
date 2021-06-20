@@ -1,0 +1,84 @@
+land_unit_type = 1
+# 0 - 一戰型重機枪加强团 
+model = {
+	cost 				= 3
+	buildtime	 		= 75
+	manpower 			= 3
+	maxspeed 			= -1
+	morale					= 2
+	defensiveness 		= 1
+	toughness 			= 1
+	softness			= -2
+	suppression			= 2
+	softattack			= 2
+	supplyconsumption 	= 3.5
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 3
+}
+# 1 - 24型重機枪加强团 
+model = {
+	cost 				= 3
+	buildtime	 		= 75
+	manpower 			= 3
+	maxspeed 			= -1
+	morale					= 2
+	defensiveness 		= 1
+	toughness 			= 1
+	softness			= -2
+	suppression			= 2
+	softattack			= 2
+	supplyconsumption 	= 3
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 3
+}
+# 2 - 27型重機枪加强团 
+model = {
+	cost 				= 4
+	buildtime	 		= 75
+	manpower 			= 3
+	maxspeed 			= -1
+	morale					= 2
+	defensiveness 		= 1
+	toughness 			= 1
+	softness			= -2
+	suppression			= 2
+	softattack			= 2.5
+	supplyconsumption 	= 3.5
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 3
+}
+# 3 - 30型重機枪加强团 
+model = {
+	cost 				= 4
+	buildtime	 		= 80
+	manpower 			= 3
+	maxspeed 			= -1
+	morale					= 4
+	defensiveness 		= 1
+	toughness 			= 1
+	softness			= -2
+	suppression			= 2
+	softattack			= 2.5
+	hardattack			= 1
+	supplyconsumption 	= 3
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 3
+}
+# 4 - 34型重機枪加强团 
+model = {
+	cost 				= 5
+	buildtime	 		= 80
+	manpower 			= 3
+	maxspeed 			= -1
+	morale					= 4
+	defensiveness 		= 1
+	toughness 			= 1
+	softness			= -2
+	suppression			= 2
+	softattack			= 3
+	hardattack			= 1
+	supplyconsumption 	= 4.5
+	upgrade_time_factor = 1.5
+	upgrade_cost_factor = 3
+}
+

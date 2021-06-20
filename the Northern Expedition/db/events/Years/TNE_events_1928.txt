@@ -1,0 +1,2103 @@
+##############################################
+## 1928年事件   
+##############################################
+
+###################
+#国民政府事件
+###################
+##########################
+#1928年       400000~
+##########################
+
+event = {
+	id =400401
+	random = no
+	country = JAP
+
+	trigger = { not = { control = { province = 1216 data = U11 } }
+                      event = 400402 }
+
+	name = "濟南慘案 "
+	desc = "濟南慘案，又稱五三慘案，指1928年5月3日 國民革命軍在北伐途中經過山東濟南城時，日 本方面借口革命軍對城內的日本僑民進行搶劫 、強姦、屠殺，而出動軍隊展開報復，蓄意屠 殺中國軍人與民眾六千餘人的事件。其中，國 民黨戰地政務委員會派遣濟南的外交處處長兼 國民政府外交部特派山東交涉員蔡公時及署內 職員17人被日軍虐殺。 "
+	style = 0
+
+	date = { day = 2 month = may year = 1927 }
+	offset = 10
+	deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "出兵干涉! " 
+		ai_chance = 99
+		command = { type = dissent value = -1 }
+        command = { type = setflag which = jinan }
+		}
+		
+	action_b = {
+		name = "算了 " 
+		ai_chance = 1
+		command = { type = dissent value = 1 }
+		}
+}
+
+event = {
+	id =400000
+	random = no
+
+
+	trigger = { event 400401 
+				control = { province = 1216 data = -1 }
+				flag = jinan }
+	
+	name = "濟南慘案 "
+	desc = "濟南慘案，又稱五三慘案，指1928年5月3日 國民革命軍在北伐途中經過山東濟南城時，日 本方面借口革命軍對城內的日本僑民進行搶劫 、強姦、屠殺，而出動軍隊展開報復，蓄意屠 殺中國軍人與民眾六千餘人的事件。其中，國 民黨戰地政務委員會派遣濟南的外交處處長兼 國民政府外交部特派山東交涉員蔡公時及署內 職員17人被日軍虐殺。"
+	style = 0
+	
+	date = { day = 2 month = may year = 1927 }
+	offset = 10
+	deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "繞道北伐 " 
+		command = { type = secedeprovince which = JAP value = 1216 }
+		command = { type = dissent value = 10 } 
+        command = { type = set_relation which = JAP value = -150 }          
+		command = { type = manpowerpool value = -60 }
+        command = { type = clrflag which = jinan }  }
+}
+
+event = {
+	id =400407
+	random = no
+	country = JAP
+
+	trigger = { event 400000  }
+	
+	name = "《中日濟案協定》 "
+	desc = "1929年3月28日，中日雙方簽署了《中日濟案協定》，其主要內容如下： 1.自簽訂協定日起，兩個月內，日軍在山東的駐軍全部撤退。 2.雙方損害，共同組織調查委員會，另行調查。 3.濟南之不幸事件認為「已成過去，以期兩國國交益臻敦厚」。 協議簽署後，日軍退出濟南。其後兩年間，民國政府數次提請日方 派定人員組織調查，然而日方沒有回應。"
+	style = 0
+	
+	date = { day = 27 month = march year = 1929 }
+	offset = 1
+	deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "簽訂 " 
+		command = { type = trigger which = 400408 value = 1 }
+		command = { type = secedeprovince which = CHI value = 1216 } 
+		command = { type = secedeprovince which = CHI value = 1215 }
+		command = { type = secedeprovince which = CHI value = 2863 }
+		command = { type = secedeprovince which = CHI value = 2859 }          
+	}
+}
+
+event = {
+	id =400408
+	random = no
+	country = CHI
+
+	name = "《中日濟案協定》 "
+	desc = "1929年3月28日，中日雙方簽署了《中日濟案協定》，其主要內容如下： 1.自簽訂協定日起，兩個月內，日軍在山東的駐軍全部撤退。 2.雙方損害，共同組織調查委員會，另行調查。 3.濟南之不幸事件認為「已成過去，以期兩國國交益臻敦厚」。 協議簽署後，日軍退出濟南。其後兩年間，民國政府數次提請日方 派定人員組織調查，然而日方沒有回應。"
+	style = 0
+
+	action_a = {
+		name = "讓中央軍接收 " 
+		ai_chance = 99
+                command = { type = relation which = U03 value = -20 }          
+  }
+	action_b = {
+		name = "讓西北軍接收 " 
+                command = { type = relation which = U03 value = 20 } 
+		command = { type = secedeprovince which = U03 value = 1216 } 
+		command = { type = secedeprovince which = U03 value = 1215 }
+		command = { type = secedeprovince which = U03 value = 2863 }
+		command = { type = secedeprovince which = U03 value = 2859 }          
+  }
+}
+###############################################################
+event = {
+	id =400001
+	random = no
+	country = CHI
+
+#	trigger = {  control = { province = 1205 data = -3 } }
+
+	name = "北伐軍佔領北京 "
+	desc = "1928年6月8日，國民革命軍佔領北京，北京改稱北平。 "
+	style = 0
+
+#  date = { day = 7 month = may year = 1927 }
+#  offset = 1
+#  deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "萬歲! " 
+		command = { type = dissent value = -5 }           
+		command = { type = morale which = land value = 3 }
+        command = { type = inherit which = U13 }
+		command = { type = trigger which = 400003 value = 5 }
+		}
+}
+
+event = {
+	id = 400002
+	random = no
+	country = CHI
+ 
+  
+	name = "東北易幟 "
+	desc = "1928年12月29日，奉系張學良改五色旗為青天白日滿地紅旗 ，東四省易幟，通電服從南京國民政府領導。全國統 一宣告完成。兩日後，依照先前談判條件，國民政府命張學 良為東北軍政領袖。 "
+	style = 0
+ 
+	action_a = {
+		name = "全國一統!! "
+		command = { type = dissent value = -5 }
+#     	command = { type = trigger which = 400003  }
+     }
+}
+
+event = {
+	id = 400003
+	random = no
+	country = CHI
+ 
+  
+	name = "北伐完成 "
+	desc = "東北易幟後，標誌著北伐的結束、國民政府完成統一中國、 以及北洋政府時期的正式結束。由於當時外蒙古仍 為蘇聯所佔據，加上原北洋政府僅於西藏設立代表 處而並未進駐軍隊，故只是實現了當時中國在名義或形式上的南北統一。 "
+	style = 0
+ 
+ 	action_a = {
+     	name = "完成統一 "
+        command = { type = chiefofair which = 16120 } #
+		command = { type = morale which = land value = -10 }
+		command = { type = dissent value = -1 }
+    	command = { type = extra_tc value = -30 }
+        command = { type = repair_mod value = -25 }
+        command = { type = tc_occupied_mod value = -25 }
+        command = { type = attrition_mod value = -15 }
+        command = { type = supply_dist_mod value = -20 }
+		command = { type = waketeam which = 1016 }
+		command = { type = waketeam which = 1004 }
+		command = { type = waketeam which = 1010 }
+		command = { type = sleepevent which = 400009 }
+		
+		command = { type = construct which = land_fort where = 1887 value = -5 }
+		command = { type = construct which = land_fort where = 2787 value = -5 }
+     	command = { type = construct which = land_fort where = 1270 value = -5 }
+     	command = { type = construct which = land_fort where = 2786 value = -5 }
+     	command = { type = construct which = land_fort where = 2782 value = -5 }
+		command = { type = construct which = land_fort where = 2838 value = -10 }
+		command = { type = construct which = land_fort where = 2839 value = -10 }
+		command = { type = construct which = land_fort where = 1211 value = -10 }
+		command = { type = construct which = land_fort where = 1210 value = -10 }
+		command = { type = construct which = land_fort where = 1398 value = -7 }
+		command = { type = construct which = land_fort where = 2941 value = -7 }
+		command = { type = construct which = land_fort where = 2943 value = -10 }
+		command = { type = construct which = land_fort where = 1204 value = -7 }
+		command = { type = construct which = land_fort where = 1218 value = -7 }
+		command = { type = construct which = land_fort where = 1251 value = -5 }
+		command = { type = construct which = land_fort where = 1252 value = -5 }
+		command = { type = construct which = land_fort where = 1244 value = -5 }
+     		}
+	}
+
+
+event = {
+	id = 400004
+	random = no
+	country = CHI
+        
+       trigger = {  control = { province = 1235 data = -3 }
+					or = { not = { incabinet = 12 }
+							event = 9999922
+							event = 9999913  }
+						or = { event = 9999931
+								event = 9999935 }
+				}
+
+  name = "蔣介石復職 "
+	desc = "1927年12月3日至10日国民党中央执行委员会 在上海召开国民党二届四中全会预备会， 会议的最后一天恢复了蒋中正复职为北伐全军总司令。 1928年1月4日，蒋中正到任，继续领导北伐。 "
+	style = 0
+
+  date = { day = 3 month = january year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = december year = 1929 }
+	
+	action_a = {
+		name = "復職 " 
+     command = { type = dissent value = -1 }   
+                  command = { type = headofgovernment which = 55 }                
+                  command = { type = chiefofstaff which = 24 }
+                  command = { type = chiefofarmy which = 25 }
+
+      }
+}
+
+event = {
+	id = 400009
+	random = no
+	country = CHI
+
+       trigger = {  control = { province = 1218 data = -3 }
+		    or = { incabinet = 12
+			incabinet = 24 
+			incabinet = 25 }  
+   }
+
+
+  name = "二次北伐 "
+	desc = "北伐军在占领河南之后，屡次致电冯玉祥、 阎钖山及各将领准备北伐。2月28日，中国国民党 中央政治会议决议冯玉祥为第二集团军总司令， 阎锡山为第三集团军总司令，并命统归蒋指挥。 1928年4月7日，蒋介石在徐州誓师北伐。 9日，各路北伐军发起全线总攻。 "
+	style = 0
+
+  date = { day = 6 month = april year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = december year = 1929 }
+	
+	action_a = {
+		name = "一統中國!! "  
+     		command = { type = dissent value = -15 }
+		command = { type = supplies value = 5000 }
+		command = { type = morale which = land value = 5 }  
+		command = { type = max_organization which = land value = 1 }
+                command = { type = add_corps which = "國民革命軍第34軍" value = land where = 1218 }
+                command = { type = add_division which = "第88師 " value = infantry when = 15  }
+                command = { type = add_division which = "第89師 " value = infantry when = 14  } 
+                command = { type = add_division which = "第90師 " value = infantry when = 14  }
+                command = { type = add_corps which = "國民革命軍第41軍" value = land where = 1218 }
+                command = { type = add_division which = "第91師 " value = infantry when = 15  }
+                command = { type = add_division which = "第92師 " value = infantry when = 14  } 
+                command = { type = add_division which = "第93師 " value = infantry when = 14  }
+                command = { type = add_corps which = "國民革命軍第42軍" value = land where = 1218 }
+                command = { type = add_division which = "第94師 " value = infantry when = 15  }
+                command = { type = add_division which = "第95師 " value = infantry when = 14  } 
+                command = { type = add_division which = "第96師 " value = infantry when = 14  }
+#                 command = { type = alliance which = u09 }
+                 command = { type = alliance which = u03 }
+                 command = { type = alliance which = u10 }
+                 command = { type = alliance which = cgx }
+      }
+}
+
+event = {
+	id =400005
+	random = no
+	country = CHI
+
+       trigger = {  
+			control = { province = 1235 data = -1 }
+		    not = { exists = U11 }
+		    event = 400003
+			flag = U03joinTNE
+			}
+
+	name = "戰後勢力分配(西北軍) "
+	desc = " "
+	style = 0
+	date = { day = 1 month = january year = 1927 }
+	offset = 10
+	deathdate = { day = 1 month = december year = 1929 }
+	action_a = {
+		name = "新軍閥割據 " 	
+        command = { type = leave_alliance }
+
+		command = { type = secedeprovince which = U03 value = 1223 } #河南
+		command = { type = secedeprovince which = U03 value = 1224 }
+		command = { type = secedeprovince which = U03 value = 1227 }
+		command = { type = secedeprovince which = U03 value = 1228 }
+		command = { type = secedeprovince which = U03 value = 1229 }
+		command = { type = secedeprovince which = U03 value = 1230 }
+		command = { type = secedeprovince which = U03 value = 1876 }
+		command = { type = secedeprovince which = U03 value = 2838 }
+		command = { type = secedeprovince which = U03 value = 2839 }
+		command = { type = secedeprovince which = U03 value = 2840 }
+		command = { type = secedeprovince which = U03 value = 2841 }
+		command = { type = secedeprovince which = U03 value = 2842 }
+		command = { type = secedeprovince which = U03 value = 2843 }
+		command = { type = secedeprovince which = U03 value = 2844 }
+		command = { type = secedeprovince which = U03 value = 2845 }
+		command = { type = secedeprovince which = U03 value = 2846 }
+		command = { type = secedeprovince which = U03 value = 2847 }
+		command = { type = secedeprovince which = U03 value = 2848 }
+		command = { type = secedeprovince which = U03 value = 2849 }
+		
+        command = { type = secedeprovince which = U03 value = 1170 } #山東
+		command = { type = secedeprovince which = U03 value = 1213 }
+		command = { type = secedeprovince which = U03 value = 1214 }
+		command = { type = secedeprovince which = U03 value = 1215 }
+		command = { type = secedeprovince which = U03 value = 1216 }
+		command = { type = secedeprovince which = U03 value = 1894 }
+		command = { type = secedeprovince which = U03 value = 2850 }
+		command = { type = secedeprovince which = U03 value = 2851 }
+		command = { type = secedeprovince which = U03 value = 2852 }
+		command = { type = secedeprovince which = U03 value = 2853 }
+		command = { type = secedeprovince which = U03 value = 2854 }
+		command = { type = secedeprovince which = U03 value = 2855 }
+		command = { type = secedeprovince which = U03 value = 2856 }
+		command = { type = secedeprovince which = U03 value = 2857 }
+		command = { type = secedeprovince which = U03 value = 2858 }
+		command = { type = secedeprovince which = U03 value = 2859 }
+		command = { type = secedeprovince which = U03 value = 2860 }
+		command = { type = secedeprovince which = U03 value = 2861 }
+		command = { type = secedeprovince which = U03 value = 2862 }
+		command = { type = secedeprovince which = U03 value = 2863 }
+		command = { type = secedeprovince which = U03 value = 2864 }
+		command = { type = secedeprovince which = U03 value = 1267 }	
+		command = { type = secedeprovince which = U03 value = 2781 }
+
+		command = { type = trigger which = 400006  }
+ }
+}
+
+event = {
+	id =400006
+	random = no
+	country = U03
+
+	name = "開封政治分會 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "新軍閥割據 " 	
+        command = { type = capital which = 1269 }
+		command = { type = free_supplies value = -5 }
+	    command = { type = free_ic value = -2 }
+        command = { type = leave_alliance }
+		command = { type = sleepminister which = 2003 } # 张之江
+		command = { type = sleepminister which = 2015 } # 张之江
+		command = { type = sleepminister which = 2017 } # 张之江
+		command = { type = sleepleader which = 56024 } # 
+		command = { type = giveleader which = 56058 where = CHI } # 0
+		command = { type = secedeprovince which = cgx value = 1231 }
+		command = { type = secedeprovince which = cgx value = 1232 }
+		command = { type = secedeprovince which = cgx value = 1253 }
+		command = { type = secedeprovince which = cgx value = 1264 }
+		command = { type = secedeprovince which = cgx value = 1266 }
+		command = { type = secedeprovince which = cgx value = 1886 }
+		command = { type = secedeprovince which = cgx value = 2653 }
+		command = { type = secedeprovince which = cgx value = 2654 }
+		command = { type = secedeprovince which = cgx value = 2655 }
+		command = { type = secedeprovince which = cgx value = 2656 }
+		command = { type = secedeprovince which = cgx value = 2657 }
+		command = { type = secedeprovince which = cgx value = 2658 }
+		command = { type = secedeprovince which = cgx value = 2659 }
+		command = { type = secedeprovince which = cgx value = 2660 }
+		command = { type = secedeprovince which = cgx value = 2661 }
+		command = { type = secedeprovince which = cgx value = 2662 }
+		command = { type = secedeprovince which = cgx value = 2663 }
+		command = { type = secedeprovince which = cgx value = 2664 }
+		command = { type = secedeprovince which = cgx value = 2665 }
+		command = { type = secedeprovince which = cgx value = 2666 }
+		command = { type = secedeprovince which = cgx value = 2667 }
+		command = { type = secedeprovince which = cgx value = 2668 }
+		command = { type = secedeprovince which = cgx value = 2669 }
+
+		command = { type = secedeprovince which = CSX value = 1204 }
+		command = { type = secedeprovince which = CSX value = 1205 }
+		command = { type = secedeprovince which = CSX value = 1210 }
+		command = { type = secedeprovince which = CSX value = 1211 }
+		command = { type = secedeprovince which = CSX value = 1212 }
+		command = { type = secedeprovince which = CSX value = 1810 }
+		command = { type = secedeprovince which = CSX value = 1811 }
+		command = { type = secedeprovince which = CSX value = 2748 }
+		command = { type = secedeprovince which = CSX value = 2793 }
+		command = { type = secedeprovince which = CSX value = 2865 }
+		command = { type = secedeprovince which = CSX value = 2866 }
+		command = { type = secedeprovince which = CSX value = 2867 }
+		command = { type = secedeprovince which = CSX value = 2868 }
+		command = { type = secedeprovince which = CSX value = 2869 }
+		command = { type = secedeprovince which = CSX value = 2870 }
+		command = { type = secedeprovince which = CSX value = 2871 }
+		command = { type = secedeprovince which = CSX value = 2872 }
+		command = { type = secedeprovince which = CSX value = 2873 }
+		command = { type = secedeprovince which = CSX value = 2992 }
+		command = { type = secedeprovince which = CSX value = 2993 }
+		command = { type = secedeprovince which = CSX value = 2994 }
+		command = { type = secedeprovince which = CGX value = 2874 }
+		command = { type = secedeprovince which = CGX value = 2875 }
+		command = { type = secedeprovince which = CGX value = 2876 }
+		command = { type = secedeprovince which = CGX value = 2673 }
+		command = { type = secedeprovince which = CGX value = 1203 }
+
+		command = { type = secedeprovince which = CSX value = 1206 }
+		command = { type = secedeprovince which = CSX value = 1386 }
+		command = { type = secedeprovince which = CSX value = 1398 }
+		command = { type = secedeprovince which = CSX value = 1595 }
+		command = { type = secedeprovince which = CSX value = 2881 }
+		command = { type = secedeprovince which = CSX value = 2939 }
+		command = { type = secedeprovince which = CSX value = 2940 }
+		command = { type = secedeprovince which = CSX value = 2941 }
+		command = { type = secedeprovince which = CSX value = 2942 }
+		command = { type = secedeprovince which = CSX value = 2943 }
+		command = { type = secedeprovince which = CSX value = 2944 }
+		command = { type = secedeprovince which = CSX value = 2947 }
+
+		command = { type = secedeprovince which = U03 value = 1223 }
+		command = { type = secedeprovince which = U03 value = 1224 }
+		command = { type = secedeprovince which = U03 value = 1227 }
+		command = { type = secedeprovince which = U03 value = 1228 }
+		command = { type = secedeprovince which = U03 value = 1229 }
+		command = { type = secedeprovince which = U03 value = 1230 }
+		command = { type = secedeprovince which = U03 value = 1876 }
+		command = { type = secedeprovince which = U03 value = 2838 }
+		command = { type = secedeprovince which = U03 value = 2839 }
+		command = { type = secedeprovince which = U03 value = 2840 }
+		command = { type = secedeprovince which = U03 value = 2841 }
+		command = { type = secedeprovince which = U03 value = 2842 }
+		command = { type = secedeprovince which = U03 value = 2843 }
+		command = { type = secedeprovince which = U03 value = 2844 }
+		command = { type = secedeprovince which = U03 value = 2845 }
+		command = { type = secedeprovince which = U03 value = 2846 }
+		command = { type = secedeprovince which = U03 value = 2847 }
+		command = { type = secedeprovince which = U03 value = 2848 }
+		command = { type = secedeprovince which = U03 value = 2849 }
+		
+        command = { type = secedeprovince which = U03 value = 1170 }
+		command = { type = secedeprovince which = U03 value = 1213 }
+		command = { type = secedeprovince which = U03 value = 1214 }
+		command = { type = secedeprovince which = U03 value = 1215 }
+		command = { type = secedeprovince which = U03 value = 1216 }
+		command = { type = secedeprovince which = U03 value = 1894 }
+		command = { type = secedeprovince which = U03 value = 2850 }
+		command = { type = secedeprovince which = U03 value = 2851 }
+		command = { type = secedeprovince which = U03 value = 2852 }
+		command = { type = secedeprovince which = U03 value = 2853 }
+		command = { type = secedeprovince which = U03 value = 2854 }
+		command = { type = secedeprovince which = U03 value = 2855 }
+		command = { type = secedeprovince which = U03 value = 2856 }
+		command = { type = secedeprovince which = U03 value = 2857 }
+		command = { type = secedeprovince which = U03 value = 2858 }
+		command = { type = secedeprovince which = U03 value = 2859 }
+		command = { type = secedeprovince which = U03 value = 2860 }
+		command = { type = secedeprovince which = U03 value = 2861 }
+		command = { type = secedeprovince which = U03 value = 2862 }
+		command = { type = secedeprovince which = U03 value = 2863 }
+		command = { type = secedeprovince which = U03 value = 2864 }	
+
+		command = { type = secedeprovince which = csx value = 1207 }
+		command = { type = secedeprovince which = csx value = 1208 }
+		command = { type = secedeprovince which = csx value = 2815 }
+		command = { type = secedeprovince which = csx value = 2816 }
+		command = { type = secedeprovince which = csx value = 2817 }
+		command = { type = secedeprovince which = csx value = 2785 }
+		command = { type = secedeprovince which = csx value = 2813 }
+		command = { type = secedeprovince which = csx value = 2811 }
+		command = { type = secedeprovince which = csx value = 2812 }
+		command = { type = secedeprovince which = csx value = 2814 }
+		command = { type = secedeprovince which = csx value = 1439 }
+		command = { type = secedeprovince which = U03 value = 1267 }
+ }
+}
+
+event = {
+	id =400007
+	random = no
+	country = CHI
+
+       trigger = {  
+			control = { province = 1235 data = -1 }
+		    not = { exists = U11 }
+		    event = 400003
+			flag = CSXjoinTNE
+			}
+
+	name = "戰後勢力分配(晉系) "
+	desc = " "
+	style = 0
+	date = { day = 1 month = january year = 1927 }
+	offset = 10
+	deathdate = { day = 1 month = december year = 1929 }
+	action_a = {
+		name = "新軍閥割據 " 	
+        command = { type = leave_alliance }
+
+		command = { type = secedeprovince which = CSX value = 1204 } #河北
+		command = { type = secedeprovince which = CSX value = 1205 }
+		command = { type = secedeprovince which = CSX value = 1210 }
+		command = { type = secedeprovince which = CSX value = 1211 }
+		command = { type = secedeprovince which = CSX value = 1212 }
+		command = { type = secedeprovince which = CSX value = 1810 }
+		command = { type = secedeprovince which = CSX value = 1811 }
+		command = { type = secedeprovince which = CSX value = 2748 }
+		command = { type = secedeprovince which = CSX value = 2793 }
+		command = { type = secedeprovince which = CSX value = 2865 }
+		command = { type = secedeprovince which = CSX value = 2866 }
+		command = { type = secedeprovince which = CSX value = 2867 }
+		command = { type = secedeprovince which = CSX value = 2868 }
+		command = { type = secedeprovince which = CSX value = 2869 }
+		command = { type = secedeprovince which = CSX value = 2870 }
+		command = { type = secedeprovince which = CSX value = 2871 }
+		command = { type = secedeprovince which = CSX value = 2872 }
+		command = { type = secedeprovince which = CSX value = 2873 }
+		command = { type = secedeprovince which = CSX value = 2992 }
+		command = { type = secedeprovince which = CSX value = 2993 }
+		command = { type = secedeprovince which = CSX value = 2994 }
+
+		command = { type = secedeprovince which = CSX value = 1206 } #察哈爾
+		command = { type = secedeprovince which = CSX value = 1386 }
+		command = { type = secedeprovince which = CSX value = 1398 }
+		command = { type = secedeprovince which = CSX value = 1595 }
+		command = { type = secedeprovince which = CSX value = 2881 }
+		command = { type = secedeprovince which = CSX value = 2939 }
+		command = { type = secedeprovince which = CSX value = 2940 }
+		command = { type = secedeprovince which = CSX value = 2941 }
+		command = { type = secedeprovince which = CSX value = 2942 }
+		command = { type = secedeprovince which = CSX value = 2943 }
+		command = { type = secedeprovince which = CSX value = 2944 }
+		command = { type = secedeprovince which = CSX value = 2947 }	
+
+		command = { type = secedeprovince which = csx value = 1207 } #綏遠
+		command = { type = secedeprovince which = csx value = 1208 }
+		command = { type = secedeprovince which = csx value = 2815 }
+		command = { type = secedeprovince which = csx value = 2816 }
+		command = { type = secedeprovince which = csx value = 2817 }
+		command = { type = secedeprovince which = csx value = 2785 }
+		command = { type = secedeprovince which = csx value = 2813 }
+		command = { type = secedeprovince which = csx value = 2811 }
+		command = { type = secedeprovince which = csx value = 2812 }
+		command = { type = secedeprovince which = csx value = 2814 }
+		command = { type = secedeprovince which = csx value = 1439 }
+
+		command = { type = trigger which = 400008  }
+ }
+}
+
+event = {
+	id =400008
+	random = no
+	country = CSX
+
+	name = "太原政治分會 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "新軍閥割據 " 	
+        command = { type = leave_alliance }
+		command = { type = secedeprovince which = cgx value = 1231 }
+		command = { type = secedeprovince which = cgx value = 1232 }
+		command = { type = secedeprovince which = cgx value = 1253 }
+		command = { type = secedeprovince which = cgx value = 1264 }
+		command = { type = secedeprovince which = cgx value = 1266 }
+		command = { type = secedeprovince which = cgx value = 1886 }
+		command = { type = secedeprovince which = cgx value = 2653 }
+		command = { type = secedeprovince which = cgx value = 2654 }
+		command = { type = secedeprovince which = cgx value = 2655 }
+		command = { type = secedeprovince which = cgx value = 2656 }
+		command = { type = secedeprovince which = cgx value = 2657 }
+		command = { type = secedeprovince which = cgx value = 2658 }
+		command = { type = secedeprovince which = cgx value = 2659 }
+		command = { type = secedeprovince which = cgx value = 2660 }
+		command = { type = secedeprovince which = cgx value = 2661 }
+		command = { type = secedeprovince which = cgx value = 2662 }
+		command = { type = secedeprovince which = cgx value = 2663 }
+		command = { type = secedeprovince which = cgx value = 2664 }
+		command = { type = secedeprovince which = cgx value = 2665 }
+		command = { type = secedeprovince which = cgx value = 2666 }
+		command = { type = secedeprovince which = cgx value = 2667 }
+		command = { type = secedeprovince which = cgx value = 2668 }
+		command = { type = secedeprovince which = cgx value = 2669 }
+
+		command = { type = secedeprovince which = CSX value = 1204 }
+		command = { type = secedeprovince which = CSX value = 1205 }
+		command = { type = secedeprovince which = CSX value = 1210 }
+		command = { type = secedeprovince which = CSX value = 1211 }
+		command = { type = secedeprovince which = CSX value = 1212 }
+		command = { type = secedeprovince which = CSX value = 1810 }
+		command = { type = secedeprovince which = CSX value = 1811 }
+		command = { type = secedeprovince which = CSX value = 2748 }
+		command = { type = secedeprovince which = CSX value = 2793 }
+		command = { type = secedeprovince which = CSX value = 2865 }
+		command = { type = secedeprovince which = CSX value = 2866 }
+		command = { type = secedeprovince which = CSX value = 2867 }
+		command = { type = secedeprovince which = CSX value = 2868 }
+		command = { type = secedeprovince which = CSX value = 2869 }
+		command = { type = secedeprovince which = CSX value = 2870 }
+		command = { type = secedeprovince which = CSX value = 2871 }
+		command = { type = secedeprovince which = CSX value = 2872 }
+		command = { type = secedeprovince which = CSX value = 2873 }
+		command = { type = secedeprovince which = CSX value = 2992 }
+		command = { type = secedeprovince which = CSX value = 2993 }
+		command = { type = secedeprovince which = CSX value = 2994 }
+		command = { type = secedeprovince which = CGX value = 2874 }
+		command = { type = secedeprovince which = CGX value = 2875 }
+		command = { type = secedeprovince which = CGX value = 2876 }
+		command = { type = secedeprovince which = CGX value = 2673 }
+		command = { type = secedeprovince which = CGX value = 1203 }
+
+		command = { type = secedeprovince which = CSX value = 1206 }
+		command = { type = secedeprovince which = CSX value = 1386 }
+		command = { type = secedeprovince which = CSX value = 1398 }
+		command = { type = secedeprovince which = CSX value = 1595 }
+		command = { type = secedeprovince which = CSX value = 2881 }
+		command = { type = secedeprovince which = CSX value = 2939 }
+		command = { type = secedeprovince which = CSX value = 2940 }
+		command = { type = secedeprovince which = CSX value = 2941 }
+		command = { type = secedeprovince which = CSX value = 2942 }
+		command = { type = secedeprovince which = CSX value = 2943 }
+		command = { type = secedeprovince which = CSX value = 2944 }
+		command = { type = secedeprovince which = CSX value = 2947 }
+
+		command = { type = secedeprovince which = U03 value = 1223 }
+		command = { type = secedeprovince which = U03 value = 1224 }
+		command = { type = secedeprovince which = U03 value = 1227 }
+		command = { type = secedeprovince which = U03 value = 1228 }
+		command = { type = secedeprovince which = U03 value = 1229 }
+		command = { type = secedeprovince which = U03 value = 1230 }
+		command = { type = secedeprovince which = U03 value = 1876 }
+		command = { type = secedeprovince which = U03 value = 2838 }
+		command = { type = secedeprovince which = U03 value = 2839 }
+		command = { type = secedeprovince which = U03 value = 2840 }
+		command = { type = secedeprovince which = U03 value = 2841 }
+		command = { type = secedeprovince which = U03 value = 2842 }
+		command = { type = secedeprovince which = U03 value = 2843 }
+		command = { type = secedeprovince which = U03 value = 2844 }
+		command = { type = secedeprovince which = U03 value = 2845 }
+		command = { type = secedeprovince which = U03 value = 2846 }
+		command = { type = secedeprovince which = U03 value = 2847 }
+		command = { type = secedeprovince which = U03 value = 2848 }
+		command = { type = secedeprovince which = U03 value = 2849 }
+		
+        command = { type = secedeprovince which = U03 value = 1170 }
+		command = { type = secedeprovince which = U03 value = 1213 }
+		command = { type = secedeprovince which = U03 value = 1214 }
+		command = { type = secedeprovince which = U03 value = 1215 }
+		command = { type = secedeprovince which = U03 value = 1216 }
+		command = { type = secedeprovince which = U03 value = 1894 }
+		command = { type = secedeprovince which = U03 value = 2850 }
+		command = { type = secedeprovince which = U03 value = 2851 }
+		command = { type = secedeprovince which = U03 value = 2852 }
+		command = { type = secedeprovince which = U03 value = 2853 }
+		command = { type = secedeprovince which = U03 value = 2854 }
+		command = { type = secedeprovince which = U03 value = 2855 }
+		command = { type = secedeprovince which = U03 value = 2856 }
+		command = { type = secedeprovince which = U03 value = 2857 }
+		command = { type = secedeprovince which = U03 value = 2858 }
+		command = { type = secedeprovince which = U03 value = 2859 }
+		command = { type = secedeprovince which = U03 value = 2860 }
+		command = { type = secedeprovince which = U03 value = 2861 }
+		command = { type = secedeprovince which = U03 value = 2862 }
+		command = { type = secedeprovince which = U03 value = 2863 }
+		command = { type = secedeprovince which = U03 value = 2864 }	
+    
+		command = { type = secedeprovince which = csx value = 1207 }
+		command = { type = secedeprovince which = csx value = 1208 }
+		command = { type = secedeprovince which = csx value = 2815 }
+		command = { type = secedeprovince which = csx value = 2816 }
+		command = { type = secedeprovince which = csx value = 2817 }
+		command = { type = secedeprovince which = csx value = 2785 }
+		command = { type = secedeprovince which = csx value = 2813 }
+		command = { type = secedeprovince which = csx value = 2811 }
+		command = { type = secedeprovince which = csx value = 2812 }
+		command = { type = secedeprovince which = csx value = 2814 }
+		command = { type = secedeprovince which = csx value = 1439 }
+		command = { type = secedeprovince which = U03 value = 1267 } 
+}
+}
+
+event = {
+	id =400011
+	random = no
+	country = CHI
+
+       trigger = {  
+			control = { province = 1235 data = -1 }
+		    not = { exists = U11 }
+		    event = 400003
+			flag = CGXjoinTNE
+			}
+
+	name = "戰後勢力分配(桂系) "
+	desc = " "
+	style = 0
+	date = { day = 1 month = january year = 1927 }
+	offset = 10
+	deathdate = { day = 1 month = december year = 1929 }
+	action_a = {
+		name = "新軍閥割據 " 	
+        command = { type = leave_alliance }
+		command = { type = secedeprovince which = cgx value = 1231 } #湖北
+		command = { type = secedeprovince which = cgx value = 1232 }
+		command = { type = secedeprovince which = cgx value = 1253 }
+		command = { type = secedeprovince which = cgx value = 1264 }
+		command = { type = secedeprovince which = cgx value = 1266 }
+		command = { type = secedeprovince which = cgx value = 1886 }
+		command = { type = secedeprovince which = cgx value = 2653 }
+		command = { type = secedeprovince which = cgx value = 2654 }
+		command = { type = secedeprovince which = cgx value = 2655 }
+		command = { type = secedeprovince which = cgx value = 2656 }
+		command = { type = secedeprovince which = cgx value = 2657 }
+		command = { type = secedeprovince which = cgx value = 2658 }
+		command = { type = secedeprovince which = cgx value = 2659 }
+		command = { type = secedeprovince which = cgx value = 2660 }
+		command = { type = secedeprovince which = cgx value = 2661 }
+		command = { type = secedeprovince which = cgx value = 2662 }
+		command = { type = secedeprovince which = cgx value = 2663 }
+		command = { type = secedeprovince which = cgx value = 2664 }
+		command = { type = secedeprovince which = cgx value = 2665 }
+		command = { type = secedeprovince which = cgx value = 2666 }
+		command = { type = secedeprovince which = cgx value = 2667 }
+		command = { type = secedeprovince which = cgx value = 2668 }
+		command = { type = secedeprovince which = cgx value = 2669 }
+
+		command = { type = secedeprovince which = CGX value = 2874 } #冀東
+		command = { type = secedeprovince which = CGX value = 2875 }
+		command = { type = secedeprovince which = CGX value = 2876 }
+		command = { type = secedeprovince which = CGX value = 2673 }
+		command = { type = secedeprovince which = CGX value = 1203 }
+
+		command = { type = trigger which = 400010  }
+ }
+}
+
+event = {
+	id =400010
+	random = no
+	country = CGX
+
+	name = "武漢政治分會 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "新軍閥割據 " 	
+#	    command = { type = end_access which = CHI }
+        command = { type = leave_alliance }
+		command = { type = supplies value = 5000 where = 1203 }
+		
+		command = { type = secedeprovince which = cgx value = 1231 }
+		command = { type = secedeprovince which = cgx value = 1232 }
+		command = { type = secedeprovince which = cgx value = 1253 }
+		command = { type = secedeprovince which = cgx value = 1264 }
+		command = { type = secedeprovince which = cgx value = 1266 }
+		command = { type = secedeprovince which = cgx value = 1886 }
+		command = { type = secedeprovince which = cgx value = 2653 }
+		command = { type = secedeprovince which = cgx value = 2654 }
+		command = { type = secedeprovince which = cgx value = 2655 }
+		command = { type = secedeprovince which = cgx value = 2656 }
+		command = { type = secedeprovince which = cgx value = 2657 }
+		command = { type = secedeprovince which = cgx value = 2658 }
+		command = { type = secedeprovince which = cgx value = 2659 }
+		command = { type = secedeprovince which = cgx value = 2660 }
+		command = { type = secedeprovince which = cgx value = 2661 }
+		command = { type = secedeprovince which = cgx value = 2662 }
+		command = { type = secedeprovince which = cgx value = 2663 }
+		command = { type = secedeprovince which = cgx value = 2664 }
+		command = { type = secedeprovince which = cgx value = 2665 }
+		command = { type = secedeprovince which = cgx value = 2666 }
+		command = { type = secedeprovince which = cgx value = 2667 }
+		command = { type = secedeprovince which = cgx value = 2668 }
+		command = { type = secedeprovince which = cgx value = 2669 }
+
+		command = { type = secedeprovince which = CSX value = 1204 }
+		command = { type = secedeprovince which = CSX value = 1205 }
+		command = { type = secedeprovince which = CSX value = 1210 }
+		command = { type = secedeprovince which = CSX value = 1211 }
+		command = { type = secedeprovince which = CSX value = 1212 }
+		command = { type = secedeprovince which = CSX value = 1810 }
+		command = { type = secedeprovince which = CSX value = 1811 }
+		command = { type = secedeprovince which = CSX value = 2748 }
+		command = { type = secedeprovince which = CSX value = 2793 }
+		command = { type = secedeprovince which = CSX value = 2865 }
+		command = { type = secedeprovince which = CSX value = 2866 }
+		command = { type = secedeprovince which = CSX value = 2867 }
+		command = { type = secedeprovince which = CSX value = 2868 }
+		command = { type = secedeprovince which = CSX value = 2869 }
+		command = { type = secedeprovince which = CSX value = 2870 }
+		command = { type = secedeprovince which = CSX value = 2871 }
+		command = { type = secedeprovince which = CSX value = 2872 }
+		command = { type = secedeprovince which = CSX value = 2873 }
+		command = { type = secedeprovince which = CSX value = 2992 }
+		command = { type = secedeprovince which = CSX value = 2993 }
+		command = { type = secedeprovince which = CSX value = 2994 }
+		command = { type = secedeprovince which = CGX value = 2874 }
+		command = { type = secedeprovince which = CGX value = 2875 }
+		command = { type = secedeprovince which = CGX value = 2876 }
+		command = { type = secedeprovince which = CGX value = 2673 }
+		command = { type = secedeprovince which = CGX value = 1203 }
+
+		command = { type = secedeprovince which = CSX value = 1206 }
+		command = { type = secedeprovince which = CSX value = 1386 }
+		command = { type = secedeprovince which = CSX value = 1398 }
+		command = { type = secedeprovince which = CSX value = 1595 }
+		command = { type = secedeprovince which = CSX value = 2881 }
+		command = { type = secedeprovince which = CSX value = 2939 }
+		command = { type = secedeprovince which = CSX value = 2940 }
+		command = { type = secedeprovince which = CSX value = 2941 }
+		command = { type = secedeprovince which = CSX value = 2942 }
+		command = { type = secedeprovince which = CSX value = 2943 }
+		command = { type = secedeprovince which = CSX value = 2944 }
+		command = { type = secedeprovince which = CSX value = 2947 }
+
+		command = { type = secedeprovince which = U03 value = 1223 }
+		command = { type = secedeprovince which = U03 value = 1224 }
+		command = { type = secedeprovince which = U03 value = 1227 }
+		command = { type = secedeprovince which = U03 value = 1228 }
+		command = { type = secedeprovince which = U03 value = 1229 }
+		command = { type = secedeprovince which = U03 value = 1230 }
+		command = { type = secedeprovince which = U03 value = 1876 }
+		command = { type = secedeprovince which = U03 value = 2838 }
+		command = { type = secedeprovince which = U03 value = 2839 }
+		command = { type = secedeprovince which = U03 value = 2840 }
+		command = { type = secedeprovince which = U03 value = 2841 }
+		command = { type = secedeprovince which = U03 value = 2842 }
+		command = { type = secedeprovince which = U03 value = 2843 }
+		command = { type = secedeprovince which = U03 value = 2844 }
+		command = { type = secedeprovince which = U03 value = 2845 }
+		command = { type = secedeprovince which = U03 value = 2846 }
+		command = { type = secedeprovince which = U03 value = 2847 }
+		command = { type = secedeprovince which = U03 value = 2848 }
+		command = { type = secedeprovince which = U03 value = 2849 }
+		
+        command = { type = secedeprovince which = U03 value = 1170 }
+		command = { type = secedeprovince which = U03 value = 1213 }
+		command = { type = secedeprovince which = U03 value = 1214 }
+		command = { type = secedeprovince which = U03 value = 1215 }
+		command = { type = secedeprovince which = U03 value = 1216 }
+		command = { type = secedeprovince which = U03 value = 1894 }
+		command = { type = secedeprovince which = U03 value = 2850 }
+		command = { type = secedeprovince which = U03 value = 2851 }
+		command = { type = secedeprovince which = U03 value = 2852 }
+		command = { type = secedeprovince which = U03 value = 2853 }
+		command = { type = secedeprovince which = U03 value = 2854 }
+		command = { type = secedeprovince which = U03 value = 2855 }
+		command = { type = secedeprovince which = U03 value = 2856 }
+		command = { type = secedeprovince which = U03 value = 2857 }
+		command = { type = secedeprovince which = U03 value = 2858 }
+		command = { type = secedeprovince which = U03 value = 2859 }
+		command = { type = secedeprovince which = U03 value = 2860 }
+		command = { type = secedeprovince which = U03 value = 2861 }
+		command = { type = secedeprovince which = U03 value = 2862 }
+		command = { type = secedeprovince which = U03 value = 2863 }
+		command = { type = secedeprovince which = U03 value = 2864 }
+
+		command = { type = secedeprovince which = csx value = 1207 }
+		command = { type = secedeprovince which = csx value = 1208 }
+		command = { type = secedeprovince which = csx value = 2815 }
+		command = { type = secedeprovince which = csx value = 2816 }
+		command = { type = secedeprovince which = csx value = 2817 }
+		command = { type = secedeprovince which = csx value = 2785 }
+		command = { type = secedeprovince which = csx value = 2813 }
+		command = { type = secedeprovince which = csx value = 2811 }
+		command = { type = secedeprovince which = csx value = 2812 }
+		command = { type = secedeprovince which = csx value = 2814 }
+		command = { type = secedeprovince which = csx value = 1439 }
+
+		command = { type = secedeprovince which = U03 value = 1267 }
+		command = { type = trigger which = 400010 value = 1 }
+#		command = { type = trigger which = 9999933 }
+
+	    command = { type = add_corps which = "國民革命軍第35軍" value = land where = 1203 }
+        command = { type = add_division which = "第35軍第一師 " value = infantry when = 15  }
+        command = { type = add_division which = "第35軍第二師 " value = infantry when = 15  }
+        command = { type = add_division which = "第35軍第三師 " value = infantry when = 15  } 
+        command = { type = add_corps which = "國民革命軍第36軍" value = land where = 1203 }
+        command = { type = add_division which = "第36軍第一師 " value = infantry when = 15 }
+        command = { type = add_division which = "第36軍第二師 " value = infantry when = 15  }
+        command = { type = add_division which = "第36軍第三師 " value = infantry when = 15  } 
+	}
+}
+
+###################
+#奉系事件
+###################
+##########################
+#1928年       400200~
+##########################
+event = {
+	id =400200
+	random = no
+	country = U02
+
+	trigger = { 
+		event = 200005
+		exists = CHI
+		or = { 	
+			and = { control = { province = 1210 data = -2 } 
+                    control = { province = 1211 data = -2 }
+				 } 
+			control = { province = 1204 data = -2 }
+			control = { province = 1205 data = -2 }
+            areacontrol = { province = 1389 data = -2 }
+            areacontrol = { province = 1390 data = -2 }
+            areacontrol = { province = 1379 data = -2 }
+			}
+		  }
+                           
+
+	name = "張作霖撤離北京 "
+	desc = "1928年6月3日，張作霖撤離北京，乘火車退往瀋陽。 安國軍政府瓦解。 "
+	style = 0
+
+  date = { day = 2 month = may year = 1927 }
+  offset = 5
+  deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "安國軍政府瓦解 " 
+			command = { type = dissent value = 10 }
+			command = { type = trigger which = 400400 value = 1 }
+			command = { type = trigger which = 400205 value = 5 }
+			command = { type = trigger which = 400001 value = 5 }
+            command = { type = end_mastery which = U13 }
+            command = { type = end_mastery which = U11 }
+         	command = { type = non_aggression which = chi where = U02 }
+			command = { type = morale which = land value = -3 }
+            command = { type = max_organization which = land value = -3 } 
+	        command = { type = peace which = CHI value = 0 } 
+	        command = { type = access which = CHI } 	
+            command = { type = leave_alliance }
+    		command = { type =  remove_division which = 22320 value = 58 }
+    		command = { type =  remove_division which = 22320 value = 59 }
+    		command = { type =  remove_division which = 22320 value = 60 }
+    		command = { type =  remove_division which = 22320 value = 61 }
+    		command = { type =  remove_division which = 22320 value = 62 }
+    		command = { type =  remove_division which = 22320 value = 63 }
+    		command = { type =  remove_division which = 22320 value = 64 }
+    		command = { type =  remove_division which = 22320 value = 65 }
+    		command = { type =  remove_division which = 22320 value = 66 }
+    		command = { type =  remove_division which = 22320 value = 67 }
+			command = { type =  remove_division which = 22320 value = 83 }
+			command = { type =  remove_division which = 22320 value = 84 }
+			command = { type =  remove_division which = 22320 value = 85 }
+			command = { type =  remove_division which = 22320 value = 86 }
+			command = { type =  remove_division which = 22320 value = 87 }
+			command = { type =  remove_division which = 22320 value = 88 }
+			command = { type =  remove_division which = 22320 value = 89 }
+			command = { type =  remove_division which = 22320 value = 90 }
+			}
+}
+
+event = {
+	id =400205
+	random = no
+	country = U02
+
+
+
+	name = "謀求和平 "
+	desc = "1928年6月3日，張作霖撤離北京，乘火車退往瀋陽。 安國軍政府瓦解。6月4日凌晨，張作霖在皇姑屯事件中被炸死。 "
+	style = 0
+
+	action_a = {
+		name = "議和 " 	 
+		command = { type = trigger which = 400406  }
+        command = { type = end_access which = CHI }
+		command = { type = secedeprovince which = CHI value = 1204 }
+		command = { type = secedeprovince which = CHI value = 1205 }
+		command = { type = secedeprovince which = CHI value = 1210 }
+		command = { type = secedeprovince which = CHI value = 1211 }
+		command = { type = secedeprovince which = CHI value = 1212 }
+		command = { type = secedeprovince which = CHI value = 1810 }
+		command = { type = secedeprovince which = CHI value = 1811 }
+		command = { type = secedeprovince which = CHI value = 2748 }
+		command = { type = secedeprovince which = CHI value = 2793 }
+		command = { type = secedeprovince which = CHI value = 2865 }
+		command = { type = secedeprovince which = CHI value = 2866 }
+		command = { type = secedeprovince which = CHI value = 2867 }
+		command = { type = secedeprovince which = CHI value = 2868 }
+		command = { type = secedeprovince which = CHI value = 2869 }
+		command = { type = secedeprovince which = CHI value = 2870 }
+		command = { type = secedeprovince which = CHI value = 2871 }
+		command = { type = secedeprovince which = CHI value = 2872 }
+		command = { type = secedeprovince which = CHI value = 2873 }
+		command = { type = secedeprovince which = CHI value = 2992 }
+		command = { type = secedeprovince which = CHI value = 2993 }
+		command = { type = secedeprovince which = CHI value = 2994 }
+		command = { type = secedeprovince which = U11 value = 2874 }
+		command = { type = secedeprovince which = U11 value = 2875 }
+		command = { type = secedeprovince which = U11 value = 2876 }
+		command = { type = secedeprovince which = U11 value = 2673 }
+		command = { type = secedeprovince which = U11 value = 1203 }
+
+		command = { type = secedeprovince which = CHI value = 1206 }
+		command = { type = secedeprovince which = CHI value = 1386 }
+		command = { type = secedeprovince which = CHI value = 1398 }
+		command = { type = secedeprovince which = CHI value = 1595 }
+		command = { type = secedeprovince which = CHI value = 2881 }
+		command = { type = secedeprovince which = CHI value = 2939 }
+		command = { type = secedeprovince which = CHI value = 2940 }
+		command = { type = secedeprovince which = CHI value = 2941 }
+		command = { type = secedeprovince which = CHI value = 2942 }
+		command = { type = secedeprovince which = CHI value = 2943 }
+		command = { type = secedeprovince which = CHI value = 2944 }
+		command = { type = secedeprovince which = CHI value = 2947 }
+
+		command = { type = secedeprovince which = CHI value = 2634 } #安徽
+		command = { type = secedeprovince which = CHI value = 1221 }
+		command = { type = secedeprovince which = CHI value = 1222 }
+		command = { type = secedeprovince which = CHI value = 1233 }
+		command = { type = secedeprovince which = CHI value = 1234 }
+		command = { type = secedeprovince which = CHI value = 1875 }
+		command = { type = secedeprovince which = CHI value = 1884 }
+		command = { type = secedeprovince which = CHI value = 1885 }
+		command = { type = secedeprovince which = CHI value = 2614 }
+		command = { type = secedeprovince which = CHI value = 2615 }
+		command = { type = secedeprovince which = CHI value = 2616 }
+		command = { type = secedeprovince which = CHI value = 2633 }
+		command = { type = secedeprovince which = CHI value = 2634 ]
+		command = { type = secedeprovince which = CHI value = 2644 }
+		command = { type = secedeprovince which = CHI value = 2645 }
+		command = { type = secedeprovince which = CHI value = 2646 }
+		command = { type = secedeprovince which = CHI value = 2647 }
+		command = { type = secedeprovince which = CHI value = 2648 }
+		command = { type = secedeprovince which = CHI value = 2649 }
+		command = { type = secedeprovince which = CHI value = 2650 }
+		command = { type = secedeprovince which = CHI value = 2652 }
+			
+		command = { type = secedeprovince which = CHI value = 1217 } #江苏
+		command = { type = secedeprovince which = CHI value = 1218 }
+		command = { type = secedeprovince which = CHI value = 1219 }
+		command = { type = secedeprovince which = CHI value = 1220 }
+		command = { type = secedeprovince which = CHI value = 1235 }
+		command = { type = secedeprovince which = CHI value = 1236 }
+		command = { type = secedeprovince which = CHI value = 1237 }
+		command = { type = secedeprovince which = CHI value = 2607 }
+	    command = { type = secedeprovince which = CHI value = 2608 }
+		command = { type = secedeprovince which = CHI value = 2609 }
+		command = { type = secedeprovince which = CHI value = 2610 }
+		command = { type = secedeprovince which = CHI value = 2611 }
+		command = { type = secedeprovince which = CHI value = 2612 }
+		command = { type = secedeprovince which = CHI value = 2613 }
+		command = { type = secedeprovince which = CHI value = 2617 }
+		command = { type = secedeprovince which = CHI value = 2618 }
+		command = { type = secedeprovince which = CHI value = 2619 }
+		command = { type = secedeprovince which = CHI value = 2620 }
+		command = { type = secedeprovince which = CHI value = 2621 }
+		command = { type = secedeprovince which = CHI value = 2625 }
+		command = { type = secedeprovince which = CHI value = 2626 }
+		command = { type = secedeprovince which = CHI value = 2627 }
+		command = { type = secedeprovince which = CHI value = 2628 }
+		command = { type = secedeprovince which = CHI value = 2629 }
+		command = { type = secedeprovince which = CHI value = 2622 }
+		command = { type = secedeprovince which = CHI value = 2623 }
+		command = { type = secedeprovince which = CHI value = 2630 }
+		command = { type = secedeprovince which = CHI value = 2795 }
+		
+		command = { type = secedeprovince which = CHI value = 1238 } # 浙江
+		command = { type = secedeprovince which = CHI value = 1239 }
+		command = { type = secedeprovince which = CHI value = 1240 }
+		command = { type = secedeprovince which = CHI value = 1241 }
+		command = { type = secedeprovince which = CHI value = 2631 }
+		command = { type = secedeprovince which = CHI value = 2632 }
+		command = { type = secedeprovince which = CHI value = 2635 }
+		command = { type = secedeprovince which = CHI value = 2636 }
+		command = { type = secedeprovince which = CHI value = 2637 }
+		command = { type = secedeprovince which = CHI value = 2638 }
+		command = { type = secedeprovince which = CHI value = 2639 }
+		command = { type = secedeprovince which = CHI value = 2640 }
+		command = { type = secedeprovince which = CHI value = 2641 }
+		command = { type = secedeprovince which = CHI value = 2642 }
+		command = { type = secedeprovince which = CHI value = 2643 }
+		command = { type = secedeprovince which = CHI value = 2996 }
+
+		command = { type = secedeprovince which = CHI value = 1223 }
+		command = { type = secedeprovince which = CHI value = 1224 }
+		command = { type = secedeprovince which = CHI value = 1227 }
+		command = { type = secedeprovince which = CHI value = 1228 }
+		command = { type = secedeprovince which = CHI value = 1229 }
+		command = { type = secedeprovince which = CHI value = 1230 }
+		command = { type = secedeprovince which = CHI value = 1876 }
+		command = { type = secedeprovince which = CHI value = 2838 }
+		command = { type = secedeprovince which = CHI value = 2839 }
+		command = { type = secedeprovince which = CHI value = 2840 }
+		command = { type = secedeprovince which = CHI value = 2841 }
+		command = { type = secedeprovince which = CHI value = 2842 }
+		command = { type = secedeprovince which = CHI value = 2843 }
+		command = { type = secedeprovince which = CHI value = 2844 }
+		command = { type = secedeprovince which = CHI value = 2845 }
+		command = { type = secedeprovince which = CHI value = 2846 }
+		command = { type = secedeprovince which = CHI value = 2847 }
+		command = { type = secedeprovince which = CHI value = 2848 }
+		command = { type = secedeprovince which = CHI value = 2849 }
+		
+        command = { type = secedeprovince which = chi value = 1251 }
+		command = { type = secedeprovince which = chi value = 2693 }
+		command = { type = secedeprovince which = chi value = 2694 }
+		command = { type = secedeprovince which = chi value = 2695 }
+		command = { type = secedeprovince which = chi value = 1242 }
+		command = { type = secedeprovince which = chi value = 2696 }
+		command = { type = secedeprovince which = chi value = 2691 }
+		command = { type = secedeprovince which = chi value = 2697 }
+		command = { type = secedeprovince which = chi value = 2692 }
+		command = { type = secedeprovince which = chi value = 2698 }
+		command = { type = secedeprovince which = chi value = 2699 }
+		command = { type = secedeprovince which = chi value = 1252 }
+		command = { type = secedeprovince which = chi value = 2688 }
+		command = { type = secedeprovince which = chi value = 2690 }
+		command = { type = secedeprovince which = chi value = 2689 }
+		command = { type = secedeprovince which = chi value = 1254 }
+		command = { type = secedeprovince which = chi value = 2686 }
+		command = { type = secedeprovince which = chi value = 2687 }
+		command = { type = secedeprovince which = chi value = 1250 }
+		command = { type = secedeprovince which = chi value = 2700 }  
+
+		command = { type = secedeprovince which = chi value = 2781 }
+		command = { type = secedeprovince which = chi value = 1267 }		
+	}
+}
+###############################################################
+event = {
+	id =400400
+	random = no
+	country = JAP
+
+	name = "皇姑屯事件 "
+	desc = "1928年6月4日5點30分，張作霖乘坐的專列經過京奉、南滿鐵路交叉處的皇姑屯車站三孔橋時，火車被預埋的炸藥炸毀，張作霖被炸成重傷，送回瀋陽後，於當日死去。案發皇姑屯站以東，史稱皇姑屯事件。"
+	style = 0
+
+	action_a = {
+		name = "炸唄！ " 
+		command = { type = dissent value = 2 }
+		command = { type = trigger which = 400201 }
+		command = { type = domestic which = interventionism value = 1 }		}
+}
+
+event = {
+	id =400201
+	random = no
+	country = U02
+
+	
+
+	name = "皇姑屯事件 "
+	desc = "1928年6月4日5點30分，張作霖乘坐的專列經過京奉、南滿鐵路交叉處的皇姑屯車站三孔橋時，火車被預埋的炸藥炸毀，張作霖被炸成重傷，送回瀋陽後，於當日死去。案發皇姑屯站以東，史稱皇姑屯事件。"
+	style = 0
+
+
+	action_a = {
+		name = "可惡的日本人 " 
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 400202 value = 1 }
+                  command = { type = sleepminister which = 1500 }
+                  command = { type = sleepminister which = 1502 }
+                  command = { type = sleepminister which = 1507 }
+                  command = { type = sleepleader which = 16000 }
+                  command = { type = set_relation which = JAP value = -150 }
+		}
+}
+
+event = {
+	id =400202
+	random = no
+	country = U02
+
+	
+	name = "張學良主政 "
+	desc = "1928年6月，張作霖在皇姑屯事件被暗殺後，其子張學良 立返瀋陽，受到張作相等宿將擁護，繼任東三省保安司令 兼奉天保安司令，成為東北政治、軍事和社會集團 主帥，主掌東北兵權。"
+	style = 0
+
+
+	action_a = {
+		name = "少帥萬歲! " 
+		command = { type = dissent value = -5 }
+                command = { type = headofstate which = 1510 }
+                command = { type = headofgovernment which = 1501 }
+                command = { type = chiefofarmy which = 1514 }
+                command = { type = chiefofarmy which = 1517 }                
+ 		}
+}
+###############################################################
+event = {
+  id = 400203
+  random = no
+  country = u02
+  trigger = { event = 400001           
+               }
+  
+  name = "湯玉麟宣布易幟。 "
+  desc = "1928年7月19日，熱河都統湯玉麟宣布易幟。 "
+  style = 0
+  date = { day = 18 month = july year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = july year = 1929 }
+  action_a = {
+     name = "易幟 "
+     command = { type = dissent value = -1 }
+     }
+}
+
+event = {
+  id = 400204
+  random = no
+  country = u02
+  trigger = { event = 400001
+              event = 400202
+              event = 400203
+               }
+  
+  name = "東北易幟 "
+  desc = "1928年12月29日，奉系張學良改五色旗為青天白日滿地紅旗 ，東四省易幟，通電服從南京國民政府領導。全國統 一宣告完成。兩日後，依照先前談判條件，國民政府命張學 良為東北軍政領袖。 "
+  style = 0
+  date = { day = 28 month = december year = 1928 }
+  offset = 1
+  deathdate = { day = 1 month = july year = 1929 }
+  action_a = {
+     name = "易幟 "
+     command = { type = dissent value = -10 }
+     command = { type = trigger which = 400002  }
+	 command = { type = set_relation which = CHI value = 100 }
+     command = { type = non_aggression which = chi where = U02 }
+     }
+}
+
+
+
+###################
+#日本事件
+###################
+##########################
+#1928年       400400~
+##########################
+
+event = {
+        id = 400402
+        random = no
+        country = U11
+  	
+	trigger = { lost_national = { country = U11 value = 5 }
+		   	war = { country = U11 country = CHI } }    
+                      
+        name = "求援於日本"
+        desc = "1928年4月，北伐軍逼近濟南。日本借口護僑派兵占領了膠濟路， 并進駐青島、濟南、煙臺等山東重城。"
+        style = 0
+  	picture = "japintervene"
+	date = { day = 1 month = april year = 1926 }
+  	offset = 2
+ 	deathdate = { day = 1 month = december year = 1930 }
+           action_a = {
+                  name = "求援"
+             command = { type = trigger which = 400403}
+		command = { type = secedeprovince which = JAP value = 1215 }
+		command = { type = secedeprovince which = JAP value = 2863 }
+		command = { type = secedeprovince which = JAP value = 2859 }  
+}
+}
+
+event = {
+         id = 400403
+         random = no
+         country = JAP
+                      
+        name = "派兵護橋"
+        desc = "1928年4月，北伐軍逼近濟南。日本借口護僑派兵占領了膠濟路， 并進駐青島、濟南、煙臺等山東重城。"
+        style = 0
+		picture = "japintervene"
+		
+           action_a = {
+                name = "出兵"
+				command = { type = add_corps which = "第六熊本甲种师团'明' " value = land where = 1215 }
+                command = { type = add_division which = "第11步兵旅团 " value = infantry when = 15 where = artillery }
+                command = { type = add_division which = "第36步兵旅团  " value = infantry when = 15 where = artillery }
+}
+}
+
+event = {
+         id = 400404
+         random = no
+         country = U11
+                      
+         name = "敗逃灤州"
+         desc = "1928年4月，國民革命軍所向克捷，連續攻克郯城、台兒莊、 鄆城、韓莊、臨城、棗莊。第三軍團在魚臺失利，蔣電令各軍赴援。 張宗昌下總退卻令，惟孫傳芳糾集餘部，尚圖頑抗。 是月下旬，屢次攻克巨野、嘉祥，經西關攻克濟寧、滕縣、 界河、魚臺、汶上、鄒縣、大名。連續攻克寧陽、 兗州、曲阜、金鄉。連續攻克萊蕪、平陰、泰安、肥城。 張宗昌部敗退灤州"
+         style = 0
+
+           action_a = {
+                  name = "退卻"
+		command = { type = dissent value = 5 }
+		command = { type = delete_unit which = -1 when = 50 }
+		command = { type = max_organization which = land value = -5 }
+		command = { type = morale which = land value = -5 }
+        command = { type = secedeprovince which = CHI value = 1170 }
+		command = { type = secedeprovince which = CHI value = 1213 }
+		command = { type = secedeprovince which = CHI value = 1214 }
+		command = { type = secedeprovince which = CHI value = 1215 }
+		command = { type = secedeprovince which = CHI value = 1216 }
+		command = { type = secedeprovince which = CHI value = 1894 }
+		command = { type = secedeprovince which = CHI value = 2850 }
+		command = { type = secedeprovince which = CHI value = 2851 }
+		command = { type = secedeprovince which = CHI value = 2852 }
+		command = { type = secedeprovince which = CHI value = 2853 }
+		command = { type = secedeprovince which = CHI value = 2854 }
+		command = { type = secedeprovince which = CHI value = 2855 }
+		command = { type = secedeprovince which = CHI value = 2856 }
+		command = { type = secedeprovince which = CHI value = 2857 }
+		command = { type = secedeprovince which = CHI value = 2858 }
+		command = { type = secedeprovince which = CHI value = 2859 }
+		command = { type = secedeprovince which = CHI value = 2860 }
+		command = { type = secedeprovince which = CHI value = 2861 }
+		command = { type = secedeprovince which = CHI value = 2862 }
+		command = { type = secedeprovince which = CHI value = 2863 }
+		command = { type = secedeprovince which = CHI value = 2864 }
+}
+}
+
+event = {
+	id =400405
+	random = no
+	country = U02
+
+  trigger = {   event = 400402
+		 lost_vp = { country = U11 value = 50 } }
+
+	name = "張宗昌敗逃灤州 "
+	desc = "1928年4月，國民革命軍所向克捷，連續攻克郯城、台兒莊、 鄆城、韓莊、臨城、棗莊。第三軍團在魚臺失利，蔣電令各軍赴援。 張宗昌下總退卻令，惟孫傳芳糾集餘部，尚圖頑抗。 是月下旬，屢次攻克巨野、嘉祥，經西關攻克濟寧、滕縣、 界河、魚臺、汶上、鄒縣、大名。連續攻克寧陽、 兗州、曲阜、金鄉。連續攻克萊蕪、平陰、泰安、肥城。 張宗昌部敗退灤州 "
+	style = 0
+  date = { day = 1 month = april year = 1926 }
+  offset = 2
+  deathdate = { day = 1 month = december year = 1930 }
+	action_a = {
+		name = " " 	 
+		command = { type = morale which = land value = -3 }
+		command = { type = secedeprovince which = U11 value = 2874 }
+		command = { type = secedeprovince which = U11 value = 2875 }
+		command = { type = secedeprovince which = U11 value = 2876 }
+		command = { type = secedeprovince which = U11 value = 2673 }
+		command = { type = secedeprovince which = U11 value = 1203 }
+                command = { type = trigger which = 400404 }	}
+}
+
+event = {
+         id = 400406
+         random = no
+         country = U11
+                      
+         name = "謀求和平"
+         desc = " "
+         style = 0
+
+           action_a = {
+                  name = ""
+		command = { type = delete_unit which = -1 when = 50 }
+        command = { type = secedeprovince which = CHI value = 1170 }
+		command = { type = secedeprovince which = CHI value = 1213 }
+		command = { type = secedeprovince which = CHI value = 1214 }
+		command = { type = secedeprovince which = CHI value = 1215 }
+		command = { type = secedeprovince which = CHI value = 1216 }
+		command = { type = secedeprovince which = CHI value = 1894 }
+		command = { type = secedeprovince which = CHI value = 2850 }
+		command = { type = secedeprovince which = CHI value = 2851 }
+		command = { type = secedeprovince which = CHI value = 2852 }
+		command = { type = secedeprovince which = CHI value = 2853 }
+		command = { type = secedeprovince which = CHI value = 2854 }
+		command = { type = secedeprovince which = CHI value = 2855 }
+		command = { type = secedeprovince which = CHI value = 2856 }
+		command = { type = secedeprovince which = CHI value = 2857 }
+		command = { type = secedeprovince which = CHI value = 2858 }
+		command = { type = secedeprovince which = CHI value = 2859 }
+		command = { type = secedeprovince which = CHI value = 2860 }
+		command = { type = secedeprovince which = CHI value = 2861 }
+		command = { type = secedeprovince which = CHI value = 2862 }
+		command = { type = secedeprovince which = CHI value = 2863 }
+		command = { type = secedeprovince which = CHI value = 2864 }
+		}
+}
+
+event = {
+      	id = 400410
+       	random = no
+        country = CGX
+		trigger = {   
+			event = 400003 
+			exists = U11
+		}                      
+        name = "灤河會戰"
+        desc = " "
+        style = 0
+
+  	date = { day = 5 month = march year = 1928 }
+  	offset = 15
+  	deathdate = { day = 1 month = december year = 1930 }
+
+       	action_a = {
+                name = "肅清關內敵人 "
+                command = { type = war which = U11 }
+}
+}
+#################################################
+#
+################################################# 
+event = {
+	id = 1928001
+	random = no
+	country = CHI
+  	
+	trigger = { event = 400003
+		event = 1928007  }
+
+	name = "實施訓政"
+	desc = "1928年10月4日，國民黨中央頒布了第172次黨務會議通過的《訓政綱領》， 此後，國民政府即依據「訓政綱要」實施訓政，並草擬訓政時期約法。"
+	style = 0
+
+	date = { day = 3 month = october year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "以黨治國 "   
+		command = { type = dissent value = -1 }		
+		command = { type = set_domestic which = democratic value = 4 } 
+    }
+} 
+event = {
+	id = 1928002
+	random = no
+	country = CHI
+  	
+	trigger = {   }
+
+	name = "首都計畫"
+	desc = "《首都計畫》是1928年發布旨在對南京市進行現代化改造的都市計畫文件。 1928年11月1日，南京國都設計技術專員辦事處成立。計畫將首都劃為6個區域。 中央政治區位於中山門外紫金山南麓。市級行政區在傅厚崗地區。  工業區在長江兩岸及下關的港口區。主幹道兩側地區和新街口、明故宮附近為商業區。文教區在鼓樓及五台山一帶。 住宅區分3個等級，居住了2／3人口的城南明清風格的老區被完整保留， 在城北山西路一帶又另設高級住宅區。 "
+	style = 0
+
+	date = { day = 0 month = november year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "訓政肇端，首重建設，矧在首都，四方是則 " 
+		command = { type = dissent value = -1 }   
+    	command = { type = construct which = infrastructure where = 1235 value = 10 }
+    }
+} 
+
+#中華民國中央銀行成立 
+event = {
+	id = 1928003
+	random = no
+	country = CHI
+  	
+	trigger = { money = 2500  }
+
+	name = "中華民國中央銀行成立"
+	desc = "1928年10月6日國民革命軍北伐進入尾聲時，國民政府公布《中央銀行條例》， 明定中央銀行為國家銀行。10月8日，國民政府修訂《中央銀行條例》為20條，由國民政府撥款2,000萬元。 10月26日，中國銀行轉為政府特許國際匯兌銀行。11月1日，中央銀行正式成立， 總部設於上海外灘15號原上海華俄道勝銀行大樓。"
+	style = 0
+
+	date = { day = 0 month = november year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "整頓財政 " 
+		command = { type = dissent value = -1 }   
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = gain_tech which = 4120 }
+		command = { type = gain_tech which = 4130 }
+		command = { type = gain_tech which = 4150 }
+		command = { type = gain_tech which = 4170 }
+		command = { type = gain_tech which = 4190 }
+	    command = { type = money value = -2000 }
+    }
+} 
+
+event = {
+	id = 1928004
+	random = no
+	country = CHI
+  	
+	trigger = { money = 500
+				supplies = 500  }
+
+	name = "中央研究院成立"
+	desc = "1928年4月10日，頒布《修正國立中央研究院組織條例》，中央研究院改為不屬於大學院的獨立機關。4月23日，國民政府特任蔡元培為中央研究院院長。5月，啟用印信。6月9日，中央研究院第一次院務會議在上海東亞酒樓舉行，宣告中央研究院正式成立[1]。"
+	style = 0
+
+	date = { day = 8 month = june year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "中國科研的新章幅 "    
+		command = {type = dissent value = -1 }
+		command = {type = research_mod value = 10 }
+	    command = { type = money value = -300 }
+	    command = { type = supplies value = -500 }
+    }
+} 
+event = {
+	id = 1928005
+	random = no
+	country = CHC
+	trigger = {   }
+	
+
+	name = "中國共產黨第六次全國代表大會"
+	desc = "1928年6月18日，中國共產黨第六次全國代表大會在蘇聯的莫斯科開幕，由向忠發主持，布哈林代表共產國際作了名為《中國革命與中國共產黨的任務》的報告，瞿秋白代表中國共產黨第五屆中央委員會作了《中國革命與共產黨》的政治報告，周恩來作了組織報告和軍事報告，李立三作了農民問題報告，向忠發作了職工運動報告。中共六大通過了關於政治、軍事、組織、蘇維埃政權、農民、土地、職工、宣傳、民族、婦女、青年團等問題的決議和經過修改的《中國共產黨黨章》。"
+	style = 0
+	date = { day = 17 month = june year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "召開 " 
+		command = {  }
+	}
+}
+
+event = {
+	id = 1928006
+	random = no
+	country = CHI
+	trigger = {   }
+	
+
+	name = "中國國民黨第二屆四中全會 "
+	desc = "1928年2月2日至7日，二屆四中全會在南京召開，會議通過了改組國 民政府、《整理各地黨務案》、《制止共產黨陰謀案》等決議等議案， 並恢復主席制，由常務委員中推定。會中選舉譚延闓為國民政府主席。全會組成了以蔣介石為主席的軍委會、 任組織部長的中央黨部。該屆全會排斥了汪精衛派系。 為抵制二屆四中全會，汪精衛派建立了「改組派」。"
+	style = 0
+	date = { day = 1 month = february year = 1928 }
+	offset = 3
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "召開 " 
+		command = { type = dissent value = 5 }
+		command = { type = domestic which = democratic value = -1 }
+#		command = { type = domestic which = political_left value = -1 }	
+        command = { type = headofstate which = 30 } 
+        command = { type = headofgovernment which = 55 }               
+        command = { type = chiefofstaff which = 24 }
+	}
+}
+
+event = {
+	id = 1928007
+	random = no
+	country = CHI
+	trigger = {  event = 1928006  }
+	
+
+	name = "中國國民黨第二屆五中全會 "
+	desc = "1928年8月8日至15日，在南京召開二屆五中全會，通過《政治問題決議案》和《整理軍事案》， 任命蔣介石為國民政府主席。通過《依照總理主張訓政時期頒布約法決議案》。"
+	style = 0
+	date = { day = 7 month = august year = 1928 }
+	offset = 2
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "召開 " 
+        command = { type = headofstate which = 29 } 
+        command = { type = headofgovernment which = 26 }               
+        command = { type = chiefofstaff which = 24 }
+		}
+}
+
+event = {
+	id = 1928008
+	random = no
+	country = CHI
+	trigger = { event = 1928007  }
+	
+
+	name = "《中華民國國民政府組織法》 "
+	desc = "1928年10月，國民政府公布《中華民國國民政府組織法》，規定國民政府總攬中華民國之治權， 政府由行政院、立法院、司法院、考試院、監察院五院組織成立。國民政府設主席一人，委員十至十二人。 國民政府主席兼任陸海空軍總司令。同時，任命蔣中正為國民政府主席兼陸海空軍總司令。至此， 國民政府的政權組織形式漸趨完備。"
+	style = 0
+	date = { day = 1 month = october year = 1928 }
+	offset = 2
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "公布 " 
+        command = { type = headofstate which = 29 } 
+        command = { type = headofgovernment which = 26 } 
+        command = { type = foreignminister which = 28 }              
+        command = { type = chiefofarmy which = 25 }
+		}
+}
+
+event = {
+	id = 1928009
+	random = no
+	country = JAP
+	trigger = { control = { province = 2990 data = -1 }  }
+	
+
+	name = "台中不敬事件 "
+	desc = "1928年5月，以大日本帝國陸軍檢閱使身分來 臺灣訪問的久邇宮邦彥王巡視臺中州時， 在臺中州立圖書館（現在合作金庫銀行臺中分行） 前的行道樹下，被在台朝鮮人趙明河以短刀行刺， 事敗，趙旋即被捕。台灣總督府高等法院上告部於 同年7月18日按《日本刑法》第75條（對皇族危害罪）殺人未 遂判處趙死刑。"
+	style = 0
+	date = { day = 13 month = may year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = January year = 1934 }
+
+	action_a = {
+		name = "八嘎 " 
+        command = { type = dissent value = 1 } 
+		}
+}
+
+event = {
+	id = 1928010
+	random = no
+	country = CHI
+
+    trigger = {  event = 400003
+					incabinet = 16120 
+		}
+	name = "落後的軍隊 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 10
+	deathdate = { day = 3 month = december year = 1930 }
+	
+	action_a = {
+		name = "戰力低下 "  
+		command = { type = morale which = land value = -5 }  
+		command = { type = max_organization which = land value = -10 }
+      }
+}
+
+event = {
+	id = 1928011
+	random = no
+	country = U03
+
+	name = "孙岳病逝 "
+	desc = "民国十七年（1928年）5月27日，孙岳在上海病逝，终年50岁。国民政府追赠其陆军上将军衔。 "
+	style = 0
+
+	date = { day = 26 month = may year = 1928 }
+	offset = 1
+	deathdate = { day = 3 month = december year = 1930 }
+	
+	action_a = {
+		name = "好走 "  
+		command = { type = dissent value = 1 }  
+		command = { type = sleepminister which = 2018 } # 孙岳
+		command = { type = sleepminister which = 2021 } #
+		command = { type = sleepleader which = 56048 } # 孙岳
+      }
+}
+
+# 1928 Elections
+event = {
+	id = 133207002
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "1928年總統選舉"
+	desc = "The 1928 election was another strong year for the Republicans. It was a landslide victory for the Republican nominee Herbert Hoover, who was helped by his own opponet. His opponet was Al Smith, a Catholic and anti-prohibitionist, suffered from prejudice from a majority of protestant voter base and many votes he should of claimed went to Hoover."
+	
+	date = { day = 6 month = November year = 1928 }
+	deathdate = { day = 6 month = November year = 1929 }
+	
+	action_a = {
+		ai_chance = 1
+		name = "艾爾弗雷德·E·史密斯 (Dem)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 9 }
+		command = { type = headofstate which = 3508 } #Al Smith
+		command = { type = headofgovernment which = 3509 } #Joseph Taylor Robinson
+		command = { type = foreignminister which = 3510 } #Oscar W. Underwood
+		command = { type = armamentminister which = 3511} #Carter Glass
+		command = { type = ministerofsecurity which = 3512 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 3513 } #Ralph Van Deman
+	}
+	action_b = {
+		ai_chance = 99
+		name = "赫伯特·胡佛 (Rep)"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 2 }
+		command = { type = headofstate which = 3514 } #Herbert Hoover
+		command = { type = headofgovernment which = 3515 } #Charles Curtis
+		command = { type = foreignminister which = 3516 } #Henry L. Stimson
+		command = { type = armamentminister which = 3503 } #Andrew W. Mellon
+		command = { type = ministerofsecurity which = 3512 } #J. Edgar Hoover
+		command = { type = ministerofintelligence which = 3513 } #Ralph Van Deman
+	}
+				
+}
+
+# Oscar W. Underwood died
+event = {
+	id = 133207006
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+		headofstate = 240389
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 25 month = January year = 1929 }
+	deathdate = { day = 25 month = January year = 1930 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Cordell Hull"
+		command = { type = foreignminister which = 3517 }#Cordell Hull
+		command = { type = sleepminister which = 3510 }
+	}		
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { type = sleepminister which = 3510 }
+	}		
+}	
+
+# New Head of Intelligence - Friedman
+event = {
+	id = 133207004
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		OR = {government = democratic
+			local_flag = RAPH 
+		}	
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 1 month = September year = 1929 }
+	deathdate = { day = 1 month = September year = 1930 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+		command = { type = ministerofintelligence which = 3518 }#William F. Friedman
+		command = { type = sleepminister which = 3513 }#Ralphy + duplicated versions of him
+	}	
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { type = sleepminister which = 3513 }#Ralphy + duplicated versions of him
+	}				
+}
+
+# John L. Hines Leaves Office
+event = {
+	id = 133207018
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 20 month = November year = 1926 }
+	deathdate = { day = 20 month = November year = 1927 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Pelot Summerall"
+		command = { type = chiefofstaff which = 3521 } 
+		command = { type = chiefofarmy which = 3522 }
+	}	
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { } #
+	}			
+}
+
+# Douglas MacArthur is the new Chief of Staff
+event = {
+	id = 133207019
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 21 month = November year = 1930 }
+	deathdate = { day = 21 month = November year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Pelot Summerall"
+		command = { type = chiefofstaff which = 3523 } 
+		command = { type = chiefofarmy which = 3524 }
+	}
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = {  } # 
+	}				
+}
+
+
+# Edward W. Eberle left office
+event = {
+	id = 133207022
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 14 month = November year = 1927 }
+	deathdate = { day = 14 month = November year = 1928 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles F. Hughes"
+		command = { type = chiefofnavy which = 3526 } # Charles F. Hughes
+	}
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = {  } #
+	}				
+}
+
+# Charles F. Hughes Retires
+event = {
+	id = 133207023
+	random = no
+	country = USA
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 17 month = September year = 1930 }
+	deathdate = { day = 17 month = September year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "OK"
+		command = { type = chiefofnavy which = 3527 } # William V. Pratt
+		command = { type = sleepminister which = 3526 } # Charles F. Hughes
+	}
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { type = sleepminister which = 3526 } # Charles F. Hughes
+	}		
+}
+	
+# 1929 Election
+event = {
+	id = 133209504
+	random = no
+	country = ENG
+        style = 2
+#	picture = "vibory_ger_1924"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2	
+	name = "1929年大選"
+	desc = "In the 1929 election, although the Conservatives did achieve a popular vote, they however did not win majority in government, the Labour party took that title. With the Conservative parties cabinets being rather unimagintive and rather 'old' many looked towards the Labour parties new ideas. This is also the first years that the young British Facist party would finally mature and formalize, however their influnce in government was rather poor."
+	
+	date = { day = 30 month = May year = 1929 }
+	deathdate = { day = 30 month = May year = 1930 }
+	
+	action_a = {
+		ai_chance = 97
+		name = "工黨獲勝"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 4000 } #George V
+		command = { type = headofgovernment which = 4009 } #Ramsay MacDonald
+		command = { type = foreignminister which = 4010 } #Arthur Henderson
+		command = { type = armamentminister which = 4011 } #Philip Snowden
+		command = { type = ministerofsecurity which = 4012 } #J. R. Clynes
+		command = { type = ministerofintelligence which = 4008 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "保守黨獲勝"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 4000 } #George V
+		command = { type = headofgovernment which = 4001 } #Stanley Baldwin
+		command = { type = foreignminister which = 4013 } #Viscount Templewood
+		command = { type = armamentminister which = 4015 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 4014 } #Sir John Gilmour
+		command = { type = ministerofintelligence which = 4008 } #Sir Hugh Sinclair
+	}		
+	
+}		
+
+# 1931 General Election	
+event = {
+	id = 133209505
+	random = no
+	country = ENG
+        style = 2
+#	picture = "vibory_ger_1924"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	offset = 2
+	name = "1931年大選"
+	desc = "EVT_133209505_DESC" 
+	
+	date = { day = 27 month = October year = 1931 }
+	deathdate = { day = 27 month = October year = 1932 }
+	
+	action_a = {
+		ai_chance = 99
+		name = "工黨獲勝"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 7 }
+		command = { type = headofstate which = 4000 } #George V
+		command = { type = headofgovernment which = 4009 } #Ramsay MacDonald
+		command = { type = foreignminister which = 4016 } #Sir John Simon
+		command = { type = armamentminister which = 4015 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 4017 } #Herbert Samuel
+		command = { type = ministerofintelligence which = 4008 } #Sir Hugh Sinclair
+		
+	}
+	action_b = {
+		ai_chance = 1
+		name = "保守黨獲勝"
+		command = { type = dissent value = -3 }
+		command = { type = set_domestic which = democratic value = 9 }
+		command = { type = set_domestic which = political_left value = 5 }
+		command = { type = headofstate which = 4000 } # George V
+		command = { type = headofgovernment which = 4001 } #Stanley Baldwin
+		command = { type = foreignminister which = 4013 } #Viscount Templewood
+		command = { type = armamentminister which = 4015 } #Neville Chamberlain
+		command = { type = ministerofsecurity which = 4014 } #Sir John Gilmour
+		command = { type = ministerofintelligence which = 4008 } #Sir Hugh Sinclair
+	}	
+	
+}
+
+# Frederick Lambart retired
+event = {
+	id = 133209514
+	random = no
+	country = ENG
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 20 month = February year = 1926 }
+	deathdate = { day = 25 month = February year = 1926 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint George Milne"
+		command = { type = chiefofstaff which = 4020 } #George Milne
+		command = { type = chiefofarmy which = 4021 } #George Milne
+		command = { type = sleepminister which = 4018 } # Frederick Rudolph Lambart
+		command = { type = sleepminister which = 4019 } # Frederick Rudolph Lambart
+	}	
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { type = sleepminister which = 4018 } # Frederick Rudolph Lambart
+		command = { type = sleepminister which = 4019 } # Frederick Rudolph Lambart
+	}			
+}
+
+# David Beatty retired
+event = {
+	id = 133209516
+	random = no
+	country = ENG
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 5 month = July year = 1927 }
+	deathdate = { day = 5 month = July year = 1928 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Charles Madden"
+		command = { type = chiefofnavy which = 4023 } # Charles Madden
+		command = { type = sleepminister which = 4022 } # David Beatty
+	}	
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { type = sleepminister which = 4022 } # David Beatty
+	}			
+}
+
+# Charles Madden retired
+event = {
+	id = 133209517
+	random = no
+	country = ENG
+#	picture = "news_paper"
+	
+	trigger = {
+		government = democratic
+	}
+	
+	name = "EVT_120_NAME"
+	desc = "EVT_120_DESC"
+	
+	offset = 2
+	date = { day = 1 month = March year = 1930 }
+	deathdate = { day = 1 month = March year = 1931 }
+	
+	action_a = {
+		ai_chance = 100
+		name = "Appoint Frederick Field"
+		command = { type = chiefofnavy which = 4024 } # Frederick Field
+		command = { type = sleepminister which = 4023 } # Charles Madden
+	}	
+	action_b = {
+		ai_chance = 0
+		name = "維持當前人選"
+		command = { type = sleepminister which = 4023 } # 
+	}			
+}
+##########################################################
+
+#192800X 黎元洪逝世 1928/6/3 -1.0 dissent 
+# 第四次河湟事變
+# 涼州事變

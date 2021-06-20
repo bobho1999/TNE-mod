@@ -1,0 +1,4731 @@
+#next 700118
+################################
+### # 直系架空 70xxxx
+################################
+################################
+### # 收編國民軍
+################################
+event = {
+  id = 700000
+  random = no
+  country = u03
+  trigger = { 
+    	event = 200505
+		exists = U05
+		flag = Non_historical
+	}
+  
+  name = "直奉同盟 "
+  desc = "當馮張惡戰之際，在二次直奉戰爭中失勢的吳佩孚竟悍然決定與張作霖聯手出兵討馮，此舉對於落難的張作霖來說可謂雪中送炭。馮玉祥知道吳佩孚可能是為了報倒戈之仇而來，於是斷然選擇下野遠赴蘇聯以求能和吳佩孚談和，國民軍頓時群龍無首。國民軍諸將為求免於遭到直奉南北夾擊，決定再次投靠故主吳佩孚。並為求向吳佩孚輸誠，極盡阿諛奉承之能事。 "
+  style = 0
+  date = { day = 1 month = january year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = december year = 1926 }
+  action_a = {
+    	name = "派出密使 "
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 700001 value = 1 }
+		
+    	 }
+}
+
+event = {
+  id = 700001
+  random = no
+  country = u05
+  
+  name = "是否收編國民軍？ "
+  desc = "國民軍向我們表達了投靠之意，我們該如何答覆?  "
+  style = 0
+  action_a = {
+    	name = "不可背信棄義 "
+		ai_chance = 60
+    	command = { type = war which = u03 }
+    	command = { type = dissent value = -5 }
+    	command = { type = relation which = u02 value = 10 }
+    	command = { type = relation which = u03 value = -10 }
+    	 }
+
+  action_b = {
+    	name = "即使背約，也不能放過機會 "
+		ai_chance = 40 
+    	command = { type = dissent value = 5 }
+    	command = { type = trigger which = 700002 value = 1 }
+    	command = { type = trigger which = 700003 }
+    	command = { type = sleepevent which = 200304 }
+    	command = { type = access which = U03 }
+    	command = { type = make_puppet which = U03 }
+    	command = { type = alliance which = u03 }
+    	command = { type = peace which = U03 }
+    	command = { type = peace which = CSX }
+    	command = { type = peace which = U18 }
+    	command = { type = relation which = u03 value = 10 }
+    	command = { type = relation which = u02 value = -10 }
+		command = { type = domestic which = interventionism value = 1 }
+    	 }
+}
+
+event = {
+  id = 700002
+  random = no
+  country = u05
+  
+  name = "任命鹿鐘麟為察綏巡閱使。 "
+  desc = "國民軍歸降後，我們接收了其在河南、陝西南部的地盤。 "
+  style = 0
+
+  action_a = {
+    	 name = "改編國民軍 "
+    	command = { type = alliance which = u03 }
+    	command = { type = add_corps which = "河南省軍" value = land where = 1228 }
+    	command = { type = add_division which = "河南陸軍第1師" value = infantry when = 7 where = artillery }
+    	command = { type = add_division which = "河南陸軍第2師" value = infantry when = 7  }
+    	command = { type = add_division which = "河南陸軍第3師" value = infantry when = 7  }	
+		 
+    	command = { type = add_corps which = "陝西省軍" value = land where = 1269 }
+    	command = { type = add_division which = "陝西陸軍第1師" value = infantry when = 7 where = artillery }
+    	command = { type = add_division which = "陝西陸軍第2師" value = infantry when = 7  }
+    	command = { type = add_division which = "陝西陸軍第3師" value = infantry when = 7  }
+#察哈爾
+#    	command = { type = secedeprovince which = U03 value = 1206 }
+#    	command = { type = secedeprovince which = U03 value = 1595 }
+#    	command = { type = secedeprovince which = U03 value = 2947 }
+    	command = { type = secedeprovince which = U03 value = 2944 }
+    	command = { type = secedeprovince which = U03 value = 2942 }
+    	command = { type = secedeprovince which = U03 value = 2943 }
+    	command = { type = secedeprovince which = U03 value = 1386 }
+    	command = { type = secedeprovince which = U03 value = 2941 }
+    	command = { type = secedeprovince which = U03 value = 2939 }
+    	command = { type = secedeprovince which = U03 value = 2940 }
+    	command = { type = secedeprovince which = U03 value = 1398 }
+#    	command = { type = secedeprovince which = U03 value = 2881 }
+#綏遠
+    	command = { type = secedeprovince which = U03 value = 1207 }
+    	command = { type = secedeprovince which = U03 value = 1208 }
+    	command = { type = secedeprovince which = U03 value = 2815 }
+    	command = { type = secedeprovince which = U03 value = 2816 }
+    	command = { type = secedeprovince which = U03 value = 2817 }
+    	command = { type = secedeprovince which = U03 value = 2785 }
+    	command = { type = secedeprovince which = U03 value = 2813 }
+    	command = { type = secedeprovince which = U03 value = 2812 }
+    	command = { type = secedeprovince which = U03 value = 2814 }
+    	command = { type = secedeprovince which = U03 value = 1439 }
+
+    	command = { type = secedeprovince which = CXB value = 2801 }
+    	command = { type = secedeprovince which = CXB value = 2800 }
+    	command = { type = secedeprovince which = CXB value = 2799 }
+    	command = { type = secedeprovince which = CXB value = 2798 }
+    	command = { type = secedeprovince which = CXB value = 2797 }
+    	command = { type = secedeprovince which = CXB value = 2796 }
+		command = { type = secedeprovince which = CXB value = 1274 }
+    	command = { type = secedeprovince which = CXB value = 1275 }
+    	command = { type = secedeprovince which = CXB value = 1276 }
+    	command = { type = secedeprovince which = CXB value = 1277 }
+		
+#		command = { type = secedeprovince which = U03 value = 1271 }
+#		command = { type = secedeprovince which = U03 value = 1272 }
+#		command = { type = secedeprovince which = U03 value = 2789 }
+#		command = { type = secedeprovince which = U03 value = 2791 }
+#		command = { type = secedeprovince which = U03 value = 2792 }
+#		command = { type = secedeprovince which = U03 value = 2794 }
+
+    	 }
+}
+
+event = {
+  id = 700003
+  random = no
+  country = u03
+  
+  name = "馮玉祥下野 "
+  desc = " "
+  style = 0
+
+  action_a = {
+    	name = "重回直系 "
+		command = { type = capital which = 1208 }
+		command = { type = secedeprovince which = U05 value = 1206 }
+		command = { type = delete_unit which = -1 when = 75 } 
+    	command = { type = trigger which = 700114 }
+    	command = { type = dissent value = 10 }
+    	command = { type = headofstate which = 2013 }
+    	command = { type = chiefofstaff which = 2014 }
+    	command = { type = chiefofarmy which = 2015 }
+    	command = { type = access which = U05 }
+    	command = { type = end_mastery which = U18 }
+    	command = { type = sleepevent which = 200303 }
+    	command = { type = sleepevent which = 200310 }
+    	command = { type = sleepevent which = 200311 }
+    	command = { type = peace which = U05 }
+		command = { type = peace which = U02 }
+    	command = { type = peace which = CSX }
+    	command = { type = peace which = U18 }
+		command = { type = relation which = u05 value = 10 }
+		command = { type = max_organization which = land value = -1 }
+        command = { type = morale which = land value = -3 }
+		command = { type = free_supplies value = 10 }
+    	command = { type = extra_tc value = 10}
+		command = { type = free_ic value = 2 }
+		command = { type = unlock_division which = 22330 value = 30 }
+		
+    	command = { type = add_corps which = "察哈爾省軍" value = land where = 1206 }
+    	command = { type = add_division which = "察哈爾陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "察哈爾陸軍第2師" value = infantry when = 7  }
+    	command = { type = add_division which = "察哈爾陸軍第3師" value = infantry when = 7  }
+		
+    	command = { type = add_corps which = "綏遠省軍" value = land where = 1208 }
+    	command = { type = add_division which = "綏遠陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "綏遠陸軍第2師" value = infantry when = 7  }
+    	command = { type = add_division which = "綏遠陸軍第3師" value = infantry when = 7  }
+		
+
+    	 }
+}
+
+event = {
+  id = 700114
+  random = no
+  country = U18
+  
+  name = "冯玉祥下野 "
+  desc = "郭松龄败后，冯玉祥失一强援，而其本身又没有什么强大的靠山 ，因此在奉军的反击下接连受挫，其势渐弱。1926年1月在 奉、直军联合进攻下被迫通电下野，旋赴苏联考察。8月中旬回 国，迅即被广州国民政府任命为国民政府委员、军事委员会委员 。 "
+  style = 0
+  picture = "news_paper"
+  
+  
+  action_a = {
+    name = "时不我与 "	
+    command = { type = leave_alliance  }	
+    command = { type = peace which = U03 }
+	command = { type = peace which = U05 }
+    command = { type = peace which = CSX }
+	command = { type = secedeprovince which = U02 value =	2879	}
+    }
+    }
+	
+event = {
+  	id = 700004
+  	random = no
+  	country = u05
+  	trigger = { event = 700002 }
+  	
+	name = "玉帥上京 "
+  	desc = "隨著直奉同盟的破裂，吳佩孚將矛頭指向了張作霖，準備一舉奪下北京，以報第二次直奉戰爭的仇。 "
+  	style = 0
+  	
+	date = { day = 1 month = january year = 1926 }
+  	offset = 10
+  	deathdate = { day = 1 month = december year = 1926 }
+	action_a = {
+    	 	name = "吾人今日當以武力驅逐之，光復法統！ "
+		ai_chance = 100
+    	 	command = { type = war which = u02 }
+    	 	command = { type = dissent value = -10 }
+			command = { type = max_organization which = land value = 10 }
+        	command = { type = morale which = land value = 10 }
+    		command = { type = extra_tc value = 30 }
+            command = { type = repair_mod value = 25 }
+            command = { type = tc_occupied_mod value = 25 }
+            command = { type = tc_mod value = 25 }
+            command = { type = attrition_mod value = 15 }
+            command = { type = supply_dist_mod value = 20 }
+			command = { type = domestic which = defense_lobby value = 1 }
+			command = { type = domestic which = interventionism value = 1 }
+    	 	}
+
+  	action_b = {
+    	 	name = "我們還沒準備好 "
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+    	 }
+}
+
+
+event = {
+  	id = 700005
+  	random = no
+  	country = u05
+  	trigger = { 	
+		event = 700004
+		control = { province = 1810 data = -3 } #宛平
+		control = { province = 1204 data = -3 } #天津
+		control = { province = 1210 data = -3 } #保定
+		control = { province = 1211 data = -3 } #石家莊
+		control = { province = 1216 data = -3 } #濟南
+		 }
+  	
+	name = "法統重光 "
+  	desc = "直軍的攻勢如怒濤一般，勢不可擋，奪取了奉系在關內的地盤並 一路逼近北京。京城中隨處都可聽到郊外傳來的隆隆炮聲。 由於馮玉祥的背叛，而在第二次直奉戰爭中遭到慘敗的吳佩孚，終於洗刷了往日的恥辱。 以勝利者的身份重返首都的玉帥，隨即前往拜訪被軟禁的前任大總統， 人稱‘賄選總統’的曹錕，將他釋放。隨後，吳佩孚通電全國，重開 舊國會，并恢復了早先被廢除的‘雙十憲法’。"
+  	style = 0
+  	
+	date = { day = 1 month = january year = 1926 }
+  	offset = 5
+  	deathdate = { day = 1 month = december year = 1930 }
+
+	action_a = {
+    	name = "釋放曹前總統 "
+		ai_chance = 100
+    	command = { type = trigger which = 700006 }
+		command = { type = trigger which = 700115 }
+
+	    command = { type = peace which = U02 value = 0 }
+		command = { type = make_puppet which = u13 }
+     	command = { type = inherit which = u11 }
+    	command = { type = dissent value = -10 }
+		command = { type = max_organization which = land value = -5 }
+        command = { type = morale which = land value = -5 }
+    	command = { type = extra_tc value = -20 }
+        command = { type = repair_mod value = -15 }
+        command = { type = tc_occupied_mod value = -15 }
+        command = { type = tc_mod value = -15 }
+        command = { type = attrition_mod value = -5 }
+        command = { type = supply_dist_mod value = -10 }
+			
+    	command = { type = add_corps which = "直隸省軍" value = land where = 1810 }
+    	command = { type = add_division which = "直隸陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "直隸陸軍第2師" value = infantry when = 7  }
+    	command = { type = add_division which = "直隸陸軍第3師" value = infantry when = 7  }
+		 
+    	command = { type = add_corps which = "山東省軍" value = land where = 1216 }
+    	command = { type = add_division which = "山東陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "山東陸軍第2師" value = infantry when = 7  }
+    	command = { type = add_division which = "山東陸軍第3師" value = infantry when = 7  }
+		 
+		command = { type = secedeprovince which = U02 value = 2874 } #冀東
+		command = { type = secedeprovince which = U02 value = 2875 }
+		command = { type = secedeprovince which = U02 value = 2876 }
+		command = { type = secedeprovince which = U02 value = 2673 }
+		command = { type = secedeprovince which = U02 value = 1203 }
+
+		command = { type = secedeprovince which = U02 value = 	1388	} #熱河
+		command = { type = secedeprovince which = U02 value =	1397	}
+		command = { type = secedeprovince which = U02 value =	2878	}
+		command = { type = secedeprovince which = U02 value =	2879	}
+		command = { type = secedeprovince which = U02 value =	2880	}
+		command = { type = secedeprovince which = U02 value =	2882	}
+		command = { type = secedeprovince which = U02 value =	2883	}
+		command = { type = secedeprovince which = U02 value =	2884	}
+		command = { type = secedeprovince which = U02 value =	2885	}
+		command = { type = secedeprovince which = U02 value =	2886	}
+		command = { type = secedeprovince which = U02 value =	2945	}
+		command = { type = secedeprovince which = U02 value =	2946	}
+
+
+#		command = { type = secedeprovince which = U03 value = 1206 } #察哈爾
+		command = { type = secedeprovince which = U03 value = 1386 }
+		command = { type = secedeprovince which = U03 value = 1398 }
+#		command = { type = secedeprovince which = U03 value = 1595 }
+#		command = { type = secedeprovince which = U03 value = 2881 }
+		command = { type = secedeprovince which = U03 value = 2939 }
+		command = { type = secedeprovince which = U03 value = 2940 }
+		command = { type = secedeprovince which = U03 value = 2941 }
+		command = { type = secedeprovince which = U03 value = 2942 }
+		command = { type = secedeprovince which = U03 value = 2943 }
+		command = { type = secedeprovince which = U03 value = 2944 }
+#		command = { type = secedeprovince which = U03 value = 2947 }
+    	 	}
+}
+
+event = {
+  	id = 700006
+  	random = no
+  	country = u02
+
+  	
+	name = "楚河漢界 "
+  	desc = "直軍的攻勢如怒濤一般，勢不可擋，奪取了奉系在關內的地盤並 一路逼近北京。京城中隨處都可聽到郊外傳來的隆隆炮聲。 由於馮玉祥的背叛，而在第二次直奉戰爭中遭到慘敗的吳佩孚，終於洗刷了往日的恥辱。 以勝利者的身份重返首都的玉帥，隨即前往拜訪被軟禁的前任大總統， 人稱‘賄選總統’的曹錕，請他重掌大位。曹吳通電全國，重開 舊國會，并恢復了早先被廢除的‘雙十憲法’。"
+  	style = 0
+
+	action_a = {
+    	 	name = "撤向冀東 "
+		ai_chance = 100
+
+    	command = { type = dissent value = 10 }
+		command = { type = max_organization which = land value = -1 }
+        command = { type = morale which = land value = -3 }
+		
+		command = { type = secedeprovince which = U05 value = 1204 }  #河北
+		command = { type = secedeprovince which = U05 value = 1205 }
+		command = { type = secedeprovince which = U05 value = 1210 }
+		command = { type = secedeprovince which = U05 value = 1211 }
+		command = { type = secedeprovince which = U05 value = 1212 }
+		command = { type = secedeprovince which = U05 value = 1810 }
+		command = { type = secedeprovince which = U05 value = 1811 }
+		command = { type = secedeprovince which = U05 value = 2748 }
+		command = { type = secedeprovince which = U05 value = 2793 }
+		command = { type = secedeprovince which = U05 value = 2865 }
+		command = { type = secedeprovince which = U05 value = 2866 }
+		command = { type = secedeprovince which = U05 value = 2867 }
+		command = { type = secedeprovince which = U05 value = 2868 }
+		command = { type = secedeprovince which = U05 value = 2869 }
+		command = { type = secedeprovince which = U05 value = 2870 }
+		command = { type = secedeprovince which = U05 value = 2871 }
+		command = { type = secedeprovince which = U05 value = 2872 }
+		command = { type = secedeprovince which = U05 value = 2873 }
+		command = { type = secedeprovince which = U05 value = 2992 }
+		command = { type = secedeprovince which = U05 value = 2993 }
+		command = { type = secedeprovince which = U05 value = 2994 }
+
+        command = { type = secedeprovince which = U05 value = 1170 } #山東
+		command = { type = secedeprovince which = U05 value = 1213 }
+		command = { type = secedeprovince which = U05 value = 1214 }
+		command = { type = secedeprovince which = U05 value = 1215 }
+		command = { type = secedeprovince which = U05 value = 1216 }
+		command = { type = secedeprovince which = U05 value = 1894 }
+		command = { type = secedeprovince which = U05 value = 2850 }
+		command = { type = secedeprovince which = U05 value = 2851 }
+		command = { type = secedeprovince which = U05 value = 2852 }
+		command = { type = secedeprovince which = U05 value = 2853 }
+		command = { type = secedeprovince which = U05 value = 2854 }
+		command = { type = secedeprovince which = U05 value = 2855 }
+		command = { type = secedeprovince which = U05 value = 2856 }
+		command = { type = secedeprovince which = U05 value = 2857 }
+		command = { type = secedeprovince which = U05 value = 2858 }
+		command = { type = secedeprovince which = U05 value = 2859 }
+		command = { type = secedeprovince which = U05 value = 2860 }
+		command = { type = secedeprovince which = U05 value = 2861 }
+		command = { type = secedeprovince which = U05 value = 2862 }
+		command = { type = secedeprovince which = U05 value = 2863 }
+		command = { type = secedeprovince which = U05 value = 2864 }
+
+		command = { type = secedeprovince which = U05 value = 1223 } #河南
+		command = { type = secedeprovince which = U05 value = 1224 }
+		command = { type = secedeprovince which = U05 value = 1227 }
+		command = { type = secedeprovince which = U05 value = 1228 }
+		command = { type = secedeprovince which = U05 value = 1229 }
+		command = { type = secedeprovince which = U05 value = 1230 }
+		command = { type = secedeprovince which = U05 value = 1876 }
+		command = { type = secedeprovince which = U05 value = 2838 }
+		command = { type = secedeprovince which = U05 value = 2839 }
+		command = { type = secedeprovince which = U05 value = 2840 }
+		command = { type = secedeprovince which = U05 value = 2841 }
+		command = { type = secedeprovince which = U05 value = 2842 }
+		command = { type = secedeprovince which = U05 value = 2843 }
+		command = { type = secedeprovince which = U05 value = 2844 }
+		command = { type = secedeprovince which = U05 value = 2845 }
+		command = { type = secedeprovince which = U05 value = 2846 }
+		command = { type = secedeprovince which = U05 value = 2847 }
+		command = { type = secedeprovince which = U05 value = 2848 }
+		command = { type = secedeprovince which = U05 value = 2849 }
+
+		command = { type = secedeprovince which = U03 value = 1206 } #察哈爾
+		command = { type = secedeprovince which = U03 value = 1386 }
+		command = { type = secedeprovince which = U03 value = 1398 }
+		command = { type = secedeprovince which = U03 value = 1595 }
+		command = { type = secedeprovince which = U03 value = 2881 }
+		command = { type = secedeprovince which = U03 value = 2939 }
+		command = { type = secedeprovince which = U03 value = 2940 }
+		command = { type = secedeprovince which = U03 value = 2941 }
+		command = { type = secedeprovince which = U03 value = 2942 }
+		command = { type = secedeprovince which = U03 value = 2943 }
+		command = { type = secedeprovince which = U03 value = 2944 }
+		command = { type = secedeprovince which = U03 value = 2947 }
+		
+		command = { type = secedeprovince which = U05 value =	1267	}#陝西
+		command = { type = secedeprovince which = U05 value =	1268	}
+		command = { type = secedeprovince which = U05 value =	1269	}
+		command = { type = secedeprovince which = U05 value =	1270	}
+		command = { type = secedeprovince which = U05 value =	1271	}
+		command = { type = secedeprovince which = U05 value =	1272	}
+		command = { type = secedeprovince which = U05 value =	1278	}
+		command = { type = secedeprovince which = U05 value =	1887	}
+		command = { type = secedeprovince which = U05 value =	2781	}
+		command = { type = secedeprovince which = U05 value =	2782	}
+		command = { type = secedeprovince which = U05 value =	2783	}
+		command = { type = secedeprovince which = U05 value =	2784	}
+		command = { type = secedeprovince which = U05 value =	2786	}
+		command = { type = secedeprovince which = U05 value =	2787	}
+		command = { type = secedeprovince which = U05 value =	2788	}
+		command = { type = secedeprovince which = U05 value =	2789	}
+		command = { type = secedeprovince which = U05 value =	2790	}
+		command = { type = secedeprovince which = U05 value =	2791	}
+		command = { type = secedeprovince which = U05 value =	2792	}
+		command = { type = secedeprovince which = U05 value =	2794	}
+		
+		command = { type = secedeprovince which = U05 value =	1221	} # 安徽
+		command = { type = secedeprovince which = U05 value =	1222	}
+		command = { type = secedeprovince which = U05 value =	1233	}
+		command = { type = secedeprovince which = U05 value =	1234	}
+		command = { type = secedeprovince which = U05 value =	1875	}
+		command = { type = secedeprovince which = U05 value =	1884	}
+		command = { type = secedeprovince which = U05 value =	1885	}
+		command = { type = secedeprovince which = U05 value =	2614	}
+		command = { type = secedeprovince which = U05 value =	2615	}
+		command = { type = secedeprovince which = U05 value =	2616	}
+		command = { type = secedeprovince which = U05 value =	2633	}
+		command = { type = secedeprovince which = U05 value =	2634	}
+		command = { type = secedeprovince which = U05 value =	2644	}
+		command = { type = secedeprovince which = U05 value =	2645	}
+		command = { type = secedeprovince which = U05 value =	2646	}
+		command = { type = secedeprovince which = U05 value =	2647	}
+		command = { type = secedeprovince which = U05 value =	2648	}
+		command = { type = secedeprovince which = U05 value =	2649	}
+		command = { type = secedeprovince which = U05 value =	2650	}
+		command = { type = secedeprovince which = U05 value =	2652	}
+
+		command = { type = secedeprovince which = U05 value =	1217	} #江蘇
+		command = { type = secedeprovince which = U05 value =	1218	}
+		command = { type = secedeprovince which = U05 value =	1219	}
+		command = { type = secedeprovince which = U05 value =	1220	}
+		command = { type = secedeprovince which = U05 value =	1235	}
+		command = { type = secedeprovince which = U05 value =	1236	}
+		command = { type = secedeprovince which = U05 value =	1237	}
+		command = { type = secedeprovince which = U05 value =	2607	}
+		command = { type = secedeprovince which = U05 value =	2608	}
+		command = { type = secedeprovince which = U05 value =	2609	}
+		command = { type = secedeprovince which = U05 value =	2610	}
+		command = { type = secedeprovince which = U05 value =	2611	}
+		command = { type = secedeprovince which = U05 value =	2612	}
+		command = { type = secedeprovince which = U05 value =	2613	}
+		command = { type = secedeprovince which = U05 value =	2617	}
+		command = { type = secedeprovince which = U05 value =	2618	}
+		command = { type = secedeprovince which = U05 value =	2619	}
+		command = { type = secedeprovince which = U05 value =	2620	}
+		command = { type = secedeprovince which = U05 value =	2621	}
+		command = { type = secedeprovince which = U05 value =	2622	}
+		command = { type = secedeprovince which = U05 value =	2623	}
+		command = { type = secedeprovince which = U05 value =	2625	}
+		command = { type = secedeprovince which = U05 value =	2626	}
+		command = { type = secedeprovince which = U05 value =	2627	}
+		command = { type = secedeprovince which = U05 value =	2628	}
+		command = { type = secedeprovince which = U05 value =	2629	}
+		command = { type = secedeprovince which = U05 value =	2630	}
+		command = { type = secedeprovince which = U05 value =	2795	}
+		
+		command = { type = secedeprovince which = U05 value = 1206 }
+    	command = { type = secedeprovince which = U05 value = 1595 }
+    	command = { type = secedeprovince which = U05 value = 2947 }
+#    	command = { type = secedeprovince which = U05 value = 2944 }
+		command = { type = secedeprovince which = U05 value = 2881 }
+
+#		command = { type = secedeprovince which = U11 value = 2874 }
+#		command = { type = secedeprovince which = U11 value = 2875 }
+#		command = { type = secedeprovince which = U11 value = 2876 }
+#		command = { type = secedeprovince which = U11 value = 2673 }
+#		command = { type = secedeprovince which = U11 value = 1203 }
+    	 	}
+}
+
+	event = {
+  	id = 700115
+  	random = no
+  	country = u03
+
+  	
+	name = "楚河漢界 "
+  	desc = "直軍的攻勢如怒濤一般，勢不可擋，奪取了奉系在關內的地盤並 一路逼近北京。京城中隨處都可聽到郊外傳來的隆隆炮聲。 由於馮玉祥的背叛，而在第二次直奉戰爭中遭到慘敗的吳佩孚，終於洗刷了往日的恥辱。 以勝利者的身份重返首都的玉帥，隨即前往拜訪被軟禁的前任大總統， 人稱‘賄選總統’的曹錕，將他釋放。隨後，吳佩孚通電全國，重開 舊國會，并恢復了早先被廢除的‘雙十憲法’。"
+  	style = 0
+  	
+
+	action_a = {
+    	 	name = "玉帥萬歲 "
+		 
+		command = { type = secedeprovince which = U02 value = 2874 } #冀東
+		command = { type = secedeprovince which = U02 value = 2875 }
+		command = { type = secedeprovince which = U02 value = 2876 }
+		command = { type = secedeprovince which = U02 value = 2673 }
+		command = { type = secedeprovince which = U02 value = 1203 }
+
+		command = { type = secedeprovince which = U02 value = 	1388	} #熱河
+		command = { type = secedeprovince which = U02 value =	1397	}
+		command = { type = secedeprovince which = U02 value =	2878	}
+		command = { type = secedeprovince which = U02 value =	2879	}
+		command = { type = secedeprovince which = U02 value =	2880	}
+		command = { type = secedeprovince which = U02 value =	2882	}
+		command = { type = secedeprovince which = U02 value =	2883	}
+		command = { type = secedeprovince which = U02 value =	2884	}
+		command = { type = secedeprovince which = U02 value =	2885	}
+		command = { type = secedeprovince which = U02 value =	2886	}
+		command = { type = secedeprovince which = U02 value =	2945	}
+		command = { type = secedeprovince which = U02 value =	2946	}
+
+
+		command = { type = secedeprovince which = U03 value = 1206 } #察哈爾
+		command = { type = secedeprovince which = U03 value = 1386 }
+		command = { type = secedeprovince which = U03 value = 1398 }
+		command = { type = secedeprovince which = U03 value = 1595 }
+		command = { type = secedeprovince which = U03 value = 2881 }
+		command = { type = secedeprovince which = U03 value = 2939 }
+		command = { type = secedeprovince which = U03 value = 2940 }
+		command = { type = secedeprovince which = U03 value = 2941 }
+		command = { type = secedeprovince which = U03 value = 2942 }
+		command = { type = secedeprovince which = U03 value = 2943 }
+		command = { type = secedeprovince which = U03 value = 2944 }
+		command = { type = secedeprovince which = U03 value = 2947 }
+		
+		command = { type = secedeprovince which = U05 value = 1204 }  #河北
+		command = { type = secedeprovince which = U05 value = 1205 }
+		command = { type = secedeprovince which = U05 value = 1210 }
+		command = { type = secedeprovince which = U05 value = 1211 }
+		command = { type = secedeprovince which = U05 value = 1212 }
+		command = { type = secedeprovince which = U05 value = 1810 }
+		command = { type = secedeprovince which = U05 value = 1811 }
+		command = { type = secedeprovince which = U05 value = 2748 }
+		command = { type = secedeprovince which = U05 value = 2793 }
+		command = { type = secedeprovince which = U05 value = 2865 }
+		command = { type = secedeprovince which = U05 value = 2866 }
+		command = { type = secedeprovince which = U05 value = 2867 }
+		command = { type = secedeprovince which = U05 value = 2868 }
+		command = { type = secedeprovince which = U05 value = 2869 }
+		command = { type = secedeprovince which = U05 value = 2870 }
+		command = { type = secedeprovince which = U05 value = 2871 }
+		command = { type = secedeprovince which = U05 value = 2872 }
+		command = { type = secedeprovince which = U05 value = 2873 }
+		command = { type = secedeprovince which = U05 value = 2992 }
+		command = { type = secedeprovince which = U05 value = 2993 }
+		command = { type = secedeprovince which = U05 value = 2994 }
+		
+		command = { type = secedeprovince which = U05 value = 1206 }
+    	command = { type = secedeprovince which = U05 value = 1595 }
+    	command = { type = secedeprovince which = U05 value = 2947 }
+#    	command = { type = secedeprovince which = U05 value = 2944 }
+		command = { type = secedeprovince which = U05 value = 2881 }
+		
+		command = { type = capital which = 1208 }
+    	 	}
+}
+################################
+### # 收編五省聯軍
+################################
+event = {
+  id = 700007
+  random = no
+  country = u06
+  trigger = { 
+    	war = { country = U05 country = CHI }
+		control = { province = 1253 data = U05 } #武昌
+		control = { province = 1255 data = U05 } #長沙
+		control = { province = 1257 data = U05 } #衡陽
+		exists = U05 }
+  
+  name = "玉帥南征 "
+  desc = "在二次直奉戰爭中，直系兵敗如山倒，其後直系在長江下游的 地盤也遭到奉軍的進佔。但直系後起之秀孫傳芳反而在蘇皖 一舉大破奉軍，得到東南諸將推載為五省聯軍總司令， 其聲勢一時有凌駕於直系領袖吳佩孚之勢。 然而復出的吳佩孚聲威再振，又藉由干涉湖南取得了華中的控制權。 在此情勢下，居於下游且身為直系部將的孫傳芳無法再對吳陽奉陰違。 "
+  style = 0
+  date = { day = 1 month = january year = 1926 }
+  offset = 5
+  deathdate = { day = 1 month = december year = 1927 }
+  action_a = {
+    	name = "服從玉帥 "
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = trigger which = 700008 }
+    	command = { type = relation which = u05 value = -10 }
+    	command = { type = access which = U05 }
+    	 }
+  action_b = {
+    	name = "另立門戶 "
+		ai_chance = 5
+    	command = { type = dissent value = -5 }
+    	command = { type = sleepevent which = 700008 }
+    	command = { type = relation which = u05 value = -10 }
+    	 }		
+}
+
+event = {
+  id = 700008
+  random = no
+  country = u05
+  
+  name = "孫傳芳投誠 "
+  desc = "隨著我們在戰場上節節勝利，直系後起之秀孫傳芳 表示願意回到玉帥的旗下一起作戰。 "
+  style = 0
+  action_a = {
+    	name = "納入麾下 "
+		ai_chance = 100
+    	command = { type = dissent value = -3 }
+		command = { type = trigger which = 700009 }
+		command = { type = trigger which = 700010 value = 1 }
+    	command = { type = access which = U06 }
+#    	command = { type = make_puppet which = U06 }
+    	command = { type = alliance which = u06 }
+    	command = { type = peace which = U06 }
+    	command = { type = relation which = u06 value = 10 }
+		command = { type = domestic which = interventionism value = 1 }
+    	}
+
+  action_b = {
+    	 name = "無視他 "
+    	command = { type = dissent value = 10 }
+    	
+    	 }
+}
+
+event = {
+  id = 700009
+  random = no
+  country = u06
+  
+  name = "孫傳芳就任蘇皖閩浙贛巡閱使 "
+  desc = "重回直系的孫傳芳被吳佩孚任命 為蘇皖閩浙贛巡閱使，統領江蘇、安徽、浙江、福建、江西的軍隊。 "
+  style = 0
+
+  action_a = {
+    	name = "到任 "
+		command = { type = delete_unit which = -1 when = 90 } 
+    	command = { type = dissent value = 10 }
+    	command = { type = access which = U05 }
+    	command = { type = peace which = U05 }
+    	command = { type = peace which = U03 }
+		command = { type = relation which = u05 value = 10 }
+		command = { type = max_organization which = land value = -1 }
+        command = { type = morale which = land value = -3 }
+		command = { type = free_supplies value = 10 }
+
+		command = { type = secedeprovince which = U05 value =	1217	} #江蘇
+		command = { type = secedeprovince which = U05 value =	1218	} #隴海鐵路
+		command = { type = secedeprovince which = U05 value =	2607	}
+		command = { type = secedeprovince which = U05 value =	2610	}
+		command = { type = secedeprovince which = U05 value =	2611	}
+		command = { type = add_corps which = "江蘇省軍" value = land where = 1235 }
+    	command = { type = add_division which = "江蘇陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "江蘇陸軍第2師" value = infantry when = 6  }
+    	command = { type = add_division which = "江蘇陸軍第3師" value = infantry when = 6  }
+		
+    	command = { type = add_corps which = "上海駐軍" value = land where = 1237 }
+    	command = { type = add_division which = "江蘇陸軍第4師" value = infantry when = 7  }
+    	command = { type = add_division which = "江蘇陸軍第5師" value = infantry when = 6  }
+    	command = { type = add_division which = "江蘇陸軍第6師" value = infantry when = 6  }
+		
+    	command = { type = add_corps which = "安徽省軍" value = land where = 1221 }
+    	command = { type = add_division which = "安徽陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "安徽陸軍第2師" value = infantry when = 6  }
+    	command = { type = add_division which = "安徽陸軍第3師" value = infantry when = 6  }	
+		
+    	command = { type = add_corps which = "江西省軍" value = land where = 1252 }
+    	command = { type = add_division which = "江西陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "江西陸軍第2師" value = infantry when = 6  }
+    	command = { type = add_division which = "江西陸軍第3師" value = infantry when = 6  }
+		 
+		command = { type = add_corps which = "浙江省軍" value = land where = 1238 }
+    	command = { type = add_division which = "浙江陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "浙江陸軍第2師" value = infantry when = 6  }
+    	command = { type = add_division which = "浙江陸軍第3師" value = infantry when = 6  }
+		 
+    	command = { type = add_corps which = "福建省軍" value = land where = 1244 }
+		command = { type = add_division which = "福建陸軍第1師" value = infantry when = 7  }
+    	command = { type = add_division which = "福建陸軍第2師" value = infantry when = 6  }
+    	command = { type = add_division which = "福建陸軍第3師" value = infantry when = 6  }
+    	 }
+}
+
+event = {
+  id = 700010
+  random = no
+  country = u05
+  
+  name = "直系的統整 "
+  desc = "隨著孫傳芳的回歸，直系統一了長江下游， 在統一的道路上更進了一步。 "
+  style = 0
+
+  action_a = {
+    	name = "萬歲 "
+    	command = { type = alliance which = u06 }	
+		command = { type = secedeprovince which = U06 value = 1238 } # 浙江
+		command = { type = secedeprovince which = U06 value = 1239 }
+		command = { type = secedeprovince which = U06 value = 1240 }
+		command = { type = secedeprovince which = U06 value = 1241 }
+		command = { type = secedeprovince which = U06 value = 2631 }
+		command = { type = secedeprovince which = U06 value = 2632 }
+		command = { type = secedeprovince which = U06 value = 2635 }
+		command = { type = secedeprovince which = U06 value = 2636 }
+		command = { type = secedeprovince which = U06 value = 2637 }
+		command = { type = secedeprovince which = U06 value = 2638 }
+		command = { type = secedeprovince which = U06 value = 2639 }
+		command = { type = secedeprovince which = U06 value = 2640 }
+		command = { type = secedeprovince which = U06 value = 2641 }
+		command = { type = secedeprovince which = U06 value = 2642 }
+		command = { type = secedeprovince which = U06 value = 2643 }
+		command = { type = secedeprovince which = U06 value = 2996 }
+
+		command = { type = secedeprovince which = U06 value = 1251 }#江西 #
+		command = { type = secedeprovince which = U06 value = 2693 } #
+		command = { type = secedeprovince which = U06 value = 2694 }
+		command = { type = secedeprovince which = U06 value = 2695 }
+		command = { type = secedeprovince which = U06 value = 1242 }
+		command = { type = secedeprovince which = U06 value = 2696 }
+		command = { type = secedeprovince which = U06 value = 2691 }
+		command = { type = secedeprovince which = U06 value = 2697 }
+		command = { type = secedeprovince which = U06 value = 2692 }
+		command = { type = secedeprovince which = U06 value = 2698 }
+		command = { type = secedeprovince which = U06 value = 2699 }
+		command = { type = secedeprovince which = U06 value = 1252 }#
+		command = { type = secedeprovince which = U06 value = 2688 }#
+		command = { type = secedeprovince which = U06 value = 2690 }
+		command = { type = secedeprovince which = U06 value = 2689 }
+		command = { type = secedeprovince which = U06 value = 1254 }
+		command = { type = secedeprovince which = U06 value = 2686 }
+		command = { type = secedeprovince which = U06 value = 2687 }
+		command = { type = secedeprovince which = U06 value = 1250 }
+		command = { type = secedeprovince which = U06 value = 2700 }
+
+		command = { type = secedeprovince which = U06 value = 1244 } #福建
+		command = { type = secedeprovince which = U06 value = 2704 }
+		command = { type = secedeprovince which = U06 value = 2703 }
+		command = { type = secedeprovince which = U06 value = 2701 }
+		command = { type = secedeprovince which = U06 value = 1243 }
+		command = { type = secedeprovince which = U06 value = 2702 }
+		command = { type = secedeprovince which = U06 value = 1246 }
+		command = { type = secedeprovince which = U06 value = 1245 }
+		command = { type = secedeprovince which = U06 value = 2705 }
+		command = { type = secedeprovince which = U06 value = 1247 }
+		command = { type = secedeprovince which = U06 value = 2706 }
+		command = { type = secedeprovince which = U06 value = 2606 } 
+
+		command = { type = secedeprovince which = U06 value =	1221	} # 安徽
+		command = { type = secedeprovince which = U06 value =	1222	}
+		command = { type = secedeprovince which = U06 value =	1233	}
+		command = { type = secedeprovince which = U06 value =	1234	}
+		command = { type = secedeprovince which = U06 value =	1875	}
+		command = { type = secedeprovince which = U06 value =	1884	}
+		command = { type = secedeprovince which = U06 value =	1885	}
+		command = { type = secedeprovince which = U06 value =	2614	}
+		command = { type = secedeprovince which = U06 value =	2615	}
+		command = { type = secedeprovince which = U06 value =	2616	}
+		command = { type = secedeprovince which = U06 value =	2633	}
+		command = { type = secedeprovince which = U06 value =	2634	}
+		command = { type = secedeprovince which = U06 value =	2644	}
+		command = { type = secedeprovince which = U06 value =	2645	}
+		command = { type = secedeprovince which = U06 value =	2646	}
+		command = { type = secedeprovince which = U06 value =	2647	}
+		command = { type = secedeprovince which = U06 value =	2648	}
+		command = { type = secedeprovince which = U06 value =	2649	}
+		command = { type = secedeprovince which = U06 value =	2650	}
+		command = { type = secedeprovince which = U06 value =	2652	}
+#江蘇
+		command = { type = secedeprovince which = U06 value =	1219	}
+		command = { type = secedeprovince which = U06 value =	1220	}
+		command = { type = secedeprovince which = U06 value =	1235	}
+		command = { type = secedeprovince which = U06 value =	1236	}
+		command = { type = secedeprovince which = U06 value =	1237	} 
+		command = { type = secedeprovince which = U06 value =	2608	}
+		command = { type = secedeprovince which = U06 value =	2609	} 
+		command = { type = secedeprovince which = U06 value =	2612	}
+		command = { type = secedeprovince which = U06 value =	2613	}
+		command = { type = secedeprovince which = U06 value =	2617	}
+		command = { type = secedeprovince which = U06 value =	2618	}
+		command = { type = secedeprovince which = U06 value =	2619	}
+		command = { type = secedeprovince which = U06 value =	2620	}
+		command = { type = secedeprovince which = U06 value =	2621	}
+		command = { type = secedeprovince which = U06 value =	2622	}
+		command = { type = secedeprovince which = U06 value =	2623	}
+		command = { type = secedeprovince which = U06 value =	2625	}
+		command = { type = secedeprovince which = U06 value =	2626	}
+		command = { type = secedeprovince which = U06 value =	2627	}
+		command = { type = secedeprovince which = U06 value =	2628	}
+		command = { type = secedeprovince which = U06 value =	2629	}
+		command = { type = secedeprovince which = U06 value =	2630	}
+		command = { type = secedeprovince which = U06 value =	2795	}		
+    	 }
+}
+
+event = {
+  id = 700011
+  random = no
+  country = u17
+  trigger = {  
+		event = 700002
+		exists = U05 }
+  
+  name = "投靠玉帥 "
+  desc = "隨著戰場上形式的改變，劉鎮華決定投靠直系。 "
+  style = 0
+  date = { day = 1 month = january year = 1926 }
+  offset = 5
+  deathdate = { day = 1 month = december year = 1928 }
+  action_a = {
+    	name = "服從玉帥 (遊戲結束) "
+	ai_chance = 99
+	 command = { type = trigger which = 700012 }
+    	 }
+  action_a = {
+    	name = "自立更生 "
+	 command = {  }
+    	 }	
+}
+
+event = {
+  id = 700012
+  random = no
+  country = u05
+
+  
+  name = "收編鎮嵩軍 "
+  desc = "鎮嵩軍向我們表達了投靠之意，我們該如何答覆? "
+  style = 0
+
+  action_a = {
+    	name = "這將增強我們的力量 "
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+    	command = { type = inherit which = U17 }
+		command = { type = sleepevent which = 200308 }
+    	command = { type = add_corps which = "討賊軍第八軍 " value = land where = 1887 }
+    	command = { type = add_division which = "鎮嵩軍第1師 " value = infantry when = 6  }
+    	command = { type = add_division which = "鎮嵩軍第2師 " value = infantry when = 6  }
+    	command = { type = add_division which = "鎮嵩軍第3師 " value = infantry when = 6  }
+     	command = { type = construct which = land_fort where = 1887 value = -5 }
+     	command = { type = construct which = land_fort where = 2787 value = -5 }
+     	command = { type = construct which = land_fort where = 1270 value = -5 }
+     	command = { type = construct which = land_fort where = 2786 value = -5 }
+     	command = { type = construct which = land_fort where = 2782 value = -5 }
+    	 }	
+}
+
+event = {
+	id = 700013
+	random = no
+	country = u03
+	trigger = { 
+		OR = { 
+			event = 700002
+			AND = { 
+				NOT = { event = 200302 }
+				month = 10
+			}
+		}
+		event = 200303 
+	}
+  
+  name = "實力恢復 "
+
+  style = 0
+  date = { day = 1 month = january year = 1926 }
+  offset = 1
+  deathdate = { day = 1 month = july year = 1935 }
+  action_a = {
+		name = "进攻 "
+        command = { type = dissent value = -5 }
+	 	command = { type = max_organization which = land value = 40 }
+        command = { type = morale which = land value = 20 }
+     }
+}
+################################
+### # 國民政府
+################################
+event = {
+	id = 700014
+	random = no
+	country = CHI
+  
+	trigger = { 
+    	war = { country = U05 country = CHI }
+		control = { province = 1253 data = U05 } #武昌
+		control = { province = 1255 data = U05 } #長沙
+		control = { province = 1257 data = U05 } #衡陽
+		OR = { 	control = { province = 2681 data = U05 } #湘粵邊境
+				control = { province = 2684 data = U05 }
+		}
+#		not = { exists = U10 }
+	}
+
+	name = "敵人逼近廣東 "
+	desc = "隨著北伐軍在湖南戰場的失敗，敵人的軍隊正一步一步的 逼近廣東。為了保衛辛苦打下的根據地，國民政府決定緊急徵召 所有廣東適齡男子入伍，在各地編成守備隊，並動員 民眾在粵北構築防線以待敵軍。同時向蘇聯尋求援助。 "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 1
+  	deathdate = { day = 1 month = july year = 1928 }
+
+	action_a = {
+		ai_chance = 98
+		name = "緊急動員，構築防線，尋求外援 "
+		command = { type = manpowerpool value = -50 }
+
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 3 }
+		command = { type = domestic which = professional_army value = -3 }
+		command = { type = construct which = land_fort where = 1312 value = 5 }
+		command = { type = construct which = land_fort where = 1313 value = 5 }
+		command = { type = construct which = land_fort where = 2707 value = 3 }
+		command = { type = construct which = land_fort where = 2714 value = 5 }
+		command = { type = trigger which = 700015 }
+    	command = { type = add_corps which = "潮梅警備區 " value = land  where = 1248 }
+    	command = { type = activate_division which = 22000 value = 100087 where = 1248 when = 1 }
+    	command = { type = add_corps which = "韶屬警備區 " value = land  where = 1312 }
+    	command = { type = activate_division which = 22000 value = 100088 where = 1312 when = 1 }
+    	command = { type = add_corps which = "欽廉警備區 " value = land  where = 1325 }
+    	command = { type = activate_division which = 22000 value = 100089 where = 1325 when = 1 }
+    	command = { type = add_corps which = "肇屬警備區 " value = land  where = 2711 }
+    	command = { type = activate_division which = 22000 value = 100090 where = 2711 when = 1 }
+    	command = { type = add_corps which = "惠屬警備區  " value = land where = 2709 }
+    	command = { type = activate_division which = 22000 value = 100091 where = 2709 when = 1 }
+    	command = { type = add_corps which = "廣屬警備區 " value = land  where = 1313 }
+    	command = { type = activate_division which = 22000 value = 100092 where = 1313 when = 1 }
+    	command = { type = add_corps which = "瓊崖警備區 " value = land where = 1321 }
+    	command = { type = activate_division which = 22000 value = 100093 where = 1321 when = 1 }
+    	command = { type = add_corps which = "粵北防線 " value = land where = 2714 }
+    	command = { type = activate_division which = 22000 value = 100128 where = 2714 when = 1 }
+		}
+	}
+
+event = {
+	id = 700015
+	random = no
+	country = SOV
+  
+
+	name = "中國革命形勢惡化 "
+	desc = "中國的同志告訴我們革命的情控正往不利的 方向發展。我們是否該向他們提供援助 "
+	style = 0
+
+	action_a = {
+	  ai_chance = 99
+		name = "緊急運送物資 "
+		command = { type = domestic which = interventionism value = 1 }
+		command = { type = supplies value = -5000 }
+		command = { type = supplies value = -1000 }
+		command = { type = trigger which = 700016 value = 5 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "無視它 "
+		command = { type = domestic which = interventionism value = -1 }
+		}
+	}
+
+event = {
+	id = 700016
+	random = no
+	country = CHI
+  
+
+	name = "蘇聯援助抵達 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "最後一搏 "
+		command = { type = supplies value = 3000 }
+		command = { type = money value = 500 }
+		command = { type = add_corps value = land where = 1313 }
+		command = { type = add_division value = infantry when = 15  }
+		command = { type = add_division value = infantry when = 15  }
+		command = { type = add_division value = infantry when = 15  }
+		}
+	}
+
+event = {
+	id = 700017
+	random = no
+	country = CHC
+  
+	trigger = { 
+		event = 700014
+		alliance = { country = CHC country = CHI }
+		}
+
+	name = "敵人逼近廣東 "
+	desc = "為了保衛廣東，中共中央決議在華中、華東發動民眾，以擾亂敵人的後方、打倒帝國主義 "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 3
+  	deathdate = { day = 1 month = july year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "保衛廣東、反帝、反軍閥 "
+		command = { type = manpowerpool value = -20 }
+		command = { type = morale which = land value = 3 }
+		command = { type = trigger which = 700018 value = 1 }
+		command = { type = trigger which = 700102 value = 5 }
+		}
+	}
+
+event = {
+	id = 700018
+	random = no
+	country = U05
+  
+
+	name = "城市騷動 "
+	desc = "近期，在中共的煽動之下，各大城市皆出現了大規模的罷工潮。 "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "鎮壓 "
+		command = { type = dissent value = 15 }
+        command = { type = tc_mod value = -3 }
+		command = { type = morale which = land value = -1 }
+		command = { type = domestic which = democratic value = -1 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = industrial_modifier which = supplies value = -5 }
+		command = { type = revolt which = 1255 }
+		command = { type = revolt which = 1253 }
+		command = { type = revolt which = 1235 }
+		command = { type = revolt which = 1237 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "與工人談判 "
+		command = { type = dissent value = 5 }
+		command = { type = money value = -10000 }
+		command = { type = money value = -20000 }
+		command = { type = setflag which = negotiate }
+		}
+	}
+
+event = {
+	id = 700019
+	random = no
+	country = U09
+  
+	trigger = { 
+		OR = { 	
+			AND = { event = 200900
+				control = { province = 1313 data = -2 } } #廣州
+			AND = {	war = { country = U05 country = U09 }
+				lost_vp = { country = U09 value = 50 } }
+			control = { province = 2745 data = -2 }
+			control = { province = 2737 data = -2 }
+			control = { province = 2738 data = -2 }
+			control = { province = 2740 data = -2 }
+			control = { province = 1365 data = -2 }
+			}
+		}
+
+	name = "形勢不利 "
+	desc = "看見直軍在戰場上節節勝利，眾黔軍將領開始商討 退出革命陣營，想辦法與直系謀和。 "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 3
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "求和 "
+		command = { type = leave_alliance }
+		command = { type = peace which = U05 value = 1 }
+		command = { type = trigger which = 700020 value = 1 }
+		command = { type = secedeprovince which = u05 value = 1260 }
+		command = { type = secedeprovince which = u05 value = 2670 }
+		command = { type = secedeprovince which = u05 value = 2671 }
+		command = { type = secedeprovince which = u05 value = 1261 } 
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "奮戰到底 "
+    		command = {  }
+		}
+	}
+
+event = {
+	id = 700020
+	random = no
+	country = U05
+ 
+
+	name = "黔系求和 "
+	desc = "看見直軍在戰場上節節勝利，眾黔軍將領決定 退出革命陣營，與直系謀和。我們該如何答覆? "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+	  ai_chance = 99
+		name = "接受和談以專心對付廣州 "
+		command = { type = belligerence which = U05 value = -10 }
+		command = { type = sleepevent which = 200902 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "徹底肅清軍閥勢力(可能引來聯軍) "
+		command = { type = war which = U09 }
+		command = { type = dissent value = 10 }
+		command = { type = setflag which = U05aggressive }
+		command = { type = control which = u09 value = 1260 }
+		command = { type = control which = u09 value = 2670 }
+		command = { type = control which = u09 value = 2671 }
+		command = { type = control which = u09 value = 1261 } 
+		}
+	}
+
+event = {
+	id = 700021
+	random = no
+	country = CHI
+  
+	trigger = { 
+		OR = { 	control = { province = 1313 data = -2 }
+			lost_vp = { country = CHI value = 50 }
+			lost_vp = { country = CGX value = 50 } }
+		alliance = { country = CGX country = CHI }		
+		}
+
+	name = "形勢不利 "
+	desc = "國民革命軍在戰場上連戰連敗，革命陣營丟失了大片領土。 為了能夠繼續抗衡直軍，國民政府決定向新桂系 提出整合兩廣的要求，使廣西直接接受國民政府領導。 "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 3
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "提出 "
+		command = { type = peace which = CGX value = 1 }
+		command = { type = trigger which = 700022 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "不需要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700022
+	random = no
+	country = CGX
+ 
+
+	name = "國府提出完全統一 "
+	desc = "國民革命軍在戰場上連戰連敗，革命陣營丟失了大片領土。 為了能夠繼續抗衡直軍，國民政府決定向新桂系 提出整合兩廣的要求，使廣西直接接受國民政府領導。 我們該如何答覆他們? "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+	  ai_chance = 94
+		name = "接受提議 "
+		command = { type = trigger which = 700023 }
+		}
+	action_b = {
+	  ai_chance = 5
+		name = "拒絕提議 "
+		command = {  }
+		}
+	action_c = {
+	  ai_chance = 1
+		name = "暗中退出革命陣營，單獨媾和 "
+		command = { type = leave_alliance }
+		command = { type = trigger which = 700024 }
+		}
+	}
+
+event = {
+	id = 700023
+	random = no
+	country = CHI
+
+	name = "統一兩廣 "
+	desc = "新桂系接受了我們的提議，完全交出了廣西的軍政大權。 "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "統一兩廣 "
+		command = { type = inherit which = CGX }
+		command = { type = morale which = land value = 3 }
+		}
+	}
+
+event = {
+	id = 700024
+	random = no
+	country = U05
+  
+	name = "新桂系提議和平 "
+	desc = "新桂系退出了革命陣營，並向我們提出了和平協議。 我們該如何答覆? "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+	  ai_chance = 99
+		name = "革命勢力要徹底剷除 "
+    		command = { type = trigger which = 700025 }
+		}
+
+	action_b = {
+	  ai_chance = 1
+		name = "接受提議 "
+	        command = { type = peace which = CGX }
+    		command = { type = belligerence which = U05 value = -10 }
+		}
+	}
+
+event = {
+	id = 700025
+	random = no
+	country = CGX
+  
+
+
+	name = "直系拒絕 "
+	desc = "直系拒絕我們得和平協議，現在我們該如何是好? "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+	  ai_chance = 99
+		name = "將廣西完全交給國民政府 "
+    		command = { type = trigger which = 700023 }
+		}
+
+	action_b = {
+	  ai_chance = 1
+		name = "我們將單獨奮鬥 "
+	        command = { type = leave_alliance }
+		}
+	}
+event = {
+	id = 700026
+	random = no
+	country = U09
+  
+	trigger = { 
+		event = 200900
+		flag = U05aggressive
+		war = { country = U09 country = U05 }
+		control = { province = 1313 data = CHI }
+		OR = { 	garrison = { country = U05 province = 1364 type = land size = 3 area = yes }
+			lost_vp = { country = U09 value = 50 } }		
+		}
+
+	name = "加入國民政府 "
+	desc = "直系拒絕了和平協議後，走投無路的黔軍將領們 提出將貴州交給國民政府，以集結力量對付直軍的入侵。  "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 3
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "提出 "
+		command = { type = trigger which = 700027 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "不需要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700027
+	random = no
+	country = CHI
+  
+
+	name = "黔軍希望加入我們 "
+	desc = "直系拒絕了黔系和平協議後，走投無路的黔軍將領們 提出將貴州交給國民政府，以集結力量對付直軍的入侵。 "
+	style = 0
+	picture = "beifa"
+
+
+	action_a = {
+	  ai_chance = 99
+		name = "接受 "
+		command = { type = inherit which = U09 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "不需要 "
+		command = {  }
+		}
+	}
+	
+event = {
+  id = 700053
+  random = no
+  country = u05
+  trigger = { 
+		NOT = { exists = CHI }
+		control = { province = 1313 data = U05 } #
+		atwar = no
+	}
+	
+  name = "國民政府的末日 "
+  desc = "今天，我們攻陷了廣東，消滅了國民政府，成功的 將五色旗插在了廣州城上。 "
+  style = 0
+
+  date = { day = 1 month = january year = 1926 }
+  offset = 10
+  deathdate = { day = 1 month = december year = 1928 }
+
+  action_a = {
+		name = "中央直接管轄廣東 "
+		ai_chance = 100
+    	command = { type = dissent value = -5 }
+    	command = { type = add_corps which = "廣東省軍 " value = land where = 1313 }
+    	command = { type = add_division which = "廣東陸軍第1師 " value = infantry when = 7 }
+    	command = { type = add_division which = "廣東陸軍第2師 " value = infantry when = 7 }
+    	command = { type = add_division which = "廣東陸軍第3師 " value = infantry when = 7 }
+    	 }
+
+}
+
+event = {
+  id = 700054
+  random = no
+  country = u05
+  trigger = { 
+		NOT = { exists = CGX }
+		control = { province = 1258 data = U05 } #
+		atwar = no
+	}
+	
+  name = "桂系軍閥的末日 "
+  desc = " "
+  style = 0
+
+  date = { day = 1 month = january year = 1926 }
+  offset = 10
+  deathdate = { day = 1 month = december year = 1928 }
+
+  action_a = {
+		name = "中央直接管轄廣西 "
+		ai_chance = 100
+    	command = { type = dissent value = -5 }
+    	command = { type = add_corps which = "廣西省軍 " value = land where = 1258 }
+    	command = { type = add_division which = "廣西陸軍第1師 " value = infantry when = 7 }
+    	command = { type = add_division which = "廣西陸軍第2師 " value = infantry when = 7 }
+    	command = { type = add_division which = "廣西陸軍第3師 " value = infantry when = 7 }
+    	 }
+}
+
+event = {
+  id = 700116
+  random = no
+  country = u05
+  trigger = { 
+		NOT = { exists = U10 }
+		control = { province = 1255 data = U05 } #長沙
+	}
+  name = "湘系軍閥的末日 "
+  desc = " "
+  style = 0
+
+  date = { day = 1 month = january year = 1926 }
+  offset = 10
+  deathdate = { day = 1 month = december year = 1929 }
+
+  action_a = {
+		name = "中央直接管轄湖南 "
+		ai_chance = 100
+    	command = { type = dissent value = -5 }
+    	command = { type = add_corps which = "湖南省軍 " value = land where = 1255 }
+    	command = { type = add_division which = "湖南陸軍第1師 " value = infantry when = 7 }
+    	command = { type = add_division which = "湖南陸軍第2師 " value = infantry when = 7 }
+    	command = { type = add_division which = "湖南陸軍第3師 " value = infantry when = 7 }
+    	 }
+
+}
+
+event = {
+  id = 700117
+  random = no
+  country = u05
+
+  name = "test "
+  desc = " "
+  style = 0
+
+
+  action_a = {
+		name = "中央直接管轄湖南 "
+		ai_chance = 100
+		command = { type = independence which = u12 value = 1 }
+		command = { type = independence which = u09 value = 1 }
+		command = { type = independence which = CGX value = 1 }
+		}
+}
+
+event = {
+  id = 700118
+  random = no
+
+  name = "test "
+  desc = " "
+  style = 0
+		
+  action_a = {
+		name = "ok "
+		ai_chance = 100
+		command = { type = independence which = u21 value = 1 }
+		command = { type = independence which = u22 value = 1 }
+#		command = { type = independence which = CGX value = 1 }
+    	 }
+
+}
+
+event = {
+  id = 700119
+  random = no
+
+  name = "test "
+  desc = " "
+  style = 0
+
+  action_a = {
+		name = "ok "
+		ai_chance = 100
+		command = { type = independence which = u22 value = 1 }
+   	 }
+}
+
+#700118 攻勢受阻-->陳炯明復出
+#成功-->廣東給粵軍&聯盟&互不侵犯
+#失敗-->南(國民政府)北(直系)議和-->停止擴張 
+
+################################
+### # 西南軍閥
+################################
+event = {
+	id = 700028
+	random = no
+	country = U05
+  	persistent = yes  
+	trigger = {
+		not = { 
+			exists = CHI
+			flag = U05aggressive
+		}
+		OR = { 
+			atwar = no
+			war = { country = CHC country = U05 }
+		}
+		event = 700005		
+	}
+
+	name = "進軍西南 "
+	desc = " "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 30
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 98
+		name = "談判統一，暗中分化 "
+    	command = { type = setflag which = U05negotiate }
+		command = { type = sleepevent which = 700037 }
+		command = { type = sleepevent which = 700028 }
+    	command = { type = belligerence which = U05 value = -5 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "武力統一(調集軍隊) "
+    	command = { type = trigger which = 700029 value = 15 }
+		command = { type = dissent value = 20 } #知識份子呼籲和平
+		command = { type = belligerence which = U05 value = 20 }
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = industrial_modifier which = supplies value = -5 }
+		command = { type = sleepevent which = 700037 }
+		command = { type = sleepevent which = 700028 }
+		}
+	action_c = {
+	  ai_chance = 1
+		name = "等等 "
+		command = { }
+		}
+	}
+
+event = {
+	id = 700029
+	random = no
+	country = U05
+
+	name = "西南揮戈 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "出兵(兩個月消滅西南軍閥) "
+    		command = { type = trigger which = 700039 value = 60 }
+#			command = { type = dissent value = -20 }
+    		command = { type = war which = U09 }
+    		command = { type = war which = CYN }
+    		command = { type = war which = U01 }
+    		command = { type = war which = U07 }
+    		command = { type = war which = U15 }
+    		command = { type = war which = U16 }
+		}
+	}
+
+event = {
+	id = 700030
+	random = no
+	country = U07
+  
+	trigger = {
+		NOT = { exists = CHI }
+		OR = { event = 700029
+			event = 700047
+			flag = U05aggressive }
+		}
+
+	name = "直系向西南擴張 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。 "
+	style = 0
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 5
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "組織西南聯軍 "
+		command = { type = alliance which = CHI }		
+		command = { type = trigger which = 700031 } #滇系
+		command = { type = trigger which = 700032 } #四川其餘
+		command = { type = trigger which = 700033 } #黔系
+		command = { type = trigger which = 700034 } #劉文輝
+		command = { type = trigger which = 700035 } #楊森
+		command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 3 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700031
+	random = no
+	country = CYN
+  
+
+	name = "西南聯軍--滇系 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。我們是否要加入? "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "加入 "
+		command = { type = alliance which = U07 }
+		command = { type = alliance which = CHI }
+	 	command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 3 } 
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700032
+	random = no
+	country = U16
+  
+
+	name = "西南聯軍--川陝軍 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。我們是否要加入? "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "加入 "
+		command = { type = alliance which = U07 } 
+		command = { type = alliance which = CHI }
+	 	command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 3 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700033
+	random = no
+	country = U09
+  
+
+	name = "西南聯軍--黔系 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。我們是否要加入? "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "加入 "
+		command = { type = alliance which = U07 }
+		command = { type = alliance which = CHI } 
+	 	command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 3 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700034
+	random = no
+	country = U01
+  
+
+	name = "西南聯軍--川康軍 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。我們是否要加入? "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "加入 "
+		command = { type = alliance which = U07 } 
+		command = { type = alliance which = CHI }
+	 	command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 3 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700035
+	random = no
+	country = U15
+  
+
+	name = "西南聯軍--川蜀軍 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。我們是否要加入? "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "加入 "
+		command = { type = alliance which = U07 }
+		command = { type = alliance which = CHI } 
+	 	command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 3 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700036
+	random = no
+	country = U07
+  
+
+	name = "西南聯軍--川軍 "
+	desc = "隨著廣州政府的覆滅，直系將刀鋒指向了西南 地方，企圖以武力控制這片土地。為求自保， 西南各軍閥決定組成聯軍，以劉湘為總司令共同 對抗直系的入侵。我們是否要加入? "
+	style = 0
+	picture = "beifa"
+
+	action_a = {
+	  ai_chance = 99
+		name = "加入 "
+		command = { type = alliance which = CHI } 
+		command = { type = alliance which = U07 } 
+	 	command = { type = max_organization which = land value = 3 }
+		command = { type = morale which = land value = 5 }
+		command = { type = delay value = 2 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700037
+	random = no
+	country = U05
+  
+	trigger = {
+		not = { exists = CHI }
+		flag = U05aggressive
+		OR = { atwar = no
+			war = { country = CHC country = U05 } }
+		event = 700005
+		
+		}
+
+	name = "進軍西南 "
+	desc = " "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 10
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 1
+		name = "武力統一(調集軍隊) "
+		command = { type = trigger which = 700029 value = 15 }
+		command = { type = sleepevent which = 700028 }
+		}
+	}
+
+event = {
+	id = 700038
+	random = no
+	country = CHI
+  
+	trigger = {
+		control = { province = 1313 data = CHI }
+		OR = { event = 700029
+			flag = U05aggressive }
+		}
+
+	name = "第三次護法戰爭 "
+	desc = "在吳佩孚表明他要以武力統一中國後，各地軍閥皆坐立難安， 試圖保全自己。看到此情況的國民政府決定討論是否 再次豎起護法的旗幟，藉此遊說各地實力派加入我們，組成聯軍。 "
+	style = 0
+	picture = "beifa"
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 3
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "號召護法，遊說軍閥 "
+    		command = { type = alliance which = CGX }
+    		command = { type = alliance which = U09 }		
+    		command = { type = trigger which = 700031 value = 1 } #滇系
+    		command = { type = trigger which = 700032 value = 1 } #四川其餘
+    		command = { type = trigger which = 700033 value = 1 } #黔系
+    		command = { type = trigger which = 700034 value = 1 } #劉文輝
+    		command = { type = trigger which = 700035 value = 1 } #楊森
+    		command = { type = trigger which = 700036 value = 1 } #劉湘
+                command = { type = morale which = land value = 3 }
+		command = { type = sleepevent which = 700030 }
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+    		command = {  }
+		}
+	}
+
+event = {
+	id = 700039
+	random = no
+	country = U05
+
+	name = "攻勢受阻 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "改以軍政雙管齊下 "
+	 	ai_chance = 99
+		command = { type = dissent value = 10 }
+		command = { type = morale which = land value = -5 }
+		command = { type = setflag which = U05negotiate }
+		}
+	action_b = {
+		name = "相信軍隊 "
+	 	ai_chance = 1
+		command = {  }
+		}
+	}
+
+event = {
+	id = 700040
+	random = no
+	country = U05
+  
+	trigger = {
+		exists = U15
+		control = { province = 1313 data = U05 }
+		flag = U05negotiate
+		}
+
+	name = "聯絡楊森 "
+	desc = " "
+	style = 0
+
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 10
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "許以四川督軍 "		
+    		command = { type = trigger which = 700041 value = 1 } 
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+    		command = {  }
+		}
+	}
+
+event = {
+	id = 700041
+	random = no
+	country = U15
+  
+	name = "倒戈? "
+	desc = " "
+	style = 0
+
+	action_a = {
+	  ai_chance = 99
+		name = "投向直系 "	
+    	command = { type = trigger which = 700042 } 
+    	command = { type = leave_alliance }
+		command = { type = peace which = U05 value = 1 }
+	 	command = { type = max_organization which = land value = -1 }
+        command = { type = morale which = land value = -3 }
+		command = { type = removecore which =	1281	}
+		command = { type = removecore which =	1282	}
+		command = { type = removecore which =	1283	}
+		command = { type = removecore which =	2967	}
+		command = { type = removecore which =	2968	}
+		command = { type = removecore which =	2969	}
+		command = { type = removecore which =	2970	}
+		command = { type = removecore which =	2971	}
+		command = { type = removecore which =	2972	}
+		command = { type = removecore which =	2973	}
+		command = { type = removecore which =	2975	}
+		command = { type = removecore which =	2977	}
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "不可背信棄義 "
+    		command = {  }
+		}
+	}
+
+event = {
+	id = 700042
+	random = no
+	country = U05
+  
+	name = "楊森同意 "
+	desc = " "
+	style = 0
+
+
+	action_a = {
+	  ai_chance = 99
+		name = "好極了 "		
+    		command = { type = alliance which = U15 }
+			command = { type = non_aggression which = U05 where = U15 }
+			command = { type = sleepevent which = 700035 }
+    	 	command = { type = relation which = u15 value = 30 }
+		}
+	}
+
+event = {
+	id = 700043
+	random = no
+	country = U05
+  
+	trigger = {
+		exists = CYN
+		control = { province = 1313 data = U05 }
+		flag = U05negotiate
+		}
+
+	name = "在雲南發動政變? "
+	desc = " "
+	style = 0
+
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 10
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+	  ai_chance = 99
+		name = "許以雲南督軍，聯胡倒龍 "		
+    		command = { type = trigger which = 700044 value = 1 } 
+		}
+	action_b = {
+	  ai_chance = 1
+		name = "沒必要 "
+    		command = {  }
+		}
+	}
+
+event = {
+	id = 700044
+	random = no
+	country = CYN
+  
+	name = "昆明政變 "
+	desc = " "
+	style = 0
+
+	action_a = {
+	  ai_chance = 80
+		name = "逮捕龍雲及其黨羽，宣布效忠北京 "
+		command = { type = dissent value = 5 }
+		command = { type = headofstate which = 5016 } 		
+    	command = { type = trigger which = 700045 }
+    	command = { type = trigger which = 700046 value = 3 }  
+    	command = { type = sleepleader which = 92000 } 
+    	command = { type = sleepleader which = 92002 }
+        command = { type = sleepminister which = 5001 } #龍雲
+        command = { type = sleepminister which = 5003 }
+        command = { type = sleepminister which = 5006 }
+        command = { type = sleepminister which = 5010 }
+        command = { type = sleepminister which = 5012 }
+        command = { type = sleepminister which = 5013 }
+        command = { type = sleepminister which = 5011 } #盧漢
+        command = { type = sleepminister which = 5014 }
+    	command = { type = leave_alliance }
+    	command = { type = peace which = U05 value = 1 }
+	 	command = { type = max_organization which = land value = -1 }
+        command = { type = morale which = land value = -3 }
+
+		command = { type = removecore which =	1263	}
+		command = { type = removecore which =	1265	}
+		command = { type = removecore which =	1279	}
+		command = { type = removecore which =	1280	}
+		command = { type = removecore which =	1360	}
+		command = { type = removecore which =	1361	}
+		command = { type = removecore which =	1888	}
+		command = { type = removecore which =	1889	}
+		command = { type = removecore which =	1890	}
+		command = { type = removecore which =	2651	}
+		command = { type = removecore which =	2766	}
+		command = { type = removecore which =	2767	}
+		command = { type = removecore which =	2768	}
+		command = { type = removecore which =	2769	}
+		command = { type = removecore which =	2770	}
+		command = { type = removecore which =	2771	}
+		command = { type = removecore which =	2772	}
+		command = { type = removecore which =	2773	}
+		command = { type = removecore which =	2774	}
+		command = { type = removecore which =	2775	}
+		command = { type = removecore which =	2776	}
+		command = { type = removecore which =	2777	}
+		command = { type = removecore which =	2778	}
+		command = { type = removecore which =	2779	}
+		command = { type = removecore which =	2780	}
+		command = { type = removecore which =	2976	}
+		command = { type = removecore which =	3000	}
+
+		command = { type = removecore which =	1262	}
+		command = { type = removecore which =	1363	}
+		command = { type = removecore which =	1364	}
+		command = { type = removecore which =	1365	}
+		command = { type = removecore which =	2737	}
+		command = { type = removecore which =	2738	}
+		command = { type = removecore which =	2740	}
+		command = { type = removecore which =	2741	}
+		command = { type = removecore which =	2742	}
+		command = { type = removecore which =	2743	}
+		command = { type = removecore which =	2744	}
+		command = { type = removecore which =	2745	}
+
+		command = { type = removecore which =	1281	}
+		command = { type = removecore which =	2975	}
+		command = { type = removecore which =	2977	}
+		}
+	action_b = {
+	  ai_chance = 20
+		name = "消息走漏，搶先逮捕密謀者 "
+    		command = {  }
+		}
+	}
+
+event = {
+	id = 700045
+	random = no
+	country = U05
+  
+	name = "雲南效忠 "
+	desc = " "
+	style = 0
+
+	action_a = {
+	  ai_chance = 99
+		name = "好極了 "		
+    		command = { type = alliance which = CYN }
+			command = { type = non_aggression which = U05 where = CYN }
+			command = { type = sleepevent which = 700031 }
+    	 	command = { type = relation which = CYN value = 30 }
+		}
+	}
+
+event = {
+	id = 700046
+	random = no
+	country = CYN
+  
+	name = "整編部隊 "
+	desc = " "
+	style = 0
+
+	action_a = {
+	  ai_chance = 99
+		name = "清洗龍雲的影響 "		
+ 		command = { type = delete_unit which = -1 when = 100 }
+    	 command = { type = add_corps which = "雲南省軍" value = land where = 1307 }
+    	 command = { type = add_division which = "雲南陸軍第1師" value = infantry when = 7  }
+    	 command = { type = add_division which = "雲南陸軍第2師" value = infantry when = 6  }
+    	 command = { type = add_division which = "雲南陸軍第3師" value = infantry when = 6  }
+    	 command = { type = add_corps which = "滇西鎮守使" value = land where = 1293 }
+    	 command = { type = add_division which = "雲南陸軍第1獨立旅" value = infantry when = 7  }
+    	 command = { type = add_corps which = "滇南鎮守使" value = land where = 2749 }
+    	 command = { type = add_division which = "雲南陸軍第2獨立旅" value = infantry when = 7  }
+		}
+	}
+
+event = {
+	id = 700047
+	random = no
+	country = U15
+  
+	trigger = {
+		event = 700042
+#		OR = { atwar = no
+#			war = { country = CHC country = U05 } }
+		OR = { exists = U01
+			exists = U07
+			exists = U16 }
+		}
+
+	name = "第二次四川統一戰爭 "
+	desc = "在得到吳佩孚大量的援助後，楊森再度燃起了雄心，準備再次發起統一戰爭 "
+	style = 0
+
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 15
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+		name = " "
+		command = { type = dissent value = -5 }	
+		command = { type = supplies value = 2500 }		
+    	command = { type = war which = U01 } 
+    	command = { type = war which = U07 } 
+    	command = { type = war which = U16 }
+	 	command = { type = max_organization which = land value = 3 }
+        command = { type = morale which = land value = 5 } 
+    	command = { type = add_corps value = land where = 1265 }
+    	command = { type = add_division value = infantry when = 7  }
+    	command = { type = add_division value = infantry when = 6  }
+    	command = { type = add_division value = infantry when = 6  }
+		}
+	}
+
+event = {
+	id = 700048
+	random = no
+	country = U01
+  
+	trigger = {
+		event = 700047
+		flag = U05negotiate
+		OR = { 	garrison = { country = U05 province = 1282 type = land size = 3 area = yes }
+			lost_vp = { country = U01 value = 25 } }
+		}
+
+	name = "求和 "
+	desc = " "
+	style = 0
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 3
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+		name = " "	
+    		command = { type = trigger which = 700049 }
+		}
+	}
+
+event = {
+  	id = 700049
+  	random = no
+  	country = u05
+  
+  	name = "劉文輝投誠 "
+  	desc = "隨著我們在戰場上節節勝利，川康軍首領劉文輝 表示願意向玉帥投誠。 "
+  	style = 0
+  	action_a = {
+    	 	name = "納入麾下 "
+	 	ai_chance = 100
+    	 	command = { type = dissent value = -5 }
+			command = { type = trigger which = 700050 }
+			command = { type = trigger which = 700051 value = 1 }
+    	 	command = { type = access which = U01 }
+    	 	command = { type = alliance which = u01 }
+			command = { type = non_aggression which = U05 where = U01 }
+    	 	command = { type = peace which = U01 }
+    	 	command = { type = relation which = u01 value = 10 }
+    		command = { type = belligerence which = U05 value = -5 }
+    	 	}
+}
+
+event = {
+	id = 700050
+	random = no
+	country = U01
+  
+
+	name = "劉文輝就任川邊地方專員 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = " "
+		command = { type = dissent value = 2 }
+    	command = { type = capital which = 1282 }			
+	 	command = { type = max_organization which = land value = -1 }
+        command = { type = morale which = land value = -3 } 
+
+ 		command = { type = delete_unit which = -1 when = 100 }
+    	command = { type = add_corps which = "川邊駐軍 " value = land where = 1281 }
+    	command = { type = add_division which = "川邊第1師 " value = infantry when = 7  }
+    	command = { type = add_division which = "川邊第2師 " value = infantry when = 6  }
+    	command = { type = add_division which = "川邊第3師 " value = infantry when = 6  }
+
+		command = { type = removecore which =	1263	}
+		command = { type = removecore which =	1265	}
+		command = { type = removecore which =	1279	}
+		command = { type = removecore which =	1280	}
+		command = { type = removecore which =	1360	}
+		command = { type = removecore which =	1361	}
+		command = { type = removecore which =	1888	}
+		command = { type = removecore which =	1889	}
+		command = { type = removecore which =	1890	}
+		command = { type = removecore which =	2651	}
+		command = { type = removecore which =	2766	}
+		command = { type = removecore which =	2767	}
+		command = { type = removecore which =	2768	}
+		command = { type = removecore which =	2769	}
+		command = { type = removecore which =	2770	}
+		command = { type = removecore which =	2771	}
+		command = { type = removecore which =	2772	}
+		command = { type = removecore which =	2773	}
+		command = { type = removecore which =	2774	}
+		command = { type = removecore which =	2775	}
+		command = { type = removecore which =	2776	}
+		command = { type = removecore which =	2777	}
+		command = { type = removecore which =	2778	}
+		command = { type = removecore which =	2779	}
+		command = { type = removecore which =	2780	}
+		command = { type = removecore which =	2976	}
+		command = { type = removecore which =	3000	}
+
+		command = { type = secedeprovince which = U05 value =	1263	}
+		command = { type = secedeprovince which = U05 value =	1265	}
+		command = { type = secedeprovince which = U05 value =	1279	}
+		command = { type = secedeprovince which = U05 value =	1280	}
+		command = { type = secedeprovince which = U05 value =	1360	}
+		command = { type = secedeprovince which = U05 value =	1361	}
+		command = { type = secedeprovince which = U05 value =	1888	}
+		command = { type = secedeprovince which = U05 value =	1889	}
+		command = { type = secedeprovince which = U05 value =	1890	}
+		command = { type = secedeprovince which = U05 value =	2651	}
+		command = { type = secedeprovince which = U05 value =	2766	}
+		command = { type = secedeprovince which = U05 value =	2767	}
+		command = { type = secedeprovince which = U05 value =	2768	}
+		command = { type = secedeprovince which = U05 value =	2769	}
+		command = { type = secedeprovince which = U05 value =	2770	}
+		command = { type = secedeprovince which = U05 value =	2771	}
+		command = { type = secedeprovince which = U05 value =	2772	}
+		command = { type = secedeprovince which = U05 value =	2773	}
+		command = { type = secedeprovince which = U05 value =	2774	}
+		command = { type = secedeprovince which = U05 value =	2775	}
+		command = { type = secedeprovince which = U05 value =	2776	}
+		command = { type = secedeprovince which = U05 value =	2777	}
+		command = { type = secedeprovince which = U05 value =	2778	}
+		command = { type = secedeprovince which = U05 value =	2779	}
+		command = { type = secedeprovince which = U05 value =	2780	}
+		command = { type = secedeprovince which = U05 value =	2976	}
+		command = { type = secedeprovince which = U05 value =	3000	}
+		}
+	}
+
+event = {
+	id = 700051
+	random = no
+	country = U05
+  
+
+	name = "劉文輝就任川邊地方專員 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = " "
+		command = { type = secedeprovince which = U01 value =	1281	}
+		command = { type = secedeprovince which = U01 value =	1282	}
+		command = { type = secedeprovince which = U01 value =	1283	}
+		command = { type = secedeprovince which = U01 value =	2967	}
+		command = { type = secedeprovince which = U01 value =	2968	}
+		command = { type = secedeprovince which = U01 value =	2969	}
+		command = { type = secedeprovince which = U01 value =	2970	}
+		command = { type = secedeprovince which = U01 value =	2971	}
+		command = { type = secedeprovince which = U01 value =	2972	}
+		command = { type = secedeprovince which = U01 value =	2973	}
+		command = { type = secedeprovince which = U01 value =	2975	}
+		command = { type = secedeprovince which = U01 value =	2977	}
+	}
+}
+
+event = {
+	id = 700052
+	random = no
+	country = U05
+  
+	trigger = {
+		event = 700042
+		OR = { 
+			event = 700051
+			NOT = { exists = U01 }
+		}
+		NOT = { 
+			exists = U07
+			exists = U16
+		}
+	}
+
+	name = "四川省的處置 "
+	desc = " "
+	style = 0
+
+
+  	date = { day = 1 month = january year = 1926 }
+  	offset = 15
+  	deathdate = { day = 1 month = december year = 1928 }
+
+	action_a = {
+		name = "遵守承諾，交予楊森 "
+		ai_chance = 100
+    	command = { type = relation which = u15 value = 30 }
+    	command = { type = trigger which = 700056 value = 1 }
+		command = { type = belligerence which = U05 value = -10 }
+		command = { type = secedeprovince which = U15 value =	1263	}
+		command = { type = secedeprovince which = U15 value =	1265	}
+		command = { type = secedeprovince which = U15 value =	1279	}
+		command = { type = secedeprovince which = U15 value =	1280	}
+		command = { type = secedeprovince which = U15 value =	1360	}
+		command = { type = secedeprovince which = U15 value =	1361	}
+		command = { type = secedeprovince which = U15 value =	1888	}
+		command = { type = secedeprovince which = U15 value =	1889	}
+		command = { type = secedeprovince which = U15 value =	1890	}
+		command = { type = secedeprovince which = U15 value =	2651	}
+		command = { type = secedeprovince which = U15 value =	2766	}
+		command = { type = secedeprovince which = U15 value =	2767	}
+		command = { type = secedeprovince which = U15 value =	2768	}
+		command = { type = secedeprovince which = U15 value =	2769	}
+		command = { type = secedeprovince which = U15 value =	2770	}
+		command = { type = secedeprovince which = U15 value =	2771	}
+		command = { type = secedeprovince which = U15 value =	2772	}
+		command = { type = secedeprovince which = U15 value =	2773	}
+		command = { type = secedeprovince which = U15 value =	2774	}
+		command = { type = secedeprovince which = U15 value =	2775	}
+		command = { type = secedeprovince which = U15 value =	2776	}
+		command = { type = secedeprovince which = U15 value =	2777	}
+		command = { type = secedeprovince which = U15 value =	2778	}
+		command = { type = secedeprovince which = U15 value =	2779	}
+		command = { type = secedeprovince which = U15 value =	2780	}
+		command = { type = secedeprovince which = U15 value =	2976	}
+		command = { type = secedeprovince which = U15 value =	3000	}
+		command = { type = province_keypoints which = 1888 value = -1 } 
+		command = { type = province_keypoints which = 2772 value = -1 }
+		command = { type = province_keypoints which = 1265 value = -1 }
+		command = { type = province_keypoints which = 2651 value = -1 }
+		command = { type = province_keypoints which = 2776 value = -1 }
+		command = { type = province_keypoints which = 1265 value = -1 }
+		command = { type = province_keypoints which = 2772 value = -1 }
+		command = { type = province_keypoints which = 2768 value = -1 }
+		command = { type = province_keypoints which = 2651 value = -1 }
+		command = { type = province_keypoints which = 1889 value = -1 }
+		}
+
+	action_b = {
+		name = "保留重慶，其餘交予楊森 "
+		ai_chance = 0
+    	command = { type = relation which = u15 value = -30 }
+    	command = { type = trigger which = 700056 value = 1 }
+    	command = { type = belligerence which = U05 value = 5 }
+#		command = { type = secedeprovince which = U15 value =	1263	}
+		command = { type = secedeprovince which = U15 value =	1265	}
+		command = { type = secedeprovince which = U15 value =	1279	}
+#		command = { type = secedeprovince which = U15 value =	1280	}
+		command = { type = secedeprovince which = U15 value =	1360	}
+		command = { type = secedeprovince which = U15 value =	1361	}
+		command = { type = secedeprovince which = U15 value =	1888	}
+		command = { type = secedeprovince which = U15 value =	1889	}
+		command = { type = secedeprovince which = U15 value =	1890	}
+		command = { type = secedeprovince which = U15 value =	2651	}
+		command = { type = secedeprovince which = U15 value =	2766	}
+		command = { type = secedeprovince which = U15 value =	2767	}
+		command = { type = secedeprovince which = U15 value =	2768	}
+		command = { type = secedeprovince which = U15 value =	2769	}
+		command = { type = secedeprovince which = U15 value =	2770	}
+		command = { type = secedeprovince which = U15 value =	2771	}
+		command = { type = secedeprovince which = U15 value =	2772	}
+#		command = { type = secedeprovince which = U15 value =	2773	}
+		command = { type = secedeprovince which = U15 value =	2774	}
+		command = { type = secedeprovince which = U15 value =	2775	}
+		command = { type = secedeprovince which = U15 value =	2776	}
+		command = { type = secedeprovince which = U15 value =	2777	}
+		command = { type = secedeprovince which = U15 value =	2778	}
+		command = { type = secedeprovince which = U15 value =	2779	}
+		command = { type = secedeprovince which = U15 value =	2780	}
+		command = { type = secedeprovince which = U15 value =	2976	}
+		command = { type = secedeprovince which = U15 value =	3000	}
+		command = { type = province_keypoints which = 1888 value = -1 } 
+		command = { type = province_keypoints which = 2772 value = -1 }
+		command = { type = province_keypoints which = 1265 value = -1 }
+		command = { type = province_keypoints which = 2651 value = -1 }
+		command = { type = province_keypoints which = 2776 value = -1 }
+		command = { type = province_keypoints which = 1265 value = -1 }
+		command = { type = province_keypoints which = 2772 value = -1 }
+		command = { type = province_keypoints which = 2768 value = -1 }
+		command = { type = province_keypoints which = 2651 value = -1 }
+		command = { type = province_keypoints which = 1889 value = -1 }
+		}
+	}
+
+event = {
+  id = 700055
+  random = no
+  country = u05
+  trigger = { 
+		NOT = { exists = U09 }
+		control = { province = 1364 data = U05 } #
+		atwar = no
+	}
+  name = "黔系軍閥的末日 "
+  desc = " "
+  style = 0
+
+  date = { day = 1 month = january year = 1926 }
+  offset = 10
+  deathdate = { day = 1 month = december year = 1928 }
+
+  action_a = {
+    	 name = "中央直接管轄貴州 "
+	 ai_chance = 100
+    	command = { type = dissent value = -5 }
+    	command = { type = add_corps which = "貴州省軍 " value = land where = 1364 }
+    	command = { type = add_division which = "貴州陸軍第1師 " value = infantry when = 7 }
+    	command = { type = add_division which = "貴州陸軍第2師 " value = infantry when = 7 }
+    	command = { type = add_division which = "貴州陸軍第3師 " value = infantry when = 7 }
+    	 }
+}
+
+event = {
+	id = 700056
+	random = no
+	country = U15
+
+  	name = "統一四川 "
+	desc = " "
+	style = 0
+	
+
+	action_a = {
+		name = "OK " 
+    	command = { type = capital which = 1360 } 
+		command = { type = dissent value = -5 }
+		}
+}
+
+################################
+### # 晉系
+################################
+event = {
+  id = 700060
+  random = no
+  country = CSX
+  trigger = { 
+		event = 700003 #馮玉祥下野
+		event = 700005 #法統重光
+		control = { province = 1269 data = U05 } #西安
+#		control = { province = 1271 data = U05 } #延安
+		control = { province = 1227 data = U05 } #洛陽
+		control = { province = 1210 data = U05 } #保定
+		control = { province = 1211 data = U05 } #石家莊
+		 }
+  
+  name = "直系的擴張 "
+  desc = " "
+  style = 0
+  date = { day = 1 month = january year = 1926 }
+  offset = 10
+  deathdate = { day = 1 month = december year = 1928 }
+  action_a = {
+    	name = "服從玉帥 "
+	ai_chance = 100
+	command = { type = trigger which = 700061 value = 1 }
+    	command = { type = relation which = u05 value = 10 }
+    	 }
+
+  action_b = {
+    	 name = "保持獨立王國 "
+    	command = { type = relation which = u05 value = -10 }
+    	 }		
+}
+
+event = {
+  id = 700061
+  random = no
+  country = U05
+  
+  name = "閻錫山來投 "
+  desc = " "
+  style = 0
+
+  action_a = {
+    	name = "接受投誠，任命為山西督軍 "
+		ai_chance = 100
+		command = { type = dissent value = -5 }
+#    	command = { type = alliance which = CSX }
+    	command = { type = setflag which = CSXnotpuppet }
+    	command = { type = belligerence which = U05 value = -10 }
+		command = { type = non_aggression which = U05 where = CSX }
+    	 }
+
+  action_b = {
+    	 name = "命其交出軍政權，徹底納入中央 "
+	command = { type = trigger which = 700062 }
+    	command = { type = relation which = CSX value = -10 }
+    	command = { type = belligerence which = U05 value = 5 }
+    	 }		
+}
+
+event = {
+  id = 700062
+  random = no
+  country = CSX
+  
+  name = "交出軍權? "
+  desc = " "
+  style = 0
+
+  	action_a = {
+    		name = "同意 "
+		ai_chance = 5
+		command = { type = trigger which = 700063 }
+    	command = { type = alliance which = u05 }
+    	command = { type = access which = U05 }
+ 		command = { type = delete_unit which = -1 when = 100 }
+    	 	}
+
+  	action_b = {
+    		name = "免談 "
+		ai_chance = 95
+    		command = { type = relation which = U05 value = -10 }
+    		command = { type = setflag which = CSXnotpuppet }
+    	 	}		
+}
+
+event = {
+  id = 700063
+  random = no
+  country = u05
+  
+  name = "晉系軍閥的末日 "
+  desc = " "
+  style = 0
+  action_a = {
+    	 name = "中央直接管轄山西 "
+	 ai_chance = 100
+    	command = { type = dissent value = -5 }
+    	command = { type = inherit which = CSX }
+    	command = { type = belligerence which = U05 value = 5 }
+    	command = { type = add_corps which = "山西省軍 " value = land where = 1225 }
+    	command = { type = add_division which = "山西陸軍第1師 " value = infantry when = 7 where = artillery }
+    	command = { type = add_division which = "山西陸軍第2師 " value = infantry when = 7 where = heavy_armor }
+    	command = { type = add_division which = "山西陸軍第3師 " value = infantry when = 7 where = super_heavy_armor }
+    	 }
+
+}
+
+event = {
+  id = 700064
+  random = no
+  country = u05
+  trigger = { 
+		NOT = { exists = CSX }
+		control = { province = 1225 data = U05 } #
+		atwar = no
+	}
+  name = "晉系軍閥的末日 "
+  desc = " "
+  style = 0
+
+  date = { day = 1 month = january year = 1926 }
+  offset = 10
+  deathdate = { day = 1 month = december year = 1928 }
+
+  action_a = {
+    	 name = "中央直接管轄山西 "
+	 ai_chance = 100
+    	command = { type = dissent value = -5 }
+    	command = { type = sleepevent which = 700063 }
+    	command = { type = add_corps which = "山西省軍 " value = land where = 1225 }
+    	command = { type = add_division which = "山西陸軍第1師 " value = infantry when = 7 where = artillery }
+    	command = { type = add_division which = "山西陸軍第2師 " value = infantry when = 7 where = heavy_armor }
+    	command = { type = add_division which = "山西陸軍第3師 " value = infantry when = 7 where = super_heavy_armor }
+    	 }
+
+}
+
+
+
+################################
+### # 奉系
+################################
+event = {
+	id = 700065
+	random = no
+	country = U05
+
+
+	trigger = { 
+
+	    	not = { war = { country = U02 country = U05 } 
+	        	ai = U05 }
+		control = { province = 1216 data = U05 } #濟南
+		control = { province = 1228 data = U05 } #鄭州
+		control = { province = 1210 data = U05 } #保定
+		control = { province = 1211 data = U05 } #石家莊
+			OR = { 	not = { garrison = { country = -3 province = 1204 type = land size = 3 area = no } }
+				not = { garrison = { country = -3 province = 1210 type = land size = 3 area = no } }
+				not = { garrison = { country = -3 province = 1211 type = land size = 3 area = no } }
+				not = { garrison = { country = -3 province = 1228 type = land size = 5 area = yes } }
+				not = { garrison = { country = -3 province = 1216 type = land size = 5 area = yes } } 
+				}
+    		}
+
+  	name = "華北空虛 "		
+	desc = "為了應付前線的戰事，我們將華北的軍隊抽調一空。 見此情況的張作霖，似乎正準備出兵奪取華北。 為了因應華北的危機，我們和盟友必須在天津、保定、 石家莊各部署3個師，河南5個師，山東5個師。 "
+	style = 0
+
+	date = { day = 1 month = december year = 1926 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "緊急調兵 "
+		ai_chance = 100
+    		command = { type = setflag which = NorthEmpty }	 
+		}
+}
+
+event = {
+	id = 700066
+	random = no
+	country = U02
+
+	
+	trigger = { 
+		random = 50 
+		event = 700006
+		flag = NorthEmpty
+    		}
+    
+  	name = "奇襲華北 "		
+	desc = "為了應付前線的戰事，直系將華北的軍隊抽調一空。 見此情況的張作霖，決定出兵奪取華北，以報當年 國奉戰爭遭吳佩孚背叛的仇。 "
+	style = 0
+
+	date = { day = 15 month = january year = 1927 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "奪取華北 "
+		ai_chance = 100
+	  	command = { type = sleepevent which = 700065 }
+	  	command = { type = sleepevent which = 700067 }
+	  	command = { type = leave_alliance }
+	  	command = { type = war which = U05 }
+	 	command = { type = max_organization which = land value = 1 }
+        command = { type = morale which = land value = 3 }
+		command = { type = surprise which = land value = 5 }
+		command = { type = end_non_aggression which = U05 where = U02 }
+		}
+}
+
+event = {
+	id = 700067
+	random = no
+	country = U05
+  	persistent = yes
+	trigger = { 
+
+		flag = NorthEmpty
+		AND = { garrison = { country = -3 province = 1204 type = land size = 3 area = no }
+			garrison = { country = -3 province = 1210 type = land size = 3 area = no }
+			garrison = { country = -3 province = 1211 type = land size = 3 area = no }
+			garrison = { country = -3 province = 1228 type = land size = 5 area = yes }
+			garrison = { country = -3 province = 1216 type = land size = 5 area = yes } }
+	    	not = { war = { country = U02 country = U05 }
+			ai = U05 } 
+    		}
+    
+  	name = "危機暫時解除 "		
+	desc = "注意到危險的吳佩孚，緊急將部隊從 前線調回華北，穩定了後方。 "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "很好 "
+		ai_chance = 100
+    		command = { type = clrflag which = NorthEmpty }	 
+		}
+}
+
+event = {
+	id = 700070
+	random = no
+	country = U02
+
+	trigger = { 
+		event = 700006
+		event = 700066
+		flag = CSXnotpuppet 
+ 		not = { war = { country = CSX country = U05 } }
+    		}
+    
+  	name = "反直同盟 "		
+	desc = "。 "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "联络阎锡山 "
+		ai_chance = 99
+    		command = { type = trigger which = 700071 }	 
+		}
+	action_b = {
+		name = "不需要 "
+		ai_chance = 1
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700071
+	random = no
+	country = CSX
+
+    
+  	name = "反直同盟 "		
+	desc = "。 "
+	style = 0
+
+	
+	action_a = {
+		name = "缔结同盟 "
+		ai_chance = 99
+	  	command = { type = leave_alliance }
+		command = { type = end_non_aggression which = U05 where = CSX }
+	  	command = { type = peace which = U02 value = 1 }
+    		command = { type = trigger which = 700072 value = 1 }
+     		command = { type = add_corps which = "晉綏軍第十一军 " value = land where = 1209 }
+     		command = { type = add_division value = infantry when = 7 }
+     		command = { type = add_division value = infantry when = 6 }
+     		command = { type = add_division value = infantry when = 6 }
+     		command = { type = add_corps which = "晉綏軍第十二军 " value = land where = 1225 }
+     		command = { type = add_division value = infantry when = 7 }
+    		command = { type = add_division value = infantry when = 6 }
+     		command = { type = add_division value = infantry when = 6 }	 
+		}
+	action_b = {
+		name = "不需要 "
+		ai_chance = 1
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700072
+	random = no
+	country = CSX
+
+  	name = "聯合反直 "		
+	desc = "。 "
+	style = 0
+	
+	action_a = {
+		name = "進攻 "
+	  	command = { type = war which = U05 }
+	  	command = { type = alliance which = U02 }	 
+		}
+}
+
+event = {
+	id = 700073
+	random = no
+	country = U02
+
+	trigger = { 
+#		event = 700066
+		flag = U05northeast
+		or = { 	
+			and = { control = { province = 1203 data = -2 } 
+                               	control = { province = 2875 data = -2 }
+                               	control = { province = 1397 data = -2 }
+				 } 
+                     	areacontrol = { province = 1389 data = -2 }
+                    	areacontrol = { province = 1390 data = -2 }
+                    	areacontrol = { province = 1379 data = -2 }
+			}
+		  }
+                           
+
+	name = "張作霖撤回關外 "
+	desc = "。 "
+	style = 0
+
+  date = { day = 2 month = may year = 1927 }
+  offset = 5
+  deathdate = { day = 1 month = december year = 1929 }
+
+	action_a = {
+		name = "退回東北 " 
+		command = { type = dissent value = 10 }
+		command = { type = trigger which = 400400 value = 1 }
+		command = { type = trigger which = 700074 value = 5 }
+        command = { type = end_mastery which = U11 }
+        command = { type = non_aggression which = U05 where = U02 }
+		command = { type = morale which = land value = -3 }
+        command = { type = max_organization which = land value = -3 } 
+	    command = { type = peace which = U05 value = 1 } 
+	    command = { type = access which = U05 } 	
+        command = { type = leave_alliance }
+    		command = { type =  remove_division which = 22320 value = 58 }
+    		command = { type =  remove_division which = 22320 value = 59 }
+    		command = { type =  remove_division which = 22320 value = 60 }
+    		command = { type =  remove_division which = 22320 value = 61 }
+    		command = { type =  remove_division which = 22320 value = 62 }
+    		command = { type =  remove_division which = 22320 value = 63 }
+    		command = { type =  remove_division which = 22320 value = 64 }
+    		command = { type =  remove_division which = 22320 value = 65 }
+    		command = { type =  remove_division which = 22320 value = 66 }
+    		command = { type =  remove_division which = 22320 value = 67 } 	}
+}
+
+event = {
+	id =700074
+	random = no
+	country = U02
+
+
+
+	name = "謀求和平 "
+	desc = "1928年6月3日，張作霖撤離北京，乘火車退往瀋陽。 安國軍政府瓦解。6月4日凌晨，張作霖在皇姑屯事件中被炸死。 "
+	style = 0
+
+	action_a = {
+		name = "議和 " 	 
+                command = { type = end_access which = U05 }
+		command = { type = secedeprovince which = U05 value = 1204 } #河北
+		command = { type = secedeprovince which = U05 value = 1205 }
+		command = { type = secedeprovince which = U05 value = 1210 }
+		command = { type = secedeprovince which = U05 value = 1211 }
+		command = { type = secedeprovince which = U05 value = 1212 }
+		command = { type = secedeprovince which = U05 value = 1810 }
+		command = { type = secedeprovince which = U05 value = 1811 }
+		command = { type = secedeprovince which = U05 value = 2748 }
+		command = { type = secedeprovince which = U05 value = 2793 }
+		command = { type = secedeprovince which = U05 value = 2865 }
+		command = { type = secedeprovince which = U05 value = 2866 }
+		command = { type = secedeprovince which = U05 value = 2867 }
+		command = { type = secedeprovince which = U05 value = 2868 }
+		command = { type = secedeprovince which = U05 value = 2869 }
+		command = { type = secedeprovince which = U05 value = 2870 }
+		command = { type = secedeprovince which = U05 value = 2871 }
+		command = { type = secedeprovince which = U05 value = 2872 }
+		command = { type = secedeprovince which = U05 value = 2873 }
+		command = { type = secedeprovince which = U05 value = 2992 }
+		command = { type = secedeprovince which = U05 value = 2993 }
+		command = { type = secedeprovince which = U05 value = 2994 }
+		command = { type = secedeprovince which = U05 value = 2874 }
+		command = { type = secedeprovince which = U05 value = 2875 }
+		command = { type = secedeprovince which = U05 value = 2876 }
+		command = { type = secedeprovince which = U05 value = 2673 }
+		command = { type = secedeprovince which = U05 value = 1203 }
+
+		command = { type = secedeprovince which = U03 value = 1206 } #察哈爾
+		command = { type = secedeprovince which = U03 value = 1386 }
+		command = { type = secedeprovince which = U03 value = 1398 }
+		command = { type = secedeprovince which = U03 value = 1595 }
+		command = { type = secedeprovince which = U03 value = 2881 }
+		command = { type = secedeprovince which = U03 value = 2939 }
+		command = { type = secedeprovince which = U03 value = 2940 }
+		command = { type = secedeprovince which = U03 value = 2941 }
+		command = { type = secedeprovince which = U03 value = 2942 }
+		command = { type = secedeprovince which = U03 value = 2943 }
+		command = { type = secedeprovince which = U03 value = 2944 }
+		command = { type = secedeprovince which = U03 value = 2947 }
+
+		command = { type = secedeprovince which = U03 value = 	1388 } #熱河
+		command = { type = secedeprovince which = U03 value =	1397 }
+		command = { type = secedeprovince which = U03 value =	2878 }
+		command = { type = secedeprovince which = U03 value =	2879 }
+		command = { type = secedeprovince which = U03 value =	2880 }
+		command = { type = secedeprovince which = U03 value =	2882 }
+		command = { type = secedeprovince which = U03 value =	2883 }
+		command = { type = secedeprovince which = U03 value =	2884 }
+		command = { type = secedeprovince which = U03 value =	2885 }
+		command = { type = secedeprovince which = U03 value =	2886 }
+		command = { type = secedeprovince which = U03 value =	2945 }
+		command = { type = secedeprovince which = U03 value =	2946 } 	
+	}
+}
+
+event = {
+  id = 700075
+  random = no
+  country = U05
+  persistent = yes
+  trigger = { 
+		NOT = { event = 700074 }
+		OR = { 
+			atwar = no
+			war = { country = CHC country = U05 }
+		}
+		control = { province = 1269 data = U05 } #西安
+		control = { province = 1271 data = U05 } #延安
+		control = { province = 1227 data = U05 } #洛陽
+		control = { province = 1210 data = U05 } #保定
+		control = { province = 1211 data = U05 } #石家莊
+		control = { province = 1313 data = U05 } #廣州
+		 }
+  
+  name = "進軍冀東 "
+  desc = " "
+  style = 0
+  date = { day = 1 month = january year = 1926 }
+  offset = 30
+  deathdate = { day = 1 month = december year = 1928 }
+  action_a = {
+    	name = "驅逐關內奉系 "
+	ai_chance = 100
+	command = { type = setflag which = U05northeast }
+    	command = { type = sleepevent which = 700075 }
+    	command = { type = sleepevent which = 700065 }
+    	command = { type = sleepevent which = 700067 }
+    	command = { type = war which = u02 }
+    	 }
+
+  action_b = {
+    	 name = "不理他 "
+    	command = { type = sleepevent which = 700075 }
+    	 }	
+
+  action_c = {
+    	 name = "等等 "
+    	command = {  }
+    	 }		
+}
+
+event = {
+        id = 700076
+        random = no
+        country = JAP
+  	
+	trigger = { 
+		OR = { 	lost_national = { country = U11 value = 10 }
+			control = { province = 1894 data = U05 } #
+			control = { province = 2855 data = U05 } #			
+			garrison = { country = U05 province = 1216 type = land size = 3 area = yes } }
+		war = { country = U11 country = U05 }
+		 }    
+                      
+        name = "直系進入山東"
+        desc = "隨著直系進入山東，在其背後的西方 勢力恐怕也會將其觸手伸進山東，危 及我國的利益。為此，我們有必要出 兵干涉位於山東的戰爭。 "
+        style = 0
+  	picture = "japintervene"
+
+	date = { day = 1 month = april year = 1926 }
+  	offset = 2
+ 	deathdate = { day = 1 month = december year = 1930 }
+           
+	action_a = {
+                  name = "出兵干涉"
+             	command = { type = trigger which = 700077 }
+	        command = { type = add_corps which = "第六熊本甲种师团'明' " value = land where = 1215 }
+                command = { type = add_division which = "第11步兵旅团 " value = infantry when = 15 where = artillery }
+                command = { type = add_division which = "第36步兵旅团  " value = infantry when = 15 where = artillery }  
+		}
+}
+
+event = {
+         id = 700077
+         random = no
+         country = U11
+                      
+        name = "日本佔據膠東半島"
+        desc = "隨著直系進入山東，日本害怕在其背 後的 西方勢力也會將其觸手伸進山東，危 及他們的利益。為此，日本決定佔據 膠東半島以維護利益。"
+        style = 0
+  	picture = "japintervene"
+
+           action_a = {
+                  name = "退出該地"
+		command = { type = secedeprovince which = JAP value = 1215 }
+		command = { type = secedeprovince which = JAP value = 2863 }
+		command = { type = secedeprovince which = JAP value = 2859 } 
+		command = { type = secedeprovince which = JAP value = 1214 }
+		command = { type = secedeprovince which = JAP value = 2860 }
+		command = { type = secedeprovince which = JAP value = 2861 }
+		command = { type = secedeprovince which = JAP value = 2862 }
+}
+}
+################################
+### # 西北軍閥
+################################
+
+event = {
+	id = 700080
+	random = no
+	country = U05
+  	persistent = yes
+	trigger = { 
+		event = 700006
+		not = { flag = NorthWest dissent = 10 }
+        control = { province = 1269 data = -1 }
+	    not = { war = { country = U18 country = U05 }
+				war = { country = CXB country = U05 }
+			} 
+    		}
+    
+  	name = "西北軍閥 "		
+	desc = "。 "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 15
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "集結部隊(寶雞駐軍9個師) "
+		ai_chance = 100
+    		command = { type = setflag which = NorthWest }	 
+		}
+	action_b = {
+		name = "等等 "
+		ai_chance = 100
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700081
+	random = no
+	country = U05
+
+	trigger = { 
+		flag = NorthWest
+		garrison = { country = U05 province = 1278 type = land size = 9 area = no } 
+	    	not = { war = { country = U18 country = U05 }
+			war = { country = CXB country = U05 }
+			}  
+    		}
+    
+  	name = "進軍西北 "		
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 3
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "很好 "
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+    		command = { type = war which = CXB }
+    		command = { type = war which = U18 }	 
+		}
+}
+
+event = {
+	id = 700082
+	random = no
+	country = CXB
+
+	trigger = { 
+		OR = { 	flag = NorthWest
+			lost_vp = { country = CXB value = 50 }
+			}
+		war = { country = CXB country = U05 }	  
+    		}
+    
+  	name = "投誠 "		
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "通電 "
+		ai_chance = 100
+    		command = { type = trigger which = 700083 }	 
+		}
+	action_b = {
+		name = "很好 "
+		ai_chance = 0
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700083
+	random = no
+	country = U05
+
+    
+  	name = "青海回軍投誠 "		
+	desc = " "
+	style = 0
+
+	
+	action_a = {
+		name = "要求讓出甘肅省 "
+		ai_chance = 100
+    		command = { type = trigger which = 700084 }
+    		command = { type = peace which = CXB }	 
+		}
+}
+
+event = {
+	id = 700084
+	random = no
+	country = CXB
+
+  	name = "最後通牒 "		
+	desc = " "
+	style = 0
+	
+	action_a = {
+		name = "我們只得接受 "
+		ai_chance = 100
+    		command = { type = trigger which = 700085 value = 1 }
+		command = { type = secedeprovince which = U05 value =	1274	}
+		command = { type = secedeprovince which = U05 value =	1275	}
+		command = { type = secedeprovince which = U05 value =	1276	}
+		command = { type = secedeprovince which = U05 value =	1277	}
+#		command = { type = secedeprovince which = U05 value =	1440	}
+#		command = { type = secedeprovince which = U05 value =	1441	}
+		command = { type = secedeprovince which = U05 value =	2796	}
+		command = { type = secedeprovince which = U05 value =	2797	}
+		command = { type = secedeprovince which = U05 value =	2798	}
+		command = { type = secedeprovince which = U05 value =	2799	}
+		command = { type = secedeprovince which = U05 value =	2800	}
+		command = { type = secedeprovince which = U05 value =	2801	}
+#		command = { type = secedeprovince which = U05 value =	2805	}
+#		command = { type = secedeprovince which = U05 value =	2806	}
+#		command = { type = secedeprovince which = U05 value =	2807	}
+		}
+	action_b = {
+		name = "拒絕 "
+		ai_chance = 0
+    		command = { type = war which = U05 }
+		}
+}
+
+event = {
+	id = 700085
+	random = no
+	country = U05 
+
+  	name = "青海回軍接受 "		
+	desc = " "
+	style = 0
+	
+	action_a = {
+		name = " "
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+#    	command = { type = alliance which = CXB }
+    	command = { type = peace which = CXB }
+		command = { type = non_aggression which = U05 where = CXB }
+		}
+}
+
+event = {
+	id = 700086
+	random = no
+	country = U18
+
+	trigger = { 
+		OR = { 	flag = NorthWest
+			lost_vp = { country = U18 value = 10 }
+			}
+		war = { country = U18 country = U05 }	  
+    		}
+    
+  	name = "投誠 "		
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 5
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "通電 "
+		ai_chance = 100
+    		command = { type = trigger which = 700087 }	 
+		}
+	action_b = {
+		name = "很好 "
+		ai_chance = 0
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700087
+	random = no
+	country = U05
+
+    
+  	name = "寧夏回軍投誠 "		
+	desc = " "
+	style = 0
+
+	
+	action_a = {
+		name = "要求退出綏遠省 "
+		ai_chance = 100
+    		command = { type = trigger which = 700088 }
+    		command = { type = peace which = U18 }	 
+		}
+}
+
+event = {
+	id = 700088
+	random = no
+	country = U18
+
+  	name = "最後通牒 "		
+	desc = " "
+	style = 0
+	
+	action_a = {
+		name = "我們只得接受 "
+		ai_chance = 100
+    	command = { type = trigger which = 700089 value = 1 }
+		command = { type = secedeprovince which = U03 value =	2811	}
+		}
+	action_b = {
+		name = "拒絕 "
+		ai_chance = 0
+    	command = { type = war which = U05 }
+		}
+}
+
+event = {
+	id = 700089
+	random = no
+	country = U05 
+
+  	name = "寧夏回軍接受 "		
+	desc = " "
+	style = 0
+	
+	action_a = {
+		name = " "
+		ai_chance = 100
+		command = { type = dissent value = -1 }
+#    	command = { type = alliance which = U18 }
+    	command = { type = peace which = U18 }
+		command = { type = non_aggression which = U05 where = U18 }
+		}
+}
+
+###########################
+### #中共
+##########################
+
+#剷共行動--第一階段城市
+#剷共行動--第二階段鄉鎮
+
+event = {
+	id = 700090
+	random = no
+	country = U05
+
+	trigger = {
+		event = 700018 
+#		atwar = no
+    		}
+    
+  	name = "剷共行動 "		
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "消滅共產黨 "
+		ai_chance = 100
+    		command = { type = trigger which = 700091 }
+		command = { type = domestic which = freedom value = -1 }
+		command = { type = domestic which = political_left value = -3 }	 
+		command = { type = setflag which = suppressCHC }
+		}
+	action_b = {
+		name = " "
+		ai_chance = 0
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700091
+	random = no
+	country = CHC
+
+    
+  	name = "白色恐怖 "		
+	desc = " "
+	style = 0
+
+	
+	action_a = {
+		name = "我們受到打擊 "
+		ai_chance = 100
+		command = { type = dissent value = 5 } 
+		}
+}
+
+event = {
+	id = 700092
+	random = no
+	country = U05
+
+	trigger = {
+		event = 700018 
+		event = 700016
+		event = 700091
+#		atwar = no
+    		}
+    
+  	name = "搜查蘇俄大使館 "		
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "尋求西方國家支持 "
+		ai_chance = 100
+    		command = { type = trigger which = 700093 }
+    		command = { type = trigger which = 700094 }
+    		command = { type = trigger which = 700095 }
+		}
+	action_b = {
+		name = " "
+		ai_chance = 0
+    		command = {  }	 
+		}
+}
+
+event = {
+	id = 700093
+	random = no
+	country = ENG
+
+	name = "查封蘇俄大使館? "
+	desc = " "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "授權 " 
+		ai_chance = 99
+		command = { type = relation which = U05 value = 10 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = westerndisagree }
+		}
+}
+
+event = {
+	id = 700094
+	random = no
+	country = FRA
+
+	name = "查封蘇俄大使館? "
+	desc = " "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "授權 " 
+		ai_chance = 99
+		command = { type = relation which = U05 value = 10 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = westerndisagree }
+		}
+}
+
+event = {
+	id = 700095
+	random = no
+	country = USA
+
+	name = "查封蘇俄大使館? "
+	desc = " "
+	style = 0
+	picture = "dagukou"
+
+	action_a = {
+		name = "授權 " 
+		ai_chance = 99
+		command = { type = relation which = U05 value = 10 }
+		}
+	action_b = {
+		name = "防止事件进一步恶化 " 
+		ai_chance = 1
+		command = { type = dissent value = 3 }
+		command = { type = domestic which = defense_lobby value = -1 }
+		command = { type = domestic which = interventionism value = -1 }
+		command = { type = setflag which = westerndisagree }
+		}
+}
+
+event = {
+	id = 700096
+	random = no
+	country = U05
+
+	trigger = {
+		event = 700092 
+		NOT = { flag = westerndisagree }
+#		atwar = no
+    		}
+    
+  	name = "查封蘇俄大使館 "		
+	desc = "吳佩孚在北京搜查蘇聯使館，逮捕藏 身其中的李大釗等數十名國共兩黨人士， 並獲取大量蘇聯計劃顛覆中國政府的資料。 "
+	style = 0
+
+	date = { day = 1 month = january year = 1926 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+	
+	action_a = {
+		name = "破壞中共北方區委 "
+		ai_chance = 100
+		command = { type = relation which = SOV value = -100 }
+    		command = { type = trigger which = 700097 }
+    		command = { type = trigger which = 700098 }	 
+		}
+}
+
+event = {
+	id = 700097
+	random = no
+	country = CHC
+
+    
+  	name = "李大釗就義 "		
+	desc = " "
+	style = 0
+
+	
+	action_a = {
+		name = "轉入地下 "
+		ai_chance = 100
+    command = { type = trigger which = 700097 }
+    command = { type = sleepminister which = 1004 } #
+	 
+		}
+}
+
+event = {
+	id = 700098
+	random = no
+	country = SOV
+    
+  	name = "駐華大使館遭查封 "		
+	desc = "吳佩孚在北京搜查蘇聯使館，逮捕藏 身其中的李大釗等數十名國共兩黨人士， 並獲取大量蘇聯計劃顛覆中國政府的資料。 "
+	style = 0
+
+	
+	action_a = {
+		name = "終止兩國外交關係 "
+		ai_chance = 100
+		command = { type = relation which = U05 value = -100 }
+    	command = { type = trigger which = 700097 }	 
+		}
+}
+
+event = {
+	id = 700099
+	random = no
+	country = CHC
+
+	trigger = { 
+		event = 500005
+		event = 700090
+		NOT = { exists = CHI }
+		}
+
+	name = "秋收起义 "
+	desc = "秋收起义，是１９２７年９月在中国湖南、江西边界由中国共产 党彭公达、毛泽东、卢德铭等领导的武装农民起义。八七会议后 湖南省委书记彭公达和中央特派员毛泽东前往湖南组织秋收暴动 。彭公达任总指挥，毛泽东任“前委”书记。起事队伍原计划先 攻克平江、浏阳，然后从包抄长沙，但在平江、浏阳先后失利。 ９月１９日，队伍在浏阳的文家市会师，毛泽东说服大家前往江西萍乡。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 1 month = september year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = september year = 1929 }
+
+	action_a = {
+		name = "农村包围城市！ "
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 2 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+        command = { type = war which = U05 }
+		command = { type = trigger which = 700100 }
+        command = { type = add_corps which = "秋收起義軍 " value = land where = 2688 }
+     	command = { type = activate_division which = 10000 value = 19 where = 2688 when = 1  }
+		command = { type = disorg_division which = 10000 value = 19 where = -1000 }
+        command = { type = add_corps which = "秋收起義軍 " value = land where = 2685 }
+     	command = { type = activate_division which = 10000 value = 23 where = 2685 when = 1  }
+		command = { type = disorg_division which = 10000 value = 23 where = -1000 }
+		}
+}
+
+event = {
+	id = 700100
+	random = no
+	country = U05
+
+	
+
+	name = "秋收起义 "
+	desc = "秋收起义，是１９２７年９月在中国湖南、江西边界由中国共产 党彭公达、毛泽东、卢德铭等领导的武装农民起义。八七会议后 湖南省委书记彭公达和中央特派员毛泽东前往湖南组织秋收暴动 。彭公达任总指挥，毛泽东任“前委”书记。起事队伍原计划先 攻克平江、浏阳，然后从包抄长沙，但在平江、浏阳先后失利。 ９月１９日，队伍在浏阳的文家市会师，毛泽东说服大家前往江西萍乡。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	action_a = {
+		name = "鎮壓 ！ "
+		command = { type = dissent value = 10 }
+                  
+		}
+}
+
+event = {
+	id = 700101
+	random = no
+	country = CHC
+	trigger = { event = 700099
+                    not = { control = { province = 2688 data = CHC } }  }
+	
+
+	name = "秋收起义失敗"
+	desc = "1927年9月初，毛澤東抵達安源，部署起義，9月9日，湘贛邊界秋收起義暴發， 駐修水縣的武漢國民政府警衛團（團長盧德銘是中共黨員）， 安源路礦工人，平江、瀏陽農民義勇軍紛紛起事。各路起義軍先 攻克平江、瀏陽，然後從包抄長沙，但在平江、瀏陽先後失利。 但因收編部隊叛亂及臨時組成的農軍經驗不足，「竟致潰不成軍」。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 11 month = september year = 1927 }
+	offset = 3
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = " 轉進湘贛邊界！ "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -2 }
+        command = { type = max_organization which = land value = -1 }
+		}
+}
+
+event = {
+	id = 700102
+	random = no
+	country = CHC
+
+	name = "南昌起义 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "起义！ "
+		command = { type = trigger which = 700103 value = 15 }
+		command = { type = trigger which = 700104 }    
+        command = { type = war which = u05 }
+        command = { type = war which = UCH }
+        command = { type = leave_alliance }  
+        command = { type = add_corps which = "南昌起義軍 " value = land where = 1251 }
+		command = { type = activate_division which = 10000 value = 18 where = 1251 when = 1  }
+		command = { type = disorg_division which = 10000 value = 18 where = -1000 }
+		command = { type = morale which = land value = 2 }
+        command = { type = max_organization which = land value = 5 } 
+        command = { type = control which = chc value = 1251 }          
+		}
+}
+
+event = {
+	id = 700103
+	random = no
+	country = chc
+
+	name = "南昌起义成功 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "中共夺取了南昌！ "
+		command = { type = secedeprovince which = CHC value = 1251 }
+	    command = { type = morale which = land value = 10 }		}
+}
+
+event = {
+	id = 700104
+	random = no
+	country = CHC
+
+	name = "武裝部隊 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "我们自己的武装！ "
+            command = { type = max_organization which = land value = 10 }
+	        command = { type = morale which = land value = 10 } }
+
+}
+
+event = {
+	id = 700105
+	random = no
+	country = CHC
+
+	trigger = { event = 700102
+		not = { control = { province = 1251 data = CHC } }  }
+	
+    name = "南昌起义失敗 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "撤離南昌！ "
+		command = { type = dissent value = 3 }          
+        command = { type = sleepevent which = 700103 }
+	    command = { type = morale which = land value = -10 }	
+        command = { type = max_organization which = land value = -10 }	}
+}
+
+event = {
+	id = 700106
+	random = no
+	country = CHC
+
+	trigger = { event = 500009 
+                    OR = { control = { province = 2687 data = U05 }
+					control = { province = 2687 data = U06 }
+                    control = { province = 2687 data = UCH } } }
+
+	name = "井冈山根据地建立 "
+	desc = "１９２７年１０月，毛泽东率领经“三湾改编”后的秋收起义部 队到达井冈山，先后在宁冈、永新、茶陵、遂川等县恢复和建立 了党组织，发展武装力量，开展游击战争，领导农民打土豪分田地，建 立红色政权，实行工农武装割据，创立了党领导下的第一个农村 革命根据地。 "
+	style = 0
+	picture = "jinggangshan"
+
+	date = { day = 1 month = october year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "星星之火可以燎原 "
+            command = { type = add_corps which = "井岡山根據地 " value = land where = 2687 }
+     		command = { type = activate_division which = 10000 value = 1 where = 2687 when = 1 }
+			command = { type = disorg_division which = 10000 value = 1 where = -1000 }
+            command = { type = add_corps which = "工農革命軍第一軍 " value = land where = 2687 }
+     		command = { type = activate_division which = 10000 value = 22 where = 2687 when = 1 }
+			command = { type = disorg_division which = 10000 value = 22 where = -1000 }
+			command = { type = morale which = land value = 5 }
+            command = { type = max_organization which = land value = 5 } 
+    		command = { type = extra_tc value = 5 }
+	        command = { type = supplies value = 5000 }
+	        command = { type = free_ic value = 3 }
+	        command = { type = free_money value = 1 }
+	        command = { type = free_supplies value = 5 }
+	        command = { type = free_energy value = 10 }
+	        command = { type = free_metal value = 7 }
+	        command = { type = free_oil value = 0.5 }
+			command = { type = free_rare_materials value = 5 }
+		}
+}
+
+event = {
+	id = 700107
+	random = no
+	country = CHC
+
+	trigger = { event = 700106
+			control = { province = 2687 data = CHC } }	
+
+	name = "井冈山根据地建立 "
+	desc = "１９２７年１０月，毛泽东率领经“三湾改编”后的秋收起义部 队到达井冈山，先后在宁冈、永新、茶陵、遂川等县恢复和建立 了党组织，发展武装力量，开展游击战争，领导农民打土豪分田地，建 立红色政权，实行工农武装割据，创立了党领导下的第一个农村 革命根据地。 "
+	style = 0
+	picture = "jinggangshan"
+
+	date = { day = 1 month = october year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "!! "
+		command = { type = trigger which = 700109 value = 60 }
+		command = { type = secedeprovince which = CHC value = 2687 }
+        command = { type = construct which = land_fort where = 2687 value = 10 }
+        command = { type = construct which = infrastructure where = 2687 value = 30 }
+		command = { type = trigger which = 700108 }
+		 
+		}
+}
+
+event = {
+	id = 700108
+	random = no
+	country = CHC
+
+
+
+	name = "井冈山根据地的堅持 "
+	desc = "井岡山革命根據地，為中國共產黨在湖南、 江西兩省邊界羅霄山脈中段創建的一個農村革命根據地。 它是根據毛澤東「農村包圍城市，武裝奪取政權。」政策 設立的第一個農村革命根據地。 "
+	style = 0
+	picture = "jinggangshan"
+
+
+
+	action_a = {
+		name = "星星之火可以燎原 "
+		command = { type = secedeprovince which = CHC value = 2687 }
+        command = { type = capital which = 2687 }
+		}
+}
+
+event = {
+	id = 700109
+	random = no
+	country = CHC
+	persistent = yes
+	name = "井冈山根据地的堅持 "
+	desc = "1929年5月6日，在特别区委的领导下，由打入丁家埠、 李家集民团内部的共产党员周维炯等率领部分士兵起义。 与此同时，牛食畈、斑竹园、吴家店、南溪等地的农民武装也举行了起义， 并迅速解除了当地民团的武装，控制了商南地区。  "
+	style = 0
+	picture = "jinggangshan"
+
+	action_a = {
+		name = " "
+		command = { type = supplies value = 500 where = 2687 }
+        command = { type = construct which = land_fort where = 2687 value = 10 }
+		command = { type = trigger which = 700109 value = 60 }
+		}
+}
+
+event = {
+	id = 700110
+	random = no
+	country = CHC
+
+	trigger = { event = 700105 }
+
+	name = "湘南起义 "
+	desc = " "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 20 month = february year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = "农村包围城市！ "
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 2 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		command = { type = trigger which = 700111 }
+        command = { type = add_corps which = "工農革命軍第一師 " value = land where = 2681 }
+     	command = { type = activate_division which = 10000 value = 16 where = 2681 when = 1  }
+		command = { type = disorg_division which = 10000 value = 16 where = -1000 }
+		}
+}
+
+event = {
+	id = 700111
+	random = no
+	country = CHI
+
+	
+
+	name = "湘南起义 "
+	desc = "  "
+	style = 0
+	picture = "qiushouqiyi"
+
+	action_a = {
+		name = "鎮壓 ！ "
+		command = { type = dissent value = 5 }
+                  
+		}
+}
+
+event = {
+	id = 700112
+	random = no
+	country = CHC
+	trigger = { event = 700110
+                not = { control = { province = 2681 data = CHC } }  }
+	
+
+	name = "湘南起义失敗"
+	desc = " "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 25 month = february year = 1928 }
+	offset = 5
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = " 轉進湘贛邊界！ "
+		command = { type = morale which = land value = -2 }
+        command = { type = max_organization which = land value = -1 } 
+		}
+}
+
+event = {
+	id = 700113
+	random = no
+	country = CHC
+	trigger = { 	event = 700101 
+			event = 700107 
+			event = 700112 }
+	name = "朱毛會師 "
+	desc = "1928年4月28日南昌起義保留下來的隊伍和 湖南地方武裝，在寧岡縣的礱市同工農革命軍會師。 兩軍會師後，稱「工農革命軍第四軍」。"
+	style = 0
+	date = { day = 27 month = april year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = " "
+		command = { type = morale which = land value = 1 }
+        command = { type = max_organization which = land value = 1 }
+        command = { type = add_corps which = "工農革命軍第四軍" value = land where = 2687 }
+		command = { type = activate_division which = 10000 value = 3 where = 2687 when = 1  }
+     	command = { type = activate_division which = 10000 value = 20 where = 2687 when = 1  }
+     	command = { type = activate_division which = 10000 value = 21 where = 2687 when = 1  }
+		command = { type = disorg_division which = 10000 value = 3 where = -1000 }
+		command = { type = disorg_division which = 10000 value = 20 where = -1000 }
+		command = { type = disorg_division which = 10000 value = 21 where = -1000 }
+		}
+}
+
+####################################
+### #轉換國家
+####################################
+event = {
+	id = 710000
+	random = no
+	country = U05
+	persistent = yes
+
+       	trigger = { 
+		NOT = { exists = CHI } 
+#		atwar = no
+		event = 700074
+		control = { province = 1204 data = -3 } #天津
+		control = { province = 1269 data = -3 } #西安
+		control = { province = 1216 data = -3 } #濟南
+		control = { province = 1227 data = -3 } #洛陽
+		control = { province = 1210 data = -3 } #保定
+		control = { province = 1211 data = -3 } #石家莊
+		control = { province = 1313 data = -3 } #廣州
+		control = { province = 1232 data = -3 } #漢口
+		control = { province = 1235 data = -3 } #南京
+		control = { province = 1237 data = -3 } #上海
+		control = { province = 1360 data = -3 } #成都
+		control = { province = 1280 data = -3 } #重慶
+		 }
+
+  	name = "玉帥入京 "
+	desc = "經過連年內戰，玉帥成功地將大半中國統一在 自己麾下。 "
+	style = 0
+	
+
+	date = { day = 19 month = june year = 1927 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1929 }
+
+	action_a = {
+		name = "改組北洋政府 " 
+    	command = { type = belligerence which = U05 value = -10 }
+	  	command = { type = giveteam which = 4500 where = UCH }
+	  	command = { type = giveteam which = 4501 where = UCH }
+	  	command = { type = giveteam which = 4502 where = UCH }
+	  	command = { type = giveteam which = 4503 where = UCH }
+	  	command = { type = giveteam which = 4504 where = UCH }
+	  	command = { type = giveteam which = 7401 where = UCH }
+	  	command = { type = giveteam which = 2411 where = UCH }
+	  	command = { type = giveteam which = 2412 where = UCH }
+	  	command = { type = giveteam which = 5604 where = UCH }
+      	command = { type = trigger which = 710001 value = 3 }
+     	command = { type = trigger which = 710006 value = 1 }
+      	command = { type = sleepevent which = 710000 }  
+                     }
+	action_b = {
+		name = "暂缓（咱们可以先完成即将完成的科研） " 
+    	command = {  }
+                     }
+}
+
+event = {
+	id = 710006
+	random = no
+	country = U13
+
+
+  	name = "過渡政府 "
+	desc = "經過連年內戰，玉帥成功地將大半中國統一在 自己麾下。 "
+	style = 0
+	
+
+	action_a = {
+		name = "改組北洋政府 " 
+	  	command = { type = giveteam which = 7401 where = UCH }
+           }
+}
+
+event = {
+	id = 710001
+	random = no
+	country = U05
+
+  	name = "北洋再興 "
+	desc = " "
+	style = 0
+	
+
+	action_a = {
+		name = "蒸蒸日上的北洋政府 " 
+      	command = { type = trigger which = 710002 value = 2 }
+      	command = { type = inherit which = U13 } 
+      	command = { type = country which = UCH } 
+                     }
+}
+
+event = {
+	id = 710002
+	random = no
+	country = UCH
+
+  	name = "北洋再興 "
+	desc = " "
+	style = 0
+	
+
+	action_a = {
+		name = "蒸蒸日上的北洋政府 " 
+    	command = { type = capital which = 1205 } 
+		command = { type = dissent value = -10 }
+    	command = { type = belligerence which = UCH value = -30 }
+	  	command = { type = giveteam which = 4500 where = UCH }
+	  	command = { type = giveteam which = 4501 where = UCH }
+	  	command = { type = giveteam which = 4502 where = UCH }
+	  	command = { type = giveteam which = 4503 where = UCH }
+	  	command = { type = giveteam which = 4504 where = UCH }
+	  	command = { type = giveteam which = 7401 where = UCH }
+	  	command = { type = giveteam which = 2411 where = UCH }
+	  	command = { type = giveteam which = 2412 where = UCH }
+	  	command = { type = giveteam which = 5604 where = UCH }
+		command = { type = sleepminister which = 22104 } # 曹錕
+		command = { type = sleepminister which = 22117 } # 蕭耀南
+		command = { type = sleepminister which = 22000 } # 段祺瑞
+		command = { type = sleepminister which = 22001 } #
+		command = { type = sleepminister which = 22010 } # 許世英
+		command = { type = sleepminister which = 22091 } # 閻澤溥
+		command = { type = sleepminister which = 22022 } # 
+		command = { type = sleepminister which = 22101 } # 
+		command = { type = sleepminister which = 22007 } # 
+		command = { type = sleepminister which = 22003 } # 
+		command = { type = sleepleader which = 74000 } # 段祺瑞
+		command = { type = sleepleader which = 74001 } # 徐樹錚
+		command = { type = sleepleader which = 62043 } # 蕭耀南
+
+		
+   command = {  type = addcore which = 2996 }
+   command = {  type = addcore which = 2997 }
+   command = {  type = addcore which = 2998 }
+   command = {  type = addcore which = 2999 }
+   command = {  type = addcore which = 3000 }
+   command = {  type = addcore which = 3464 }
+   command = {  type = addcore which = 3470 }
+   command = {  type = addcore which = 3471 }
+   command = {  type = addcore which = 3472 }
+   command = {  type = addcore which = 3480 }
+   command = {  type = addcore which = 3481 }
+   command = {  type = addcore which = 3767 }
+   command = {  type = addcore which = 3768 }
+   command = {  type = addcore which = 3590 }
+   command = {  type = addcore which = 3591 }
+   command = {  type = addcore which = 3592 }
+   command = {  type = addcore which = 3593 }
+   
+   command = {  type = addcore which = 1235	}
+   command = {  type = addcore which = 2628	}
+   command = {  type = addcore which = 2629	}
+   command = {  type = addcore which = 2627	}
+   command = {  type = addcore which = 2626	}
+   command = {  type = addcore which = 2625	}
+   command = {  type = addcore which = 1236	}
+   command = {  type = addcore which = 1237	}
+   command = {  type = addcore which = 2622	}
+   command = {  type = addcore which = 2623	}
+   command = {  type = addcore which = 2630	}
+
+   command = {  type = addcore which = 2617	}
+   command = {  type = addcore which = 1220	}
+   command = {  type = addcore which = 1218	}
+   command = {  type = addcore which = 2612	}
+   command = {  type = addcore which = 2613	}
+
+   command = {  type = addcore which = 1217	}
+   command = {  type = addcore which = 2610	}
+   command = {  type = addcore which = 2611	}
+   command = {  type = addcore which = 2618	}
+   command = {  type = addcore which = 2619	}
+   command = {  type = addcore which = 2620	}
+   command = {  type = addcore which = 2621	}
+   command = {  type = addcore which = 1219	}
+
+   command = {  type = addcore which = 1222	}
+   command = {  type = addcore which = 2652	}
+   command = {  type = addcore which = 2650	}
+   command = {  type = addcore which = 1875	}
+   command = {  type = addcore which = 2614	}
+
+   command = {  type = addcore which = 1221	}
+   command = {  type = addcore which = 1884	}
+   command = {  type = addcore which = 2615	}
+   command = {  type = addcore which = 1885	}
+   command = {  type = addcore which = 2649	}
+   command = {  type = addcore which = 2648	}
+   command = {  type = addcore which = 1233	}
+   command = {  type = addcore which = 2647	}
+   command = {  type = addcore which = 2646	}
+   command = {  type = addcore which = 2616	}
+
+   command = {  type = addcore which = 1234	}
+   command = {  type = addcore which = 2645	}
+   command = {  type = addcore which = 2633	}
+   command = {  type = addcore which = 2634	}
+   command = {  type = addcore which = 2644	}
+
+   command = {  type = addcore which = 1238	}
+   command = {  type = addcore which = 2631	}
+   command = {  type = addcore which = 2632	}
+   command = {  type = addcore which = 2635	}
+   command = {  type = addcore which = 2642	}
+   command = {  type = addcore which = 2643	}
+
+   command = {  type = addcore which = 1239	}
+   command = {  type = addcore which = 2636	}
+   command = {  type = addcore which = 2624	}
+   command = {  type = addcore which = 2637	}
+   command = {  type = addcore which = 2639	}
+   command = {  type = addcore which = 2638	}
+   command = {  type = addcore which = 1241	}
+   command = {  type = addcore which = 1240	}
+   command = {  type = addcore which = 2640	}
+   command = {  type = addcore which = 2641	}
+
+   command = {  type = addcore which = 1251	}
+   command = {  type = addcore which = 2693	}
+   command = {  type = addcore which = 2694	}
+   command = {  type = addcore which = 2695	}
+   command = {  type = addcore which = 1242	}
+   command = {  type = addcore which = 2696	}
+   command = {  type = addcore which = 2691	}
+   command = {  type = addcore which = 2697	}
+   command = {  type = addcore which = 2692	}
+   command = {  type = addcore which = 2698	}
+   command = {  type = addcore which = 2699	}
+
+   command = {  type = addcore which = 1252	}
+   command = {  type = addcore which = 2688	}
+   command = {  type = addcore which = 2690	}
+   command = {  type = addcore which = 2689	}
+   command = {  type = addcore which = 1254	}
+   command = {  type = addcore which = 2686	}
+   command = {  type = addcore which = 2687	}
+   command = {  type = addcore which = 1250	}
+   command = {  type = addcore which = 2700	}
+
+   command = {  type = addcore which = 1255	}
+   command = {  type = addcore which = 1256	}
+   command = {  type = addcore which = 2685	}
+   command = {  type = addcore which = 2683	}
+   command = {  type = addcore which = 2684	}
+   command = {  type = addcore which = 2682	}
+   command = {  type = addcore which = 2680	}
+   command = {  type = addcore which = 2681	}
+
+   command = {  type = addcore which = 1260	}
+   command = {  type = addcore which = 2670	}
+   command = {  type = addcore which = 2671	}
+   command = {  type = addcore which = 2672	}
+   command = {  type = addcore which = 2673	}
+
+   command = {  type = addcore which = 1257	}
+   command = {  type = addcore which = 2679	}
+   command = {  type = addcore which = 2678	}
+   command = {  type = addcore which = 2676	}
+   command = {  type = addcore which = 1259	}
+   command = {  type = addcore which = 1261	}
+   command = {  type = addcore which = 2677	}
+   command = {  type = addcore which = 2674	}
+
+   command = {  type = addcore which = 1253	}
+   command = {  type = addcore which = 1232	}
+   command = {  type = addcore which = 2660	}
+   command = {  type = addcore which = 2659	}
+   command = {  type = addcore which = 2658	}
+   command = {  type = addcore which = 2661	}
+
+   command = {  type = addcore which = 1886	}
+   command = {  type = addcore which = 1266	}
+   command = {  type = addcore which = 1231	}
+   command = {  type = addcore which = 2667	}
+   command = {  type = addcore which = 2666	}
+   command = {  type = addcore which = 2668	}
+   command = {  type = addcore which = 2669	}
+   command = {  type = addcore which = 1264	}
+
+   command = {  type = addcore which = 2665	}
+   command = {  type = addcore which = 2664	}
+   command = {  type = addcore which = 2663	}
+   command = {  type = addcore which = 2662	}
+   command = {  type = addcore which = 2656	}
+   command = {  type = addcore which = 2657	}
+   command = {  type = addcore which = 2653	}
+   command = {  type = addcore which = 2654	}
+   command = {  type = addcore which = 2655	}
+
+   command = {  type = addcore which = 1280	}
+   command = {  type = addcore which = 2766	}
+   command = {  type = addcore which = 1265	}
+   command = {  type = addcore which = 2767	}
+   command = {  type = addcore which = 2773	}
+   command = {  type = addcore which = 1263	}
+   command = {  type = addcore which = 1889	}
+   command = {  type = addcore which = 2768	}
+   command = {  type = addcore which = 2769	}
+   command = {  type = addcore which = 2770	}
+   command = {  type = addcore which = 2771	}
+   command = {  type = addcore which = 2772	}
+
+   command = {  type = addcore which = 1360	}
+   command = {  type = addcore which = 1279	}
+   command = {  type = addcore which = 2780	}
+   command = {  type = addcore which = 1888	}
+   command = {  type = addcore which = 2651	}
+   command = {  type = addcore which = 1361	}
+   command = {  type = addcore which = 2775	}
+   command = {  type = addcore which = 2774	}
+   command = {  type = addcore which = 2776	}
+   command = {  type = addcore which = 2777	}
+   command = {  type = addcore which = 2778	}
+   command = {  type = addcore which = 1890	}
+   command = {  type = addcore which = 2779	}
+
+   command = {  type = addcore which = 1307	}
+   command = {  type = addcore which = 1362	}
+   command = {  type = addcore which = 2746	}
+   command = {  type = addcore which = 1308	}
+   command = {  type = addcore which = 2747	}
+   command = {  type = addcore which = 1327	}
+   command = {  type = addcore which = 2748	}
+   command = {  type = addcore which = 2749	}
+   command = {  type = addcore which = 2750	}
+   command = {  type = addcore which = 2753	}
+   command = {  type = addcore which = 2754	}
+   command = {  type = addcore which = 2755	}
+
+   command = {  type = addcore which = 1293	}
+   command = {  type = addcore which = 2752	}
+   command = {  type = addcore which = 2751	}
+   command = {  type = addcore which = 1305	}
+   command = {  type = addcore which = 2757	}
+   command = {  type = addcore which = 2765	}
+   command = {  type = addcore which = 1294	}
+   command = {  type = addcore which = 2760	}
+   command = {  type = addcore which = 2763	}
+   command = {  type = addcore which = 2762	}
+   command = {  type = addcore which = 2761	}
+   command = {  type = addcore which = 2756	}
+   command = {  type = addcore which = 2764	}
+   command = {  type = addcore which = 2758	}
+   command = {  type = addcore which = 2759	}
+
+   command = {  type = addcore which = 1364	}
+   command = {  type = addcore which = 1262	}
+   command = {  type = addcore which = 1363	}
+   command = {  type = addcore which = 2744	}
+   command = {  type = addcore which = 2745	}
+   command = {  type = addcore which = 1365	}
+   command = {  type = addcore which = 2737	}
+   command = {  type = addcore which = 2738	}
+   command = {  type = addcore which = 2739	}
+   command = {  type = addcore which = 2740	}
+   command = {  type = addcore which = 2743	}
+   command = {  type = addcore which = 2741	}
+   command = {  type = addcore which = 2742	}
+
+   command = {  type = addcore which = 1244	}
+   command = {  type = addcore which = 2704	}
+   command = {  type = addcore which = 2703	}
+   command = {  type = addcore which = 2701	}
+   command = {  type = addcore which = 1243	}
+   command = {  type = addcore which = 2702	}
+   command = {  type = addcore which = 1246	}
+   command = {  type = addcore which = 1245	}
+   command = {  type = addcore which = 2705	}
+   command = {  type = addcore which = 1247	}
+   command = {  type = addcore which = 2706	}
+
+   command = {  type = addcore which = 1313	}
+   command = {  type = addcore which = 1315	}
+   command = {  type = addcore which = 1316	}
+   command = {  type = addcore which = 2714	}
+   command = {  type = addcore which = 1249	}
+   command = {  type = addcore which = 1248	}
+   command = {  type = addcore which = 2710	}
+   command = {  type = addcore which = 2709	}
+   command = {  type = addcore which = 2708	}
+   command = {  type = addcore which = 1314	}
+   command = {  type = addcore which = 1312	}
+   command = {  type = addcore which = 2711	}
+   command = {  type = addcore which = 2707	}
+
+   command = {  type = addcore which = 1317	}
+   command = {  type = addcore which = 1320	}
+   command = {  type = addcore which = 1325	}
+   command = {  type = addcore which = 2716	}
+   command = {  type = addcore which = 1318	}
+   command = {  type = addcore which = 2715	}
+   command = {  type = addcore which = 2713	}
+   command = {  type = addcore which = 2712	}
+   command = {  type = addcore which = 1321	}
+   command = {  type = addcore which = 2717	}
+   command = {  type = addcore which = 2718	}
+
+   command = {  type = addcore which = 1258	}
+   command = {  type = addcore which = 1310	}
+   command = {  type = addcore which = 2731	}
+   command = {  type = addcore which = 2732	}
+   command = {  type = addcore which = 2733	}
+   command = {  type = addcore which = 2728	}
+   command = {  type = addcore which = 2727	}
+   command = {  type = addcore which = 2729	}
+   command = {  type = addcore which = 2730	}
+   command = {  type = addcore which = 2722	}
+   command = {  type = addcore which = 1309	}
+   command = {  type = addcore which = 2735	}
+   command = {  type = addcore which = 2734	}
+
+   command = {  type = addcore which = 1319	}
+   command = {  type = addcore which = 2723	}
+   command = {  type = addcore which = 2726	}
+   command = {  type = addcore which = 1311	}
+   command = {  type = addcore which = 2736	}
+   command = {  type = addcore which = 2721	}
+   command = {  type = addcore which = 2720	}
+   command = {  type = addcore which = 2719	}
+   command = {  type = addcore which = 2725	}
+   command = {  type = addcore which = 2724	}
+
+   command = {  type = addcore which = 1282	}
+   command = {  type = addcore which = 1281	}
+   command = {  type = addcore which = 2975	}
+   command = {  type = addcore which = 2972	}
+   command = {  type = addcore which = 2973	}
+   command = {  type = addcore which = 1283	}
+   command = {  type = addcore which = 2976	}
+   command = {  type = addcore which = 2977	}
+   command = {  type = addcore which = 2974	}
+   command = {  type = addcore which = 2971	}
+   command = {  type = addcore which = 2968	}
+   command = {  type = addcore which = 2967	}
+   command = {  type = addcore which = 2969	}
+   command = {  type = addcore which = 2970	}
+
+   command = {  type = addcore which = 1216	}
+   command = {  type = addcore which = 2855	}
+   command = {  type = addcore which = 2853	}
+   command = {  type = addcore which = 2854	}
+   command = {  type = addcore which = 2850	}
+   command = {  type = addcore which = 2851	}
+   command = {  type = addcore which = 2852	}
+   command = {  type = addcore which = 1170	}
+   command = {  type = addcore which = 1213	}
+
+   command = {  type = addcore which = 1215	}
+   command = {  type = addcore which = 2864	}
+   command = {  type = addcore which = 2856	}
+   command = {  type = addcore which = 2857	}
+   command = {  type = addcore which = 2858	}
+   command = {  type = addcore which = 2859	}
+   command = {  type = addcore which = 2863	}
+   command = {  type = addcore which = 2862	}
+   command = {  type = addcore which = 2860	}
+   command = {  type = addcore which = 1214	}
+   command = {  type = addcore which = 2861	}
+
+   command = {  type = addcore which = 1205	}
+   command = {  type = addcore which = 1204	}
+   command = {  type = addcore which = 2875	}
+   command = {  type = addcore which = 2876	}
+   command = {  type = addcore which = 2874	}
+   command = {  type = addcore which = 1203	}
+   command = {  type = addcore which = 2873	}
+   command = {  type = addcore which = 2872	}
+   command = {  type = addcore which = 2871	}
+   command = {  type = addcore which = 1810	}
+   command = {  type = addcore which = 2866	}
+   command = {  type = addcore which = 2865	}
+
+   command = {  type = addcore which = 1210	}
+   command = {  type = addcore which = 2870	}
+   command = {  type = addcore which = 2869	}
+   command = {  type = addcore which = 2867	}
+   command = {  type = addcore which = 1211	}
+   command = {  type = addcore which = 2868	}
+   command = {  type = addcore which = 2992	}
+   command = {  type = addcore which = 2993	}
+   command = {  type = addcore which = 1212	}
+   command = {  type = addcore which = 2994	}
+   command = {  type = addcore which = 1811	}
+
+   command = {  type = addcore which = 1225	}
+   command = {  type = addcore which = 2823	}
+   command = {  type = addcore which = 1209	}
+   command = {  type = addcore which = 2819	}
+   command = {  type = addcore which = 2821	}
+   command = {  type = addcore which = 2820	}
+   command = {  type = addcore which = 2822	}
+   command = {  type = addcore which = 2826	}
+   command = {  type = addcore which = 2825	}
+   command = {  type = addcore which = 2827	}
+   command = {  type = addcore which = 2824	}
+
+   command = {  type = addcore which = 2828	}
+   command = {  type = addcore which = 2829	}
+   command = {  type = addcore which = 2830	}
+   command = {  type = addcore which = 2832	}
+   command = {  type = addcore which = 2831	}
+   command = {  type = addcore which = 2833	}
+   command = {  type = addcore which = 2834	}
+   command = {  type = addcore which = 1226	}
+   command = {  type = addcore which = 2837	}
+   command = {  type = addcore which = 2835	}
+   command = {  type = addcore which = 2836	}
+
+   command = {  type = addcore which = 1223	}
+   command = {  type = addcore which = 1228	}
+   command = {  type = addcore which = 2846	}
+   command = {  type = addcore which = 2849	}
+   command = {  type = addcore which = 1876	}
+   command = {  type = addcore which = 2845	}
+   command = {  type = addcore which = 2847	}
+   command = {  type = addcore which = 1230	}
+   command = {  type = addcore which = 2848	}
+
+   command = {  type = addcore which = 1227	}
+   command = {  type = addcore which = 2842	}
+   command = {  type = addcore which = 2840	}
+   command = {  type = addcore which = 2841	}
+   command = {  type = addcore which = 2843	}
+   command = {  type = addcore which = 2844	}
+   command = {  type = addcore which = 1229	}
+   command = {  type = addcore which = 2839	}
+   command = {  type = addcore which = 1224	}
+   command = {  type = addcore which = 2838	}
+
+   command = {  type = addcore which = 1269	}
+   command = {  type = addcore which = 1887	}
+   command = {  type = addcore which = 2786	}
+   command = {  type = addcore which = 2784	}
+   command = {  type = addcore which = 1268	}
+   command = {  type = addcore which = 2783	}
+   command = {  type = addcore which = 1267	}
+   command = {  type = addcore which = 2782	}
+   command = {  type = addcore which = 2781	}
+   command = {  type = addcore which = 1278	}
+   command = {  type = addcore which = 2785	}
+   command = {  type = addcore which = 1270	}
+
+   command = {  type = addcore which = 1271	}
+   command = {  type = addcore which = 2793	}
+   command = {  type = addcore which = 1272	}
+   command = {  type = addcore which = 2794	}
+   command = {  type = addcore which = 2792	}
+   command = {  type = addcore which = 2795	}
+   command = {  type = addcore which = 2791	}
+   command = {  type = addcore which = 2789	}
+   command = {  type = addcore which = 2788	}
+   command = {  type = addcore which = 2790	}
+   command = {  type = addcore which = 2787	}
+
+   command = {  type = addcore which = 1402	}
+   command = {  type = addcore which = 2897	}
+   command = {  type = addcore which = 2898	}
+   command = {  type = addcore which = 1387	}
+   command = {  type = addcore which = 2900	}
+   command = {  type = addcore which = 2899	}
+   command = {  type = addcore which = 2896	}
+   command = {  type = addcore which = 1403	}
+   command = {  type = addcore which = 2894	}
+   command = {  type = addcore which = 2895	}
+
+   command = {  type = addcore which = 1389	}
+   command = {  type = addcore which = 2887	}
+   command = {  type = addcore which = 2888	}
+   command = {  type = addcore which = 1396	}
+   command = {  type = addcore which = 2877	}
+   command = {  type = addcore which = 1395	}
+   command = {  type = addcore which = 1401	}
+   command = {  type = addcore which = 2889	}
+   command = {  type = addcore which = 1202	}
+   command = {  type = addcore which = 2890	}
+
+   command = {  type = addcore which = 1394	}
+   command = {  type = addcore which = 2891	}
+   command = {  type = addcore which = 1377	}
+   command = {  type = addcore which = 2893	}
+   command = {  type = addcore which = 2892	}
+   command = {  type = addcore which = 2907	}
+
+   command = {  type = addcore which = 1390	}
+   command = {  type = addcore which = 1378	}
+   command = {  type = addcore which = 2902	}
+   command = {  type = addcore which = 2901	}
+   command = {  type = addcore which = 2906	}
+   command = {  type = addcore which = 2903	}
+   command = {  type = addcore which = 2904	}
+   command = {  type = addcore which = 2905	}
+   command = {  type = addcore which = 2908	}
+
+   command = {  type = addcore which = 1379	}
+   command = {  type = addcore which = 1375	}
+   command = {  type = addcore which = 2909	}
+   command = {  type = addcore which = 2920	}
+   command = {  type = addcore which = 2919	}
+   command = {  type = addcore which = 2918	}
+   command = {  type = addcore which = 2911	}
+   command = {  type = addcore which = 2910	}
+
+   command = {  type = addcore which = 1374	}
+   command = {  type = addcore which = 2917	}
+   command = {  type = addcore which = 2912	}
+   command = {  type = addcore which = 2916	}
+   command = {  type = addcore which = 2915	}
+   command = {  type = addcore which = 2913	}
+   command = {  type = addcore which = 2914	}
+
+   command = {  type = addcore which = 1380	}
+   command = {  type = addcore which = 2922	}
+   command = {  type = addcore which = 2921	}
+   command = {  type = addcore which = 1623	}
+   command = {  type = addcore which = 2934	}
+   command = {  type = addcore which = 2933	}
+
+   command = {  type = addcore which = 2926	}
+   command = {  type = addcore which = 2929	}
+   command = {  type = addcore which = 1530	}
+   command = {  type = addcore which = 2927	}
+   command = {  type = addcore which = 2930	}
+   command = {  type = addcore which = 1381	}
+   command = {  type = addcore which = 2923	}
+   command = {  type = addcore which = 2925	}
+   command = {  type = addcore which = 2924	}
+   command = {  type = addcore which = 2928	}
+   command = {  type = addcore which = 2818	}
+
+   command = {  type = addcore which = 1382	}
+   command = {  type = addcore which = 2935	}
+   command = {  type = addcore which = 1779	}
+   command = {  type = addcore which = 2938	}
+   command = {  type = addcore which = 2931	}
+   command = {  type = addcore which = 2932	}
+   command = {  type = addcore which = 2937	}
+   command = {  type = addcore which = 2936	}
+
+   command = {  type = addcore which = 1206	}
+   command = {  type = addcore which = 1595	}
+   command = {  type = addcore which = 2947	}
+   command = {  type = addcore which = 2944	}
+   command = {  type = addcore which = 2942	}
+   command = {  type = addcore which = 2943	}
+
+   command = {  type = addcore which = 1386	}
+   command = {  type = addcore which = 2941	}
+   command = {  type = addcore which = 2939	}
+   command = {  type = addcore which = 2940	}
+   command = {  type = addcore which = 1398	}
+
+   command = {  type = addcore which = 1397	}
+   command = {  type = addcore which = 2882	}
+   command = {  type = addcore which = 2886	}
+   command = {  type = addcore which = 2946	}
+   command = {  type = addcore which = 2945	}
+   command = {  type = addcore which = 2879	}
+   command = {  type = addcore which = 2878	}
+
+   command = {  type = addcore which = 1388	}
+   command = {  type = addcore which = 2881	}
+   command = {  type = addcore which = 2880	}
+   command = {  type = addcore which = 2883	}
+   command = {  type = addcore which = 2884	}
+   command = {  type = addcore which = 2885	}
+
+   command = {  type = addcore which = 1208	}
+   command = {  type = addcore which = 1207	}
+   command = {  type = addcore which = 2816	}
+   command = {  type = addcore which = 2813	}
+   command = {  type = addcore which = 2812	}
+   command = {  type = addcore which = 2811	}
+
+   command = {  type = addcore which = 1439	}
+   command = {  type = addcore which = 2814	}
+   command = {  type = addcore which = 2815	}
+   command = {  type = addcore which = 2817	}
+
+   command = {  type = addcore which = 1273	}
+   command = {  type = addcore which = 2803	}
+   command = {  type = addcore which = 2810	}
+   command = {  type = addcore which = 2802	}
+   command = {  type = addcore which = 2804	}
+   command = {  type = addcore which = 2808	}
+   command = {  type = addcore which = 2809	}
+
+   command = {  type = addcore which = 1276	}
+   command = {  type = addcore which = 2796	}
+   command = {  type = addcore which = 1274	}
+   command = {  type = addcore which = 1275	}
+   command = {  type = addcore which = 2797	}
+   command = {  type = addcore which = 1277	}
+   command = {  type = addcore which = 2798	}
+   command = {  type = addcore which = 2799	}
+   command = {  type = addcore which = 2801	}
+   command = {  type = addcore which = 2800	}
+
+   command = {  type = addcore which = 2806	}
+   command = {  type = addcore which = 2805	}
+   command = {  type = addcore which = 2807	}
+   command = {  type = addcore which = 1440	}
+   command = {  type = addcore which = 1441	}
+
+   command = {  type = addcore which = 1443	}
+   command = {  type = addcore which = 1442	}
+   command = {  type = addcore which = 2955	}
+   command = {  type = addcore which = 2956	}
+   command = {  type = addcore which = 2957	}
+   command = {  type = addcore which = 2958	}
+   command = {  type = addcore which = 2961	}
+
+   command = {  type = addcore which = 1444	}
+   command = {  type = addcore which = 2963	}
+   command = {  type = addcore which = 2962	}
+   command = {  type = addcore which = 2960	}
+   command = {  type = addcore which = 2959	}
+
+   command = {  type = addcore which = 1453	}
+   command = {  type = addcore which = 1450	}
+   command = {  type = addcore which = 2965	}
+   command = {  type = addcore which = 2966	}
+   command = {  type = addcore which = 1452	}
+   command = {  type = addcore which = 2964	}
+   command = {  type = addcore which = 1448	}
+   command = {  type = addcore which = 1451	}
+   command = {  type = addcore which = 2675	}
+
+   command = {  type = addcore which = 1433	}
+   command = {  type = addcore which = 1435	}
+   command = {  type = addcore which = 1432	}
+   command = {  type = addcore which = 2983	}
+   command = {  type = addcore which = 1421	}
+   command = {  type = addcore which = 2984	}
+   command = {  type = addcore which = 2985	}
+   command = {  type = addcore which = 2980	}
+   command = {  type = addcore which = 2982	}
+   command = {  type = addcore which = 2981	}
+
+   command = {  type = addcore which = 1431	}
+   command = {  type = addcore which = 1430	}
+   command = {  type = addcore which = 2986	}
+   command = {  type = addcore which = 1447	}
+   command = {  type = addcore which = 2979	}
+   command = {  type = addcore which = 2978	}
+   command = {  type = addcore which = 1445	}
+   command = {  type = addcore which = 1446	}
+   command = {  type = addcore which = 2987	}
+   command = {  type = addcore which = 2988	}
+   command = {  type = addcore which = 2989	}
+
+   command = {  type = addcore which = 1404	}
+   command = {  type = addcore which = 2950	}
+   command = {  type = addcore which = 2951	}
+   command = {  type = addcore which = 2949	}
+   command = {  type = addcore which = 1385	}
+   command = {  type = addcore which = 1399	}
+   command = {  type = addcore which = 1438	}
+   command = {  type = addcore which = 1437	}
+   command = {  type = addcore which = 2948	}
+
+   command = {  type = addcore which = 1418	}
+   command = {  type = addcore which = 2952	}
+   command = {  type = addcore which = 2953	}
+   command = {  type = addcore which = 1419	}
+   command = {  type = addcore which = 1420	}
+   command = {  type = addcore which = 2954	}
+   command = {  type = addcore which = 1434	}
+   command = {  type = addcore which = 1436	}
+
+   command = {  type = addcore which = 1323	}
+   command = {  type = addcore which = 2990	}
+   command = {  type = addcore which = 1324	}
+   command = {  type = addcore which = 1322	}
+   command = {  type = addcore which = 2991	}
+   command = {  type = addcore which = 2995	}
+   command = {  type = addcore which = 1894	}
+   command = {  type = addcore which = 2605	}
+   command = {  type = addcore which = 2606	}
+   command = {  type = addcore which = 2607	}
+   command = {  type = addcore which = 2608	}
+   command = {  type = addcore which = 2609	}
+   command = {  type = addcore which = 3594	}
+                     }
+}
+
+event = {
+	id = 710003
+	random = no
+	country = UCH
+
+       	trigger = { 
+		event = 710002
+		 }
+
+  	name = "中華民國大總統選舉 "
+	desc = "自段祺瑞的臨時政府垮台後，大總統的位子已 空懸多日。如今，中央政府的威信已重新建立 ，國會議員決定組織總統選舉會，選出下一任 的中華民國大總統。 "
+	style = 0
+
+	date = { day = 1 month = january year = 1927 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "選舉吳佩孚為大總統 " 
+     		command = { type = headofstate which = 22103 } #吳佩孚
+      		command = { type = trigger which = 710004 value = 1 } 
+		
+                     }
+}
+
+event = {
+	id = 710004
+	random = no
+	country = UCH
+
+  	name = "中華民國國務總理人選 "
+	desc = " "
+	style = 0
+	
+
+	action_a = {
+		name = "提名王寵惠組閣 " 
+     		command = { type = headofgovernment which = 22121 } #王寵惠
+      		command = { type = foreignminister which = 22035 } #顧維鈞
+      		command = { type = armamentminister which = 22012 } #陳錦濤
+      		command = { type = ministerofsecurity which = 22027 } #張國淦
+     		command = { type = ministerofintelligence which = 22125 } #孫丹林   
+            command = { type = chiefofarmy which = 22113 } #靳雲鄂
+            command = { type = chiefofstaff which = 22115 } #齊燮元
+#           command = { type = chiefofnavy which = 22100 } #杜锡珪
+            command = { type = chiefofnavy which = 16120 } #
+		}
+	action_b = {
+		name = "提名孫寶琦組閣 " 
+     		command = { type = headofgovernment which = 22122 } #孫寶琦
+      		command = { type = foreignminister which = 22035 } #顧維鈞
+      		command = { type = armamentminister which = 22012 } #陳錦濤
+      		command = { type = ministerofsecurity which = 22027 } #張國淦
+     		command = { type = ministerofintelligence which = 22125 } #孫丹林  
+            command = { type = chiefofarmy which = 22113 } #靳雲鄂
+            command = { type = chiefofstaff which = 22115 } #齊燮元
+#           command = { type = chiefofnavy which = 22100 } #杜锡珪
+			command = { type = chiefofnavy which = 16120 } #
+                     }
+}
+

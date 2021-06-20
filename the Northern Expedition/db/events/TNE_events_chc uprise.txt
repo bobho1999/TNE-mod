@@ -1,0 +1,890 @@
+###############################
+##中共起義
+###############################
+#平江起義
+
+
+event = {
+	id = 500000
+	random = no
+	country = CHC
+
+	trigger = { exists = chc
+		event = 1927010 }
+
+	name = "南昌起义 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	date = { day = 0 month = august year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = september year = 1927 }
+
+	action_a = {
+		name = "起义！ "
+		command = { type = trigger which = 500001 value = 15 }
+		command = { type = trigger which = 500002 }
+        command = { type = war which = u08 }    
+        command = { type = war which = u04 }
+        command = { type = war which = chi }
+        command = { type = leave_alliance }
+	 	command = { type = peace which = u02 value = 1 } 
+	 	command = { type = peace which = u17 value = 1 }  
+		command = { type = remove_division which = 22000 value = 100082 } 
+        command = { type = add_corps which = "南昌起義軍 " value = land where = 1251 }
+		command = { type = activate_division which = 10000 value = 18 where = 1251 when = 1  }
+		command = { type = disorg_division which = 10000 value = 18 where = -1000 }
+		command = { type = morale which = land value = 2 }
+        command = { type = max_organization which = land value = 5 } 
+        command = { type = control which = chc value = 1251 }          
+		}
+}
+
+event = {
+	id = 500001
+	random = no
+	country = chc
+
+	name = "南昌起义成功 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "中共夺取了南昌！ "
+		command = { type = secedeprovince which = CHC value = 1251 }
+	    command = { type = morale which = land value = 20 }		}
+}
+
+event = {
+	id = 500002
+	random = no
+	country = CHC
+
+	name = "武裝部隊 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	action_a = {
+		name = "我们自己的武装！ "
+            command = { type = max_organization which = land value = 10 }
+	        command = { type = morale which = land value = 10 } }
+
+}
+
+event = {
+	id = 500004
+	random = no
+	country = CHC
+
+	trigger = { event = 500000
+                    not = { control = { province = 1251 data = CHC } }  }
+	
+    name = "南昌起义失敗 "
+	desc = "八一南昌起义通称南昌起义，又称南昌暴动，是１９２７年８月 １日中国共产党针对中国国民党的武力清党政策在江西南昌发动 的武装暴动。本事件使中国共产党开始拥有完全在其控制之下的 武装力量，是共产党武力夺取政权的开端。 "
+	style = 0
+	picture = "nanchangqiyi"
+
+	date = { day = 1 month = August year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "撤離南昌！ "
+		command = { type = dissent value = 3 }
+        command = { type = peace which = CHI value = 0 } 
+        command = { type = peace which = u08 value = 0 }
+        command = { type = peace which = u04 value = 0 }           
+        command = { type = sleepevent which = 500001 }
+	    command = { type = morale which = land value = -10 }	
+        command = { type = max_organization which = land value = -10 }	}
+}
+
+event = {
+	id = 500005
+	random = no
+	country = CHC
+
+	trigger = { OR = { event = 700105 event = 500004 } }
+
+	name = "八七会议 "
+	desc = "八七会议是对中国共产党于１９２７年８月７日在汉口举行的中 央紧急会议的称呼。会议确定了今后的总方针：土地革命和武装 反抗国民党。毛泽东在会上提出了“枪杆子里面出政权”的著名 论断。这次会议是中国共产党历史的一个转折点。 "
+	style = 0
+	picture = "baqihuiyi"
+
+	date = { day = 6 month = August year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1928 }
+
+
+	action_a = {
+		name = "枪杆子里出政权！ "
+		command = { type = max_organization which = land value = 5 }
+		command = { type = morale which = land value = 5 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+		}
+}
+
+event = {
+	id = 500006
+	random = no
+	country = CHC
+
+	trigger = { event = 500005
+			event = 1927010
+		exists = CHI }
+
+	name = "秋收起义 "
+	desc = "秋收起义，是１９２７年９月在中国湖南、江西边界由中国共产 党彭公达、毛泽东、卢德铭等领导的武装农民起义。八七会议后 湖南省委书记彭公达和中央特派员毛泽东前往湖南组织秋收暴动 。彭公达任总指挥，毛泽东任“前委”书记。起事队伍原计划先 攻克平江、浏阳，然后从包抄长沙，但在平江、浏阳先后失利。 ９月１９日，队伍在浏阳的文家市会师，毛泽东说服大家前往江西萍乡。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 1 month = september year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = september year = 1927 }
+
+	action_a = {
+		name = "农村包围城市！ "
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 2 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+        command = { type = war which = chi }
+        command = { type = war which = U10 }
+		command = { type = trigger which = 500007 }
+#       command = { type = capital which = 4000 }
+        command = { type = add_corps which = "秋收起義軍 " value = land where = 2688 }
+		command = { type = activate_division which = 10000 value = 19 where = 2688 when = 1  }
+		command = { type = disorg_division which = 10000 value = 19 where = -1000 }
+#       command = { type = add_corps which = "秋收起義軍 " value = land where = 2685 }
+#		command = { type = add_division which = "起義軍" value = militia when = 1  where = engineer }
+		}
+}
+
+event = {
+	id = 500007
+	random = no
+	country = CHI
+
+	
+
+	name = "秋收起义 "
+	desc = "秋收起义，是１９２７年９月在中国湖南、江西边界由中国共产 党彭公达、毛泽东、卢德铭等领导的武装农民起义。八七会议后 湖南省委书记彭公达和中央特派员毛泽东前往湖南组织秋收暴动 。彭公达任总指挥，毛泽东任“前委”书记。起事队伍原计划先 攻克平江、浏阳，然后从包抄长沙，但在平江、浏阳先后失利。 ９月１９日，队伍在浏阳的文家市会师，毛泽东说服大家前往江西萍乡。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	action_a = {
+		name = "鎮壓 ！ "
+		command = { type = dissent value = 5 }
+                  
+		}
+}
+
+event = {
+	id = 500008
+	random = no
+	country = CHC
+	trigger = { event = 500006
+                    not = { control = { province = 2688 data = CHC } }  }
+	
+
+	name = "秋收起义失敗"
+	desc = "1927年9月初，毛澤東抵達安源，部署起義，9月9日，湘贛邊界秋收起義暴發， 駐修水縣的武漢國民政府警衛團（團長盧德銘是中共黨員）， 安源路礦工人，平江、瀏陽農民義勇軍紛紛起事。各路起義軍先 攻克平江、瀏陽，然後從包抄長沙，但在平江、瀏陽先後失利。 但因收編部隊叛亂及臨時組成的農軍經驗不足，「竟致潰不成軍」。 "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 11 month = september year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = " 轉進湘贛邊界！ "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -2 }
+        command = { type = max_organization which = land value = -1 }
+        command = { type = peace which = CHI value = 0 }
+        command = { type = peace which = U10 value = 0 } 
+		command = { type = secedeprovince which = CHI value = 2688 }
+		}
+}
+
+event = {
+	id = 500009
+	random = no
+	country = CHC
+
+	trigger = { 
+		OR = { event = 500008 event = 700101 }
+		}
+
+	name = "三灣改編 "
+	desc = "三灣改編是由中共在秋收暴動失敗後對殘餘部隊的一次整編， 此次改編是確定之後中共軍隊「黨指揮槍」的開始。 "
+	style = 0
+
+	date = { day = 28 month = september year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = " 黨指揮槍！ "
+		command = { type = morale which = land value = 10 }
+        command = { type = max_organization which = land value = 5 } 
+		}
+}
+event = {
+	id = 500010
+	random = no
+	country = CHC
+
+	trigger = { event = 500009 
+                    control = { province = 2687 data = CHI } }
+
+	name = "井冈山根据地建立 "
+	desc = "１９２７年１０月，毛泽东率领经“三湾改编”后的秋收起义部 队到达井冈山，先后在宁冈、永新、茶陵、遂川等县恢复和建立 了党组织，发展武装力量，开展游击战争，领导农民打土豪分田地，建 立红色政权，实行工农武装割据，创立了党领导下的第一个农村 革命根据地。 "
+	style = 0
+	picture = "jinggangshan"
+
+	date = { day = 1 month = october year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "星星之火可以燎原 "
+		command = { type = morale which = land value = 1 }
+		command = { type = trigger which = 500011 } 
+		}
+}
+
+event = {
+	id = 500011
+	random = no
+	country = CHI
+
+	
+
+	name = "井冈山根据地建立 "
+	desc = "１９２７年１０月，毛泽东率领经“三湾改编”后的秋收起义部 队到达井冈山，先后在宁冈、永新、茶陵、遂川等县恢复和建立 了党组织，发展武装力量，开展游击战争，领导农民打土豪分田地，建 立红色政权，实行工农武装割据，创立了党领导下的第一个农村 革命根据地。 "
+	style = 0
+	picture = "jinggangshan"
+
+
+
+	action_a = {
+		name = "剿匪!! "
+		command = { type = secedeprovince which = CHC value = 2687 }
+		command = { type = trigger which = 500012  }
+		 
+		}
+}
+
+event = {
+	id = 500012
+	random = no
+	country = CHC
+
+	trigger = { event = 500011 }
+
+	name = "井冈山根据地的堅持 "
+	desc = "井岡山革命根據地，為中國共產黨在湖南、 江西兩省邊界羅霄山脈中段創建的一個農村革命根據地。 它是根據毛澤東「農村包圍城市，武裝奪取政權。」政策 設立的第一個農村革命根據地。 "
+	style = 0
+	picture = "jinggangshan"
+
+
+
+	action_a = {
+		name = "星星之火可以燎原 "
+		command = { type = trigger which = 500024 value = 30 }
+		command = { type = trigger which = 500029 value = 180 }
+		command = { type = supplies value = 10000 where = 2687 }
+#       command = { type = add_corps which = "南昌起義軍 " value = land where = 2687 }
+#		command = { type = add_division which = "起義軍" value = militia when = 3  } 
+        command = { type = add_corps which = "井岡山根據地 " value = land where = 2687 }
+		command = { type = activate_division which = 10000 value = 1 where = 2687 when = 1 }
+        command = { type = construct which = land_fort where = 2687 value = 10 }
+		command = { type = morale which = land value = 10 }
+        command = { type = max_organization which = land value = 5 } 
+        command = { type = capital which = 2687 }
+	    command = { type = supplies value = 10000 }
+#	    command = { type = free_ic value = 3 }
+	    command = { type = free_money value = 1 }
+	    command = { type = free_supplies value = 5 }
+	    command = { type = free_energy value = 10 }
+	    command = { type = free_metal value = 5 }
+	    command = { type = free_oil value = 1 }
+		command = { type = free_rare_materials value = 5 }
+		command = { type = non_aggression which = chc where = U02 }
+        command = { type = non_aggression which = chc where = U03 }
+        command = { type = non_aggression which = chc where = CSX }
+        command = { type = non_aggression which = chc where = CGX }
+        command = { type = non_aggression which = chc where = U10 }
+        command = { type = non_aggression which = chc where = U20 }		}
+}
+
+event = {
+	id = 500024
+	random = no
+	country = CHC
+	persistent = yes
+	name = "井冈山根据地的堅持 "
+	desc = "1929年5月6日，在特别区委的领导下，由打入丁家埠、 李家集民团内部的共产党员周维炯等率领部分士兵起义。 与此同时，牛食畈、斑竹园、吴家店、南溪等地的农民武装也举行了起义， 并迅速解除了当地民团的武装，控制了商南地区。  "
+	style = 0
+	picture = "jinggangshan"
+
+	action_a = {
+		name = " "
+		command = { type = supplies value = 500 where = 2687 }
+		command = { type = trigger which = 500024 value = 90 }
+		}
+}
+#############鄂豫皖根據地######################
+event = {
+	id = 500013
+	random = no
+	country = CHC
+	trigger = { event = 500005 }
+
+	name = "黃麻起義 "
+	desc = "1927年11月13日，中国湖北省黄安（今红安）、 麻城三万余名农民自卫军和义勇军在党的“八七”会议 精神指引下和中共湖北省委领导下，攻打黄安县城， 打响了鄂豫皖地区武装反抗国民党右派的第一枪， 正式成立了黄安农民政府，组建了工农革命军鄂东军， 史称“黄麻起义”。 "
+	style = 0
+
+
+	date = { day = 12 month = november year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "起義 "
+		command = { type = trigger which = 500014  }
+		}
+}
+
+event = {
+	id = 500014
+	random = no
+	country = CGX
+
+
+	name = "黃麻暴動 "
+	desc = "1927年11月13日，中国湖北省黄安（今红安）、 麻城三万余名农民自卫军和义勇军在党的“八七”会议 精神指引下和中共湖北省委领导下，攻打黄安县城， 打响了鄂豫皖地区武装反抗国民党右派的第一枪， 正式成立了黄安农民政府，组建了工农革命军鄂东军， 史称“黄麻起义”。 "
+	style = 0
+
+
+	action_a = {
+		name = "剿匪!! "
+		command = { type = secedeprovince which = CHC value = 2653 }
+		command = { type = trigger which = 500015  }
+		}
+}
+
+event = {
+	id = 500015
+	random = no
+	country = CHC
+
+	name = "武裝部隊 "
+	desc = "1927年11月13日，中国湖北省黄安（今红安）、 麻城三万余名农民自卫军和义勇军在党的“八七”会议 精神指引下和中共湖北省委领导下，攻打黄安县城， 打响了鄂豫皖地区武装反抗国民党右派的第一枪， 正式成立了黄安农民政府，组建了工农革命军鄂东军， 史称“黄麻起义”。 "
+	style = 0
+
+
+	action_a = {
+		name = "起義 "
+        command = { type = add_corps which = "黃麻游擊隊 " value = land where = 2653 }
+		command = { type = add_division which = "黃麻游擊隊" value = militia when = 3  } 
+		command = { type = supplies value = 1500 where = 2653 }
+		}
+}
+
+event = {
+	id = 500016
+	random = no
+	country = CHC
+	trigger = { event = 500005 }
+
+	name = "商南起義 "
+	desc = "1929年5月6日，在特别区委的领导下，由打入丁家埠、 李家集民团内部的共产党员周维炯等率领部分士兵起义。 与此同时，牛食畈、斑竹园、吴家店、南溪等地的农民武装也举行了起义， 并迅速解除了当地民团的武装，控制了商南地区。 "
+	style = 0
+
+
+	date = { day = 5 month = may year = 1929 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "起義 "
+		command = { type = trigger which = 500017  }
+		}
+}
+
+event = {
+	id = 500017
+	random = no
+	country = U03
+
+
+	name = "商南暴動 "
+	desc = "1929年5月6日，在特别区委的领导下，由打入丁家埠、 李家集民团内部的共产党员周维炯等率领部分士兵起义。 与此同时，牛食畈、斑竹园、吴家店、南溪等地的农民武装也举行了起义， 并迅速解除了当地民团的武装，控制了商南地区。  "
+	style = 0
+
+
+
+
+	action_a = {
+		name = "剿匪!! "
+		command = { type = secedeprovince which = CHC value = 2848 }
+		command = { type = trigger which = 500018  }
+		}
+}
+
+event = {
+	id = 500018
+	random = no
+	country = CHC
+
+	name = "武裝部隊 "
+	desc = "1929年5月6日，在特别区委的领导下，由打入丁家埠、 李家集民团内部的共产党员周维炯等率领部分士兵起义。 与此同时，牛食畈、斑竹园、吴家店、南溪等地的农民武装也举行了起义， 并迅速解除了当地民团的武装，控制了商南地区。  "
+	style = 0
+
+
+	action_a = {
+		name = "起義 "
+        command = { type = add_corps which = "商城游擊隊 " value = land where = 2848 }
+		command = { type = add_division which = "商城游擊隊" value = militia when = 3  } 
+		command = { type = supplies value = 1000 where = 2648 }
+		}
+}
+
+event = {
+	id = 500019
+	random = no
+	country = CHC
+	trigger = { event = 500005 }
+
+	name = "六安起義 "
+	desc = "皖西的六安、霍山，与鄂东北、豫东南接壤。 “八七会议”后，中共安徽临时省委，把六安、霍山、霍邱、寿县、 英山划为第一起义区，并以六安为中心发动武装起义。 1929年11月7日从独山镇起义开始，到1930年2月1日解放了霍山县城， 建立了工农红军第三十三师，逐渐形成了皖西北革命根据地。"
+	style = 0
+
+
+	date = { day = 6 month = november year = 1929 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+	name = "起義 "
+	command = { type = trigger which = 500020  }
+		}
+}
+
+event = {
+	id = 500020
+	random = no
+	country = CHI
+
+
+	name = "六安暴動 "
+	desc = "皖西的六安、霍山，与鄂东北、豫东南接壤。 “八七会议”后，中共安徽临时省委，把六安、霍山、霍邱、寿县、 英山划为第一起义区，并以六安为中心发动武装起义。 1929年11月7日从独山镇起义开始，到1930年2月1日解放了霍山县城， 建立了工农红军第三十三师，逐渐形成了皖西北革命根据地。"
+	style = 0
+
+
+
+
+	action_a = {
+		name = "剿匪!! "
+		command = { type = secedeprovince which = CHC value = 1885 }
+		command = { type = trigger which = 500021  }
+		}
+}
+
+event = {
+	id = 500021
+	random = no
+	country = CHC
+
+	name = "武裝部隊 "
+	desc = "皖西的六安、霍山，与鄂东北、豫东南接壤。 “八七会议”后，中共安徽临时省委，把六安、霍山、霍邱、寿县、 英山划为第一起义区，并以六安为中心发动武装起义。 1929年11月7日从独山镇起义开始，到1930年2月1日解放了霍山县城， 建立了工农红军第三十三师，逐渐形成了皖西北革命根据地。 "
+	style = 0
+
+
+	action_a = {
+		name = "起義 "
+        command = { type = add_corps which = "六安游擊隊 " value = land where = 1885 }
+		command = { type = add_division which = "六安游擊隊" value = militia when = 3  } 
+		command = { type = supplies value = 1000 where = 1885 }
+		}
+}
+
+event = {
+	id = 500022
+	random = no
+	country = CHC
+	trigger = { event = 500013 
+		event = 500016 
+		event = 500019 }
+	name = "鄂豫皖根據地形成 "
+	desc = ""
+	style = 0
+	date = { day = 1 month = april year = 1930 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "起義 "
+        command = { type = add_corps which = "鄂豫皖根據地 " value = land where = 2648 }
+		command = { type = activate_division which = 10000 value = 2 where = 2648 when = 1  }
+        command = { type = add_corps which = "工农红军第四军  " value = land where = 2648 }
+		command = { type = activate_division which = 10000 value = 4 where = 2648 when = 1  }
+        command = { type = add_corps which = "工农红军第二十五军  " value = land where = 2648 }
+		command = { type = activate_division which = 10000 value = 5 where = 2648 when = 1  }
+        command = { type = add_corps which = "商城游擊隊 " value = land where = 2648 }
+		command = { type = add_division which = "商城游擊隊" value = militia when = 3  } 
+        command = { type = add_corps which = "黃麻游擊隊 " value = land where = 2653 }
+		command = { type = add_division which = "黃麻游擊隊" value = militia when = 3  }
+        command = { type = add_corps which = "六安游擊隊 " value = land where = 1885 }
+		command = { type = add_division which = "六安游擊隊" value = militia when = 3  }  
+        command = { type = construct which = land_fort where = 2648 value = 8 }
+		command = { type = supplies value = 1000 where = 2648 }
+		command = { type = trigger which = 500023  }
+		}
+}
+
+event = {
+	id = 500023
+	random = no
+	country = CHC
+	persistent = yes
+	name = "鄂豫皖根據地的堅持 "
+	desc = " "
+	style = 0
+
+
+	action_a = {
+		name = " "
+		command = { type = supplies value = 1000 where = 2648 }
+		command = { type = trigger which = 500023 value = 120 }
+		}
+}
+###################廣州暴動 500025~500029#######################################
+event = {
+	id = 500025
+	random = no
+	country = CHC
+	trigger = { event = 1927025 }
+
+	name = "廣州起義 "
+	desc = " "
+	style = 0
+
+
+	date = { day = 10 month = december year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = "起義 "
+		command = { type = trigger which = 500026  }
+        command = { type = end_non_aggression which = chc where = U20 }
+        command = { type = war which = u20 }
+		}
+}
+
+event = {
+	id = 500026
+	random = no
+	country = U20
+
+
+	name = "廣州暴動 "
+	desc = " "
+	style = 0
+
+
+	action_a = {
+		name = "剿匪!! "
+		command = { type = control which = CHC value = 1313 }
+		command = { type = trigger which = 500027  }
+		}
+}
+
+event = {
+	id = 500027
+	random = no
+	country = CHC
+
+	name = "武裝部隊 "
+	desc = " "
+	style = 0
+
+
+	action_a = {
+		name = "起義 "
+        command = { type = add_corps which = "廣州起義軍 " value = land where = 1313 }
+		command = { type = activate_division which = 10000 value = 17 where = 1313 when = 1  }
+		command = { type = disorg_division which = 10000 value = 17 where = -1000 }
+        command = { type = war which = u20 }
+		command = { type = supplies value = 1000 where = 1313 }
+		}
+}
+event = {
+	id = 500028
+	random = no
+	country = CHC
+
+	trigger = { event = 500025
+                not = { control = { province = 1313 data = CHC } }  }
+	
+    name = "廣州起義失敗 "
+	desc = " "
+	style = 0
+
+	date = { day = 10 month = decmeber year = 1927 }
+	offset = 1
+	deathdate = { day = 21 month = december year = 1928 }
+	
+	action_a = {
+		name = "撤離廣州！ "
+		command = { type = dissent value = 3 }
+		command = { type = secedeprovince which = U20 value = 1313 }
+		command = { type = sleepleader which = 90060 }
+        command = { type = peace which = CHI value = 0 } 
+        command = { type = peace which = u20 value = 0 }           
+        command = { type = sleepevent which = 500029 }
+	    command = { type = morale which = land value = -2 }
+        command = { type = non_aggression which = chc where = U20 }		}
+}
+######################################################
+
+event = {
+	id = 500029
+	random = no
+	country = CHC
+
+
+	name = "井冈山根据地的堅持 "
+	desc = "井岡山革命根據地，為中國共產黨在湖南、 江西兩省邊界羅霄山脈中段創建的一個農村革命根據地。 它是根據毛澤東「農村包圍城市，武裝奪取政權。」政策 設立的第一個農村革命根據地。 "
+	style = 0
+	picture = "jinggangshan"
+
+	action_a = {
+		name = "星星之火可以燎原 "
+			command = { type = trigger which = 500029 value = 180 }
+         	command = { type = non_aggression which = chc where = U02 }
+         	command = { type = non_aggression which = chc where = U03 }
+         	command = { type = non_aggression which = chc where = CSX }
+         	command = { type = non_aggression which = chc where = CGX }
+         	command = { type = non_aggression which = chc where = U10 }
+         	command = { type = non_aggression which = chc where = U20 }
+			command = { type = non_aggression which = chc where = U21 }
+			command = { type = non_aggression which = chc where = U22 }			}
+}
+####################################################
+event = {
+	id = 500030
+	random = no
+	country = CHC
+
+	trigger = { event = 500004 }
+
+	name = "湘南起义 "
+	desc = " "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 20 month = february year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = "农村包围城市！ "
+		command = { type = max_organization which = land value = 1 }
+		command = { type = morale which = land value = 2 }
+		command = { type = domestic which = professional_army value = 1 }
+		command = { type = domestic which = defense_lobby value = 1 }
+        command = { type = war which = chi }
+        command = { type = war which = U10 }
+		command = { type = trigger which = 500031 }
+        command = { type = add_corps which = "工農革命軍第一師 " value = land where = 2681 }
+		command = { type = activate_division which = 10000 value = 16 where = 2681 when = 1  }
+		command = { type = disorg_division which = 10000 value = 16 where = -1000 }
+		}
+}
+
+event = {
+	id = 500031
+	random = no
+	country = CHI
+
+	
+
+	name = "湘南起义 "
+	desc = "  "
+	style = 0
+	picture = "qiushouqiyi"
+
+	action_a = {
+		name = "鎮壓 ！ "
+		command = { type = dissent value = 5 }
+                  
+		}
+}
+
+event = {
+	id = 500032
+	random = no
+	country = CHC
+	trigger = { event = 500030
+                    not = { control = { province = 2681 data = CHC } }  }
+	
+
+	name = "湘南起义失敗"
+	desc = " "
+	style = 0
+	picture = "qiushouqiyi"
+
+	date = { day = 25 month = february year = 1928 }
+	offset = 5
+	deathdate = { day = 29 month = september year = 1928 }
+
+	action_a = {
+		name = " 轉進湘贛邊界！ "
+		command = { type = morale which = land value = -2 }
+        command = { type = max_organization which = land value = -1 }
+        command = { type = peace which = CHI value = 0 }
+        command = { type = peace which = U10 value = 0 } 
+		}
+}
+#######################################
+event = {
+	id = 500033
+	random = no
+	country = CHC
+	trigger = { 	event = 500008 
+			event = 500012 
+			event = 500032 }
+	name = "朱毛會師 "
+	desc = "1928年4月28日南昌起義保留下來的隊伍和 湖南地方武裝，在寧岡縣的礱市同工農革命軍會師。 兩軍會師後，稱「工農革命軍第四軍」。"
+	style = 0
+	date = { day = 27 month = april year = 1928 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1930 }
+
+	action_a = {
+		name = " "
+		command = { type = morale which = land value = 1 }
+        command = { type = max_organization which = land value = 1 }
+        command = { type = add_corps which = "工農革命軍第四軍" value = land where = 2687 }
+		command = { type = activate_division which = 10000 value = 3 where = 2687 when = 1  }
+     	command = { type = activate_division which = 10000 value = 20 where = 2687 when = 1  }
+     	command = { type = activate_division which = 10000 value = 21 where = 2687 when = 1  }
+		command = { type = disorg_division which = 10000 value = 3 where = -1000 }
+		command = { type = disorg_division which = 10000 value = 20 where = -1000 }
+		command = { type = disorg_division which = 10000 value = 21 where = -1000 }
+		}
+}
+
+event = {
+	id = 66185
+	random = no
+	country = chc
+	persistent = yes
+
+	trigger = {
+		OR = {  event = 500010
+			event = 700108 }# 井岡山
+		event = 500005 # 八七會議
+    	OR = {	war = { country = U05 country = CHC }
+    		war = { country = CHI country = CHC }
+    		war = { country = UCH country = CHC } }
+    	or = {
+    		and = {
+		  control = { province = 2687 data = CHC }
+		  not = { owned = { province = 2687 data = CHC } }
+		}
+		and = {
+		  control = { province = 2686 data = CHC }
+		  not = { owned = { province = 2686 data = CHC } }
+		}
+		and = {
+		  control = { province = 2684 data = CHC }
+		  not = { owned = { province = 2684 data = CHC } }
+		}
+		and = {
+		  control = { province = 2692 data = CHC }
+		  not = { owned = { province = 2692 data = CHC } }
+		}
+		and = {
+		  control = { province = 2698 data = CHC }
+		  not = { owned = { province = 2698 data = CHC } }
+		}
+		and = {
+		  control = { province = 2699 data = CHC }
+		  not = { owned = { province = 2699 data = CHC } }
+		}
+		and = {
+		  control = { province = 2700 data = CHC }
+		  not = { owned = { province = 2700 data = CHC } }
+		}
+		and = {
+		  control = { province = 2697 data = CHC }
+		  not = { owned = { province = 2697 data = CHC } }
+		}
+		and = {
+		  control = { province = 1246 data = CHC }
+		  not = { owned = { province = 1246 data = CHC } }
+		}
+		and = {
+		  control = { province = 2701 data = CHC }
+		  not = { owned = { province = 2701 data = CHC } }
+		}
+		and = {
+		  control = { province = 2696 data = CHC }
+		  not = { owned = { province = 2696 data = CHC } }
+		}
+		and = {
+		  control = { province = 2702 data = CHC }
+		  not = { owned = { province = 2702 data = CHC } }
+		}
+		and = {
+		  control = { province = 2703 data = CHC }
+		  not = { owned = { province = 2703 data = CHC } }
+		}
+		and = {
+		  control = { province = 1243 data = CHC }
+		  not = { owned = { province = 1243 data = CHC } }
+		}
+		and = {
+		  control = { province = 1249 data = CHC }
+		  not = { owned = { province = 1249 data = CHC } }
+		}
+	  }
+	}
+
+	name = "中央革命根据地扩大！ "
+	desc = "EVT_66185_DESC"
+	picture = "xinsijun"
+	style = 0
+
+	date = { day = 22 month = october year = 1927 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "敌后游击战的星星之火！ "
+		command = { type = secedeprovince which = CHC value = 2684 }
+		command = { type = secedeprovince which = CHC value = 2686 }
+		command = { type = secedeprovince which = CHC value = 2687 }
+		command = { type = secedeprovince which = CHC value = 2692 }
+		command = { type = secedeprovince which = CHC value = 2698 }
+		command = { type = secedeprovince which = CHC value = 2699 }
+		command = { type = secedeprovince which = CHC value = 2697 }
+		command = { type = secedeprovince which = CHC value = 2700 }
+		command = { type = secedeprovince which = CHC value = 1246 }
+		command = { type = secedeprovince which = CHC value = 2701 }
+		command = { type = secedeprovince which = CHC value = 2696 }
+		command = { type = secedeprovince which = CHC value = 2702 }
+		command = { type = secedeprovince which = CHC value = 2703 }
+		command = { type = secedeprovince which = CHC value = 1243 }
+		command = { type = secedeprovince which = CHC value = 1249 }
+		}
+}

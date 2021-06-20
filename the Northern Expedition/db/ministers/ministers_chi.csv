@@ -1,0 +1,46 @@
+CHI;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+1;Head of State;ËïÎÄ ;25;LWR;Powerhungry Demagogue;Very High;sunwen;x
+80;Foreign Minister;üSÛ®;28;PA;Powerhungry Demagogue;Very High;üSÛ®;x
+2;Head of Government;ÍôÕ×Ãú ;25;LWR;Naive Optimist;Medium;wangjingwei;x
+3;Foreign Minister;Îé³¯Êà ;25;LWR;Ideological Crusader;Medium;wuchaoshu;x
+4;Minister of Armament;ÁÎÖÙâı ;25;LWR;Administrative Genius;Medium;liaozhongkai;x
+5;Minister of Security;Ì·ÑÓê] ;25;LWR;Silent Lawyer;Medium;tanyankai;x
+6;Head of Military Intelligence;½¯ÖĞÕı;25;LWR;Political Specialist;Medium;kongyige;x
+7;Chief of Staff;ÖìÅàµÂ ;25;LWR;Static Defence Doctrine;Medium;zhupeide;x
+8;Chief of Army;³ÌÇ± ;26;LWR;Guns and Butter Doctrine;Medium;chengqian;x
+11;Head of State;ºúººÃñ ;25;LWR;Benevolent Gentleman;Medium;huhanmin;x
+12;Head of Government;½¯ÖĞÕı ;25;LWR;Old General;Medium;kongyige;x
+55;Head of Government;½¯ÖĞÕı ;27;PA;Old General;High;kongyige;x
+13;Head of State;ÍôÕ×Ãú ;25;LWR;Benevolent Gentleman;Medium;wangjingwei;x
+54;Head of State;ÍôÕ×Ãú ;27;PA;Benevolent Gentleman;Medium;wangjingwei;x
+14;Head of State;Ì·ÑÓê] ;25;LWR;Insignificant Layman;Medium;tanyankai;x
+15;Chief of Staff;Ğí³çÖÇ ;25;LWR;Static Defence Doctrine;Medium;xuchongzhi;x
+16;Chief of Army;ÍôÕ×Ãú ;25;LWR;Guns and Butter Doctrine;Medium;wangjingwei;x
+17;Foreign Minister;ºúººÃñ ;25;LWR;Ideological Crusader;Medium;huhanmin;x
+19;Chief of Staff;Ì·ÑÓê] ;26;LWR;School of Mass Combat;Medium;tanyankai;x
+20;Foreign Minister;³ÂÓÑÈÊ ;26;LWR;Ideological Crusader;Medium;chenyouren;x
+21;Minister of Armament;ËÎ×ÓÎÄ ;25;LWR;Laissez Faires Capitalist;High;songziwen;x
+79;Head of Government;ËÎ×ÓÎÄ ;25;LWR;Naive Optimist;High;songziwen;x
+77;Minister of Armament;¿×ÏéÎõ;26;PA;Administrative Genius;High;M52030;x
+22;Minister of Security;ĞìÇ« ;27;LWR;Crime Fighter;Medium;xuqian;x
+76;Minister of Security;ê¹û·ò;27;PA;Crime Fighter;Medium;M52005;x
+23;Minister of Armament;Ëï¿Æ ;27;PA;Laissez Faires Capitalist;Medium;sunke;x
+24;Chief of Staff;½¯ÖĞÕı ;27;PA;School of Mass Combat;Medium;kongyige;x
+25;Chief of Army;½¯ÖĞÕı ;26;PA;Guns and Butter Doctrine;Medium;kongyige;x
+26;Head of Government;Ì·ÑÓê] ;28;PA;Political Protege;Medium;tanyankai;x
+27;Minister of Security;²ÌÔªÅà ;27;PA;Man of the People;Medium;caiyuanpei;x
+28;Foreign Minister;ÍõÕıÍ¢ ;28;PA;Apologetic Clerk;Medium;wangzhengting;x
+29;Head of State;½¯ÖĞÕı ;28;PA;Stern Imperialist;Very High;kongyige;x
+30;Head of State;Ì·ÑÓê] ;28;PA;Insignificant Layman;Medium;tanyankai;x
+31;Head of Government;ÍôÕ×Ãú ;27;PA;Naive Optimist;Medium;wangjingwei;x
+32;Head of Military Intelligence;³ÂÁ¢·ò ;27;PA;Political Specialist;Medium;chenlifu;x
+75;Minister of Armament;ê¹«²©;26;LWR;Administrative Genius;Medium;Chengongbo;x
+78;Minister of Armament;ˆìo½­;27;PA;Administrative Genius;Medium;ZhangJingjiang;x
+35;Head of Government;ËïÎÄ ;36;LWR;Naive Optimist;Very High;sunwen;x
+51;Head of Government;Àî×ÚÈÊ ;27;PA;Old General;Medium;lizongren;x
+52;Chief of Staff;°×³çìû ;27;PA;School of Mass Combat;Medium;baichongxi;x
+53;Chief of Army;°×³çìû ;27;PA;Guns and Butter Doctrine;Medium;baichongxi;x
+81;Chief of Navy;³ÂÉÜ¿í ;28;SD;Power Projection Doctrine;High;M52009;x
+82;Chief of Navy;ÔøÒÔ¶¦ ;30;ML;Base Control Doctrine;Medium;M52102;x
+83;Chief of Navy;—î˜äÇf ;28;SD;Power Projection Doctrine;High;—î˜äÇf;x

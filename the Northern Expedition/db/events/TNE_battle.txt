@@ -1,0 +1,443 @@
+###################
+#北伐戰爭
+###################
+##########################
+#1926年       1000~
+##########################
+
+event = {
+	id = 1005
+	random = no
+	country = U08
+
+trigger = {   event = 9999912
+              OR = { 
+                     war = { country = chi country = u02 }
+                     war = { country = chi country = u11 }  }
+		control = { province = 1218 data = -2 }
+ }
+	name = "徐州戰鬥 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍新加入的西北軍四個師亦未增援，且攻擊均未奏效，後立即終止。指揮王天培被蔣介石下令依軍法槍斃。  "
+	style = 0
+
+
+	date = { day = 27 month = july year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "娘西匹 "
+		command = { type = dissent value = 3 }
+#                command = { type = trigger which = 9999913 value = 1 }
+                command = { type = assault value = -1 }
+                command = { type = breakthrough value = -1 }
+                command = { type = sleepevent which = 1021 }
+    		command = { type = remove_division which = 15004 value = 10 }
+		}
+}
+
+
+
+event = {
+	id = 1021
+	random = no
+	country = CHI
+
+trigger = {  event 9999921
+              OR = { 
+                     war = { country = chi country = u02 }
+                     war = { country = chi country = u11 }   }
+		control = { province = 1218 data = -2 }
+ }
+	name = "徐州戰鬥 "
+	desc = "國民革命軍攻擊徐州時，在外圍數度激戰，8月4日，國民革命軍新加入的西北軍四個師亦未增援，且攻擊均未奏效，後立即終止。指揮王天培被蔣介石下令依軍法槍斃。 "
+	style = 0
+
+
+	date = { day = 27 month = july year = 1927 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "娘西匹 "
+		command = { type = dissent value = 3 }
+                command = { type = assault value = -1 }
+                command = { type = breakthrough value = -1 }
+#                command = { type = trigger which = 9999922 value = 1 }
+                command = { type = sleepevent which = 1005 }
+    		command = { type =  remove_division which = 15004 value = 10 }
+		}
+}
+
+
+event = {
+	id = 1027
+	random = no
+	country = CHI
+
+
+
+	name = "唐生智求援"
+	desc = "1926年5月0日唐生智代表向广州国民政府求救。 第四、第七軍首途入湘，協助唐生智部穩定湘南局勢。 "
+	style = 0
+	picture = "beifa"
+
+
+
+	action_a = {
+		name = "提前北伐，穩定湖南!! (在湖南有10個師) "
+		command = { type = trigger which = 1028 value = 30 }
+		command = { type = alliance which = U10 }
+    		command = { type = make_puppet which = u10 }
+		}
+	action_b = {
+		name = "等等 "
+	command = { }		}
+}
+
+
+event = {
+	id = 1028
+	random = no
+	country = chi
+
+	name = "防禦湖南失敗 "
+	desc = "1926年5月0日唐生智代表向广州国民政府求救。 第四、第七軍首途入湘，協助唐生智部穩定湘南局勢。 "
+	style = 0
+
+
+	action_a = {
+		name = "娘西匹!! "
+		command = { type = dissent value = 3 }
+		command = { type = morale which = land value = -3 }
+                  command = { type = trigger which = 1  }
+		}
+}
+
+event = {
+	id = 1029
+	random = no
+	country = CHI
+	
+	trigger = {
+		control = { province = 1255 data = U05 } 
+		control = { province = 1257 data = -3 } 
+		garrison = { country = CHI province = 2682 type = land size = 10 area = yes }
+		event = 1027
+	}
+	
+	name = "穩定湖南"
+	desc = "第一階段從1926年5月開始。第四、第七軍 首途入湘，協助唐生智部穩定湘南局勢。 "
+	style = 0
+	picture = "beifa"
+	
+	date = { day = 1 month = may year = 1926 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1928 }
+
+	action_a = {
+		name = "防禦 "
+                command = { type = construct which = land_fort where = 1257 value = -5 }
+		command = { type = sleepevent which = 1028  }
+                  command = { type = peace which = U05 value = 0 }
+}
+}
+
+event = {
+	id = 1030
+	random = no
+	country = U08
+
+trigger = {   event = 9999912
+		event = 200019
+              OR = { 
+                     war = { country = chi country = u02 }
+                     war = { country = chi country = u06 }  }
+		control = { province = 1235 data = -3 }
+		control = { province = 2617 data = -3 }
+ }
+	name = "龍潭之役 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+ picture = "longtanzhiyi"
+
+	date = { day = 27 month = july year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "國民革命軍萬歲 "
+		command = { type = dissent value = -1 }
+#                command = { type = trigger which = 9999913 value = 1 }
+                command = { type = delay value = 2 }
+		command = { type = counterattack value = 2 }
+#                command = { type = sleepevent which = 1021 }
+		}
+}
+
+
+
+event = {
+	id = 1031
+	random = no
+	country = CHI
+
+trigger = {  event 9999921
+		event = 200019
+              OR = { 
+                     war = { country = chi country = u02 }
+                     war = { country = chi country = u06 }   }
+		control = { province = 1235 data = -3 }
+		control = { province = 2617 data = -3 }
+ }
+	name = "龍潭之役 "
+	desc = "徐州戰鬥發生於1927年7月28日－8月6日， 地點則是在中國蘇北一帶，是國民革命軍北伐戰爭的戰鬥之一。 徐州戰鬥的交戰雙方，一方為國民革命軍，另一方為北洋政府所轄軍隊。  "
+	style = 0
+ picture = "longtanzhiyi"
+
+	date = { day = 27 month = july year = 1927 }
+	offset = 2
+	deathdate = { day = 29 month = december year = 1927 }
+
+	action_a = {
+		name = "國民革命軍萬歲 "
+		command = { type = dissent value = -1 }
+                command = { type = delay value = 2 }
+		command = { type = counterattack value = 2 }
+#                command = { type = trigger which = 9999922 value = 1 }
+#                command = { type = sleepevent which = 1005 }
+		}
+}
+
+#########################################################################
+# 会战胜利和失败对士气的影响
+#########################################################################
+# 20士气 5组织度 修正90天
+#######################################
+event = {
+	id = 63900
+	random = no
+	persistent = yes
+
+	name = "会战胜利对士气的影响 "
+	desc = "我们在一次重要的会战中获得了决定性的胜利，将士士气高昂！ "
+	style = 0
+
+	action_a = {
+		name = "伟大的胜利！ "
+		command = { type = morale which = land value = 10 }
+		command = { type = attrition_mod value = 20 }
+		command = { type = supply_dist_mod value = 20 }
+		command = { type = repair_mod value = 20 }
+		command = { type = trigger which = 63901 value = 60 }
+	}
+}
+
+event = {
+	id = 63901
+	random = no
+	persistent = yes
+
+	name = "会战胜利对士气的影响结束 "
+	desc = "会战胜利对士气的影响结束了 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = morale which = land value = -10 }
+		command = { type = attrition_mod value = -20 }
+		command = { type = supply_dist_mod value = -20 }
+		command = { type = repair_mod value = -20 }
+	}
+}
+
+event = {
+	id = 63902
+	random = no
+	persistent = yes
+
+	name = "会战失败对士气的影响 "
+	desc = "我们在一次重要的会战中不幸失败了，将士士气受到严重打击！ "
+	style = 0
+
+	action_a = {
+		name = "莫大的耻辱！ "
+		command = { type = morale which = land value = -10 }
+		command = { type = attrition_mod value = -10 }
+		command = { type = supply_dist_mod value = -10 }
+		command = { type = repair_mod value = -10 }
+		command = { type = trigger which = 63903 value = 60 }
+	}
+}
+
+event = {
+	id = 63903
+	random = no
+	persistent = yes
+
+	name = "会战失败对士气的影响结束 "
+	desc = "会战失败对士气的影响结束了 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = morale which = land value = 10 }
+		command = { type = attrition_mod value = 10 }
+		command = { type = supply_dist_mod value = 10 }
+		command = { type = repair_mod value = 10 }
+	}
+}
+
+#######################################
+# 15士气 5组织度 修正90天
+#######################################
+event = {
+	id = 63904
+	random = no
+	persistent = yes
+
+	name = "会战胜利对士气的影响 "
+	desc = "我们在一次重要的会战中获得了决定性的胜利，将士士气高昂！ "
+	style = 0
+
+	action_a = {
+		name = "伟大的胜利！ "
+		command = { type = morale which = land value = 10 }
+		command = { type = attrition_mod value = 10 }
+		command = { type = supply_dist_mod value = 10 }
+		command = { type = repair_mod value = 10 }
+		command = { type = trigger which = 63905 value = 60 }
+	}
+}
+
+event = {
+	id = 63905
+	random = no
+	persistent = yes
+
+	name = "会战胜利对士气的影响结束 "
+	desc = "会战胜利对士气的影响结束了 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = morale which = land value = -10 }
+		command = { type = attrition_mod value = -10 }
+		command = { type = supply_dist_mod value = -10 }
+		command = { type = repair_mod value = -10 }
+	}
+}
+
+event = {
+	id = 63906
+	random = no
+	persistent = yes
+
+	name = "会战失败对士气的影响 "
+	desc = "我们在一次重要的会战中不幸失败了，将士士气受到严重打击！ "
+	style = 0
+
+	action_a = {
+		name = "莫大的耻辱！ "
+		command = { type = morale which = land value = -10 }
+		command = { type = attrition_mod value = -5 }
+		command = { type = supply_dist_mod value = -5 }
+		command = { type = repair_mod value = -5 }
+		command = { type = trigger which = 63907 value = 60 }
+	}
+}
+
+event = {
+	id = 63907
+	random = no
+	persistent = yes
+
+	name = "会战失败对士气的影响结束 "
+	desc = "会战失败对士气的影响结束了 "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = morale which = land value = 10 }
+		command = { type = attrition_mod value = 5 }
+		command = { type = supply_dist_mod value = 5 }
+		command = { type = repair_mod value = 5 }
+	}
+}
+
+#######################################
+# 15士气 5组织度 修正60天
+#######################################
+event = {
+	id = 63908
+	random = no
+	persistent = yes
+
+	name = "会战胜利对士气的影响 "
+	desc = "我们在一次重要的会战中获得了决定性的胜利，将士士气高昂！ "
+	style = 0
+
+	action_a = {
+		name = "伟大的胜利！ "
+		command = { type = morale which = land value = 10 }
+		command = { type = attrition_mod value = 10 }
+		command = { type = supply_dist_mod value = 10 }
+		command = { type = repair_mod value = 10 }
+		command = { type = trigger which = 63909 value = 30 }
+	}
+}
+
+event = {
+	id = 63909
+	random = no
+	persistent = yes
+
+	name = "会战胜利对士气的影响结束 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = morale which = land value = -10 }
+		command = { type = attrition_mod value = -10 }
+		command = { type = supply_dist_mod value = -10 }
+		command = { type = repair_mod value = -10 }
+	}
+}
+
+event = {
+	id = 63910
+	random = no
+	persistent = yes
+
+	name = "会战失败对士气的影响 "
+	desc = "我们在一次重要的会战中不幸失败了，将士士气受到严重打击！ "
+	style = 0
+
+	action_a = {
+		name = "莫大的耻辱！ "
+		command = { type = morale which = land value = -10 }
+		command = { type = attrition_mod value = -5 }
+		command = { type = supply_dist_mod value = -5 }
+		command = { type = repair_mod value = -5 }
+		command = { type = trigger which = 63911 value = 30 }
+	}
+}
+
+event = {
+	id = 63911
+	random = no
+	persistent = yes
+
+	name = "会战失败对士气的影响结束 "
+	desc = " "
+	style = 0
+
+	action_a = {
+		name = "ok"
+		command = { type = morale which = land value = 10 }
+		command = { type = attrition_mod value = 5 }
+		command = { type = supply_dist_mod value = 5 }
+		command = { type = repair_mod value = 5 }
+	}
+}

@@ -1,0 +1,77 @@
+land_unit_type = 1
+allowed_brigades = artillery
+allowed_brigades = anti_tank
+allowed_brigades = anti_air
+allowed_brigades = rocket_artillery
+allowed_brigades = sp_artillery
+allowed_brigades = sp_rct_artillery
+allowed_brigades = tank_destroyer
+allowed_brigades = light_armor_brigade
+allowed_brigades = engineer
+
+# 0 - 一战军舰陆战队 
+model = {
+	cost 					= 12
+	buildtime	 			= 270
+	manpower 				= 12
+	maxspeed 				= 4
+	defaultorganisation 	= 40
+	morale					= 40
+	defensiveness 			= 15
+	toughness				= 12
+	softness				= 100
+	suppression				= 2
+	airdefence				= 0
+	softattack				= 10
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 10
+	supplyconsumption 		= 0.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 1.2
+}
+# 1 - 24型陆战队 
+model = {
+	cost 					= 13.5
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 40
+	morale					= 40
+	defensiveness 			= 24
+	toughness				= 24
+	softness				= 95
+	suppression				= 2
+	airdefence				= 0
+	softattack				= 12
+	hardattack				= 1
+	airattack				= 0
+	transportweight			= 10
+	supplyconsumption 		= 0.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 1.2
+}
+# 2 - 28型陆战队 
+model = {
+	cost 					= 15
+	buildtime	 			= 330
+	manpower 				= 12
+	maxspeed 				= 5
+	defaultorganisation 	= 40
+	morale					= 40
+	defensiveness 			= 28
+	toughness				= 28
+	softness				= 95
+	suppression				= 2
+	airdefence				= 0
+	softattack				= 14
+	hardattack				= 1
+	airattack				= 0
+	transportweight			= 10
+	supplyconsumption 		= 0.8
+	fuelconsumption			= 0
+	upgrade_time_factor = 0.6
+	upgrade_cost_factor = 1.2
+}

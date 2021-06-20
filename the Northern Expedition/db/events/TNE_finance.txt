@@ -1,0 +1,1312 @@
+######################################################
+event = {
+	id = 1714
+	random = no
+	persistent = yes
+
+	trigger = {
+#		technology = 5710
+		technology = 4260 # 市場規範
+		NOT = { local_flag = finance1 }
+	}
+
+	name = "改革财政 "
+	desc = "通过现代的财政与税收系统，我们能够更有效率的收集和利用 资金，预决算制度能够让资金更加透明。 "
+	style = 0
+	picture = "Finance"
+
+	date = { day = 1 month = january year = 1934 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "开始改革 "
+		command = { type = trigger which = 1715 value = 180 }
+		command = { type = local_setflag which = finance1 }
+	}
+}
+
+event = {
+	id = 1715
+	random = no
+	persistent = yes
+
+	name = "改革财政的效果 "
+	desc = "通过现代的财政与税收系统，我们能够更有效率的收集和利用 资金，预决算制度能够让资金更加透明。 "
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "财政收入增加 "
+		command = { type = resource which = money value = 200 }
+		command = { type = trigger which = 1715 value = 180 }
+	}
+}
+
+event = {
+	id = 1716
+	random = no
+	persistent = yes
+
+	trigger = {
+		technology = 4120 #鑄幣標準
+		NOT = { local_flag = finance2 }
+	}
+
+	name = "金融的重要作用 "
+	desc = "现代社会，金融已经成为不可或缺的重要经济领域，通过有效 的利用中央银行、外汇和金融市场，国家可以得到大量的资金 ，也能直接对经济进行干预。 "
+	style = 0
+	picture = "Finance"
+
+	date = { day = 1 month = january year = 1934 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "ok"
+		command = { type = trigger which = 1717 value = 180 }
+		command = { type = local_setflag which = finance2 }
+	}
+}
+
+event = {
+	id = 1717
+	random = no
+	persistent = yes
+
+	name = "现代金融-铸币税 "
+	desc = "铸币税泛指政府从货币发行中获得的收益。包括：中央银行所 获得并上交中央财政的利润；中央银行和商业银行在货币创造 过程通过购买国债向中央财政提供的资金；财政直接发行通货 所获得的收益。 "
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "财政收入增加 "
+		command = { type = resource which = money value = 250 }
+		command = { type = trigger which = 1717 value = 180 }
+	}
+}
+
+event = {
+	id = 1718
+	random = no
+	persistent = yes
+
+	trigger = {
+		technology = 4190 #國債
+		local_flag = finance1
+		local_flag = finance2
+		NOT = { local_flag = finance3 }
+	}
+
+	name = "现代金融-中短期国债 "
+	desc = "国债是国家信用的主要形式。中央政府发行国债的目的往往是 弥补国家财政赤字，或者为一些耗资巨大的建设项目、以及某 些特殊经济政策乃至为战争筹措资金。 "
+	style = 0
+	picture = "Finance"
+
+	date = { day = 1 month = january year = 1934 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "发行一年期国债 "
+		ai_chance = 50
+		command = { type = resource which = money value = 1800 }
+		command = { type = trigger which = 1719 value = 360 }
+		command = { type = local_setflag which = finance3 }
+	}
+	action_b = {
+		name = "资金足够充裕 "
+		ai_chance = 50
+		command = { type = local_setflag which = finance3 }
+		command = { type = trigger which = 1721 value = 360 }
+	}
+}
+
+event = {
+	id = 1719
+	random = no
+	persistent = yes
+
+	name = "偿还中短期国债 "
+	desc = "一年期国债到期了，我们可以选择偿还或者延期，当然后者会 给我们带来更多的利息损失，而不偿还带来的将是政府信用的 丧失。 "
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "偿还一年期国债 "
+		ai_chance = 90
+		command = { type = resource which = money value = -1890 }
+		command = { type = local_clrflag which = finance3 }
+	}
+	action_b = {
+		name = "延期一年偿还 "
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 1720 value = 360 }
+	}	
+	action_c = {
+		name = "不偿还 "
+		ai_chance = 0
+		command = { type = dissent value = 5 }
+		command = { type = industrial_modifier which = total value = -2 }
+		command = { type = local_clrflag which = finance3 }
+	}
+}
+
+event = {
+	id = 1720
+	random = no
+	persistent = yes
+
+	name = "偿还中短期国债 "
+	desc = "延期的国债偿还期到期了，我们只能选择偿还或者不偿还。"
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "偿还一年期国债 "
+		ai_chance = 100
+		command = { type = resource which = money value = -2000 }
+		command = { type = local_clrflag which = finance3 }
+	}
+	action_b = {
+		name = "不偿还 "
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = local_clrflag which = finance3 }
+	}		
+}
+
+event = {
+	id = 1721
+	random = no
+	persistent = yes
+
+	name = "新一年的国债发行计划 "
+	desc = "国债是国家信用的主要形式。中央政府发行国债的目的往往是 弥补国家财政赤字，或者为一些耗资巨大的建设项目、以及某 些特殊经济政策乃至为战争筹措资金。 "
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "开始计划 "
+		command = { type = local_clrflag which = finance3 }
+	}
+}
+###############################
+### #貨幣
+###############################
+event = {
+	id = 60503
+	random = no
+#	persistent = yes
+
+	trigger = {
+		NOT = { event = 60499 }
+		incabinet = 16120 
+#		technology = 4400
+	}
+
+	name = "混亂的貨幣 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "商業發展停滯 "
+		command = { type = dissent value = 5 }
+		command = { type = money value = -1000 }
+		command = { type = free_money value = -10 }
+		command = { type = industrial_modifier which = total value = -3 }
+		command = { type = industrial_modifier which = supplies value = -3 }
+#		command = { type = setflag which =  }
+	}
+}
+event = {
+	id = 60499
+	country = CHI
+	random = no
+	trigger = {
+		event = 60503
+		incabinet = 16120
+		technology = 4120 #
+		local_flag = finance1
+#		money = 1000 #準備金
+	}
+	name = "废两改元令 "
+	desc = "1933年3月10日中华民国财政部发布废两改元令，正式 废除银两的流通，使得国内货币统一，完成废两改元。 "
+	style = 0
+	picture = "news_paper"
+
+	date = { day = 9 month = march year = 1933 }
+	offset = 1
+	deathdate = { day = 29 month = december year = 1935 }
+	action_a = {
+		name = "很好 "
+		command = { type = dissent value = -2 }
+		command = { type = free_money value = 10 }
+		command = { type = industrial_modifier which = total value = 3 }
+		command = { type = industrial_modifier which = supplies value = 3 }
+	}
+}
+event = {
+	id = 19350112
+	random = no
+
+	trigger = {
+		incabinet = 16120
+		technology = 4170 #央行印鈔
+		local_flag = finance1
+		local_flag = finance2
+		money = 1000 #準備金
+	}
+	name = "发行法币 "
+	desc = "EVT_19350112_DESC"
+	picture = "fabi"
+	style = 0
+	
+	date = { day = 4 month = november year = 1935 }
+	offset = 1
+	deathdate = { day = 30 month = december year = 1935 }
+
+	action_a = {
+		name = "与美元、英镑同时挂钩！ "
+		ai_chance = 1
+		command = { type = dissent value = -3 } 
+		command = { type = free_money value = 10 }
+		command = { type = money value = -1000 }
+	  	command = { type = relation which = JAP value = -20 }
+	  	command = { type = relation which = ENG value = 20 }
+	  	command = { type = relation which = USA value = 20 }
+		command = { type = armamentminister which = 52011 }	 
+		}
+	action_b = {
+		name = "法币和英镑挂钩！ "
+		ai_chance = 99
+		command = { type = dissent value = 3 } 
+		command = { type = free_money value = 5 }
+		command = { type = money value = -1000 }
+	  	command = { type = relation which = ENG value = 30 }
+	  	command = { type = relation which = JAP value = -10 }
+	  	command = { type = relation which = USA value = -10 }
+		}
+	action_c = {
+		name = "法币和美元挂钩！ "
+		ai_chance = 0
+		command = { type = dissent value = 3 } 
+		command = { type = free_money value = 5 }
+		command = { type = money value = -1000 }
+	  	command = { type = relation which = USA value = 30 }
+	  	command = { type = relation which = JAP value = -10 }
+	  	command = { type = relation which = ENG value = -10 }
+		}
+	action_d = {
+		name = "法币和日元挂钩！ "
+		ai_chance = 0
+		command = { type = dissent value = 5 } 
+		command = { type = free_money value = 5 }
+		command = { type = money value = -1000 }
+	  	command = { type = relation which = JAP value = 30 }
+	  	command = { type = relation which = ENG value = -10 }
+	  	command = { type = relation which = USA value = -10 }
+		}
+}	
+
+######################################
+### #釐金
+######################################
+event = {
+	id = 60500
+	random = no
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin local_flag = lijin }
+		NOT = { incabinet = 16087 }
+		NOT = { 
+			country = MON 
+			country = TAN 
+			country = SIA 
+			country = TIB
+			}
+		technology = 4400
+	}
+
+	name = "釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 0 month = january year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = resource which = money value = 250 }
+		command = { type = free_money value = 3 }
+		command = { type = industrial_modifier which = total value = -5 }
+		command = { type = industrial_modifier which = supplies value = -5 }
+		command = { type = setflag which = lijin }
+		command = { type = local_setflag which = lijin }
+#		command = { type = trigger which = 60501 }
+	}
+}
+
+event = {
+	id = 60502
+	random = no
+	persistent = yes
+
+	trigger = {
+		NOT = { flag = endlijin }
+		flag = lijin
+		incabinet = 16120 
+		technology = 4370 #營業稅
+	}
+
+	name = "廢除釐金 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 180
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "廢除 "
+		ai_chance = 95
+		command = { type = dissent value = 5 }
+		command = { type = money value = -1000 }
+		command = { type = free_money value = -3 }
+		command = { type = industrial_modifier which = total value = 5 }
+		command = { type = industrial_modifier which = supplies value = 5 }
+		command = { type = setflag which = endlijin }
+		command = { type = sleepevent which = 60501 }
+		command = { type = sleepevent which = 60502 }
+	}
+	action_b = {
+		name = "保留 "
+		ai_chance = 5
+		command = { type = dissent value = 10 }
+	}
+}
+	
+######################################
+### #貨物稅
+######################################
+event = {
+	id = 60504
+	random = no
+	persistent = yes
+
+	trigger = {
+		NOT = { local_flag = CargoTax }
+		technology = 4340
+	}
+
+	name = "貨物稅 "
+	desc = "貨物稅對規定應稅貨物按其流轉額徵收的稅。 納稅人是貨物的產制人或購進人，負稅人一般 是貨物的消費者，故又稱間接消費稅。 "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = free_money value = 3 }
+		command = { type = resource which = money value = 1000 }
+		command = { type = local_setflag which = CargoTax }
+#		command = { type = trigger which = 60501 }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+######################################
+### #庚子賠款
+######################################
+event = {
+	id = 60506
+	random = no
+#	persistent = yes
+
+	trigger = {
+		NOT = { local_flag = BoxerIndemnity }
+#		flag = lijin
+		incabinet = 16120 
+#		technology = 4400
+	}
+
+	name = "庚子賠款 "
+	desc = " "
+	style = 0
+#	picture = "fabibianzhi"
+
+#	date = { day = 1 month = january year = 1925 }
+#	offset = 30
+#	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "龐大的包袱 "
+		ai_chance = 90
+		command = { type = dissent value = 5 }
+		command = { type = free_money value = -10 } # 關稅、鹽稅抵押
+		command = { type = money value = -10000 }
+		command = { type = local_setflag which = BoxerIndemnity }
+#		command = { type = trigger which = 60507 }
+	}
+	action_b = {
+		name = "龐大的包袱 "
+		ai_chance = 10
+		command = { type = dissent value = 5 }
+		command = { type = free_money value = -10 } # 關稅、鹽稅抵押
+		command = { type = money value = -5000 }
+		command = { type = supplies value = -7500 }
+		command = { type = local_setflag which = BoxerIndemnity }
+#		command = { type = trigger which = 60507 }
+	}
+}
+# 60507~60509 備用
+######################################
+### #償還外債
+######################################
+event = {
+	id = 60510
+	random = no
+	persistent = yes
+
+	trigger = {
+		incabinet = 16120 
+		money = 5000
+		NOT = { local_flag = foreigndebt }
+	}
+
+	name = "龐大的外債 "
+	desc = " "
+	style = 0
+	picture = "Finance"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "償還 "
+		ai_chance = 50
+		command = { type = money value = -10000 } #包含前幾年的
+		command = { type = trigger which = 60511 value = 360 }
+		command = { type = local_setflag which = foreigndebt }
+	}
+	action_b = {
+		name = "償還 "
+		ai_chance = 50
+		command = { type = money value = -5000 } #包含前幾年的
+		command = { type = supplies value = -7500 } #包含前幾年的
+		command = { type = trigger which = 60511 value = 360 }
+		command = { type = local_setflag which = foreigndebt }
+	}
+}
+
+event = {
+	id = 60511
+	random = no
+	persistent = yes
+
+	name = "償還外債 "
+	desc = "一年期国债到期了，我们可以选择偿还或者延期，当然后者会 给我们带来更多的利息损失，而不偿还带来的将是政府信用的 丧失。 "
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "偿还一年期外债 "
+		ai_chance = 90
+		command = { type = resource which = money value = -2500 }
+#		command = { type = local_clrflag which = finance3 }
+	}
+	action_b = {
+		name = "延期一年偿还 "
+		ai_chance = 10
+		command = { type = dissent value = 1 }
+		command = { type = trigger which = 60512 value = 360 }
+	}	
+	action_c = {
+		name = "不偿还 "
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = -10 }
+#		command = { type = local_clrflag which = finance3 }
+	  	command = { type = relation which = JAP value = -50 }
+	  	command = { type = relation which = USA value = -50 }
+	  	command = { type = relation which = ENG value = -50 }
+	  	command = { type = relation which = FRA value = -50 }
+	}
+}
+
+event = {
+	id = 60512
+	random = no
+	persistent = yes
+
+	name = "償還外債 "
+	desc = "延期的外债偿还期到期了，我们只能选择偿还或者不偿还。"
+	style = 0
+	picture = "Finance"
+
+	action_a = {
+		name = "偿还一年期国债 "
+		ai_chance = 100
+		command = { type = resource which = money value = -5000 }
+		command = { type = trigger which = 60511 value = 360 }
+#		command = { type = local_clrflag which = finance3 }
+	}
+	action_b = {
+		name = "不偿还 "
+		ai_chance = 0
+		command = { type = dissent value = 10 }
+		command = { type = industrial_modifier which = total value = -10 }
+#		command = { type = local_clrflag which = finance3 }
+	  	command = { type = relation which = JAP value = -50 }
+	  	command = { type = relation which = USA value = -50 }
+	  	command = { type = relation which = ENG value = -50 }
+	  	command = { type = relation which = FRA value = -50 }
+	}		
+}
+#60513~60514備用
+
+######################################
+### #統稅
+######################################
+event = {
+	id = 60515
+	random = no
+	persistent = yes
+
+	trigger = {
+		NOT = { local_flag = CommodityTax }
+		technology = 4350
+	}
+
+	name = "統稅 "
+	desc = "統稅首見於1904年。中國清朝政府連年戰爭， 國庫空虛。為了充裕國庫特地新增的新型貨物 稅，謂之統稅，該賦稅為課徵於特定貨品的貨 物商品稅，因稅收方式視商品類型統一稅率徵 收而得名。 "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = free_money value = 3 }
+		command = { type = industrial_modifier which = total value = -2 }
+		command = { type = industrial_modifier which = supplies value = -2 }
+		command = { type = resource which = money value = 1000 }
+		command = { type = local_setflag which = CommodityTax }
+#		command = { type = trigger which = 60501 }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+#60516 備用
+
+######################################
+### #營業稅
+######################################
+event = {
+	id = 60517
+	random = no
+	persistent = yes
+
+	trigger = {
+		NOT = { local_flag = BusinessTax }
+		technology = 4370
+	}
+
+	name = "營業稅 "
+	desc = " "
+	style = 0
+	picture = "fabibianzhi"
+
+	date = { day = 1 month = january year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1940 }
+
+	action_a = {
+		name = "課徵 "
+		ai_chance = 90
+		command = { type = dissent value = 3 }
+		command = { type = free_money value = 3 }
+		command = { type = resource which = money value = 1000 }
+		command = { type = local_setflag which = BusinessTax }
+#		command = { type = trigger which = 60501 }
+	}
+	action_b = {
+		name = "算了 "
+		ai_chance = 10
+		command = { type = dissent value = -3 }
+	}
+}
+#60518 備用
+
+######################################
+### # 田賦 60520~
+######################################
+event = {
+	id = 60520
+	random = no
+  	persistent = yes
+
+	trigger = { 
+	       	not = { local_flag = farmtax }
+		technology = 4310
+	}
+
+	name = "田賦 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "課徵"	
+		command = { type = dissent value = 3 }
+		command = { type = money value = 200 }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = farmtax }
+		command = { type = local_setflag which = collected }
+	}
+}
+
+event = {
+	id = 60521
+	random = no
+  	persistent = yes
+
+
+	name = "可以再次徵收田賦 "
+	desc = " "
+	style = 0
+
+	
+	action_a = {
+		name = "ok"	
+		command = { type = local_clrflag which = collected }
+	}
+}
+
+event = {
+	id = 60522
+	random = no
+  	persistent = yes
+
+	trigger = { 
+	       	not = { local_flag = collected }
+		local_flag = farmtax
+	       	not = { local_flag = farmtax1 }
+		technology = 4310
+	}
+
+	name = "田賦 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1924 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "課徵"	
+#		command = { type = dissent value = 3 }
+		command = { type = money value = 250 }
+		command = { type = resource which = supplies value = 750 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+	}
+}
+
+
+
+event = {
+	id = 60523
+	random = no
+  	persistent = yes
+
+	trigger = {  
+	       	local_flag = farmtax
+	      	local_flag = farmtax1
+	       	not = { local_flag = farmtax2
+			local_flag = collected }
+	}
+
+	name = "已超收一年田賦 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "照樣徵收"	
+		command = { type = dissent value = 3 }
+		command = { type = money value = 250 }
+		command = { type = resource which = supplies value = 750 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+	}
+	action_b = {
+		name = "今年免賦"	
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+		command = { type = local_setflag which = farmtax- }
+	}
+}
+
+event = {
+	id = 60524
+	random = no
+  	persistent = yes
+
+	trigger = {  
+	       	local_flag = farmtax
+	      	local_flag = farmtax1
+	      	local_flag = farmtax2
+	       	not = { local_flag = farmtax3
+			local_flag = collected }
+	}
+
+	name = "超收兩年 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "照樣徵收"	
+		command = { type = dissent value = 3 }
+		command = { type = money value = 250 }
+		command = { type = resource which = supplies value = 750 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+	}
+	action_b = {
+		name = "今年免賦"	
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+		command = { type = local_setflag which = farmtax- }
+	}
+}
+
+
+event = {
+	id = 60525
+	random = no
+  	persistent = yes
+
+	trigger = {  
+	       	local_flag = farmtax
+	      	local_flag = farmtax1
+	      	local_flag = farmtax2
+	      	local_flag = farmtax3
+	       	not = { local_flag = farmtax4
+			local_flag = collected }
+	}
+
+	name = "超收三年 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "照樣徵收"	
+		command = { type = dissent value = 3 }
+		command = { type = money value = 200 }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+	}
+	action_b = {
+		name = "今年免賦"	
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+		command = { type = local_setflag which = farmtax- }
+	}
+}
+
+event = {
+	id = 60526
+	random = no
+  	persistent = yes
+
+	trigger = {  
+	       	local_flag = farmtax
+	      	local_flag = farmtax1
+	      	local_flag = farmtax2
+	      	local_flag = farmtax3
+		local_flag = farmtax4
+	       	not = { local_flag = collected }
+	}
+
+	name = "超收四年以上 "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "照樣徵收"	
+		command = { type = dissent value = 3 }
+		command = { type = money value = 200 }
+		command = { type = resource which = supplies value = 500 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+	}
+	action_b = {
+		name = "今年免賦"	
+		command = { type = dissent value = -3 }
+		command = { type = trigger which = 60521 value = 360 }
+		command = { type = local_setflag which = collected }
+		command = { type = local_setflag which = farmtax- }
+	}
+}	
+# 60527~60529 備用	
+########################################
+event = {
+	id = 60530
+	random = no
+  	persistent = yes
+
+	trigger = { 
+ 		OR = { NOT = { money = 100 }
+			NOT = { supplies = 500 }
+			 }
+		NOT = { local_flag = farmtax1 }
+		local_flag = farmtax
+		local_flag = collected
+
+	}
+
+	name = "提前徵收田賦(一年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = 2 }
+		command = { type = local_setflag which = farmtax1 }
+		command = { type = money value = 500 }
+		command = { type = resource which = supplies value = 1000 }
+	}
+	action_b = {
+		name = "不用"	
+		command = { type = dissent value = -1 }
+		}
+}
+
+event = {
+	id = 60531
+	random = no
+  	persistent = yes
+
+	trigger = { 
+ 		OR = { NOT = { money = 100 }
+			NOT = { supplies = 500 }
+			 }
+		NOT = { local_flag = farmtax2 }
+		local_flag = farmtax
+		local_flag = farmtax1
+		local_flag = collected
+
+	}
+
+	name = "提前徵收田賦(兩年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = 2 }
+		command = { type = local_setflag which = farmtax2 }
+		command = { type = money value = 400 }
+		command = { type = resource which = supplies value = 750 }
+	}
+	action_b = {
+		name = "不用"	
+		command = { type = dissent value = -1 }
+		}
+}
+
+event = {
+	id = 60532
+	random = no
+  	persistent = yes
+
+	trigger = { 
+ 		OR = { NOT = { money = 100 }
+			NOT = { supplies = 500 }
+			 }
+		NOT = { local_flag = farmtax3 }
+		local_flag = farmtax
+		local_flag = farmtax1
+		local_flag = farmtax2
+		local_flag = collected
+
+	}
+
+	name = "提前徵收田賦(三年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = 3 }
+		command = { type = local_setflag which = farmtax3 }
+		command = { type = money value = 300 }
+		command = { type = resource which = supplies value = 500 }
+	}
+	action_b = {
+		name = "不用"	
+		command = { type = dissent value = -1 }
+		}
+}
+
+event = {
+	id = 60533
+	random = no
+  	persistent = yes
+
+	trigger = { 
+ 		OR = { NOT = { money = 100 }
+			NOT = { supplies = 500 }
+			 }
+		NOT = { local_flag = farmtax4 }
+		local_flag = farmtax
+		local_flag = farmtax1
+		local_flag = farmtax2
+		local_flag = farmtax3
+		local_flag = collected
+
+	}
+
+	name = "提前徵收田賦(四年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = 3 }
+		command = { type = local_setflag which = farmtax4 }
+		command = { type = money value = 250 }
+		command = { type = resource which = supplies value = 500 }
+	}
+	action_b = {
+		name = "不用"	
+		command = { type = dissent value = -1 }
+		}
+}
+
+event = {
+	id = 60534
+	random = no
+  	persistent = yes
+
+	trigger = { 
+ 		OR = { NOT = { money = 100 }
+			NOT = { supplies = 500 }
+			 }
+		local_flag = farmtax
+		local_flag = farmtax1
+		local_flag = farmtax2
+		local_flag = farmtax3
+		local_flag = farmtax4
+		local_flag = collected
+
+	}
+
+	name = "提前徵收田賦(四年之後) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 30
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = 5 }
+#		command = { type = local_setflag which = farmtax2 }
+		command = { type = money value = 250 }
+		command = { type = resource which = supplies value = 500 } 
+	}
+	action_b = {
+		name = "不用"	
+		command = { type = dissent value = -1 }
+		}
+}
+
+#############################################
+event = {
+	id = 60535
+	random = no
+  	persistent = yes
+
+	trigger = { local_flag = farmtax
+	            local_flag = farmtax- 
+	            local_flag = farmtax1
+	            not = { local_flag = farmtax2 }
+	}
+
+	name = "減免田賦(一年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = -1 }
+		command = { type = local_clrflag which = farmtax1 }
+		command = { type = local_clrflag which = farmtax- }
+	}
+}
+
+event = {
+	id = 60536
+	random = no
+  	persistent = yes
+
+	trigger = { local_flag = farmtax
+	            local_flag = farmtax- 
+	            local_flag = farmtax1
+	            local_flag = farmtax2
+	            not = { local_flag = farmtax3 }
+	}
+
+	name = "減免田賦(兩年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = -1 }
+		command = { type = local_clrflag which = farmtax2 }
+		command = { type = local_clrflag which = farmtax- }
+	}
+}
+
+event = {
+	id = 60537
+	random = no
+  	persistent = yes
+
+	trigger = { local_flag = farmtax
+	            local_flag = farmtax- 
+	            local_flag = farmtax1
+	            local_flag = farmtax2
+	            local_flag = farmtax3
+	            not = { local_flag = farmtax4 }
+	}
+
+	name = "減免田賦(三年) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = -1 }
+		command = { type = local_clrflag which = farmtax3 }
+		command = { type = local_clrflag which = farmtax- }
+	}
+}
+
+event = {
+	id = 60538
+	random = no
+  	persistent = yes
+
+	trigger = { local_flag = farmtax
+	            local_flag = farmtax- 
+	            local_flag = farmtax1
+	            local_flag = farmtax2
+	            local_flag = farmtax3
+	            local_flag = farmtax4
+#	            not = { local_flag = farmtax3 }
+	}
+
+	name = "減免田賦(四年以上) "
+	desc = " "
+	style = 0
+
+	date = { day = 1 month = January year = 1925 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1949 }
+	
+	action_a = {
+		name = "ok"	
+		command = { type = dissent value = -1 }
+		command = { type = local_clrflag which = farmtax4 }
+		command = { type = local_clrflag which = farmtax- }
+	}
+}
+######################################
+### # 鐵路修建 19360901~
+######################################
+
+ event = {
+	id = 19360901
+	random = no
+	country = CHI
+	
+	trigger = { 
+	  or = {
+	    and = {
+	    		ai = yes
+	    		year = 1936
+	    		month = september
+	    	}
+	    and = {
+#	  		province_building = { province = 2659 building = 5 size = 1 }
+#	  		province_building = { province = 1256 building = 5 size = 1 }
+#	  		province_building = { province = 1255 building = 5 size = 1 }
+	  		province_building = { province = 2683 building = 5 size = 0.8 }
+	  		province_building = { province = 1257 building = 5 size = 0.8 }
+	  		province_building = { province = 2682 building = 5 size = 0.8 }
+	  		province_building = { province = 2681 building = 5 size = 0.8 }
+	    }
+	  } 
+	}
+	
+	name = "粤汉铁路全線通车 "		
+	desc = "粤汉铁路是京广铁路南段广州到武昌间的一条铁路旧称， 全长1059．6公里，从1900年动工到1936年筑成。在1936 年9月1日首次通车，由广州黄沙出发，历时44小时抵达 武昌徐家棚。 "
+	picture = "zhegan"	
+	style = 0
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "南方动脉的建成"
+		command = { type = dissent value = -2 }		
+		command = { type = construct which = infrastructure where = 1257 value = 20 }		
+		command = { type = construct which = infrastructure where = 2683 value = 20 }				
+		command = { type = construct which = infrastructure where = 2682 value = 20 }		
+		command = { type = construct which = infrastructure where = 2681 value = 20 }					
+	}
+}
+
+event = {
+	id = 61116
+	random = no
+	country = chi
+
+	trigger = {
+	}
+
+	name = "浙赣铁路的修建"
+	desc = "浙赣铁路从浙江省杭州向西延伸，经萧山、义乌 、金华、衢 州、江山等地，进入江西省境内，再经玉山、上饶、贵溪、鹰 潭、南昌县、丰城、新余、萍乡，进入湖南境内，经醴陵市， 达株洲市。全线由杭玉（玉山）、玉南（南昌）、南萍（萍乡 ）、株萍四段组成，全长949公里。1930年3月开工。 这条铁路开始由浙江省筹款修建，原名杭江铁路。由于绝大部 分路段位于浙江省和江西省境内，因此仍命名为“浙赣线”。 注意：修建完成条件为杭州基建达到100."
+	picture = "zhegan"		
+	style = 0
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 7
+	deathdate = { day = 29 month = december year = 1945 }
+
+	action_a = {
+		name = "战争的准备（请将杭州基建建设达到100）"
+	}
+}
+
+event = {
+	id = 61117
+	random = no
+	country = chi
+
+	trigger = {
+	  or = {
+	    and = {
+	    ai = yes
+	    year = 1937
+	    month = september
+	    }
+	  province_building = { province = 1238 building = 5 size = 1 }
+	   }
+	}
+
+	name = " 浙赣铁路修建完成 "
+	desc = "1937年9月，浙赣铁路全线竣工。它的建成，接通了沪杭 甬、南浔及汉粤铁路，完成了东部沿海到中部丘陵地带的大动 脉，是国防工事的一部分。"
+	picture = "zhegan"	
+	style = 0
+
+	date = { day = 1 month = january year = 1936 }
+	offset = 10
+	deathdate = { day = 29 month = december year = 1999 }
+
+	action_a = {
+		name = "中部动脉的建成"
+		command = { type = dissent value = -2 }		
+		command = { type = construct which = infrastructure where = 1241 value = 20 }
+		command = { type = construct which = infrastructure where = 1242 value = 20 }		
+		command = { type = construct which = infrastructure where = 2695 value = 20 }				
+		command = { type = construct which = infrastructure where = 2637 value = 20 }		
+		command = { type = construct which = infrastructure where = 2636 value = 20 }						
+	}
+}

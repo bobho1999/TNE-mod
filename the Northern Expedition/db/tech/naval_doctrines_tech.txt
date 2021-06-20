@@ -1,0 +1,954 @@
+technology =
+{ id          = 4
+  category    = naval_doctrines
+  name        = TECH_ND_NAME # Localized name
+  desc        = TECH_ND_DESC # Localized description
+  label =
+  { tag      = TECH_CAT_ND_2
+    position = { x = 35 y = 230 }
+  }
+  label =
+  { tag      = TECH_CAT_ND_3
+    position = { x = 35 y = 60 }
+  }
+  label =
+  { tag      = TECH_CAT_ND_4
+    position = { x = 315 y = 60 }
+  }
+  # 古典主义理论与批判 
+  application =
+  { id        = 4010
+    name      = TECH_APP_ND_1_NAME
+    desc      = TECH_APP_ND_1_DESC
+    position  = { x = 20 y = 30 }
+    year      = 1890
+    # 亚当斯密主义 
+    component = { id = 4011 name = TECH_CMP_ND_1_1_NAME type = mathematics difficulty = 5 double_time = yes }
+    # 现代自由市场 
+    component = { id = 4012 name = TECH_CMP_ND_1_2_NAME type = management difficulty = 5 double_time = yes }
+    # 市场伦理学 
+    component = { id = 4013 name = TECH_CMP_ND_1_3_NAME type = training difficulty = 5 }
+    # 劳动分工 
+    component = { id = 4014 name = TECH_CMP_ND_1_4_NAME type = management difficulty = 5 }
+    # 曲线波动 
+    component = { id = 4015 name = TECH_CMP_ND_1_5_NAME type = mathematics difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = tc_mod value = -2 }
+      command = { type = dissent value = -5 }
+      command = { type = research_mod value = 10 }
+      command = { type = tc_mod value = 15 }
+      command = { type = domestic which = free_market value = 1 }
+      command = { type = domestic which = interventionism value = 2 }
+    }
+  }
+  # 集体主义理论 
+  application =
+  { id        = 4020
+    name      = TECH_APP_ND_2_NAME
+    desc      = TECH_APP_ND_2_DESC
+    position  = { x = 155 y = 30 }
+    year      = 1919
+    # 马克思主义经济学 
+    component = { id = 4021 name = TECH_CMP_ND_2_1_NAME type = mathematics difficulty = 6 double_time = yes }
+    # 剩余价值 
+    component = { id = 4022 name = TECH_CMP_ND_2_2_NAME type = mathematics difficulty = 6 double_time = yes }
+    # 集体主义 
+    component = { id = 4023 name = TECH_CMP_ND_2_3_NAME type = management difficulty = 6 }
+    # 按劳分配 
+    component = { id = 4024 name = TECH_CMP_ND_2_4_NAME type = management difficulty = 6 double_time = yes }
+    # 供求关系 
+    component = { id = 4025 name = TECH_CMP_ND_2_5_NAME type = mathematics difficulty = 6 }
+    required  = { }
+    effects =
+    { command = { type = tc_mod value = 10 }
+      command = { type = tc_occupied_mod value = 10 }
+      command = { type = peacetime_ic_mod value = -10 }
+      command = { type = industrial_modifier which = total value = 10 }
+      command = { type = building_prod_mod which = ic value = 15 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = domestic which = free_market value = -3 }
+      command = { type = domestic which = interventionism value = -3 }
+    }
+  }
+  # 新古典主义理论 
+  application =
+  { id        = 4030
+    name      = TECH_APP_ND_3_NAME
+    desc      = TECH_APP_ND_3_DESC
+    position  = { x = 290 y = 30 }
+    year      = 1936
+    # 失业理论 
+    component = { id = 4031 name = TECH_CMP_ND_3_1_NAME type = training difficulty = 7 }
+    # 经济转轨 
+    component = { id = 4032 name = TECH_CMP_ND_3_2_NAME type = training difficulty = 7 double_time = yes }
+    # 萨伊法则 
+    component = { id = 4033 name = TECH_CMP_ND_3_3_NAME type = mathematics difficulty = 7 }
+    # 控制通货膨胀 
+    component = { id = 4034 name = TECH_CMP_ND_3_4_NAME type = management difficulty = 7 }
+    # 金融中介 
+    component = { id = 4035 name = TECH_CMP_ND_3_5_NAME type = management difficulty = 7 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = tc_mod value = 15 }
+      command = { type = tc_occupied_mod value = -20 }
+      command = { type = peacetime_ic_mod value = -50 }
+      command = { type = industrial_modifier which = total value = 5 }
+      command = { type = building_prod_mod which = ic value = 5 }
+      command = { type = building_prod_mod which = infrastructure value = 15 }
+      command = { type = domestic which = free_market value = 3 }
+      command = { type = domestic which = interventionism value = 1 }
+    }
+  }
+  # 凯恩斯主义经济学 
+  application =
+  { id        = 4040
+    name      = TECH_APP_ND_4_NAME
+    desc      = TECH_APP_ND_4_DESC
+    position  = { x = 425 y = 30 }
+    year      = 1936
+    # 经济宏观 
+    component = { id = 4041 name = TECH_CMP_ND_4_1_NAME type = mathematics difficulty = 8 }
+    # 财政赤字 
+    component = { id = 4042 name = TECH_CMP_ND_4_2_NAME type = management difficulty = 8 double_time = yes }
+    # 扩大政府开支 
+    component = { id = 4043 name = TECH_CMP_ND_4_3_NAME type = management difficulty = 8 double_time = yes }
+    # 充分就业 
+    component = { id = 4044 name = TECH_CMP_ND_4_4_NAME type = management difficulty = 8 }
+    component = { id = 4045 name = TECH_CMP_ND_4_5_NAME type = mathematics difficulty = 8 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = tc_mod value = 5 }
+      command = { type = tc_occupied_mod value = 20 }
+      command = { type = peacetime_ic_mod value = -15 }
+      command = { type = industrial_modifier which = total value = 5 }
+      command = { type = building_prod_mod which = ic value = 10 }
+      command = { type = building_prod_mod which = infrastructure value = 10 }
+      command = { type = domestic which = free_market value = -1 }
+      command = { type = domestic which = interventionism value = 2 }
+      command = { type = research_mod value = 5 }
+    }
+  }
+  # 私人银行 
+  application =
+  { id        = 4050
+    name      = TECH_APP_ND_5_NAME
+    desc      = TECH_APP_ND_5_DESC
+    position  = { x = 30 y = 75 }
+    year      = 1897
+    # 资产管理 
+    component = { id = 4051 name = TECH_CMP_ND_5_1_NAME type = management difficulty = 3 }
+    # 家族信托基金 
+    component = { id = 4052 name = TECH_CMP_ND_5_2_NAME type = management difficulty = 3 }
+    # 投资规划 
+    component = { id = 4053 name = TECH_CMP_ND_5_3_NAME type = management difficulty = 3 }
+    # 离岸公司 
+    component = { id = 4054 name = TECH_CMP_ND_5_4_NAME type = management difficulty = 3 }
+    # 帕累托法则 
+    component = { id = 4055 name = TECH_CMP_ND_5_5_NAME type = mathematics difficulty = 5 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 股票交易  
+  application =
+  { id        = 4060
+    name      = TECH_APP_ND_6_NAME
+    desc      = TECH_APP_ND_6_DESC
+    position  = { x = 160 y = 100 }
+    year      = 1904
+    # 股份公司 
+    component = { id = 4061 name = TECH_CMP_ND_6_1_NAME type = management difficulty = 4 }
+    # 股票市场 
+    component = { id = 4062 name = TECH_CMP_ND_6_2_NAME type = mathematics difficulty = 4 }
+    # 不可偿还性法则 
+    component = { id = 4063 name = TECH_CMP_ND_6_3_NAME type = training difficulty = 4 }
+    # 分红 
+    component = { id = 4064 name = TECH_CMP_ND_6_4_NAME type = management difficulty = 4 }
+    # 股东大会 
+    component = { id = 4065 name = TECH_CMP_ND_6_5_NAME type = management difficulty = 4 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 保险业务 
+  application =
+  { id        = 4070
+    name      = TECH_APP_ND_7_NAME
+    desc      = TECH_APP_ND_7_DESC
+    position  = { x = 160 y = 75 }
+    year      = 1900
+    # 风险均摊 
+    component = { id = 4071 name = TECH_CMP_ND_7_1_NAME type = mathematics difficulty = 4 }
+    # 社会保障管理 
+    component = { id = 4072 name = TECH_CMP_ND_7_2_NAME type = management difficulty = 4 }
+    # 保险精算 
+    component = { id = 4073 name = TECH_CMP_ND_7_3_NAME type = mathematics difficulty = 4 }
+    # 简单赔付率 
+    component = { id = 4074 name = TECH_CMP_ND_7_4_NAME type = mathematics difficulty = 4 }
+    # 三大原则 
+    component = { id = 4075 name = TECH_CMP_ND_7_5_NAME type = training difficulty = 5 double_time = yes }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 商业银行 
+  application =
+  { id        = 4080
+    name      = TECH_APP_ND_8_NAME
+    desc      = TECH_APP_ND_8_DESC
+    position  = { x = 30 y = 100 }
+    year      = 1906
+    # 短期商业贷款 
+    component = { id = 4081 name = TECH_CMP_ND_8_1_NAME type = mathematics difficulty = 4 }
+    # 股份制银行 
+    component = { id = 4082 name = TECH_CMP_ND_8_2_NAME type = management difficulty = 4 }
+    # 金融企业 
+    component = { id = 4083 name = TECH_CMP_ND_8_3_NAME type = training difficulty = 4 }
+    # 行政不干预 
+    component = { id = 4084 name = TECH_CMP_ND_8_4_NAME type = management difficulty = 4 }
+    # 信用创造 
+    component = { id = 4085 name = TECH_CMP_ND_8_5_NAME type = management difficulty = 4 }
+    required  = { 4050 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 投资银行 
+  application =
+  { id        = 4090
+    name      = TECH_APP_ND_9_NAME
+    desc      = TECH_APP_ND_9_DESC
+    position  = { x = 30 y = 125 }
+    year      = 1915
+    # 证券承销 
+    component = { id = 4091 name = TECH_CMP_ND_9_1_NAME type = mathematics difficulty = 5 }
+    # 证券经纪交易 
+    component = { id = 4092 name = TECH_CMP_ND_9_2_NAME type = mathematics difficulty = 5 }
+    # 证券私募发行 
+    component = { id = 4093 name = TECH_CMP_ND_9_3_NAME type = mathematics difficulty = 5 }
+    # 兼并与收购 
+    component = { id = 4094 name = TECH_CMP_ND_9_4_NAME type = management difficulty = 5 double_time = yes }
+    # 风险投资 
+    component = { id = 4095 name = TECH_CMP_ND_9_5_NAME type = mathematics difficulty = 6 double_time = yes }
+    required  = { 4080 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 银行监查机构 
+  application =
+  { id        = 4100
+    name      = TECH_APP_ND_10_NAME
+    desc      = TECH_APP_ND_10_DESC
+    position  = { x = 30 y = 150 }
+    year      = 1930
+    # 资本协议 
+    component = { id = 4101 name = TECH_CMP_ND_10_1_NAME type = training difficulty = 6 }
+    # 金融危机 
+    component = { id = 4102 name = TECH_CMP_ND_10_2_NAME type = mathematics difficulty = 6 double_time = yes }
+    # 风险管理 
+    component = { id = 4103 name = TECH_CMP_ND_10_3_NAME type = management difficulty = 6 }
+    # 利益冲突 
+    component = { id = 4104 name = TECH_CMP_ND_10_4_NAME type = mathematics difficulty = 6 }
+    # 特许价值 
+    component = { id = 4105 name = TECH_CMP_ND_10_5_NAME type = management difficulty = 6 }
+    required  = { 4090 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 公共基金 
+  application =
+  { id        = 4110
+    name      = TECH_APP_ND_11_NAME
+    desc      = TECH_APP_ND_11_DESC
+    position  = { x = 30 y = 175 }
+    year      = 1941
+    # 对冲基金与共同基金 
+    component = { id = 4111 name = TECH_CMP_ND_11_1_NAME type = training difficulty = 7 }
+    # 国家信用 
+    component = { id = 4112 name = TECH_CMP_ND_11_2_NAME type = training difficulty = 8 double_time = yes }
+    # 离岸基金 
+    component = { id = 4113 name = TECH_CMP_ND_11_3_NAME type = management difficulty = 7 double_time = yes }
+    # 公募基金 
+    component = { id = 4114 name = TECH_CMP_ND_11_4_NAME type = training difficulty = 7 }
+    # 投资者资格 
+    component = { id = 4115 name = TECH_CMP_ND_11_5_NAME type = management difficulty = 7 }
+    required  = { 4100 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 铸币标准 
+  application =
+  { id        = 4120
+    name      = TECH_APP_ND_12_NAME
+    desc      = TECH_APP_ND_12_DESC
+    position  = { x = 310 y = 75 }
+    year      = 1895
+    # 一般等价物 
+    component = { id = 4121 name = TECH_CMP_ND_12_1_NAME type = mathematics difficulty = 3 }
+    # 货币金属论 
+    component = { id = 4122 name = TECH_CMP_ND_12_2_NAME type = training difficulty = 3 }
+    # 货币名目论 
+    component = { id = 4123 name = TECH_CMP_ND_12_3_NAME type = training difficulty = 3 }
+    # 纸币统一 
+    component = { id = 4124 name = TECH_CMP_ND_12_4_NAME type = management difficulty = 5 }
+    # 本位 
+    component = { id = 4125 name = TECH_CMP_ND_12_5_NAME type = management difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 专门印钞 
+  application =
+  { id        = 4130
+    name      = TECH_APP_ND_13_NAME
+    desc      = TECH_APP_ND_13_DESC
+    position  = { x = 310 y = 100 }
+    year      = 1936
+    # TECH_CMP_ND_13_1_NAME
+    component = { id = 4131 name = TECH_CMP_ND_13_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_13_2_NAME
+    component = { id = 4132 name = TECH_CMP_ND_13_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_13_3_NAME
+    component = { id = 4133 name = TECH_CMP_ND_13_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_13_4_NAME
+    component = { id = 4134 name = TECH_CMP_ND_13_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_13_5_NAME
+    component = { id = 4135 name = TECH_CMP_ND_13_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4120 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 银本位 
+  application =
+  { id        = 4140
+    name      = TECH_APP_ND_14_NAME
+    desc      = TECH_APP_ND_14_DESC
+    position  = { x = 440 y = 75 }
+    year      = 1910
+    # 银两本位制 
+    component = { id = 4141 name = TECH_CMP_ND_14_1_NAME type = management difficulty = 4 }
+    # 银币本位制 
+    component = { id = 4142 name = TECH_CMP_ND_14_2_NAME type = management difficulty = 4 }
+    # 币制规则 
+    component = { id = 4143 name = TECH_CMP_ND_14_3_NAME type = management difficulty = 4 }
+    # 银元 
+    component = { id = 4144 name = TECH_CMP_ND_14_4_NAME type = management difficulty = 4 }
+    # 金银复本位制 
+    component = { id = 4145 name = TECH_CMP_ND_14_5_NAME type = management difficulty = 5 double_time = yes }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+      command = { type = deactivate which = 4180 }
+    }
+  }
+  # 私人银行印钞 
+  application =
+  { id        = 4150
+    name      = TECH_APP_ND_15_NAME
+    desc      = TECH_APP_ND_15_DESC
+    position  = { x = 310 y = 125 }
+    year      = 1936
+    # TECH_CMP_ND_15_1_NAME
+    component = { id = 4151 name = TECH_CMP_ND_15_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_15_2_NAME
+    component = { id = 4152 name = TECH_CMP_ND_15_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_15_3_NAME
+    component = { id = 4153 name = TECH_CMP_ND_15_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_15_4_NAME
+    component = { id = 4154 name = TECH_CMP_ND_15_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_15_5_NAME
+    component = { id = 4155 name = TECH_CMP_ND_15_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4130 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 汇率 
+  application =
+  { id        = 4160
+    name      = TECH_APP_ND_16_NAME
+    desc      = TECH_APP_ND_16_DESC
+    position  = { x = 440 y = 125 }
+    year      = 1936
+    # TECH_CMP_ND_16_1_NAME
+    component = { id = 4161 name = TECH_CMP_ND_16_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_16_2_NAME
+    component = { id = 4162 name = TECH_CMP_ND_16_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_16_3_NAME
+    component = { id = 4163 name = TECH_CMP_ND_16_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_16_4_NAME
+    component = { id = 4164 name = TECH_CMP_ND_16_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_16_5_NAME
+    component = { id = 4165 name = TECH_CMP_ND_16_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 中央银行印钞 
+  application =
+  { id        = 4170
+    name      = TECH_APP_ND_17_NAME
+    desc      = TECH_APP_ND_17_DESC
+    position  = { x = 310 y = 150 }
+    year      = 1936
+    # TECH_CMP_ND_17_1_NAME
+    component = { id = 4171 name = TECH_CMP_ND_17_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_17_2_NAME
+    component = { id = 4172 name = TECH_CMP_ND_17_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_17_3_NAME
+    component = { id = 4173 name = TECH_CMP_ND_17_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_17_4_NAME
+    component = { id = 4174 name = TECH_CMP_ND_17_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_17_5_NAME
+    component = { id = 4175 name = TECH_CMP_ND_17_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4150 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 金本位 
+  application =
+  { id        = 4180
+    name      = TECH_APP_ND_18_NAME
+    desc      = TECH_APP_ND_18_DESC
+    position  = { x = 440 y = 150 }
+    year      = 1936
+    # 金币本位制 
+    component = { id = 4181 name = TECH_CMP_ND_18_1_NAME type = management difficulty = 5 }
+    # 金块本位制 
+    component = { id = 4182 name = TECH_CMP_ND_18_2_NAME type = management difficulty = 5 }
+    # 金汇兑本位制 
+    component = { id = 4183 name = TECH_CMP_ND_18_3_NAME type = management difficulty = 5 }
+    # 法定含金量 
+    component = { id = 4184 name = TECH_CMP_ND_18_4_NAME type = management difficulty = 5 }
+    # 黄金储备 
+    component = { id = 4185 name = TECH_CMP_ND_18_5_NAME type = management difficulty = 6 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 5 }
+      command = { type = deactivate which = 4140 }
+    }
+  }
+  # 国家债券 
+  application =
+  { id        = 4190
+    name      = TECH_APP_ND_19_NAME
+    desc      = TECH_APP_ND_19_DESC
+    position  = { x = 310 y = 175 }
+    year      = 1936
+    # TECH_CMP_ND_19_1_NAME
+    component = { id = 4191 name = TECH_CMP_ND_19_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_19_2_NAME
+    component = { id = 4192 name = TECH_CMP_ND_19_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_19_3_NAME
+    component = { id = 4193 name = TECH_CMP_ND_19_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_19_4_NAME
+    component = { id = 4194 name = TECH_CMP_ND_19_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_19_5_NAME
+    component = { id = 4195 name = TECH_CMP_ND_19_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = research_mod value = 10 }
+      command = { type = industrial_modifier which = total value = -5 }
+      command = { type = building_prod_mod which = ic value = 10 }
+      command = { type = building_prod_mod which = infrastructure value = 10 }
+      command = { type = domestic which = free_market value = 2 }
+    }
+  }
+  # 贸易自由 
+  application =
+  { id        = 4200
+    name      = TECH_APP_ND_20_NAME
+    desc      = TECH_APP_ND_20_DESC
+    position  = { x = 30 y = 250 }
+    year      = 1936
+    # TECH_CMP_ND_20_1_NAME
+    component = { id = 4201 name = TECH_CMP_ND_20_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_20_2_NAME
+    component = { id = 4202 name = TECH_CMP_ND_20_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_20_3_NAME
+    component = { id = 4203 name = TECH_CMP_ND_20_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_20_4_NAME
+    component = { id = 4204 name = TECH_CMP_ND_20_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_20_5_NAME
+    component = { id = 4205 name = TECH_CMP_ND_20_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4210 }
+    effects =
+    { command = { type = peacetime_ic_mod value = -25 }
+      command = { type = research_mod value = 15 }
+      command = { type = industrial_modifier which = total value = -5 }
+      command = { type = building_prod_mod which = ic value = 10 }
+      command = { type = building_prod_mod which = infrastructure value = -10 }
+      command = { type = domestic which = freedom value = 3 }
+      command = { type = domestic which = free_market value = 2 }
+      command = { type = tc_mod value = -10 }
+    }
+  }
+  # 市场结构 
+  application =
+  { id        = 4210
+    name      = TECH_APP_ND_21_NAME
+    desc      = TECH_APP_ND_21_DESC
+    position  = { x = 30 y = 275 }
+    year      = 1936
+    # TECH_CMP_ND_21_1_NAME
+    component = { id = 4211 name = TECH_CMP_ND_21_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_21_2_NAME
+    component = { id = 4212 name = TECH_CMP_ND_21_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_21_3_NAME
+    component = { id = 4213 name = TECH_CMP_ND_21_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_21_4_NAME
+    component = { id = 4214 name = TECH_CMP_ND_21_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_21_5_NAME
+    component = { id = 4215 name = TECH_CMP_ND_21_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4230 }
+    effects =
+    { command = { type = domestic which = free_market value = 2 }
+      command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 垄断 
+  application =
+  { id        = 4220
+    name      = TECH_APP_ND_22_NAME
+    desc      = TECH_APP_ND_22_DESC
+    position  = { x = 160 y = 275 }
+    year      = 1936
+    # TECH_CMP_ND_22_1_NAME
+    component = { id = 4221 name = TECH_CMP_ND_22_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_22_2_NAME
+    component = { id = 4222 name = TECH_CMP_ND_22_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_22_3_NAME
+    component = { id = 4223 name = TECH_CMP_ND_22_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_22_4_NAME
+    component = { id = 4224 name = TECH_CMP_ND_22_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_22_5_NAME
+    component = { id = 4225 name = TECH_CMP_ND_22_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = peacetime_ic_mod value = 5 }
+      command = { type = industrial_modifier which = total value = 5 }
+      command = { type = domestic which = freedom value = -3 }
+      command = { type = domestic which = free_market value = -2 }
+      command = { type = tc_mod value = 10 }
+      command = { type = deactivate which = 4270 }
+    }
+  }
+  label =
+  { tag      = TECH_CAT_ND_1
+    position = { x = 350 y = 230 }
+  }
+  # 商业规范 
+  application =
+  { id        = 4230
+    name      = TECH_APP_ND_23_NAME
+    desc      = TECH_APP_ND_23_DESC
+    position  = { x = 30 y = 300 }
+    year      = 1936
+    # TECH_CMP_ND_23_1_NAME
+    component = { id = 4231 name = TECH_CMP_ND_23_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_23_2_NAME
+    component = { id = 4232 name = TECH_CMP_ND_23_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_23_3_NAME
+    component = { id = 4233 name = TECH_CMP_ND_23_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_23_4_NAME
+    component = { id = 4234 name = TECH_CMP_ND_23_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_23_5_NAME
+    component = { id = 4235 name = TECH_CMP_ND_23_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4260 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+      command = { type = domestic which = free_market value = 1 }
+    }
+  }
+  # 有限公司 
+  application =
+  { id        = 4240
+    name      = TECH_APP_ND_24_NAME
+    desc      = TECH_APP_ND_24_DESC
+    position  = { x = 160 y = 298 }
+    year      = 1934
+    # TECH_CMP_ND_24_1_NAME
+    component = { id = 4241 name = TECH_CMP_ND_24_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_24_2_NAME
+    component = { id = 4242 name = TECH_CMP_ND_24_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_24_3_NAME
+    component = { id = 4243 name = TECH_CMP_ND_24_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_24_4_NAME
+    component = { id = 4244 name = TECH_CMP_ND_24_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_24_5_NAME
+    component = { id = 4245 name = TECH_CMP_ND_24_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 股份公司 
+  application =
+  { id        = 4250
+    name      = TECH_APP_ND_25_NAME
+    desc      = TECH_APP_ND_25_DESC
+    position  = { x = 160 y = 325 }
+    year      = 1934
+    # TECH_CMP_ND_25_1_NAME
+    component = { id = 4251 name = TECH_CMP_ND_25_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_25_2_NAME
+    component = { id = 4252 name = TECH_CMP_ND_25_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_25_3_NAME
+    component = { id = 4253 name = TECH_CMP_ND_25_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_25_4_NAME
+    component = { id = 4254 name = TECH_CMP_ND_25_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_25_5_NAME
+    component = { id = 4255 name = TECH_CMP_ND_25_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 市场规范 
+  application =
+  { id        = 4260
+    name      = TECH_APP_ND_26_NAME
+    desc      = TECH_APP_ND_26_DESC
+    position  = { x = 30 y = 325 }
+    year      = 1936
+    # TECH_CMP_ND_26_1_NAME
+    component = { id = 4261 name = TECH_CMP_ND_26_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_26_2_NAME
+    component = { id = 4262 name = TECH_CMP_ND_26_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_26_3_NAME
+    component = { id = 4263 name = TECH_CMP_ND_26_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_26_4_NAME
+    component = { id = 4264 name = TECH_CMP_ND_26_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_26_5_NAME
+    component = { id = 4265 name = TECH_CMP_ND_26_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+    }
+  }
+  # 反垄断法 
+  application =
+  { id        = 4270
+    name      = TECH_APP_ND_27_NAME
+    desc      = TECH_APP_ND_27_DESC
+    position  = { x = 160 y = 350 }
+    year      = 1936
+    # TECH_CMP_ND_27_1_NAME
+    component = { id = 4271 name = TECH_CMP_ND_27_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_27_2_NAME
+    component = { id = 4272 name = TECH_CMP_ND_27_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_27_3_NAME
+    component = { id = 4273 name = TECH_CMP_ND_27_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_27_4_NAME
+    component = { id = 4274 name = TECH_CMP_ND_27_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_27_5_NAME
+    component = { id = 4275 name = TECH_CMP_ND_27_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { type = peacetime_ic_mod value = -15 }
+      command = { type = research_mod value = 10 }
+      command = { type = industrial_modifier which = total value = -5 }
+      command = { type = building_prod_mod which = ic value = -5 }
+      command = { type = building_prod_mod which = infrastructure value = 10 }
+      command = { type = domestic which = freedom value = 1 }
+      command = { type = domestic which = free_market value = 2 }
+      command = { type = tc_mod value = -5 }
+      command = { type = deactivate which = 4220 }
+    }
+  }
+  # 经济责任制 
+  application =
+  { id        = 4280
+    name      = TECH_APP_ND_28_NAME
+    desc      = TECH_APP_ND_28_DESC
+    position  = { x = 30 y = 350 }
+    year      = 1936
+    # TECH_CMP_ND_28_1_NAME
+    component = { id = 4281 name = TECH_CMP_ND_28_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_28_2_NAME
+    component = { id = 4282 name = TECH_CMP_ND_28_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_28_3_NAME
+    component = { id = 4283 name = TECH_CMP_ND_28_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_28_4_NAME
+    component = { id = 4284 name = TECH_CMP_ND_28_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_28_5_NAME
+    component = { id = 4285 name = TECH_CMP_ND_28_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4260 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 1 }
+      command = { type = domestic which = free_market value = -1 }
+    }
+  }
+  # 政府干预主义 
+  application =
+  { id        = 4290
+    name      = TECH_APP_ND_29_NAME
+    desc      = TECH_APP_ND_29_DESC
+    position  = { x = 30 y = 375 }
+    year      = 1936
+    component = { id = 4291 name = TECH_CMP_ND_29_1_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4292 name = TECH_CMP_ND_29_2_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4293 name = TECH_CMP_ND_29_3_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4294 name = TECH_CMP_ND_29_4_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4295 name = TECH_CMP_ND_29_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4280 }
+    effects =
+    { command = { type = industrial_modifier which = total value = 2 }
+      command = { type = industrial_modifier which = supplies value = 5 }
+      command = { type = tc_mod value = 2 }
+      command = { type = dissent value = 5 }
+      command = { type = research_mod value = -5 }
+      command = { type = domestic which = free_market value = -2 }
+    }
+  }
+  # 计划经济 
+  application =
+  { id        = 4300
+    name      = TECH_APP_ND_30_NAME
+    desc      = TECH_APP_ND_30_DESC
+    position  = { x = 30 y = 400 }
+    year      = 1936
+    component = { id = 4301 name = TECH_CMP_ND_30_1_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4302 name = TECH_CMP_ND_30_2_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4303 name = TECH_CMP_ND_30_3_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4304 name = TECH_CMP_ND_30_4_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4305 name = TECH_CMP_ND_30_5_NAME type = general_equipment difficulty = 5 }
+    required  = { 4290 }
+    effects =
+    { command = { type = tc_mod value = 10 }
+      command = { type = tc_occupied_mod value = 10 }
+      command = { type = peacetime_ic_mod value = -10 }
+      command = { type = industrial_modifier which = total value = 10 }
+      command = { type = building_prod_mod which = ic value = 15 }
+      command = { type = building_prod_mod which = infrastructure value = 5 }
+      command = { type = domestic which = free_market value = -3 }
+      command = { type = domestic which = interventionism value = -3 }
+      command = { type = research_mod value = -5 }
+    }
+  }
+  # 田赋 
+  application =
+  { id        = 4310
+    name      = TECH_APP_ND_31_NAME
+    desc      = TECH_APP_ND_31_DESC
+    position  = { x = 310 y = 250 }
+    year      = 1900
+    component = { id = 4311 name = TECH_CMP_ND_31_1_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4312 name = TECH_CMP_ND_31_2_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4313 name = TECH_CMP_ND_31_3_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4314 name = TECH_CMP_ND_31_4_NAME type = general_equipment difficulty = 5 }
+    component = { id = 4315 name = TECH_CMP_ND_31_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 关税 
+  application =
+  { id        = 4320
+    name      = TECH_APP_ND_32_NAME
+    desc      = TECH_APP_ND_32_DESC
+    position  = { x = 440 y = 250 }
+    year      = 1900
+    # TECH_CMP_ND_32_1_NAME
+    component = { id = 4321 name = TECH_CMP_ND_32_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_32_2_NAME
+    component = { id = 4322 name = TECH_CMP_ND_32_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_32_3_NAME
+    component = { id = 4323 name = TECH_CMP_ND_32_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_32_4_NAME
+    component = { id = 4324 name = TECH_CMP_ND_32_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_32_5_NAME
+    component = { id = 4325 name = TECH_CMP_ND_32_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 盐税 
+  application =
+  { id        = 4330
+    name      = TECH_APP_ND_33_NAME
+    desc      = TECH_APP_ND_33_DESC
+    position  = { x = 310 y = 275 }
+    year      = 1936
+    # TECH_CMP_ND_33_1_NAME
+    component = { id = 4331 name = TECH_CMP_ND_33_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_33_2_NAME
+    component = { id = 4332 name = TECH_CMP_ND_33_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_33_3_NAME
+    component = { id = 4333 name = TECH_CMP_ND_33_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_33_4_NAME
+    component = { id = 4334 name = TECH_CMP_ND_33_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_33_5_NAME
+    component = { id = 4335 name = TECH_CMP_ND_33_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 货物税 
+  application =
+  { id        = 4340
+    name      = TECH_APP_ND_34_NAME
+    desc      = TECH_APP_ND_34_DESC
+    position  = { x = 440 y = 275 }
+    year      = 1936
+    # TECH_CMP_ND_34_1_NAME
+    component = { id = 4341 name = TECH_CMP_ND_34_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_34_2_NAME
+    component = { id = 4342 name = TECH_CMP_ND_34_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_34_3_NAME
+    component = { id = 4343 name = TECH_CMP_ND_34_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_34_4_NAME
+    component = { id = 4344 name = TECH_CMP_ND_34_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_34_5_NAME
+    component = { id = 4345 name = TECH_CMP_ND_34_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 统税 
+  application =
+  { id        = 4350
+    name      = TECH_APP_ND_35_NAME
+    desc      = TECH_APP_ND_35_DESC
+    position  = { x = 310 y = 300 }
+    year      = 1904
+    # TECH_CMP_ND_35_1_NAME
+    component = { id = 4351 name = TECH_CMP_ND_35_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_35_2_NAME
+    component = { id = 4352 name = TECH_CMP_ND_35_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_35_3_NAME
+    component = { id = 4353 name = TECH_CMP_ND_35_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_35_4_NAME
+    component = { id = 4354 name = TECH_CMP_ND_35_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_35_5_NAME
+    component = { id = 4355 name = TECH_CMP_ND_35_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 双主体税收结构 
+  application =
+  { id        = 4360
+    name      = TECH_APP_ND_36_NAME
+    desc      = TECH_APP_ND_36_DESC
+    position  = { x = 310 y = 325 }
+    year      = 1936
+    # TECH_CMP_ND_36_1_NAME
+    component = { id = 4361 name = TECH_CMP_ND_36_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_36_2_NAME
+    component = { id = 4362 name = TECH_CMP_ND_36_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_36_3_NAME
+    component = { id = 4363 name = TECH_CMP_ND_36_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_36_4_NAME
+    component = { id = 4364 name = TECH_CMP_ND_36_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_36_5_NAME
+    component = { id = 4365 name = TECH_CMP_ND_36_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 营业税 
+  application =
+  { id        = 4370
+    name      = TECH_APP_ND_37_NAME
+    desc      = TECH_APP_ND_37_DESC
+    position  = { x = 440 y = 300 }
+    year      = 1936
+    # TECH_CMP_ND_37_1_NAME
+    component = { id = 4371 name = TECH_CMP_ND_37_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_37_2_NAME
+    component = { id = 4372 name = TECH_CMP_ND_37_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_37_3_NAME
+    component = { id = 4373 name = TECH_CMP_ND_37_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_37_4_NAME
+    component = { id = 4374 name = TECH_CMP_ND_37_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_37_5_NAME
+    component = { id = 4375 name = TECH_CMP_ND_37_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 战争税 
+  application =
+  { id        = 4380
+    name      = TECH_APP_ND_38_NAME
+    desc      = TECH_APP_ND_38_DESC
+    position  = { x = 310 y = 350 }
+    year      = 1936
+    # TECH_CMP_ND_38_1_NAME
+    component = { id = 4381 name = TECH_CMP_ND_38_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_38_2_NAME
+    component = { id = 4382 name = TECH_CMP_ND_38_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_38_3_NAME
+    component = { id = 4383 name = TECH_CMP_ND_38_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_38_4_NAME
+    component = { id = 4384 name = TECH_CMP_ND_38_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_38_5_NAME
+    component = { id = 4385 name = TECH_CMP_ND_38_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 麻醉剂交易 
+  application =
+  { id        = 4390
+    name      = TECH_APP_ND_39_NAME
+    desc      = TECH_APP_ND_39_DESC
+    position  = { x = 440 y = 400 }
+    year      = 1894
+    # TECH_CMP_ND_39_1_NAME
+    component = { id = 4391 name = TECH_CMP_ND_39_1_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_39_2_NAME
+    component = { id = 4392 name = TECH_CMP_ND_39_2_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_39_3_NAME
+    component = { id = 4393 name = TECH_CMP_ND_39_3_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_39_4_NAME
+    component = { id = 4394 name = TECH_CMP_ND_39_4_NAME type = general_equipment difficulty = 5 }
+    # TECH_CMP_ND_39_5_NAME
+    component = { id = 4395 name = TECH_CMP_ND_39_5_NAME type = general_equipment difficulty = 5 }
+    required  = { }
+    effects =
+    { command = { }
+    }
+  }
+  # 釐金
+  application =
+  { id        = 4400
+    name      = TECH_APP_ND_40_NAME
+    desc      = TECH_APP_ND_40_DESC
+    position  = { x = 440 y = 325 }
+    year      = 1853
+    component = { id = 4401 name = TECH_CMP_ND_40_1_NAME type = management difficulty = 5 }
+    component = { id = 4402 name = TECH_CMP_ND_40_2_NAME type = mathematics difficulty = 5 }
+    component = { id = 4403 name = TECH_CMP_ND_40_3_NAME type = mathematics difficulty = 5 }
+    component = { id = 4404 name = TECH_CMP_ND_40_4_NAME type = mathematics difficulty = 5 }
+    component = { id = 4405 name = TECH_CMP_ND_40_5_NAME type = mathematics difficulty = 5 }
+    required  = { }
+    effects =
+    { 
+		command = {  }
+#		command = { type = free_money value = 3 }
+#		command = { type = industrial_modifier which = total value = -5 }
+#		command = { type = industrial_modifier which = supplies value = -5 }
+    }
+  }
+}

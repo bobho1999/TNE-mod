@@ -1,0 +1,35 @@
+land_unit_type = 1
+allowed_brigades = heavy_armor
+allowed_brigades = super_heavy_armor
+allowed_brigades = tank_destroyer
+allowed_brigades = anti_tank
+allowed_brigades = rocket_artillery
+allowed_brigades = artillery
+allowed_brigades = police
+allowed_brigades = engineer
+allowed_brigades = b_u8
+allowed_brigades = anti_air
+allowed_brigades = armored_car
+
+# 0 - ·Éµ¯ 
+model = {
+	cost 					= 2
+	buildtime	 			= 30
+	manpower 				= 0
+	maxspeed 				= 4
+	defaultorganisation 	= 100
+	morale					= 100
+	defensiveness 			= 0
+	toughness				= 0
+	softness				= 0
+	suppression				= 0
+	airdefence				= 5
+	softattack				= 0
+	hardattack				= 0
+	airattack				= 0
+	transportweight			= 0
+	supplyconsumption 		= 0
+	fuelconsumption			= 0
+	upgrade_time_factor = 0
+	upgrade_cost_factor = 0
+}

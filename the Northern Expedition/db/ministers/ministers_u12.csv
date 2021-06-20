@@ -1,0 +1,18 @@
+U12;Ruling Cabinet - Start;Name;Pool;Ideology;Personality;Loyalty;Picturename;x
+;Replacements;;;;;;;x
+11000;Head of State;陈炯明 ;24;PA;Pig-headed Isolationist;Medium;chenjiongming;x
+11001;Head of Government;陈炯明 ;24;PA;Old General;Medium;chenjiongming;x
+11002;Foreign Minister;陈炯明;24;PA;Great Compromiser;Medium;chenjiongming;x
+11015;Foreign Minister;陳濟棠;29;PA;Great Compromiser;Very High;chenjitang;x
+11003;Minister of Armament;林虎 ;24;PA;Military Entrepreneur;Medium;林虎;x
+11012;Minister of Armament;古应芬;29;PA;Military Entrepreneur;Medium;古應芬;x
+11004;Minister of Security;林虎 ;24;PA;Prince of Terror;Medium;林虎;x
+11016;Minister of Security;古应芬 ;29;PA;Prince of Terror;Medium;古應芬;x
+11005;Head of Military Intelligence;林虎 ;36;PA;Dismal Enigma;Medium;林虎;x
+11017;Head of Military Intelligence;古应芬;29;PA;Dismal Enigma;Medium;古應芬;x
+11006;Chief of Staff;洪兆麟 ;24;PA;School of Mass Combat;Medium;hongzhaolin;x
+11014;Chief of Staff;林时清;29;PA;School of Mass Combat;Medium;;x
+11007;Chief of Army;洪兆麟 ;24;PA;Guns and Butter Doctrine;Medium;hongzhaolin;x
+11013;Chief of Army;林时清;29;PA;Guns and Butter Doctrine;Medium;;x
+11008;Chief of Navy;南方军閥;36;PA;Undistinguished Suit;Medium;nanfang;x
+11009;Chief of Air Force;英國;36;ML;Undistinguished Suit;Medium;eng;x
